@@ -70,15 +70,22 @@ jobs:
         if: steps.check.outputs.exists == 'false'
         run: npm i -g hyperframes@0.6.22
 
-      # 直列(窓分割なし)でフル1本を描画=継ぎ目ゼロ。GPU無しのソフト合成。
+      # 同梱Chromium(chrome-for-testing)を取得。これは beginFrame 対応=高速・決定的キャプチャ。
+      # CI版google-chromeは beginFrame 非対応でスクショ方式に落ち、長尺単一レンダーが protocolTimeout で失敗する。
+      - name: Ensure bundled Chromium (beginFrame-capable)
+        if: steps.check.outputs.exists == 'false'
+        run: |
+          hyperframes browser ensure
+          hyperframes browser path
+
+      # 直列(窓分割なし)でフル1本を描画=継ぎ目ゼロ。同梱Chromium(beginFrame)で回す。
       - name: Render (serial, full, seamless)
         if: steps.check.outputs.exists == 'false'
         env:
-          HYPERFRAMES_BROWSER_PATH: /usr/bin/google-chrome
-          PRODUCER_PUPPETEER_PROTOCOL_TIMEOUT_MS: "600000"
-          # CI(root)では no-sandbox 必須。hyperframes/puppeteer 用の候補envを両方与える。
-          PUPPETEER_ARGS: "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --use-gl=swiftshader"
-          HYPERFRAMES_BROWSER_ARGS: "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --use-gl=swiftshader"
+          # HYPERFRAMES_BROWSER_PATH は設定しない=同梱Chromium(beginFrame対応)を使う
+          PRODUCER_PUPPETEER_PROTOCOL_TIMEOUT_MS: "1800000"
+          PUPPETEER_ARGS: "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage"
+          HYPERFRAMES_BROWSER_ARGS: "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage"
         run: |
           cd "episodes/$EP"
           xvfb-run -a hyperframes render -c index.html -o visual.mp4 --fps 30 -q standard --workers 1
