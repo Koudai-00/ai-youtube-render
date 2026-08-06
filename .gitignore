@@ -1,0 +1,11 @@
+# 秘密情報は絶対に上げない
+.env
+*.env
+**/secret*
+# レンダー中間/成果物(release/artifactで配布するのでコミット不要)
+**/visual.mp4
+**/final.mp4
+*.deb
+*.log
+decode_err.txt
+.DS_Store

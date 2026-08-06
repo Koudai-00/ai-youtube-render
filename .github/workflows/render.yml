@@ -1,0 +1,114 @@
+name: render
+
+# 手動起動のみ(push では絶対に走らない=無料枠の誤消費防止)
+on:
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: "episodes/ 配下のフォルダ名"
+        required: true
+        default: "rizin54-yosou"
+
+# 同一エピソードの多重起動を防ぐ(実行中は新規をキューせず弾く)
+concurrency:
+  group: render-${{ github.event.inputs.episode }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # release 作成に必要(GITHUB_TOKEN)
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120        # 2時間で安全打ち切り
+    env:
+      EP: ${{ github.event.inputs.episode }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # 素材+HTMLの内容ハッシュ。中身が同じなら再レンダーしない仕組みの鍵。
+      - name: Compute content hash
+        id: hash
+        run: |
+          test -d "episodes/$EP" || { echo "::error::episodes/$EP が無い"; exit 1; }
+          H=$(find "episodes/$EP" -type f ! -name 'visual.mp4' ! -name 'final.mp4' -print0 \
+              | sort -z | xargs -0 sha256sum | sha256sum | cut -c1-16)
+          echo "hash=$H" >> "$GITHUB_OUTPUT"
+          echo "tag=$EP-$H" >> "$GITHUB_OUTPUT"
+          echo "content hash = $H"
+
+      # 同一ハッシュの完成品(release)が既にあれば丸ごとスキップ=無料枠を使わない
+      - name: Skip if already rendered
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "${{ steps.hash.outputs.tag }}" >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "::notice::既にレンダー済み: ${{ steps.hash.outputs.tag }} → スキップ(分数消費なし)"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "未レンダー → 描画します"
+          fi
+
+      - name: Setup Node
+        if: steps.check.outputs.exists == 'false'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install ffmpeg + Google Chrome
+        if: steps.check.outputs.exists == 'false'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg xvfb
+          wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
+          google-chrome --version && ffmpeg -version | head -1
+
+      - name: Install hyperframes
+        if: steps.check.outputs.exists == 'false'
+        run: npm i -g hyperframes@0.6.22
+
+      # 直列(窓分割なし)でフル1本を描画=継ぎ目ゼロ。GPU無しのソフト合成。
+      - name: Render (serial, full, seamless)
+        if: steps.check.outputs.exists == 'false'
+        env:
+          HYPERFRAMES_BROWSER_PATH: /usr/bin/google-chrome
+          PRODUCER_PUPPETEER_PROTOCOL_TIMEOUT_MS: "600000"
+          # CI(root)では no-sandbox 必須。hyperframes/puppeteer 用の候補envを両方与える。
+          PUPPETEER_ARGS: "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --use-gl=swiftshader"
+          HYPERFRAMES_BROWSER_ARGS: "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --use-gl=swiftshader"
+        run: |
+          cd "episodes/$EP"
+          xvfb-run -a hyperframes render -c index.html -o visual.mp4 --fps 30 -q standard --workers 1
+          ffprobe -v error -show_entries format=duration -of csv=p=0 visual.mp4
+
+      - name: Mux narration + single BGM + loudnorm
+        if: steps.check.outputs.exists == 'false'
+        run: bash scripts/finalize.sh "episodes/$EP"
+
+      - name: Decode-error check (壊れ結合の検出)
+        if: steps.check.outputs.exists == 'false'
+        run: |
+          ffmpeg -v error -i "episodes/$EP/final.mp4" -f null - 2> decode_err.txt || true
+          if [ -s decode_err.txt ]; then echo "::warning::decode errors:"; cat decode_err.txt; else echo "decode errors: 0"; fi
+
+      - name: Upload artifact (すぐDL可能)
+        if: steps.check.outputs.exists == 'false'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.hash.outputs.tag }}
+          path: episodes/${{ env.EP }}/final.mp4
+          retention-days: 14
+
+      # 完成品を release として内容ハッシュ名で保存 → 次回同一内容ならスキップの根拠になる
+      - name: Publish release (content-addressed)
+        if: steps.check.outputs.exists == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp "episodes/$EP/final.mp4" "$EP.mp4"
+          gh release create "${{ steps.hash.outputs.tag }}" "$EP.mp4" \
+            --title "${{ steps.hash.outputs.tag }}" \
+            --notes "自動レンダー(直列/継ぎ目なし)。content hash=${{ steps.hash.outputs.hash }}"
