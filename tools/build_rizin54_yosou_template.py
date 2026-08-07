@@ -54,7 +54,10 @@ def beat_at(sub: str):
 
 
 # ============ 背景レジストリ (img / vid) ============
-VID = {"kleber_face", "kleber_action", "px_cage", "px_ring", "px_crowd", "px_stage"}
+TALK = ["talk_aoki", "talk_strasser", "talk_saito", "talk_kawajiri", "talk_jobin", "talk_izawa",
+        "talk_ougikubo", "talk_matsushima", "talk_motoya", "talk_kanehara", "talk_ishiwatari",
+        "talk_saeki", "talk_takagi", "talk_horiguchi"]
+VID = {"kleber_face", "kleber_action", "px_cage", "px_ring", "px_crowd", "px_stage", *TALK}
 
 
 def is_vid(name: str) -> bool:
@@ -80,8 +83,20 @@ PRED_SRC = {
     "pred_ishiwatari": "出典: YouTube「石渡伸太郎」", "pred_akimoto_honnin": "出典: YouTube「秋元強真」",
     "pred_satoshi": "出典: YouTube「U-NEXT格闘技公式」", "pred_suzuki": "出典: YouTube「U-NEXT格闘技公式」",
     "panel_unext": "出典: YouTube「U-NEXT格闘技公式」",
+    "card_ueda_edoporo": "画像: RIZIN FF公式",
 }
 SRC_OF.update(PRED_SRC)
+# 発言クリップの出典
+TALK_SRC = {
+    "talk_aoki": "出典: YouTube「青木真也」", "talk_strasser": "出典: YouTube「ストロング金子/ストチャンネル」",
+    "talk_saito": "出典: YouTube「斎藤裕」", "talk_kawajiri": "出典: YouTube「ジョビンチャンネル(川尻達也)」",
+    "talk_jobin": "出典: YouTube「ジョビンチャンネル」", "talk_izawa": "出典: YouTube「伊澤星花」",
+    "talk_ougikubo": "出典: YouTube「おぎちゃんねる(扇久保博正)」", "talk_matsushima": "出典: YouTube「松嶋こよみ」",
+    "talk_motoya": "出典: YouTube「元谷友貴」", "talk_kanehara": "出典: YouTube「kinchanTV(金原正徳)」",
+    "talk_ishiwatari": "出典: YouTube「石渡伸太郎」", "talk_saeki": "出典: YouTube「ジョビンチャンネル(佐伯繁)」",
+    "talk_takagi": "出典: YouTube「高木凌」", "talk_horiguchi": "出典: YouTube「堀口恭司」",
+}
+SRC_OF.update(TALK_SRC)
 
 
 def src_of(name: str) -> str:
@@ -90,14 +105,16 @@ def src_of(name: str) -> str:
 
 # ============ セクション別・ビート順の背景 ============
 SECTION_BG = {
-    "s0_intro":  ["px_cage", "card_main_kleber_akimoto", "pred_aoki", "card_sato_mix", "pred_ougikubo_zenhan"],
-    "s1_card":   ["card_main_kleber_akimoto", "kleber_action", "pred_akimoto_honnin", "kleber_face", "px_crowd"],
-    "s2_akimoto":["pred_aoki", "pred_strasser", "pred_saito", "pred_kawajiri", "pred_jobin", "pred_izawa_th", "pred_official", "panel_titlecard", "panel_unext"],
-    "s3_kleber": ["kleber_face", "pred_ougikubo", "pred_matsushima", "pred_motoya", "pred_satoshi", "pred_suzuki"],
-    "s4_even":   ["pred_official", "pred_akimoto_honnin", "px_ring", "px_crowd"],
-    "s5_semi":   ["pred_ougikubo_zenhan", "card_sato_mix", "pred_aoki_satomix"],
-    "s6_other":  ["card_hiramoto_jolly", "pred_official", "card_goto_temirov", "card_ito_gaja", "card_majima_takeda", "pred_ishiwatari", "pred_ougikubo", "pred_ishiwatari"],
-    "s7_end":    ["panel_titlecard", "px_cage", "px_stage", "card_main_kleber_akimoto", "px_ring"],
+    "s0_intro":  ["px_cage", "card_main_kleber_akimoto", "talk_aoki", "card_sato_mix", "pred_ougikubo_zenhan"],
+    "s1_card":   ["card_main_kleber_akimoto", "kleber_action", "akimoto_solo", "kleber_face", "talk_horiguchi", "px_crowd"],
+    "s2_akimoto":["talk_aoki", "talk_strasser", "talk_saito", "talk_kawajiri", "talk_jobin", "talk_izawa",
+                  "panel_titlecard", "panel_titlecard", "talk_kanehara", "talk_ishiwatari", "talk_saeki", "talk_takagi"],
+    "s3_kleber": ["kleber_face", "talk_ougikubo", "talk_matsushima", "talk_motoya", "pred_satoshi", "pred_suzuki"],
+    "s4_even":   ["panel_titlecard", "pred_akimoto_honnin", "px_ring", "px_crowd"],
+    "s5_semi":   ["pred_ougikubo_zenhan", "card_sato_mix", "card_sato_mix"],
+    "s6_other":  ["card_hiramoto_jolly", "pred_official", "card_goto_temirov", "card_ito_gaja",
+                  "card_majima_takeda", "talk_ishiwatari", "card_ueda_edoporo", "talk_ougikubo"],
+    "s7_end":    ["panel_titlecard", "kleber_action", "px_stage", "card_main_kleber_akimoto", "px_ring"],
 }
 
 # ============ 予想者ラベル (名前 + 予想 + 色) ============
@@ -106,6 +123,8 @@ AK, KL, EV = "#5aa8ff", "#ff5f52", "#d8d8d8"
 def PL(anchor, name, pick, color):
     return {"anchor": anchor, "name": name, "pick": pick, "color": color}
 PLABELS = [
+    # s1 堀口コメント
+    PL("元ベラトール世界王者の堀口恭司さんも", "堀口 恭司", "注目の一戦", "#ffd76a"),
     # s2 秋元有利論
     PL("青木真也さんは、秋元の1ラウンド", "青木 真也", "秋元 1〜2R KO", AK),
     PL("ストラッサー起一さんも、忖度なしで秋元", "ストラッサー起一", "秋元 2R KO", AK),
@@ -115,7 +134,10 @@ PLABELS = [
     PL("女子スーパーアトム級王者の伊澤星花さん", "伊澤 星花", "秋元", AK),
     PL("征矢貴さんも、秋元のKO勝ち", "征矢 貴", "秋元 KO", AK),
     PL("火の鳥さんは、秋元がタックルを切って", "火の鳥", "秋元 1R KO", AK),
-    PL("そして金原正徳さんは、U-NEXTの公式予想番組で秋元の3ラウンドTKO", "金原 正徳", "秋元 3R TKO", AK),
+    PL("金原正徳さんは、U-NEXTの公式予想番組で秋元の3ラウンドTKO", "金原 正徳", "秋元 3R TKO", AK),
+    PL("石渡伸太郎さんは、秋元を知れば知るほど怪物", "石渡 伸太郎", "秋元(圧倒)", AK),
+    PL("DEEP代表の佐伯繁さんも、距離感が良すぎて", "佐伯 繁", "秋元(差あり)", AK),
+    PL("RIZINフェザー級の高木凌さんも、クレベルは組みつけない", "高木 凌", "秋元", AK),
     # s3 クレベル逆転論
     PL("扇久保博正さんは、クレベルがラストチャンス", "扇久保 博正", "クレベル 判定", KL),
     PL("松嶋こよみさんは、クレベルの一本勝ち", "松嶋 こよみ", "クレベル 一本(三角)", KL),
@@ -125,10 +147,11 @@ PLABELS = [
     # s4 五分
     PL("太田忍さんは、どちらが勝ってもおかしくない", "太田 忍", "どっちもあり", EV),
     # s5 セミ
-    PL("青木真也さんはミックスがザバっと勝つ", "青木 真也", "ミックス 優勢", "#ffd76a"),
+    PL("セミファイナルは、佐藤将光対パッチー・ミックス", "青木真也ら", "ミックス 優勢", "#ffd76a"),
     # s6 その他(発言者強調)
-    PL("上田幹雄対エドポロ・キングは、上田の蹴りとスピード", "おぎ(扇久保)予想", "上田 KO", "#ffd76a"),
-    PL("直樹対細川一颯は、総合力の直樹か", "石渡・秋元の予想", "直樹 / 細川で割れ", "#ffd76a"),
+    PL("水野新太対リー・カイウェンは、ほぼ全員が水野", "石渡・金原ら", "水野 有利", "#ffd76a"),
+    PL("上田幹雄対エドポロ・キングは、上田の蹴りとスピード", "扇久保選手の予想", "上田 KO", "#ffd76a"),
+    PL("直樹対細川一颯は、総合力の直樹か", "石渡・扇久保の予想", "直樹 / 細川で割れ", "#ffd76a"),
 ]
 
 # ============ パネリスト・カットアウト (bg=pred_official/panel の上に人物) ============
@@ -139,7 +162,7 @@ PCUTS = [
 ]
 
 # ============ 集計カード (秋元8/クレベル3/五分2) ============
-TALLY_ANCHOR = "集計の結果は、秋元が9人"
+TALLY_ANCHOR = "集計の結果は、秋元が12人"
 
 # ============ Xカード ============
 # 本人(公人・当事者)=実名/実アイコン。 一般ファン=匿名(仮名+イニシャル丸)。
@@ -169,8 +192,8 @@ SECTION_TAGS = {
 # ============ 背景セグメント生成 (img/vid) ============
 # 長尺ビートの後半を別素材に差し替え(単調回避・ナレ一致): (anchor, 2nd_asset, frac)
 SPLITS = [
-    ("そして、過去に秋元から勝利を挙げている元谷友貴さん", "kleber_action", 0.5),   # 元谷がクレベルの強みを語る後半→クレベル映像
-    ("平本丈対ジョリーは、1ラウンド勝負", "pred_saito", 0.55),                      # 斎藤が平本予想→斎藤サムネ
+    ("そして、過去に秋元から勝利を挙げている元谷友貴さん", "kleber_action", 0.55),  # 元谷がクレベルの強みを語る後半→クレベル映像
+    ("平本丈対ジョリーは、1ラウンド勝負", "talk_saito", 0.55),                      # 斎藤が平本予想→斎藤の発言クリップ
 ]
 
 
@@ -605,8 +628,8 @@ __TEXTFX_CSS__
   const tallyLayer = document.getElementById('tallyLayer');
   DATA.tally.forEach((t) => {
     const el = document.createElement('div'); el.className='tally';
-    el.innerHTML = "<div class='thead'>予想者15人の内訳</div><div class='trow'>"
-      + "<div class='tcell ak'><div class='tlabel'>秋元</div><div class='tnum'>9<em>人</em></div></div>"
+    el.innerHTML = "<div class='thead'>予想者18人の内訳</div><div class='trow'>"
+      + "<div class='tcell ak'><div class='tlabel'>秋元</div><div class='tnum'>12<em>人</em></div></div>"
       + "<div class='tcell kl'><div class='tlabel'>クレベル</div><div class='tnum'>5<em>人</em></div></div>"
       + "<div class='tcell ev'><div class='tlabel'>五分</div><div class='tnum'>1<em>人</em></div></div></div>";
     tallyLayer.appendChild(el);
