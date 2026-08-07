@@ -33,6 +33,7 @@ jobs:
                    "subtitles/out/${EP//-/_}/timings.json" \
                    tools/build_${EP//-/_}_template.py \
                    tools/${EP//-/_}_windows.py \
+                   scripts/render_windows.sh scripts/finalize.sh \
                    hyperframes/_lib/textfx -type f 2>/dev/null \
               | sort | xargs sha256sum | sha256sum | cut -c1-16)
           echo "hash=$H" >> "$GITHUB_OUTPUT"
