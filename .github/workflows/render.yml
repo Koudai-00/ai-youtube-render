@@ -70,23 +70,27 @@ jobs:
         if: steps.check.outputs.exists == 'false'
         run: npm i -g hyperframes@0.6.22
 
-      # 同梱Chromium(chrome-for-testing)を取得。これは beginFrame 対応=高速・決定的キャプチャ。
-      # CI版google-chromeは beginFrame 非対応でスクショ方式に落ち、長尺単一レンダーが protocolTimeout で失敗する。
-      - name: Ensure bundled Chromium (beginFrame-capable)
+      # chrome-headless-shell を導入=HeadlessExperimental.beginFrame 対応(高速・決定的キャプチャ)。
+      # 通常のgoogle-chromeは beginFrame 非対応でスクショ方式に落ち、長尺単一レンダーが protocolTimeout で失敗する。
+      # そのバイナリパスを HYPERFRAMES_BROWSER_PATH に明示指定(未指定だと hyperframes が system chrome を自動検出してしまう)。
+      - name: Install chrome-headless-shell (beginFrame-capable)
         if: steps.check.outputs.exists == 'false'
         run: |
-          hyperframes browser ensure
-          hyperframes browser path
+          npx --yes @puppeteer/browsers install chrome-headless-shell@stable | tee chs.txt
+          CHS=$(grep -oE '/[^ ]*chrome-headless-shell/[^ ]*/chrome-headless-shell' chs.txt | tail -1)
+          echo "resolved CHS=$CHS"
+          test -x "$CHS" || { echo "::error::chrome-headless-shell not found"; ls -laR "$(dirname "$(dirname "$CHS")")" | head -40; exit 1; }
+          echo "HYPERFRAMES_BROWSER_PATH=$CHS" >> "$GITHUB_ENV"
 
-      # 直列(窓分割なし)でフル1本を描画=継ぎ目ゼロ。同梱Chromium(beginFrame)で回す。
+      # 直列(窓分割なし)でフル1本を描画=継ぎ目ゼロ。chrome-headless-shell(beginFrame)で回す。
       - name: Render (serial, full, seamless)
         if: steps.check.outputs.exists == 'false'
         env:
-          # HYPERFRAMES_BROWSER_PATH は設定しない=同梱Chromium(beginFrame対応)を使う
           PRODUCER_PUPPETEER_PROTOCOL_TIMEOUT_MS: "1800000"
           PUPPETEER_ARGS: "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage"
           HYPERFRAMES_BROWSER_ARGS: "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage"
         run: |
+          echo "browser = $HYPERFRAMES_BROWSER_PATH"
           cd "episodes/$EP"
           xvfb-run -a hyperframes render -c index.html -o visual.mp4 --fps 30 -q standard --workers 1
           ffprobe -v error -show_entries format=duration -of csv=p=0 visual.mp4
