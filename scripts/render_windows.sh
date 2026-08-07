@@ -8,7 +8,8 @@ TPL="$ROOT/hyperframes/templates/rizin54-yosou"
 OUTDIR="$ROOT/_segs"
 BUILD="$ROOT/tools/build_rizin54_yosou_template.py"
 WINS_PY="$ROOT/tools/rizin54_yosou_windows.py"
-LEAD=1.2
+LEAD=1.0
+TRAIL=0.5
 mkdir -p "$OUTDIR"
 export PRODUCER_PUPPETEER_PROTOCOL_TIMEOUT_MS="${PRODUCER_PUPPETEER_PROTOCOL_TIMEOUT_MS:-600000}"
 
@@ -42,13 +43,15 @@ for w in "${WINS[@]}"; do
   while [ "$k" -lt "$np" ]; do
     ps=$(python3 -c "print(round($s+($e-$s)*$k/$np,3))")
     pe=$(python3 -c "print(round($s+($e-$s)*($k+1)/$np,3))")
-    # 捨てリードイン(全体先頭のみ0)
+    # 捨てリードイン(全体先頭のみ0) ＋ 捨てトレイル(末尾のクールダウン黒対策)
     lead=$(python3 -c "print(round(min($LEAD,$ps),3))")
+    keep=$(python3 -c "print(round($pe-$ps,3))")
     rs=$(python3 -c "print(round($ps-$lead,3))")
-    render_raw "$rs" "$pe" "$OUTDIR/seg${ia}q${k}.mp4" "seg${ia}q${k}" || { echo "::error::piece $ia q$k FAILED"; exit 1; }
+    re=$(python3 -c "print(round($pe+$TRAIL,3))")
+    render_raw "$rs" "$re" "$OUTDIR/seg${ia}q${k}.mp4" "seg${ia}q${k}" || { echo "::error::piece $ia q$k FAILED"; exit 1; }
     inputs="$inputs -i seg${ia}q${k}.mp4"
-    # 各入力の先頭 lead 秒をトリム→PTS再基準
-    filt="${filt}[${k}:v]trim=start=${lead},setpts=PTS-STARTPTS[t${k}];"
+    # 先頭lead秒＋末尾TRAIL秒を捨て、正味[ps,pe]=keep秒だけ残す(前後の黒フレーム除去)
+    filt="${filt}[${k}:v]trim=start=${lead}:duration=${keep},setpts=PTS-STARTPTS[t${k}];"
     k=$((k+1))
   done
   cc=""; k=0; while [ "$k" -lt "$np" ]; do cc="${cc}[t${k}]"; k=$((k+1)); done
