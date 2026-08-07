@@ -347,7 +347,7 @@ if WINDOWED:
             ns, ne = it[ks] - off, it[ke] - off
             if ne <= 0.001 or ns >= wdur - 0.001:
                 continue
-            it = dict(it); it["cont"] = ns < -0.001; it["cont_end"] = ne > wdur + 0.001
+            it = dict(it); it["cont"] = ns < 0.05; it["cont_end"] = ne > wdur - 0.05
             it[ks] = round(max(0.0, ns), 3); it[ke] = round(min(wdur, ne), 3)
             out.append(it)
         return out
@@ -358,8 +358,8 @@ if WINDOWED:
             ns, ne = it["start"] - off, it["end"] - off
             if ne <= 0.001 or ns >= wdur - 0.001:
                 continue
-            it["cont"] = ns < -0.001
-            it["cont_end"] = ne > wdur + 0.001
+            it["cont"] = ns < 0.05
+            it["cont_end"] = ne > wdur - 0.05
             if it["video"]:
                 ms = it.get("mstart", 0.0)
                 if ns < 0:
