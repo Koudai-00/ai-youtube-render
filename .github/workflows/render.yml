@@ -70,7 +70,12 @@ jobs:
 
       - name: Install hyperframes
         if: steps.check.outputs.exists == 'false'
-        run: npm i -g hyperframes@0.6.22
+        run: |
+          for a in 1 2 3 4; do
+            npm i -g hyperframes@0.6.22 && break
+            echo "npm retry $a"; sleep $((a*15))
+          done
+          hyperframes --version || { echo "::error::hyperframes install failed"; exit 1; }
 
       # beginFrame 対応の chrome-headless-shell を導入し、明示指定(system chromeの自動検出を上書き)。
       - name: Install chrome-headless-shell (beginFrame-capable)
