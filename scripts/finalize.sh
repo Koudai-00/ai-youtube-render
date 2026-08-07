@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# visual.mp4(映像) + ナレ + 単一BGM を合成し loudnorm I=-14。
-# 中立まとめ=BGMは全編一定(章/感情で切り替えない)。BGMは動画尺にループ+両端フェード。
-# 映像は hyperframes 出力の映像のみ使用(-map 0:v)。音声は自前でmux=描画側の音声仕様に依存しない。
+# visual.mp4(窓分割concat済) + ナレ + 単一BGM を合成し loudnorm I=-14。
+# 中立まとめ=BGMは全編一定。BGMは動画尺にループ+両端フェード。映像は -map 0:v のみ使用。
 set -euo pipefail
-EPDIR="$1"
-V="$EPDIR/visual.mp4"
-NARR="$EPDIR/assets/audio/narration.wav"
-BGM="$EPDIR/assets/audio/bgm.m4a"
-OUT="$EPDIR/final.mp4"
+ROOT="$(pwd)"
+TPL="$ROOT/hyperframes/templates/rizin54-yosou/assets"
+V="$ROOT/visual.mp4"
+NARR="$TPL/audio/narration.wav"
+BGM="$TPL/audio/bgm.m4a"
+OUT="$ROOT/final.mp4"
 
 for f in "$V" "$NARR" "$BGM"; do
   [ -f "$f" ] || { echo "MISSING: $f" >&2; exit 1; }

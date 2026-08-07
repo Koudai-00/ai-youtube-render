@@ -1,43 +1,44 @@
 name: render
 
-# 手動起動のみ(push では絶対に走らない=無料枠の誤消費防止)
+# 手動起動のみ(push では走らない=無料枠の誤消費防止)
 on:
   workflow_dispatch:
     inputs:
       episode:
-        description: "episodes/ 配下のフォルダ名"
+        description: "エピソード名(現状 rizin54-yosou 固定)"
         required: true
         default: "rizin54-yosou"
 
-# 同一エピソードの多重起動を防ぐ(実行中は新規をキューせず弾く)
 concurrency:
   group: render-${{ github.event.inputs.episode }}
   cancel-in-progress: false
 
 permissions:
-  contents: write   # release 作成に必要(GITHUB_TOKEN)
+  contents: write
 
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 120        # 2時間で安全打ち切り
+    timeout-minutes: 120
     env:
       EP: ${{ github.event.inputs.episode }}
     steps:
       - uses: actions/checkout@v4
 
-      # 素材+HTMLの内容ハッシュ。中身が同じなら再レンダーしない仕組みの鍵。
+      # 素材+タイムライン+ビルダの内容ハッシュ(生成物 index.html は除外)。中身が同じなら再レンダーしない鍵。
       - name: Compute content hash
         id: hash
         run: |
-          test -d "episodes/$EP" || { echo "::error::episodes/$EP が無い"; exit 1; }
-          H=$(find "episodes/$EP" -type f ! -name 'visual.mp4' ! -name 'final.mp4' -print0 \
-              | sort -z | xargs -0 sha256sum | sha256sum | cut -c1-16)
+          H=$(find "hyperframes/templates/$EP/assets" \
+                   "subtitles/out/${EP//-/_}/timings.json" \
+                   tools/build_${EP//-/_}_template.py \
+                   tools/${EP//-/_}_windows.py \
+                   hyperframes/_lib/textfx -type f 2>/dev/null \
+              | sort | xargs sha256sum | sha256sum | cut -c1-16)
           echo "hash=$H" >> "$GITHUB_OUTPUT"
           echo "tag=$EP-$H" >> "$GITHUB_OUTPUT"
           echo "content hash = $H"
 
-      # 同一ハッシュの完成品(release)が既にあれば丸ごとスキップ=無料枠を使わない
       - name: Skip if already rendered
         id: check
         env:
@@ -45,10 +46,9 @@ jobs:
         run: |
           if gh release view "${{ steps.hash.outputs.tag }}" >/dev/null 2>&1; then
             echo "exists=true" >> "$GITHUB_OUTPUT"
-            echo "::notice::既にレンダー済み: ${{ steps.hash.outputs.tag }} → スキップ(分数消費なし)"
+            echo "::notice::既にレンダー済み: ${{ steps.hash.outputs.tag }} → スキップ"
           else
             echo "exists=false" >> "$GITHUB_OUTPUT"
-            echo "未レンダー → 描画します"
           fi
 
       - name: Setup Node
@@ -57,69 +57,66 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install ffmpeg + Google Chrome
+      - name: Install ffmpeg + deps
         if: steps.check.outputs.exists == 'false'
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg xvfb
+          # chrome-headless-shell が必要とする共有ライブラリ一式(google-chrome導入で満たす)
           wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
           sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
-          google-chrome --version && ffmpeg -version | head -1
+          ffmpeg -version | head -1
 
       - name: Install hyperframes
         if: steps.check.outputs.exists == 'false'
         run: npm i -g hyperframes@0.6.22
 
-      # chrome-headless-shell を導入=HeadlessExperimental.beginFrame 対応(高速・決定的キャプチャ)。
-      # 通常のgoogle-chromeは beginFrame 非対応でスクショ方式に落ち、長尺単一レンダーが protocolTimeout で失敗する。
-      # そのバイナリパスを HYPERFRAMES_BROWSER_PATH に明示指定(未指定だと hyperframes が system chrome を自動検出してしまう)。
+      # beginFrame 対応の chrome-headless-shell を導入し、明示指定(system chromeの自動検出を上書き)。
       - name: Install chrome-headless-shell (beginFrame-capable)
         if: steps.check.outputs.exists == 'false'
         run: |
           npx --yes @puppeteer/browsers install chrome-headless-shell@stable | tee chs.txt
           CHS=$(grep -oE '/[^ ]*chrome-headless-shell/[^ ]*/chrome-headless-shell' chs.txt | tail -1)
           echo "resolved CHS=$CHS"
-          test -x "$CHS" || { echo "::error::chrome-headless-shell not found"; ls -laR "$(dirname "$(dirname "$CHS")")" | head -40; exit 1; }
+          test -x "$CHS" || { echo "::error::chrome-headless-shell not found"; exit 1; }
           echo "HYPERFRAMES_BROWSER_PATH=$CHS" >> "$GITHUB_ENV"
 
-      # 直列(窓分割なし)でフル1本を描画=継ぎ目ゼロ。chrome-headless-shell(beginFrame)で回す。
-      - name: Render (serial, full, seamless)
+      # 窓分割レンダー(直列の代替=長尺単一のハングを回避、境界は字幕の静かな切れ目)。
+      - name: Render (windowed, seamless-join)
         if: steps.check.outputs.exists == 'false'
         env:
-          PRODUCER_PUPPETEER_PROTOCOL_TIMEOUT_MS: "1800000"
+          PRODUCER_PUPPETEER_PROTOCOL_TIMEOUT_MS: "600000"
           PUPPETEER_ARGS: "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage"
           HYPERFRAMES_BROWSER_ARGS: "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage"
         run: |
           echo "browser = $HYPERFRAMES_BROWSER_PATH"
-          cd "episodes/$EP"
-          xvfb-run -a hyperframes render -c index.html -o visual.mp4 --fps 30 -q standard --workers 1
-          ffprobe -v error -show_entries format=duration -of csv=p=0 visual.mp4
+          bash scripts/render_windows.sh
 
       - name: Mux narration + single BGM + loudnorm
         if: steps.check.outputs.exists == 'false'
-        run: bash scripts/finalize.sh "episodes/$EP"
+        run: bash scripts/finalize.sh
 
-      - name: Decode-error check (壊れ結合の検出)
+      - name: Decode-error check
         if: steps.check.outputs.exists == 'false'
         run: |
-          ffmpeg -v error -i "episodes/$EP/final.mp4" -f null - 2> decode_err.txt || true
+          ffmpeg -v error -i final.mp4 -f null - 2> decode_err.txt || true
           if [ -s decode_err.txt ]; then echo "::warning::decode errors:"; cat decode_err.txt; else echo "decode errors: 0"; fi
+          ffprobe -v error -show_entries format=duration -of csv=p=0 final.mp4
 
-      - name: Upload artifact (すぐDL可能)
+      - name: Upload artifact
         if: steps.check.outputs.exists == 'false'
         uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.hash.outputs.tag }}
-          path: episodes/${{ env.EP }}/final.mp4
+          path: final.mp4
           retention-days: 14
 
-      # 完成品を release として内容ハッシュ名で保存 → 次回同一内容ならスキップの根拠になる
       - name: Publish release (content-addressed)
         if: steps.check.outputs.exists == 'false'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          cp "episodes/$EP/final.mp4" "$EP.mp4"
+          cp final.mp4 "$EP.mp4"
           gh release create "${{ steps.hash.outputs.tag }}" "$EP.mp4" \
             --title "${{ steps.hash.outputs.tag }}" \
-            --notes "自動レンダー(直列/継ぎ目なし)。content hash=${{ steps.hash.outputs.hash }}"
+            --notes "自動レンダー(窓分割/継ぎ目は字幕の切れ目)。content hash=${{ steps.hash.outputs.hash }}"

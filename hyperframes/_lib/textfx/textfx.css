@@ -1,0 +1,84 @@
+/* ============================================================
+   textfx.css — 動画用テキスト「デザイン」クラス集（再利用ライブラリ）
+   HyperFrames合成にinjectして使う。アニメーションは textfx.js (GSAP/seek安全)。
+   参考: jajaaan css-headline / su-gi-rx font-design / 9-bb / quantaxis
+   フォント前提: "Mincho"(極太明朝 GokubutoMincho) / "JPHeavy"(SourceHanSans Heavy)
+   ============================================================ */
+
+/* 【縁取りは“外向きのみ”＝drop-shadow積層】-webkit-text-stroke(中央寄せ=字を細らせる)は大型文字で使わない。
+   下記の --tfx-edge / --tfx-edge-sm を filter で重ね、グリフを太いまま外側だけに縁を付ける。 */
+:root {
+  --tfx-edge: drop-shadow(3px 0 0 #0a0a0a) drop-shadow(-3px 0 0 #0a0a0a) drop-shadow(0 3px 0 #0a0a0a) drop-shadow(0 -3px 0 #0a0a0a)
+              drop-shadow(2.1px 2.1px 0 #0a0a0a) drop-shadow(-2.1px -2.1px 0 #0a0a0a) drop-shadow(2.1px -2.1px 0 #0a0a0a) drop-shadow(-2.1px 2.1px 0 #0a0a0a)
+              drop-shadow(0 6px 9px rgba(0,0,0,.55));
+  --tfx-edge-sm: drop-shadow(1.6px 0 0 #0a0a0a) drop-shadow(-1.6px 0 0 #0a0a0a) drop-shadow(0 1.6px 0 #0a0a0a) drop-shadow(0 -1.6px 0 #0a0a0a)
+              drop-shadow(0 2px 6px rgba(0,0,0,.85));
+}
+
+/* --- 文字そのもののデザイン（.tfx-* を文字要素に付与） --- */
+.tfx-mincho { font-family:"Mincho",serif; font-weight:900; }
+.tfx-heavy  { font-family:"JPHeavy","Noto Sans JP",sans-serif; font-weight:900; }
+
+/* 外向きアウトライン（白） */
+.tfx-outline { color:#fff; filter:var(--tfx-edge); }
+.tfx-outline-thin { color:#fff; filter:var(--tfx-edge-sm); }
+
+/* ゴールドグラデ文字（縁は外向きdrop-shadow） */
+.tfx-gold { background:linear-gradient(180deg,#fff7c0 0%,#ffe060 34%,#e0a020 64%,#fff5b0 100%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; filter:var(--tfx-edge); }
+
+/* ソリッドゴールド（文字分割アニメ charRise/charPop 用＝background-clipを使わない） */
+.tfx-gold-solid { color:#ffd84b; filter:var(--tfx-edge); }
+
+/* 赤金グラデ（情熱系） */
+.tfx-fire { background:linear-gradient(180deg,#fff2c0 0%,#ffb43c 38%,#ff5a2a 72%,#c81818 100%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; filter:var(--tfx-edge); }
+
+/* ネオン発光（暗背景向け） */
+.tfx-neon { color:#fff; text-shadow:0 0 8px #ffe14a,0 0 18px #ffb000,0 0 34px #ff7a00,0 3px 6px rgba(0,0,0,.7); }
+.tfx-neon-blue { color:#eaf6ff; text-shadow:0 0 8px #6cd6ff,0 0 18px #2aa8ff,0 0 34px #0a6cff,0 3px 6px rgba(0,0,0,.7); }
+
+/* ポップ／レトロ（ハードな色影・ブラー0。縁は外向き） */
+.tfx-pop { color:#fff; filter:var(--tfx-edge); text-shadow:7px 7px 0 #c80018; }
+
+/* 3D 立体（多層オフセット影） */
+.tfx-emboss { color:#ffd84b; text-shadow:0 1px 0 #b8860b,0 2px 0 #a5760a,0 3px 0 #8f6608,0 4px 0 #7a5607,0 6px 8px rgba(0,0,0,.7); filter:var(--tfx-edge-sm); }
+
+/* マーカー蛍光（下半分ハイライト・行内spanに付与） */
+.tfx-marker { background:linear-gradient(transparent 58%, rgba(255,221,51,.85) 58%); padding:0 .06em; }
+.tfx-marker-red { background:linear-gradient(transparent 58%, rgba(255,60,80,.8) 58%); padding:0 .06em; }
+
+/* 斜めストライプ塗り文字 */
+.tfx-stripe { background:repeating-linear-gradient(45deg,#ffd84b 0 10px,#e0a020 10px 20px);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; filter:var(--tfx-edge); }
+
+/* --- “枠/帯”系コンテナ（テキストを包む要素に付与） --- */
+/* 赤帯（上下ゴールドライン） */
+.tfxc-band { display:inline-block; padding:.18em .9em; background:linear-gradient(180deg,#d4001c,#7a0010);
+  border-top:4px solid #ffd54a; border-bottom:4px solid #ffd54a; box-shadow:0 10px 26px rgba(0,0,0,.55); }
+/* 二重枠 */
+.tfxc-double { display:inline-block; padding:.22em 1em; border:4px solid #ffd54a; position:relative; background:rgba(8,8,10,.55); }
+.tfxc-double::before { content:""; position:absolute; inset:7px; border:2px solid rgba(255,213,74,.7); pointer-events:none; }
+/* 左アクセントバー */
+.tfxc-leftbar { display:inline-block; padding:.1em .5em .1em .85em; position:relative; }
+.tfxc-leftbar::before { content:""; position:absolute; left:0; top:14%; bottom:14%; width:10px; border-radius:5px; background:linear-gradient(180deg,#ffd84b,#ff7a00); box-shadow:0 0 12px rgba(255,150,0,.6); }
+/* リボン（折れ角） */
+.tfxc-ribbon { display:inline-block; padding:.2em 1.3em; position:relative; background:linear-gradient(180deg,#d4001c,#9a0014); box-shadow:0 8px 20px rgba(0,0,0,.5); }
+.tfxc-ribbon::before,.tfxc-ribbon::after { content:""; position:absolute; top:100%; border:12px solid transparent; }
+.tfxc-ribbon::before { left:0; border-top-color:#6a000e; border-left-color:#6a000e; }
+.tfxc-ribbon::after  { right:0; border-top-color:#6a000e; border-right-color:#6a000e; }
+/* コーナーブラケット [ ] */
+.tfxc-bracket { display:inline-block; padding:.16em 1.1em; position:relative; }
+.tfxc-bracket::before,.tfxc-bracket::after { content:""; position:absolute; top:0; bottom:0; width:24px; border:5px solid #ffd54a; }
+.tfxc-bracket::before { left:0; border-right:none; }
+.tfxc-bracket::after  { right:0; border-left:none; }
+/* スクリム（可読性パネル） */
+.tfxc-scrim { padding:.4em 1em; border-radius:12px; background:radial-gradient(ellipse at 50% 50%, rgba(0,0,0,.84) 0%, rgba(0,0,0,.6) 60%, rgba(0,0,0,0) 92%); }
+
+/* ラベル小見出し（カードのsub用：ゴールド＋下線バー） */
+.tfx-kicker { font-family:"JPHeavy"; color:#ffe89a; letter-spacing:.16em; position:relative; display:inline-block; padding-bottom:.4em;
+  filter:var(--tfx-edge-sm); }
+.tfx-kicker::after { content:""; position:absolute; left:50%; bottom:0; transform:translateX(-50%); width:88px; height:4px; border-radius:2px; background:linear-gradient(90deg,#ffd84b,#ff7a00); box-shadow:0 0 10px rgba(255,150,0,.6); }
+
+/* アンダースイープ用の下線要素 */
+.tfx-uline { height:9px; width:0; margin:.18em auto 0; background:linear-gradient(90deg,transparent,#ffd84b 16%,#ff7a00 84%,transparent); }
