@@ -174,6 +174,28 @@ SPLITS = [
 ]
 
 
+# Ken Burns 変種(scale, xPercent, yPercent の from→to)。窓分割でも連続させるため
+# 「セグメント全体に対する進行度」で from/to を補間する(ピース境界でリセットしない)。
+KB_VARIANTS = [
+    ((1.02, -2.5, -1.2), (1.10, 2.5, 1.2)),
+    ((1.10, 2.5, 1.0), (1.02, -2.5, -0.6)),
+    ((1.03, 3.0, -0.8), (1.11, -3.0, 1.0)),
+    ((1.11, -2.8, 1.2), (1.03, 2.8, -1.0)),
+]
+
+
+def kb_for(kb_idx, seg_start, seg_end, vis_start, vis_end):
+    (s0, x0, y0), (s1, x1, y1) = KB_VARIANTS[kb_idx % 4]
+    basis = max(0.1, (seg_end - seg_start) + FADE)  # フルレンダーのKB基準尺と一致
+
+    def lerp(p):
+        p = min(1.0, max(0.0, p))
+        return {"scale": round(s0 + (s1 - s0) * p, 4),
+                "x": round(x0 + (x1 - x0) * p, 3),
+                "y": round(y0 + (y1 - y0) * p, 3)}
+    return lerp((vis_start - seg_start) / basis), lerp((vis_end - seg_start) / basis)
+
+
 def build_bg_segments():
     used = Counter()
     beat_rows = []
@@ -218,6 +240,8 @@ def build_bg_segments():
         s["id"] = f"bg{vi}"
         s["track"] = 40 + (vi % 12)
         s["kb"] = vi % 4  # Ken Burns 方向を交互に(単調回避)
+        f, t = kb_for(s["kb"], s["start"], s["end"], s["start"], s["end"])  # フル(非窓)の既定
+        s["kb_from"], s["kb_to"] = f, t
         if s["video"]:
             cd = clip_dur(str(p))
             seglen = (s["end"] - s["start"]) + FADE
@@ -360,6 +384,11 @@ if WINDOWED:
                 continue
             it["cont"] = ns < 0.05
             it["cont_end"] = ne > wdur - 0.05
+            # KenBurnsをピースまたぎで連続させる: セグメント全体に対する可視区間の進行度でfrom/toを補間
+            vis0 = max(it["start"], off)
+            vis1 = min(it["end"], off + wdur)
+            f, t = kb_for(it.get("kb", 0), it["start"], it["end"], vis0, vis1)
+            it["kb_from"], it["kb_to"] = f, t
             if it["video"]:
                 ms = it.get("mstart", 0.0)
                 if ns < 0:
@@ -500,19 +529,15 @@ __TEXTFX_CSS__
   const tl = gsap.timeline({paused:true});
   const VER = "<svg class='xver' viewBox='0 0 24 24' fill='#1d9bf0'><path d='M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z'></path></svg>";
 
-  // Ken Burns 変種(パン+ズーム・方向を交互に)。長尺の静止画でも動きを絶やさない。
-  const KB = [
-    [{scale:1.02,xPercent:-2.5,yPercent:-1.2},{scale:1.10,xPercent:2.5,yPercent:1.2}],
-    [{scale:1.10,xPercent:2.5,yPercent:1.0},{scale:1.02,xPercent:-2.5,yPercent:-0.6}],
-    [{scale:1.03,xPercent:3.0,yPercent:-0.8},{scale:1.11,xPercent:-3.0,yPercent:1.0}],
-    [{scale:1.11,xPercent:-2.8,yPercent:1.2},{scale:1.03,xPercent:2.8,yPercent:-1.0}],
-  ];
   DATA.bg.forEach((s) => {
     const el = document.getElementById(s.id);
     const kb = el.querySelector('.bgmain') || el.querySelector('.bgv');
     const dur = Math.max(0.6, s.end - s.start);
-    const v = KB[s.kb || 0];
-    if (kb) tl.fromTo(kb, v[0], {...v[1], duration:dur+FADE, ease:'none'}, s.start);
+    // Ken Burns: 窓分割でも連続(ビルダーがセグメント進行度で from/to を補間済み)。ease:none で線形＝ピース境界で速度連続。
+    const kf = s.kb_from || {scale:1.02,x:0,y:0}, kt = s.kb_to || {scale:1.08,x:0,y:0};
+    if (kb) tl.fromTo(kb,
+      {scale:kf.scale, xPercent:kf.x, yPercent:kf.y},
+      {scale:kt.scale, xPercent:kt.x, yPercent:kt.y, duration:dur, ease:'none'}, s.start);
     if (s.cont) tl.set(el, {opacity:1}, s.start);
     else tl.fromTo(el, {opacity:0}, {opacity:1, duration:FADE, ease:'power1.out'}, s.start);
     if (!s.cont_end) tl.to(el, {opacity:0, duration:FADE, ease:'power1.in'}, s.end);
