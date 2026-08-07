@@ -8,7 +8,7 @@ TPL="$ROOT/hyperframes/templates/rizin54-yosou"
 OUTDIR="$ROOT/_segs"
 BUILD="$ROOT/tools/build_rizin54_yosou_template.py"
 WINS_PY="$ROOT/tools/rizin54_yosou_windows.py"
-LEAD=0.6
+LEAD=1.2
 mkdir -p "$OUTDIR"
 export PRODUCER_PUPPETEER_PROTOCOL_TIMEOUT_MS="${PRODUCER_PUPPETEER_PROTOCOL_TIMEOUT_MS:-600000}"
 

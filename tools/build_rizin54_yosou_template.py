@@ -113,7 +113,7 @@ SECTION_BG = {
     "s4_even":   ["panel_titlecard", "pred_akimoto_honnin", "px_ring", "px_crowd"],
     "s5_semi":   ["pred_ougikubo_zenhan", "card_sato_mix", "card_sato_mix"],
     "s6_other":  ["card_hiramoto_jolly", "pred_official", "card_goto_temirov", "card_ito_gaja",
-                  "card_majima_takeda", "talk_ishiwatari", "card_ueda_edoporo", "talk_ougikubo"],
+                  "card_majima_takeda", "card_mizuno_kaiwen", "card_ueda_edoporo", "card_naoki_hosokawa"],
     "s7_end":    ["panel_titlecard", "kleber_action", "px_stage", "card_main_kleber_akimoto", "px_ring"],
 }
 
@@ -124,7 +124,7 @@ def PL(anchor, name, pick, color):
     return {"anchor": anchor, "name": name, "pick": pick, "color": color}
 PLABELS = [
     # s1 堀口コメント
-    PL("元ベラトール世界王者の堀口恭司さんも", "堀口 恭司", "注目の一戦", "#ffd76a"),
+    PL("元RIZINバンタム級王者の堀口恭司さんも", "堀口 恭司", "元RIZIN王者", "#ffd76a"),
     # s2 秋元有利論
     PL("青木真也さんは、秋元の1ラウンド", "青木 真也", "秋元 1〜2R KO", AK),
     PL("ストラッサー起一さんも、忖度なしで秋元", "ストラッサー起一", "秋元 2R KO", AK),
