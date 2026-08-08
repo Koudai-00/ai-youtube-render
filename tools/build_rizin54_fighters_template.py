@@ -109,12 +109,12 @@ SECTION_BG = {
 # 顔を避けて配置(クレベル=顔左→カード右 / 秋元=顔中央→カード左)。
 STATS = [
     {"anchor": "クレベル・コイケ・エルベスト", "hold_to": "そのうち一本勝ちは",
-     "side": "right", "flag": "🇧🇷", "name": "クレベル・コイケ", "roma": "KLEBER KOIKE",
+     "side": "right", "flag": "BRA", "flag_c": "#3aa856", "name": "クレベル・コイケ", "roma": "KLEBER KOIKE",
      "rows": [("生年月日", "1989.10.16（36歳）"), ("身長 / 体重", "178cm / 66.0kg"),
               ("リーチ", "183cm"), ("出身", "ブラジル・サンパウロ"), ("所属", "ボンサイ柔術"),
               ("戦績", "35勝9敗1分")], "record_hi": "一本 29"},
     {"anchor": "続いては挑戦者", "hold_to": "唯一の黒星以外",
-     "side": "left", "flag": "🇯🇵", "name": "秋元 強真", "roma": "KYOMA AKIMOTO",
+     "side": "left", "flag": "JPN", "flag_c": "#d64550", "name": "秋元 強真", "roma": "KYOMA AKIMOTO",
      "rows": [("生年月日", "2006.3.8（20歳）"), ("身長 / 体重", "177cm / 66.0kg"),
               ("リーチ", "177.5cm"), ("出身", "千葉県旭市"), ("所属", "JAPAN TOP TEAM"),
               ("戦績", "12勝1敗")], "record_hi": "KO/TKO 7・一本 2"},
@@ -463,7 +463,7 @@ __TEXTFX_CSS__
   .stat.left { left:70px; } .stat.right { right:70px; }
   .stat .shead { padding:26px 34px 18px; border-bottom:2px solid rgba(255,213,74,.5);
                  background:linear-gradient(180deg, rgba(231,185,74,.14), transparent); }
-  .stat .sflag { font-size:34px; }
+  .stat .sflag { display:inline-block; padding:3px 14px; border-radius:6px; font-family:"JPHeavy"; font-size:23px; letter-spacing:.14em; color:#fff; text-shadow:0 1px 2px rgba(0,0,0,.6); margin-bottom:8px; }
   .stat .sname { font-family:"Mincho",serif; font-weight:900; font-size:62px; line-height:1.02; color:#fff; letter-spacing:.02em;
                  paint-order:stroke fill; text-shadow:0 0 2px #000,2px 0 1px #000,-2px 0 1px #000,0 2px 1px #000,0 6px 16px rgba(0,0,0,.9); white-space:nowrap; }
   .stat .sroma { font-family:"JPHeavy"; font-size:24px; letter-spacing:.16em; color:#ffce6a; margin-top:6px; }
@@ -550,7 +550,7 @@ __TEXTFX_CSS__
       return "<div class='srow"+(rec?" rec":"")+"'><div class='sk'>"+r[0]+"</div><div class='sv'>"+r[1]
         + (rec && st.record_hi ? "<div class='srec2'>"+st.record_hi+"</div>" : "") + "</div></div>";
     }).join('');
-    el.innerHTML = "<div class='shead'><div class='sflag'>"+st.flag+"</div><div class='sname'>"+st.name+"</div><div class='sroma'>"+st.roma+"</div></div>"
+    el.innerHTML = "<div class='shead'><div class='sflag' style='background:"+(st.flag_c||'#555')+"'>"+st.flag+"</div><div class='sname'>"+st.name+"</div><div class='sroma'>"+st.roma+"</div></div>"
       + "<div class='sbody'>"+rows+"</div>";
     statLayer.appendChild(el);
     const dx = st.side==='left' ? -40 : 40;
