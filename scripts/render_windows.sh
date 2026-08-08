@@ -4,10 +4,12 @@
 # これで尺・音声同期を保ったまま、ピース/窓境界の黒フラッシュを消す。
 set -u
 ROOT="$(pwd)"
-TPL="$ROOT/hyperframes/templates/rizin54-yosou"
+EP="${EP:-rizin54-yosou}"
+EP_SNAKE="${EP//-/_}"
+TPL="$ROOT/hyperframes/templates/$EP"
 OUTDIR="$ROOT/_segs"
-BUILD="$ROOT/tools/build_rizin54_yosou_template.py"
-WINS_PY="$ROOT/tools/rizin54_yosou_windows.py"
+BUILD="$ROOT/tools/build_${EP_SNAKE}_template.py"
+WINS_PY="$ROOT/tools/${EP_SNAKE}_windows.py"
 LEAD=1.0
 TRAIL=0.5
 mkdir -p "$OUTDIR"

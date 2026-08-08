@@ -3,7 +3,8 @@
 # 中立まとめ=BGMは全編一定。BGMは動画尺にループ+両端フェード。映像は -map 0:v のみ使用。
 set -euo pipefail
 ROOT="$(pwd)"
-TPL="$ROOT/hyperframes/templates/rizin54-yosou/assets"
+EP="${EP:-rizin54-yosou}"
+TPL="$ROOT/hyperframes/templates/$EP/assets"
 V="$ROOT/visual.mp4"
 NARR="$TPL/audio/narration.wav"
 BGM="$TPL/audio/bgm.m4a"

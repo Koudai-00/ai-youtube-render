@@ -1,0 +1,392 @@
+<!doctype html>
+<!-- RIZIN.54 全選手紹介まとめ 1920x1080【評伝型・プロトタイプ(メインカード)】 -->
+<html>
+<head>
+<meta charset="utf-8" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script>/* ============================================================
+   textfx.js — 動画用テキスト「アニメーション」登録ライブラリ（再利用）
+   GSAP前提・seek安全（全て paused timeline tl に時刻 t で tween を積む）。
+   使い方: TextFX.charRise(tl, el, t, {dur, stagger}); など。退場は TextFX.exit。
+   HyperFramesルール順守: gsapのみ/同要素同プロパティ多重禁止/exitはオーバーレイのみ可。
+   ============================================================ */
+(function () {
+  const g = () => window.gsap;
+
+  // 文字を span.tfx-ch に分割（インラインブロック）。空白は保持。1回だけ実行。
+  function splitChars(el) {
+    if (el.__tfxSplit) return el.__tfxChars;
+    const text = el.textContent;
+    el.textContent = "";
+    const chars = [];
+    for (const ch of text) {
+      const s = document.createElement("span");
+      s.className = "tfx-ch";
+      s.style.display = "inline-block";
+      s.style.whiteSpace = "pre";
+      s.textContent = ch;
+      el.appendChild(s);
+      if (ch !== " " && ch !== "　") chars.push(s);
+    }
+    el.__tfxSplit = true; el.__tfxChars = chars;
+    return chars;
+  }
+
+  const TextFX = {
+    // 文字が下からせり上がり（スタッガー）
+    charRise(tl, el, t, o = {}) {
+      const ch = splitChars(el); const tl2 = g();
+      tl.fromTo(el, { opacity: 1 }, { opacity: 1, duration: 0.01 }, t);
+      tl.fromTo(ch, { yPercent: 120, opacity: 0 },
+        { yPercent: 0, opacity: 1, duration: o.dur || 0.5, ease: o.ease || "back.out(1.6)", stagger: o.stagger || 0.035 }, t);
+    },
+    // 文字がスケールでポップ
+    charPop(tl, el, t, o = {}) {
+      const ch = splitChars(el);
+      tl.fromTo(ch, { scale: 0.2, opacity: 0 },
+        { scale: 1, opacity: 1, duration: o.dur || 0.45, ease: o.ease || "back.out(2)", stagger: o.stagger || 0.03 }, t);
+    },
+    // 左→右クリップワイプ表示
+    wipe(tl, el, t, o = {}) {
+      tl.fromTo(el, { clipPath: "inset(0 100% 0 0)", opacity: 1 },
+        { clipPath: "inset(0 0% 0 0)", duration: o.dur || 0.8, ease: o.ease || "power4.out" }, t);
+    },
+    // 下からマスク表示（行が立ち上がる）
+    riseMask(tl, el, t, o = {}) {
+      tl.fromTo(el, { clipPath: "inset(110% 0 0 0)", yPercent: 18, opacity: 1 },
+        { clipPath: "inset(0% 0 0 0)", yPercent: 0, duration: o.dur || 0.6, ease: o.ease || "power3.out" }, t);
+    },
+    // ふわっと上昇フェード
+    fadeUp(tl, el, t, o = {}) {
+      tl.fromTo(el, { y: o.y || 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: o.dur || 0.5, ease: o.ease || "power3.out" }, t);
+    },
+    // スケールポップ（要素全体）
+    scalePop(tl, el, t, o = {}) {
+      tl.fromTo(el, { scale: o.from || 0.6, opacity: 0 },
+        { scale: 1, opacity: 1, duration: o.dur || 0.5, ease: o.ease || "back.out(1.7)" }, t);
+    },
+    // インパクトのあるスラム（大→等倍＋ブラー）
+    slam(tl, el, t, o = {}) {
+      tl.fromTo(el, { scale: o.from || 1.5, opacity: 0 },
+        { scale: 1, opacity: 1, duration: o.dur || 0.42, ease: o.ease || "power3.out" }, t);
+      blurTween(tl, el, t, o.blur || 16, o.dur || 0.42);
+    },
+    // ブラーイン（焦点が合う）
+    blurIn(tl, el, t, o = {}) {
+      tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: (o.dur || 0.5) * 0.8, ease: "power1.out" }, t);
+      blurTween(tl, el, t, o.blur || 18, o.dur || 0.5);
+    },
+    // ライトスピード（斜めスライドイン）
+    lightspeed(tl, el, t, o = {}) {
+      tl.fromTo(el, { x: o.x || 140, skewX: -22, opacity: 0 },
+        { x: 0, skewX: 0, opacity: 1, duration: o.dur || 0.5, ease: o.ease || "power3.out" }, t);
+    },
+    // 下線スイープ（.tfx-uline 等の幅0→width）
+    underline(tl, el, t, width, o = {}) {
+      tl.fromTo(el, { width: 0 }, { width: width, duration: o.dur || 0.5, ease: o.ease || "power2.out" }, t);
+    },
+    // ゴールド等のグラデにシャイン走らせ（要素は background-size:230% 100% 想定）
+    shine(tl, el, t, o = {}) {
+      tl.fromTo(el, { backgroundPositionX: "120%" }, { backgroundPositionX: "-20%", duration: o.dur || 1.0, ease: "power1.inOut" }, t);
+    },
+    // オーバーレイ退場（カード等のみ可。シーン遷移には使わない）
+    exit(tl, el, t, o = {}) {
+      tl.to(el, { opacity: 0, y: o.y || -12, duration: o.dur || 0.35, ease: "power1.in" }, t);
+    },
+  };
+
+  // filterブラーをオブジェクトproxyでtween（seek時もonUpdateで反映）。完了でinline filterを消し、CSSクラスのfilterを復帰。
+  function blurTween(tl, el, t, from, dur) {
+    const p = { b: from };
+    tl.to(p, {
+      b: 0, duration: dur, ease: "power2.out",
+      onUpdate() { el.style.filter = "blur(" + p.b.toFixed(2) + "px)"; },
+      onComplete() { el.style.filter = ""; },
+      onReverseComplete() { el.style.filter = "blur(" + from + "px)"; },
+    }, t);
+  }
+
+  window.TextFX = TextFX;
+})();
+</script>
+<style>
+/* ============================================================
+   textfx.css — 動画用テキスト「デザイン」クラス集（再利用ライブラリ）
+   HyperFrames合成にinjectして使う。アニメーションは textfx.js (GSAP/seek安全)。
+   参考: jajaaan css-headline / su-gi-rx font-design / 9-bb / quantaxis
+   フォント前提: "Mincho"(極太明朝 GokubutoMincho) / "JPHeavy"(SourceHanSans Heavy)
+   ============================================================ */
+
+/* 【縁取りは“外向きのみ”＝drop-shadow積層】-webkit-text-stroke(中央寄せ=字を細らせる)は大型文字で使わない。
+   下記の --tfx-edge / --tfx-edge-sm を filter で重ね、グリフを太いまま外側だけに縁を付ける。 */
+:root {
+  --tfx-edge: drop-shadow(3px 0 0 #0a0a0a) drop-shadow(-3px 0 0 #0a0a0a) drop-shadow(0 3px 0 #0a0a0a) drop-shadow(0 -3px 0 #0a0a0a)
+              drop-shadow(2.1px 2.1px 0 #0a0a0a) drop-shadow(-2.1px -2.1px 0 #0a0a0a) drop-shadow(2.1px -2.1px 0 #0a0a0a) drop-shadow(-2.1px 2.1px 0 #0a0a0a)
+              drop-shadow(0 6px 9px rgba(0,0,0,.55));
+  --tfx-edge-sm: drop-shadow(1.6px 0 0 #0a0a0a) drop-shadow(-1.6px 0 0 #0a0a0a) drop-shadow(0 1.6px 0 #0a0a0a) drop-shadow(0 -1.6px 0 #0a0a0a)
+              drop-shadow(0 2px 6px rgba(0,0,0,.85));
+}
+
+/* --- 文字そのもののデザイン（.tfx-* を文字要素に付与） --- */
+.tfx-mincho { font-family:"Mincho",serif; font-weight:900; }
+.tfx-heavy  { font-family:"JPHeavy","Noto Sans JP",sans-serif; font-weight:900; }
+
+/* 外向きアウトライン（白） */
+.tfx-outline { color:#fff; filter:var(--tfx-edge); }
+.tfx-outline-thin { color:#fff; filter:var(--tfx-edge-sm); }
+
+/* ゴールドグラデ文字（縁は外向きdrop-shadow） */
+.tfx-gold { background:linear-gradient(180deg,#fff7c0 0%,#ffe060 34%,#e0a020 64%,#fff5b0 100%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; filter:var(--tfx-edge); }
+
+/* ソリッドゴールド（文字分割アニメ charRise/charPop 用＝background-clipを使わない） */
+.tfx-gold-solid { color:#ffd84b; filter:var(--tfx-edge); }
+
+/* 赤金グラデ（情熱系） */
+.tfx-fire { background:linear-gradient(180deg,#fff2c0 0%,#ffb43c 38%,#ff5a2a 72%,#c81818 100%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; filter:var(--tfx-edge); }
+
+/* ネオン発光（暗背景向け） */
+.tfx-neon { color:#fff; text-shadow:0 0 8px #ffe14a,0 0 18px #ffb000,0 0 34px #ff7a00,0 3px 6px rgba(0,0,0,.7); }
+.tfx-neon-blue { color:#eaf6ff; text-shadow:0 0 8px #6cd6ff,0 0 18px #2aa8ff,0 0 34px #0a6cff,0 3px 6px rgba(0,0,0,.7); }
+
+/* ポップ／レトロ（ハードな色影・ブラー0。縁は外向き） */
+.tfx-pop { color:#fff; filter:var(--tfx-edge); text-shadow:7px 7px 0 #c80018; }
+
+/* 3D 立体（多層オフセット影） */
+.tfx-emboss { color:#ffd84b; text-shadow:0 1px 0 #b8860b,0 2px 0 #a5760a,0 3px 0 #8f6608,0 4px 0 #7a5607,0 6px 8px rgba(0,0,0,.7); filter:var(--tfx-edge-sm); }
+
+/* マーカー蛍光（下半分ハイライト・行内spanに付与） */
+.tfx-marker { background:linear-gradient(transparent 58%, rgba(255,221,51,.85) 58%); padding:0 .06em; }
+.tfx-marker-red { background:linear-gradient(transparent 58%, rgba(255,60,80,.8) 58%); padding:0 .06em; }
+
+/* 斜めストライプ塗り文字 */
+.tfx-stripe { background:repeating-linear-gradient(45deg,#ffd84b 0 10px,#e0a020 10px 20px);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; filter:var(--tfx-edge); }
+
+/* --- “枠/帯”系コンテナ（テキストを包む要素に付与） --- */
+/* 赤帯（上下ゴールドライン） */
+.tfxc-band { display:inline-block; padding:.18em .9em; background:linear-gradient(180deg,#d4001c,#7a0010);
+  border-top:4px solid #ffd54a; border-bottom:4px solid #ffd54a; box-shadow:0 10px 26px rgba(0,0,0,.55); }
+/* 二重枠 */
+.tfxc-double { display:inline-block; padding:.22em 1em; border:4px solid #ffd54a; position:relative; background:rgba(8,8,10,.55); }
+.tfxc-double::before { content:""; position:absolute; inset:7px; border:2px solid rgba(255,213,74,.7); pointer-events:none; }
+/* 左アクセントバー */
+.tfxc-leftbar { display:inline-block; padding:.1em .5em .1em .85em; position:relative; }
+.tfxc-leftbar::before { content:""; position:absolute; left:0; top:14%; bottom:14%; width:10px; border-radius:5px; background:linear-gradient(180deg,#ffd84b,#ff7a00); box-shadow:0 0 12px rgba(255,150,0,.6); }
+/* リボン（折れ角） */
+.tfxc-ribbon { display:inline-block; padding:.2em 1.3em; position:relative; background:linear-gradient(180deg,#d4001c,#9a0014); box-shadow:0 8px 20px rgba(0,0,0,.5); }
+.tfxc-ribbon::before,.tfxc-ribbon::after { content:""; position:absolute; top:100%; border:12px solid transparent; }
+.tfxc-ribbon::before { left:0; border-top-color:#6a000e; border-left-color:#6a000e; }
+.tfxc-ribbon::after  { right:0; border-top-color:#6a000e; border-right-color:#6a000e; }
+/* コーナーブラケット [ ] */
+.tfxc-bracket { display:inline-block; padding:.16em 1.1em; position:relative; }
+.tfxc-bracket::before,.tfxc-bracket::after { content:""; position:absolute; top:0; bottom:0; width:24px; border:5px solid #ffd54a; }
+.tfxc-bracket::before { left:0; border-right:none; }
+.tfxc-bracket::after  { right:0; border-left:none; }
+/* スクリム（可読性パネル） */
+.tfxc-scrim { padding:.4em 1em; border-radius:12px; background:radial-gradient(ellipse at 50% 50%, rgba(0,0,0,.84) 0%, rgba(0,0,0,.6) 60%, rgba(0,0,0,0) 92%); }
+
+/* ラベル小見出し（カードのsub用：ゴールド＋下線バー） */
+.tfx-kicker { font-family:"JPHeavy"; color:#ffe89a; letter-spacing:.16em; position:relative; display:inline-block; padding-bottom:.4em;
+  filter:var(--tfx-edge-sm); }
+.tfx-kicker::after { content:""; position:absolute; left:50%; bottom:0; transform:translateX(-50%); width:88px; height:4px; border-radius:2px; background:linear-gradient(90deg,#ffd84b,#ff7a00); box-shadow:0 0 10px rgba(255,150,0,.6); }
+
+/* アンダースイープ用の下線要素 */
+.tfx-uline { height:9px; width:0; margin:.18em auto 0; background:linear-gradient(90deg,transparent,#ffd84b 16%,#ff7a00 84%,transparent); }
+
+  @font-face { font-family:"Mincho"; src:url("assets/fonts/GokubutoMincho.ttf") format("truetype"); font-weight:900; font-display:block; }
+  @font-face { font-family:"JPHeavy"; src:url("assets/fonts/SourceHanSansJP-Heavy.otf") format("opentype"); font-weight:900; font-display:block; }
+  @font-face { font-family:"JPMed"; src:url("assets/fonts/SourceHanSansJP-Medium.otf") format("opentype"); font-weight:500; font-display:block; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html,body { width:100%; height:100%; background:#000; overflow:hidden; }
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; background:#05070c; font-family:"JPHeavy","Noto Sans JP",sans-serif; color:#fff; }
+
+  .bg { position:absolute; inset:0; z-index:1; opacity:0; overflow:hidden; will-change:opacity; }
+  .bgfill { position:absolute; inset:-4%; background-size:cover; background-position:center; filter:blur(22px) brightness(.42) saturate(.9); transform:scale(1.1); }
+  .bgmain { position:absolute; inset:0; background-size:cover; background-position:center top; background-repeat:no-repeat; will-change:transform; }
+  .bg.contain .bgmain { background-size:contain; background-position:center; }
+  .bg .bgv { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transform:translateZ(0); backface-visibility:hidden; }
+
+  .veil { position:absolute; inset:0; z-index:5; pointer-events:none; background:linear-gradient(180deg, rgba(0,0,0,.34) 0%, rgba(0,0,0,.02) 20%, rgba(0,0,0,.02) 52%, rgba(0,0,0,.42) 82%, rgba(0,0,0,.80) 100%); }
+  .vignette { position:absolute; inset:0; z-index:6; pointer-events:none; background:radial-gradient(ellipse at 50% 46%, transparent 0 56%, rgba(0,0,0,.46) 100%); }
+
+  .tag { position:absolute; z-index:20; left:56px; top:52px; padding:8px 24px 8px 18px; background:rgba(8,9,12,.6); border-left:5px solid #e7b94a; border-radius:2px; font-family:"Mincho",serif; font-size:34px; font-weight:900; letter-spacing:.05em; color:#fff; text-shadow:0 0 2px #000,0 2px 8px rgba(0,0,0,.9); white-space:nowrap; opacity:0; -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); }
+  .badge { position:absolute; z-index:20; right:56px; top:54px; padding:9px 22px; background:rgba(8,8,10,.82); border:2px solid rgba(255,213,74,.85); border-radius:40px; font-family:"JPHeavy"; font-size:26px; color:#ffe89a; letter-spacing:.03em; text-shadow:0 1px 3px rgba(0,0,0,.9); }
+  .src { position:absolute; z-index:20; left:40px; bottom:24px; padding:3px 11px; background:rgba(0,0,0,.62); border-left:3px solid rgba(255,213,74,.85); border-radius:2px; font-family:"JPMed"; font-size:18px; color:#e2e2e2; letter-spacing:.01em; text-shadow:0 1px 2px rgba(0,0,0,.9); opacity:0; }
+
+  /* STATカード */
+  #statLayer { position:absolute; inset:0; z-index:18; pointer-events:none; }
+  .stat { position:absolute; top:50%; transform:translateY(-50%); width:640px; opacity:0;
+          background:linear-gradient(160deg, rgba(10,13,20,.93), rgba(14,17,26,.86)); border-radius:18px;
+          border:1px solid rgba(255,255,255,.10); box-shadow:0 20px 60px rgba(0,0,0,.6); overflow:hidden; }
+  .stat.left { left:70px; } .stat.right { right:70px; }
+  .stat .shead { padding:26px 34px 18px; border-bottom:2px solid rgba(255,213,74,.5);
+                 background:linear-gradient(180deg, rgba(231,185,74,.14), transparent); }
+  .stat .sflag { font-size:34px; }
+  .stat .sname { font-family:"Mincho",serif; font-weight:900; font-size:62px; line-height:1.02; color:#fff; letter-spacing:.02em;
+                 paint-order:stroke fill; text-shadow:0 0 2px #000,2px 0 1px #000,-2px 0 1px #000,0 2px 1px #000,0 6px 16px rgba(0,0,0,.9); white-space:nowrap; }
+  .stat .sroma { font-family:"JPHeavy"; font-size:24px; letter-spacing:.16em; color:#ffce6a; margin-top:6px; }
+  .stat .sbody { padding:16px 34px 26px; }
+  .stat .srow { display:flex; align-items:baseline; gap:14px; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.07); }
+  .stat .srow:last-child { border-bottom:0; }
+  .stat .sk { flex:none; width:180px; font-family:"JPMed"; font-size:24px; color:#9fb0c4; letter-spacing:.02em; }
+  .stat .sv { font-family:"JPHeavy"; font-size:32px; color:#fff; letter-spacing:.01em; font-variant-numeric:tabular-nums; }
+  .stat .srow.rec .sv { color:#ffce2e; }
+  .stat .srec2 { margin-top:4px; font-family:"JPHeavy"; font-size:23px; color:#ff9a52; letter-spacing:.02em; }
+
+  /* ダック(ナレ無し試合映像)帯 */
+  #duckLayer { position:absolute; inset:0; z-index:19; pointer-events:none; }
+  .duck { position:absolute; left:50%; top:60px; transform:translateX(-50%); opacity:0;
+          padding:9px 30px; background:rgba(6,8,12,.66); border:2px solid rgba(255,255,255,.22); border-radius:40px;
+          font-family:"JPHeavy"; font-size:27px; letter-spacing:.06em; color:#fff; white-space:nowrap;
+          text-shadow:0 2px 6px rgba(0,0,0,.9); -webkit-backdrop-filter:blur(5px); backdrop-filter:blur(5px); }
+  .duck .dred { color:#ff5f52; }
+
+  #chapLayer { position:absolute; inset:0; z-index:25; pointer-events:none; }
+  .chap { position:absolute; inset:0; opacity:0; }
+  .chap .cfull { position:absolute; inset:0; -webkit-backdrop-filter:blur(22px) brightness(.4) saturate(.85); backdrop-filter:blur(22px) brightness(.4) saturate(.85); background:rgba(4,6,10,.36); }
+  .chap .cinner { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); text-align:center; }
+  .chap .csub2 { font-family:"Mincho",serif; font-weight:900; font-size:52px; letter-spacing:.1em; color:#ffce2e; text-shadow:0 0 2px #000,2px 2px 1px #000,0 4px 14px rgba(0,0,0,.92); margin-bottom:.20em; white-space:nowrap; }
+  .chap .ctitle { font-family:"Mincho",serif; font-weight:900; font-size:150px; line-height:1.0; letter-spacing:.04em; color:#fff; white-space:nowrap; text-shadow:0 0 2px #000,3px 0 2px #000,-3px 0 2px #000,0 3px 2px #000,0 0 16px rgba(0,0,0,.95),0 9px 30px rgba(0,0,0,.9); }
+  .chap .cline { width:0; height:5px; margin:26px auto 0; background:linear-gradient(90deg,transparent,#ffce2e 25%,#ffce2e 75%,transparent); border-radius:3px; }
+
+  #capLayer { position:absolute; inset:0; z-index:17; pointer-events:none; }
+  .cap { position:absolute; left:50%; bottom:96px; transform:translateX(-50%); width:1760px; text-align:center; opacity:0; }
+  .cap .cl { display:inline-block; max-width:1760px; font-family:"JPHeavy"; font-weight:900; font-size:46px; line-height:1.32; color:#fff; white-space:nowrap; letter-spacing:.005em; paint-order:stroke fill; -webkit-text-stroke:5.5px #000; text-shadow:0 3px 7px rgba(0,0,0,.92); }
+</style>
+</head>
+<body>
+  <div id="root" data-composition-id="rizin54-fighters" data-start="0" data-duration="311.09" data-width="1920" data-height="1080">
+    <div class="bg contain" id="bg0"><div class="bgfill" style="background-image:url(assets/img/card_main.jpg)"></div><div class="bgmain" style="background-image:url(assets/img/card_main.jpg)"></div></div>
+    <div class="bg" id="bg1"><div class="bgfill" style="background-image:url(assets/bgvid/kb_face.mp4)"></div><video class="bgv" id="bg1-v" src="assets/bgvid/kb_face.mp4" muted playsinline data-start="16.389" data-duration="3.529" data-media-start="0.0" data-track-index="41"></video></div>
+    <div class="bg" id="bg2"><div class="bgfill" style="background-image:url(assets/img/kleber_portrait.jpg)"></div><div class="bgmain" style="background-image:url(assets/img/kleber_portrait.jpg)"></div></div>
+    <div class="bg" id="bg3"><div class="bgfill" style="background-image:url(assets/img/kleber_portrait.jpg)"></div><div class="bgmain" style="background-image:url(assets/img/kleber_portrait.jpg)"></div></div>
+    <div class="bg" id="bg4"><div class="bgfill" style="background-image:url(assets/bgvid/px_labor.mp4)"></div><video class="bgv" id="bg4-v" src="assets/bgvid/px_labor.mp4" muted playsinline data-start="44.956" data-duration="11.213" data-media-start="0.0" data-track-index="44"></video></div>
+    <div class="bg" id="bg5"><div class="bgfill" style="background-image:url(assets/bgvid/px_labor.mp4)"></div><video class="bgv" id="bg5-v" src="assets/bgvid/px_labor.mp4" muted playsinline data-start="55.519" data-duration="11.95" data-media-start="0.0" data-track-index="45"></video></div>
+    <div class="bg" id="bg6"><div class="bgfill" style="background-image:url(assets/bgvid/px_bjj.mp4)"></div><video class="bgv" id="bg6-v" src="assets/bgvid/px_bjj.mp4" muted playsinline data-start="69.519" data-duration="11.95" data-media-start="0.0" data-track-index="46"></video></div>
+    <div class="bg" id="bg7"><div class="bgfill" style="background-image:url(assets/bgvid/kb_action.mp4)"></div><video class="bgv" id="bg7-v" src="assets/bgvid/kb_action.mp4" muted playsinline data-start="84.354" data-duration="13.071" data-media-start="0.0" data-track-index="47"></video></div>
+    <div class="bg" id="bg8"><div class="bgfill" style="background-image:url(assets/bgvid/kb_belt.mp4)"></div><video class="bgv" id="bg8-v" src="assets/bgvid/kb_belt.mp4" muted playsinline data-start="96.775" data-duration="8.566" data-media-start="0.0" data-track-index="48"></video></div>
+    <div class="bg" id="bg9"><div class="bgfill" style="background-image:url(assets/bgvid/fight_kleber_asakura.mp4)"></div><video class="bgv" id="bg9-v" src="assets/bgvid/fight_kleber_asakura.mp4" muted playsinline data-start="104.691" data-duration="7.916" data-media-start="0.0" data-track-index="49"></video></div>
+    <div class="bg" id="bg10"><div class="bgfill" style="background-image:url(assets/bgvid/kb_rizin49.mp4)"></div><video class="bgv" id="bg10-v" src="assets/bgvid/kb_rizin49.mp4" muted playsinline data-start="111.957" data-duration="10.563" data-media-start="0.0" data-track-index="50"></video></div>
+    <div class="bg" id="bg11"><div class="bgfill" style="background-image:url(assets/bgvid/kb_shayd_ko.mp4)"></div><video class="bgv" id="bg11-v" src="assets/bgvid/kb_shayd_ko.mp4" muted playsinline data-start="121.87" data-duration="12.421" data-media-start="0.0" data-track-index="51"></video></div>
+    <div class="bg" id="bg12"><div class="bgfill" style="background-image:url(assets/bgvid/kb_face.mp4)"></div><video class="bgv" id="bg12-v" src="assets/bgvid/kb_face.mp4" muted playsinline data-start="133.641" data-duration="10.563" data-media-start="0.0" data-track-index="40"></video></div>
+    <div class="bg" id="bg13"><div class="bgfill" style="background-image:url(assets/bgvid/fight_kleber_asakura.mp4)"></div><video class="bgv" id="bg13-v" src="assets/bgvid/fight_kleber_asakura.mp4" muted playsinline data-start="143.554" data-duration="19.95" data-media-start="0.0" data-track-index="41"></video></div>
+    <div class="bg" id="bg14"><div class="bgfill" style="background-image:url(assets/img/akimoto_portrait.jpg)"></div><div class="bgmain" style="background-image:url(assets/img/akimoto_portrait.jpg)"></div></div>
+    <div class="bg" id="bg15"><div class="bgfill" style="background-image:url(assets/img/akimoto_portrait.jpg)"></div><div class="bgmain" style="background-image:url(assets/img/akimoto_portrait.jpg)"></div></div>
+    <div class="bg" id="bg16"><div class="bgfill" style="background-image:url(assets/bgvid/px_soccer.mp4)"></div><video class="bgv" id="bg16-v" src="assets/bgvid/px_soccer.mp4" muted playsinline data-start="186.873" data-duration="11.95" data-media-start="0.0" data-track-index="44"></video></div>
+    <div class="bg" id="bg17"><div class="bgfill" style="background-image:url(assets/bgvid/akimoto_stand.mp4)"></div><video class="bgv" id="bg17-v" src="assets/bgvid/akimoto_stand.mp4" muted playsinline data-start="200.734" data-duration="12.142" data-media-start="0.0" data-track-index="45"></video></div>
+    <div class="bg" id="bg18"><div class="bgfill" style="background-image:url(assets/bgvid/akimoto_r1.mp4)"></div><video class="bgv" id="bg18-v" src="assets/bgvid/akimoto_r1.mp4" muted playsinline data-start="212.226" data-duration="10.099" data-media-start="0.0" data-track-index="46"></video></div>
+    <div class="bg" id="bg19"><div class="bgfill" style="background-image:url(assets/bgvid/fight_akimoto_kintaro.mp4)"></div><video class="bgv" id="bg19-v" src="assets/bgvid/fight_akimoto_kintaro.mp4" muted playsinline data-start="221.675" data-duration="8.891" data-media-start="0.0" data-track-index="47"></video></div>
+    <div class="bg" id="bg20"><div class="bgfill" style="background-image:url(assets/bgvid/akimoto_r1.mp4)"></div><video class="bgv" id="bg20-v" src="assets/bgvid/akimoto_r1.mp4" muted playsinline data-start="229.916" data-duration="10.191" data-media-start="0.0" data-track-index="48"></video></div>
+    <div class="bg" id="bg21"><div class="bgfill" style="background-image:url(assets/bgvid/fight_akimoto_mix.mp4)"></div><video class="bgv" id="bg21-v" src="assets/bgvid/fight_akimoto_mix.mp4" muted playsinline data-start="239.457" data-duration="13.396" data-media-start="0.0" data-track-index="49"></video></div>
+    <div class="bg" id="bg22"><div class="bgfill" style="background-image:url(assets/img/akimoto_win.jpg)"></div><div class="bgmain" style="background-image:url(assets/img/akimoto_win.jpg)"></div></div>
+    <div class="bg" id="bg23"><div class="bgfill" style="background-image:url(assets/bgvid/fight_akimoto_mix.mp4)"></div><video class="bgv" id="bg23-v" src="assets/bgvid/fight_akimoto_mix.mp4" muted playsinline data-start="259.051" data-duration="20.65" data-media-start="0.0" data-track-index="51"></video></div>
+    <div class="bg contain" id="bg24"><div class="bgfill" style="background-image:url(assets/img/card_main.jpg)"></div><div class="bgmain" style="background-image:url(assets/img/card_main.jpg)"></div></div>
+    <div class="bg" id="bg25"><div class="bgfill" style="background-image:url(assets/bgvid/talk_aoki.mp4)"></div><video class="bgv" id="bg25-v" src="assets/bgvid/talk_aoki.mp4" muted playsinline data-start="288.185" data-duration="11.213" data-media-start="0.0" data-track-index="41"></video></div>
+    <div class="bg" id="bg26"><div class="bgfill" style="background-image:url(assets/bgvid/kb_action.mp4)"></div><video class="bgv" id="bg26-v" src="assets/bgvid/kb_action.mp4" muted playsinline data-start="298.748" data-duration="12.396" data-media-start="0.0" data-track-index="42"></video></div>
+    <audio id="narr" src="assets/audio/narration.wav" data-start="0" data-track-index="70" data-volume="1"></audio>
+    <audio id="bgm" src="assets/audio/bgm.m4a" data-start="0" data-duration="311.09" data-track-index="71" data-volume="0.08"></audio>
+    <div class="veil"></div>
+    <div class="vignette"></div>
+    <div id="capLayer"></div>
+    <div id="statLayer"></div>
+    <div id="duckLayer"></div>
+    <div id="ovLayer"></div>
+    <div id="chapLayer"></div>
+  </div>
+<script>
+  const DATA = {"total": 311.09, "bg": [{"start": 0.0, "end": 16.389, "name": "card_main", "sec": "c_card", "duck": false, "video": false, "contain": true, "src": "画像: RIZIN FF公式", "asset": "img/card_main.jpg", "id": "bg0", "track": 40, "kb": 0, "kb_from": {"scale": 1.0, "x": 0, "y": 0}, "kb_to": {"scale": 1.04, "x": 0, "y": 0}}, {"start": 16.389, "end": 19.268, "name": "kb_face", "sec": "c_card", "duck": false, "video": true, "contain": false, "src": "試合映像: RIZIN", "asset": "bgvid/kb_face.mp4", "id": "bg1", "track": 41, "kb": 1, "kb_from": {"scale": 1.11, "x": 2.5, "y": 1.0}, "kb_to": {"scale": 1.0418, "x": -1.76, "y": -0.363}, "mstart": 0.0, "mdur": 3.529}, {"start": 19.268, "end": 31.56, "name": "kleber_portrait", "sec": "c_kleber", "duck": false, "video": false, "contain": false, "src": "画像: RIZIN FF公式", "asset": "img/kleber_portrait.jpg", "id": "bg2", "track": 42, "kb": 2, "kb_from": {"scale": 1.04, "x": 3.0, "y": -0.8}, "kb_to": {"scale": 1.1169, "x": -2.765, "y": 0.93}}, {"start": 31.56, "end": 44.956, "name": "kleber_portrait", "sec": "c_kleber", "duck": false, "video": false, "contain": false, "src": "画像: RIZIN FF公式", "asset": "img/kleber_portrait.jpg", "id": "bg3", "track": 43, "kb": 3, "kb_from": {"scale": 1.12, "x": -2.8, "y": 1.2}, "kb_to": {"scale": 1.0429, "x": 2.599, "y": -0.921}}, {"start": 44.956, "end": 55.519, "name": "px_labor", "sec": "c_kleber", "duck": false, "video": true, "contain": false, "src": "映像: Pexels", "asset": "bgvid/px_labor.mp4", "id": "bg4", "track": 44, "kb": 0, "kb_from": {"scale": 1.03, "x": -2.5, "y": -1.2}, "kb_to": {"scale": 1.1064, "x": 2.274, "y": 1.092}, "mstart": 0.0, "mdur": 11.213}, {"start": 55.519, "end": 69.519, "name": "px_labor", "sec": "c_kleber", "duck": false, "video": true, "contain": false, "src": "映像: Pexels", "asset": "bgvid/px_labor.mp4", "id": "bg5", "track": 45, "kb": 1, "kb_from": {"scale": 1.11, "x": 2.5, "y": 1.0}, "kb_to": {"scale": 1.0328, "x": -2.328, "y": -0.545}, "mstart": 0.0, "mdur": 11.95, "loop": true}, {"start": 69.519, "end": 84.354, "name": "px_bjj", "sec": "c_kleber", "duck": false, "video": true, "contain": false, "src": "映像: Pexels", "asset": "bgvid/px_bjj.mp4", "id": "bg6", "track": 46, "kb": 2, "kb_from": {"scale": 1.04, "x": 3.0, "y": -0.8}, "kb_to": {"scale": 1.1174, "x": -2.804, "y": 0.941}, "mstart": 0.0, "mdur": 11.95, "loop": true}, {"start": 84.354, "end": 96.775, "name": "kb_action", "sec": "c_kleber", "duck": false, "video": true, "contain": false, "src": "試合映像: RIZIN", "asset": "bgvid/kb_action.mp4", "id": "bg7", "track": 47, "kb": 3, "kb_from": {"scale": 1.12, "x": -2.8, "y": 1.2}, "kb_to": {"scale": 1.0431, "x": 2.583, "y": -0.915}, "mstart": 0.0, "mdur": 13.071}, {"start": 96.775, "end": 104.691, "name": "kb_belt", "sec": "c_kleber", "duck": false, "video": true, "contain": false, "src": "試合映像: RIZIN", "asset": "bgvid/kb_belt.mp4", "id": "bg8", "track": 48, "kb": 0, "kb_from": {"scale": 1.03, "x": -2.5, "y": -1.2}, "kb_to": {"scale": 1.1052, "x": 2.203, "y": 1.057}, "mstart": 0.0, "mdur": 8.566}, {"start": 104.691, "end": 111.957, "name": "fight_kleber_asakura", "sec": "c_kleber", "duck": false, "video": true, "contain": false, "src": "試合映像: RIZIN(RIZIN.28)", "asset": "bgvid/fight_kleber_asakura.mp4", "id": "bg9", "track": 49, "kb": 1, "kb_from": {"scale": 1.11, "x": 2.5, "y": 1.0}, "kb_to": {"scale": 1.0352, "x": -2.178, "y": -0.497}, "mstart": 0.0, "mdur": 7.916}, {"start": 111.957, "end": 121.87, "name": "kb_rizin49", "sec": "c_kleber", "duck": false, "video": true, "contain": false, "src": "試合映像: RIZIN(RIZIN.49)", "asset": "bgvid/kb_rizin49.mp4", "id": "bg10", "track": 50, "kb": 2, "kb_from": {"scale": 1.04, "x": 3.0, "y": -0.8}, "kb_to": {"scale": 1.1162, "x": -2.712, "y": 0.914}, "mstart": 0.0, "mdur": 10.563}, {"start": 121.87, "end": 133.641, "name": "kb_shayd_ko", "sec": "c_kleber", "duck": false, "video": true, "contain": false, "src": "試合映像: RIZIN(2025.5.4)", "asset": "bgvid/kb_shayd_ko.mp4", "id": "bg11", "track": 51, "kb": 3, "kb_from": {"scale": 1.12, "x": -2.8, "y": 1.2}, "kb_to": {"scale": 1.0433, "x": 2.572, "y": -0.91}, "mstart": 0.0, "mdur": 12.421}, {"start": 133.641, "end": 143.554, "name": "kb_face", "sec": "c_kleber", "duck": false, "video": true, "contain": false, "src": "試合映像: RIZIN", "asset": "bgvid/kb_face.mp4", "id": "bg12", "track": 40, "kb": 0, "kb_from": {"scale": 1.03, "x": -2.5, "y": -1.2}, "kb_to": {"scale": 1.1062, "x": 2.26, "y": 1.085}, "mstart": 0.0, "mdur": 10.563}, {"start": 143.554, "end": 163.554, "name": "fight_kleber_asakura", "sec": "c_kleber", "duck": true, "video": true, "contain": false, "src": "試合映像: RIZIN(RIZIN.28)", "asset": "bgvid/fight_kleber_asakura.mp4", "id": "bg13", "track": 41, "kb": 1, "kb_from": {"scale": 1.0, "x": 0, "y": 0}, "kb_to": {"scale": 1.0, "x": 0, "y": 0}, "mstart": 0.0, "mdur": 19.95, "loop": true}, {"start": 163.554, "end": 175.149, "name": "akimoto_portrait", "sec": "c_akimoto", "duck": false, "video": false, "contain": false, "src": "画像: RIZIN FF公式", "asset": "img/akimoto_portrait.jpg", "id": "bg14", "track": 42, "kb": 2, "kb_from": {"scale": 1.04, "x": 3.0, "y": -0.8}, "kb_to": {"scale": 1.1167, "x": -2.752, "y": 0.926}}, {"start": 175.149, "end": 186.873, "name": "akimoto_portrait", "sec": "c_akimoto", "duck": false, "video": false, "contain": false, "src": "画像: RIZIN FF公式", "asset": "img/akimoto_portrait.jpg", "id": "bg15", "track": 43, "kb": 3, "kb_from": {"scale": 1.12, "x": -2.8, "y": 1.2}, "kb_to": {"scale": 1.0433, "x": 2.571, "y": -0.91}}, {"start": 186.873, "end": 200.734, "name": "px_soccer", "sec": "c_akimoto", "duck": false, "video": true, "contain": false, "src": "映像: Pexels", "asset": "bgvid/px_soccer.mp4", "id": "bg16", "track": 44, "kb": 0, "kb_from": {"scale": 1.03, "x": -2.5, "y": -1.2}, "kb_to": {"scale": 1.1072, "x": 2.326, "y": 1.116}, "mstart": 0.0, "mdur": 11.95, "loop": true}, {"start": 200.734, "end": 212.226, "name": "akimoto_stand", "sec": "c_akimoto", "duck": false, "video": true, "contain": false, "src": "試合映像: RIZIN(RIZIN.48)", "asset": "bgvid/akimoto_stand.mp4", "id": "bg17", "track": 45, "kb": 1, "kb_from": {"scale": 1.11, "x": 2.5, "y": 1.0}, "kb_to": {"scale": 1.0333, "x": -2.292, "y": -0.533}, "mstart": 0.0, "mdur": 12.142}, {"start": 212.226, "end": 221.675, "name": "akimoto_r1", "sec": "c_akimoto", "duck": false, "video": true, "contain": false, "src": "試合映像: RIZIN(RIZIN.48)", "asset": "bgvid/akimoto_r1.mp4", "id": "bg18", "track": 46, "kb": 2, "kb_from": {"scale": 1.04, "x": 3.0, "y": -0.8}, "kb_to": {"scale": 1.116, "x": -2.698, "y": 0.91}, "mstart": 0.0, "mdur": 10.099}, {"start": 221.675, "end": 229.916, "name": "fight_akimoto_kintaro", "sec": "c_akimoto", "duck": false, "video": true, "contain": false, "src": "試合映像: RIZIN(RIZIN.48)", "asset": "bgvid/fight_akimoto_kintaro.mp4", "id": "bg19", "track": 47, "kb": 3, "kb_from": {"scale": 1.12, "x": -2.8, "y": 1.2}, "kb_to": {"scale": 1.0446, "x": 2.48, "y": -0.874}, "mstart": 0.0, "mdur": 8.891}, {"start": 229.916, "end": 239.457, "name": "akimoto_r1", "sec": "c_akimoto", "duck": false, "video": true, "contain": false, "src": "試合映像: RIZIN(RIZIN.48)", "asset": "bgvid/akimoto_r1.mp4", "id": "bg20", "track": 48, "kb": 0, "kb_from": {"scale": 1.03, "x": -2.5, "y": -1.2}, "kb_to": {"scale": 1.106, "x": 2.251, "y": 1.08}, "mstart": 0.0, "mdur": 10.191}, {"start": 239.457, "end": 252.203, "name": "fight_akimoto_mix", "sec": "c_akimoto", "duck": false, "video": true, "contain": false, "src": "試合映像: RIZIN(RIZIN.52)", "asset": "bgvid/fight_akimoto_mix.mp4", "id": "bg21", "track": 49, "kb": 1, "kb_from": {"scale": 1.11, "x": 2.5, "y": 1.0}, "kb_to": {"scale": 1.033, "x": -2.311, "y": -0.54}, "mstart": 0.0, "mdur": 13.396}, {"start": 252.203, "end": 259.051, "name": "akimoto_win", "sec": "c_akimoto", "duck": false, "video": false, "contain": false, "src": "試合映像: RIZIN(RIZIN.48)", "asset": "img/akimoto_win.jpg", "id": "bg22", "track": 50, "kb": 2, "kb_from": {"scale": 1.04, "x": 3.0, "y": -0.8}, "kb_to": {"scale": 1.1146, "x": -2.592, "y": 0.878}}, {"start": 259.051, "end": 279.051, "name": "fight_akimoto_mix", "sec": "c_akimoto", "duck": true, "video": true, "contain": false, "src": "試合映像: RIZIN(RIZIN.52)", "asset": "bgvid/fight_akimoto_mix.mp4", "id": "bg23", "track": 51, "kb": 3, "kb_from": {"scale": 1.0, "x": 0, "y": 0}, "kb_to": {"scale": 1.0, "x": 0, "y": 0}, "mstart": 0.0, "mdur": 20.65}, {"start": 279.051, "end": 288.185, "name": "card_main", "sec": "c_yosou", "duck": false, "video": false, "contain": true, "src": "画像: RIZIN FF公式", "asset": "img/card_main.jpg", "id": "bg24", "track": 40, "kb": 0, "kb_from": {"scale": 1.0, "x": 0, "y": 0}, "kb_to": {"scale": 1.04, "x": 0, "y": 0}}, {"start": 288.185, "end": 298.748, "name": "talk_aoki", "sec": "c_yosou", "duck": false, "video": true, "contain": false, "src": "出典: YouTube「青木真也」", "asset": "bgvid/talk_aoki.mp4", "id": "bg25", "track": 41, "kb": 1, "kb_from": {"scale": 1.11, "x": 2.5, "y": 1.0}, "kb_to": {"scale": 1.0336, "x": -2.274, "y": -0.528}, "mstart": 0.0, "mdur": 11.213}, {"start": 298.748, "end": 310.494, "name": "kb_action", "sec": "c_yosou", "duck": false, "video": true, "contain": false, "src": "試合映像: RIZIN", "asset": "bgvid/kb_action.mp4", "id": "bg26", "track": 42, "kb": 2, "kb_from": {"scale": 1.04, "x": 3.0, "y": -0.8}, "kb_to": {"scale": 1.1167, "x": -2.755, "y": 0.927}, "mstart": 0.0, "mdur": 12.396}], "tags": [{"start": 0.3, "end": 19.268, "label": "メインイベント"}, {"start": 19.268, "end": 163.554, "label": "クレベル・コイケ"}, {"start": 163.554, "end": 279.051, "label": "秋元 強真"}, {"start": 279.051, "end": 309.894, "label": "勝敗予想"}], "stats": [{"anchor": "クレベル・コイケ・エルベスト", "hold_to": "そのうち一本勝ちは", "side": "right", "flag": "🇧🇷", "name": "クレベル・コイケ", "roma": "KLEBER KOIKE", "rows": [["生年月日", "1989.10.16（36歳）"], ["身長 / 体重", "178cm / 66.0kg"], ["リーチ", "183cm"], ["出身", "ブラジル・サンパウロ"], ["所属", "ボンサイ柔術"], ["戦績", "35勝9敗1分"]], "record_hi": "一本 29", "start": 22.37, "end": 44.76}, {"anchor": "続いては挑戦者", "hold_to": "唯一の黒星以外", "side": "left", "flag": "🇯🇵", "name": "秋元 強真", "roma": "KYOMA AKIMOTO", "rows": [["生年月日", "2006.3.8（20歳）"], ["身長 / 体重", "177cm / 66.0kg"], ["リーチ", "177.5cm"], ["出身", "千葉県旭市"], ["所属", "JAPAN TOP TEAM"], ["戦績", "12勝1敗"]], "record_hi": "KO/TKO 7・一本 2", "start": 166.65, "end": 186.67}], "ducks": [{"start": 143.75, "end": 163.35}, {"start": 259.25, "end": 278.85}], "srcs": [{"start": 0.0, "end": 16.389, "text": "画像: RIZIN FF公式"}, {"start": 16.389, "end": 19.268, "text": "試合映像: RIZIN"}, {"start": 19.268, "end": 44.956, "text": "画像: RIZIN FF公式"}, {"start": 44.956, "end": 84.354, "text": "映像: Pexels"}, {"start": 84.354, "end": 104.691, "text": "試合映像: RIZIN"}, {"start": 104.691, "end": 111.957, "text": "試合映像: RIZIN(RIZIN.28)"}, {"start": 111.957, "end": 121.87, "text": "試合映像: RIZIN(RIZIN.49)"}, {"start": 121.87, "end": 133.641, "text": "試合映像: RIZIN(2025.5.4)"}, {"start": 133.641, "end": 143.554, "text": "試合映像: RIZIN"}, {"start": 143.554, "end": 163.554, "text": "試合映像: RIZIN(RIZIN.28)"}, {"start": 163.554, "end": 186.873, "text": "画像: RIZIN FF公式"}, {"start": 186.873, "end": 200.734, "text": "映像: Pexels"}, {"start": 200.734, "end": 239.457, "text": "試合映像: RIZIN(RIZIN.48)"}, {"start": 239.457, "end": 252.203, "text": "試合映像: RIZIN(RIZIN.52)"}, {"start": 252.203, "end": 259.051, "text": "試合映像: RIZIN(RIZIN.48)"}, {"start": 259.051, "end": 279.051, "text": "試合映像: RIZIN(RIZIN.52)"}, {"start": 279.051, "end": 288.185, "text": "画像: RIZIN FF公式"}, {"start": 288.185, "end": 298.748, "text": "出典: YouTube「青木真也」"}, {"start": 298.748, "end": 310.494, "text": "試合映像: RIZIN"}], "caps": [{"s": 2.6, "e": 6.05, "lines": ["そして、いよいよ大会のメインイベントです。"]}, {"s": 6.1, "e": 14.15, "lines": ["元RIZINフェザー級王者クレベル・コイケと、", "20歳の新星、秋元強真。柔術の絶対王者に、"]}, {"s": 14.15, "e": 16.34, "lines": ["日本の怪物が挑みます。"]}, {"s": 16.39, "e": 19.57, "lines": ["まずは、クレベル・コイケから見ていきましょう。"]}, {"s": 22.02, "e": 31.51, "lines": ["クレベル・コイケ・エルベスト。1989年10月16日生", "まれの36歳。ブラジル、サンパウロの出身です。"]}, {"s": 31.56, "e": 41.71, "lines": ["身長178センチ、リーチ183センチ。フェザー級。", "戦績は35勝9敗と、圧倒的な経験を誇ります。その"]}, {"s": 41.71, "e": 44.91, "lines": ["うち一本勝ちは、実に29です。"]}, {"s": 44.96, "e": 50.29, "lines": ["その原点は、決して恵まれたものでは", "ありませんでした。日本人の祖父を"]}, {"s": 50.29, "e": 55.47, "lines": ["持つクレベルは、ブラジルで日本人と呼ばれ、", "差別を受けて育ちます。"]}, {"s": 55.52, "e": 61.74, "lines": ["14歳で家族と来日しますが、今度は", "在日ブラジル人へのいじめを目の当たりにし、"]}, {"s": 61.74, "e": 67.96, "lines": ["学校へ行かなくなりました。工場、養鶏場、", "ゴミ回収。過酷なアルバイトで生計を"]}, {"s": 67.96, "e": 69.47, "lines": ["立てる日々でした。"]}, {"s": 69.52, "e": 76.74, "lines": ["転機は、工場の送迎バスです。ボンサイ柔術の", "創設者と出会い、柔術の道へ進みます。一度は"]}, {"s": 76.74, "e": 84.3, "lines": ["道を踏み外しかけますが、盟友ホベルト・サトシ・", "ソウザの涙の説得で、彼は柔術に戻りました。"]}, {"s": 84.35, "e": 91.85, "lines": ["以来、クレベルは高度な寝技を武器に、頂点へと", "駆け上がります。三角絞め、ダースチョーク、"]}, {"s": 91.85, "e": 96.73, "lines": ["腕十字。多彩な極め技で、次々と相手を", "仕留めていきました。"]}, {"s": 96.78, "e": 103.1, "lines": ["極めるぞ、と叫ぶボペガーの雄叫びは、", "フィニッシュの合図。それは、柔術の鬼の"]}, {"s": 103.1, "e": 104.64, "lines": ["代名詞となります。"]}, {"s": 104.69, "e": 111.91, "lines": ["2021年、あの朝倉未来を三角絞めで一本。", "日本中に衝撃を与えました。"]}, {"s": 111.96, "e": 121.82, "lines": ["さらに2022年、牛久絢太郎を破り第3代王者に。", "2024年には王座を奪還し、第6代王者にも輝きます。"]}, {"s": 121.87, "e": 129.13, "lines": ["死角なしに見えた王者。しかし2025年、", "絶対王者シェイドゥラエフの右フックの前に、"]}, {"s": 129.13, "e": 133.59, "lines": ["キャリア初のKO負けを喫し、王座か", "ら陥落しました。"]}, {"s": 133.64, "e": 142.05, "lines": ["それでは、その圧倒的な寝技を、実際の試合で", "見てみましょう。2021年、朝倉未来戦の"]}, {"s": 142.05, "e": 143.55, "lines": ["三角絞めです。"]}, {"s": 166.3, "e": 175.1, "lines": ["続いては挑戦者、秋元強真。2006年3月8日生まれの", "、まだ20歳です。千葉県旭市の出身。"]}, {"s": 175.15, "e": 184.61, "lines": ["身長177センチ、リーチ177.5センチ。", "フェザー級。戦績は12勝1敗。唯一の黒星以外、"]}, {"s": 184.61, "e": 186.82, "lines": ["負けを知りません。"]}, {"s": 186.87, "e": 195.37, "lines": ["格闘技との出会いは、意外にもサッカーでした。", "6歳から8年間、サッカー少年だった秋元。転機は"]}, {"s": 195.37, "e": 200.68, "lines": ["14歳、RIZINで戦う朝倉未来と朝倉海の姿を", "見たことでした。"]}, {"s": 200.73, "e": 208.74, "lines": ["憧れは、やがて情熱に変わります。秋元は親の", "反対を押し切り、高校進学を辞退。中学卒業と"]}, {"s": 208.74, "e": 212.18, "lines": ["同時に、格闘技の道へ飛び込みました。"]}, {"s": 212.23, "e": 218.69, "lines": ["パラエストラ柏でプロデビューを果たすと、その", "ポテンシャルはすぐに開花します。破壊力抜群の"]}, {"s": 218.69, "e": 221.62, "lines": ["打撃で、次々とフィニッシュを重ねました。"]}, {"s": 221.68, "e": 229.87, "lines": ["2024年、RIZINに初参戦。金太郎を1ラウンドで", "TKO。鮮烈なデビューを飾ります。"]}, {"s": 229.92, "e": 238.26, "lines": ["しかし同じ年の大晦日、元谷友貴に判定負け。", "連勝は7で止まり、キャリア初にして唯一の黒星を"]}, {"s": 238.26, "e": 239.41, "lines": ["喫しました。"]}, {"s": 239.46, "e": 246.51, "lines": ["けれど秋元は、この敗戦を糧に、怪物へと", "変貌します。JAPAN TOP TEAMへ移籍し、寝技の"]}, {"s": 246.51, "e": 252.15, "lines": ["穴を埋めた彼は、元世界王者パッチー・ミックスを", "も打ち破りました。"]}, {"s": 252.2, "e": 258.75, "lines": ["それでは、生まれ変わった秋元の打撃を、実際の", "試合で見てみましょう。パッチー・ミックス戦で"]}, {"s": 258.75, "e": 259.05, "lines": ["す。"]}, {"s": 281.8, "e": 288.13, "lines": ["さて、この一戦。プロの予想は、秋元有利の声が", "多数を占めています。"]}, {"s": 288.19, "e": 294.62, "lines": ["青木真也さんは、クレベルが組める距離にそも", "そも入れない、と秋元の圧勝を予想。多くの"]}, {"s": 294.62, "e": 298.7, "lines": ["専門家が、秋元のスピードと打撃を", "高く評価しています。"]}, {"s": 298.75, "e": 305.82, "lines": ["一方で、クレベルの寝技に持ち込めれば逆転も", "ある、という声も根強い。秋元を組める距離に"]}, {"s": 305.82, "e": 310.19, "lines": ["入れさせないか。それが、最大の分岐点に", "なりそうです。"]}], "chapters": [{"sec": "c_card", "start": 0.3, "end": 2.3, "title": "メインイベント", "sub": "クレベル・コイケ vs 秋元強真"}, {"sec": "c_kleber", "start": 19.718, "end": 21.718, "title": "クレベル・コイケ", "sub": "柔術の鬼 ／ 元RIZIN王者"}, {"sec": "c_akimoto", "start": 164.004, "end": 166.004, "title": "秋元強真", "sub": "20歳の怪物 ／ JTTの新星"}, {"sec": "c_yosou", "start": 279.501, "end": 281.501, "title": "勝敗予想", "sub": "プロはどう見るか"}], "channel": "格闘ニュースラボ"};
+  const ovLayer = document.getElementById('ovLayer');
+  const FADE = 0.5;
+  const tl = gsap.timeline({paused:true});
+
+  DATA.bg.forEach((s) => {
+    const el = document.getElementById(s.id);
+    const kb = el.querySelector('.bgmain') || el.querySelector('.bgv');
+    const dur = Math.max(0.6, s.end - s.start);
+    const kf = s.kb_from || {scale:1.03,x:0,y:0}, kt = s.kb_to || {scale:1.09,x:0,y:0};
+    if (kb) tl.fromTo(kb,
+      {scale:kf.scale, xPercent:kf.x, yPercent:kf.y},
+      {scale:kt.scale, xPercent:kt.x, yPercent:kt.y, duration:dur, ease:'none'}, s.start);
+    if (s.cont) tl.set(el, {opacity:1}, s.start);
+    else tl.fromTo(el, {opacity:0}, {opacity:1, duration:FADE, ease:'power1.out'}, s.start);
+    if (!s.cont_end) tl.to(el, {opacity:0, duration:FADE, ease:'power1.in'}, s.end);
+  });
+
+  DATA.tags.forEach((t) => {
+    if (!t.label) return;
+    const el = document.createElement('div'); el.className='tag'; el.textContent=t.label; ovLayer.appendChild(el);
+    if (t.cont) tl.set(el,{opacity:1,x:0},t.start);
+    else tl.fromTo(el,{opacity:0,x:-22},{opacity:1,x:0,duration:.4,ease:'back.out(1.4)'}, t.start);
+    if (!t.cont_end) tl.to(el,{opacity:0,duration:.35,ease:'power1.in'}, t.end-.35);
+  });
+  const badge = document.createElement('div'); badge.className='badge'; badge.textContent=DATA.channel; ovLayer.appendChild(badge);
+  DATA.srcs.forEach((s) => {
+    if (!s.text) return;
+    const el = document.createElement('div'); el.className='src'; el.textContent=s.text; ovLayer.appendChild(el);
+    if (s.cont) tl.set(el,{opacity:1},s.start); else tl.to(el,{opacity:1,duration:.4}, s.start);
+    if (!s.cont_end) tl.to(el,{opacity:0,duration:.4}, s.end-.4);
+  });
+
+  // STATカード
+  const statLayer = document.getElementById('statLayer');
+  DATA.stats.forEach((st) => {
+    const el = document.createElement('div'); el.className='stat '+st.side;
+    const rows = st.rows.map((r)=>{
+      const rec = (r[0]==='戦績');
+      return "<div class='srow"+(rec?" rec":"")+"'><div class='sk'>"+r[0]+"</div><div class='sv'>"+r[1]
+        + (rec && st.record_hi ? "<div class='srec2'>"+st.record_hi+"</div>" : "") + "</div></div>";
+    }).join('');
+    el.innerHTML = "<div class='shead'><div class='sflag'>"+st.flag+"</div><div class='sname'>"+st.name+"</div><div class='sroma'>"+st.roma+"</div></div>"
+      + "<div class='sbody'>"+rows+"</div>";
+    statLayer.appendChild(el);
+    const dx = st.side==='left' ? -40 : 40;
+    if (st.cont) tl.set(el,{opacity:1,x:0},st.start);
+    else tl.fromTo(el,{opacity:0,x:dx},{opacity:1,x:0,duration:.5,ease:'power3.out'}, st.start);
+    if (!st.cont_end) tl.to(el,{opacity:0,duration:.35,ease:'power1.in'}, st.end-.35);
+  });
+
+  // ダック帯(ナレ無し・実際の試合映像)
+  const duckLayer = document.getElementById('duckLayer');
+  DATA.ducks.forEach((d) => {
+    const el = document.createElement('div'); el.className='duck';
+    el.innerHTML = "<span class='dred'>●</span> 実際の試合映像";
+    duckLayer.appendChild(el);
+    if (d.cont) tl.set(el,{opacity:1,y:0},d.start);
+    else tl.fromTo(el,{opacity:0,y:-14},{opacity:1,y:0,duration:.4,ease:'power2.out'}, d.start);
+    if (!d.cont_end) tl.to(el,{opacity:0,duration:.35,ease:'power1.in'}, d.end-.35);
+  });
+
+  const capLayer = document.getElementById('capLayer');
+  (DATA.caps||[]).forEach((c) => {
+    const el = document.createElement('div'); el.className='cap';
+    el.innerHTML = c.lines.map((l)=>"<div class='cl'>"+l+"</div>").join('');
+    capLayer.appendChild(el);
+    if (c.cont) tl.set(el,{opacity:1,y:0},c.s);
+    else tl.fromTo(el,{opacity:0,y:8},{opacity:1,y:0,duration:.14,ease:'power1.out'}, c.s);
+    if (!c.cont_end) tl.to(el,{opacity:0,duration:.1,ease:'power1.in'}, c.e);
+  });
+
+  const chapLayer = document.getElementById('chapLayer');
+  (DATA.chapters||[]).forEach((ch)=>{
+    const el=document.createElement('div'); el.className='chap';
+    el.innerHTML="<div class='cfull'></div><div class='cinner'><div class='csub2'>"+ch.sub+"</div><div class='ctitle'>"+ch.title+"</div><div class='cline'></div></div>";
+    chapLayer.appendChild(el);
+    const inner=el.querySelector('.cinner'), ttl=el.querySelector('.ctitle'), line=el.querySelector('.cline');
+    if (ch.cont) { tl.set(el,{opacity:1},0); tl.set(inner,{scale:1.0},0); tl.set(ttl,{letterSpacing:'0.04em',opacity:1},0); tl.set(line,{width:560},0); }
+    else {
+      tl.fromTo(el,{opacity:0},{opacity:1,duration:.2,ease:'power1.out'}, ch.start);
+      tl.fromTo(inner,{scale:1.1},{scale:1.0,duration:.55,ease:'power3.out'}, ch.start);
+      tl.fromTo(ttl,{letterSpacing:'0.2em',opacity:0},{letterSpacing:'0.04em',opacity:1,duration:.5,ease:'power2.out'}, ch.start+0.04);
+      tl.fromTo(line,{width:0},{width:560,duration:.55,ease:'power2.out'}, ch.start+0.18);
+    }
+    if (!ch.cont_end) tl.to(el,{opacity:0,duration:.3,ease:'power1.in'}, ch.end-0.3);
+  });
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines['rizin54-fighters'] = tl;
+</script>
+</body>
+</html>
