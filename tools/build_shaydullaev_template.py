@@ -121,7 +121,6 @@ __TEXTFX_CSS__
     __MEDIA__
     <div class="veil"></div>
     <div class="vignette"></div>
-    <div class="scan"></div>
     <div id="ovLayer"></div>
     <div id="capLayer"></div>
     <div id="openLayer"></div>
