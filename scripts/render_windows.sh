@@ -21,7 +21,7 @@ render_raw() {
   want=$(python3 -c "print(round($re-$rs,3))")
   for a in 1 2 3 4; do
     HF_WIN_START="$rs" HF_WIN_END="$re" python3 "$BUILD" >/dev/null 2>&1
-    ( cd "$TPL" && timeout 480 xvfb-run -a hyperframes render -c index.html -o "$out" --fps 30 -q standard --workers 1 >"$OUTDIR/$tag.log" 2>&1 )
+    ( cd "$TPL" && timeout 900 xvfb-run -a hyperframes render -c index.html -o "$out" --fps 30 -q standard --workers 1 >"$OUTDIR/$tag.log" 2>&1 )
     if [ -f "$out" ]; then
       hd=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$out" 2>/dev/null)
       if [ -n "$hd" ] && python3 -c "exit(0 if abs($hd-$want)<1.2 and $hd>0.3 else 1)"; then return 0; fi
