@@ -5,9 +5,13 @@ on:
   workflow_dispatch:
     inputs:
       episode:
-        description: "エピソード名(現状 rizin54-yosou 固定)"
+        description: "エピソード名(rizin54-yosou / rizin54-fighters / shaydullaev)"
         required: true
         default: "rizin54-yosou"
+      visual_only:
+        description: "ビジュアルのみ出力(音声muxはローカル)。shaydullaev等はtrue"
+        required: false
+        default: "false"
 
 concurrency:
   group: render-${{ github.event.inputs.episode }}
@@ -99,8 +103,13 @@ jobs:
           bash scripts/render_windows.sh
 
       - name: Mux narration + single BGM + loudnorm
-        if: steps.check.outputs.exists == 'false'
+        if: steps.check.outputs.exists == 'false' && github.event.inputs.visual_only != 'true'
         run: bash scripts/finalize.sh
+
+      # ビジュアルのみ出力(音声はローカルでmux)。visual.mp4 を final.mp4 として公開。
+      - name: Visual-only (skip audio mux)
+        if: steps.check.outputs.exists == 'false' && github.event.inputs.visual_only == 'true'
+        run: cp visual.mp4 final.mp4
 
       - name: Decode-error check
         if: steps.check.outputs.exists == 'false'

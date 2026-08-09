@@ -1,0 +1,489 @@
+<!doctype html>
+<!-- シェイドゥラエフ 完全解説 1920x1080【評伝型】 -->
+<html>
+<head>
+<meta charset="utf-8" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script>/* ============================================================
+   textfx.js — 動画用テキスト「アニメーション」登録ライブラリ（再利用）
+   GSAP前提・seek安全（全て paused timeline tl に時刻 t で tween を積む）。
+   使い方: TextFX.charRise(tl, el, t, {dur, stagger}); など。退場は TextFX.exit。
+   HyperFramesルール順守: gsapのみ/同要素同プロパティ多重禁止/exitはオーバーレイのみ可。
+   ============================================================ */
+(function () {
+  const g = () => window.gsap;
+
+  // 文字を span.tfx-ch に分割（インラインブロック）。空白は保持。1回だけ実行。
+  function splitChars(el) {
+    if (el.__tfxSplit) return el.__tfxChars;
+    const text = el.textContent;
+    el.textContent = "";
+    const chars = [];
+    for (const ch of text) {
+      const s = document.createElement("span");
+      s.className = "tfx-ch";
+      s.style.display = "inline-block";
+      s.style.whiteSpace = "pre";
+      s.textContent = ch;
+      el.appendChild(s);
+      if (ch !== " " && ch !== "　") chars.push(s);
+    }
+    el.__tfxSplit = true; el.__tfxChars = chars;
+    return chars;
+  }
+
+  const TextFX = {
+    // 文字が下からせり上がり（スタッガー）
+    charRise(tl, el, t, o = {}) {
+      const ch = splitChars(el); const tl2 = g();
+      tl.fromTo(el, { opacity: 1 }, { opacity: 1, duration: 0.01 }, t);
+      tl.fromTo(ch, { yPercent: 120, opacity: 0 },
+        { yPercent: 0, opacity: 1, duration: o.dur || 0.5, ease: o.ease || "back.out(1.6)", stagger: o.stagger || 0.035 }, t);
+    },
+    // 文字がスケールでポップ
+    charPop(tl, el, t, o = {}) {
+      const ch = splitChars(el);
+      tl.fromTo(ch, { scale: 0.2, opacity: 0 },
+        { scale: 1, opacity: 1, duration: o.dur || 0.45, ease: o.ease || "back.out(2)", stagger: o.stagger || 0.03 }, t);
+    },
+    // 左→右クリップワイプ表示
+    wipe(tl, el, t, o = {}) {
+      tl.fromTo(el, { clipPath: "inset(0 100% 0 0)", opacity: 1 },
+        { clipPath: "inset(0 0% 0 0)", duration: o.dur || 0.8, ease: o.ease || "power4.out" }, t);
+    },
+    // 下からマスク表示（行が立ち上がる）
+    riseMask(tl, el, t, o = {}) {
+      tl.fromTo(el, { clipPath: "inset(110% 0 0 0)", yPercent: 18, opacity: 1 },
+        { clipPath: "inset(0% 0 0 0)", yPercent: 0, duration: o.dur || 0.6, ease: o.ease || "power3.out" }, t);
+    },
+    // ふわっと上昇フェード
+    fadeUp(tl, el, t, o = {}) {
+      tl.fromTo(el, { y: o.y || 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: o.dur || 0.5, ease: o.ease || "power3.out" }, t);
+    },
+    // スケールポップ（要素全体）
+    scalePop(tl, el, t, o = {}) {
+      tl.fromTo(el, { scale: o.from || 0.6, opacity: 0 },
+        { scale: 1, opacity: 1, duration: o.dur || 0.5, ease: o.ease || "back.out(1.7)" }, t);
+    },
+    // インパクトのあるスラム（大→等倍＋ブラー）
+    slam(tl, el, t, o = {}) {
+      tl.fromTo(el, { scale: o.from || 1.5, opacity: 0 },
+        { scale: 1, opacity: 1, duration: o.dur || 0.42, ease: o.ease || "power3.out" }, t);
+      blurTween(tl, el, t, o.blur || 16, o.dur || 0.42);
+    },
+    // ブラーイン（焦点が合う）
+    blurIn(tl, el, t, o = {}) {
+      tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: (o.dur || 0.5) * 0.8, ease: "power1.out" }, t);
+      blurTween(tl, el, t, o.blur || 18, o.dur || 0.5);
+    },
+    // ライトスピード（斜めスライドイン）
+    lightspeed(tl, el, t, o = {}) {
+      tl.fromTo(el, { x: o.x || 140, skewX: -22, opacity: 0 },
+        { x: 0, skewX: 0, opacity: 1, duration: o.dur || 0.5, ease: o.ease || "power3.out" }, t);
+    },
+    // 下線スイープ（.tfx-uline 等の幅0→width）
+    underline(tl, el, t, width, o = {}) {
+      tl.fromTo(el, { width: 0 }, { width: width, duration: o.dur || 0.5, ease: o.ease || "power2.out" }, t);
+    },
+    // ゴールド等のグラデにシャイン走らせ（要素は background-size:230% 100% 想定）
+    shine(tl, el, t, o = {}) {
+      tl.fromTo(el, { backgroundPositionX: "120%" }, { backgroundPositionX: "-20%", duration: o.dur || 1.0, ease: "power1.inOut" }, t);
+    },
+    // オーバーレイ退場（カード等のみ可。シーン遷移には使わない）
+    exit(tl, el, t, o = {}) {
+      tl.to(el, { opacity: 0, y: o.y || -12, duration: o.dur || 0.35, ease: "power1.in" }, t);
+    },
+  };
+
+  // filterブラーをオブジェクトproxyでtween（seek時もonUpdateで反映）。完了でinline filterを消し、CSSクラスのfilterを復帰。
+  function blurTween(tl, el, t, from, dur) {
+    const p = { b: from };
+    tl.to(p, {
+      b: 0, duration: dur, ease: "power2.out",
+      onUpdate() { el.style.filter = "blur(" + p.b.toFixed(2) + "px)"; },
+      onComplete() { el.style.filter = ""; },
+      onReverseComplete() { el.style.filter = "blur(" + from + "px)"; },
+    }, t);
+  }
+
+  window.TextFX = TextFX;
+})();
+</script>
+<style>
+/* ============================================================
+   textfx.css — 動画用テキスト「デザイン」クラス集（再利用ライブラリ）
+   HyperFrames合成にinjectして使う。アニメーションは textfx.js (GSAP/seek安全)。
+   参考: jajaaan css-headline / su-gi-rx font-design / 9-bb / quantaxis
+   フォント前提: "Mincho"(極太明朝 GokubutoMincho) / "JPHeavy"(SourceHanSans Heavy)
+   ============================================================ */
+
+/* 【縁取りは“外向きのみ”＝drop-shadow積層】-webkit-text-stroke(中央寄せ=字を細らせる)は大型文字で使わない。
+   下記の --tfx-edge / --tfx-edge-sm を filter で重ね、グリフを太いまま外側だけに縁を付ける。 */
+:root {
+  --tfx-edge: drop-shadow(3px 0 0 #0a0a0a) drop-shadow(-3px 0 0 #0a0a0a) drop-shadow(0 3px 0 #0a0a0a) drop-shadow(0 -3px 0 #0a0a0a)
+              drop-shadow(2.1px 2.1px 0 #0a0a0a) drop-shadow(-2.1px -2.1px 0 #0a0a0a) drop-shadow(2.1px -2.1px 0 #0a0a0a) drop-shadow(-2.1px 2.1px 0 #0a0a0a)
+              drop-shadow(0 6px 9px rgba(0,0,0,.55));
+  --tfx-edge-sm: drop-shadow(1.6px 0 0 #0a0a0a) drop-shadow(-1.6px 0 0 #0a0a0a) drop-shadow(0 1.6px 0 #0a0a0a) drop-shadow(0 -1.6px 0 #0a0a0a)
+              drop-shadow(0 2px 6px rgba(0,0,0,.85));
+}
+
+/* --- 文字そのもののデザイン（.tfx-* を文字要素に付与） --- */
+.tfx-mincho { font-family:"Mincho",serif; font-weight:900; }
+.tfx-heavy  { font-family:"JPHeavy","Noto Sans JP",sans-serif; font-weight:900; }
+
+/* 外向きアウトライン（白） */
+.tfx-outline { color:#fff; filter:var(--tfx-edge); }
+.tfx-outline-thin { color:#fff; filter:var(--tfx-edge-sm); }
+
+/* ゴールドグラデ文字（縁は外向きdrop-shadow） */
+.tfx-gold { background:linear-gradient(180deg,#fff7c0 0%,#ffe060 34%,#e0a020 64%,#fff5b0 100%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; filter:var(--tfx-edge); }
+
+/* ソリッドゴールド（文字分割アニメ charRise/charPop 用＝background-clipを使わない） */
+.tfx-gold-solid { color:#ffd84b; filter:var(--tfx-edge); }
+
+/* 赤金グラデ（情熱系） */
+.tfx-fire { background:linear-gradient(180deg,#fff2c0 0%,#ffb43c 38%,#ff5a2a 72%,#c81818 100%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; filter:var(--tfx-edge); }
+
+/* ネオン発光（暗背景向け） */
+.tfx-neon { color:#fff; text-shadow:0 0 8px #ffe14a,0 0 18px #ffb000,0 0 34px #ff7a00,0 3px 6px rgba(0,0,0,.7); }
+.tfx-neon-blue { color:#eaf6ff; text-shadow:0 0 8px #6cd6ff,0 0 18px #2aa8ff,0 0 34px #0a6cff,0 3px 6px rgba(0,0,0,.7); }
+
+/* ポップ／レトロ（ハードな色影・ブラー0。縁は外向き） */
+.tfx-pop { color:#fff; filter:var(--tfx-edge); text-shadow:7px 7px 0 #c80018; }
+
+/* 3D 立体（多層オフセット影） */
+.tfx-emboss { color:#ffd84b; text-shadow:0 1px 0 #b8860b,0 2px 0 #a5760a,0 3px 0 #8f6608,0 4px 0 #7a5607,0 6px 8px rgba(0,0,0,.7); filter:var(--tfx-edge-sm); }
+
+/* マーカー蛍光（下半分ハイライト・行内spanに付与） */
+.tfx-marker { background:linear-gradient(transparent 58%, rgba(255,221,51,.85) 58%); padding:0 .06em; }
+.tfx-marker-red { background:linear-gradient(transparent 58%, rgba(255,60,80,.8) 58%); padding:0 .06em; }
+
+/* 斜めストライプ塗り文字 */
+.tfx-stripe { background:repeating-linear-gradient(45deg,#ffd84b 0 10px,#e0a020 10px 20px);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; filter:var(--tfx-edge); }
+
+/* --- “枠/帯”系コンテナ（テキストを包む要素に付与） --- */
+/* 赤帯（上下ゴールドライン） */
+.tfxc-band { display:inline-block; padding:.18em .9em; background:linear-gradient(180deg,#d4001c,#7a0010);
+  border-top:4px solid #ffd54a; border-bottom:4px solid #ffd54a; box-shadow:0 10px 26px rgba(0,0,0,.55); }
+/* 二重枠 */
+.tfxc-double { display:inline-block; padding:.22em 1em; border:4px solid #ffd54a; position:relative; background:rgba(8,8,10,.55); }
+.tfxc-double::before { content:""; position:absolute; inset:7px; border:2px solid rgba(255,213,74,.7); pointer-events:none; }
+/* 左アクセントバー */
+.tfxc-leftbar { display:inline-block; padding:.1em .5em .1em .85em; position:relative; }
+.tfxc-leftbar::before { content:""; position:absolute; left:0; top:14%; bottom:14%; width:10px; border-radius:5px; background:linear-gradient(180deg,#ffd84b,#ff7a00); box-shadow:0 0 12px rgba(255,150,0,.6); }
+/* リボン（折れ角） */
+.tfxc-ribbon { display:inline-block; padding:.2em 1.3em; position:relative; background:linear-gradient(180deg,#d4001c,#9a0014); box-shadow:0 8px 20px rgba(0,0,0,.5); }
+.tfxc-ribbon::before,.tfxc-ribbon::after { content:""; position:absolute; top:100%; border:12px solid transparent; }
+.tfxc-ribbon::before { left:0; border-top-color:#6a000e; border-left-color:#6a000e; }
+.tfxc-ribbon::after  { right:0; border-top-color:#6a000e; border-right-color:#6a000e; }
+/* コーナーブラケット [ ] */
+.tfxc-bracket { display:inline-block; padding:.16em 1.1em; position:relative; }
+.tfxc-bracket::before,.tfxc-bracket::after { content:""; position:absolute; top:0; bottom:0; width:24px; border:5px solid #ffd54a; }
+.tfxc-bracket::before { left:0; border-right:none; }
+.tfxc-bracket::after  { right:0; border-left:none; }
+/* スクリム（可読性パネル） */
+.tfxc-scrim { padding:.4em 1em; border-radius:12px; background:radial-gradient(ellipse at 50% 50%, rgba(0,0,0,.84) 0%, rgba(0,0,0,.6) 60%, rgba(0,0,0,0) 92%); }
+
+/* ラベル小見出し（カードのsub用：ゴールド＋下線バー） */
+.tfx-kicker { font-family:"JPHeavy"; color:#ffe89a; letter-spacing:.16em; position:relative; display:inline-block; padding-bottom:.4em;
+  filter:var(--tfx-edge-sm); }
+.tfx-kicker::after { content:""; position:absolute; left:50%; bottom:0; transform:translateX(-50%); width:88px; height:4px; border-radius:2px; background:linear-gradient(90deg,#ffd84b,#ff7a00); box-shadow:0 0 10px rgba(255,150,0,.6); }
+
+/* アンダースイープ用の下線要素 */
+.tfx-uline { height:9px; width:0; margin:.18em auto 0; background:linear-gradient(90deg,transparent,#ffd84b 16%,#ff7a00 84%,transparent); }
+
+  @font-face { font-family:"Mincho"; src:url("assets/fonts/GokubutoMincho.ttf") format("truetype"); font-weight:900; font-display:block; }
+  @font-face { font-family:"JPHeavy"; src:url("assets/fonts/SourceHanSansJP-Heavy.otf") format("opentype"); font-weight:900; font-display:block; }
+  @font-face { font-family:"JPMed"; src:url("assets/fonts/SourceHanSansJP-Medium.otf") format("opentype"); font-weight:500; font-display:block; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html,body { width:100%; height:100%; background:#000; overflow:hidden; }
+  #root { position:relative; width:1920px; height:1080px; overflow:hidden; background:#050507; font-family:"JPHeavy","Noto Sans JP",sans-serif; color:#fff; }
+
+  .bgvid { position:absolute; inset:0; z-index:1; opacity:0; overflow:hidden; will-change:opacity,transform; }
+  .bgvid video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+
+  .veil { position:absolute; inset:0; z-index:5; pointer-events:none; background:linear-gradient(180deg, rgba(0,0,0,.42) 0%, rgba(0,0,0,.05) 18%, rgba(0,0,0,.02) 50%, rgba(0,0,0,.36) 80%, rgba(0,0,0,.72) 100%); }
+  .vignette { position:absolute; inset:0; z-index:6; pointer-events:none; background:radial-gradient(ellipse at 50% 44%, transparent 0 60%, rgba(0,0,0,.42) 100%); }
+  .scan { position:absolute; inset:0; z-index:7; opacity:.04; pointer-events:none; mix-blend-mode:overlay; background:repeating-linear-gradient(0deg, rgba(255,255,255,.5) 0 1px, transparent 1px 4px); }
+
+  .tag { position:absolute; z-index:20; left:60px; top:58px; padding:8px 22px 8px 18px; background:rgba(8,9,12,.56); border-left:4px solid #e7b94a; border-radius:2px; font-family:"Mincho",serif; font-size:33px; font-weight:900; letter-spacing:.05em; color:#fff; text-shadow:0 0 2px #000,0 2px 8px rgba(0,0,0,.9); white-space:nowrap; opacity:0; -webkit-backdrop-filter:blur(7px); backdrop-filter:blur(7px); }
+  .badge { position:absolute; z-index:20; right:62px; top:60px; padding:10px 24px; background:rgba(8,8,10,.84); border:2px solid rgba(255,213,74,.9); border-radius:40px; font-family:"JPHeavy"; font-size:28px; color:#ffe89a; letter-spacing:.04em; text-shadow:0 1px 3px rgba(0,0,0,.9); }
+  .src { position:absolute; z-index:20; left:40px; bottom:22px; padding:3px 10px; background:rgba(0,0,0,.62); border-left:3px solid rgba(255,213,74,.85); border-radius:2px; font-family:"JPMed"; font-size:17px; color:#dcdcdc; letter-spacing:.01em; text-shadow:0 1px 2px rgba(0,0,0,.9); opacity:0; }
+
+  .cardpos { position:absolute; z-index:18; left:50%; transform:translate(-50%,-50%); text-align:center; opacity:0; }
+  .pos-mid { top:42%; } .pos-low { top:66%; }
+  .cardpos .cblur { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:168%; height:260%; z-index:-1; pointer-events:none; border-radius:30px; -webkit-backdrop-filter:blur(16px) brightness(.46) saturate(.9); backdrop-filter:blur(16px) brightness(.46) saturate(.9); -webkit-mask-image:radial-gradient(ellipse at 50% 50%, #000 48%, transparent 78%); mask-image:radial-gradient(ellipse at 50% 50%, #000 48%, transparent 78%); }
+  .cardwrap { display:inline-block; }
+  .cardwrap .csub { display:inline-block; margin-bottom:.40em; color:#ffd76a; font-family:"JPHeavy"; letter-spacing:.18em; text-shadow:0 0 2px #000,0 2px 8px rgba(0,0,0,.95); }
+  .cardwrap .cl1 { display:inline-block; white-space:nowrap; margin-bottom:.18em; color:#ffd76a; letter-spacing:.06em; font-family:"JPHeavy"; text-shadow:0 0 2px #000,0 2px 9px rgba(0,0,0,.95); }
+  .cardwrap .cmain { line-height:1.06; white-space:nowrap; letter-spacing:.01em; }
+  .gmincho { font-family:"Mincho",serif; font-weight:900; color:#fff; text-shadow: 0 0 1px #000, 2px 0 1px #000, -2px 0 1px #000, 0 2px 1px #000, 0 -2px 1px #000, 0 0 11px rgba(0,0,0,.95), 0 5px 18px rgba(0,0,0,.9), 0 0 32px rgba(0,0,0,.65); }
+  .gaccent { color:#ff5a4d; }
+
+  #openLayer { position:absolute; inset:0; z-index:22; pointer-events:none; }
+  .op-kicker { position:absolute; left:50%; top:29%; transform:translateX(-50%); opacity:0; white-space:nowrap; }
+  .op-kicker span { display:inline-block; font-size:34px; letter-spacing:.34em; padding:.16em 1em; }
+  .op-title { position:absolute; left:50%; top:43%; transform:translate(-50%,-50%); text-align:center; }
+  .op-title .l1 { font-size:118px; line-height:1.0; letter-spacing:.04em; white-space:nowrap; }
+  .op-title .uline { margin:22px auto 0; }
+  .op-kw { position:absolute; left:0; right:0; top:362px; text-align:center; font-size:88px; letter-spacing:.04em; white-space:nowrap; opacity:0; }
+  .op-kw .kwin { display:inline-block; transform-origin:center center; }
+  .op-kw em { font-style:normal; }
+  /* A2: 「18連勝」等の縁取りが太すぎるのを是正=外向き縁を細い版に（scoped） */
+  .op-kw .tfx-outline, .op-kw .tfx-fire, .op-kw .kwin { filter: var(--tfx-edge-sm); }
+  .op-stat { position:absolute; left:0; right:0; top:336px; text-align:center; opacity:0; }
+  .op-stat .s1 { font-size:34px; letter-spacing:.2em; }
+  .op-stat .s2 { margin-top:8px; font-size:120px; line-height:.96; }
+  .op-stat .s2 em { font-style:normal; color:#ff4654; }
+
+  #chapLayer { position:absolute; inset:0; z-index:25; pointer-events:none; }
+  .chap { position:absolute; inset:0; opacity:0; }
+  .chap .cfull { position:absolute; inset:0; -webkit-backdrop-filter:blur(24px) brightness(.38) saturate(.85); backdrop-filter:blur(24px) brightness(.38) saturate(.85); background:rgba(4,5,8,.28); }
+  .chap .cinner { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); text-align:center; }
+  .chap .csub2 { font-family:"Mincho",serif; font-weight:900; font-size:62px; letter-spacing:.1em; color:#ffce2e; text-shadow:0 0 2px #000,2px 2px 1px #000,-2px 2px 1px #000,0 4px 14px rgba(0,0,0,.92); margin-bottom:.16em; white-space:nowrap; }
+  .chap .ctitle { font-family:"Mincho",serif; font-weight:900; font-size:170px; line-height:1.0; letter-spacing:.04em; color:#fff; white-space:nowrap; text-shadow: 0 0 2px #000,3px 0 2px #000,-3px 0 2px #000,0 3px 2px #000,0 -3px 2px #000,0 0 16px rgba(0,0,0,.95),0 9px 30px rgba(0,0,0,.9); }
+  .chap .cline { width:0; height:5px; margin:26px auto 0; background:linear-gradient(90deg,transparent,#ffce2e 25%,#ffce2e 75%,transparent); border-radius:3px; }
+
+  #capLayer { position:absolute; inset:0; z-index:17; pointer-events:none; }
+  .cap { position:absolute; left:50%; bottom:116px; transform:translateX(-50%); width:1760px; text-align:center; opacity:0; }
+  .cap .cl { display:inline-block; max-width:1760px; font-family:"JPHeavy"; font-weight:900; font-size:46px; line-height:1.32; color:#fff; white-space:nowrap; letter-spacing:.005em; paint-order:stroke fill; -webkit-text-stroke:5.5px #000; text-shadow:0 3px 7px rgba(0,0,0,.92); }
+</style>
+</head>
+<body>
+  <div id="root" data-composition-id="shaydullaev" data-start="0" data-duration="1042.01" data-width="1920" data-height="1080">
+    <div class="bgvid" id="bv0"><video id="bv0-v" src="assets/bgvid/sh_kubo2_tko.mp4" muted playsinline data-start="0.0" data-duration="9.423" data-media-start="0.0" data-track-index="40"></video></div>
+    <div class="bgvid" id="bv1"><video id="bv1-v" src="assets/bgvid/asakura_action.mp4" muted playsinline data-start="8.773" data-duration="7.359" data-media-start="0.0" data-track-index="41"></video></div>
+    <div class="bgvid" id="bv2"><video id="bv2-v" src="assets/bgvid/sh_kubo2_win.mp4" muted playsinline data-start="15.482" data-duration="10.703" data-media-start="0.0" data-track-index="42"></video></div>
+    <div class="bgvid" id="bv3"><video id="bv3-v" src="assets/bgvid/vp_cards.mp4" muted playsinline data-start="25.535" data-duration="11.12" data-media-start="0.0" data-track-index="43"></video></div>
+    <div class="bgvid" id="bv4"><video id="bv4-v" src="assets/bgvid/prep_boy.mp4" muted playsinline data-start="36.005" data-duration="9.681" data-media-start="0.0" data-track-index="44"></video></div>
+    <div class="bgvid" id="bv5"><video id="bv5-v" src="assets/bgvid/prep_eagle2.mp4" muted playsinline data-start="45.036" data-duration="11.956" data-media-start="0.0" data-track-index="45"></video></div>
+    <div class="bgvid" id="bv6"><video id="bv6-v" src="assets/bgvid/prep_belt.mp4" muted playsinline data-start="56.342" data-duration="9.298" data-media-start="0.0" data-track-index="46"></video></div>
+    <div class="bgvid" id="bv7"><video id="bv7-v" src="assets/bgvid/prep_talk.mp4" muted playsinline data-start="64.99" data-duration="3.875" data-media-start="0.0" data-track-index="47"></video></div>
+    <div class="bgvid" id="bv8"><video id="bv8-v" src="assets/bgvid/prep_room.mp4" muted playsinline data-start="68.215" data-duration="6.755" data-media-start="0.0" data-track-index="48"></video></div>
+    <div class="bgvid" id="bv9"><video id="bv9-v" src="assets/bgvid/prep_home.mp4" muted playsinline data-start="74.32" data-duration="6.988" data-media-start="0.0" data-track-index="49"></video></div>
+    <div class="bgvid" id="bv10"><video id="bv10-v" src="assets/bgvid/prep_medals.mp4" muted playsinline data-start="80.658" data-duration="6.662" data-media-start="0.0" data-track-index="40"></video></div>
+    <div class="bgvid" id="bv11"><video id="bv11-v" src="assets/bgvid/prep_talk2.mp4" muted playsinline data-start="86.67" data-duration="11.631" data-media-start="0.0" data-track-index="41"></video></div>
+    <div class="bgvid" id="bv12"><video id="bv12-v" src="assets/bgvid/prep_eagle.mp4" muted playsinline data-start="97.651" data-duration="8.38" data-media-start="0.0" data-track-index="42"></video></div>
+    <div class="bgvid" id="bv13"><video id="bv13-v" src="assets/bgvid/prep_horse.mp4" muted playsinline data-start="105.381" data-duration="6.976" data-media-start="0.0" data-track-index="43"></video></div>
+    <div class="bgvid" id="bv14"><video id="bv14-v" src="assets/bgvid/prep_boy.mp4" muted playsinline data-start="111.707" data-duration="10.285" data-media-start="0.0" data-track-index="44"></video></div>
+    <div class="bgvid" id="bv15"><video id="bv15-v" src="assets/bgvid/prep_family.mp4" muted playsinline data-start="121.342" data-duration="10.098" data-media-start="0.0" data-track-index="45"></video></div>
+    <div class="bgvid" id="bv16"><video id="bv16-v" src="assets/bgvid/prep_father.mp4" muted playsinline data-start="130.79" data-duration="11.353" data-media-start="0.0" data-track-index="46"></video></div>
+    <div class="bgvid" id="bv17"><video id="bv17-v" src="assets/bgvid/prep_horse2.mp4" muted playsinline data-start="141.493" data-duration="5.362" data-media-start="0.0" data-track-index="47"></video></div>
+    <div class="bgvid" id="bv18"><video id="bv18-v" src="assets/bgvid/prep_sheep.mp4" muted playsinline data-start="146.205" data-duration="15.253" data-media-start="0.0" data-track-index="48"></video></div>
+    <div class="bgvid" id="bv19"><video id="bv19-v" src="assets/bgvid/prep_home.mp4" muted playsinline data-start="160.808" data-duration="12.92" data-media-start="0.0" data-track-index="49"></video></div>
+    <div class="bgvid" id="bv20"><video id="bv20-v" src="assets/bgvid/prep_gym.mp4" muted playsinline data-start="173.078" data-duration="6.987" data-media-start="0.0" data-track-index="40"></video></div>
+    <div class="bgvid" id="bv21"><video id="bv21-v" src="assets/bgvid/prep_cage.mp4" muted playsinline data-start="179.415" data-duration="10.053" data-media-start="0.0" data-track-index="41"></video></div>
+    <div class="bgvid" id="bv22"><video id="bv22-v" src="assets/bgvid/prep_mountain.mp4" muted playsinline data-start="188.818" data-duration="12.188" data-media-start="0.0" data-track-index="42"></video></div>
+    <div class="bgvid" id="bv23"><video id="bv23-v" src="assets/bgvid/prep_eagle.mp4" muted playsinline data-start="200.356" data-duration="14.696" data-media-start="0.0" data-track-index="43"></video></div>
+    <div class="bgvid" id="bv24"><video id="bv24-v" src="assets/bgvid/fedor.mp4" muted playsinline data-start="214.402" data-duration="7.916" data-media-start="0.0" data-track-index="44"></video></div>
+    <div class="bgvid" id="bv25"><video id="bv25-v" src="assets/bgvid/prep_train2.mp4" muted playsinline data-start="221.668" data-duration="7.719" data-media-start="0.0" data-track-index="45"></video></div>
+    <div class="bgvid" id="bv26"><video id="bv26-v" src="assets/bgvid/kg_mont1.mp4" muted playsinline data-start="228.737" data-duration="5.641" data-media-start="0.0" data-track-index="46"></video></div>
+    <div class="bgvid" id="bv27"><video id="bv27-v" src="assets/bgvid/kg_mont1.mp4" muted playsinline data-start="233.728" data-duration="6.012" data-media-start="0.0" data-track-index="47"></video></div>
+    <div class="bgvid" id="bv28"><video id="bv28-v" src="assets/bgvid/kg_mont3.mp4" muted playsinline data-start="239.09" data-duration="10.795" data-media-start="0.0" data-track-index="48"></video></div>
+    <div class="bgvid" id="bv29"><video id="bv29-v" src="assets/bgvid/prep_belt.mp4" muted playsinline data-start="249.235" data-duration="9.216" data-media-start="0.0" data-track-index="49"></video></div>
+    <div class="bgvid" id="bv30"><video id="bv30-v" src="assets/bgvid/kg_mont2.mp4" muted playsinline data-start="257.801" data-duration="13.71" data-media-start="0.0" data-track-index="40"></video></div>
+    <div class="bgvid" id="bv31"><video id="bv31-v" src="assets/bgvid/aca_stand.mp4" muted playsinline data-start="270.861" data-duration="4.572" data-media-start="0.0" data-track-index="41"></video></div>
+    <div class="bgvid" id="bv32"><video id="bv32-v" src="assets/bgvid/aca_action.mp4" muted playsinline data-start="274.783" data-duration="16.09" data-media-start="0.0" data-track-index="42"></video></div>
+    <div class="bgvid" id="bv33"><video id="bv33-v" src="assets/bgvid/aca.mp4" muted playsinline data-start="290.223" data-duration="9.541" data-media-start="0.0" data-track-index="43"></video></div>
+    <div class="bgvid" id="bv34"><video id="bv34-v" src="assets/bgvid/aca_stand.mp4" muted playsinline data-start="299.114" data-duration="11.724" data-media-start="0.0" data-track-index="44"></video></div>
+    <div class="bgvid" id="bv35"><video id="bv35-v" src="assets/bgvid/aca.mp4" muted playsinline data-start="310.188" data-duration="12.978" data-media-start="0.0" data-track-index="45"></video></div>
+    <div class="bgvid" id="bv36"><video id="bv36-v" src="assets/bgvid/roadfc_walk.mp4" muted playsinline data-start="322.516" data-duration="9.681" data-media-start="0.0" data-track-index="46"></video></div>
+    <div class="bgvid" id="bv37"><video id="bv37-v" src="assets/bgvid/roadfc.mp4" muted playsinline data-start="331.547" data-duration="5.65" data-media-start="2.4" data-track-index="47"></video></div>
+    <div class="bgvid" id="bv38"><video id="bv38-v" src="assets/bgvid/roadfc_walk.mp4" muted playsinline data-start="336.847" data-duration="8.055" data-media-start="0.0" data-track-index="48"></video></div>
+    <div class="bgvid" id="bv39"><video id="bv39-v" src="assets/bgvid/uae.mp4" muted playsinline data-start="344.252" data-duration="8.585" data-media-start="7.395" data-track-index="49"></video></div>
+    <div class="bgvid" id="bv40"><video id="bv40-v" src="assets/bgvid/kg_mont3.mp4" muted playsinline data-start="352.307" data-duration="17.425" data-media-start="0.0" data-track-index="40"></video></div>
+    <div class="bgvid" id="bv41"><video id="bv41-v" src="assets/bgvid/takeda_action.mp4" muted playsinline data-start="369.082" data-duration="8.984" data-media-start="0.0" data-track-index="41"></video></div>
+    <div class="bgvid" id="bv42"><video id="bv42-v" src="assets/bgvid/takeda_action.mp4" muted playsinline data-start="377.416" data-duration="10.981" data-media-start="0.0" data-track-index="42"></video></div>
+    <div class="bgvid" id="bv43"><video id="bv43-v" src="assets/bgvid/prep_spar.mp4" muted playsinline data-start="387.747" data-duration="7.87" data-media-start="0.0" data-track-index="43"></video></div>
+    <div class="bgvid" id="bv44"><video id="bv44-v" src="assets/bgvid/rz_takeda.mp4" muted playsinline data-start="394.967" data-duration="29.947" data-media-start="0.0" data-track-index="44"></video></div>
+    <div class="bgvid" id="bv45"><video id="bv45-v" src="assets/bgvid/takeda_win.mp4" muted playsinline data-start="425.267" data-duration="9.448" data-media-start="0.0" data-track-index="45"></video></div>
+    <div class="bgvid" id="bv46"><video id="bv46-v" src="assets/bgvid/sh_arch.mp4" muted playsinline data-start="434.065" data-duration="12.375" data-media-start="0.0" data-track-index="46"></video></div>
+    <div class="bgvid" id="bv47"><video id="bv47-v" src="assets/bgvid/prep_bag.mp4" muted playsinline data-start="445.79" data-duration="6.894" data-media-start="0.0" data-track-index="47"></video></div>
+    <div class="bgvid" id="bv48"><video id="bv48-v" src="assets/bgvid/rz_archuleta.mp4" muted playsinline data-start="452.034" data-duration="29.947" data-media-start="0.0" data-track-index="48"></video></div>
+    <div class="bgvid" id="bv49"><video id="bv49-v" src="assets/bgvid/prep_mitts.mp4" muted playsinline data-start="482.334" data-duration="10.505" data-media-start="0.0" data-track-index="49"></video></div>
+    <div class="bgvid" id="bv50"><video id="bv50-v" src="assets/bgvid/kubo1.mp4" muted playsinline data-start="492.189" data-duration="7.173" data-media-start="0.0" data-track-index="40"></video></div>
+    <div class="bgvid" id="bv51"><video id="bv51-v" src="assets/bgvid/kubo1.mp4" muted playsinline data-start="498.712" data-duration="9.681" data-media-start="0.0" data-track-index="41"></video></div>
+    <div class="bgvid" id="bv52"><video id="bv52-v" src="assets/bgvid/rz_kubo1.mp4" muted playsinline data-start="507.743" data-duration="29.947" data-media-start="0.0" data-track-index="42"></video></div>
+    <div class="bgvid" id="bv53"><video id="bv53-v" src="assets/bgvid/prep_run.mp4" muted playsinline data-start="538.043" data-duration="8.009" data-media-start="0.0" data-track-index="43"></video></div>
+    <div class="bgvid" id="bv54"><video id="bv54-v" src="assets/bgvid/prep_train2.mp4" muted playsinline data-start="545.402" data-duration="10.47" data-media-start="0.0" data-track-index="44"></video></div>
+    <div class="bgvid" id="bv55"><video id="bv55-v" src="assets/bgvid/kleber_face.mp4" muted playsinline data-start="555.222" data-duration="7.626" data-media-start="0.0" data-track-index="45"></video></div>
+    <div class="bgvid" id="bv56"><video id="bv56-v" src="assets/bgvid/kleber_face.mp4" muted playsinline data-start="562.198" data-duration="10.935" data-media-start="0.0" data-track-index="46"></video></div>
+    <div class="bgvid" id="bv57"><video id="bv57-v" src="assets/bgvid/kleber_action.mp4" muted playsinline data-start="572.483" data-duration="10.981" data-media-start="0.0" data-track-index="47"></video></div>
+    <div class="bgvid" id="bv58"><video id="bv58-v" src="assets/bgvid/rz_kleber.mp4" muted playsinline data-start="582.814" data-duration="29.947" data-media-start="0.0" data-track-index="48"></video></div>
+    <div class="bgvid" id="bv59"><video id="bv59-v" src="assets/bgvid/sh_kleber_belt.mp4" muted playsinline data-start="613.114" data-duration="10.795" data-media-start="0.0" data-track-index="49"></video></div>
+    <div class="bgvid" id="bv60"><video id="bv60-v" src="assets/bgvid/sh_flag.mp4" muted playsinline data-start="623.259" data-duration="10.238" data-media-start="0.0" data-track-index="40"></video></div>
+    <div class="bgvid" id="bv61"><video id="bv61-v" src="assets/bgvid/prep_runsnow.mp4" muted playsinline data-start="632.847" data-duration="7.533" data-media-start="0.0" data-track-index="41"></video></div>
+    <div class="bgvid" id="bv62"><video id="bv62-v" src="assets/bgvid/prep_run.mp4" muted playsinline data-start="639.73" data-duration="5.826" data-media-start="0.0" data-track-index="42"></video></div>
+    <div class="bgvid" id="bv63"><video id="bv63-v" src="assets/bgvid/kole_face.mp4" muted playsinline data-start="644.906" data-duration="9.727" data-media-start="0.0" data-track-index="43"></video></div>
+    <div class="bgvid" id="bv64"><video id="bv64-v" src="assets/bgvid/rz_kolesnik.mp4" muted playsinline data-start="653.983" data-duration="32.947" data-media-start="0.0" data-track-index="44"></video></div>
+    <div class="bgvid" id="bv65"><video id="bv65-v" src="assets/bgvid/sh_kole_belt.mp4" muted playsinline data-start="687.283" data-duration="6.848" data-media-start="0.0" data-track-index="45"></video></div>
+    <div class="bgvid" id="bv66"><video id="bv66-v" src="assets/bgvid/asakura_face.mp4" muted playsinline data-start="693.481" data-duration="10.795" data-media-start="0.0" data-track-index="46"></video></div>
+    <div class="bgvid" id="bv67"><video id="bv67-v" src="assets/bgvid/asakura_start.mp4" muted playsinline data-start="703.626" data-duration="9.913" data-media-start="0.0" data-track-index="47"></video></div>
+    <div class="bgvid" id="bv68"><video id="bv68-v" src="assets/bgvid/rz_asakura.mp4" muted playsinline data-start="712.889" data-duration="29.947" data-media-start="0.0" data-track-index="48"></video></div>
+    <div class="bgvid" id="bv69"><video id="bv69-v" src="assets/bgvid/asakura_action.mp4" muted playsinline data-start="743.189" data-duration="11.492" data-media-start="0.0" data-track-index="49"></video></div>
+    <div class="bgvid" id="bv70"><video id="bv70-v" src="assets/bgvid/sh_kubo2_win.mp4" muted playsinline data-start="754.031" data-duration="9.634" data-media-start="0.0" data-track-index="40"></video></div>
+    <div class="bgvid" id="bv71"><video id="bv71-v" src="assets/bgvid/rz_kubo2.mp4" muted playsinline data-start="763.015" data-duration="29.98" data-media-start="0.0" data-track-index="41"></video></div>
+    <div class="bgvid" id="bv72"><video id="bv72-v" src="assets/bgvid/sh_kubo2_tko.mp4" muted playsinline data-start="793.315" data-duration="13.339" data-media-start="0.0" data-track-index="42"></video></div>
+    <div class="bgvid" id="bv73"><video id="bv73-v" src="assets/bgvid/prep_talk.mp4" muted playsinline data-start="806.004" data-duration="9.262" data-media-start="0.0" data-track-index="43"></video></div>
+    <div class="bgvid" id="bv74"><video id="bv74-v" src="assets/bgvid/prep_talk3.mp4" muted playsinline data-start="814.616" data-duration="11.91" data-media-start="0.0" data-track-index="44"></video></div>
+    <div class="bgvid" id="bv75"><video id="bv75-v" src="assets/bgvid/vp_two.mp4" muted playsinline data-start="825.876" data-duration="18.54" data-media-start="0.0" data-track-index="45"></video></div>
+    <div class="bgvid" id="bv76"><video id="bv76-v" src="assets/bgvid/prep_gym.mp4" muted playsinline data-start="843.766" data-duration="4.479" data-media-start="0.0" data-track-index="46"></video></div>
+    <div class="bgvid" id="bv77"><video id="bv77-v" src="assets/bgvid/prep_cage.mp4" muted playsinline data-start="847.595" data-duration="15.161" data-media-start="0.0" data-track-index="47"></video></div>
+    <div class="bgvid" id="bv78"><video id="bv78-v" src="assets/bgvid/kleber_action.mp4" muted playsinline data-start="862.106" data-duration="16.275" data-media-start="0.0" data-track-index="48"></video></div>
+    <div class="bgvid" id="bv79"><video id="bv79-v" src="assets/bgvid/sh_arch.mp4" muted playsinline data-start="877.731" data-duration="14.278" data-media-start="0.0" data-track-index="49"></video></div>
+    <div class="bgvid" id="bv80"><video id="bv80-v" src="assets/bgvid/uae.mp4" muted playsinline data-start="891.359" data-duration="10.981" data-media-start="0.0" data-track-index="40"></video></div>
+    <div class="bgvid" id="bv81"><video id="bv81-v" src="assets/bgvid/prep_spar.mp4" muted playsinline data-start="901.69" data-duration="8.601" data-media-start="0.0" data-track-index="41"></video></div>
+    <div class="bgvid" id="bv82"><video id="bv82-v" src="assets/bgvid/prep_horse.mp4" muted playsinline data-start="909.641" data-duration="5.919" data-media-start="0.0" data-track-index="42"></video></div>
+    <div class="bgvid" id="bv83"><video id="bv83-v" src="assets/bgvid/prep_food.mp4" muted playsinline data-start="914.91" data-duration="10.61" data-media-start="0.0" data-track-index="43"></video></div>
+    <div class="bgvid" id="bv84"><video id="bv84-v" src="assets/bgvid/prep_food.mp4" muted playsinline data-start="924.87" data-duration="13.489" data-media-start="0.0" data-track-index="44"></video></div>
+    <div class="bgvid" id="bv85"><video id="bv85-v" src="assets/bgvid/prep_family.mp4" muted playsinline data-start="937.709" data-duration="9.077" data-media-start="0.0" data-track-index="45"></video></div>
+    <div class="bgvid" id="bv86"><video id="bv86-v" src="assets/bgvid/prep_talk3.mp4" muted playsinline data-start="946.136" data-duration="10.319" data-media-start="0.0" data-track-index="46"></video></div>
+    <div class="bgvid" id="bv87"><video id="bv87-v" src="assets/bgvid/vp_cards.mp4" muted playsinline data-start="955.805" data-duration="6.941" data-media-start="0.0" data-track-index="47"></video></div>
+    <div class="bgvid" id="bv88"><video id="bv88-v" src="assets/bgvid/vp_stage.mp4" muted playsinline data-start="962.096" data-duration="11.585" data-media-start="0.0" data-track-index="48"></video></div>
+    <div class="bgvid" id="bv89"><video id="bv89-v" src="assets/bgvid/vp_mckee_talk.mp4" muted playsinline data-start="973.031" data-duration="13.117" data-media-start="0.0" data-track-index="49"></video></div>
+    <div class="bgvid" id="bv90"><video id="bv90-v" src="assets/bgvid/vp_saka.mp4" muted playsinline data-start="985.498" data-duration="7.591" data-media-start="0.0" data-track-index="40"></video></div>
+    <div class="bgvid" id="bv91"><video id="bv91-v" src="assets/bgvid/vp_two.mp4" muted playsinline data-start="992.439" data-duration="13.267" data-media-start="0.0" data-track-index="41"></video></div>
+    <div class="bgvid" id="bv92"><video id="bv92-v" src="assets/bgvid/sh_flag.mp4" muted playsinline data-start="1005.056" data-duration="9.402" data-media-start="0.0" data-track-index="42"></video></div>
+    <div class="bgvid" id="bv93"><video id="bv93-v" src="assets/bgvid/sh_kleber_belt.mp4" muted playsinline data-start="1013.808" data-duration="8.102" data-media-start="0.0" data-track-index="43"></video></div>
+    <div class="bgvid" id="bv94"><video id="bv94-v" src="assets/bgvid/prep_runsnow.mp4" muted playsinline data-start="1021.26" data-duration="8.102" data-media-start="0.0" data-track-index="44"></video></div>
+    <div class="bgvid" id="bv95"><video id="bv95-v" src="assets/bgvid/prep_mountain.mp4" muted playsinline data-start="1028.712" data-duration="8.287" data-media-start="0.0" data-track-index="45"></video></div>
+    <div class="bgvid" id="bv96"><video id="bv96-v" src="assets/bgvid/vp_stage.mp4" muted playsinline data-start="1036.349" data-duration="5.708" data-media-start="0.0" data-track-index="46"></video></div>
+    <audio id="narr" src="assets/audio/narration.wav" data-start="0" data-track-index="60" data-volume="1"></audio>
+    <audio id="bgm" src="assets/audio/bgm.m4a" data-start="0" data-track-index="61" data-volume="0.085"></audio>
+    <div class="veil"></div>
+    <div class="vignette"></div>
+    <div class="scan"></div>
+    <div id="ovLayer"></div>
+    <div id="capLayer"></div>
+    <div id="openLayer"></div>
+    <div id="chapLayer"></div>
+  </div>
+<script>
+  const DATA = {"total": 1042.01, "bg": [{"start": 0.0, "end": 8.773, "name": "sh_kubo2_tko", "sec": "s0_hook", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/sh_kubo2_tko.mp4", "id": "bv0", "track": 40, "mstart": 0.0, "mdur": 9.423}, {"start": 8.773, "end": 15.482, "name": "asakura_action", "sec": "s0_hook", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/asakura_action.mp4", "id": "bv1", "track": 41, "mstart": 0.0, "mdur": 7.359}, {"start": 15.482, "end": 25.535, "name": "sh_kubo2_win", "sec": "s0_hook", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/sh_kubo2_win.mp4", "id": "bv2", "track": 42, "mstart": 0.0, "mdur": 10.703}, {"start": 25.535, "end": 36.005, "name": "vp_cards", "sec": "s0_hook", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/vp_cards.mp4", "id": "bv3", "track": 43, "mstart": 0.0, "mdur": 11.12}, {"start": 36.005, "end": 45.036, "name": "prep_boy", "sec": "s0_hook", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_boy.mp4", "id": "bv4", "track": 44, "mstart": 0.0, "mdur": 9.681}, {"start": 45.036, "end": 56.342, "name": "prep_eagle2", "sec": "s0_hook", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_eagle2.mp4", "id": "bv5", "track": 45, "mstart": 0.0, "mdur": 11.956}, {"start": 56.342, "end": 64.99, "name": "prep_belt", "sec": "s0_hook", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_belt.mp4", "id": "bv6", "track": 46, "mstart": 0.0, "mdur": 9.298}, {"start": 64.99, "end": 68.215, "name": "prep_talk", "sec": "s1_who", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_talk.mp4", "id": "bv7", "track": 47, "mstart": 0.0, "mdur": 3.875}, {"start": 68.215, "end": 74.32, "name": "prep_room", "sec": "s1_who", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_room.mp4", "id": "bv8", "track": 48, "mstart": 0.0, "mdur": 6.755}, {"start": 74.32, "end": 80.658, "name": "prep_home", "sec": "s1_who", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_home.mp4", "id": "bv9", "track": 49, "mstart": 0.0, "mdur": 6.988}, {"start": 80.658, "end": 86.67, "name": "prep_medals", "sec": "s1_who", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_medals.mp4", "id": "bv10", "track": 40, "mstart": 0.0, "mdur": 6.662}, {"start": 86.67, "end": 97.651, "name": "prep_talk2", "sec": "s1_who", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_talk2.mp4", "id": "bv11", "track": 41, "mstart": 0.0, "mdur": 11.631}, {"start": 97.651, "end": 105.381, "name": "prep_eagle", "sec": "s1_who", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_eagle.mp4", "id": "bv12", "track": 42, "mstart": 0.0, "mdur": 8.38}, {"start": 105.381, "end": 111.707, "name": "prep_horse", "sec": "s1_who", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_horse.mp4", "id": "bv13", "track": 43, "mstart": 0.0, "mdur": 6.976}, {"start": 111.707, "end": 121.342, "name": "prep_boy", "sec": "s2_origin", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_boy.mp4", "id": "bv14", "track": 44, "mstart": 0.0, "mdur": 10.285}, {"start": 121.342, "end": 130.79, "name": "prep_family", "sec": "s2_origin", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_family.mp4", "id": "bv15", "track": 45, "mstart": 0.0, "mdur": 10.098}, {"start": 130.79, "end": 141.493, "name": "prep_father", "sec": "s2_origin", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_father.mp4", "id": "bv16", "track": 46, "mstart": 0.0, "mdur": 11.353}, {"start": 141.493, "end": 146.205, "name": "prep_horse2", "sec": "s2_origin", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_horse2.mp4", "id": "bv17", "track": 47, "mstart": 0.0, "mdur": 5.362}, {"start": 146.205, "end": 160.808, "name": "prep_sheep", "sec": "s2_origin", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_sheep.mp4", "id": "bv18", "track": 48, "mstart": 0.0, "mdur": 15.253}, {"start": 160.808, "end": 173.078, "name": "prep_home", "sec": "s2_origin", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_home.mp4", "id": "bv19", "track": 49, "mstart": 0.0, "mdur": 12.92}, {"start": 173.078, "end": 179.415, "name": "prep_gym", "sec": "s3_grapple", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_gym.mp4", "id": "bv20", "track": 40, "mstart": 0.0, "mdur": 6.987}, {"start": 179.415, "end": 188.818, "name": "prep_cage", "sec": "s3_grapple", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_cage.mp4", "id": "bv21", "track": 41, "mstart": 0.0, "mdur": 10.053}, {"start": 188.818, "end": 200.356, "name": "prep_mountain", "sec": "s3_grapple", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_mountain.mp4", "id": "bv22", "track": 42, "mstart": 0.0, "mdur": 12.188}, {"start": 200.356, "end": 214.402, "name": "prep_eagle", "sec": "s3_grapple", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_eagle.mp4", "id": "bv23", "track": 43, "mstart": 0.0, "mdur": 14.696}, {"start": 214.402, "end": 221.668, "name": "fedor", "sec": "s3_grapple", "sync": null, "video": true, "src": "映像: PRIDE FC", "asset": "bgvid/fedor.mp4", "id": "bv24", "track": 44, "mstart": 0.0, "mdur": 7.916}, {"start": 221.668, "end": 228.737, "name": "prep_train2", "sec": "s3_grapple", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_train2.mp4", "id": "bv25", "track": 45, "mstart": 0.0, "mdur": 7.719}, {"start": 228.737, "end": 233.728, "name": "kg_mont1", "sec": "s4_kg", "sync": null, "video": true, "src": "出典: キルギスMMA (Batyr Bashy 他)", "asset": "bgvid/kg_mont1.mp4", "id": "bv26", "track": 46, "mstart": 0.0, "mdur": 5.641}, {"start": 233.728, "end": 239.09, "name": "kg_mont1", "sec": "s4_kg", "sync": null, "video": true, "src": "出典: キルギスMMA (Batyr Bashy 他)", "asset": "bgvid/kg_mont1.mp4", "id": "bv27", "track": 47, "mstart": 0.0, "mdur": 6.012}, {"start": 239.09, "end": 249.235, "name": "kg_mont3", "sec": "s4_kg", "sync": null, "video": true, "src": "出典: キルギスMMA (Batyr Bashy 他)", "asset": "bgvid/kg_mont3.mp4", "id": "bv28", "track": 48, "mstart": 0.0, "mdur": 10.795}, {"start": 249.235, "end": 257.801, "name": "prep_belt", "sec": "s4_kg", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_belt.mp4", "id": "bv29", "track": 49, "mstart": 0.0, "mdur": 9.216}, {"start": 257.801, "end": 270.861, "name": "kg_mont2", "sec": "s4_kg", "sync": null, "video": true, "src": "出典: キルギスMMA (Batyr Bashy 他)", "asset": "bgvid/kg_mont2.mp4", "id": "bv30", "track": 40, "mstart": 0.0, "mdur": 13.71}, {"start": 270.861, "end": 274.783, "name": "aca_stand", "sec": "s5_intl", "sync": null, "video": true, "src": "出典: ACA Young Eagles", "asset": "bgvid/aca_stand.mp4", "id": "bv31", "track": 41, "mstart": 0.0, "mdur": 4.572}, {"start": 274.783, "end": 290.223, "name": "aca_action", "sec": "s5_intl", "sync": null, "video": true, "src": "出典: ACA Young Eagles", "asset": "bgvid/aca_action.mp4", "id": "bv32", "track": 42, "mstart": 0.0, "mdur": 16.09}, {"start": 290.223, "end": 299.114, "name": "aca", "sec": "s5_intl", "sync": null, "video": true, "src": "出典: ACA Young Eagles", "asset": "bgvid/aca.mp4", "id": "bv33", "track": 43, "mstart": 0.0, "mdur": 9.541}, {"start": 299.114, "end": 310.188, "name": "aca_stand", "sec": "s5_intl", "sync": null, "video": true, "src": "出典: ACA Young Eagles", "asset": "bgvid/aca_stand.mp4", "id": "bv34", "track": 44, "mstart": 0.0, "mdur": 11.724}, {"start": 310.188, "end": 322.516, "name": "aca", "sec": "s5_intl", "sync": null, "video": true, "src": "出典: ACA Young Eagles", "asset": "bgvid/aca.mp4", "id": "bv35", "track": 45, "mstart": 0.0, "mdur": 12.978}, {"start": 322.516, "end": 331.547, "name": "roadfc_walk", "sec": "s5_intl", "sync": null, "video": true, "src": "出典: Road FC", "asset": "bgvid/roadfc_walk.mp4", "id": "bv36", "track": 46, "mstart": 0.0, "mdur": 9.681}, {"start": 331.547, "end": 336.547, "name": "roadfc", "sec": "s5_intl", "sync": [6, 335.14700000000005], "duck": true, "video": true, "src": "出典: Road FC", "asset": "bgvid/roadfc.mp4", "id": "bv37", "track": 47, "mstart": 2.4, "mdur": 5.65}, {"start": 336.847, "end": 344.252, "name": "roadfc_walk", "sec": "s5_intl", "sync": null, "video": true, "src": "出典: Road FC", "asset": "bgvid/roadfc_walk.mp4", "id": "bv38", "track": 48, "mstart": 0.0, "mdur": 8.055}, {"start": 344.252, "end": 352.307, "name": "uae", "sec": "s5_intl", "sync": [12, 346.652], "video": true, "src": "出典: UAE Warriors", "asset": "bgvid/uae.mp4", "id": "bv39", "track": 49, "mstart": 7.395, "mdur": 8.585}, {"start": 352.307, "end": 369.082, "name": "kg_mont3", "sec": "s5_intl", "sync": null, "video": true, "src": "出典: キルギスMMA (Batyr Bashy 他)", "asset": "bgvid/kg_mont3.mp4", "id": "bv40", "track": 40, "mstart": 0.0, "mdur": 17.425}, {"start": 369.082, "end": 377.416, "name": "takeda_action", "sec": "s6_debut", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/takeda_action.mp4", "id": "bv41", "track": 41, "mstart": 0.0, "mdur": 8.984}, {"start": 377.416, "end": 387.747, "name": "takeda_action", "sec": "s6_debut", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/takeda_action.mp4", "id": "bv42", "track": 42, "mstart": 0.0, "mdur": 10.981}, {"start": 387.747, "end": 394.967, "name": "prep_spar", "sec": "s6_debut", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_spar.mp4", "id": "bv43", "track": 43, "mstart": 0.0, "mdur": 7.87}, {"start": 394.967, "end": 424.967, "name": "rz_takeda", "sec": "s6_debut", "sync": null, "duck": true, "video": true, "src": "試合映像: RIZIN FF", "asset": "bgvid/rz_takeda.mp4", "id": "bv44", "track": 44, "mstart": 0.0, "mdur": 29.947}, {"start": 425.267, "end": 434.065, "name": "takeda_win", "sec": "s6_debut", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/takeda_win.mp4", "id": "bv45", "track": 45, "mstart": 0.0, "mdur": 9.448}, {"start": 434.065, "end": 445.79, "name": "sh_arch", "sec": "s6_debut", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/sh_arch.mp4", "id": "bv46", "track": 46, "mstart": 0.0, "mdur": 12.375}, {"start": 445.79, "end": 452.034, "name": "prep_bag", "sec": "s6_debut", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_bag.mp4", "id": "bv47", "track": 47, "mstart": 0.0, "mdur": 6.894}, {"start": 452.034, "end": 482.034, "name": "rz_archuleta", "sec": "s6_debut", "sync": null, "duck": true, "video": true, "src": "試合映像: RIZIN FF", "asset": "bgvid/rz_archuleta.mp4", "id": "bv48", "track": 48, "mstart": 0.0, "mdur": 29.947}, {"start": 482.334, "end": 492.189, "name": "prep_mitts", "sec": "s6_debut", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_mitts.mp4", "id": "bv49", "track": 49, "mstart": 0.0, "mdur": 10.505}, {"start": 492.189, "end": 498.712, "name": "kubo1", "sec": "s7_run", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/kubo1.mp4", "id": "bv50", "track": 40, "mstart": 0.0, "mdur": 7.173}, {"start": 498.712, "end": 507.743, "name": "kubo1", "sec": "s7_run", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/kubo1.mp4", "id": "bv51", "track": 41, "mstart": 0.0, "mdur": 9.681}, {"start": 507.743, "end": 537.743, "name": "rz_kubo1", "sec": "s7_run", "sync": null, "duck": true, "video": true, "src": "試合映像: RIZIN FF", "asset": "bgvid/rz_kubo1.mp4", "id": "bv52", "track": 42, "mstart": 0.0, "mdur": 29.947}, {"start": 538.043, "end": 545.402, "name": "prep_run", "sec": "s7_run", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_run.mp4", "id": "bv53", "track": 43, "mstart": 0.0, "mdur": 8.009}, {"start": 545.402, "end": 555.222, "name": "prep_train2", "sec": "s7_run", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_train2.mp4", "id": "bv54", "track": 44, "mstart": 0.0, "mdur": 10.47}, {"start": 555.222, "end": 562.198, "name": "kleber_face", "sec": "s7_run", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/kleber_face.mp4", "id": "bv55", "track": 45, "mstart": 0.0, "mdur": 7.626}, {"start": 562.198, "end": 572.483, "name": "kleber_face", "sec": "s8_kleber", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/kleber_face.mp4", "id": "bv56", "track": 46, "mstart": 0.0, "mdur": 10.935}, {"start": 572.483, "end": 582.814, "name": "kleber_action", "sec": "s8_kleber", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/kleber_action.mp4", "id": "bv57", "track": 47, "mstart": 0.0, "mdur": 10.981}, {"start": 582.814, "end": 612.814, "name": "rz_kleber", "sec": "s8_kleber", "sync": null, "duck": true, "video": true, "src": "試合映像: RIZIN FF", "asset": "bgvid/rz_kleber.mp4", "id": "bv58", "track": 48, "mstart": 0.0, "mdur": 29.947}, {"start": 613.114, "end": 623.259, "name": "sh_kleber_belt", "sec": "s8_kleber", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/sh_kleber_belt.mp4", "id": "bv59", "track": 49, "mstart": 0.0, "mdur": 10.795}, {"start": 623.259, "end": 632.847, "name": "sh_flag", "sec": "s8_kleber", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/sh_flag.mp4", "id": "bv60", "track": 40, "mstart": 0.0, "mdur": 10.238}, {"start": 632.847, "end": 639.73, "name": "prep_runsnow", "sec": "s8_kleber", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_runsnow.mp4", "id": "bv61", "track": 41, "mstart": 0.0, "mdur": 7.533}, {"start": 639.73, "end": 644.906, "name": "prep_run", "sec": "s9_defense", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_run.mp4", "id": "bv62", "track": 42, "mstart": 0.0, "mdur": 5.826}, {"start": 644.906, "end": 653.983, "name": "kole_face", "sec": "s9_defense", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/kole_face.mp4", "id": "bv63", "track": 43, "mstart": 0.0, "mdur": 9.727}, {"start": 653.983, "end": 686.983, "name": "rz_kolesnik", "sec": "s9_defense", "sync": null, "duck": true, "video": true, "src": "試合映像: RIZIN FF", "asset": "bgvid/rz_kolesnik.mp4", "id": "bv64", "track": 44, "mstart": 0.0, "mdur": 32.947}, {"start": 687.283, "end": 693.481, "name": "sh_kole_belt", "sec": "s9_defense", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/sh_kole_belt.mp4", "id": "bv65", "track": 45, "mstart": 0.0, "mdur": 6.848}, {"start": 693.481, "end": 703.626, "name": "asakura_face", "sec": "s9_defense", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/asakura_face.mp4", "id": "bv66", "track": 46, "mstart": 0.0, "mdur": 10.795}, {"start": 703.626, "end": 712.889, "name": "asakura_start", "sec": "s9_defense", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/asakura_start.mp4", "id": "bv67", "track": 47, "mstart": 0.0, "mdur": 9.913}, {"start": 712.889, "end": 742.889, "name": "rz_asakura", "sec": "s9_defense", "sync": null, "duck": true, "video": true, "src": "試合映像: RIZIN FF", "asset": "bgvid/rz_asakura.mp4", "id": "bv68", "track": 48, "mstart": 0.0, "mdur": 29.947}, {"start": 743.189, "end": 754.031, "name": "asakura_action", "sec": "s9_defense", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/asakura_action.mp4", "id": "bv69", "track": 49, "mstart": 0.0, "mdur": 11.492}, {"start": 754.031, "end": 763.015, "name": "sh_kubo2_win", "sec": "s9_defense", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/sh_kubo2_win.mp4", "id": "bv70", "track": 40, "mstart": 0.0, "mdur": 9.634}, {"start": 763.015, "end": 793.015, "name": "rz_kubo2", "sec": "s9_defense", "sync": null, "duck": true, "video": true, "src": "試合映像: RIZIN FF", "asset": "bgvid/rz_kubo2.mp4", "id": "bv71", "track": 41, "mstart": 0.0, "mdur": 29.98}, {"start": 793.315, "end": 806.004, "name": "sh_kubo2_tko", "sec": "s9_defense", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/sh_kubo2_tko.mp4", "id": "bv72", "track": 42, "mstart": 0.0, "mdur": 13.339}, {"start": 806.004, "end": 814.616, "name": "prep_talk", "sec": "s9b_ufc", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_talk.mp4", "id": "bv73", "track": 43, "mstart": 0.0, "mdur": 9.262}, {"start": 814.616, "end": 825.876, "name": "prep_talk3", "sec": "s9b_ufc", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_talk3.mp4", "id": "bv74", "track": 44, "mstart": 0.0, "mdur": 11.91}, {"start": 825.876, "end": 843.766, "name": "vp_two", "sec": "s9b_ufc", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/vp_two.mp4", "id": "bv75", "track": 45, "mstart": 0.0, "mdur": 18.54}, {"start": 843.766, "end": 847.595, "name": "prep_gym", "sec": "s10_style", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_gym.mp4", "id": "bv76", "track": 46, "mstart": 0.0, "mdur": 4.479}, {"start": 847.595, "end": 862.106, "name": "prep_cage", "sec": "s10_style", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_cage.mp4", "id": "bv77", "track": 47, "mstart": 0.0, "mdur": 15.161}, {"start": 862.106, "end": 877.731, "name": "kleber_action", "sec": "s10_style", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/kleber_action.mp4", "id": "bv78", "track": 48, "mstart": 0.0, "mdur": 16.275}, {"start": 877.731, "end": 891.359, "name": "sh_arch", "sec": "s10_style", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/sh_arch.mp4", "id": "bv79", "track": 49, "mstart": 0.0, "mdur": 14.278}, {"start": 891.359, "end": 901.69, "name": "uae", "sec": "s10_style", "sync": null, "video": true, "src": "出典: UAE Warriors", "asset": "bgvid/uae.mp4", "id": "bv80", "track": 40, "mstart": 0.0, "mdur": 10.981}, {"start": 901.69, "end": 909.641, "name": "prep_spar", "sec": "s10_style", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_spar.mp4", "id": "bv81", "track": 41, "mstart": 0.0, "mdur": 8.601}, {"start": 909.641, "end": 914.91, "name": "prep_horse", "sec": "s11_human", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_horse.mp4", "id": "bv82", "track": 42, "mstart": 0.0, "mdur": 5.919}, {"start": 914.91, "end": 924.87, "name": "prep_food", "sec": "s11_human", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_food.mp4", "id": "bv83", "track": 43, "mstart": 0.0, "mdur": 10.61}, {"start": 924.87, "end": 937.709, "name": "prep_food", "sec": "s11_human", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_food.mp4", "id": "bv84", "track": 44, "mstart": 0.0, "mdur": 13.489}, {"start": 937.709, "end": 946.136, "name": "prep_family", "sec": "s11_human", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_family.mp4", "id": "bv85", "track": 45, "mstart": 0.0, "mdur": 9.077}, {"start": 946.136, "end": 955.805, "name": "prep_talk3", "sec": "s11_human", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_talk3.mp4", "id": "bv86", "track": 46, "mstart": 0.0, "mdur": 10.319}, {"start": 955.805, "end": 962.096, "name": "vp_cards", "sec": "s12_next", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/vp_cards.mp4", "id": "bv87", "track": 47, "mstart": 0.0, "mdur": 6.941}, {"start": 962.096, "end": 973.031, "name": "vp_stage", "sec": "s12_next", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/vp_stage.mp4", "id": "bv88", "track": 48, "mstart": 0.0, "mdur": 11.585}, {"start": 973.031, "end": 985.498, "name": "vp_mckee_talk", "sec": "s12_next", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/vp_mckee_talk.mp4", "id": "bv89", "track": 49, "mstart": 0.0, "mdur": 13.117}, {"start": 985.498, "end": 992.439, "name": "vp_saka", "sec": "s12_next", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/vp_saka.mp4", "id": "bv90", "track": 40, "mstart": 0.0, "mdur": 7.591}, {"start": 992.439, "end": 1005.056, "name": "vp_two", "sec": "s12_next", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/vp_two.mp4", "id": "bv91", "track": 41, "mstart": 0.0, "mdur": 13.267}, {"start": 1005.056, "end": 1013.808, "name": "sh_flag", "sec": "s13_end", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/sh_flag.mp4", "id": "bv92", "track": 42, "mstart": 0.0, "mdur": 9.402}, {"start": 1013.808, "end": 1021.26, "name": "sh_kleber_belt", "sec": "s13_end", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/sh_kleber_belt.mp4", "id": "bv93", "track": 43, "mstart": 0.0, "mdur": 8.102}, {"start": 1021.26, "end": 1028.712, "name": "prep_runsnow", "sec": "s13_end", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_runsnow.mp4", "id": "bv94", "track": 44, "mstart": 0.0, "mdur": 8.102}, {"start": 1028.712, "end": 1036.349, "name": "prep_mountain", "sec": "s13_end", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/prep_mountain.mp4", "id": "bv95", "track": 45, "mstart": 0.0, "mdur": 8.287}, {"start": 1036.349, "end": 1041.407, "name": "vp_stage", "sec": "s13_end", "sync": null, "video": true, "src": "出典: RIZIN FF", "asset": "bgvid/vp_stage.mp4", "id": "bv96", "track": 46, "mstart": 0.0, "mdur": 5.708}], "tags": [{"start": 0.3, "end": 62.24, "label": ""}, {"start": 62.24, "end": 108.957, "label": "プロフィール"}, {"start": 108.957, "end": 170.328, "label": "生い立ち"}, {"start": 170.328, "end": 225.987, "label": "格闘技の礎"}, {"start": 225.987, "end": 268.111, "label": "無敗街道"}, {"start": 268.111, "end": 366.332, "label": "世界への進出"}, {"start": 366.332, "end": 489.439, "label": "RIZIN参戦"}, {"start": 489.439, "end": 559.448, "label": "王座への道"}, {"start": 559.448, "end": 636.98, "label": "戴冠"}, {"start": 636.98, "end": 803.254, "label": "絶対王者"}, {"start": 803.254, "end": 841.016, "label": "去就"}, {"start": 841.016, "end": 906.891, "label": "ファイトスタイル"}, {"start": 906.891, "end": 953.055, "label": "素顔"}, {"start": 953.055, "end": 1004.606, "label": "9.10 京セラドーム"}, {"start": 1004.606, "end": 1040.807, "label": "まとめ"}], "cards": [{"start": 68.42, "end": 74.22, "type": "name", "data": {"name": "シェイドゥラエフ", "sub": "キルギスの犬鷲 ／ RIZINフェザー級王者・19戦無敗", "_anim": "charRise"}}, {"start": 80.86, "end": 86.06, "type": "card", "data": {"sub": "PROFILE", "main": "2000.10.11 キルギス", "_anim": "fadeUp"}}, {"start": 86.87, "end": 92.27, "type": "card", "data": {"sub": "全試合フィニッシュ", "main": "19戦19勝・無敗", "_anim": "slam"}}, {"start": 562.4, "end": 568.0, "type": "date", "data": {"l1": "2025.5.4 RIZIN男祭り", "l2": "第7代 フェザー級王者", "_anim": "charRise"}}, {"start": 687.48, "end": 692.48, "type": "card", "data": {"sub": "初防衛", "main": "33秒 TKO", "_anim": "slam"}}, {"start": 847.8, "end": 853.0, "type": "card", "data": {"sub": "無敗の内訳", "main": "12一本 ／ 7KO", "_anim": "slam"}}, {"start": 956.0, "end": 961.8, "type": "date", "data": {"l1": "2026.9.10 京セラドーム大阪", "l2": "RIZIN×PFL Ｗ王座戦", "_anim": "charRise"}}], "srcs": [{"start": 0.0, "end": 214.402, "text": "出典: RIZIN FF"}, {"start": 214.402, "end": 221.668, "text": "映像: PRIDE FC"}, {"start": 221.668, "end": 228.737, "text": "出典: RIZIN FF"}, {"start": 228.737, "end": 249.235, "text": "出典: キルギスMMA (Batyr Bashy 他)"}, {"start": 249.235, "end": 257.801, "text": "出典: RIZIN FF"}, {"start": 257.801, "end": 270.861, "text": "出典: キルギスMMA (Batyr Bashy 他)"}, {"start": 270.861, "end": 322.516, "text": "出典: ACA Young Eagles"}, {"start": 322.516, "end": 336.547, "text": "出典: Road FC"}, {"start": 336.847, "end": 344.252, "text": "出典: Road FC"}, {"start": 344.252, "end": 352.307, "text": "出典: UAE Warriors"}, {"start": 352.307, "end": 369.082, "text": "出典: キルギスMMA (Batyr Bashy 他)"}, {"start": 369.082, "end": 394.967, "text": "出典: RIZIN FF"}, {"start": 394.967, "end": 424.967, "text": "試合映像: RIZIN FF"}, {"start": 425.267, "end": 452.034, "text": "出典: RIZIN FF"}, {"start": 452.034, "end": 482.034, "text": "試合映像: RIZIN FF"}, {"start": 482.334, "end": 507.743, "text": "出典: RIZIN FF"}, {"start": 507.743, "end": 537.743, "text": "試合映像: RIZIN FF"}, {"start": 538.043, "end": 582.814, "text": "出典: RIZIN FF"}, {"start": 582.814, "end": 612.814, "text": "試合映像: RIZIN FF"}, {"start": 613.114, "end": 653.983, "text": "出典: RIZIN FF"}, {"start": 653.983, "end": 686.983, "text": "試合映像: RIZIN FF"}, {"start": 687.283, "end": 712.889, "text": "出典: RIZIN FF"}, {"start": 712.889, "end": 742.889, "text": "試合映像: RIZIN FF"}, {"start": 743.189, "end": 763.015, "text": "出典: RIZIN FF"}, {"start": 763.015, "end": 793.015, "text": "試合映像: RIZIN FF"}, {"start": 793.315, "end": 891.359, "text": "出典: RIZIN FF"}, {"start": 891.359, "end": 901.69, "text": "出典: UAE Warriors"}, {"start": 901.69, "end": 1041.407, "text": "出典: RIZIN FF"}], "caps": [{"s": 0.3, "e": 8.72, "lines": ["19戦19勝、無敗。そのうち19試合すべてがKOか", "一本。判定は、ただの一度もない。"]}, {"s": 8.77, "e": 15.43, "lines": ["RIZINフェザー級の絶対王者、ラジャブアリ・シェイ", "ドゥラエフ。異名はキルギスの犬鷲。"]}, {"s": 15.48, "e": 23.2, "lines": ["武田光司、アーチュレッタ、クレベル・コイケ、", "そして朝倉未来。日本のリングに立った強豪を、"]}, {"s": 23.2, "e": 25.48, "lines": ["彼はことごとく葬ってきた。"]}, {"s": 25.54, "e": 33.53, "lines": ["9月10日、京セラドーム大阪。この無敗の怪物が、", "PFL最強AJ・マッキーと、史上初の"]}, {"s": 33.53, "e": 35.96, "lines": ["2団体王座統一戦に臨む。"]}, {"s": 36.01, "e": 41.99, "lines": ["しかしこの男が、キルギスの山で鷲と走り、棒に", "釘を打ってオオカミと戦おうと"]}, {"s": 41.99, "e": 44.99, "lines": ["した少年だったことを知る人は少ない。"]}, {"s": 45.04, "e": 51.46, "lines": ["今回はこの動画さえ見れば全てわかる。", "生い立ちから、RIZIN参戦前の海外での試合も"]}, {"s": 51.46, "e": 56.29, "lines": ["含めた全19戦、そしてファイトスタイルまで、", "完全に振り返る。"]}, {"s": 56.34, "e": 62.54, "lines": ["全試合フィニッシュの怪物の正体を、最後まで", "見届けてほしい。それでは行きましょう。"]}, {"s": 64.99, "e": 68.17, "lines": ["まずは彼が何者なのかをおさらいしよう。"]}, {"s": 68.22, "e": 74.27, "lines": ["ラジャブアリ・シェイドゥラエフ。2000年10月11日", "生まれの25歳。"]}, {"s": 74.32, "e": 80.61, "lines": ["キルギスの首都ビシュケクを拠点とし、生まれは", "タジキスタンとの国境に近い小さな村だ。"]}, {"s": 80.66, "e": 86.62, "lines": ["身長170センチ、リーチ174センチ。フェザー級。"]}, {"s": 86.67, "e": 95.8, "lines": ["戦績はプロ19戦19勝、無敗。KOが7、一本が12。", "判定はゼロ。全ての試合をフィニッシュで"]}, {"s": 95.8, "e": 97.6, "lines": ["終わらせている。"]}, {"s": 97.65, "e": 105.33, "lines": ["異名は、キルギスの犬鷲。空高くから獲物を", "仕留める猛禽になぞらえた、恐るべき二つ名だ。"]}, {"s": 105.38, "e": 109.26, "lines": ["その原点は、キルギスの大自然の中にあった。"]}, {"s": 111.71, "e": 119.91, "lines": ["彼の物語は、キルギスの実家から始まる。父と", "兄弟たちと暮らす家で、4人兄弟の三男一女の"]}, {"s": 119.91, "e": 121.29, "lines": ["家庭に育った。"]}, {"s": 121.34, "e": 128.69, "lines": ["父はこう証言している。ラジャブアリは幼い頃か", "ら活発で、馬やロバに乗り、あちこちで問題を"]}, {"s": 128.69, "e": 130.74, "lines": ["起こす勇敢な子だったと。"]}, {"s": 130.79, "e": 138.12, "lines": ["父を驚かせた、こんな逸話がある。幼い彼が、", "長い棒にたくさんの釘を打ち込んでいた。何を"]}, {"s": 138.12, "e": 141.44, "lines": ["しているのかと聞くと、彼はこう答えた。"]}, {"s": 141.49, "e": 146.16, "lines": ["夜にオオカミが家に来たら、追い払うための", "道具だ、と。"]}, {"s": 146.21, "e": 153.22, "lines": ["武道は誰かに勧められて始めたわけではない。", "本人は語っている。子供の頃から毎朝走り、"]}, {"s": 153.22, "e": 160.24, "lines": ["サンドバッグを叩いていた。世界レベルの", "武道家になりたくて、自分の意思でやってきたの"]}, {"s": 160.24, "e": 160.76, "lines": ["だと。"]}, {"s": 160.81, "e": 167.82, "lines": ["兄弟たちは日用品でトレーニング器具や", "サンドバッグを自作し、身体を鍛えた。武道は、"]}, {"s": 167.82, "e": 170.63, "lines": ["この一家の生き方そのものだった。"]}, {"s": 173.08, "e": 179.36, "lines": ["シェイドゥラエフの強さの土台は、レスリング、", "柔道、そしてブラジリアン柔術にある。"]}, {"s": 179.41, "e": 186.34, "lines": ["彼はコンバット柔術のアジア王者。自室には", "2019年からのメダルがずらりと並ぶ。"]}, {"s": 186.34, "e": 188.77, "lines": ["組み技こそが、彼の原点だ。"]}, {"s": 188.82, "e": 197.39, "lines": ["トレーニングは毎日、朝2時間、夜2時間。週末は", "必ずキルギスの山を走る。高地トレーニングで、"]}, {"s": 197.39, "e": 200.31, "lines": ["呼吸器と持久力を鍛えるためだ。"]}, {"s": 200.36, "e": 209.21, "lines": ["そして彼の異名、犬鷲。本人はこう語る。我々の", "祖先は鷲を使って狩りをした。鷲は猛禽の王。"]}, {"s": 209.21, "e": 214.35, "lines": ["その爪と嘴は武器であり、速く、そして容赦が", "ないと。"]}, {"s": 214.4, "e": 220.7, "lines": ["憧れの選手は、あの伝説エメリヤーエンコ・ヒョー", "ドル。プライドの時代から、その戦いを"]}, {"s": 220.7, "e": 221.62, "lines": ["見て育った。"]}, {"s": 221.67, "e": 226.29, "lines": ["組み技の申し子は、やがて世界の舞台へと", "羽ばたいていく。"]}, {"s": 228.74, "e": 233.68, "lines": ["2019年、シェイドゥラエフは地元キルギスで", "プロデビューを果たす。"]}, {"s": 233.73, "e": 239.04, "lines": ["Batyr Bashyをはじめとする現地の大会で、彼は", "無敗街道を突き進む。"]}, {"s": 239.09, "e": 245.11, "lines": ["三角絞め、膝十字、ヒールフック、", "リアネイキドチョーク。相手を選ばず、"]}, {"s": 245.11, "e": 249.19, "lines": ["あらゆる関節技と絞め技で一本を量産していった。"]}, {"s": 249.24, "e": 256.33, "lines": ["デビューからの試合、そのほとんどを1ラウンド、", "2ラウンドの一本勝ち。柔術の申し子の"]}, {"s": 256.33, "e": 257.75, "lines": ["面目躍如だった。"]}, {"s": 257.8, "e": 265.49, "lines": ["2020年8月には、地元キルギスの大会で", "フェザー級王座を獲得。国内の頂点に立った彼の"]}, {"s": 265.49, "e": 268.41, "lines": ["目は、すでに海の外を見ていた。"]}, {"s": 270.86, "e": 274.73, "lines": ["まず彼が乗り込んだのは、格闘技大国ロシアだ。"]}, {"s": 274.78, "e": 280.9, "lines": ["ここで注目したいのが、彼の階級だ。この", "海外挑戦の時期、シェイドゥラエフは"]}, {"s": 280.9, "e": 288.3, "lines": ["今より一階級軽いバンタム級で戦っていた。の", "ちのRIZINでのフェザー級よりも軽い体で、世界の"]}, {"s": 288.3, "e": 290.17, "lines": ["強豪に挑んでいたのだ。"]}, {"s": 290.22, "e": 297.08, "lines": ["参戦したのは、強豪の登竜門ACA Young Eagles。", "ここでも彼は、3試合すべてを打撃と絞めで"]}, {"s": 297.08, "e": 299.06, "lines": ["フィニッシュしてみせた。"]}, {"s": 299.11, "e": 305.77, "lines": ["中でも特筆すべきが、2022年の", "アスワド・アフマトフ戦。実はこの試合こそ、"]}, {"s": 305.77, "e": 310.14, "lines": ["19戦を通じて彼が唯一ダウンを喫した一戦だった。"]}, {"s": 310.19, "e": 316.25, "lines": ["だが、シェイドゥラエフは全く動じなかった。", "フラッシュダウンからすぐさま立て直すと、"]}, {"s": 316.25, "e": 322.47, "lines": ["アナコンダチョークで一本勝ち。ただ一度の", "ピンチすら、彼は瞬時にねじ伏せてみせたのだ。"]}, {"s": 322.52, "e": 331.55, "lines": ["2023年6月、舞台は韓国。Road FC 64で、地元の", "実力者ヤン・ジヨンと対戦する。"]}, {"s": 336.85, "e": 344.2, "lines": ["1ラウンド、リアネイキドチョークで一本勝ち。", "アウェーの韓国でも、彼の強さは揺るがなかった。"]}, {"s": 344.25, "e": 352.26, "lines": ["そして同じ年の10月、中東UAE。UAE Warriorsで、", "これもリアネイキドチョークで相手を仕留める。"]}, {"s": 352.31, "e": 359.76, "lines": ["キルギス、ロシア、韓国、UAE。世界を", "渡り歩いて積み上げた戦績は、実に12戦12勝、"]}, {"s": 359.76, "e": 366.63, "lines": ["全てフィニッシュ。この完璧な無敗記録に、", "ついに日本のRIZINが目をつけた。"]}, {"s": 369.08, "e": 377.37, "lines": ["2024年6月、RIZIN.47。シェイドゥラエフは、", "鳴り物入りで日本のリングに初登場する。"]}, {"s": 377.42, "e": 384.86, "lines": ["デビュー戦の相手は、武田光司。RIZINライト級の", "トーナメントで準優勝するなど、日本の最前線で"]}, {"s": 384.86, "e": 387.7, "lines": ["戦ってきたトップクラスの実力者だ。"]}, {"s": 387.75, "e": 393.91, "lines": ["誰もが、日本の壁がこの新鋭を試すと", "思っていた。まずは、そのデビュー戦を"]}, {"s": 393.91, "e": 394.97, "lines": ["見てほしい。"]}, {"s": 425.27, "e": 432.22, "lines": ["1ラウンド、リアネイキドチョーク。武田を一本で", "沈め、日本のファンにその名を刻みつけた。"]}, {"s": 432.22, "e": 434.01, "lines": ["衝撃のデビューだった。"]}, {"s": 434.06, "e": 442.15, "lines": ["続く2戦目、2024年9月のRIZIN48。相手は、", "フアン・アーチュレッタ。アメリカの強豪で、"]}, {"s": 442.15, "e": 445.74, "lines": ["元ベラトールのバンタム級世界王者だ。"]}, {"s": 445.79, "e": 452.03, "lines": ["世界王座を経験した実力者。だが、この男の前で", "は関係なかった。"]}, {"s": 482.33, "e": 488.2, "lines": ["1ラウンド、腕ひしぎ十字固め。", "世界王者経験者すらも、彼は一本で"]}, {"s": 488.2, "e": 489.74, "lines": ["仕留めてみせた。"]}, {"s": 492.19, "e": 498.66, "lines": ["2024年の大晦日、RIZIN49。3戦目の相手は、", "久保優太。"]}, {"s": 498.71, "e": 506.41, "lines": ["元K-1の三冠王者。キックボクシング出身の、", "打撃の名手だ。グラップラーが、打撃巧者に"]}, {"s": 506.41, "e": 507.74, "lines": ["どう挑むのか。"]}, {"s": 538.04, "e": 545.35, "lines": ["2ラウンド、TKO。打撃自慢の相手を前に、", "シェイドゥラエフは打ち合いでも上回ってみせた。"]}, {"s": 545.4, "e": 553.65, "lines": ["RIZIN参戦から、わずか3連勝。全て一本かTKOの", "フィニッシュ。彼はあっという間に、王座挑戦の"]}, {"s": 553.65, "e": 555.17, "lines": ["資格を手にする。"]}, {"s": 555.22, "e": 559.75, "lines": ["そして立ちはだかるのが、絶対王者クレベル・コイ", "ケだった。"]}, {"s": 562.2, "e": 570.47, "lines": ["2025年5月、RIZIN男祭り。相手は、柔術の鬼に", "して長期政権を築くフェザー級王者、"]}, {"s": 570.47, "e": 572.43, "lines": ["クレベル・コイケ。"]}, {"s": 572.48, "e": 579.43, "lines": ["クレベルは、あの朝倉未来や鈴木千裕をも", "下してきた、日本フェザー級最強の男だ。誰もが"]}, {"s": 579.43, "e": 582.81, "lines": ["、シェイドゥラエフ最大の試練だと考えた。"]}, {"s": 613.11, "e": 620.22, "lines": ["だが、わずか1分2秒。右のフックがクレベルを", "打ち抜いた。柔術王者が、キャリアで"]}, {"s": 620.22, "e": 623.21, "lines": ["初めてKO負けを喫した瞬間だった。"]}, {"s": 623.26, "e": 630.92, "lines": ["第7代RIZINフェザー級王者、ラジャブアリ・シェイ", "ドゥラエフ誕生。彼は宣言する。このベルトを、"]}, {"s": 630.92, "e": 632.8, "lines": ["キルギスに持ち帰ると。"]}, {"s": 632.85, "e": 637.28, "lines": ["無敗のまま、彼はついに日本の頂点に立った。"]}, {"s": 639.73, "e": 644.86, "lines": ["王座を獲った男の快進撃は、防衛戦でさらに", "加速する。"]}, {"s": 644.91, "e": 653.58, "lines": ["2025年9月、名古屋でのRIZIN51。初防衛戦の", "相手は、ロシアのベテラン、ビクター・コレスニッ"]}, {"s": 653.58, "e": 653.98, "lines": ["ク。"]}, {"s": 687.28, "e": 693.43, "lines": ["開始わずか33秒でTKO。まばたきする間に、試合は", "終わっていた。"]}, {"s": 693.48, "e": 703.58, "lines": ["そして2025年の大晦日。2度目の防衛戦の相手は、", "日本で最も有名なMMAファイターの一人、朝倉未来。"]}, {"s": 703.63, "e": 710.64, "lines": ["YouTubeの登録者数百万人を抱える、", "日本格闘技界最大のスターだ。日本中が、この"]}, {"s": 710.64, "e": 712.89, "lines": ["ビッグマッチに注目した。"]}, {"s": 743.19, "e": 751.72, "lines": ["1ラウンド2分54秒、TKO。投げ技で翻弄し、", "パウンドで圧倒。日本中が見守った一戦を、彼は"]}, {"s": 751.72, "e": 753.98, "lines": ["一方的に制してみせた。"]}, {"s": 754.03, "e": 763.01, "lines": ["さらに2026年4月、福岡。3度目の防衛戦は、か", "つて破った打撃巧者、久保優太との再戦だった。"]}, {"s": 793.32, "e": 801.47, "lines": ["1ラウンド終盤、パウンドで粉砕。二度目の対戦も", "、危なげなく退けた。RIZIN無敗のまま、彼は"]}, {"s": 801.47, "e": 803.55, "lines": ["王座を守り続けている。"]}, {"s": 806.0, "e": 813.46, "lines": ["朝倉未来を倒したあたりから、彼の去就が", "大きな話題になっていく。次はUFCへ行くのでは"]}, {"s": 813.46, "e": 814.57, "lines": ["ないか、と。"]}, {"s": 814.62, "e": 821.86, "lines": ["本人も公言した。RIZINとの契約は、残り2試合。", "それが終われば、UFCへ。階級は"]}, {"s": 821.86, "e": 825.83, "lines": ["おそらくフェザー級で、世界に挑みたいと。"]}, {"s": 825.88, "e": 833.65, "lines": ["そんな中、動いたのはPFLだった。2026年7月、", "PFLがマッキーとの一戦をオファー。"]}, {"s": 833.65, "e": 841.32, "lines": ["マッキー本人もこれを快諾し、9月10日の", "2団体王座統一戦が実現することになる。"]}, {"s": 843.77, "e": 847.55, "lines": ["ここでシェイドゥラエフのファイトスタイルを", "徹底解剖しよう。"]}, {"s": 847.6, "e": 854.1, "lines": ["彼の根幹は、レスリングと柔術で", "磨き上げたグラップリングだ。テイクダウンか"]}, {"s": 854.1, "e": 862.06, "lines": ["ら一気に極めに移行する速さと精度は、まさに", "アジア王者級。19勝のうち12が、この一本勝ちだ。"]}, {"s": 862.11, "e": 870.51, "lines": ["だが恐ろしいのは、打撃も一級品だという点だ。", "クレベル戦の右フック一発によるKOが示す通り、"]}, {"s": 870.51, "e": 877.68, "lines": ["彼は立っていても相手を眠らせることができる。", "7つのKOが、その二面性を物語る。"]}, {"s": 877.73, "e": 884.44, "lines": ["最大の特徴は、19戦すべてをフィニッシュし、", "判定が一度もないこと。彼は常に、相手を"]}, {"s": 884.44, "e": 891.31, "lines": ["仕留めきる。1ラウンド、長くても2ラウンドで", "試合を終わらせる、異常なまでの決定力だ。"]}, {"s": 891.36, "e": 897.95, "lines": ["強いて弱点を探すなら、判定にも", "つれ込む長期戦の経験が皆無なこと。5ラウンドを"]}, {"s": 897.95, "e": 901.64, "lines": ["戦い抜いた経験がない点は、未知数と言える。"]}, {"s": 901.69, "e": 907.19, "lines": ["そしてその未知数こそが、9月10日のマッキー戦、", "最大の焦点になる。"]}, {"s": 909.64, "e": 914.86, "lines": ["リングを降りたシェイドゥラエフは、", "意外なほど穏やかで、内気な青年だ。"]}, {"s": 914.91, "e": 921.96, "lines": ["好きな女性のタイプを聞かれると、容姿よりも", "性格、知的な女性が好きだとはにかむ。日本の"]}, {"s": 921.96, "e": 924.82, "lines": ["ファンからは、かわいいと大人気だ。"]}, {"s": 924.87, "e": 932.58, "lines": ["趣味は自然の中で過ごすこと。馬を一頭飼い、", "毎週日曜には乗馬を楽しむ。食事は、羊肉や"]}, {"s": 932.58, "e": 937.66, "lines": ["馬肉を使った郷土料理ベシュバルマク。酒は", "一切飲まない。"]}, {"s": 937.71, "e": 944.58, "lines": ["そして、王者になったら結婚すると", "語っていた彼は、その言葉通り、2026年2月に"]}, {"s": 944.58, "e": 946.09, "lines": ["結婚を果たした。"]}, {"s": 946.14, "e": 953.35, "lines": ["本人は言う。僕の仕事は、戦士であることだ。", "武道に、人生を捧げると。"]}, {"s": 955.8, "e": 962.05, "lines": ["そして2026年9月10日、京セラドーム大阪。", "超RIZIN.5。"]}, {"s": 962.1, "e": 969.5, "lines": ["シェイドゥラエフの持つRIZINフェザー級王座と、", "空位のPFL世界王座。2本のベルトを懸けた、"]}, {"s": 969.5, "e": 972.98, "lines": ["史上初のダブルタイトルマッチが実現する。"]}, {"s": 973.03, "e": 980.48, "lines": ["相手は、PFLが誇る最強の男、元ベラトール王者AJ・", "マッキー。こちらも、長いキャリアで一度も"]}, {"s": 980.48, "e": 985.45, "lines": ["一本負けのない、ずば抜けたグラップリング能力を", "持つ強豪だ。"]}, {"s": 985.5, "e": 992.39, "lines": ["榊原CEOはこの試合を、世界中のMMAの歴史を", "塗り替えるビッグバンだと表現した。"]}, {"s": 992.44, "e": 1000.03, "lines": ["全19戦フィニッシュの絶対王者は、この大舞台で", "も相手を仕留めきるのか。それとも、一度も"]}, {"s": 1000.03, "e": 1004.91, "lines": ["倒されたことのない男が、無敗の記録に終止符を", "打つのか。"]}, {"s": 1005.06, "e": 1011.95, "lines": ["キルギスの山で鷲と走った少年は、", "あらゆる関節技と絞めを操る無敗の怪物となり、"]}, {"s": 1011.95, "e": 1013.76, "lines": ["日本の頂点に立った。"]}, {"s": 1013.81, "e": 1021.03, "lines": ["全試合フィニッシュ、判定ゼロ、無敗。", "キルギスの犬鷲、ラジャブアリ・シェイドゥラエフ"]}, {"s": 1021.03, "e": 1021.21, "lines": ["。"]}, {"s": 1021.26, "e": 1028.66, "lines": ["9月10日、彼の無敗神話は続くのか。歴史が", "動く瞬間を、見逃さないでほしい。"]}, {"s": 1028.71, "e": 1034.17, "lines": ["この動画が面白かったら高評価と", "チャンネル登録をお願いします。勝敗予想も、"]}, {"s": 1034.17, "e": 1036.3, "lines": ["ぜひコメントで教えてほしい。"]}, {"s": 1036.35, "e": 1041.11, "lines": ["格闘ニュースラボでした。最後までご視聴ありが", "とうございました。"]}], "chapters": [{"sec": "s1_who", "start": 62.69, "end": 64.69, "title": "シェイドゥラエフとは", "sub": "キルギスの犬鷲"}, {"sec": "s2_origin", "start": 109.407, "end": 111.407, "title": "生い立ち", "sub": "鷲と走った少年"}, {"sec": "s3_grapple", "start": 170.778, "end": 172.778, "title": "格闘技の礎", "sub": "組み技の申し子"}, {"sec": "s4_kg", "start": 226.437, "end": 228.437, "title": "無敗街道", "sub": "キルギスからの出発"}, {"sec": "s5_intl", "start": 268.561, "end": 270.561, "title": "世界への進出", "sub": "ロシア・韓国・UAE"}, {"sec": "s6_debut", "start": 366.782, "end": 368.782, "title": "RIZIN参戦", "sub": "衝撃のデビュー"}, {"sec": "s7_run", "start": 489.889, "end": 491.889, "title": "王座への道", "sub": "止まらぬ快進撃"}, {"sec": "s8_kleber", "start": 559.898, "end": 561.898, "title": "戴冠", "sub": "王者を秒殺した夜"}, {"sec": "s9_defense", "start": 637.43, "end": 639.43, "title": "絶対王者", "sub": "防衛という名の蹂躙"}, {"sec": "s9b_ufc", "start": 803.704, "end": 805.704, "title": "去就", "sub": "残された2試合とUFC"}, {"sec": "s10_style", "start": 841.466, "end": 843.466, "title": "ファイトスタイル", "sub": "全試合フィニッシュの正体"}, {"sec": "s11_human", "start": 907.341, "end": 909.341, "title": "素顔", "sub": "犬鷲の日常"}, {"sec": "s12_next", "start": 953.505, "end": 955.505, "title": "史上初の統一戦", "sub": "9.10 京セラドーム大阪"}], "channel": "格闘ニュースラボ"};
+  const ovLayer = document.getElementById('ovLayer');
+  const openLayer = document.getElementById('openLayer');
+  const FADE = 0.5;
+  const tl = gsap.timeline({paused:true});
+
+  DATA.bg.forEach((s) => {
+    const dur = Math.max(0.6, s.end - s.start);
+    const span = dur + FADE;
+    const el = document.getElementById(s.id);
+    tl.fromTo(el.querySelector('video'),{scale:1.0},{scale:1.06,duration:span,ease:'none'}, s.start);
+    if (s.cont) tl.set(el, {opacity:1}, s.start);
+    else tl.fromTo(el, {opacity:0}, {opacity:1, duration:FADE, ease:'power1.out'}, s.start);
+    if (!s.cont_end) tl.to(el, {opacity:0, duration:FADE, ease:'power1.in'}, s.end);
+  });
+
+  DATA.tags.forEach((t) => {
+    if (!t.label) return;
+    const el = document.createElement('div'); el.className='tag'; el.textContent=t.label; ovLayer.appendChild(el);
+    tl.fromTo(el,{opacity:0,x:-24},{opacity:1,x:0,duration:.4,ease:'back.out(1.4)'}, t.start);
+    tl.to(el,{opacity:0,duration:.35,ease:'power1.in'}, t.end-.35);
+  });
+  const badge = document.createElement('div'); badge.className='badge'; badge.textContent=DATA.channel; ovLayer.appendChild(badge);
+  DATA.srcs.forEach((s) => {
+    const el = document.createElement('div'); el.className='src'; el.textContent=s.text; ovLayer.appendChild(el);
+    tl.to(el,{opacity:1,duration:.4}, s.start);
+    tl.to(el,{opacity:0,duration:.4}, s.end-.4);
+  });
+
+  const FX = window.TextFX;
+  function mkt(cls, html, px){ const e=document.createElement('div'); e.className=cls; e.innerHTML=html; if(px) e.style.fontSize=px+'px'; return e; }
+  DATA.cards.forEach((c) => {
+    const d = c.data;
+    const el = document.createElement('div'); el.className = 'cardpos ' + (c.type==='name' ? 'pos-low' : 'pos-mid');
+    const blur = document.createElement('div'); blur.className='cblur'; el.appendChild(blur);
+    const wrap = document.createElement('div'); wrap.className = 'cardwrap'; el.appendChild(wrap);
+    ovLayer.appendChild(el);
+    let target, subEl, l1El;
+    if (c.type==='name') {
+      const nm = mkt('cmain gmincho', d.name, 78);
+      subEl = mkt('csub', d.sub, 30);
+      wrap.appendChild(nm); wrap.appendChild(subEl); target = nm;
+    } else if (c.type==='date') {
+      l1El = mkt('cl1', d.l1, 40);
+      const l2 = mkt('cmain gmincho', d.l2, 86);
+      wrap.appendChild(l1El); wrap.appendChild(l2); target = l2;
+    } else {
+      if (d.sub){ subEl = mkt('csub', d.sub, 36); wrap.appendChild(subEl); }
+      const mn = mkt('cmain gmincho', (d.main||''), 96);
+      wrap.appendChild(mn); target = mn;
+    }
+    if (c.cont) {
+      // 窓境界をまたいで継続するカードは最初から完成状態（再アニメ禁止=二重アニメ防止）
+      tl.set(el, {opacity:1}, 0);
+      if (target) tl.set(target, {opacity:1, scale:1, filter:'none'}, 0);
+      if (subEl) tl.set(subEl, {opacity:1, y:0}, 0);
+      if (l1El) tl.set(l1El, {opacity:1, y:0}, 0);
+    } else {
+      tl.fromTo(el, {opacity:0}, {opacity:1, duration:.22}, c.start);
+      if (subEl) FX.fadeUp(tl, subEl, c.start+0.04, {y:-14, dur:.4});
+      if (l1El)  FX.fadeUp(tl, l1El, c.start+0.04, {y:14, dur:.4});
+      (FX[d._anim] || FX.scalePop)(tl, target, c.start+0.14, {});
+    }
+    if (!c.cont_end) FX.exit(tl, el, c.end-0.35, {});
+  });
+
+  if (true) {
+  const kicker = document.createElement('div'); kicker.className='op-kicker'; kicker.innerHTML="<span class='tfxc-band tfx-heavy'>完 全 解 説</span>";
+  openLayer.appendChild(kicker);
+  FX.fadeUp(tl, kicker, 1.0, {y:18, dur:.45}); FX.exit(tl, kicker, 7.6, {});
+  const title = document.createElement('div'); title.className='op-title';
+  title.innerHTML = "<div class='l1 tfx-mincho tfx-gold-solid'>シェイドゥラエフ</div><div class='uline tfx-uline'></div>";
+  openLayer.appendChild(title);
+  FX.charRise(tl, title.querySelector('.l1'), 1.2, {stagger:.08, dur:.6});
+  FX.underline(tl, title.querySelector('.uline'), 2.5, 620, {});
+  FX.exit(tl, title, 7.6, {y:-20});
+
+  const kw = document.createElement('div'); kw.className='op-kw'; kw.innerHTML="<span class='kwin tfx-mincho tfx-outline'>19戦全て<em class='tfx-fire'>フィニッシュ</em></span>";
+  openLayer.appendChild(kw);
+  tl.set(kw,{opacity:1}, 9.07);
+  FX.slam(tl, kw.querySelector('.kwin'), 9.07, {from:1.4, blur:18, dur:.5}); FX.exit(tl, kw, 9.07+3.4, {});
+
+  const stat = document.createElement('div'); stat.className='op-stat';
+  stat.innerHTML="<div class='s1 tfx-kicker'>19戦19勝・無敗</div><div class='s2 tfx-mincho tfx-emboss'>判定<em>0</em></div>";
+  openLayer.appendChild(stat);
+  FX.fadeUp(tl, stat.querySelector('.s1'), 15.68, {y:16, dur:.4});
+  tl.set(stat,{opacity:1}, 15.68);
+  FX.slam(tl, stat.querySelector('.s2'), 15.68+0.15, {from:1.5, blur:20, dur:.5});
+  FX.exit(tl, stat, 15.68+4.2, {});
+  }
+
+  const capLayer = document.getElementById('capLayer');
+  (DATA.caps||[]).forEach((c) => {
+    const el = document.createElement('div'); el.className='cap';
+    el.innerHTML = c.lines.map((l)=>"<div class='cl'>"+l+"</div>").join('');
+    capLayer.appendChild(el);
+    tl.fromTo(el,{opacity:0,y:8},{opacity:1,y:0,duration:.14,ease:'power1.out'}, c.s);
+    tl.to(el,{opacity:0,duration:.1,ease:'power1.in'}, c.e);
+  });
+
+  const chapLayer = document.getElementById('chapLayer');
+  (DATA.chapters||[]).forEach((ch)=>{
+    const el=document.createElement('div'); el.className='chap';
+    el.innerHTML="<div class='cfull'></div><div class='cinner'><div class='csub2'>"+ch.sub+"</div><div class='ctitle'>"+ch.title+"</div><div class='cline'></div></div>";
+    chapLayer.appendChild(el);
+    const inner=el.querySelector('.cinner'), ttl=el.querySelector('.ctitle'), line=el.querySelector('.cline');
+    if (ch.cont) {
+      // 窓境界をまたぐ章タイトルは最初から完成状態（二重アニメ防止）
+      tl.set(el,{opacity:1},0); tl.set(inner,{scale:1.0},0);
+      tl.set(ttl,{letterSpacing:'0.04em',opacity:1},0); tl.set(line,{width:560},0);
+    } else {
+      tl.fromTo(el,{opacity:0},{opacity:1,duration:.2,ease:'power1.out'}, ch.start);
+      tl.fromTo(inner,{scale:1.1},{scale:1.0,duration:.55,ease:'power3.out'}, ch.start);
+      tl.fromTo(ttl,{letterSpacing:'0.2em',opacity:0},{letterSpacing:'0.04em',opacity:1,duration:.5,ease:'power2.out'}, ch.start+0.04);
+      tl.fromTo(line,{width:0},{width:560,duration:.55,ease:'power2.out'}, ch.start+0.18);
+    }
+    if (!ch.cont_end) tl.to(el,{opacity:0,duration:.3,ease:'power1.in'}, ch.end-0.3);
+  });
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines['shaydullaev'] = tl;
+</script>
+</body>
+</html>
