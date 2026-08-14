@@ -168,12 +168,16 @@ if os.environ.get("HF_EXPORT_BG") == "1":
     (TPL / "bg_plan.json").write_text(json.dumps({"total": COMP, "segments": plan}, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"exported bg_plan.json ({len(plan)} segments, total {COMP}s)"); raise SystemExit(0)
 
-# ===== 背景=事前合成した単一動画(weekly0814_bg_full.mp4)。前景=DOM。srclab/VS文字はBG_ABSからFG生成 =====
+# ===== 背景=事前合成bgを窓別に分割(CI高速化: 各~13MBでChromeロードが速い)。前景=DOM。 =====
+# bg_w{N} は絶対区間 [max(0,N*60-1.5), (N+1)*60+1.5] をカバー。窓/ピースのW0から該当ファイルを選択。
 bg_divs, bg_tws, src_divs = [], [], []
+_wi = min(5, int((W0 + 1.5) // 60))
+_fstart = max(0.0, _wi * 60 - 1.5)
+_media = round(W0 - _fstart, 3)
 _bgdur = (min(COMP, W1) - W0) + 0.6
 bg_divs.append('<div class="bgseg" id="bgmain" style="z-index:1;opacity:1">'
-               f'<video id="bgmain-v" src="assets/bgvid/weekly0814_bg_full.mp4" muted playsinline data-layout-allow-overflow '
-               f'data-start="0" data-duration="{_bgdur:.2f}" data-media-start="{W0:.2f}" data-track-index="10"></video></div>')
+               f'<video id="bgmain-v" src="assets/bgvid/weekly0814_bg_w{_wi}.mp4" muted playsinline data-layout-allow-overflow '
+               f'data-start="0" data-duration="{_bgdur:.2f}" data-media-start="{_media:.3f}" data-track-index="10"></video></div>')
 bg_tws.append("tl.set('#bgmain',{opacity:1},0);")
 # 出典ラベル(FG・BG_ABSのタイミング)
 for i, (t0, t1, kind, ref, mo, srcl) in enumerate(BG_ABS):
