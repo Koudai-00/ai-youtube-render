@@ -1,5 +1,6 @@
-"""アオリ・チロン完全解説 index.html 生成(1920x1080・長尺・窓対応)。
-背景=単一bg動画を窓別選択(bg_w{N})。前景=DOM(下部字幕DISP・章タグ・試合映像PiP枠・規模マップ図・スタッツカード・出典・透かし)。
+"""アオリ・チロン完全解説 index.html 生成(1920x1080・評伝型・窓対応)。
+背景=単一bg動画を窓別選択(bg_w{N})。前景=DOM(下部字幕DISP・章タグ・試合映像PiP枠・規模マップ図・スタッツカード・
+ギブソン戦対戦カード[公式写真左右並置+21秒TKOスタンプ]・VSカード・出典・透かし)。
 試合映像は360pのため枠付き中サイズPiP(全画面にしない)。窓env=HF_WIN_START/END/VISUAL_ONLY/HF_OUTNAME/HF_EXPORT_BG。"""
 from __future__ import annotations
 import json, html, os, re
@@ -24,14 +25,15 @@ def esc(s): return html.escape(s)
 
 # ===== DISP: 読みかな→正式表記(長キー優先) =====
 DISP = {
-    "あおりちろん": "アオリ・チロン", "あさくらかい": "朝倉海", "うさみ": "宇佐美",
-    "だぶりゅーえるえふ": "WLF", "さんだー": "散打", "ちょういり": "張偉麗", "いーろん": "一龍",
+    "あおりちろん": "アオリ・チロン", "あさくらかい": "朝倉海",
+    "だぶりゅーえるえふ": "WLF", "さんだー": "散打", "さんだ": "散打",
+    "ちょういり": "張偉麗", "いーろん": "一龍",
     "こーでぃぎぶそん": "コーディ・ギブソン", "きゃめろんえるす": "キャメロン・エルス",
     "あいまんざはび": "アイマン・ザハビ", "らうるろさすじゅにあ": "ラウル・ロサス・ジュニア",
-    "こーでぃはどん": "コーディ・ハドン", "じぇふもりな": "ジェフ・モリナ",
+    "こーでぃはどん": "コーディ・ハドン", "ぎぶそん": "ギブソン",
     "ユーエフシー": "UFC", "ワン": "ONE", "ライジン": "RIZIN", "ディープ": "DEEP",
-    "パンクラス": "パンクラス", "ケーワン": "K-1", "ノックアウト": "KO",
-    "モンゴリアンマーダラー": "モンゴリアン・マーダラー", "ハイリスク・ハイリターン": "ハイリスク・ハイリターン",
+    "ケーワン": "K-1", "ノックアウト": "KO",
+    "モンゴリアンマーダラー": "モンゴリアン・マーダラー",
 }
 def disp(t):
     for k in sorted(DISP, key=len, reverse=True): t = t.replace(k, DISP[k])
@@ -62,53 +64,63 @@ def sub_lines(text, maxw=26.0):
     if zwidth(text) <= maxw: return [text]
     w = wrap_two(text, maxw); return [w[0], w[1]] if w else [text]
 
-# ===== 章 =====
+# ===== 章(評伝型: 英字タグ+日本語サブ) =====
 CHAP_LABEL = {
-    "アオリ・チロンとは": ("PROFILE", "アオリ・チロンとは"),
-    "WLF時代と団体の規模": ("ORIGIN", "WLF時代と、団体の規模"),
-    "UFCでの戦い": ("UFC", "UFCでの戦い"),
+    "内モンゴルの遊牧民": ("ORIGIN", "内モンゴルの遊牧民"),
+    "散打からMMAへ": ("SANDA", "散打から、MMAへ"),
+    "中国の頂点 武林風": ("WLF", "中国の頂点、武林風"),
+    "UFCの舞台へ": ("UFC", "UFCの舞台へ"),
     "ファイトスタイル徹底分析": ("STYLE", "ファイトスタイル徹底分析"),
-    "朝倉海戦の見どころ": ("THE FIGHT", "朝倉海戦の、見どころ"),
+    "朝倉海戦の行方": ("THE FIGHT", "朝倉海戦の、行方"),
 }
 CHAPS = [(b["chapter"], b["start"]) for b in BEATS if b["chapter"]]
 
-# ===== 背景プラン (t0_bid, t1_bid, ref, motion, srclabel)  refは画像/動画ファイル。ENDで末尾 =====
+# ===== 背景プラン (t0_bid, t1_bid, ref, motion, srclabel) =====
 S_UFC = "出典: UFC公式 素材"; S_RIZIN = "出典: RIZIN公式"; S_PEX = "出典: イメージ映像(Pexels)"
-IMG = {"aori_fullbody.png", "aori_headshot.png", "asakura_kai.jpg"}
-def _pex(n): return f"pex_{n}.mp4"  # bgvidにステージした名前
+IMG = {"aori_fullbody.png", "aori_headshot.png", "asakura_kai.jpg", "gibson_fullbody.png"}
 BG = [
     ("h1", "h2", "aori_fullbody.png", "kb_zin", S_UFC),
-    ("h2", "c1_1", "shanghai.mp4", None, S_PEX),
-    ("c1_1", "c1_2", "grassland.mp4", None, S_PEX),
-    ("c1_2", "c1_3", "nomad.mp4", None, S_PEX),
-    ("c1_3", "c1_4", "aori_headshot.png", "kb_zin", S_UFC),
-    ("c1_4", "c1_5", "gym.mp4", None, S_PEX),
-    ("c1_5", "c2_1", "silhouette.mp4", None, S_PEX),
-    ("c2_1", "c2_2", "stadium.mp4", None, S_PEX),
-    ("c2_2", "c2_3", "cage.mp4", None, S_PEX),
-    ("c2_3", "c2_4", "lantern.mp4", None, S_PEX),
-    ("c2_4", "c2_6", "aerial.mp4", None, S_PEX),          # 規模マップFGが乗る
-    ("c2_6", "c2_7", "cage.mp4", None, S_PEX),
-    ("c2_7", "c3_1", "stadium.mp4", None, S_PEX),
-    ("c3_1", "c3_2", "aori_fullbody.png", "kb_pan", S_UFC),
-    ("c3_2", "c3_3", "shanghai.mp4", None, S_PEX),
-    ("c3_3", "c3_3b", "fists.mp4", None, S_PEX),
-    ("c3_3b", "c3_4", "silhouette.mp4", None, S_PEX),      # PiP hl_ko=21秒KO
-    ("c3_4", "c3_5", "cage.mp4", None, S_PEX),             # PiP rosas(黒星)
-    ("c3_5", "c4_1", "aori_headshot.png", "kb_zin", S_UFC),
-    ("c4_1", "c4_2", "gym.mp4", None, S_PEX),
-    ("c4_2", "c4_3", "silhouette.mp4", None, S_PEX),       # PiP hl_finish
-    ("c4_3", "c4_4", "fists.mp4", None, S_PEX),            # スタッツカード
-    ("c4_4", "c4_5", "cage.mp4", None, S_PEX),
-    ("c4_5", "c5_1", "aori_fullbody.png", "kb_zin", S_UFC),
-    ("c5_1", "c5_1b", "asakura_kai.jpg", "kb_zin", S_RIZIN),
-    ("c5_1b", "c5_2", "shanghai.mp4", None, S_PEX),        # PiP asakura
-    ("c5_2", "c5_3", "aerial.mp4", None, S_PEX),           # VSカード
-    ("c5_3", "c5_4", "silhouette.mp4", None, S_PEX),
-    ("c5_4", "c5_5", "cage.mp4", None, S_PEX),             # スタッツ比較
-    ("c5_5", "c5_6", "shanghai.mp4", None, S_PEX),
-    ("c5_6", "c5_7", "aori_fullbody.png", "kb_pan", S_UFC),
-    ("c5_7", "e1", "stadium.mp4", None, S_PEX),
+    ("h2", "h3", "fists.mp4", None, S_PEX),               # PIP 武林風KO
+    ("h3", "c1_1", "grassland.mp4", None, S_PEX),
+    # 1章 内モンゴルの遊牧民
+    ("c1_1", "c1_2", "nomad.mp4", None, S_PEX),
+    ("c1_2", "c1_3", "grassland.mp4", None, S_PEX),
+    ("c1_3", "c1_4", "nomad.mp4", None, S_PEX),
+    ("c1_4", "c2_1", "gym.mp4", None, S_PEX),
+    # 2章 散打からMMAへ
+    ("c2_1", "c2_2", "silhouette.mp4", None, S_PEX),
+    ("c2_2", "c2_3", "training.mp4", None, S_PEX),
+    ("c2_3", "c2_4", "aori_headshot.png", "kb_zin", S_UFC),
+    ("c2_4", "c3_1", "stadium.mp4", None, S_PEX),
+    # 3章 中国の頂点 武林風
+    ("c3_1", "c3_2", "cage.mp4", None, S_PEX),            # PIP 武林風(アオリ)
+    ("c3_2", "c3_3", "lantern.mp4", None, S_PEX),
+    ("c3_3", "c3_4", "crowd.mp4", None, S_PEX),           # PIP WLF番組
+    ("c3_4", "c3_6", "aerial.mp4", None, S_PEX),          # 規模マップFGが乗る
+    ("c3_6", "c3_7", "lantern.mp4", None, S_PEX),         # PIP WLF例
+    ("c3_7", "c4_1", "crowd.mp4", None, S_PEX),
+    # 4章 UFCの舞台へ
+    ("c4_1", "c4_2", "aori_fullbody.png", "kb_pan", S_UFC),
+    ("c4_2", "c4_3", "spotlight.mp4", None, S_PEX),
+    ("c4_3", "c4_4", "shanghai.mp4", None, S_PEX),        # PIP モリナ
+    ("c4_4", "c4_7", "fists.mp4", None, S_PEX),           # ギブソン対戦カードが乗る
+    ("c4_7", "c4_8", "cage.mp4", None, S_PEX),            # PIP ロサス(黒星)
+    ("c4_8", "c5_1", "aori_headshot.png", "kb_zin", S_UFC),
+    # 5章 ファイトスタイル
+    ("c5_1", "c5_2", "gym.mp4", None, S_PEX),
+    ("c5_2", "c5_3", "silhouette.mp4", None, S_PEX),      # PIP モリナ別局面
+    ("c5_3", "c5_4", "spotlight.mp4", None, S_PEX),       # スタッツ(攻撃データ)
+    ("c5_4", "c5_5", "stadium.mp4", None, S_PEX),
+    ("c5_5", "c6_1", "training.mp4", None, S_PEX),        # PIP 武林風KO
+    # 6章 朝倉海戦の行方
+    ("c6_1", "c6_2", "shanghai.mp4", None, S_PEX),
+    ("c6_2", "c6_3", "aerial.mp4", None, S_PEX),          # PIP 朝倉
+    ("c6_3", "c6_4", "asakura_kai.jpg", "kb_zin", S_RIZIN),
+    ("c6_4", "c6_5", "aerial.mp4", None, S_PEX),          # VSカード
+    ("c6_5", "c6_6", "cage.mp4", None, S_PEX),            # スタッツ(戦績)
+    ("c6_6", "c6_7", "asakura_kai.jpg", "kb_pan", S_RIZIN),
+    ("c6_7", "c6_8", "aori_headshot.png", "kb_zin", S_UFC),
+    ("c6_8", "e1", "spotlight.mp4", None, S_PEX),
     ("e1", "END", "aori_fullbody.png", "kb_zin", S_UFC),
 ]
 def _t(bid): return COMP if bid == "END" else st(bid)
@@ -124,14 +136,14 @@ BG_ABS = _bg2
 if os.environ.get("HF_EXPORT_BG") == "1":
     plan = [{"t0": t0, "t1": t1, "kind": ("img" if r in IMG else "vid"), "ref": r,
              "motion": (m or ("kb_zin" if i % 2 == 0 else "kb_pan")),
-             "port": (r in ("aori_fullbody.png",))}
+             "port": (r in ("aori_fullbody.png", "gibson_fullbody.png"))}
             for i, (t0, t1, r, m, s) in enumerate(BG_ABS)]
     (TPL / "bg_plan.json").write_text(json.dumps({"total": COMP, "segments": plan}, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"exported bg_plan.json ({len(plan)} segments, total {COMP})"); raise SystemExit(0)
 
 # ===== 背景=窓別bg動画 =====
 bg_divs, bg_tws, src_divs = [], [], []
-_wi = min(6, int((W0 + 1.5) // 60)); _fstart = max(0.0, _wi * 60 - 1.5); _media = round(W0 - _fstart, 3)
+_wi = min(8, int((W0 + 1.5) // 60)); _fstart = max(0.0, _wi * 60 - 1.5); _media = round(W0 - _fstart, 3)
 _bgdur = (min(COMP, W1) - W0) + 0.6
 bg_divs.append('<div class="bgseg" id="bgmain" style="z-index:1;opacity:1">'
                f'<video id="bgmain-v" src="assets/bgvid/aori_bg_w{_wi}.mp4" muted playsinline data-layout-allow-overflow '
@@ -144,52 +156,78 @@ for i, (t0, t1, r, m, s) in enumerate(BG_ABS):
     bg_tws.append(f"tl.fromTo('#{sid}',{{opacity:0}},{{opacity:1,duration:.4}},{max(0.0,vt0+0.3):.2f});")
     bg_tws.append(f"tl.to('#{sid}',{{opacity:0,duration:.3}},{T(t1)-0.25:.2f});")
 
-# ===== 試合映像PiP(枠付き中サイズ・360p対策) (b0,b1,clip,label) =====
+# ===== 試合映像PiP(枠付き中サイズ・360p対策) (b0,b1,clip,label,media_start) =====
 PIP = [
-    ("h1", "h2", "hl_ko.mp4", "試合映像 (UFC)"),           # 冒頭フック=KO/打撃
-    ("c1_5", "c2_1", "wlf1.mp4", "WLF 武林風 の試合"),      # 散打→WLF例
-    ("c2_6", "c2_7", "wlf2.mp4", "WLF 武林風 の試合"),
-    ("c3_1", "c3_2", "molina.mp4", "UFCデビュー (対モリナ)"),
-    ("c3_3", "c3_3b", "hl_ufc1.mp4", "試合映像 (UFC)"),
-    ("c3_3b", "c3_4", "hl_ko.mp4", "21秒TKO (対ギブソン)"),
-    ("c3_4", "c3_5", "rosas.mp4", "対ロサス Jr (判定負け)"),
-    ("c4_2", "c4_3", "hl_finish.mp4", "試合映像 (UFC)"),
-    ("c4_5", "c5_1", "hl_ufc1.mp4", "試合映像 (UFC)"),
-    ("c5_1b", "c5_2", "asakura.mp4", "朝倉海 vs スモザーマン"),
+    ("h2", "h3", "aori_wlfko1.mp4", "武林風時代のKO", 0),          # 冒頭フック=本人のKO
+    ("c3_1", "c3_2", "aori_wlfstd1.mp4", "武林風 (アオリの試合)", 0),
+    ("c3_3", "c3_4", "wlf1.mp4", "WLF 武林風 (番組)", 0),          # 番組・団体の例
+    ("c3_6", "c3_7", "wlf2.mp4", "WLF 武林風 の試合", 0),
+    ("c4_3", "c4_4", "molina.mp4", "UFC 試合映像 (対モリナ)", 0),
+    ("c4_7", "c4_8", "rosas.mp4", "対ロサス Jr (判定負け)", 0),
+    ("c5_2", "c5_3", "molina2.mp4", "UFC 試合映像 (対モリナ)", 0),
+    ("c5_5", "c6_1", "aori_wlfko2.mp4", "武林風時代のKO", 0),
+    ("c6_2", "c6_3", "asakura_clean.mp4", "朝倉海 vs スモザーマン", 0),
 ]
 pip_divs, pip_tws = [], []
-for k, (b0, b1, clip, lab) in enumerate(PIP):
-    t0, t1 = st(b0), en(b1) if b1 in B else st(b1)
-    t1 = st(b1) if b1 in B else t1
+for k, item in enumerate(PIP):
+    b0, b1, clip, lab, mstart = item
+    t0 = st(b0); t1 = st(b1) if b1 in B else en(b0)
     if not OV(t0, t1): continue
     pid = f"pip{k}"
+    ms_attr = f' data-media-start="{mstart}"' if mstart else ""
     pip_divs.append(f'<div class="pipbox" id="{pid}"><div class="pipframe">'
-                    f'<video id="{pid}-v" src="assets/pip/{clip}" muted playsinline loop '
-                    f'data-start="{max(0.0,T(t0)):.2f}" data-duration="{(min(t1,W1)-max(t0,W0))+0.4:.2f}" data-track-index="{40+k}"></video>'
+                    f'<video id="{pid}-v" src="assets/pip/{clip}" muted playsinline loop'
+                    f'{ms_attr} data-start="{max(0.0,T(t0)):.2f}" data-duration="{(min(t1,W1)-max(t0,W0))+0.4:.2f}" data-track-index="{40+k}"></video>'
                     f'</div><div class="piplabel">{esc(lab)}</div></div>')
-    cont = T(t0) <= 0.02
-    if cont:
+    if T(t0) <= 0.02:
         pip_tws.append(f"tl.set('#{pid}',{{opacity:1,scale:1}},0);")
     else:
         pip_tws.append(f"tl.fromTo('#{pid}',{{opacity:0,scale:.94}},{{opacity:1,scale:1,duration:.4,ease:'back.out(1.3)'}},{T(t0):.2f});")
     pip_tws.append(f"tl.to('#{pid}',{{opacity:0,duration:.3}},{T(t1)-0.05:.2f});")
 
-# ===== 規模マップ図(ch2: c2_4..c2_6) =====
+# ===== 規模マップ図(ch3: c3_4..c3_6) =====
 map_divs, map_tws = [], []
-if OV(st("c2_4"), st("c2_6")):
+if OV(st("c3_4"), st("c3_6")):
     inner = ('<div class="scalemap" id="scalemap"><div class="smttl">世界の主要MMA団体 規模マップ</div>'
              '<div class="smrow"><span class="smtier">世界</span><span class="smorg big">UFC</span></div>'
              '<div class="smrow"><span class="smtier">アジア</span><span class="smorg">ONE</span></div>'
              '<div class="smrow"><span class="smtier">日本</span><span class="smorg">RIZIN</span><span class="smorg sm">DEEP</span><span class="smorg sm">パンクラス</span></div>'
              '<div class="smrow hi"><span class="smtier">中国</span><span class="smorg">WLF 武林風</span><span class="smnote">← アオリはここの王者</span></div></div>')
     map_divs.append(inner)
-    map_tws.append(f"tl.fromTo('#scalemap',{{opacity:0,y:24}},{{opacity:1,y:0,duration:.5,ease:'back.out(1.3)'}},{max(0.0,T(st('c2_4')+0.2)):.2f});")
-    map_tws.append(f"tl.to('#scalemap',{{opacity:0,duration:.3}},{T(st('c2_6')-0.1):.2f});")
+    map_tws.append(f"tl.fromTo('#scalemap',{{opacity:0,y:24}},{{opacity:1,y:0,duration:.5,ease:'back.out(1.3)'}},{max(0.0,T(st('c3_4')+0.2)):.2f});")
+    map_tws.append(f"tl.to('#scalemap',{{opacity:0,duration:.3}},{T(st('c3_6')-0.1):.2f});")
+
+# ===== ギブソン戦 対戦カード(公式写真 左右並置 + 21秒TKOスタンプ) c4_4..c4_6 =====
+gib_divs, gib_tws = [], []
+if OV(st("c4_4"), st("c4_7")):
+    gib_divs.append(
+        '<div class="gibcard" id="gibcard">'
+        '<div class="gibttl">2025年10月18日 ・ UFC バンクーバー</div>'
+        '<div class="gibrow">'
+        '<div class="gibside"><img class="gibimg" src="assets/img/aori_fullbody.png"><div class="gibname aori">アオリ・チロン</div><div class="gibtag win">WIN</div></div>'
+        '<div class="gibmid"><div class="gibvs">VS</div></div>'
+        '<div class="gibside"><img class="gibimg" src="assets/img/gibson_fullbody.png"><div class="gibname gib">コーディ・ギブソン</div><div class="gibtag lose">KO負け</div></div>'
+        '</div>'
+        '<div class="gibstamp" id="gibstamp">21秒 TKO</div>'
+        '</div>')
+    ec4_4 = max(0.0, T(st("c4_4") + 0.2))
+    gib_tws.append(f"tl.fromTo('#gibcard',{{opacity:0,scale:.96}},{{opacity:1,scale:1,duration:.5,ease:'back.out(1.2)'}},{ec4_4:.2f});")
+    # 21秒TKOスタンプは c4_6(「21秒後」)で叩き込む
+    if OV(st("c4_6"), st("c4_7")):
+        ts = T(st("c4_6") + 0.1)
+        if ts <= 0.02:
+            gib_tws.append("tl.set('#gibstamp',{opacity:1,scale:1,rotation:-8},0);")
+        else:
+            gib_tws.append("tl.set('#gibstamp',{opacity:0},0);")
+            gib_tws.append(f"tl.fromTo('#gibstamp',{{opacity:0,scale:2.4,rotation:-8}},{{opacity:1,scale:1,rotation:-8,duration:.34,ease:'back.out(2)'}},{ts:.2f});")
+    else:
+        gib_tws.append("tl.set('#gibstamp',{opacity:1,scale:1,rotation:-8},0);")
+    gib_tws.append(f"tl.to('#gibcard',{{opacity:0,duration:.3}},{T(st('c4_7')-0.1):.2f});")
 
 # ===== スタッツカード =====
 STAT = [
-    ("c4_3", "c4_4", '<div class="statttl">攻撃データ</div><div class="statrow"><b>有効打 命中率</b><span class="sv">49%</span></div><div class="statrow"><b>被弾数 / 分</b><span class="sv warn">5.47発</span></div><div class="statnote">当てる力は高いが、もらう隙も大きい</div>'),
-    ("c5_4", "c5_5", '<div class="statttl">戦績</div><div class="statrow"><b>プロ通算</b><span class="sv">26勝 13敗 1NC</span></div><div class="statrow"><b>KO</b><span class="sv">9</span><b>UFC</b><span class="sv">4勝5敗1NC</span></div><div class="statnote">勝つも負けるも豪快なストライカー</div>'),
+    ("c5_3", "c5_4", '<div class="statttl">攻撃データ</div><div class="statrow"><b>有効打 命中率</b><span class="sv">49%</span></div><div class="statrow"><b>被弾数 / 分</b><span class="sv warn">5.47発</span></div><div class="statnote">当てる力は高いが、もらう隙も大きい</div>'),
+    ("c6_5", "c6_6", '<div class="statttl">戦績</div><div class="statrow"><b>プロ通算</b><span class="sv">26勝 13敗 1NC</span></div><div class="statrow"><b>KO</b><span class="sv">9</span><b>UFC</b><span class="sv">4勝 5敗 1NC</span></div><div class="statnote">勝つも負けるも豪快なストライカー</div>'),
 ]
 stat_divs, stat_tws = [], []
 for k, (b0, b1, inner) in enumerate(STAT):
@@ -199,14 +237,14 @@ for k, (b0, b1, inner) in enumerate(STAT):
     stat_tws.append(f"tl.fromTo('#{sid}',{{opacity:0,x:40}},{{opacity:1,x:0,duration:.5,ease:'back.out(1.3)'}},{max(0.0,T(st(b0)+0.2)):.2f});")
     stat_tws.append(f"tl.to('#{sid}',{{opacity:0,duration:.3}},{T(st(b1)-0.1):.2f});")
 
-# ===== VSカード(c5_2..c5_3) =====
+# ===== VSカード(c6_4) =====
 vs_divs, vs_tws = [], []
-if OV(st("c5_2"), st("c5_3")):
+if OV(st("c6_4"), st("c6_5")):
     vs_divs.append('<div class="vscard" id="vscard"><img class="vsimg vsL" src="assets/img/aori_fullbody.png">'
                    '<div class="vsmid"><div class="vsn vnL">アオリ・チロン</div><div class="vsvs">VS</div><div class="vsn vnR">朝倉 海</div></div>'
                    '<img class="vsimg vsR" src="assets/img/asakura_kai.jpg"></div>')
-    vs_tws.append(f"tl.fromTo('#vscard',{{opacity:0,scale:.95}},{{opacity:1,scale:1,duration:.5,ease:'back.out(1.3)'}},{max(0.0,T(st('c5_2')+0.2)):.2f});")
-    vs_tws.append(f"tl.to('#vscard',{{opacity:0,duration:.3}},{T(st('c5_3')-0.1):.2f});")
+    vs_tws.append(f"tl.fromTo('#vscard',{{opacity:0,scale:.95}},{{opacity:1,scale:1,duration:.5,ease:'back.out(1.3)'}},{max(0.0,T(st('c6_4')+0.2)):.2f});")
+    vs_tws.append(f"tl.to('#vscard',{{opacity:0,duration:.3}},{T(st('c6_5')-0.1):.2f});")
 
 # ===== 章タグ =====
 chap_divs, chap_tws, chap_audio = [], [], []
@@ -240,7 +278,7 @@ def _cont_fix(tws):
             out.append("tl.set('%s',{opacity:1,x:0,y:0,scale:1},0);" % m.group(1))
         else: out.append(s)
     return out
-for _nm in ("bg_tws", "chap_tws", "pip_tws", "map_tws", "stat_tws", "vs_tws", "sub_tws"):
+for _nm in ("bg_tws", "chap_tws", "pip_tws", "map_tws", "gib_tws", "stat_tws", "vs_tws", "sub_tws"):
     globals()[_nm] = _cont_fix(globals()[_nm])
 
 def J(items, ind="      "): return "\n".join(ind + x for x in items)
@@ -253,7 +291,7 @@ HTML = f"""<!doctype html>
   @font-face{{font-family:"Mincho";src:url("assets/fonts/GokubutoMincho.ttf");}}
   @font-face{{font-family:"JPHeavy";src:url("assets/fonts/SourceHanSansJP-Heavy.otf");}}
   @font-face{{font-family:"JPMed";src:url("assets/fonts/SourceHanSansJP-Medium.otf");}}
-  :root{{--white:#fff;--yellow:#ffe23a;--red:#ff3a3a;--blue:#37c0ff;--gold:#e8b64c;--ink:#0a0c12;
+  :root{{--white:#fff;--yellow:#ffe23a;--red:#ff3a3a;--blue:#37c0ff;--gold:#e8b64c;--green:#37e08a;--ink:#0a0c12;
     --edge:drop-shadow(4px 0 0 var(--ink)) drop-shadow(-4px 0 0 var(--ink)) drop-shadow(0 4px 0 var(--ink)) drop-shadow(0 -4px 0 var(--ink))
            drop-shadow(3px 3px 0 var(--ink)) drop-shadow(-3px 3px 0 var(--ink)) drop-shadow(0 8px 16px rgba(0,0,0,.8));
     --edsm:drop-shadow(0 0 2px var(--ink)) drop-shadow(1px 1px 1px var(--ink)) drop-shadow(0 2px 6px rgba(0,0,0,.85));}}
@@ -282,6 +320,20 @@ HTML = f"""<!doctype html>
   .smorg.sm{{font-size:32px;color:#cfe;background:rgba(40,60,90,.6);}}
   .smrow.hi .smorg{{background:var(--red);color:#fff;}}
   .smnote{{font-family:"JPHeavy";font-size:30px;color:var(--yellow);filter:var(--edsm);}}
+  /* ギブソン戦 対戦カード */
+  .gibcard{{position:absolute;z-index:45;left:0;right:0;top:88px;display:flex;flex-direction:column;align-items:center;opacity:0;}}
+  .gibttl{{font-family:"JPHeavy";font-size:38px;color:var(--gold);filter:var(--edge);margin-bottom:10px;}}
+  .gibrow{{display:flex;align-items:flex-end;justify-content:center;gap:40px;position:relative;}}
+  .gibside{{display:flex;flex-direction:column;align-items:center;position:relative;}}
+  .gibimg{{height:470px;object-fit:contain;filter:drop-shadow(0 14px 30px rgba(0,0,0,.75));}}
+  .gibname{{font-family:"JPHeavy";font-size:40px;color:#fff;filter:var(--edge);margin-top:6px;}}
+  .gibtag{{font-family:"JPHeavy";font-size:30px;padding:4px 20px;border-radius:8px;margin-top:10px;filter:var(--edsm);}}
+  .gibtag.win{{background:var(--green);color:#04210f;}}
+  .gibtag.lose{{background:rgba(60,70,90,.9);color:#dfe6f2;}}
+  .gibmid{{display:flex;align-items:center;align-self:center;margin-bottom:130px;}}
+  .gibvs{{font-family:"JPHeavy";font-size:82px;color:#fff;filter:var(--edge);}}
+  .gibstamp{{position:absolute;top:250px;font-family:"JPHeavy";font-size:124px;color:var(--red);
+    filter:drop-shadow(4px 0 0 #fff) drop-shadow(-4px 0 0 #fff) drop-shadow(0 4px 0 #fff) drop-shadow(0 -4px 0 #fff) drop-shadow(0 10px 22px rgba(0,0,0,.85));}}
   /* スタッツカード */
   .statcard{{position:absolute;z-index:44;right:80px;top:300px;background:rgba(8,12,22,.9);border:2px solid #2a3a5a;border-radius:16px;padding:26px 34px;opacity:0;min-width:560px;}}
   .statttl{{font-family:"JPHeavy";font-size:36px;color:var(--gold);margin-bottom:16px;}}
@@ -308,6 +360,7 @@ HTML = f"""<!doctype html>
 {J(chap_divs,"    ")}
 {J(pip_divs,"    ")}
 {J(map_divs,"    ")}
+{J(gib_divs,"    ")}
 {J(stat_divs,"    ")}
 {J(vs_divs,"    ")}
 {J(sub_divs,"    ")}
@@ -318,6 +371,7 @@ HTML = f"""<!doctype html>
 {J(chap_tws)}
 {J(pip_tws)}
 {J(map_tws)}
+{J(gib_tws)}
 {J(stat_tws)}
 {J(vs_tws)}
 {J(sub_tws)}
