@@ -23,7 +23,7 @@ permissions:
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 350
+    timeout-minutes: 355
     env:
       EP: ${{ github.event.inputs.episode }}
     steps:
