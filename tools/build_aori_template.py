@@ -38,7 +38,7 @@ DISP = {
     "こーでぃはどん": "コーディ・ハドン", "ぎぶそん": "ギブソン",
     "ユーエフシー": "UFC", "ワン": "ONE", "ライジン": "RIZIN", "ディープ": "DEEP",
     "ケーワン": "K-1", "ノックアウト": "KO", "よんじゅうきゅう": "49", "パーセント": "%",
-    "5てんよんなな": "5.47", "モンゴリアンマーダラー": "モンゴリアン・マーダラー",
+    "5てんよんなな": "5.47", "ぼくふ": "牧夫", "モンゴリアンマーダラー": "モンゴリアン・マーダラー",
 }
 def disp(t):
     for k in sorted(DISP, key=len, reverse=True): t = t.replace(k, DISP[k])
@@ -76,11 +76,11 @@ PORTRAIT = ("aori_fullbody.png", "gibson_fullbody.png", "else_fullbody.png", "as
 BG = [
     ("h1", "h2", "aori_fullbody.png", "kb_zin", S_UFC),
     ("h2", "h3", "fists.mp4", None, S_PEX),
-    ("h3", "c1_1", "grassland.mp4", None, S_PEX),
-    ("c1_1", "c1_2", "nomad.mp4", None, S_PEX),
-    ("c1_2", "c1_3", "grassland.mp4", None, S_PEX),
-    ("c1_3", "c1_4", "nomad.mp4", None, S_PEX),
-    ("c1_4", "c2_1", "gym.mp4", None, S_PEX),
+    ("h3", "c1_1", "ger.mp4", None, S_PEX),               # 遊牧民の少年
+    ("c1_1", "c1_2", "grassland.mp4", None, S_PEX),       # 内モンゴル生まれ(草原)
+    ("c1_2", "c1_3", "horses.mp4", None, S_PEX),          # 家畜を追う・馬
+    ("c1_3", "c1_4", "cosmos.mp4", None, S_PEX),          # 宇宙の意味
+    ("c1_4", "c2_1", "gym.mp4", None, S_PEX),             # 格闘技へ
     ("c2_1", "c2_2", "silhouette.mp4", None, S_PEX),
     ("c2_2", "c2_3", "training.mp4", None, S_PEX),
     ("c2_3", "c2_4", "aori_headshot.png", "kb_zin", S_UFC),
@@ -110,7 +110,7 @@ BG = [
     ("c6_4", "c6_5", "shanghai.mp4", None, S_UFC),        # 提供対戦ポスターがDOMで乗る(7:06)
     ("c6_5", "c6_6", "crowd.mp4", None, S_PEX),           # スタッツ(戦績)
     ("c6_6", "c6_7", "asakura_kai.jpg", "kb_pan", S_RIZIN),  # 朝倉ポートレート contain
-    ("c6_7", "c6_8", "aori_fullbody.png", "kb_zin", S_UFC),
+    ("c6_7", "c6_8", "aori_headshot.png", "kb_zin", S_UFC),
     ("c6_8", "e1", "spotlight.mp4", None, S_PEX),
     ("e1", "END", "aori_fullbody.png", "kb_zin", S_UFC),
 ]
@@ -144,10 +144,10 @@ PIP = [
     ("c5_5", "c6_1", "aori_wlfko2.mp4", "武林風時代のKO", 0),
     ("c6_2", "c6_2b", "asakura_clean.mp4", "朝倉海 vs スモザーマン", 0),
 ]
-sfx = []  # {t, kind}
+sfx = [{"t": 1.25, "kind": "open"}]  # 冒頭impact + 章/カード=文字表示の衝撃音
 _cardn = 0
 def _alt():
-    global _cardn; _cardn += 1; return "metal" if _cardn % 2 else "shakiin"
+    return "card"
 
 pip_divs, pip_tws = [], []
 for k, item in enumerate(PIP):
@@ -178,7 +178,7 @@ if OV(st("c3_4"), st("c3_6")):
     map_divs.append(inner)
     map_tws.append(f"tl.fromTo('#scalemap',{{opacity:0,y:24}},{{opacity:1,y:0,duration:.5,ease:'back.out(1.3)'}},{max(0.0,T(st('c3_4')+0.2)):.2f});")
     map_tws.append(f"tl.to('#scalemap',{{opacity:0,duration:.3}},{T(st('c3_6')-0.1):.2f});")
-sfx.append({"t": round(st("c3_4") + 0.25, 2), "kind": "metal"})
+sfx.append({"t": round(st("c3_4") + 0.25, 2), "kind": "card"})
 
 # ===== エルス戦カード(c4_4) =====
 else_divs, else_tws = [], []
@@ -188,7 +188,7 @@ if OV(st("c4_4"), st("c4_4b")):
                      '<div class="fcname">キャメロン・エルス 戦</div><div class="fcres win">1R TKO 勝ち</div></div>')
     else_tws.append(f"tl.fromTo('#elsecard',{{opacity:0,scale:.95}},{{opacity:1,scale:1,duration:.45,ease:'back.out(1.2)'}},{max(0.0,T(st('c4_4')+0.15)):.2f});")
     else_tws.append(f"tl.to('#elsecard',{{opacity:0,duration:.3}},{T(st('c4_4b')-0.1):.2f});")
-sfx.append({"t": round(st("c4_4") + 0.15, 2), "kind": "shakiin"})
+sfx.append({"t": round(st("c4_4") + 0.15, 2), "kind": "card"})
 
 # ===== ギブソン戦 対戦カード(公式写真 左右並置 + 21秒TKOスタンプ) c4_4b..c4_6 =====
 gib_divs, gib_tws = [], []
@@ -204,18 +204,19 @@ if OV(st("c4_4b"), st("c4_7")):
         '<div class="gibstamp" id="gibstamp">21秒 TKO</div>'
         '</div>')
     gib_tws.append(f"tl.fromTo('#gibcard',{{opacity:0,scale:.96}},{{opacity:1,scale:1,duration:.5,ease:'back.out(1.2)'}},{max(0.0,T(st('c4_4b')+0.2)):.2f});")
-    if OV(st("c4_6"), st("c4_7")):
-        ts = T(st("c4_6") + 0.1)
-        if ts <= 0.02:
-            gib_tws.append("tl.set('#gibstamp',{opacity:1,scale:1,rotation:-8},0);")
-        else:
-            gib_tws.append("tl.set('#gibstamp',{opacity:0},0);")
-            gib_tws.append(f"tl.fromTo('#gibstamp',{{opacity:0,scale:2.4,rotation:-8}},{{opacity:1,scale:1,rotation:-8,duration:.34,ease:'back.out(2)'}},{ts:.2f});")
-    else:
+    # 21秒TKOスタンプ: c4_6(「21秒後」)で叩き込む。窓境界での早期表示/消失を防ぐ3分岐
+    _c46 = st("c4_6")
+    if _c46 >= W1:                      # スラムはこの窓より後 → 未表示
+        gib_tws.append("tl.set('#gibstamp',{opacity:0},0);")
+    elif _c46 <= W0 + 0.02:             # スラムはこの窓より前 → 継続表示(cont)
         gib_tws.append("tl.set('#gibstamp',{opacity:1,scale:1,rotation:-8},0);")
+    else:                               # スラムがこの窓内
+        ts = T(_c46 + 0.1)
+        gib_tws.append("tl.set('#gibstamp',{opacity:0},0);")
+        gib_tws.append(f"tl.fromTo('#gibstamp',{{opacity:0,scale:2.4,rotation:-8}},{{opacity:1,scale:1,rotation:-8,duration:.34,ease:'back.out(2)'}},{max(0.0,ts):.2f});")
     gib_tws.append(f"tl.to('#gibcard',{{opacity:0,duration:.3}},{T(st('c4_7')-0.1):.2f});")
-sfx.append({"t": round(st("c4_4b") + 0.2, 2), "kind": "metal"})
-sfx.append({"t": round(st("c4_6") + 0.1, 2), "kind": "shakiin"})
+sfx.append({"t": round(st("c4_4b") + 0.2, 2), "kind": "card"})
+sfx.append({"t": round(st("c4_6") + 0.1, 2), "kind": "card"})
 
 # ===== スタッツカード =====
 STAT = [
@@ -237,7 +238,7 @@ if OV(st("c6_4"), st("c6_5")):
     pos_divs.append('<div class="poster" id="poster"><img src="assets/img/HNJ048LbkAA_4Af.jpg"></div>')
     pos_tws.append(f"tl.fromTo('#poster',{{opacity:0,scale:.96}},{{opacity:1,scale:1,duration:.5,ease:'back.out(1.2)'}},{max(0.0,T(st('c6_4')+0.2)):.2f});")
     pos_tws.append(f"tl.to('#poster',{{opacity:0,duration:.3}},{T(st('c6_5')-0.1):.2f});")
-sfx.append({"t": round(st("c6_4") + 0.2, 2), "kind": "shakiin"})
+sfx.append({"t": round(st("c6_4") + 0.2, 2), "kind": "card"})
 
 # ===== 章タグ =====
 chap_divs, chap_tws = [], []
@@ -247,7 +248,7 @@ for j, (ch, cst) in enumerate(CHAPS):
         chap_divs.append(f'<div class="chaptag" id="{cid}"><div class="chnum">{esc(en_)}</div><div class="chttl">{esc(sub)}</div></div>')
         chap_tws.append(f"tl.fromTo('#{cid}',{{opacity:0,y:40}},{{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'}},{T(cst+0.1):.2f});")
         chap_tws.append(f"tl.to('#{cid}',{{opacity:0,y:-26,duration:.4,ease:'power1.in'}},{T(cst+3.4):.2f});")
-    sfx.append({"t": round(cst + 0.1, 2), "kind": "impact"})
+    sfx.append({"t": round(cst + 0.1, 2), "kind": "chap"})
 
 # ===== SFXイベント書き出し =====
 if os.environ.get("HF_EXPORT_SFX") == "1":
