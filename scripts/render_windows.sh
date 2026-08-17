@@ -40,7 +40,7 @@ wi=0
 for w in "${WINS[@]}"; do
   s="${w%:*}"; e="${w#*:}"; ia=$(printf '%02d' "$wi")
   want=$(python3 -c "print(round($e-$s,3))")
-  np=$(python3 -c "import math;print(max(4,math.ceil(($e-$s)/6.0)))")
+  np=$(python3 -c "import math;print(max(3,math.ceil(($e-$s)/${PIECE_SEC:-6}.0)))")
   inputs=""; filt=""; k=0
   while [ "$k" -lt "$np" ]; do
     ps=$(python3 -c "print(round($s+($e-$s)*$k/$np,3))")

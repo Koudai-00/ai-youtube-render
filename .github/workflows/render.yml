@@ -98,6 +98,7 @@ jobs:
           PRODUCER_PUPPETEER_PROTOCOL_TIMEOUT_MS: "600000"
           PUPPETEER_ARGS: "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage"
           HYPERFRAMES_BROWSER_ARGS: "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage"
+          PIECE_SEC: "12"
         run: |
           echo "browser = $HYPERFRAMES_BROWSER_PATH"
           bash scripts/render_windows.sh
