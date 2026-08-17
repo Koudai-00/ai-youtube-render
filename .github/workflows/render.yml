@@ -12,9 +12,13 @@ on:
         description: "ビジュアルのみ出力(音声muxはローカル)。shaydullaev等はtrue"
         required: false
         default: "false"
+      win_range:
+        description: "窓範囲 lo-hi (例 0-5)。空=全窓。長尺を2並列に分けてtimeout回避"
+        required: false
+        default: ""
 
 concurrency:
-  group: render-${{ github.event.inputs.episode }}
+  group: render-${{ github.event.inputs.episode }}-${{ github.event.inputs.win_range }}
   cancel-in-progress: false
 
 permissions:
@@ -41,8 +45,10 @@ jobs:
                    hyperframes/_lib/textfx -type f 2>/dev/null \
               | sort | xargs sha256sum | sha256sum | cut -c1-16)
           echo "hash=$H" >> "$GITHUB_OUTPUT"
-          echo "tag=$EP-$H" >> "$GITHUB_OUTPUT"
-          echo "content hash = $H"
+          WR="${{ github.event.inputs.win_range }}"
+          WRS=$(echo "$WR" | tr -c 'a-zA-Z0-9' '_' | sed 's/_*$//')
+          echo "tag=$EP-$H${WRS:+-w$WRS}" >> "$GITHUB_OUTPUT"
+          echo "content hash = $H  win_range=$WR"
 
       - name: Skip if already rendered
         id: check
@@ -101,6 +107,8 @@ jobs:
           PIECE_SEC: "12"
         run: |
           echo "browser = $HYPERFRAMES_BROWSER_PATH"
+          WR="${{ github.event.inputs.win_range }}"
+          if [ -n "$WR" ]; then export WIN_FROM="${WR%-*}" WIN_TO="${WR#*-}"; echo "window slice: $WIN_FROM..$WIN_TO"; fi
           bash scripts/render_windows.sh
 
       - name: Mux narration + single BGM + loudnorm
