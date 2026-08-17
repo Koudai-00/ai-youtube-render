@@ -270,12 +270,12 @@ SECTION_BG = {
     "s2_origin":   ["prep_boy", "prep_family", "prep_father", "prep_horse2", "prep_sheep", "prep_home"],
     "s3_grapple":  ["prep_gym", "prep_cage", "prep_bag", "prep_mitts", "prep_eagle2", "prep_train2"],
     "s4_kg":       ["kg_mont1", "kg_mont2", "kg_mont3", "prep_belt", "prep_medals"],
-    "s5_intl":     ["aca_stand", "aca_action", "aca", "roadfc", "roadfc_walk", "kg_mont3"],
+    "s5_intl":     ["aca_stand", "aca_action", "aca_down", "aca", "roadfc_walk", "kg_mont3"],
     # RIZIN戦: 各試合の30秒ダック(rz_*)がその窓を自動占有。ここはダック前後のナレ(相手紹介/結果)の背景。
-    "s6_debut":    ["takeda_action", "takeda_action", "prep_spar", "takeda_win", "sh_arch", "prep_bag", "prep_mitts"],
-    "s7_run":      ["kubo1", "kubo1", "prep_run", "prep_train2", "kleber_face"],
-    "s8_kleber":   ["kleber_face", "kleber_action", "sh_kleber_belt", "sh_flag", "prep_runsnow"],
-    "s9_defense":  ["prep_run", "kole_face", "sh_kole_belt", "asakura_face", "asakura_start", "asakura_action", "sh_kubo2_win", "sh_kubo2_tko"],
+    "s6_debut":    ["takeda_action", "prep_spar", "takeda_win", "sh_arch", "archuleta_action", "prep_bag", "prep_mitts"],
+    "s7_run":      ["kubo_k1", "kubo1_action", "prep_run", "prep_train2", "kleber_face"],
+    "s8_kleber":   ["kleber_face", "kleber_tri", "kleber_suz", "sh_kleber_belt", "sh_flag", "prep_runsnow"],
+    "s9_defense":  ["prep_run", "kole_face", "sh_kole_belt", "asakura_face", "asakura_yt", "dome_crowd", "asakura_lift", "asakura_action", "sh_kubo2_win", "sh_kubo2_tko"],
     "s9b_ufc":     ["prep_talk", "prep_talk3", "vp_two"],
     "s10_style":   ["prep_gym", "prep_cage", "kleber_action", "sh_arch", "uae", "prep_spar"],
     "s11_human":   ["prep_horse", "prep_food", "prep_horse3", "prep_family", "prep_talk3"],
@@ -293,7 +293,7 @@ FINISH_IN_CLIP = {
 # ダック(timings.jsonのclip名) → bgvidアセット。
 # RIZIN7戦は30秒フル切り出し(rz_*: 冒頭から再生し末尾でフィニッシュ)。roadfcのみ従来の短尺(決着同期)。
 DUCK_ASSET = {
-    "roadfc": "roadfc",
+    "roadfc": "rz_roadfc",
     "takeda": "rz_takeda", "archuleta": "rz_archuleta", "kubo1": "rz_kubo1", "kleber": "rz_kleber",
     "kolesnik": "rz_kolesnik", "asakura": "rz_asakura", "kubo2": "rz_kubo2",
 }
@@ -308,33 +308,42 @@ PINS = [
     ("長い棒にたくさんの釘", "prep_father", None),
     # s5 世界進出: バンタム級/ACA/アフマトフ フラッシュダウン(#115/#116)
     ("ここで注目したいのが、彼の階級", "aca_action", None),
-    ("強豪の登竜門アカ", "aca", None),
-    ("2022年のアスワドアフマトフ", "aca_stand", None),
-    ("フラッシュダウンからすぐさま", "aca", None),
+    ("参戦したのは、強豪の登竜門ACA", "aca", None),
+    ("中でも特筆すべきが、2022年のアスワドアフマトフ", "aca_down", None),
+    ("だが、シェイドゥラエフは全く動じなかった", "aca_action", None),
     ("舞台は韓国", "roadfc_walk", None),
     ("同じ年の10月、中東", "uae", 12),
-    # s6 武田(相手紹介)/アーチュレッタ。30秒ダックが試合本体、ナレ背景は相手戦の別局面/歓喜。
+    # s6 武田(相手紹介+展開)/アーチュレッタ(展開)。ダック=フィニッシュ15秒。
     ("デビュー戦の相手は、武田光司", "takeda_action", None),
+    ("だが試合が始まると、その差は問題にならなかった", "takeda_action", None),
     ("武田を一本で沈め", "takeda_win", None),
     ("続く2戦目、2024年9月のライジン48", "sh_arch", None),
-    # s7 久保①(相手紹介)→クレベル登場
-    ("元K-1の三冠王者", "kubo1", None),
+    ("世界王座を経験した実力者。だが、この男の前でも", "archuleta_action", None),
+    # s7 久保①: K-1キック紹介→展開→クレベル登場
+    ("久保優太は、ケーワンの三階級を制した", "kubo_k1", None),
+    ("純粋なグラップラーであるシェイドゥラエフが", "kubo_k1", None),
+    ("だが蓋を開けてみれば、打ち合いでも上回った", "kubo1_action", None),
     ("そして立ちはだかるのが、絶対王者クレベル", "kleber_face", None),
-    # s8 クレベル: ナレ中はフェイスオフ/攻防、決着はダック
-    ("相手は、柔術の鬼にして長期政権", "kleber_face", None),
-    ("クレベルは、あの朝倉未来", "kleber_action", None),
+    # s8 クレベル: 三角締め(対朝倉)/判定勝ち(対鈴木)→フェイスオフ→決着はダック
+    ("相手は、柔術の鬼と呼ばれる", "kleber_face", None),
+    ("クレベルは、あの朝倉未来を、三角締め", "kleber_tri", None),
+    ("さらに、鈴木千裕にも判定で競り勝った", "kleber_suz", None),
     ("第7代ライジンフェザー級王者", "sh_kleber_belt", None),
     ("このベルトを、キルギスに持ち帰る", "sh_flag", None),
     # s9 防衛: 相手紹介=相手戦の入場/攻防、決着はダック
     ("初防衛戦の相手は、ロシアのベテラン", "kole_face", None),
     ("2度目の防衛戦の相手は、日本で最も有名なMMAファイター", "asakura_face", None),
-    ("YouTubeの登録者数百万人", "asakura_start", None),
+    ("いち早くユーチューブに目をつけて活動し", "asakura_yt", None),
+    ("経営者としても数多くの事業を手掛ける", "asakura_face", None),
+    ("彼が出場する大会は、ドームが満員", "dome_crowd", None),
+    ("そしてこの試合で、シェイドゥラエフの規格外のパワー", "asakura_action", None),
+    ("腰が重く、テイクダウンを許さないことで知られる朝倉", "asakura_lift", None),
     ("1ラウンド2分54秒、TKO", "asakura_action", None),
     ("3度目の防衛戦は、かつて破った打撃巧者", "sh_kubo2_win", None),
     # s9b 去就(UFC/契約/マッキー決定)
     ("次はUFCへ行くのではないか", "prep_talk", None),
     ("ライジンとの契約は、残り2試合", "prep_talk3", None),
-    ("動いたのはピーエフエルだった", "vp_two", None),
+    ("動いたのはライジンだった", "vp_saka", None),
     ("馬を一頭飼い", "prep_horse", None),
     ("羊肉や馬肉を使った郷土料理", "prep_food", None),
     ("2026年9月10日、京セラドーム大阪。超ライジン5", "vp_cards", None),
@@ -363,6 +372,13 @@ CLIP_SOURCE["uae"] = "出典: UAE Warriors"
 CLIP_SOURCE["aca"] = "出典: ACA Young Eagles"
 CLIP_SOURCE["aca_action"] = "出典: ACA Young Eagles"
 CLIP_SOURCE["aca_stand"] = "出典: ACA Young Eagles"
+CLIP_SOURCE["aca_down"] = "出典: ACA Young Eagles"
+CLIP_SOURCE["rz_roadfc"] = "試合映像: Road FC"
+# 対戦相手紹介・展開クリップ(#187-190)
+for _n in ["archuleta_action", "kubo1_action", "kleber_tri", "kleber_suz", "asakura_lift", "dome_crowd"]:
+    CLIP_SOURCE[_n] = "試合映像: RIZIN FF"
+CLIP_SOURCE["kubo_k1"] = "出典: K-1"
+CLIP_SOURCE["asakura_yt"] = "出典: 朝倉未来 YouTube"
 for _n in ["kg_mont1", "kg_mont2", "kg_mont3"]:
     CLIP_SOURCE[_n] = "出典: キルギスMMA (Batyr Bashy 他)"
 for _n in ["d18_walk","d18_aoki_fin","d18_lose"]:

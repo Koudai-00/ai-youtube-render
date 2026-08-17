@@ -68,5 +68,10 @@ while TOTAL - bounds[-1] > HI:
     bounds.append(nxt)
 bounds.append(round(TOTAL, 3))
 
-for i in range(len(bounds) - 1):
-    print(f"{bounds[i]}:{bounds[i+1]}")
+# CI並列化: env WIN_FROM/WIN_TO で窓インデックスをスライス(既定=全窓)。
+import os
+_wins = [(bounds[i], bounds[i + 1]) for i in range(len(bounds) - 1)]
+_lo = int(os.environ.get("WIN_FROM", 0) or 0)
+_hi = int(os.environ.get("WIN_TO", len(_wins)) or len(_wins))
+for s, e in _wins[_lo:_hi]:
+    print(f"{s}:{e}")
