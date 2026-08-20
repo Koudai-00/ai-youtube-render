@@ -500,6 +500,11 @@ def build_bg_segments():
         s["mdur"] = round(mdur, 3)
         vi += 1
         used[nm] += 1
+    # ダック直前の通常セグメントは退場フェードさせず不透明維持(ダックが上にフェードインする間の一瞬の黒を防ぐ)
+    for i in range(len(segs) - 1):
+        if not segs[i].get("duck") and segs[i + 1].get("duck"):
+            segs[i]["preduck"] = True
+            segs[i]["cont_end"] = True
     return segs, used
 
 
@@ -674,7 +679,7 @@ if WINDOWED:
             st, d = it["start"] - off, it["mdur"]
             ms = it.get("mstart", 0)
             it["cont"] = st < 0.05
-            it["cont_end"] = ne > wdur - 0.05
+            it["cont_end"] = (ne > wdur - 0.05) or it.get("preduck", False)
             if st < 0:
                 ms = round(ms - st, 3); d = round(d + st, 3); st = 0.0
             if st >= wdur - 0.001 or d <= 0.05:
