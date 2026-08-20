@@ -225,6 +225,7 @@ __TEXTFX_CSS__
     capLayer.appendChild(el);
     tl.fromTo(el,{opacity:0,y:8},{opacity:1,y:0,duration:.14,ease:'power1.out'}, c.s);
     tl.to(el,{opacity:0,duration:.1,ease:'power1.in'}, c.e);
+    tl.set(el,{opacity:0}, c.e+0.11); // 退場後に不透明度0を固定（窓分割フレームシーク時の居残り防止）
   });
 
   const chapLayer = document.getElementById('chapLayer');
@@ -323,7 +324,7 @@ PINS = [
     ("久保優太は、ケーワンの三階級を制した", "kubo_k1", None),
     ("純粋なグラップラーであるシェイドゥラエフが", "kubo_k1", None),
     ("だが蓋を開けてみれば、打ち合いでも上回った", "kubo1_action", None),
-    ("そして立ちはだかるのが、絶対王者クレベル", "kleber_face", None),
+    ("そして立ちはだかるのが、王者クレベル", "kleber_face", None),
     # s8 クレベル: 三角締め(対朝倉)/判定勝ち(対鈴木)→フェイスオフ→決着はダック
     ("相手は、柔術の鬼と呼ばれる", "kleber_face", None),
     ("クレベルは、あの朝倉未来を、三角締め", "kleber_tri", None),
@@ -599,10 +600,11 @@ def build_caps():
                 gend = t + 0.4
             caps.append({"s": round(t, 2), "e": round(gend, 2), "lines": g})
             t = round(gend, 2)
-    # 念のため隣接キューの重なりを除去（前キュー終端 < 次キュー開始）
+    # 隣接キューは必ず 0.14s 以上の間隔を空ける（完全隣接=前キュー退場が居残り重なる描画バグ防止・退場0.1sより長く）
+    CAP_GAP = 0.14
     for k in range(len(caps) - 1):
-        if caps[k]["e"] > caps[k + 1]["s"]:
-            caps[k]["e"] = round(caps[k + 1]["s"] - 0.02, 2)
+        if caps[k]["e"] > caps[k + 1]["s"] - CAP_GAP:
+            caps[k]["e"] = round(caps[k + 1]["s"] - CAP_GAP, 2)
     return caps
 
 
