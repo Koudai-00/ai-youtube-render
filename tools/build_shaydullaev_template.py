@@ -379,6 +379,7 @@ CLIP_SOURCE["rz_roadfc"] = "試合映像: Road FC"
 for _n in ["archuleta_action", "kubo1_action", "kleber_tri", "kleber_suz", "asakura_lift", "dome_crowd"]:
     CLIP_SOURCE[_n] = "試合映像: RIZIN FF"
 CLIP_SOURCE["kubo_k1"] = "出典: K-1"
+CLIP_SOURCE["kubo_rizin"] = "試合映像: RIZIN FF"
 CLIP_SOURCE["asakura_yt"] = "出典: 朝倉未来 YouTube"
 for _n in ["kg_mont1", "kg_mont2", "kg_mont3"]:
     CLIP_SOURCE[_n] = "出典: キルギスMMA (Batyr Bashy 他)"
@@ -427,6 +428,24 @@ def build_bg_segments():
         else:
             segs.append({"start": b["start"], "end": b["end"], "name": asset,
                          "sec": sid, "sync": pin_sync.get(id(b))})
+    # 手動セグメント上書き(特定ナレ区間の背景を明示指定＝連続フル再生/尺調整・ユーザー指定2026-08-20)
+    #  ・久保RIZIN49紹介=RIZIN久保戦1:09~ / 久保K-1紹介=K-1公式12:20-45を1本連続再生(6秒リセット解消)
+    #  ・朝倉持ち上げ叩きつけ=asakura_liftをフル表示(手前のasakura_actionを短縮して前倒し)
+    MANUAL_SEG = [
+        (502.02, 508.59, "kubo_rizin", "s7_run"),
+        (508.59, 532.79, "kubo_k1", "s7_run"),
+        (740.52, 744.16, "asakura_action", "s9_defense"),
+        (744.16, 757.19, "asakura_lift", "s9_defense"),
+    ]
+    for ms_s, ms_e, ms_name, ms_sec in MANUAL_SEG:
+        segs = [s for s in segs if not (s["start"] >= ms_s - 0.02 and s["end"] <= ms_e + 0.02)]
+        for s in segs:
+            if s["start"] < ms_s < s["end"]:
+                s["end"] = ms_s
+            if s["start"] < ms_e < s["end"]:
+                s["start"] = ms_e
+        segs.append({"start": ms_s, "end": ms_e, "name": ms_name, "sec": ms_sec, "sync": None})
+    segs.sort(key=lambda s: s["start"])
     for dk in TIM.get("ducks", []):
         ds, de, clip = dk["start"], dk["end"], DUCK_ASSET.get(dk["clip"], dk["clip"])
         # RIZIN30秒ダック(rz_*)は冒頭から丸ごと再生(切り出し済みで末尾に決着)。sync=Noneでmstart=0。
@@ -446,6 +465,8 @@ def build_bg_segments():
         segs.append({"start": ds, "end": de, "name": clip, "sec": dk["sec"],
                      "sync": sync, "duck": True})
     segs.sort(key=lambda s: s["start"])
+    # 退化セグメント(手動上書きのトリムで生じるゼロ長)を除去
+    segs = [s for s in segs if s["end"] - s["start"] > 0.05]
     for i in range(len(segs) - 1):
         if segs[i].get("duck"):
             continue
