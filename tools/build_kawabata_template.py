@@ -36,6 +36,10 @@ DISP = {
     "よしだひでひこ": "吉田秀彦", "ロンダラウジー": "ロンダ・ラウジー",
     "あおきしんや": "青木真也", "わたなべかな": "渡辺華奈", "やすいひゅうま": "安井飛馬",
     "ウデヒシギジュウジガタメ": "腕ひしぎ十字固め",
+    # 単独キー(分割cue対策・長キー優先でマッチするので安全)
+    "どんまい": "ドンマイ", "かわばた": "川端", "とみざわ": "冨澤",
+    "ゆーちゅーぶ": "YouTube", "ユーチューブ": "YouTube", "ユーチューバー": "YouTuber",
+    "かいは": "海は", "かいと": "海と", "かいも": "海も", "かいが": "海が", "かいの": "海の", "かいに": "海に",
 }
 def disp(t):
     for k in sorted(DISP, key=len, reverse=True): t = t.replace(k, DISP[k])
@@ -64,9 +68,15 @@ SRCLAB = {
   "collab2":"出典: 朝倉海 KAI Channel(YouTube)","aboutkai":"出典: ドンマイ川端(YouTube)","bd8":"出典: BreakingDown公式(YouTube)",
   "aoki":"出典: ONE Championship(YouTube)","watanabe":"出典: RIZIN公式(YouTube)","yasui":"出典: U-NEXT格闘技(YouTube)",
   "yoshida":"出典: PRIDE(YouTube)","rousey":"出典: UFC/YouTube","tomizawa":"出典: RIZIN公式(YouTube)",
-  "card":"出典: RIZIN公式サイト","m_arena":"イメージ映像(Pexels)","m_rain":"イメージ映像(Pexels)",
-  "m_osaka":"イメージ映像(Pexels)","m_lonely":"イメージ映像(Pexels)","m_train":"イメージ映像(Pexels)",
-  "m_sun":"イメージ映像(Pexels)","m_crowd":"イメージ映像(Pexels)","m_room":"イメージ映像(Pexels)",
+  "card":"出典: RIZIN公式サイト",
+  "takato_ipp":"出典: 講道館杯2011(YouTube)","ippon2":"出典: グランドスラム東京2011(YouTube)",
+  "zennihon_a":"出典: 全日本柔道(YouTube)","zennihon_b":"出典: 全日本柔道(YouTube)",
+  "gs_finals":"出典: グランドスラム東京2011(YouTube)",
+  "m_arena":"イメージ映像(Pexels)","m_rain":"イメージ映像(Pexels)","m_osaka":"イメージ映像(Pexels)",
+  "m_lonely":"イメージ映像(Pexels)","m_train":"イメージ映像(Pexels)","m_sun":"イメージ映像(Pexels)",
+  "m_crowd":"イメージ映像(Pexels)","m_room":"イメージ映像(Pexels)","m_medal":"イメージ映像(Pexels)",
+  "m_kids":"イメージ映像(Pexels)","m_resolve":"イメージ映像(Pexels)","m_school":"イメージ映像(Pexels)",
+  "m_spotlight":"イメージ映像(Pexels)","m_wtrain":"イメージ映像(Pexels)","m_storm":"イメージ映像(Pexels)",
 }
 # bgセグメント絶対時刻レンジ + 出典(連続同一はまとめる)
 SEG_ABS = []
@@ -143,15 +153,31 @@ if not VISUAL_ONLY:
             chap_audio.append(f'<audio id="chs{j}" src="assets/se/se_impact.mp3" data-start="{T(cst+0.05):.2f}" data-track-index="{200+j}" data-volume="0.5"></audio>')
 
 # 下部字幕
+def split_chunks(disp_text, maxw=24.0):
+    """disp済みテキストを、、境界で1行チャンク(<=maxw)にまとめる。発話追従用。"""
+    parts = [p for p in re.split("(?<=、)", disp_text) if p]
+    chunks, cur = [], ""
+    for p in parts:
+        if not cur or zwidth(cur + p) <= maxw: cur += p
+        else: chunks.append(cur); cur = p
+    if cur: chunks.append(cur)
+    return chunks or [disp_text]
+
 sub_divs = []
-for i,c in enumerate(CUES):
-    cs,ce=c["start"],c["end"]
-    if not OV(cs,ce): continue
-    inner="<br>".join(esc(l) for l in sub_lines(disp(c["text"])))
-    did=f"sub{i}"
-    sub_divs.append(f'<div class="subt" id="{did}">{inner}</div>')
-    tws.append(f"tl.fromTo('#{did}',{{opacity:0}},{{opacity:1,duration:.16}},{max(0.0,T(cs)):.2f});")
-    tws.append(f"tl.to('#{did}',{{opacity:0,duration:.12}},{T(ce-0.03):.2f});")
+_si = 0
+for c in CUES:
+    cs, ce = c["start"], c["end"]
+    chunks = split_chunks(disp(c["text"]))
+    tot = sum(zwidth(x) for x in chunks) or 1.0
+    span = ce - cs; t = cs
+    for ch in chunks:
+        cw = zwidth(ch); c0 = t; c1 = t + span * (cw / tot); t = c1
+        if not OV(c0, c1): continue
+        inner = "<br>".join(esc(l) for l in sub_lines(ch))
+        did = f"sub{_si}"; _si += 1
+        sub_divs.append(f'<div class="subt" id="{did}">{inner}</div>')
+        tws.append(f"tl.fromTo('#{did}',{{opacity:0}},{{opacity:1,duration:.14}},{max(0.0,T(c0)):.2f});")
+        tws.append(f"tl.to('#{did}',{{opacity:0,duration:.1}},{T(c1-0.04):.2f});")
 
 # 窓境界cont
 def cont_fix(items):
