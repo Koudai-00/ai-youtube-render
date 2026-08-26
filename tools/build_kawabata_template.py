@@ -26,7 +26,7 @@ def esc(s): return html.escape(s)
 
 # ===== DISP: 読みかな→正式表記 =====
 DISP = {
-    "どんまい、かわばた": "ドンマイ川端", "どんまいかわばた": "ドンマイ川端", "かわばたりゅう": "川端龍",
+    "どんまい、かわばた": "ドンマイ川端", "どんまいかわばた": "ドンマイ川端", "かわばたりょう": "川端龍",
     "たかとうなおひさ": "髙藤直寿", "こうどうかんはい": "講道館杯", "こくしかんだいがく": "国士舘大学",
     "とみざわだいち": "冨澤大智", "あさくらかい": "朝倉海", "あさくらみくる": "朝倉未来", "ひろや": "ヒロヤ",
     "ぶれいきんぐだうん": "ブレイキングダウン", "きょうせらどーむ": "京セラドーム",
@@ -77,6 +77,9 @@ SRCLAB = {
   "m_crowd":"イメージ映像(Pexels)","m_room":"イメージ映像(Pexels)","m_medal":"イメージ映像(Pexels)",
   "m_kids":"イメージ映像(Pexels)","m_resolve":"イメージ映像(Pexels)","m_school":"イメージ映像(Pexels)",
   "m_spotlight":"イメージ映像(Pexels)","m_wtrain":"イメージ映像(Pexels)","m_storm":"イメージ映像(Pexels)",
+  "rn4":"出典: RIZIN公式(YouTube)","tlzp":"出典: 超RIZIN.5会見(YouTube)","vena":"出典: ドンマイ川端(YouTube)",
+  "e0i":"出典: BreakingDown(YouTube)","lbq":"出典: BreakingDown公式(YouTube)",
+  "m_boxing":"イメージ映像(Pexels)","m_reunion":"イメージ映像(Pexels)","m_child":"イメージ映像(Pexels)",
 }
 # bgセグメント絶対時刻レンジ + 出典(連続同一はまとめる)
 SEG_ABS = []
