@@ -96,9 +96,6 @@ for t0, t1, lab in SEG_ABS:
 # ===== 章 =====
 CHAPS = [(c["chapter"], c["start"]) for c in CUES if c["chapter"]]
 
-# ===== 冒頭タイトル(0.3〜10.5) =====
-TITLE = [("柔道日本一の男が", 0.9, "y"), ("36歳でMMAへ", 1.5, "r")]
-
 # ===== SFX events(mux用) =====
 def build_sfx():
     ev = [{"t": 1.2, "kind": "open"}]
@@ -128,14 +125,8 @@ for i, (t0, t1, lab) in enumerate(SRC_RANGES):
     tws.append(f"tl.fromTo('#{sid}',{{opacity:0}},{{opacity:1,duration:.4}},{max(0.0,T(t0)+0.3):.2f});")
     tws.append(f"tl.to('#{sid}',{{opacity:0,duration:.3}},{T(t1)-0.2:.2f});")
 
-# 冒頭タイトル(暗アリーナ背景の区間0.3〜5.2のみ=顔被り回避)
+# 冒頭タイトルは廃止(背景映像と重なるためユーザー指示で削除・2026-08-27)
 title_divs = []
-if OV(0.3, 5.4):
-    rows = "".join(f'<div class="ttlrow {c}">{esc(txt)}</div>' for txt, _, c in TITLE)
-    title_divs.append(f'<div class="bigtitle" id="bigttl">{rows}</div>')
-    for j,(txt,dl,c) in enumerate(TITLE):
-        tws.append(f"tl.fromTo('#bigttl .ttlrow:nth-child({j+1})',{{opacity:0,y:60}},{{opacity:1,y:0,duration:.6,ease:'power3.out'}},{T(0.3)+dl:.2f});")
-    tws.append(f"tl.to('#bigttl',{{opacity:0,duration:.4}},{T(4.9):.2f});")
 
 # 章タグ
 chap_divs = []
@@ -157,13 +148,17 @@ if not VISUAL_ONLY:
 
 # 下部字幕
 def split_chunks(disp_text, maxw=24.0):
-    """disp済みテキストを、、境界で1行チャンク(<=maxw)にまとめる。発話追従用。"""
+    """disp済みテキストを、読点境界で1行チャンク(<=maxw)にまとめる。発話追従用。
+    末尾の極小チャンク(「とも。」等)は孤立させず直前へ吸収=不自然な区切りを防ぐ。"""
     parts = [p for p in re.split("(?<=、)", disp_text) if p]
     chunks, cur = [], ""
     for p in parts:
         if not cur or zwidth(cur + p) <= maxw: cur += p
         else: chunks.append(cur); cur = p
     if cur: chunks.append(cur)
+    # 末尾断片が極小なら直前チャンクへ吸収(2行に収まる範囲で)
+    while len(chunks) >= 2 and zwidth(chunks[-1]) <= 7 and zwidth(chunks[-2] + chunks[-1]) <= maxw * 1.6:
+        chunks[-2] += chunks.pop()
     return chunks or [disp_text]
 
 sub_divs = []
