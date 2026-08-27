@@ -28,8 +28,9 @@ def esc(s): return html.escape(s)
 DISP = {
     "いとうゆうき": "伊藤裕樹", "ざぎゃんぶらー": "ザ・ギャンブラー", "おわりのうぉーずまん": "尾張のウォーズマン",
     "あいさいし": "愛西市", "じあうとさいだー": "THE OUTSIDER", "あうとさいだー": "アウトサイダー",
-    "ふじただいわ": "藤田大和", "すぎやまこうへい": "杉山廣平", "なかむらゆうさく": "中村優作", "ひろや": "ヒロヤ",
-    "とにーららみー": "トニー・ララミー", "かるろすもた": "カルロス・モタ",
+    "ふじたやまと": "藤田大和", "すぎやまこうへい": "杉山廣平", "なかむらゆうさく": "中村優作", "ひろや": "ヒロヤ",
+    "しっしん": "失神",
+    "とにーららみー": "トニー・ララミー", "ららみー": "ララミー", "かるろすもた": "カルロス・モタ",
     "ありべくがじゃまとふ": "アリベク・ガジャマトフ", "がじゃまとふ": "ガジャマトフ",
     "しんりゅうまこと": "神龍誠", "あさくらみくる": "朝倉未来", "あさくらかい": "朝倉海",
     "ばんてりんどーむ": "バンテリンドーム", "らいじん": "RIZIN", "でぃーぷ": "DEEP", "ぴーえふしー": "PFC",
@@ -58,11 +59,10 @@ def sub_lines(text, maxw=25.0):
 
 # ===== 出典ラベル(clip→引用元) =====
 SRCLAB = {
-  "mikkyaku":"出典: RIZIN公式 密着Preparation(YouTube)","doremi":"出典: 伊藤裕樹 SNS投稿動画",
+  "mikkyaku":"出典: RIZIN公式 密着Preparation(YouTube)","keisatsu":"出典: 伊藤裕樹のありのまま(YouTube)",
+  "hiroya":"出典: RIZIN公式(YouTube)",
   "sugiyama":"出典: RIZIN公式(YouTube)","nakamura":"出典: RIZIN公式(YouTube)","gadzha":"出典: RIZIN公式(YouTube)",
   "mota":"出典: RIZIN公式(YouTube)","laramie":"出典: RIZIN公式(YouTube)","deep":"出典: DEEP公式(YouTube)",
-  "owari":"出典: ORICON NEWS(YouTube)","outsider":"出典: ORICON NEWS(YouTube)","rizin36":"出典: 前田日明ch(YouTube)",
-  "komatome":"出典: ORICON NEWS(YouTube)",
   "m_boyboxing":"イメージ映像(Pexels)","m_nagoya":"イメージ映像(Pexels)","m_gloves":"イメージ映像(Pexels)",
   "m_omisoka":"イメージ映像(Pexels)","m_ring":"イメージ映像(Pexels)",
 }
@@ -142,13 +142,16 @@ if not VISUAL_ONLY:
 
 # 下部字幕
 def split_chunks(disp_text, maxw=24.0):
-    """disp済みテキストを、、境界で1行チャンク(<=maxw)にまとめる。発話追従用。"""
+    """disp済みテキストを読点境界で1行チャンク(<=maxw)にまとめる。発話追従用。
+    末尾の極小チャンクは孤立させず直前へ吸収(不自然な区切り防止・video-production.md準拠)。"""
     parts = [p for p in re.split("(?<=、)", disp_text) if p]
     chunks, cur = [], ""
     for p in parts:
         if not cur or zwidth(cur + p) <= maxw: cur += p
         else: chunks.append(cur); cur = p
     if cur: chunks.append(cur)
+    while len(chunks) >= 2 and zwidth(chunks[-1]) <= 7 and zwidth(chunks[-2] + chunks[-1]) <= maxw * 1.6:
+        chunks[-2] += chunks.pop()
     return chunks or [disp_text]
 
 sub_divs = []
