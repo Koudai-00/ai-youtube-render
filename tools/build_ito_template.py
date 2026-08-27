@@ -151,7 +151,8 @@ def split_chunks(disp_text, maxw=24.0):
         else: chunks.append(cur); cur = p
     if cur: chunks.append(cur)
     while len(chunks) >= 2 and zwidth(chunks[-1]) <= 7 and zwidth(chunks[-2] + chunks[-1]) <= maxw * 1.6:
-        chunks[-2] += chunks.pop()
+        _tail = chunks.pop()
+        chunks[-1] += _tail
     return chunks or [disp_text]
 
 sub_divs = []
