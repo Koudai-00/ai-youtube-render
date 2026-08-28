@@ -1,5 +1,14 @@
 [
  {
+  "id": "rizin_gk",
+  "role": "capture",
+  "name": "RIZIN FF OFFICIAL",
+  "handle": "rizin_pr",
+  "verified": true,
+  "text": "【超RIZIN.5 合同公開練習】8/29(土) 都内某所\n参加選手：朝倉未来／青木真也／平本蓮／ホベルト・サトシソウザ／野村駿太／YA-MAN",
+  "engagement": {}
+ },
+ {
   "id": "kw_e",
   "role": "react",
   "name": "格闘ファン",

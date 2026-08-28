@@ -44,7 +44,8 @@ def disp(t):
 
 # 出典ラベル
 S_AK = "出典: RIZIN.52 秋元強真 vs パッチー・ミックス (RIZIN / U-NEXT)"
-S_MIKU = "出典: 朝倉未来 YouTube"
+S_MIZO = "出典: 溝口勇児『ミゾのゆる部屋』YouTube"
+S_RIZINGK = "出典: RIZIN 公式 X (@rizin_pr)"
 S_HOSO = "出典: 細川バレンタイン YouTube"
 S_BD = "出典: BreakingDown"
 S_NAN = "出典: ORICON『超RIZIN.5』独占インタビュー"
@@ -61,19 +62,19 @@ S_PEX = "出典: イメージ映像"
 BID_BG = {
     # OPEN(3topicのチラ見せ)
     "o1": ("ak_a", None, S_AK),
-    "o2": ("miku2", None, S_MIKU),
+    "o2": ("mizo1", None, S_MIZO),
     "o3": ("nanimono", None, S_NAN),
     "o4": ("ak_tag", None, S_AK),
     "o5": ("kaiken_kb", None, S_KAIKEN),
-    # CH1 朝倉未来×細川バレンタイン
-    "c1_tag": ("miku1", None, S_MIKU),
-    "c1_a": ("miku2", None, S_MIKU),
-    "c1_b": ("miku3", None, S_MIKU),
-    "c1_c": ("miku1", None, S_MIKU),
+    # CH1 朝倉未来×細川バレンタイン(溝口『ミゾのゆる部屋』で未来が言及)
+    "c1_tag": ("mizo2", None, S_MIZO),
+    "c1_a": ("mizo3", None, S_MIZO),
+    "c1_b": ("mizo2", None, S_MIZO),
+    "c1_c": ("mizo1", None, S_MIZO),                # 溝口との動画で言及
     "c1_d": ("bd_ctx", None, S_BD),                 # BreakingDown批判
     "c1_e": ("hoso_tweet", None, S_HOSO),           # 未来の発言(ツイート文字起こし)
     "c1_f": ("hoso_tweet", None, S_HOSO),           # 炎上手法…の引用(c1_e-fで1セグ)
-    "c1_g": ("miku3", None, S_MIKU),                # 一蹴(未来)
+    "c1_g": ("mizo3", None, S_MIZO),                # 一蹴(未来)
     "c1_h": ("hoso_talk", None, S_HOSO),            # 細川本人が反応
     "c1_i": ("hoso_talk2", None, S_HOSO),           # ファンの声
     # CH2 ドンマイ川端 欠場疑惑
@@ -83,6 +84,7 @@ BID_BG = {
     "c2_c": ("sr5_card", "kb_zin", S_RIZINP),       # 公式対戦カード
     "c2_d": ("kaiken_kb2", None, S_KAIKEN),         # なぜ噂が(会見の川端)
     "c2_e": ("kaiken_kb3", None, S_KAIKEN),         # 野村道場欠席の噂
+    "c2_e2": ("nanimono", None, S_RIZINGK),         # 合同公開練習の参加選手に川端不在(rosterカード)
     "c2_f": ("kawabata_train", None, S_KWJ),        # 追い込み/怪我(柔道)
     "c2_g": ("kaiken_kb", None, S_KAIKEN),          # 欠場疑惑(会見の川端)
     "c2_h": ("kaiken_kb2", None, S_KAIKEN),         # 会見の川端
@@ -99,7 +101,7 @@ BID_BG = {
     "c3_g": ("matrix2", None, S_RIZINS),            # RIZIN公式クリップ
     # END(回顧)
     "e1": ("ak_end", None, S_AK),
-    "e2": ("miku1", None, S_MIKU),
+    "e2": ("mizo2", None, S_MIZO),
     "e3": ("nanimono2", None, S_NAN),
 }
 
@@ -132,7 +134,8 @@ BG[-1] = (BG[-1][0], COMP, BG[-1][2], BG[-1][3], BG[-1][4])
 
 # ============ Xカード配置 (post_id, bid_start, bid_end, style) ============
 CARDS_SPEC = [
-    # CH2のみ(実在の反応・一般ファン=匿名化)。CH1/CH3は一次映像で構成しカード無し。
+    # CH2のみ。RIZIN公式=実名/実ID可、一般ファンは匿名化。CH1/CH3は一次映像で構成しカード無し。
+    ("rizin_gk", "c2_e2", "c2_e2", "cap"),  # RIZIN公式:合同公開練習 参加選手(川端不在)
     ("kw_e",  "c2_e", "c2_e", "cap"),   # 噂の火種(野村道場欠席→怪我で欠場?)
     ("kw_h",  "c2_g", "c2_h", "rea"),   # 海のセコンド発言は否定にならない/どちらとも言えない
     ("kw_i1", "c2_i", "c2_i", "cap"),   # 会見で笑いとってたのに…
@@ -255,7 +258,10 @@ def card_html(cid, post, style, cont=False):
     keep = post.get("role") == "capture"
     if keep:
         name = esc(post.get("name", "")); handle = esc("@" + post.get("handle", ""))
-        av_html = f'<img class="xav" src="assets/img/avatars/{pid}.jpg">'
+        if (TPL / "assets" / "img" / "avatars" / f"{pid}.jpg").exists():
+            av_html = f'<img class="xav" src="assets/img/avatars/{pid}.jpg">'
+        else:  # 公式アカウントでアバター画像が無い時はイニシャル丸で代替
+            av_html = f'<div class="xav anon" style="background:#1d9bf0">{esc(post.get("name","")[:1] or "R")}</div>'
         badge = '<span class="vbadge">✔</span>' if post.get("verified") else ""
     else:
         h = int(_hl.md5(pid.encode()).hexdigest(), 16)
