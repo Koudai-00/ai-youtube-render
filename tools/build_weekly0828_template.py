@@ -81,11 +81,11 @@ BID_BG = {
     "c2_a": ("kaiken_kb", None, S_KAIKEN),          # 大前提(会見の川端)
     "c2_b": ("nanimono2", None, S_NAN),
     "c2_c": ("sr5_card", "kb_zin", S_RIZINP),       # 公式対戦カード
-    "c2_d": ("about_kai", None, S_KWY),             # なぜ噂が(川端トーク)
-    "c2_e": ("kai_collab", None, S_KWY),            # 野村道場欠席の噂
+    "c2_d": ("kaiken_kb2", None, S_KAIKEN),         # なぜ噂が(会見の川端)
+    "c2_e": ("kaiken_kb3", None, S_KAIKEN),         # 野村道場欠席の噂
     "c2_f": ("kawabata_train", None, S_KWJ),        # 追い込み/怪我(柔道)
-    "c2_g": ("kai_collab2", None, S_KWY),           # 朝倉海セコンド発言(海×川端)
-    "c2_h": ("kai_collab", None, S_KWY),            # 海×川端
+    "c2_g": ("kaiken_kb", None, S_KAIKEN),          # 欠場疑惑(会見の川端)
+    "c2_h": ("kaiken_kb2", None, S_KAIKEN),         # 会見の川端
     "c2_i": ("nanimono", None, S_NAN),              # ファンの声(会見で笑い)
     "c2_j": ("nanimono2", None, S_NAN),             # 公式待ち(明るい川端)
     # CH3 秋元強真 海外絶賛
