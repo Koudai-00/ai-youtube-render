@@ -143,5 +143,32 @@
   "name": "MMAウォッチャー",
   "text": "朝倉海が日本人初のベルトや！と思ったけど、鶴屋怜もアツすぎる。フライ級の日本人が熱い。",
   "engagement": {}
+ },
+ {
+  "id": "k_izawa",
+  "role": "capture",
+  "name": "伊澤星矢",
+  "handle": "izawa_seiya",
+  "verified": true,
+  "text": "解散、強すぎ",
+  "engagement": {}
+ },
+ {
+  "id": "k_hiroya",
+  "role": "capture",
+  "name": "ヒロヤ",
+  "handle": "hiroya_bd",
+  "verified": true,
+  "text": "恐るべし左ハイ、解散の必殺技よな",
+  "engagement": {}
+ },
+ {
+  "id": "k_sekine",
+  "role": "capture",
+  "name": "関根“シュレック”秀樹",
+  "handle": "sekine_shrek",
+  "verified": true,
+  "text": "朝倉海、美しい左ハイからグラウンド膝、パウンドアウト",
+  "engagement": {}
  }
 ]

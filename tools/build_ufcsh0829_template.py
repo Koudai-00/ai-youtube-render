@@ -40,46 +40,49 @@ def disp(t):
     return t
 
 # 出典ラベル
-S_KAI   = "出典: 朝倉海 提供映像 (UFC上海)"
-S_KAIU  = "出典: UFC上海 (朝倉海 提供)"
-S_TSUI  = "出典: 鶴屋怜 提供画像 (UFC上海)"
-S_TSUF  = "出典: UFC上海 鶴屋怜 vs ボルハス"
-S_TSUO  = "出典: UFC上海 オクタゴンインタビュー"
-S_AOKI  = "出典: 青木真也 YouTube"
-S_JIRI  = "出典: 川尻達也のじりラジオ YouTube"
-S_PEX   = "出典: イメージ映像"
-
+S_KAI  = "出典: 朝倉海 提供映像 (UFC上海)"
+S_TSUI = "出典: 鶴屋怜 提供画像 (UFC上海)"
+S_TSUF = "出典: UFC上海 鶴屋怜 vs ボルハス"
+S_TSUO = "出典: UFC上海 オクタゴンインタビュー"
+S_AOKI = "出典: 青木真也 YouTube"
+S_JIRI = "出典: 川尻達也のじりラジオ YouTube"
+S_OGI  = "出典: 扇久保博正『おぎちゃんねる』YouTube"
+S_STR  = "出典: ストラッサー起一『ストチャンネル』YouTube"
+S_SHIN = "出典: 格闘キャスト（シン）YouTube"
+S_PEX  = "出典: イメージ映像"
 # ============ 背景プラン: beat_id -> (bgvidファイル, motion, srclabel) ============
 BID_BG = {
-    # OPEN(要約)
-    "o1": ("kai_walkout", None, S_KAI),
-    "o2": ("kai_finish_slow", None, S_KAI),
-    "o3": ("tsuruya_fight_finish", None, S_TSUF),
-    "o4": ("kai_result", None, S_KAI),
+    # OPEN
+    "o1": ("kai_walkout", None, S_KAI), "o2": ("kai_finish_slow", None, S_KAI),
+    "o3": ("tsuruya_fight_finish", None, S_TSUF), "o4": ("kai_result", None, S_KAI),
     # 前半 朝倉海
     "c1_tag": ("kai_walkout", None, S_KAI),
     "c1_a":   ("kai_walkout", None, S_KAI),
     "c1_b":   ("kai_result", None, S_KAI),
-    "c1_ko":  ("kai_finish_insert", None, S_KAI),   # ★フィニッシュ無音インサート(実音声)
+    "c1_ko":  ("kai_finish_insert", None, S_KAI),      # ★フィニッシュ無音インサート
     "c1_c":   ("kai_finish_slow", None, S_KAI),
-    "c1_d":   ("kai_finish_vert", None, S_KAI),      # 未来「よし！」card
-    "c1_e":   ("jiri_clip", None, S_JIRI),           # 川尻
-    "c1_f":   ("aoki_clip", None, S_AOKI),           # 青木 解説
-    "c1_g":   ("kai_interview", None, S_KAI),        # 金原/太田 card
-    "c1_h":   ("kai_finish_slow", None, S_KAI),      # ジョビン card
-    "c1_i":   ("kai_result", None, S_KAI),           # ファン card
-    "c1_j":   ("kai_finish_vert", None, S_KAI),      # 海外メディア card
-    "c1_k":   ("kai_interview", None, S_KAI),        # マイク(ビッグファイト)
+    "c1_d":   ("kai_interview", None, S_KAI),           # 本人コメント
+    "c1_e":   ("kai_finish_vert", None, S_KAI),         # ファイター一言(cards)
+    "c1_f":   ("jiri_clip", None, S_JIRI),              # 川尻(本人動画)
+    "c1_g":   ("aoki_clip", None, S_AOKI),              # 青木(本人動画)
+    "c1_h":   ("ogikubo_clip", None, S_OGI),            # 扇久保(本人動画)
+    "c1_i":   ("strasser_clip", None, S_STR),           # ストラッサー(本人動画)
+    "c1_j":   ("kai_result", None, S_KAI),              # ジョビン/金原/太田(cards)
+    "c1_k":   ("shin_clip", None, S_SHIN),              # シン+海外(本人動画/cards)
+    "c1_l":   ("kai_finish_slow", None, S_KAI),         # ファン(cards)
+    "c1_m":   ("kai_interview", None, S_KAI),           # マイク
     # 後半 鶴屋怜
     "c2_tag": ("tsuruya_win_img", "kb_zin", S_TSUI),
     "c2_a":   ("tsuruya_fight_td", None, S_TSUF),
     "c2_b":   ("tsuruya_fight_finish", None, S_TSUF),
     "c2_c":   ("tsuruya_finish_img", "kb_zin", S_TSUI),
-    "c2_d":   ("jiri_clip", None, S_JIRI),           # 平本/川尻 card
-    "c2_e":   ("tsuruya_seconds_img", "kb_zin", S_TSUI),  # 太田 card
-    "c2_f":   ("tsuruya_win_img", "kb_pan", S_TSUI),  # ファン card
-    "c2_g":   ("tsuruya_fight_finish", None, S_TSUF),  # 海外メディア card
-    "c2_h":   ("tsuruya_octagon", None, S_TSUO),      # マイク(ランカー)
+    "c2_d":   ("tsuruya_win_img", "kb_pan", S_TSUI),    # 平本/太田(cards)
+    "c2_e":   ("jiri_clip", None, S_JIRI),              # 川尻生解説(本人動画)
+    "c2_f":   ("ogikubo_clip", None, S_OGI),            # 扇久保(本人動画)
+    "c2_g":   ("strasser_clip", None, S_STR),           # ストラッサー(本人動画)
+    "c2_h":   ("tsuruya_seconds_img", "kb_zin", S_TSUI),# 父/太田/海外(cards)
+    "c2_i":   ("tsuruya_win_img", "kb_zin", S_TSUI),    # ファン(cards)
+    "c2_j":   ("tsuruya_octagon", None, S_TSUO),        # マイク
     # END
     "e1": ("kai_result", None, S_KAI),
     "e2": ("tsuruya_octagon", None, S_TSUO),
@@ -117,23 +120,20 @@ BG[-1] = (BG[-1][0], COMP, BG[-1][2], BG[-1][3], BG[-1][4])
 # ============ カード配置 (post_id, bid_start, bid_end, style) ============
 # 格闘家/業界/海外メディア=実名(capture)、一般ファン=匿名化(react)。
 CARDS_SPEC = [
-    # --- 朝倉海 ---
-    ("k_miku",   "c1_d", "c1_d", "cap"),   # 朝倉未来「よし！」
-    ("k_jiri",   "c1_e", "c1_e", "cap"),   # 川尻
-    ("k_kinpara","c1_g", "c1_g", "cap"),   # 金原「さいこう」
-    ("k_ota",    "c1_g", "c1_g", "rea"),   # 太田「ハイキックえぐい」
-    ("k_jobin",  "c1_h", "c1_h", "cap"),   # ジョビン
-    ("k_f1",     "c1_i", "c1_i", "cap"),   # ファン(セコンド指示遂行)
-    ("k_f2",     "c1_i", "c1_i", "rea"),   # ファン(次ランカー)
-    ("k_ov1",    "c1_j", "c1_j", "cap"),   # MMA Mania
-    ("k_ov2",    "c1_j", "c1_j", "rea"),   # MiddleEasy
-    # --- 鶴屋怜 ---
-    ("t_hira",   "c2_d", "c2_d", "cap"),   # 平本「れいくんガーサス」
-    ("t_jiri",   "c2_d", "c2_d", "rea"),   # 川尻
-    ("t_ota",    "c2_e", "c2_e", "cap"),   # 太田「親孝行」
-    ("t_f1",     "c2_f", "c2_f", "cap"),   # ファン(日本人初王者)
-    ("t_f2",     "c2_f", "c2_f", "rea"),   # ファン(平良堀口より)
-    ("t_ov1",    "c2_g", "c2_g", "cap"),   # MMA Mania
+    # 格闘家/業界/海外メディア=実名(cap/rea), 一般ファン=匿名化(react)
+    ("k_miku",   "c1_e", "c1_e", "cap"),
+    ("k_hiroya", "c1_e", "c1_e", "rea"),
+    ("k_jobin",  "c1_j", "c1_j", "cap"),
+    ("k_ota",    "c1_j", "c1_j", "rea"),
+    ("k_ov1",    "c1_k", "c1_k", "cap"),
+    ("k_ov2",    "c1_k", "c1_k", "rea"),
+    ("k_f1",     "c1_l", "c1_l", "cap"),
+    ("k_f2",     "c1_l", "c1_l", "rea"),
+    ("t_hira",   "c2_d", "c2_d", "cap"),
+    ("t_ota",    "c2_d", "c2_d", "rea"),
+    ("t_ov1",    "c2_h", "c2_h", "cap"),
+    ("t_f1",     "c2_i", "c2_i", "cap"),
+    ("t_f2",     "c2_i", "c2_i", "rea"),
 ]
 CARDS = []
 for pid, b0, b1, st in CARDS_SPEC:
