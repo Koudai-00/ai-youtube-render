@@ -1,0 +1,147 @@
+[
+ {
+  "id": "k_miku",
+  "role": "capture",
+  "name": "朝倉未来",
+  "handle": "Mikuruasakura_",
+  "verified": true,
+  "text": "よし！",
+  "engagement": {}
+ },
+ {
+  "id": "k_jiri",
+  "role": "capture",
+  "name": "川尻達也",
+  "handle": "CRUSHER_MMA",
+  "verified": true,
+  "text": "左ハイキックからパウンドでKO！！！圧勝。海。最高だよ。おめでとう！！！",
+  "engagement": {}
+ },
+ {
+  "id": "k_jobin",
+  "role": "capture",
+  "name": "ジョビン",
+  "handle": "jyobin_channel",
+  "verified": false,
+  "text": "朝倉海2ラウンドKO勝ちでUFCバンタム級2連勝。やはり殺傷能力はこの階級で世界トップクラス。次はランカー。",
+  "engagement": {}
+ },
+ {
+  "id": "k_kinpara",
+  "role": "capture",
+  "name": "金原正徳",
+  "handle": "kinchantv",
+  "verified": true,
+  "text": "さいこう",
+  "engagement": {}
+ },
+ {
+  "id": "k_ota",
+  "role": "capture",
+  "name": "太田忍",
+  "handle": "shinobu_ota_mma",
+  "verified": true,
+  "text": "ハイキックえぐい！",
+  "engagement": {}
+ },
+ {
+  "id": "k_ov1",
+  "role": "capture",
+  "name": "MMA Mania",
+  "handle": "MMAmania",
+  "verified": true,
+  "text": "UFC Shanghai Highlights! Kai Asakura Slices Through Aoriqileng With Brutal Head Kick TKO",
+  "engagement": {}
+ },
+ {
+  "id": "k_ov2",
+  "role": "capture",
+  "name": "MiddleEasy",
+  "handle": "MiddleEasy",
+  "verified": true,
+  "text": "Kai Asakura Blasts Aoriqileng With Round 2 Head Kick At UFC Shanghai",
+  "engagement": {}
+ },
+ {
+  "id": "k_f1",
+  "role": "react",
+  "name": "格闘技ファン",
+  "text": "2ラウンド、おぐちゃんや金原さん・未来さんの攻めの指示を瞬時に遂行してのKO。すごいわ。",
+  "engagement": {
+   "likes": 202
+  }
+ },
+ {
+  "id": "k_f2",
+  "role": "react",
+  "name": "リングサイド",
+  "text": "破壊力イイネ。次はランカーどこまで上がれるか。今日のメインの2人にたどり着くか。",
+  "engagement": {}
+ },
+ {
+  "id": "k_f3",
+  "role": "react",
+  "name": "週末の観戦勢",
+  "text": "アサクラさんはちゃんと倒さないといけない試合だったね。しっかり仕留めるのが凄い。",
+  "engagement": {
+   "likes": 11
+  }
+ },
+ {
+  "id": "t_hira",
+  "role": "capture",
+  "name": "平本蓮",
+  "handle": "renhiramotoX",
+  "verified": true,
+  "text": "れいくんガーサス‼︎",
+  "engagement": {}
+ },
+ {
+  "id": "t_jiri",
+  "role": "capture",
+  "name": "川尻達也",
+  "handle": "CRUSHER_MMA",
+  "verified": true,
+  "text": "ランキング11位のボルハスに1Rリアネイキッドチョークで一本！！！完勝。最高。フォーーー！！！",
+  "engagement": {}
+ },
+ {
+  "id": "t_ota",
+  "role": "capture",
+  "name": "太田忍",
+  "handle": "shinobu_ota_mma",
+  "verified": true,
+  "text": "ゲロ強！！ 鶴屋さんも嬉しそう！怜、最高の親孝行だよ！",
+  "engagement": {}
+ },
+ {
+  "id": "t_ov1",
+  "role": "capture",
+  "name": "MMA Mania",
+  "handle": "MMAmania",
+  "verified": true,
+  "text": "Rei Tsuruya puts on a show — back-to-back Round 1 submissions. The kid is not just collecting minutes in there.",
+  "engagement": {}
+ },
+ {
+  "id": "t_f1",
+  "role": "react",
+  "name": "格闘技マニア",
+  "text": "ここへ来て、日本人初のUFCチャンピオンは鶴屋怜の気運が高まってきた。確かな技術と強靭なフィジカル。",
+  "engagement": {}
+ },
+ {
+  "id": "t_f2",
+  "role": "react",
+  "name": "現地観戦民",
+  "text": "テイクダウンとポジショニングが強烈。UFCだと平良や堀口よりハマる可能性もあるかも。",
+  "engagement": {}
+ },
+ {
+  "id": "t_f3",
+  "role": "react",
+  "name": "MMAウォッチャー",
+  "text": "朝倉海が日本人初のベルトや！と思ったけど、鶴屋怜もアツすぎる。フライ級の日本人が熱い。",
+  "engagement": {}
+ }
+]

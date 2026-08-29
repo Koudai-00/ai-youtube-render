@@ -1,0 +1,413 @@
+<!doctype html>
+<!-- 今週の格闘技ニュース(自動生成/手編集可) 1920x1080 -->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face{font-family:"Mincho";src:url("assets/fonts/GokubutoMincho.ttf");}
+  @font-face{font-family:"JPHeavy";src:url("assets/fonts/SourceHanSansJP-Heavy.otf");}
+  @font-face{font-family:"JPMed";src:url("assets/fonts/SourceHanSansJP-Medium.otf");}
+  :root{
+    --white:#fff; --yellow:#ffe23a; --red:#ff3a3a; --blue:#36b6ff; --ink:#0a0c12;
+    --edge:drop-shadow(4px 0 0 var(--ink)) drop-shadow(-4px 0 0 var(--ink)) drop-shadow(0 4px 0 var(--ink)) drop-shadow(0 -4px 0 var(--ink))
+           drop-shadow(3px 3px 0 var(--ink)) drop-shadow(-3px 3px 0 var(--ink)) drop-shadow(0 8px 16px rgba(0,0,0,.8));
+    --edge-sm:drop-shadow(0 0 2px var(--ink)) drop-shadow(1px 1px 1px var(--ink)) drop-shadow(0 2px 6px rgba(0,0,0,.85));
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  #root{position:absolute;inset:0;overflow:hidden;background:#05060a;font-family:"JPMed";}
+  .bgseg{position:absolute;inset:0;opacity:0;overflow:hidden;}
+  .bgseg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:translateZ(0);backface-visibility:hidden;}
+  .veil{position:absolute;inset:0;z-index:300;pointer-events:none;
+        background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,transparent 16%,transparent 58%,rgba(0,0,0,.55) 84%,rgba(0,0,0,.8) 100%);}
+  .wm{position:absolute;z-index:360;left:36px;top:30px;font-family:"JPHeavy";font-size:30px;color:#fff;letter-spacing:.04em;filter:var(--edge-sm);opacity:.9;}
+  .srclab{position:absolute;z-index:340;left:40px;bottom:24px;font-family:"JPMed";font-size:23px;color:#eaeaea;opacity:0;
+        background:rgba(0,0,0,.5);border-left:4px solid var(--yellow);padding:6px 14px;border-radius:3px;filter:var(--edge-sm);}
+  .chaptag{position:absolute;z-index:320;left:110px;top:39%;opacity:0;}
+  .chaptag .chnum{font-family:"Mincho";font-size:44px;color:var(--yellow);filter:var(--edge);letter-spacing:.04em;}
+  .chaptag .chttl{font-family:"JPHeavy";font-size:66px;color:#fff;filter:var(--edge);margin-top:6px;white-space:nowrap;}
+  .xcard{position:absolute;z-index:330;background:#fff;color:#0f1419;border-radius:20px;padding:24px 28px;
+        box-shadow:0 18px 50px rgba(0,0,0,.6);opacity:0;border:1px solid #cfd9de;}
+  .xcard.cap{right:78px;top:150px;width:790px;}
+  .xcard.cap .xtext{line-height:1.45;}
+  .xcard.rea{left:78px;top:330px;width:650px;transform-origin:left center;}
+  .xcard.rea .xtext{line-height:1.4;}
+  .xhead{display:flex;align-items:center;gap:16px;margin-bottom:14px;}
+  .xav{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none;}
+  .xav.anon{display:flex;align-items:center;justify-content:center;color:#fff;font-family:"JPHeavy";font-size:30px;}
+  .xnm{flex:1;min-width:0;}
+  .xname{font-family:"JPHeavy";font-size:31px;line-height:1.1;display:flex;align-items:center;gap:8px;}
+  .vbadge{display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;border-radius:50%;background:#1d9bf0;color:#fff;font-size:15px;}
+  .xhandle{font-size:25px;color:#536471;}
+  .xlogo{font-size:33px;color:#0f1419;flex:none;}
+  .xtext{font-family:"JPMed";font-size:36px;line-height:1.5;color:#0f1419;word-break:break-word;}
+  .xstats{display:flex;gap:24px;margin-top:16px;padding-top:13px;border-top:1px solid #eaeef0;font-size:24px;color:#536471;}
+  .xstats .st b{color:#0f1419;}
+  .subt{position:absolute;z-index:350;left:0;right:0;bottom:112px;text-align:center;opacity:0;
+        font-family:"JPHeavy";font-size:45px;line-height:1.34;color:#fff;filter:var(--edge);letter-spacing:.01em;white-space:pre-line;padding:0 90px;}
+</style>
+</head>
+<body>
+  <div id="root" data-composition-id="wk-news" data-start="0" data-duration="286.37" data-width="1920" data-height="1080">
+    <div class="bgseg" id="bg0" style="z-index:1;opacity:1"><video id="bg0-v" src="assets/bgvid/kai_walkout.mp4" muted playsinline data-layout-allow-overflow data-start="0.00" data-duration="11.66" data-media-start="0.00" data-track-index="10"></video></div>
+    <div class="bgseg" id="bg1" style="z-index:2"><video id="bg1-v" src="assets/bgvid/kai_finish_slow.mp4" muted playsinline data-layout-allow-overflow data-start="10.98" data-duration="9.56" data-media-start="0.00" data-track-index="11"></video></div>
+    <div class="bgseg" id="bg2" style="z-index:3"><video id="bg2-v" src="assets/bgvid/tsuruya_fight_finish.mp4" muted playsinline data-layout-allow-overflow data-start="19.86" data-duration="9.00" data-media-start="0.00" data-track-index="12"></video></div>
+    <div class="bgseg" id="bg3" style="z-index:4"><video id="bg3-v" src="assets/bgvid/kai_result.mp4" muted playsinline data-layout-allow-overflow data-start="28.18" data-duration="8.95" data-media-start="0.00" data-track-index="13"></video></div>
+    <div class="bgseg" id="bg4" style="z-index:5"><video id="bg4-v" src="assets/bgvid/kai_walkout.mp4" muted playsinline data-layout-allow-overflow data-start="36.45" data-duration="14.21" data-media-start="0.00" data-track-index="14"></video></div>
+    <div class="bgseg" id="bg5" style="z-index:6"><video id="bg5-v" src="assets/bgvid/kai_result.mp4" muted playsinline data-layout-allow-overflow data-start="49.98" data-duration="9.00" data-media-start="0.00" data-track-index="15"></video></div>
+    <div class="bgseg" id="bg6" style="z-index:7"><video id="bg6-v" src="assets/bgvid/kai_finish_insert.mp4" muted playsinline data-layout-allow-overflow data-start="58.30" data-duration="16.32" data-media-start="0.00" data-track-index="16"></video></div>
+    <div class="bgseg" id="bg7" style="z-index:8"><video id="bg7-v" src="assets/bgvid/kai_finish_slow.mp4" muted playsinline data-layout-allow-overflow data-start="73.94" data-duration="10.44" data-media-start="0.00" data-track-index="17"></video></div>
+    <div class="bgseg" id="bg8" style="z-index:9"><video id="bg8-v" src="assets/bgvid/kai_finish_vert.mp4" muted playsinline data-layout-allow-overflow data-start="83.70" data-duration="9.19" data-media-start="0.00" data-track-index="18"></video></div>
+    <div class="bgseg" id="bg9" style="z-index:10"><video id="bg9-v" src="assets/bgvid/jiri_clip.mp4" muted playsinline data-layout-allow-overflow data-start="92.21" data-duration="9.47" data-media-start="0.00" data-track-index="19"></video></div>
+    <div class="bgseg" id="bg10" style="z-index:11"><video id="bg10-v" src="assets/bgvid/aoki_clip.mp4" muted playsinline data-layout-allow-overflow data-start="100.99" data-duration="8.81" data-media-start="0.00" data-track-index="20"></video></div>
+    <div class="bgseg" id="bg11" style="z-index:12"><video id="bg11-v" src="assets/bgvid/kai_interview.mp4" muted playsinline data-layout-allow-overflow data-start="109.13" data-duration="11.04" data-media-start="0.00" data-track-index="21"></video></div>
+    <div class="bgseg" id="bg12" style="z-index:13"><video id="bg12-v" src="assets/bgvid/kai_finish_slow.mp4" muted playsinline data-layout-allow-overflow data-start="119.49" data-duration="8.86" data-media-start="0.00" data-track-index="22"></video></div>
+    <div class="bgseg" id="bg13" style="z-index:14"><video id="bg13-v" src="assets/bgvid/kai_result.mp4" muted playsinline data-layout-allow-overflow data-start="127.67" data-duration="9.88" data-media-start="0.00" data-track-index="23"></video></div>
+    <div class="bgseg" id="bg14" style="z-index:15"><video id="bg14-v" src="assets/bgvid/kai_finish_vert.mp4" muted playsinline data-layout-allow-overflow data-start="136.88" data-duration="13.04" data-media-start="0.00" data-track-index="24"></video></div>
+    <div class="bgseg" id="bg15" style="z-index:16"><video id="bg15-v" src="assets/bgvid/kai_interview.mp4" muted playsinline data-layout-allow-overflow data-start="149.24" data-duration="12.11" data-media-start="0.00" data-track-index="25"></video></div>
+    <div class="bgseg" id="bg16" style="z-index:17"><video id="bg16-v" src="assets/bgvid/tsuruya_win_img.mp4" muted playsinline data-layout-allow-overflow data-start="160.66" data-duration="5.38" data-media-start="0.00" data-track-index="26"></video></div>
+    <div class="bgseg" id="bg17" style="z-index:18"><video id="bg17-v" src="assets/bgvid/tsuruya_fight_td.mp4" muted playsinline data-layout-allow-overflow data-start="165.36" data-duration="6.49" data-media-start="0.00" data-track-index="27"></video></div>
+    <div class="bgseg" id="bg18" style="z-index:19"><video id="bg18-v" src="assets/bgvid/tsuruya_fight_finish.mp4" muted playsinline data-layout-allow-overflow data-start="171.17" data-duration="13.83" data-media-start="0.00" data-track-index="28"></video></div>
+    <div class="bgseg" id="bg19" style="z-index:20"><video id="bg19-v" src="assets/bgvid/tsuruya_finish_img.mp4" muted playsinline data-layout-allow-overflow data-start="184.32" data-duration="9.23" data-media-start="0.00" data-track-index="29"></video></div>
+    <div class="bgseg" id="bg20" style="z-index:21"><video id="bg20-v" src="assets/bgvid/jiri_clip.mp4" muted playsinline data-layout-allow-overflow data-start="192.88" data-duration="12.62" data-media-start="0.00" data-track-index="30"></video></div>
+    <div class="bgseg" id="bg21" style="z-index:22"><video id="bg21-v" src="assets/bgvid/tsuruya_seconds_img.mp4" muted playsinline data-layout-allow-overflow data-start="204.82" data-duration="11.46" data-media-start="0.00" data-track-index="31"></video></div>
+    <div class="bgseg" id="bg22" style="z-index:23"><video id="bg22-v" src="assets/bgvid/tsuruya_win_img.mp4" muted playsinline data-layout-allow-overflow data-start="215.60" data-duration="16.38" data-media-start="0.00" data-track-index="32"></video></div>
+    <div class="bgseg" id="bg23" style="z-index:24"><video id="bg23-v" src="assets/bgvid/tsuruya_fight_finish.mp4" muted playsinline data-layout-allow-overflow data-start="231.30" data-duration="13.69" data-media-start="0.00" data-track-index="33"></video></div>
+    <div class="bgseg" id="bg24" style="z-index:25"><video id="bg24-v" src="assets/bgvid/tsuruya_octagon.mp4" muted playsinline data-layout-allow-overflow data-start="244.31" data-duration="9.46" data-media-start="0.00" data-track-index="34"></video></div>
+    <div class="bgseg" id="bg25" style="z-index:26"><video id="bg25-v" src="assets/bgvid/kai_result.mp4" muted playsinline data-layout-allow-overflow data-start="253.09" data-duration="12.44" data-media-start="0.00" data-track-index="35"></video></div>
+    <div class="bgseg" id="bg26" style="z-index:27"><video id="bg26-v" src="assets/bgvid/tsuruya_octagon.mp4" muted playsinline data-layout-allow-overflow data-start="264.84" data-duration="14.34" data-media-start="0.00" data-track-index="36"></video></div>
+    <div class="bgseg" id="bg27" style="z-index:28"><video id="bg27-v" src="assets/bgvid/kai_interview.mp4" muted playsinline data-layout-allow-overflow data-start="278.50" data-duration="8.47" data-media-start="0.00" data-track-index="37"></video></div>
+
+    
+
+
+    <div class="veil"></div>
+    <div class="wm">格闘ニュースラボ</div>
+    <div class="srclab" id="src0">出典: 朝倉海 提供映像 (UFC上海)</div>
+    <div class="srclab" id="src1">出典: 朝倉海 提供映像 (UFC上海)</div>
+    <div class="srclab" id="src2">出典: UFC上海 鶴屋怜 vs ボルハス</div>
+    <div class="srclab" id="src3">出典: 朝倉海 提供映像 (UFC上海)</div>
+    <div class="srclab" id="src4">出典: 朝倉海 提供映像 (UFC上海)</div>
+    <div class="srclab" id="src5">出典: 朝倉海 提供映像 (UFC上海)</div>
+    <div class="srclab" id="src6">出典: 朝倉海 提供映像 (UFC上海)</div>
+    <div class="srclab" id="src7">出典: 朝倉海 提供映像 (UFC上海)</div>
+    <div class="srclab" id="src8">出典: 朝倉海 提供映像 (UFC上海)</div>
+    <div class="srclab" id="src9">出典: 川尻達也のじりラジオ YouTube</div>
+    <div class="srclab" id="src10">出典: 青木真也 YouTube</div>
+    <div class="srclab" id="src11">出典: 朝倉海 提供映像 (UFC上海)</div>
+    <div class="srclab" id="src12">出典: 朝倉海 提供映像 (UFC上海)</div>
+    <div class="srclab" id="src13">出典: 朝倉海 提供映像 (UFC上海)</div>
+    <div class="srclab" id="src14">出典: 朝倉海 提供映像 (UFC上海)</div>
+    <div class="srclab" id="src15">出典: 朝倉海 提供映像 (UFC上海)</div>
+    <div class="srclab" id="src16">出典: 鶴屋怜 提供画像 (UFC上海)</div>
+    <div class="srclab" id="src17">出典: UFC上海 鶴屋怜 vs ボルハス</div>
+    <div class="srclab" id="src18">出典: UFC上海 鶴屋怜 vs ボルハス</div>
+    <div class="srclab" id="src19">出典: 鶴屋怜 提供画像 (UFC上海)</div>
+    <div class="srclab" id="src20">出典: 川尻達也のじりラジオ YouTube</div>
+    <div class="srclab" id="src21">出典: 鶴屋怜 提供画像 (UFC上海)</div>
+    <div class="srclab" id="src22">出典: 鶴屋怜 提供画像 (UFC上海)</div>
+    <div class="srclab" id="src23">出典: UFC上海 鶴屋怜 vs ボルハス</div>
+    <div class="srclab" id="src24">出典: UFC上海 オクタゴンインタビュー</div>
+    <div class="srclab" id="src25">出典: 朝倉海 提供映像 (UFC上海)</div>
+    <div class="srclab" id="src26">出典: UFC上海 オクタゴンインタビュー</div>
+    <div class="srclab" id="src27">出典: 朝倉海 提供映像 (UFC上海)</div>
+    <div class="chaptag" id="chap1"><div class="chnum">1つ目</div><div class="chttl">朝倉海、UFCでTKO勝ち</div></div>
+    <div class="chaptag" id="chap2"><div class="chnum">2つ目</div><div class="chttl">鶴屋怜、UFCで一本勝ち</div></div>
+    <div class="xcard cap" id="xc0"><div class="xhead"><div class="xav anon" style="background:#1d9bf0">朝</div><div class="xnm"><div class="xname">朝倉未来<span class="vbadge">✔</span></div><div class="xhandle">@Mikuruasakura_</div></div><div class="xlogo">𝕏</div></div><div class="xtext" style="font-size:38px">よし！</div></div>
+    <div class="xcard cap" id="xc1"><div class="xhead"><div class="xav anon" style="background:#1d9bf0">川</div><div class="xnm"><div class="xname">川尻達也<span class="vbadge">✔</span></div><div class="xhandle">@CRUSHER_MMA</div></div><div class="xlogo">𝕏</div></div><div class="xtext" style="font-size:38px">左ハイキックからパウンドでKO！！！圧勝。海。最高だよ。おめでとう！！！</div></div>
+    <div class="xcard cap" id="xc2"><div class="xhead"><div class="xav anon" style="background:#1d9bf0">金</div><div class="xnm"><div class="xname">金原正徳<span class="vbadge">✔</span></div><div class="xhandle">@kinchantv</div></div><div class="xlogo">𝕏</div></div><div class="xtext" style="font-size:38px">さいこう</div></div>
+    <div class="xcard rea" id="xc3"><div class="xhead"><div class="xav anon" style="background:#1d9bf0">太</div><div class="xnm"><div class="xname">太田忍<span class="vbadge">✔</span></div><div class="xhandle">@shinobu_ota_mma</div></div><div class="xlogo">𝕏</div></div><div class="xtext" style="font-size:33px">ハイキックえぐい！</div></div>
+    <div class="xcard cap" id="xc4"><div class="xhead"><div class="xav anon" style="background:#1d9bf0">ジ</div><div class="xnm"><div class="xname">ジョビン</div><div class="xhandle">@jyobin_channel</div></div><div class="xlogo">𝕏</div></div><div class="xtext" style="font-size:38px">朝倉海2ラウンドKO勝ちでUFCバンタム級2連勝。やはり殺傷能力はこの階級で世界トップクラス。次はランカー。</div></div>
+    <div class="xcard cap" id="xc5"><div class="xhead"><div class="xav anon" style="background:hsl(300,45%,55%)">格</div><div class="xnm"><div class="xname">格闘技好き</div><div class="xhandle">@cigp3srz</div></div><div class="xlogo">𝕏</div></div><div class="xtext" style="font-size:38px">2ラウンド、おぐちゃんや金原さん・未来さんの攻めの指示を瞬時に遂行してのKO。すごいわ。</div><div class="xstats"><span class="st"><b>202</b> いいね</span></div></div>
+    <div class="xcard rea" id="xc6"><div class="xhead"><div class="xav anon" style="background:hsl(155,45%,55%)">リ</div><div class="xnm"><div class="xname">週末の観戦勢</div><div class="xhandle">@b95kka7f</div></div><div class="xlogo">𝕏</div></div><div class="xtext" style="font-size:33px">破壊力イイネ。次はランカーどこまで上がれるか。今日のメインの2人にたどり着くか。</div></div>
+    <div class="xcard cap" id="xc7"><div class="xhead"><div class="xav anon" style="background:#1d9bf0">M</div><div class="xnm"><div class="xname">MMA Mania<span class="vbadge">✔</span></div><div class="xhandle">@MMAmania</div></div><div class="xlogo">𝕏</div></div><div class="xtext" style="font-size:34px">UFC Shanghai Highlights! Kai Asakura Slices Through Aoriqileng With Brutal Head Kick TKO</div></div>
+    <div class="xcard rea" id="xc8"><div class="xhead"><div class="xav anon" style="background:#1d9bf0">M</div><div class="xnm"><div class="xname">MiddleEasy<span class="vbadge">✔</span></div><div class="xhandle">@MiddleEasy</div></div><div class="xlogo">𝕏</div></div><div class="xtext" style="font-size:29px">Kai Asakura Blasts Aoriqileng With Round 2 Head Kick At UFC Shanghai</div></div>
+    <div class="xcard cap" id="xc9"><div class="xhead"><div class="xav anon" style="background:#1d9bf0">平</div><div class="xnm"><div class="xname">平本蓮<span class="vbadge">✔</span></div><div class="xhandle">@renhiramotoX</div></div><div class="xlogo">𝕏</div></div><div class="xtext" style="font-size:38px">れいくんガーサス‼︎</div></div>
+    <div class="xcard rea" id="xc10"><div class="xhead"><div class="xav anon" style="background:#1d9bf0">川</div><div class="xnm"><div class="xname">川尻達也<span class="vbadge">✔</span></div><div class="xhandle">@CRUSHER_MMA</div></div><div class="xlogo">𝕏</div></div><div class="xtext" style="font-size:33px">ランキング11位のボルハスに1Rリアネイキッドチョークで一本！！！完勝。最高。フォーーー！！！</div></div>
+    <div class="xcard cap" id="xc11"><div class="xhead"><div class="xav anon" style="background:#1d9bf0">太</div><div class="xnm"><div class="xname">太田忍<span class="vbadge">✔</span></div><div class="xhandle">@shinobu_ota_mma</div></div><div class="xlogo">𝕏</div></div><div class="xtext" style="font-size:38px">ゲロ強！！ 鶴屋さんも嬉しそう！怜、最高の親孝行だよ！</div></div>
+    <div class="xcard cap" id="xc12"><div class="xhead"><div class="xav anon" style="background:hsl(167,45%,55%)">格</div><div class="xnm"><div class="xname">海外MMAファン</div><div class="xhandle">@nyqyz53f</div></div><div class="xlogo">𝕏</div></div><div class="xtext" style="font-size:38px">ここへ来て、日本人初のUFCチャンピオンは鶴屋怜の気運が高まってきた。確かな技術と強靭なフィジカル。</div></div>
+    <div class="xcard rea" id="xc13"><div class="xhead"><div class="xav anon" style="background:hsl(249,45%,55%)">現</div><div class="xnm"><div class="xname">MMAウォッチャー</div><div class="xhandle">@x1bk1o0x</div></div><div class="xlogo">𝕏</div></div><div class="xtext" style="font-size:33px">テイクダウンとポジショニングが強烈。UFCだと平良や堀口よりハマる可能性もあるかも。</div></div>
+    <div class="xcard cap" id="xc14"><div class="xhead"><div class="xav anon" style="background:#1d9bf0">M</div><div class="xnm"><div class="xname">MMA Mania<span class="vbadge">✔</span></div><div class="xhandle">@MMAmania</div></div><div class="xlogo">𝕏</div></div><div class="xtext" style="font-size:30px">Rei Tsuruya puts on a show — back-to-back Round 1 submissions. The kid is not just collecting minutes in there.</div></div>
+    <div class="subt" id="sub0">今回は、日本時間の8月29日に行われた、UFC上海から、<br>日本人選手のダブル勝利についての反応を、</div>
+    <div class="subt" id="sub1">まとめてお届けします。</div>
+    <div class="subt" id="sub2">メインカードでは、朝倉海選手が、ハイキックからの猛連打<br>でTKO勝ち。UFCバンタム級で、2連勝を飾りました。</div>
+    <div class="subt" id="sub3">そしてプレリムでは、鶴屋怜選手が、<br>わずか1ラウンドでの一本勝ち。こちらも連勝を伸ばし、</div>
+    <div class="subt" id="sub4">評価を高めています。</div>
+    <div class="subt" id="sub5">格闘家、ファン、そして海外からの反応を、<br>朝倉海選手、鶴屋怜選手の順に、見ていきましょう。</div>
+    <div class="subt" id="sub6">1つ目。朝倉海、ハイキックからのTKOで、UFC2連勝。</div>
+    <div class="subt" id="sub7">まずは、朝倉海選手です。中国のアオリ・チロン選手を相<br>手に、敵地・上海での一戦に臨みました。</div>
+    <div class="subt" id="sub8">試合が動いたのは、2ラウンド。放たれたのは、<br>左のハイキック。まずは、決着の瞬間を、ご覧ください。</div>
+    <div class="subt" id="sub9">そこからの、怒涛の連打で、TKO勝ち。バンタム級に転向<br>してから、2戦連続のフィニッシュで、</div>
+    <div class="subt" id="sub10">UFC2連勝を飾りました。</div>
+    <div class="subt" id="sub11">勝利の直後、最も大きな反応を呼んだのが、兄・朝倉未来<br>さんの、たった一言、よし、という投稿でした。</div>
+    <div class="subt" id="sub12">元UFCファイターの川尻達也さんは、左ハイキックからパ<br>ウンドでKO、圧勝、最高だよ、と絶賛。</div>
+    <div class="subt" id="sub13">青木真也さんは、自身のチャンネルで、<br>勝って当たり前のマッチアップ、としながらも、</div>
+    <div class="subt" id="sub14">この試合を徹底解説しています。</div>
+    <div class="subt" id="sub15">さらに、試合直後には、コーチの金原正徳さんの、<br>さいこう、太田忍さんの、ハイキックえぐい、といった、</div>
+    <div class="subt" id="sub16">喜びの声も上がりました。</div>
+    <div class="subt" id="sub17">解説者のジョビンさんは、殺傷能力は、この階級で世界ト<br>ップクラス、次はランカーだ、と評価しています。</div>
+    <div class="subt" id="sub18">ファンからも、セコンドの指示を瞬時に遂行してのKOが<br>すごい、次はどこまで勝ち上がるのか、と、</div>
+    <div class="subt" id="sub19">期待の声が相次ぎました。</div>
+    <div class="subt" id="sub20">この勝利は、海外でも大きく報じられました。MMA Mania<br>は、強烈なヘッドキックで切り裂いた、MiddleEasyも、</div>
+    <div class="subt" id="sub21">2ラウンドのヘッドキック、と、<br>フィニッシュを称賛しています。</div>
+    <div class="subt" id="sub22">そして、試合後のマイク。朝倉海選手は、<br>トップ15の選手と、ビッグファイトがしたい、と、</div>
+    <div class="subt" id="sub23">次のステージへの意欲を、はっきりと口にしました。</div>
+    <div class="subt" id="sub24">2つ目。鶴屋怜、1ラウンド一本で、こちらも連勝。</div>
+    <div class="subt" id="sub25">続いては、鶴屋怜選手です。ペルーのケヴィン・ボルハス<br>選手と、対戦しました。</div>
+    <div class="subt" id="sub26">試合は、開始直後から一方的でした。飛び込むようにテイ<br>クダウンを奪うと、そのまま攻め続け、最後は、</div>
+    <div class="subt" id="sub27">バックからの裸絞め。1ラウンド、<br>4分14秒での、一本勝ちです。</div>
+    <div class="subt" id="sub28">UFCでの再起から、2連勝。しかも、2戦連続で、<br>1ラウンドでの一本勝ちという、圧巻の内容でした。</div>
+    <div class="subt" id="sub29">この勝利に、平本蓮さんは、れいくん、ガーサス、と、<br>最大級の賛辞。川尻達也さんも、完勝、最高、フォーー、</div>
+    <div class="subt" id="sub30">と、喜びを爆発させました。</div>
+    <div class="subt" id="sub31">太田忍さんは、ゲロ強、と驚き、勝利のあと父・鶴屋浩さ<br>んを担ぎ上げる姿に、最高の親孝行だよ、と、</div>
+    <div class="subt" id="sub32">目を細めています。</div>
+    <div class="subt" id="sub33">ファンの興奮も、最高潮でした。日本人初のUFCチャン<br>ピオンも、夢じゃない。テイクダウンとポジショニングは、</div>
+    <div class="subt" id="sub34">平良達郎選手や堀口恭司選手より、UFCにハマるかもし<br>れない、という声まで上がっています。</div>
+    <div class="subt" id="sub35">海外メディアも、注目しています。MMA Maniaは、<br>2試合連続の1ラウンド一本、この若者は、</div>
+    <div class="subt" id="sub36">ただ試合をこなしているだけじゃない、<br>と、その完成度を高く評価しました。</div>
+    <div class="subt" id="sub37">そして鶴屋選手も、マイクで、はっきりと要求します。ま<br>た次も、一本で勝つので、ランカーをお願いします、と。</div>
+    <div class="subt" id="sub38">UFCバンタム級の朝倉海、そしてフライ級の鶴屋怜。日<br>本人選手が、そろって、ランカーへ、</div>
+    <div class="subt" id="sub39">そしてビッグファイトへと、<br>視線を上げた一日となりました。</div>
+    <div class="subt" id="sub40">なお、この日のメインイベントでは、ソン・ヤドン選手が<br>、ウマル・ヌルマゴメドフ選手をKORする、</div>
+    <div class="subt" id="sub41">大波乱もありました。上海は、まさに、<br>番狂わせと快進撃の、一夜となりました。</div>
+    <div class="subt" id="sub42">この動画が参考になったら、高評価とチャンネル登録を、<br>お願いします。格闘ニュースラボでした。</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      const tl = gsap.timeline({paused:true});
+      tl.set('#bg0',{opacity:1},0);
+      tl.fromTo('#bg0-v',{scale:1.0},{scale:1.10,duration:11.46,ease:'none'},0.00);
+      tl.fromTo('#src0',{opacity:0},{opacity:1,duration:.4},0.30);
+      tl.to('#src0',{opacity:0,duration:.3},10.81);
+      tl.fromTo('#bg1',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},10.98);
+      tl.fromTo('#bg1-v',{scale:1.08,x:-24},{x:24,duration:9.36,ease:'none'},10.98);
+      tl.fromTo('#src1',{opacity:0},{opacity:1,duration:.4},11.29);
+      tl.to('#src1',{opacity:0,duration:.3},19.69);
+      tl.fromTo('#bg2',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},19.86);
+      tl.fromTo('#bg2-v',{scale:1.0},{scale:1.10,duration:8.80,ease:'none'},19.86);
+      tl.fromTo('#src2',{opacity:0},{opacity:1,duration:.4},20.16);
+      tl.to('#src2',{opacity:0,duration:.3},28.01);
+      tl.fromTo('#bg3',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},28.18);
+      tl.fromTo('#bg3-v',{scale:1.08,x:-24},{x:24,duration:8.75,ease:'none'},28.18);
+      tl.fromTo('#src3',{opacity:0},{opacity:1,duration:.4},28.48);
+      tl.to('#src3',{opacity:0,duration:.3},36.28);
+      tl.fromTo('#bg4',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},36.45);
+      tl.fromTo('#src4',{opacity:0},{opacity:1,duration:.4},36.75);
+      tl.to('#src4',{opacity:0,duration:.3},49.81);
+      tl.fromTo('#bg5',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},49.98);
+      tl.fromTo('#bg5-v',{scale:1.08,x:-24},{x:24,duration:8.80,ease:'none'},49.98);
+      tl.fromTo('#src5',{opacity:0},{opacity:1,duration:.4},50.28);
+      tl.to('#src5',{opacity:0,duration:.3},58.13);
+      tl.fromTo('#bg6',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},58.30);
+      tl.fromTo('#bg6-v',{scale:1.0},{scale:1.10,duration:16.12,ease:'none'},58.30);
+      tl.fromTo('#src6',{opacity:0},{opacity:1,duration:.4},58.60);
+      tl.to('#src6',{opacity:0,duration:.3},73.77);
+      tl.fromTo('#bg7',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},73.94);
+      tl.fromTo('#bg7-v',{scale:1.08,x:-24},{x:24,duration:10.24,ease:'none'},73.94);
+      tl.fromTo('#src7',{opacity:0},{opacity:1,duration:.4},74.24);
+      tl.to('#src7',{opacity:0,duration:.3},83.53);
+      tl.fromTo('#bg8',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},83.70);
+      tl.fromTo('#bg8-v',{scale:1.0},{scale:1.10,duration:8.99,ease:'none'},83.70);
+      tl.fromTo('#src8',{opacity:0},{opacity:1,duration:.4},84.00);
+      tl.to('#src8',{opacity:0,duration:.3},92.04);
+      tl.fromTo('#bg9',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},92.21);
+      tl.fromTo('#bg9-v',{scale:1.08,x:-24},{x:24,duration:9.27,ease:'none'},92.21);
+      tl.fromTo('#src9',{opacity:0},{opacity:1,duration:.4},92.51);
+      tl.to('#src9',{opacity:0,duration:.3},100.82);
+      tl.fromTo('#bg10',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},100.99);
+      tl.fromTo('#bg10-v',{scale:1.0},{scale:1.10,duration:8.61,ease:'none'},100.99);
+      tl.fromTo('#src10',{opacity:0},{opacity:1,duration:.4},101.29);
+      tl.to('#src10',{opacity:0,duration:.3},108.96);
+      tl.fromTo('#bg11',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},109.13);
+      tl.fromTo('#bg11-v',{scale:1.08,x:-24},{x:24,duration:10.84,ease:'none'},109.13);
+      tl.fromTo('#src11',{opacity:0},{opacity:1,duration:.4},109.43);
+      tl.to('#src11',{opacity:0,duration:.3},119.32);
+      tl.fromTo('#bg12',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},119.49);
+      tl.fromTo('#bg12-v',{scale:1.0},{scale:1.10,duration:8.66,ease:'none'},119.49);
+      tl.fromTo('#src12',{opacity:0},{opacity:1,duration:.4},119.79);
+      tl.to('#src12',{opacity:0,duration:.3},127.50);
+      tl.fromTo('#bg13',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},127.67);
+      tl.fromTo('#bg13-v',{scale:1.08,x:-24},{x:24,duration:9.68,ease:'none'},127.67);
+      tl.fromTo('#src13',{opacity:0},{opacity:1,duration:.4},127.97);
+      tl.to('#src13',{opacity:0,duration:.3},136.71);
+      tl.fromTo('#bg14',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},136.88);
+      tl.fromTo('#bg14-v',{scale:1.0},{scale:1.10,duration:12.84,ease:'none'},136.88);
+      tl.fromTo('#src14',{opacity:0},{opacity:1,duration:.4},137.18);
+      tl.to('#src14',{opacity:0,duration:.3},149.07);
+      tl.fromTo('#bg15',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},149.24);
+      tl.fromTo('#bg15-v',{scale:1.08,x:-24},{x:24,duration:11.91,ease:'none'},149.24);
+      tl.fromTo('#src15',{opacity:0},{opacity:1,duration:.4},149.54);
+      tl.to('#src15',{opacity:0,duration:.3},160.49);
+      tl.fromTo('#bg16',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},160.66);
+      tl.fromTo('#bg16-v',{scale:1.0},{scale:1.10,duration:5.18,ease:'none'},160.66);
+      tl.fromTo('#src16',{opacity:0},{opacity:1,duration:.4},160.96);
+      tl.to('#src16',{opacity:0,duration:.3},165.19);
+      tl.fromTo('#bg17',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},165.36);
+      tl.fromTo('#bg17-v',{scale:1.08,x:-24},{x:24,duration:6.29,ease:'none'},165.36);
+      tl.fromTo('#src17',{opacity:0},{opacity:1,duration:.4},165.66);
+      tl.to('#src17',{opacity:0,duration:.3},171.00);
+      tl.fromTo('#bg18',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},171.17);
+      tl.fromTo('#bg18-v',{scale:1.0},{scale:1.10,duration:13.63,ease:'none'},171.17);
+      tl.fromTo('#src18',{opacity:0},{opacity:1,duration:.4},171.47);
+      tl.to('#src18',{opacity:0,duration:.3},184.15);
+      tl.fromTo('#bg19',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},184.32);
+      tl.fromTo('#bg19-v',{scale:1.0},{scale:1.10,duration:9.03,ease:'none'},184.32);
+      tl.fromTo('#src19',{opacity:0},{opacity:1,duration:.4},184.62);
+      tl.to('#src19',{opacity:0,duration:.3},192.71);
+      tl.fromTo('#bg20',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},192.88);
+      tl.fromTo('#bg20-v',{scale:1.0},{scale:1.10,duration:12.42,ease:'none'},192.88);
+      tl.fromTo('#src20',{opacity:0},{opacity:1,duration:.4},193.18);
+      tl.to('#src20',{opacity:0,duration:.3},204.65);
+      tl.fromTo('#bg21',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},204.82);
+      tl.fromTo('#bg21-v',{scale:1.0},{scale:1.10,duration:11.26,ease:'none'},204.82);
+      tl.fromTo('#src21',{opacity:0},{opacity:1,duration:.4},205.12);
+      tl.to('#src21',{opacity:0,duration:.3},215.43);
+      tl.fromTo('#bg22',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},215.60);
+      tl.fromTo('#bg22-v',{scale:1.08,x:-24},{x:24,duration:16.18,ease:'none'},215.60);
+      tl.fromTo('#src22',{opacity:0},{opacity:1,duration:.4},215.90);
+      tl.to('#src22',{opacity:0,duration:.3},231.13);
+      tl.fromTo('#bg23',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},231.30);
+      tl.fromTo('#bg23-v',{scale:1.08,x:-24},{x:24,duration:13.49,ease:'none'},231.30);
+      tl.fromTo('#src23',{opacity:0},{opacity:1,duration:.4},231.60);
+      tl.to('#src23',{opacity:0,duration:.3},244.14);
+      tl.fromTo('#bg24',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},244.31);
+      tl.fromTo('#bg24-v',{scale:1.0},{scale:1.10,duration:9.26,ease:'none'},244.31);
+      tl.fromTo('#src24',{opacity:0},{opacity:1,duration:.4},244.61);
+      tl.to('#src24',{opacity:0,duration:.3},252.91);
+      tl.fromTo('#bg25',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},253.09);
+      tl.fromTo('#bg25-v',{scale:1.08,x:-24},{x:24,duration:12.24,ease:'none'},253.09);
+      tl.fromTo('#src25',{opacity:0},{opacity:1,duration:.4},253.39);
+      tl.to('#src25',{opacity:0,duration:.3},264.67);
+      tl.fromTo('#bg26',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},264.84);
+      tl.fromTo('#bg26-v',{scale:1.0},{scale:1.10,duration:14.14,ease:'none'},264.84);
+      tl.fromTo('#src26',{opacity:0},{opacity:1,duration:.4},265.14);
+      tl.to('#src26',{opacity:0,duration:.3},278.33);
+      tl.fromTo('#bg27',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},278.50);
+      tl.fromTo('#bg27-v',{scale:1.08,x:-24},{x:24,duration:8.27,ease:'none'},278.50);
+      tl.fromTo('#src27',{opacity:0},{opacity:1,duration:.4},278.80);
+      tl.to('#src27',{opacity:0,duration:.3},286.12);
+      tl.fromTo('#chap1',{opacity:0,y:40},{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'},36.55);
+      tl.to('#chap1',{opacity:0,y:-26,duration:.4,ease:'power1.in'},39.85);
+      tl.fromTo('#chap2',{opacity:0,y:40},{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'},160.76);
+      tl.to('#chap2',{opacity:0,y:-26,duration:.4,ease:'power1.in'},164.06);
+      tl.fromTo('#xc0',{opacity:0,x:70,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},83.85);
+      tl.to('#xc0',{opacity:0,y:-14,duration:.35,ease:'power1.in'},91.87);
+      tl.fromTo('#xc1',{opacity:0,x:70,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},92.36);
+      tl.to('#xc1',{opacity:0,y:-14,duration:.35,ease:'power1.in'},100.65);
+      tl.fromTo('#xc2',{opacity:0,x:70,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},109.28);
+      tl.to('#xc2',{opacity:0,y:-14,duration:.35,ease:'power1.in'},119.15);
+      tl.fromTo('#xc3',{opacity:0,x:-60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},109.28);
+      tl.to('#xc3',{opacity:0,y:-14,duration:.35,ease:'power1.in'},119.15);
+      tl.fromTo('#xc4',{opacity:0,x:70,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},119.64);
+      tl.to('#xc4',{opacity:0,y:-14,duration:.35,ease:'power1.in'},127.33);
+      tl.fromTo('#xc5',{opacity:0,x:70,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},127.82);
+      tl.to('#xc5',{opacity:0,y:-14,duration:.35,ease:'power1.in'},136.53);
+      tl.fromTo('#xc6',{opacity:0,x:-60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},127.82);
+      tl.to('#xc6',{opacity:0,y:-14,duration:.35,ease:'power1.in'},136.53);
+      tl.fromTo('#xc7',{opacity:0,x:70,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},137.03);
+      tl.to('#xc7',{opacity:0,y:-14,duration:.35,ease:'power1.in'},148.90);
+      tl.fromTo('#xc8',{opacity:0,x:-60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},137.03);
+      tl.to('#xc8',{opacity:0,y:-14,duration:.35,ease:'power1.in'},148.90);
+      tl.fromTo('#xc9',{opacity:0,x:70,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},193.03);
+      tl.to('#xc9',{opacity:0,y:-14,duration:.35,ease:'power1.in'},204.48);
+      tl.fromTo('#xc10',{opacity:0,x:-60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},193.03);
+      tl.to('#xc10',{opacity:0,y:-14,duration:.35,ease:'power1.in'},204.48);
+      tl.fromTo('#xc11',{opacity:0,x:70,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},204.97);
+      tl.to('#xc11',{opacity:0,y:-14,duration:.35,ease:'power1.in'},215.26);
+      tl.fromTo('#xc12',{opacity:0,x:70,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},215.75);
+      tl.to('#xc12',{opacity:0,y:-14,duration:.35,ease:'power1.in'},230.96);
+      tl.fromTo('#xc13',{opacity:0,x:-60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},215.75);
+      tl.to('#xc13',{opacity:0,y:-14,duration:.35,ease:'power1.in'},230.96);
+      tl.fromTo('#xc14',{opacity:0,x:70,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},231.45);
+      tl.to('#xc14',{opacity:0,y:-14,duration:.35,ease:'power1.in'},243.97);
+      tl.fromTo('#sub0',{opacity:0},{opacity:1,duration:.18},0.25);
+      tl.to('#sub0',{opacity:0,duration:.14},8.64);
+      tl.fromTo('#sub1',{opacity:0},{opacity:1,duration:.18},8.69);
+      tl.to('#sub1',{opacity:0,duration:.14},10.70);
+      tl.fromTo('#sub2',{opacity:0},{opacity:1,duration:.18},10.98);
+      tl.to('#sub2',{opacity:0,duration:.14},19.57);
+      tl.fromTo('#sub3',{opacity:0},{opacity:1,duration:.18},19.86);
+      tl.to('#sub3',{opacity:0,duration:.14},26.36);
+      tl.fromTo('#sub4',{opacity:0},{opacity:1,duration:.18},26.41);
+      tl.to('#sub4',{opacity:0,duration:.14},27.89);
+      tl.fromTo('#sub5',{opacity:0},{opacity:1,duration:.18},28.18);
+      tl.to('#sub5',{opacity:0,duration:.14},35.61);
+      tl.fromTo('#sub6',{opacity:0},{opacity:1,duration:.18},36.45);
+      tl.to('#sub6',{opacity:0,duration:.14},41.83);
+      tl.fromTo('#sub7',{opacity:0},{opacity:1,duration:.18},42.12);
+      tl.to('#sub7',{opacity:0,duration:.14},49.69);
+      tl.fromTo('#sub8',{opacity:0},{opacity:1,duration:.18},49.98);
+      tl.to('#sub8',{opacity:0,duration:.14},58.01);
+      tl.fromTo('#sub9',{opacity:0},{opacity:1,duration:.18},73.94);
+      tl.to('#sub9',{opacity:0,duration:.14},81.45);
+      tl.fromTo('#sub10',{opacity:0},{opacity:1,duration:.18},81.50);
+      tl.to('#sub10',{opacity:0,duration:.14},83.41);
+      tl.fromTo('#sub11',{opacity:0},{opacity:1,duration:.18},83.70);
+      tl.to('#sub11',{opacity:0,duration:.14},91.92);
+      tl.fromTo('#sub12',{opacity:0},{opacity:1,duration:.18},92.21);
+      tl.to('#sub12',{opacity:0,duration:.14},100.70);
+      tl.fromTo('#sub13',{opacity:0},{opacity:1,duration:.18},100.99);
+      tl.to('#sub13',{opacity:0,duration:.14},106.68);
+      tl.fromTo('#sub14',{opacity:0},{opacity:1,duration:.18},106.73);
+      tl.to('#sub14',{opacity:0,duration:.14},108.84);
+      tl.fromTo('#sub15',{opacity:0},{opacity:1,duration:.18},109.13);
+      tl.to('#sub15',{opacity:0,duration:.14},117.21);
+      tl.fromTo('#sub16',{opacity:0},{opacity:1,duration:.18},117.26);
+      tl.to('#sub16',{opacity:0,duration:.14},119.20);
+      tl.fromTo('#sub17',{opacity:0},{opacity:1,duration:.18},119.49);
+      tl.to('#sub17',{opacity:0,duration:.14},127.38);
+      tl.fromTo('#sub18',{opacity:0},{opacity:1,duration:.18},127.67);
+      tl.to('#sub18',{opacity:0,duration:.14},134.70);
+      tl.fromTo('#sub19',{opacity:0},{opacity:1,duration:.18},134.75);
+      tl.to('#sub19',{opacity:0,duration:.14},136.59);
+      tl.fromTo('#sub20',{opacity:0},{opacity:1,duration:.18},136.88);
+      tl.to('#sub20',{opacity:0,duration:.14},144.52);
+      tl.fromTo('#sub21',{opacity:0},{opacity:1,duration:.18},144.57);
+      tl.to('#sub21',{opacity:0,duration:.14},148.95);
+      tl.fromTo('#sub22',{opacity:0},{opacity:1,duration:.18},149.24);
+      tl.to('#sub22',{opacity:0,duration:.14},155.96);
+      tl.fromTo('#sub23',{opacity:0},{opacity:1,duration:.18},156.01);
+      tl.to('#sub23',{opacity:0,duration:.14},159.82);
+      tl.fromTo('#sub24',{opacity:0},{opacity:1,duration:.18},160.66);
+      tl.to('#sub24',{opacity:0,duration:.14},165.07);
+      tl.fromTo('#sub25',{opacity:0},{opacity:1,duration:.18},165.36);
+      tl.to('#sub25',{opacity:0,duration:.14},170.88);
+      tl.fromTo('#sub26',{opacity:0},{opacity:1,duration:.18},171.17);
+      tl.to('#sub26',{opacity:0,duration:.14},179.15);
+      tl.fromTo('#sub27',{opacity:0},{opacity:1,duration:.18},179.20);
+      tl.to('#sub27',{opacity:0,duration:.14},184.03);
+      tl.fromTo('#sub28',{opacity:0},{opacity:1,duration:.18},184.32);
+      tl.to('#sub28',{opacity:0,duration:.14},192.59);
+      tl.fromTo('#sub29',{opacity:0},{opacity:1,duration:.18},192.88);
+      tl.to('#sub29',{opacity:0,duration:.14},202.15);
+      tl.fromTo('#sub30',{opacity:0},{opacity:1,duration:.18},202.20);
+      tl.to('#sub30',{opacity:0,duration:.14},204.53);
+      tl.fromTo('#sub31',{opacity:0},{opacity:1,duration:.18},204.82);
+      tl.to('#sub31',{opacity:0,duration:.14},213.62);
+      tl.fromTo('#sub32',{opacity:0},{opacity:1,duration:.18},213.66);
+      tl.to('#sub32',{opacity:0,duration:.14},215.31);
+      tl.fromTo('#sub33',{opacity:0},{opacity:1,duration:.18},215.60);
+      tl.to('#sub33',{opacity:0,duration:.14},224.02);
+      tl.fromTo('#sub34',{opacity:0},{opacity:1,duration:.18},224.07);
+      tl.to('#sub34',{opacity:0,duration:.14},231.01);
+      tl.fromTo('#sub35',{opacity:0},{opacity:1,duration:.18},231.30);
+      tl.to('#sub35',{opacity:0,duration:.14},238.22);
+      tl.fromTo('#sub36',{opacity:0},{opacity:1,duration:.18},238.27);
+      tl.to('#sub36',{opacity:0,duration:.14},244.02);
+      tl.fromTo('#sub37',{opacity:0},{opacity:1,duration:.18},244.31);
+      tl.to('#sub37',{opacity:0,duration:.14},252.25);
+      tl.fromTo('#sub38',{opacity:0},{opacity:1,duration:.18},253.09);
+      tl.to('#sub38',{opacity:0,duration:.14},259.92);
+      tl.fromTo('#sub39',{opacity:0},{opacity:1,duration:.18},259.97);
+      tl.to('#sub39',{opacity:0,duration:.14},264.55);
+      tl.fromTo('#sub40',{opacity:0},{opacity:1,duration:.18},264.84);
+      tl.to('#sub40',{opacity:0,duration:.14},272.20);
+      tl.fromTo('#sub41',{opacity:0},{opacity:1,duration:.18},272.25);
+      tl.to('#sub41',{opacity:0,duration:.14},278.21);
+      tl.fromTo('#sub42',{opacity:0},{opacity:1,duration:.18},278.50);
+      tl.to('#sub42',{opacity:0,duration:.14},285.42);
+      window.__timelines = window.__timelines || {};
+      window.__timelines['wk-news'] = tl;
+    </script>
+  </div>
+</body>
+</html>
