@@ -1,0 +1,1281 @@
+<!doctype html>
+<!-- 超RIZIN.5 全試合ガイド 1920x1080 -->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face{font-family:"Mincho";src:url("assets/fonts/GokubutoMincho.ttf");}
+  @font-face{font-family:"JPHeavy";src:url("assets/fonts/SourceHanSansJP-Heavy.otf");}
+  @font-face{font-family:"JPMed";src:url("assets/fonts/SourceHanSansJP-Medium.otf");}
+  :root{
+    --white:#fff; --yellow:#ffe23a; --red:#ff3a3a; --blue:#36b6ff; --ink:#0a0c12;
+    --edge:drop-shadow(4px 0 0 var(--ink)) drop-shadow(-4px 0 0 var(--ink)) drop-shadow(0 4px 0 var(--ink)) drop-shadow(0 -4px 0 var(--ink))
+           drop-shadow(3px 3px 0 var(--ink)) drop-shadow(-3px 3px 0 var(--ink)) drop-shadow(0 8px 16px rgba(0,0,0,.8));
+    --edge-sm:drop-shadow(0 0 2px var(--ink)) drop-shadow(1px 1px 1px var(--ink)) drop-shadow(0 2px 6px rgba(0,0,0,.85));
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  #root{position:absolute;inset:0;overflow:hidden;background:#05060a;font-family:"JPMed";}
+  .bgseg{position:absolute;inset:0;opacity:0;overflow:hidden;}
+  .bgseg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:translateZ(0);backface-visibility:hidden;}
+  .veil{position:absolute;inset:0;z-index:300;pointer-events:none;
+        background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,transparent 15%,transparent 58%,rgba(0,0,0,.6) 84%,rgba(0,0,0,.82) 100%);}
+  .wm{position:absolute;z-index:360;left:36px;top:30px;font-family:"JPHeavy";font-size:30px;color:#fff;letter-spacing:.04em;filter:var(--edge-sm);opacity:.9;}
+  .srclab{position:absolute;z-index:340;left:40px;bottom:38px;font-family:"JPMed";font-size:23px;color:#eaeaea;opacity:0;
+        background:rgba(0,0,0,.5);border-left:4px solid var(--yellow);padding:6px 14px;border-radius:3px;filter:var(--edge-sm);}
+  .chaptag{position:absolute;z-index:320;left:100px;top:35%;opacity:0;}
+  .chaptag .chnum{font-family:"Mincho";font-size:42px;color:var(--yellow);filter:var(--edge);letter-spacing:.04em;}
+  .chaptag .chttl{font-family:"JPHeavy";font-size:58px;color:#fff;filter:var(--edge);margin-top:6px;white-space:nowrap;}
+  .subt{position:absolute;z-index:350;left:0;right:0;bottom:96px;text-align:center;opacity:0;
+        font-family:"JPHeavy";font-size:45px;line-height:1.34;color:#fff;filter:var(--edge);letter-spacing:.01em;white-space:pre-line;padding:0 90px;}
+</style>
+</head>
+<body>
+  <div id="root" data-composition-id="rizin5" data-start="0" data-duration="1859.87" data-width="1920" data-height="1080">
+    <div class="bgseg" id="bg0" style="z-index:1"><video id="bg0-v" src="assets/bgvid/o1.mp4" muted playsinline data-layout-allow-overflow data-start="0.25" data-duration="31.29" data-media-start="0.00" data-track-index="10"></video></div>
+    <div class="bgseg" id="bg1" style="z-index:2"><video id="bg1-v" src="assets/bgvid/o2.mp4" muted playsinline data-layout-allow-overflow data-start="30.86" data-duration="20.32" data-media-start="0.00" data-track-index="11"></video></div>
+    <div class="bgseg" id="bg2" style="z-index:3"><video id="bg2-v" src="assets/bgvid/o3.mp4" muted playsinline data-layout-allow-overflow data-start="50.50" data-duration="21.30" data-media-start="0.00" data-track-index="12"></video></div>
+    <div class="bgseg" id="bg3" style="z-index:4"><video id="bg3-v" src="assets/bgvid/o4.mp4" muted playsinline data-layout-allow-overflow data-start="71.12" data-duration="35.85" data-media-start="0.00" data-track-index="13"></video></div>
+    <div class="bgseg" id="bg4" style="z-index:5"><video id="bg4-v" src="assets/bgvid/f1a.mp4" muted playsinline data-layout-allow-overflow data-start="106.92" data-duration="26.28" data-media-start="0.00" data-track-index="14"></video></div>
+    <div class="bgseg" id="bg5" style="z-index:6"><video id="bg5-v" src="assets/bgvid/f1b.mp4" muted playsinline data-layout-allow-overflow data-start="132.52" data-duration="23.67" data-media-start="0.00" data-track-index="15"></video></div>
+    <div class="bgseg" id="bg6" style="z-index:7"><video id="bg6-v" src="assets/bgvid/f1c.mp4" muted playsinline data-layout-allow-overflow data-start="155.51" data-duration="27.71" data-media-start="0.00" data-track-index="16"></video></div>
+    <div class="bgseg" id="bg7" style="z-index:8"><video id="bg7-v" src="assets/bgvid/f1d.mp4" muted playsinline data-layout-allow-overflow data-start="182.54" data-duration="26.77" data-media-start="0.00" data-track-index="17"></video></div>
+    <div class="bgseg" id="bg8" style="z-index:9"><video id="bg8-v" src="assets/bgvid/f1e.mp4" muted playsinline data-layout-allow-overflow data-start="208.63" data-duration="24.33" data-media-start="0.00" data-track-index="18"></video></div>
+    <div class="bgseg" id="bg9" style="z-index:10"><video id="bg9-v" src="assets/bgvid/f1f.mp4" muted playsinline data-layout-allow-overflow data-start="232.28" data-duration="28.65" data-media-start="0.00" data-track-index="19"></video></div>
+    <div class="bgseg" id="bg10" style="z-index:11"><video id="bg10-v" src="assets/bgvid/f1g.mp4" muted playsinline data-layout-allow-overflow data-start="260.25" data-duration="25.90" data-media-start="0.00" data-track-index="20"></video></div>
+    <div class="bgseg" id="bg11" style="z-index:12"><video id="bg11-v" src="assets/bgvid/f1h.mp4" muted playsinline data-layout-allow-overflow data-start="285.47" data-duration="18.35" data-media-start="0.00" data-track-index="21"></video></div>
+    <div class="bgseg" id="bg12" style="z-index:13"><video id="bg12-v" src="assets/bgvid/f2a.mp4" muted playsinline data-layout-allow-overflow data-start="303.77" data-duration="11.90" data-media-start="0.00" data-track-index="22"></video></div>
+    <div class="bgseg" id="bg13" style="z-index:14"><video id="bg13-v" src="assets/bgvid/f2b.mp4" muted playsinline data-layout-allow-overflow data-start="314.99" data-duration="29.81" data-media-start="0.00" data-track-index="23"></video></div>
+    <div class="bgseg" id="bg14" style="z-index:15"><video id="bg14-v" src="assets/bgvid/f2c.mp4" muted playsinline data-layout-allow-overflow data-start="344.12" data-duration="28.46" data-media-start="0.00" data-track-index="24"></video></div>
+    <div class="bgseg" id="bg15" style="z-index:16"><video id="bg15-v" src="assets/bgvid/f2d.mp4" muted playsinline data-layout-allow-overflow data-start="371.90" data-duration="27.92" data-media-start="0.00" data-track-index="25"></video></div>
+    <div class="bgseg" id="bg16" style="z-index:17"><video id="bg16-v" src="assets/bgvid/f2e.mp4" muted playsinline data-layout-allow-overflow data-start="399.14" data-duration="27.99" data-media-start="0.00" data-track-index="26"></video></div>
+    <div class="bgseg" id="bg17" style="z-index:18"><video id="bg17-v" src="assets/bgvid/f2f.mp4" muted playsinline data-layout-allow-overflow data-start="426.45" data-duration="25.09" data-media-start="0.00" data-track-index="27"></video></div>
+    <div class="bgseg" id="bg18" style="z-index:19"><video id="bg18-v" src="assets/bgvid/f2g.mp4" muted playsinline data-layout-allow-overflow data-start="450.86" data-duration="32.78" data-media-start="0.00" data-track-index="28"></video></div>
+    <div class="bgseg" id="bg19" style="z-index:20"><video id="bg19-v" src="assets/bgvid/f3a.mp4" muted playsinline data-layout-allow-overflow data-start="483.61" data-duration="14.50" data-media-start="0.00" data-track-index="29"></video></div>
+    <div class="bgseg" id="bg20" style="z-index:21"><video id="bg20-v" src="assets/bgvid/f3b.mp4" muted playsinline data-layout-allow-overflow data-start="497.43" data-duration="27.06" data-media-start="0.00" data-track-index="30"></video></div>
+    <div class="bgseg" id="bg21" style="z-index:22"><video id="bg21-v" src="assets/bgvid/f3c.mp4" muted playsinline data-layout-allow-overflow data-start="523.82" data-duration="32.13" data-media-start="0.00" data-track-index="31"></video></div>
+    <div class="bgseg" id="bg22" style="z-index:23"><video id="bg22-v" src="assets/bgvid/f3d.mp4" muted playsinline data-layout-allow-overflow data-start="555.26" data-duration="30.37" data-media-start="0.00" data-track-index="32"></video></div>
+    <div class="bgseg" id="bg23" style="z-index:24"><video id="bg23-v" src="assets/bgvid/f3e.mp4" muted playsinline data-layout-allow-overflow data-start="584.96" data-duration="34.75" data-media-start="0.00" data-track-index="33"></video></div>
+    <div class="bgseg" id="bg24" style="z-index:25"><video id="bg24-v" src="assets/bgvid/f3f.mp4" muted playsinline data-layout-allow-overflow data-start="619.03" data-duration="25.51" data-media-start="0.00" data-track-index="34"></video></div>
+    <div class="bgseg" id="bg25" style="z-index:26"><video id="bg25-v" src="assets/bgvid/f3g.mp4" muted playsinline data-layout-allow-overflow data-start="643.86" data-duration="26.27" data-media-start="0.00" data-track-index="35"></video></div>
+    <div class="bgseg" id="bg26" style="z-index:27"><video id="bg26-v" src="assets/bgvid/f3h.mp4" muted playsinline data-layout-allow-overflow data-start="669.45" data-duration="20.92" data-media-start="0.00" data-track-index="36"></video></div>
+    <div class="bgseg" id="bg27" style="z-index:28"><video id="bg27-v" src="assets/bgvid/f4a.mp4" muted playsinline data-layout-allow-overflow data-start="690.31" data-duration="17.29" data-media-start="0.00" data-track-index="37"></video></div>
+    <div class="bgseg" id="bg28" style="z-index:29"><video id="bg28-v" src="assets/bgvid/f4b.mp4" muted playsinline data-layout-allow-overflow data-start="706.92" data-duration="28.17" data-media-start="0.00" data-track-index="38"></video></div>
+    <div class="bgseg" id="bg29" style="z-index:30"><video id="bg29-v" src="assets/bgvid/f4c.mp4" muted playsinline data-layout-allow-overflow data-start="734.41" data-duration="30.59" data-media-start="0.00" data-track-index="39"></video></div>
+    <div class="bgseg" id="bg30" style="z-index:31"><video id="bg30-v" src="assets/bgvid/f4d.mp4" muted playsinline data-layout-allow-overflow data-start="764.32" data-duration="24.26" data-media-start="0.00" data-track-index="40"></video></div>
+    <div class="bgseg" id="bg31" style="z-index:32"><video id="bg31-v" src="assets/bgvid/f4e.mp4" muted playsinline data-layout-allow-overflow data-start="787.90" data-duration="28.17" data-media-start="0.00" data-track-index="41"></video></div>
+    <div class="bgseg" id="bg32" style="z-index:33"><video id="bg32-v" src="assets/bgvid/f4f.mp4" muted playsinline data-layout-allow-overflow data-start="815.38" data-duration="33.08" data-media-start="0.00" data-track-index="42"></video></div>
+    <div class="bgseg" id="bg33" style="z-index:34"><video id="bg33-v" src="assets/bgvid/f4g.mp4" muted playsinline data-layout-allow-overflow data-start="847.78" data-duration="33.87" data-media-start="0.00" data-track-index="43"></video></div>
+    <div class="bgseg" id="bg34" style="z-index:35"><video id="bg34-v" src="assets/bgvid/f4h.mp4" muted playsinline data-layout-allow-overflow data-start="880.97" data-duration="12.55" data-media-start="0.00" data-track-index="44"></video></div>
+    <div class="bgseg" id="bg35" style="z-index:36"><video id="bg35-v" src="assets/bgvid/f5a.mp4" muted playsinline data-layout-allow-overflow data-start="893.49" data-duration="33.70" data-media-start="0.00" data-track-index="45"></video></div>
+    <div class="bgseg" id="bg36" style="z-index:37"><video id="bg36-v" src="assets/bgvid/f5b.mp4" muted playsinline data-layout-allow-overflow data-start="926.51" data-duration="21.25" data-media-start="0.00" data-track-index="46"></video></div>
+    <div class="bgseg" id="bg37" style="z-index:38"><video id="bg37-v" src="assets/bgvid/f5c.mp4" muted playsinline data-layout-allow-overflow data-start="947.08" data-duration="32.51" data-media-start="0.00" data-track-index="47"></video></div>
+    <div class="bgseg" id="bg38" style="z-index:39"><video id="bg38-v" src="assets/bgvid/f5d.mp4" muted playsinline data-layout-allow-overflow data-start="978.91" data-duration="25.62" data-media-start="0.00" data-track-index="48"></video></div>
+    <div class="bgseg" id="bg39" style="z-index:40"><video id="bg39-v" src="assets/bgvid/f5e.mp4" muted playsinline data-layout-allow-overflow data-start="1003.84" data-duration="27.61" data-media-start="0.00" data-track-index="49"></video></div>
+    <div class="bgseg" id="bg40" style="z-index:41"><video id="bg40-v" src="assets/bgvid/f5f.mp4" muted playsinline data-layout-allow-overflow data-start="1030.78" data-duration="25.62" data-media-start="0.00" data-track-index="50"></video></div>
+    <div class="bgseg" id="bg41" style="z-index:42"><video id="bg41-v" src="assets/bgvid/f5g.mp4" muted playsinline data-layout-allow-overflow data-start="1055.71" data-duration="29.63" data-media-start="0.00" data-track-index="51"></video></div>
+    <div class="bgseg" id="bg42" style="z-index:43"><video id="bg42-v" src="assets/bgvid/f5h.mp4" muted playsinline data-layout-allow-overflow data-start="1084.67" data-duration="19.68" data-media-start="0.00" data-track-index="52"></video></div>
+    <div class="bgseg" id="bg43" style="z-index:44"><video id="bg43-v" src="assets/bgvid/f6a.mp4" muted playsinline data-layout-allow-overflow data-start="1104.31" data-duration="18.93" data-media-start="0.00" data-track-index="53"></video></div>
+    <div class="bgseg" id="bg44" style="z-index:45"><video id="bg44-v" src="assets/bgvid/f6b.mp4" muted playsinline data-layout-allow-overflow data-start="1122.55" data-duration="28.62" data-media-start="0.00" data-track-index="54"></video></div>
+    <div class="bgseg" id="bg45" style="z-index:46"><video id="bg45-v" src="assets/bgvid/f6c.mp4" muted playsinline data-layout-allow-overflow data-start="1150.49" data-duration="27.71" data-media-start="0.00" data-track-index="55"></video></div>
+    <div class="bgseg" id="bg46" style="z-index:47"><video id="bg46-v" src="assets/bgvid/f6d.mp4" muted playsinline data-layout-allow-overflow data-start="1177.53" data-duration="17.24" data-media-start="0.00" data-track-index="56"></video></div>
+    <div class="bgseg" id="bg47" style="z-index:48"><video id="bg47-v" src="assets/bgvid/f6e.mp4" muted playsinline data-layout-allow-overflow data-start="1194.09" data-duration="19.34" data-media-start="0.00" data-track-index="57"></video></div>
+    <div class="bgseg" id="bg48" style="z-index:49"><video id="bg48-v" src="assets/bgvid/f6f.mp4" muted playsinline data-layout-allow-overflow data-start="1212.75" data-duration="24.80" data-media-start="0.00" data-track-index="58"></video></div>
+    <div class="bgseg" id="bg49" style="z-index:50"><video id="bg49-v" src="assets/bgvid/f6g.mp4" muted playsinline data-layout-allow-overflow data-start="1236.87" data-duration="28.72" data-media-start="0.00" data-track-index="59"></video></div>
+    <div class="bgseg" id="bg50" style="z-index:51"><video id="bg50-v" src="assets/bgvid/f6h.mp4" muted playsinline data-layout-allow-overflow data-start="1264.92" data-duration="12.18" data-media-start="0.00" data-track-index="60"></video></div>
+    <div class="bgseg" id="bg51" style="z-index:52"><video id="bg51-v" src="assets/bgvid/f7a.mp4" muted playsinline data-layout-allow-overflow data-start="1277.07" data-duration="12.09" data-media-start="0.00" data-track-index="61"></video></div>
+    <div class="bgseg" id="bg52" style="z-index:53"><video id="bg52-v" src="assets/bgvid/f7b.mp4" muted playsinline data-layout-allow-overflow data-start="1288.47" data-duration="32.93" data-media-start="0.00" data-track-index="62"></video></div>
+    <div class="bgseg" id="bg53" style="z-index:54"><video id="bg53-v" src="assets/bgvid/f7c.mp4" muted playsinline data-layout-allow-overflow data-start="1320.72" data-duration="30.23" data-media-start="0.00" data-track-index="63"></video></div>
+    <div class="bgseg" id="bg54" style="z-index:55"><video id="bg54-v" src="assets/bgvid/f7d.mp4" muted playsinline data-layout-allow-overflow data-start="1350.27" data-duration="31.09" data-media-start="0.00" data-track-index="64"></video></div>
+    <div class="bgseg" id="bg55" style="z-index:56"><video id="bg55-v" src="assets/bgvid/f7e.mp4" muted playsinline data-layout-allow-overflow data-start="1380.68" data-duration="33.04" data-media-start="0.00" data-track-index="65"></video></div>
+    <div class="bgseg" id="bg56" style="z-index:57"><video id="bg56-v" src="assets/bgvid/f7f.mp4" muted playsinline data-layout-allow-overflow data-start="1413.04" data-duration="31.62" data-media-start="0.00" data-track-index="66"></video></div>
+    <div class="bgseg" id="bg57" style="z-index:58"><video id="bg57-v" src="assets/bgvid/f7g.mp4" muted playsinline data-layout-allow-overflow data-start="1443.98" data-duration="31.43" data-media-start="0.00" data-track-index="67"></video></div>
+    <div class="bgseg" id="bg58" style="z-index:59"><video id="bg58-v" src="assets/bgvid/f7h.mp4" muted playsinline data-layout-allow-overflow data-start="1474.72" data-duration="35.85" data-media-start="0.00" data-track-index="68"></video></div>
+    <div class="bgseg" id="bg59" style="z-index:60"><video id="bg59-v" src="assets/bgvid/m1.mp4" muted playsinline data-layout-allow-overflow data-start="1510.54" data-duration="18.67" data-media-start="0.00" data-track-index="69"></video></div>
+    <div class="bgseg" id="bg60" style="z-index:61"><video id="bg60-v" src="assets/bgvid/m2.mp4" muted playsinline data-layout-allow-overflow data-start="1528.54" data-duration="28.32" data-media-start="0.00" data-track-index="70"></video></div>
+    <div class="bgseg" id="bg61" style="z-index:62"><video id="bg61-v" src="assets/bgvid/m3.mp4" muted playsinline data-layout-allow-overflow data-start="1556.18" data-duration="26.25" data-media-start="0.00" data-track-index="71"></video></div>
+    <div class="bgseg" id="bg62" style="z-index:63"><video id="bg62-v" src="assets/bgvid/m4.mp4" muted playsinline data-layout-allow-overflow data-start="1581.75" data-duration="36.57" data-media-start="0.00" data-track-index="72"></video></div>
+    <div class="bgseg" id="bg63" style="z-index:64"><video id="bg63-v" src="assets/bgvid/m5.mp4" muted playsinline data-layout-allow-overflow data-start="1617.64" data-duration="26.51" data-media-start="0.00" data-track-index="73"></video></div>
+    <div class="bgseg" id="bg64" style="z-index:65"><video id="bg64-v" src="assets/bgvid/m6.mp4" muted playsinline data-layout-allow-overflow data-start="1643.47" data-duration="31.45" data-media-start="0.00" data-track-index="74"></video></div>
+    <div class="bgseg" id="bg65" style="z-index:66"><video id="bg65-v" src="assets/bgvid/m7.mp4" muted playsinline data-layout-allow-overflow data-start="1674.25" data-duration="31.34" data-media-start="0.00" data-track-index="75"></video></div>
+    <div class="bgseg" id="bg66" style="z-index:67"><video id="bg66-v" src="assets/bgvid/m8.mp4" muted playsinline data-layout-allow-overflow data-start="1704.91" data-duration="29.53" data-media-start="0.00" data-track-index="76"></video></div>
+    <div class="bgseg" id="bg67" style="z-index:68"><video id="bg67-v" src="assets/bgvid/m9.mp4" muted playsinline data-layout-allow-overflow data-start="1733.77" data-duration="21.01" data-media-start="0.00" data-track-index="77"></video></div>
+    <div class="bgseg" id="bg68" style="z-index:69"><video id="bg68-v" src="assets/bgvid/m10.mp4" muted playsinline data-layout-allow-overflow data-start="1754.09" data-duration="20.62" data-media-start="0.00" data-track-index="78"></video></div>
+    <div class="bgseg" id="bg69" style="z-index:70"><video id="bg69-v" src="assets/bgvid/z1.mp4" muted playsinline data-layout-allow-overflow data-start="1774.66" data-duration="31.81" data-media-start="0.00" data-track-index="79"></video></div>
+    <div class="bgseg" id="bg70" style="z-index:71"><video id="bg70-v" src="assets/bgvid/e1.mp4" muted playsinline data-layout-allow-overflow data-start="1805.79" data-duration="25.23" data-media-start="0.00" data-track-index="80"></video></div>
+    <div class="bgseg" id="bg71" style="z-index:72"><video id="bg71-v" src="assets/bgvid/e2.mp4" muted playsinline data-layout-allow-overflow data-start="1830.33" data-duration="15.80" data-media-start="0.00" data-track-index="81"></video></div>
+    <div class="bgseg" id="bg72" style="z-index:73"><video id="bg72-v" src="assets/bgvid/e3.mp4" muted playsinline data-layout-allow-overflow data-start="1845.45" data-duration="15.02" data-media-start="0.00" data-track-index="82"></video></div>
+
+    
+
+    <div class="veil"></div>
+    <div class="wm">格闘ニュースラボ</div>
+    <div class="srclab" id="src0">出典: RIZIN (公式映像)</div>
+    <div class="srclab" id="src1">出典: RIZIN公式 対戦カード</div>
+    <div class="srclab" id="src2">出典: RIZIN公式 対戦カード</div>
+    <div class="srclab" id="src3">出典: RIZIN (公式映像)</div>
+    <div class="srclab" id="src4">出典: RIZIN公式 対戦カード</div>
+    <div class="srclab" id="src5">出典: RISE (試合映像)</div>
+    <div class="srclab" id="src6">出典: RISE (試合映像)</div>
+    <div class="srclab" id="src7">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src8">出典: RISE (試合映像)</div>
+    <div class="srclab" id="src9">出典: RISE (試合映像)</div>
+    <div class="srclab" id="src10">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src11">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src12">出典: RIZIN公式 対戦カード</div>
+    <div class="srclab" id="src13">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src14">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src15">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src16">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src17">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src18">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src19">出典: RIZIN公式 対戦カード</div>
+    <div class="srclab" id="src20">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src21">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src22">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src23">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src24">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src25">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src26">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src27">出典: RIZIN公式 対戦カード</div>
+    <div class="srclab" id="src28">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src29">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src30">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src31">出典: RISE (試合映像)</div>
+    <div class="srclab" id="src32">出典: RISE (試合映像)</div>
+    <div class="srclab" id="src33">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src34">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src35">出典: RIZIN公式 対戦カード</div>
+    <div class="srclab" id="src36">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src37">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src38">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src39">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src40">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src41">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src42">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src43">出典: RIZIN公式 対戦カード</div>
+    <div class="srclab" id="src44">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src45">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src46">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src47">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src48">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src49">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src50">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src51">出典: RIZIN公式 対戦カード</div>
+    <div class="srclab" id="src52">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src53">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src54">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src55">出典: ONE (試合映像)</div>
+    <div class="srclab" id="src56">出典: ONE (試合映像)</div>
+    <div class="srclab" id="src57">出典: RIZIN (公式映像)</div>
+    <div class="srclab" id="src58">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src59">出典: RIZIN公式 対戦カード</div>
+    <div class="srclab" id="src60">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src61">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src62">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src63">出典: Bellator (試合映像)</div>
+    <div class="srclab" id="src64">出典: Bellator (試合映像)</div>
+    <div class="srclab" id="src65">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src66">出典: RIZIN (試合映像)</div>
+    <div class="srclab" id="src67">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src68">出典: RIZIN公式 対戦カード</div>
+    <div class="srclab" id="src69">出典: RIZIN公式 対戦カード</div>
+    <div class="srclab" id="src70">出典: RIZIN公式 対戦カード</div>
+    <div class="srclab" id="src71">出典: イメージ映像 (Pexels)</div>
+    <div class="srclab" id="src72">出典: イメージ映像 (Pexels)</div>
+    <div class="chaptag" id="chap1"><div class="chnum">第1試合 / キック</div><div class="chttl">ベイノア vs 宇佐美秀メイソン</div></div>
+    <div class="chaptag" id="chap2"><div class="chnum">第2試合 / 女子49kg</div><div class="chttl">RENA vs ナターシャ・クジュティナ</div></div>
+    <div class="chaptag" id="chap3"><div class="chnum">第3試合 / 66kg</div><div class="chttl">ヴガール・ケラモフ vs 高木凌</div></div>
+    <div class="chaptag" id="chap4"><div class="chnum">第4試合 / 66kg</div><div class="chttl">斎藤裕 vs YA-MAN</div></div>
+    <div class="chaptag" id="chap5"><div class="chnum">第5試合 / 66kg</div><div class="chttl">ダウトベック vs 平本蓮</div></div>
+    <div class="chaptag" id="chap6"><div class="chnum">第6試合 / 71kg</div><div class="chttl">サトシ・ソウザ vs 野村駿太</div></div>
+    <div class="chaptag" id="chap7"><div class="chnum">セミファイナル / 71kg</div><div class="chttl">朝倉未来 vs 青木真也</div></div>
+    <div class="chaptag" id="chap8"><div class="chnum">メインイベント / W王座統一</div><div class="chttl">シェイドゥラエフ vs AJ・マッキー</div></div>
+    <div class="subt" id="sub0">格闘技ファンの皆さん、こんにちは。格闘ニュースラボだ。<br>9月10日、大阪、京セラドーム。</div>
+    <div class="subt" id="sub1">RIZINが、今年最大級のビッグイベントを、<br>ぶつけてくる。超RIZIN.5、浪速の超復活祭り。</div>
+    <div class="subt" id="sub2">この動画では、その全試合を、選手の経歴と、過去の<br>名勝負を、たっぷり振り返りながら、一戦ずつ、</div>
+    <div class="subt" id="sub3">徹底的に、そして、分かりやすく解説していく。<br>これを見れば、当日の楽しみが、</div>
+    <div class="subt" id="sub4">何倍にもなるはずだ。</div>
+    <div class="subt" id="sub5">メインを飾るのは、19戦19勝、その全てが<br>フィニッシュ、という、異次元の記録を持つ、</div>
+    <div class="subt" id="sub6">無敗の絶対王者、シェイドゥラエフ。そこへ、<br>元Bellator王者、AJ・マッキーが挑む、RIZINとPFL、</div>
+    <div class="subt" id="sub7">二団体のベルトを懸けた、史上初の、統一戦だ。</div>
+    <div class="subt" id="sub8">さらに、朝倉未来と青木真也の、世代を<br>超えたドリームマッチ。再始動を懸ける、平本蓮。</div>
+    <div class="subt" id="sub9">地元大阪の、RENA。そして、去年の大みそかに、<br>ケガで流れた、因縁の再戦が、二つ。</div>
+    <div class="subt" id="sub10">それぞれの物語を背負った選手たちが、<br>この復活祭りの舞台に、集まってくる。</div>
+    <div class="subt" id="sub11">紹介の仕方は、こうだ。各試合ごとに、<br>両選手の、身長、リーチ、構え、戦績、経歴。</div>
+    <div class="subt" id="sub12">そこから見える、その選手ならではの、魅力と強み。<br>それを、最もよく表す、過去の試合。さらに、</div>
+    <div class="subt" id="sub13">直近の状態や、抱えている課題も、掘り下げる。<br>そのうえで、どんな展開が予想され、どちらが挑み、</div>
+    <div class="subt" id="sub14">どちらが受けて立つのか。勝てば、どんな景色が<br>待っているのか。そこまで、語り尽くす。前座から、</div>
+    <div class="subt" id="sub15">順に、メインへ。それでは、いってみよう。</div>
+    <div class="subt" id="sub16">まず一戦目は、この大会で唯一の、キックボクシングルールの<br>試合。ブラックパンサー、ベイノア、</div>
+    <div class="subt" id="sub17">対、宇佐美秀メイソン。オープンフィンガーグローブ、<br>71キロ契約、3分3ラウンドだ。</div>
+    <div class="subt" id="sub18">MMAの祭典の中に置かれた、純粋な打撃の頂上決戦。<br>しかもこれは、キック団体、RISEの、</div>
+    <div class="subt" id="sub19">歴代ウェルター級王者同士という、<br>なんとも贅沢な、カードなんだ。</div>
+    <div class="subt" id="sub20">まずは、宇佐美秀メイソン。2001年生まれの、<br>24歳。地元、大阪の出身だ。身長182センチと、</div>
+    <div class="subt" id="sub21">この階級では、かなりの、長身。RISEの、<br>4代目ウェルター級王者で、キックの戦績は、9勝0敗2分。</div>
+    <div class="subt" id="sub22">そのうち、5つがKO。まだ、負けを、知らない。</div>
+    <div class="subt" id="sub23">彼の魅力は、その長身から振り下ろす、一撃で試合を<br>終わらせる、爆発的な、破壊力だ。それが、</div>
+    <div class="subt" id="sub24">最もよく表れたのが、前戦。飛び込みざまの<br>膝蹴りから、右アッパーへ繋ぐコンビネーションで、</div>
+    <div class="subt" id="sub25">開始わずか、43秒で、相手を、完全に、失神させた。<br>距離を、一気に詰めて、急所を、正確に、</div>
+    <div class="subt" id="sub26">打ち抜く。まさに、才能の塊だ。</div>
+    <div class="subt" id="sub27">そして、この宇佐美、実は、あのK-1のスーパースター、<br>武尊が、その才能に惚れ込んで、RIZINに、</div>
+    <div class="subt" id="sub28">直々に推薦した、という逸材でもある。さらに、<br>RIZINライト級で戦う、宇佐美正パトリックは、</div>
+    <div class="subt" id="sub29">実の、兄。兄弟そろって、格闘技の世界で、<br>名を上げている。地元大阪での、凱旋試合で、</div>
+    <div class="subt" id="sub30">無敗のまま、大暴れといきたいところだ。</div>
+    <div class="subt" id="sub31">対する、ブラックパンサー、ベイノア。1995年生まれの<br>、30歳。身長178センチ。極真空手を、</div>
+    <div class="subt" id="sub32">土台に持つ、実力者だ。こちらは、RISEの、<br>2代目ウェルター級王者。キックの戦績は、18勝5敗、</div>
+    <div class="subt" id="sub33">9つのKO。宇佐美の、いわば、先輩王者にあたる。</div>
+    <div class="subt" id="sub34">ベイノアの魅力は、キックだけでなく、MMAでも、<br>6勝を挙げている、二刀流ならではの、対応力と、</div>
+    <div class="subt" id="sub35">上下に散らす、多彩な蹴りだ。前戦では、<br>鋭いハイキックで、相手を、2ラウンドに、きれいに、</div>
+    <div class="subt" id="sub36">仕留めてみせた。そして、面白いのが、<br>この試合を前に、本当は、MMAでやりたかった、</div>
+    <div class="subt" id="sub37">と語っていること。総合も戦える、<br>その自信と、余裕が、彼の、強みでもある。</div>
+    <div class="subt" id="sub38">構図は、明快だ。若さと、勢い、そして一撃の<br>宇佐美が、挑む側。経験と、多彩さのベイノアが、</div>
+    <div class="subt" id="sub39">受けて立つ側。展開を予想するなら、二つ。宇佐美が<br>、序盤から、一気に距離を詰めて、あの、</div>
+    <div class="subt" id="sub40">爆発力で、早い決着をつけるか。あるいは、ベイノアが<br>、多彩な蹴りで、宇佐美を、じらし、動かし、</div>
+    <div class="subt" id="sub41">キャリアの差で、料理していくか。</div>
+    <div class="subt" id="sub42">両者ともに、この試合は絶対に、1ラウンドで、<br>どちらかが倒れる、と言い切っている。</div>
+    <div class="subt" id="sub43">無敗の若武者の、大阪凱旋か。それとも、<br>先輩王者の、貫禄か。開始のゴングから、一瞬も、</div>
+    <div class="subt" id="sub44">目が離せない。最高の、オープニングマッチだ。</div>
+    <div class="subt" id="sub45">続いては、女子スーパーアトム級、49キロ契約の<br>一戦。RENA、対、ナターシャ・クジュティナ。</div>
+    <div class="subt" id="sub46">この大会で、唯一の、女子の試合だ。</div>
+    <div class="subt" id="sub47">RENAは、35歳。そして、この大阪大会の、<br>主役の一人と言っていい、地元、大阪の、出身だ。</div>
+    <div class="subt" id="sub48">身長160センチ、リーチ156センチ。もともとは、<br>立ち技の、シュートボクシングで、</div>
+    <div class="subt" id="sub49">ガールズS-カップを、四度も制した、まさに、<br>女王だった選手。日本の女子格闘技を、長年、</div>
+    <div class="subt" id="sub50">その中心で、牽引してきた、絶対的な、<br>スターだ。総合での戦績は、15勝6敗。</div>
+    <div class="subt" id="sub51">その魅力は、立ち技で培った、コンパクトで、<br>鋭い打撃。そして、思い切りの良さだ。それが、</div>
+    <div class="subt" id="sub52">最もよく表れたのが、2015年の、総合デビュー戦。<br>なんと、飛びつきの、腕ひしぎ十字固めという、</div>
+    <div class="subt" id="sub53">派手な一本勝ちで、鮮烈な、デビューを、飾った。<br>立ち技の選手が、いきなり、飛びつき関節技。</div>
+    <div class="subt" id="sub54">その、大胆さこそ、RENAの、真骨頂だ。</div>
+    <div class="subt" id="sub55">ただ、正直に言えば、今のRENAは、崖っぷちに、<br>立っている。去年の大みそか、絶対女王、</div>
+    <div class="subt" id="sub56">伊澤星花との、タイトルマッチに、挑んだが、<br>力及ばず、敗れた。試合後には、もう少しだけ、</div>
+    <div class="subt" id="sub57">自分の可能性に賭けたい、と、涙ながらに、<br>現役続行を、表明している。この一戦は、</div>
+    <div class="subt" id="sub58">スターとしての、意地と、キャリアを懸けた、<br>まさに、崖っぷちからの、戦いなのだ。</div>
+    <div class="subt" id="sub59">対する、ナターシャ・クジュティナは、ロシアからや<br>ってくる、本物の、実力者だ。37歳。戦績は、</div>
+    <div class="subt" id="sub60">10勝1敗。そして、なにより、<br>驚くべきは、その経歴。彼女は、柔道の、</div>
+    <div class="subt" id="sub61">リオデジャネイロ・オリンピックで、銅メダルを<br>獲得した、正真正銘の、メダリストなのだ。あの、</div>
+    <div class="subt" id="sub62">阿部詩とも、柔道時代に、<br>対戦したことがある、という、筋金入りである。</div>
+    <div class="subt" id="sub63">つまり、彼女の、最大の武器は、オリンピックで<br>鍛え上げた、世界最高峰の、組み技。相手を、</div>
+    <div class="subt" id="sub64">がっちりと、組み止め、投げ、そして、寝技へと、<br>持ち込んでいく。RENAが、立ち技で優れる一方、</div>
+    <div class="subt" id="sub65">組みに、課題を抱えているのは、周知の事実。まさに<br>、その弱点を、真正面から突く、</div>
+    <div class="subt" id="sub66">天敵とも言える、相手なのだ。</div>
+    <div class="subt" id="sub67">構図は、こうだ。地元で、<br>崖っぷちのRENAが、意地で、挑む。</div>
+    <div class="subt" id="sub68">オリンピックメダリストのクジュティナが、実力で<br>、受けて立つ。展開の鍵は、ただ一つ、距離だ。</div>
+    <div class="subt" id="sub69">RENAが、自分の、打撃の間合いを、保ち続け、<br>組ませずに、試合を支配できるのか。あるいは、</div>
+    <div class="subt" id="sub70">クジュティナが、その距離を、一瞬で潰し、<br>五輪の組み技で、RENAを、捕まえてしまうのか。</div>
+    <div class="subt" id="sub71">打撃か、グラップリングか。噛み合わせの、<br>面白さが、詰まった一戦だ。</div>
+    <div class="subt" id="sub72">第3の一戦は、ヴガール・ケラモフ、対、高木凌。<br>フェザー級、66キロの戦いだ。元王者と、</div>
+    <div class="subt" id="sub73">若手のホープ。経験と、<br>勢いが、真っ向から、ぶつかる。</div>
+    <div class="subt" id="sub74">ケラモフは、アゼルバイジャン出身、34歳。<br>身長175センチ、リーチ179センチ。コーカサスの雷、</div>
+    <div class="subt" id="sub75">という、いかつい異名を持つ。なにしろ、<br>9歳の頃から、格闘技一筋。散打、柔道、そして、</div>
+    <div class="subt" id="sub76">コンバットサンボと、様々な武術を、極めてきた、<br>穴のない、オールラウンダーだ。戦績は、</div>
+    <div class="subt" id="sub77">21勝7敗。</div>
+    <div class="subt" id="sub78">彼の実力を、最もよく表すのが、2023年の、<br>フェザー級王座決定戦。相手は、あの、</div>
+    <div class="subt" id="sub79">朝倉未来だった。ケラモフは、試合開始早々、<br>タックルでテイクダウンを奪うと、マウントから、</div>
+    <div class="subt" id="sub80">パウンドと肘で、攻め立て、最後は、朝倉の、<br>立ち上がり際を狙って、リアネイキドチョークで、</div>
+    <div class="subt" id="sub81">一本勝ち。日本のスターを、完璧に仕留めて、<br>第4代王者に、輝いた。組みと、極めの、</div>
+    <div class="subt" id="sub82">確かな技術を持つ、実力者である。</div>
+    <div class="subt" id="sub83">ただ、そのケラモフも、ここのところは、苦しい。<br>一度、ライト級に、階級を上げて、当時の王者、</div>
+    <div class="subt" id="sub84">サトシ・ソウザに挑んだが、あの、絶対的な柔術の<br>前に、三角絞めで、一本負け。さらに、</div>
+    <div class="subt" id="sub85">去年の大みそかにも、クレベル・コイケに、<br>判定で、敗れている。本来の、フェザー級に戻す、</div>
+    <div class="subt" id="sub86">この一戦は、彼にとって、絶対に、<br>負けられない、立て直しの、戦いだ。</div>
+    <div class="subt" id="sub87">迎え撃つのは、1999年生まれ、26歳の、若きホープ、<br>高木凌。身長178センチ、リーチ179センチ。</div>
+    <div class="subt" id="sub88">実は彼、高校までは、野球一筋で、格闘技を始めたの<br>は、19歳から、という、遅咲きだ。しかし、</div>
+    <div class="subt" id="sub89">パラエストラ八王子で、めきめきと頭角を現し、<br>パンクラスのフェザー級で、ランキング1位まで、</div>
+    <div class="subt" id="sub90">登り詰めた。戦績は、11勝3敗、そのうち、<br>8つがKO。フィニッシュ能力の、高い選手だ。</div>
+    <div class="subt" id="sub91">高木の魅力は、若さゆえの、勢いと、<br>思い切りの良さ。その勢いを、象徴するのが、</div>
+    <div class="subt" id="sub92">RIZINデビュー戦。あの、強打で知られる、<br>萩原京平を相手に、リアネイキドチョークで、</div>
+    <div class="subt" id="sub93">一本勝ちを、収めてみせた。その後も、RIZINで、<br>TKO、ドクターストップと、白星を、重ねている。</div>
+    <div class="subt" id="sub94">まさに今、乗りに乗っている、若手だ。</div>
+    <div class="subt" id="sub95">構図は、こうだ。勢いに乗る若手、高木が、<br>格上の元王者に、挑む。経験豊富なケラモフが、</div>
+    <div class="subt" id="sub96">意地でも、受けて立つ。展開を予想すると、ケラモフは<br>、あの朝倉戦のように、組みで、試合を、</div>
+    <div class="subt" id="sub97">支配したい。高木は、それを、打撃で、<br>はね返したい。組みのケラモフか、打撃の高木か。</div>
+    <div class="subt" id="sub98">そのせめぎ合いが、見どころになる。</div>
+    <div class="subt" id="sub99">そして、この試合、高木にとっては、人生を変える、<br>絶好のチャンスだ。元王者に勝てば、一気に、</div>
+    <div class="subt" id="sub100">フェザー級の、トップ戦線、その仲間入りが、<br>見えてくる。若手の、下剋上か。ベテランの、貫禄か。</div>
+    <div class="subt" id="sub101">RIZINフェザー級の、勢力図を、<br>占う、重要な一戦だ。</div>
+    <div class="subt" id="sub102">第4の一戦は、斎藤裕、対、YA-MAN。この試合、<br>実は、去年の大みそかに、一度は組まれながら、</div>
+    <div class="subt" id="sub103">ケガで、流れてしまったカードの、<br>仕切り直しなんだ。両者にとって、待ちに待った、</div>
+    <div class="subt" id="sub104">決着の場になる。</div>
+    <div class="subt" id="sub105">斎藤裕は、38歳。身長173センチ、リーチ171センチ。<br>剛柔流の空手と、柔術の黒帯を、</div>
+    <div class="subt" id="sub106">ベースに持つ、技巧派だ。戦績は、<br>21勝9敗。そして、彼の、最大の肩書きは、</div>
+    <div class="subt" id="sub107">初代RIZINフェザー級王者。打撃も、組みも、<br>寝技も、全てを、高い次元でこなす、総合力の高さが、</div>
+    <div class="subt" id="sub108">最大の、魅力である。</div>
+    <div class="subt" id="sub109">その実力を、証明したのが、2020年の、<br>初代王座決定戦。相手は、全盛期の、朝倉未来。</div>
+    <div class="subt" id="sub110">多くのファンが、朝倉の勝利を、疑わなかった。<br>しかし、斎藤は、その下馬評を、完全に、覆す。</div>
+    <div class="subt" id="sub111">冷静に、朝倉の得意を消し、判定で、堂々の、<br>勝利。誰もが、驚いた、番狂わせだった。</div>
+    <div class="subt" id="sub112">相手の強みを、消していく、<br>まさに、玄人好みの、試合巧者だ。</div>
+    <div class="subt" id="sub113">ただ、その斎藤も、王座陥落後は、苦しい時期が<br>続いた。直近では、久保優太に、KOで、</div>
+    <div class="subt" id="sub114">敗れている。今は、なんと、ラーメン店の店主も、<br>務めながら、格闘技を、続けているという。</div>
+    <div class="subt" id="sub115">ベテランとなった、元王者が、この大舞台で、<br>もう一度、輝けるのか。まさに、復活を懸けた、</div>
+    <div class="subt" id="sub116">一戦だ。</div>
+    <div class="subt" id="sub117">対するYA-MANは、30歳。身長173センチ、<br>リーチ171センチと、体格は、斎藤と、ほぼ、互角。</div>
+    <div class="subt" id="sub118">もともとは、キックボクシングのRISEで活躍し、<br>那須川天心の試合に、憧れて、この世界を志した、</div>
+    <div class="subt" id="sub119">という。総合へは、2022年に、転向。戦績は、<br>3勝2敗と、まだ、浅い。しかし、彼の打撃は、</div>
+    <div class="subt" id="sub120">間違いなく、本物だ。</div>
+    <div class="subt" id="sub121">その打撃力を、世に知らしめたのが、2023年、<br>キックボクシングルールでの、朝倉未来戦。</div>
+    <div class="subt" id="sub122">YA-MANは、右ストレート、一発で、あの朝倉を、<br>1ラウンド、KO。格闘技界に、大きな衝撃を、</div>
+    <div class="subt" id="sub123">走らせた。ただ、MMAでは、去年の大みそかに、<br>今大会にも出る、ダウトベックに、判定で、</div>
+    <div class="subt" id="sub124">敗れている。格闘オタクから、下に見られている。<br>俺が、ガチだと、認めさせる。そう、静かに、</div>
+    <div class="subt" id="sub125">燃えている。</div>
+    <div class="subt" id="sub126">構図は、興味深い。総合力で勝る、元王者、斎藤が、<br>受けて立つ。打撃の一発を持つYA-MANが、</div>
+    <div class="subt" id="sub127">自分の実力を、証明するために、挑む。展開を<br>予想すると、二つ。斎藤が、組みや、寝技に、</div>
+    <div class="subt" id="sub128">持ち込めば、キャリアの差が、はっきりと、<br>出る。だが、もし、立って、打撃戦に、</div>
+    <div class="subt" id="sub129">付き合ってしまえば、あの、朝倉をも沈めた、<br>YA-MANの一発が、待っている。斎藤が、どう、</div>
+    <div class="subt" id="sub130">YA-MANの、打撃の距離を、<br>外していくか。そこが、鍵だ。</div>
+    <div class="subt" id="sub131">ベテランの、意地。そして、証明に燃える、<br>挑戦者。技巧派と、一発屋。まさに、</div>
+    <div class="subt" id="sub132">何が起きるか分からない、格闘技の、<br>醍醐味が、詰まった一戦だ。</div>
+    <div class="subt" id="sub133">第5の一戦は、カルシャガ・ダウトベック、対、<br>平本蓮。フェザー級、66キロ。この試合、実は、</div>
+    <div class="subt" id="sub134">平本が、自ら、名乗りを上げて、実現したものだ。<br>平本は、かねてから、萩原京平と、</div>
+    <div class="subt" id="sub135">ダウトベックの、勝者と、戦いたい、と、<br>公言していた。そして、7月18日の、広島大会で、</div>
+    <div class="subt" id="sub136">ダウトベックが、萩原を、1ラウンドKO。その<br>勝利を、受けて、この、平本対ダウトベックが、</div>
+    <div class="subt" id="sub137">正式に、決まったんだ。</div>
+    <div class="subt" id="sub138">ダウトベックは、カザフスタン出身、32歳。<br>身長170センチ、リーチ170センチ。ボクシングを、</div>
+    <div class="subt" id="sub139">土台に持つ、強打の、ストライカーだ。戦績は、<br>19勝3敗。そのうち、実に、14が、KO決着という、</div>
+    <div class="subt" id="sub140">生粋の、フィニッシャーである。</div>
+    <div class="subt" id="sub141">その破壊力を、象徴するのが、今、話した、<br>7月の、萩原京平戦。重く、的確なパンチで、</div>
+    <div class="subt" id="sub142">強豪の萩原を、わずか1ラウンドで、沈めてみせた。<br>しかも、この男、勢いが、止まらない。</div>
+    <div class="subt" id="sub143">去年の大みそかには、YA-MANを、今年3月には、<br>あの鈴木千裕をも、破っており、現在、なんと、</div>
+    <div class="subt" id="sub144">8連勝中。今、最も、勢いのある、外国人選手の、<br>一人だ。まさに、受けて立つ側の、風格が、ある。</div>
+    <div class="subt" id="sub145">対する平本蓮は、28歳。身長176センチ、<br>リーチ171センチ。剛毅會に所属し、K-1や、</div>
+    <div class="subt" id="sub146">キックボクシングの世界で、活躍した、<br>生粋の、ストライカーだ。抜群の打撃センスと、</div>
+    <div class="subt" id="sub147">歯に衣着せぬ、発言で、長く、日本のスター候補と<br>、目されてきた、華のある選手。戦績は、</div>
+    <div class="subt" id="sub148">4勝3敗。</div>
+    <div class="subt" id="sub149">平本の魅力を、最もよく表すのが、2024年の、<br>朝倉未来戦。SNSで、何年も、舌戦を、</div>
+    <div class="subt" id="sub150">繰り広げてきた、宿敵、朝倉に対し、平本は、<br>鋭い、左ストレートを、突き刺し、そこから、</div>
+    <div class="subt" id="sub151">パウンドで、TKO勝ち。長年の、因縁に、<br>完璧な形で、決着をつけてみせた。スピードと、</div>
+    <div class="subt" id="sub152">多彩なコンビネーション。それが、彼の、武器だ。</div>
+    <div class="subt" id="sub153">ただ、その平本も、その後は、苦しい試合が、<br>続いている。だからこそ、この一戦は、彼にとって、</div>
+    <div class="subt" id="sub154">単なる一勝以上の、意味を持つ。しかも平本は、<br>この試合に勝って、いずれは、</div>
+    <div class="subt" id="sub155">王者シェイドゥラエフを、自分こそが、KOしてみせる、<br>とまで、宣言している。崖っぷちからの、</div>
+    <div class="subt" id="sub156">大きな夢へ。再始動を懸けた、大事な、一戦だ。</div>
+    <div class="subt" id="sub157">構図は、こうだ。8連勝中の、勢いあるダウトベックが<br>、受けて立つ。近年、苦しみながらも、</div>
+    <div class="subt" id="sub158">自ら相手を、指名した平本が、再起を懸けて、挑む。<br>展開は、おそらく、序盤から、一歩も引かない、</div>
+    <div class="subt" id="sub159">激しい、打ち合いになるだろう。焦点は、<br>ダウトベックの、重く、的確な一撃と、平本の、</div>
+    <div class="subt" id="sub160">スピードある、連打。どちらの打撃が、<br>先に、相手を、捉えるか。</div>
+    <div class="subt" id="sub161">平本自身も、苦しい試合になればなるほど、<br>経験してきた分だけ、自分の方が有利だ、と語っている。</div>
+    <div class="subt" id="sub162">逆境を、力に変えられるのか。宿敵を倒した男が、<br>今度は、無敗の王者へと、駒を進められるのか。</div>
+    <div class="subt" id="sub163">ストライカー同士の、火花散る、一戦だ。</div>
+    <div class="subt" id="sub164">第6の一戦は、ホベルト・サトシ・ソウザ、対、<br>野村駿太。ライト級、71キロ。これもまた、</div>
+    <div class="subt" id="sub165">去年の大みそかに、組まれながら、ケガで、<br>流れてしまった、因縁の、仕切り直しだ。そして、</div>
+    <div class="subt" id="sub166">この試合には、非常に、大きな意味がある。</div>
+    <div class="subt" id="sub167">サトシ・ソウザは、ブラジル出身の、日系ブラジル人、<br>36歳。身長180センチ、リーチ185センチ。</div>
+    <div class="subt" id="sub168">柔術は、黒帯四段。なにしろ、青帯時代に、<br>世界柔術選手権で、二階級を、制覇したという、まさに、</div>
+    <div class="subt" id="sub169">世界最高峰の、グラップラーだ。戦績は、<br>20勝4敗。初代RIZINライト級王者として、</div>
+    <div class="subt" id="sub170">5度の防衛を果たした、名王者でもある。</div>
+    <div class="subt" id="sub171">彼の恐ろしさを、象徴するのが、王座を獲得した、<br>RIZIN.28。トフィック・ムサエフを相手に、</div>
+    <div class="subt" id="sub172">自ら、下から、引き込むと、瞬く間に、<br>三角絞めを、極めて、一本勝ち。強豪を、一瞬で、</div>
+    <div class="subt" id="sub173">料理してみせた。彼のガードに、引き込まれたら、<br>もう、終わり。相手が、どんなに、</div>
+    <div class="subt" id="sub174">警戒していても、極めてしまう。それほどの、<br>絶対的な、技術を持つ。</div>
+    <div class="subt" id="sub175">そんな絶対王者だったサトシも、去年の大みそかに<br>、ついに、ベルトを、手放した。だからこそ、</div>
+    <div class="subt" id="sub176">王座奪回への、思いは、人一倍、強い。この一戦は<br>、彼にとって、頂点へと、返り咲くための、</div>
+    <div class="subt" id="sub177">大事な、一歩なのだ。</div>
+    <div class="subt" id="sub178">対する野村駿太は、28歳。身長173センチ、<br>リーチ177センチ、構えはオーソドックス。</div>
+    <div class="subt" id="sub179">伝統派空手で培った、鋭いスピードと、レスリングを<br>、併せ持つ、現役の、DEEPライト級王者だ。</div>
+    <div class="subt" id="sub180">戦績は、10勝2敗。</div>
+    <div class="subt" id="sub181">その野村の、評価を、一気に高めたのが、<br>2025年、あの、Bellatorのレジェンド、</div>
+    <div class="subt" id="sub182">パトリッキー・ピットブルを相手に、収めた、<br>判定勝ちだ。世界的な、強豪に、堂々と競り勝ち、</div>
+    <div class="subt" id="sub183">自分は、ここで、やれる、と、証明してみせた。<br>空手仕込みの、速い打撃と、粘り強い、レスリング。</div>
+    <div class="subt" id="sub184">それが、若き王者の、武器である。</div>
+    <div class="subt" id="sub185">そして、この試合、最も、重要な点。それは、勝った方が<br>、次の、RIZINライト級、タイトル挑戦へ、</div>
+    <div class="subt" id="sub186">大きく、近づく、という点だ。元王者と、<br>現DEEP王者による、事実上の、挑戦者決定戦。</div>
+    <div class="subt" id="sub187">展開の焦点は、もちろん、寝技。サトシが、<br>得意の、組みに、持ち込めるか。野村が、それを、</div>
+    <div class="subt" id="sub188">徹底的に、避けて、打撃と、<br>レスリングで、試合を、組み立てられるか。</div>
+    <div class="subt" id="sub189">世界最高峰の、柔術の達人に、勢いの、若き王者が<br>、どう、立ち向かうのか。まさに、技術の、粋を、</div>
+    <div class="subt" id="sub190">堪能できる、玄人好みの、一戦だ。</div>
+    <div class="subt" id="sub191">そして、セミファイナル。朝倉未来、対、<br>青木真也。世代も、スタイルも、まったく異なる、</div>
+    <div class="subt" id="sub192">二人による、まさに、奇跡の、ドリームマッチだ。</div>
+    <div class="subt" id="sub193">朝倉未来は、34歳。愛知県豊橋市の、出身。<br>身長177センチだが、リーチは174センチと、実は、</div>
+    <div class="subt" id="sub194">やや、短い。もともとは、路上の喧嘩や、<br>アウトサイダーの世界から、這い上がってきた、</div>
+    <div class="subt" id="sub195">異色の経歴の持ち主。今や、RIZINと、YouTubeの<br>、両方で、日本の格闘技界を、牽引し続ける、</div>
+    <div class="subt" id="sub196">押しも押されもせぬ、最大のスターだ。戦績は、<br>19勝6敗、1つの無効試合。</div>
+    <div class="subt" id="sub197">その魅力であり、武器は、相手の攻撃を、冷静に<br>見極めて、合わせる、精密な、カウンターの打撃。</div>
+    <div class="subt" id="sub198">RIZIN参戦後、彼は、この、狙いすましたカウンターで<br>、名だたる強豪を、次々と、沈めてきた。</div>
+    <div class="subt" id="sub199">じっと、機を待ち、相手が、焦れて手を出した、<br>その一瞬の隙に、鋭い右を、突き刺す。その、</div>
+    <div class="subt" id="sub200">クレバーで、頭脳的な戦い方こそ、朝倉未来が、<br>スターダムを、駆け上がった、原動力だ。</div>
+    <div class="subt" id="sub201">ただ、正直に言えば、朝倉は、近年、苦しい戦いが<br>、続いている。宿敵、平本蓮に、打撃で敗れ、</div>
+    <div class="subt" id="sub202">ケラモフに、チョークで沈められ、<br>そして去年の大みそかには、今大会メインの、</div>
+    <div class="subt" id="sub203">シェイドゥラエフに、いいところなく、KO負けを<br>、喫した。リーチの短さを、突かれ、組みで、</div>
+    <div class="subt" id="sub204">崩される。その、課題も、見え隠れする。だからこそ、<br>この一戦は、絶対に、負けられない、</div>
+    <div class="subt" id="sub205">再起をかけた、戦いなのだ。</div>
+    <div class="subt" id="sub206">対する青木真也は、43歳。身長180センチ、<br>リーチ180センチ、構えはオーソドックス。この男を、</div>
+    <div class="subt" id="sub207">ひと言で表すなら、MMA界の、生ける伝説だ。戦績は<br>、49勝12敗。柔道参段、柔術黒帯を、</div>
+    <div class="subt" id="sub208">ベースにした、寝技と、関節技は、20年を<br>超えるキャリアを経た今も、世界トップクラス。修斗、</div>
+    <div class="subt" id="sub209">DREAM、そしてONEと、数々の、世界王座を、<br>獲ってきた、本物の、レジェンドである。</div>
+    <div class="subt" id="sub210">その、伝説を、象徴するのが、2009年の、DREAM。<br>ヨアキム・ハンセンを相手に、試合終了、残り、</div>
+    <div class="subt" id="sub211">わずか、4秒という、劇的な場面で、腕ひしぎ十字固めを<br>、極めて、王座を、獲得した。誰もが、</div>
+    <div class="subt" id="sub212">時間切れの、引き分けを、覚悟した、その瞬間の、<br>一本。一瞬の隙も、見逃さない。それが、</div>
+    <div class="subt" id="sub213">青木真也という、男だ。43歳となった今も、<br>その、極めの嗅覚は、まったく、衰えていない。</div>
+    <div class="subt" id="sub214">そして、この試合を、さらに、熱くしているのが、<br>青木の、舌戦だ。青木は、朝倉未来は、</div>
+    <div class="subt" id="sub215">格闘家じゃない。時代に、うまく乗って、ルールを<br>、ハックするのが、上手いだけの、人だ。と、</div>
+    <div class="subt" id="sub216">痛烈な言葉で、挑発を、仕掛けている。スターへの<br>、レジェンドからの、真っ向からの、宣戦布告。</div>
+    <div class="subt" id="sub217">この、刺々しい言葉が、リングの上で、どう、<br>決着するのか。ファンにとって、これ以上ない、</div>
+    <div class="subt" id="sub218">注目の、ポイントだ。</div>
+    <div class="subt" id="sub219">構図は、こうだ。人気と実績のスター、<br>朝倉が、受けて立つ。挑発し、寝技という、</div>
+    <div class="subt" id="sub220">明確な武器を持つ青木が、挑む。展開の鍵は、は<br>っきりしている。打撃で、距離を保ちたい、朝倉。</div>
+    <div class="subt" id="sub221">組みついて、寝技の深みへ、引きずり込みたい、<br>青木。朝倉が、あの、しつこいタックルを、</div>
+    <div class="subt" id="sub222">防ぎ切れるか。あるいは、青木が、一瞬の隙を<br>突いて、伝説の寝技を、炸裂させるのか。</div>
+    <div class="subt" id="sub223">世代の頂点と、時代の伝説。プライドをかけた、<br>この一戦から、目を、離してはいけない。</div>
+    <div class="subt" id="sub224">さあ、いよいよ、メインイベントだ。RIZINと、<br>PFL、二つの団体の、フェザー級ベルトを懸けた、</div>
+    <div class="subt" id="sub225">史上初の、王座統一戦。ラジャブアリ・シェイドゥラエフ、<br>対、AJ・マッキー。</div>
+    <div class="subt" id="sub226">世界最高峰の一戦が、この、大阪で、実現する。</div>
+    <div class="subt" id="sub227">まずは、王者、シェイドゥラエフ。キルギス出身、<br>まだ、25歳。身長170センチ、リーチ174センチ。</div>
+    <div class="subt" id="sub228">だが、その戦績を見て、誰もが、言葉を、失う。<br>19戦して、19勝。負けは、一つも、ない。しかも、</div>
+    <div class="subt" id="sub229">その、全ての勝利が、判定に持ち込まれることなく、<br>フィニッシュで、決着している。</div>
+    <div class="subt" id="sub230">フィニッシュ率、100パーセント。これは、<br>もはや、異次元の、記録だ。</div>
+    <div class="subt" id="sub231">その強さの、源は、サンボと、レスリングを、<br>土台にした、圧倒的な、トップコントロール。</div>
+    <div class="subt" id="sub232">長い間合いから、しつこく組みつき、相手を、<br>ケージに押し込み、テイクダウン。そして、上から、</div>
+    <div class="subt" id="sub233">逃げ場なく、極めと、パウンドで、必ず、仕留めてきた。<br>打撃を、当てられることも、寝技で、</div>
+    <div class="subt" id="sub234">脅かされることも、ほとんど、ない。まさに、<br>穴の見当たらない、完璧な、王者だ。</div>
+    <div class="subt" id="sub235">その強さを、象徴するのが、王座を獲得した、<br>クレベル・コイケ戦だ。相手のクレベルは、</div>
+    <div class="subt" id="sub236">寝技になれば、当代随一と言われる、柔術の名手。<br>しかし、シェイドゥラエフは、その得意の、</div>
+    <div class="subt" id="sub237">寝技を、まったく、寄せ付けず、逆に、圧倒し、<br>1ラウンドで、KO。さらに去年の大みそかには、</div>
+    <div class="subt" id="sub238">日本のスター、朝倉未来を、危なげなく、<br>1ラウンドで、完璧に、仕留めた。今年4月には、</div>
+    <div class="subt" id="sub239">久保優太も撃破し、3度目の、<br>防衛に成功。もはや、隙が、見当たらない。</div>
+    <div class="subt" id="sub240">そこへ、挑むのが、AJ・マッキー。アメリカ出身、<br>31歳。異名は、マーセナリー、傭兵だ。</div>
+    <div class="subt" id="sub241">この男の、経歴も、ただ者では、ない。父親は、<br>名うての、MMAファイター、アントニオ・マッキー。</div>
+    <div class="subt" id="sub242">AJは、幼い頃から、そのジムで、名だたる強豪たちに<br>、揉まれて、育った、まさに、生粋の、</div>
+    <div class="subt" id="sub243">格闘エリートなのだ。</div>
+    <div class="subt" id="sub244">そして、その父を、コーチに、AJは、Bellatorで<br>、伝説を、作る。デビューから、無敗のまま、</div>
+    <div class="subt" id="sub245">勝ち上がり、フェザー級グランプリの、決勝で、<br>あの、絶対王者、パトリシオ・ピットブルを、</div>
+    <div class="subt" id="sub246">1ラウンド、テクニカルサブミッションで撃破。<br>18連勝で、優勝賞金、100万ドルと、王座を、</div>
+    <div class="subt" id="sub247">手にした。戦績は、25勝2敗。世界のトップを、<br>勝ち抜いてきた、本物の、実力者である。</div>
+    <div class="subt" id="sub248">そして、この試合、大きな鍵を握るのが、体格だ。<br>マッキーは、身長178センチ、リーチは、なんと、</div>
+    <div class="subt" id="sub249">189センチ。しかも、サウスポー。対する王者は、<br>リーチ174センチ。つまり、マッキーが、</div>
+    <div class="subt" id="sub250">リーチで、15センチも、上回っている。この、<br>長い手足から放たれる、変則的な、</div>
+    <div class="subt" id="sub251">サウスポーの打撃は、これまで王者が、経験したこと<br>のない、大きな、脅威に、なるはずだ。</div>
+    <div class="subt" id="sub252">構図は、シンプルだ。無敗の王者、シェイドゥラエフが<br>、受けて立つ。実績で勝る挑戦者、</div>
+    <div class="subt" id="sub253">マッキーが、そのベルトに、挑む。展開を予想すると<br>、二つ。王者が、リーチ差を、ものともせず、</div>
+    <div class="subt" id="sub254">いつものように、組みついて、支配してしまうの<br>か。それとも、マッキーが、その圧力を、</div>
+    <div class="subt" id="sub255">レスリングで、しのぎ、長いリーチと、<br>サウスポーの打撃で、王者を、遠い間合いから、</div>
+    <div class="subt" id="sub256">削っていくのか。</div>
+    <div class="subt" id="sub257">組み倒したい、王者。距離を取って、<br>打撃で崩したい、挑戦者。これまで、誰にも、</div>
+    <div class="subt" id="sub258">止められなかった、シェイドゥラエフの、あの<br>トップコントロールを、マッキーは、豊富な経験と、</div>
+    <div class="subt" id="sub259">体格の利で、初めて、止めることが、できるのか。<br>それとも、無敗神話は、まだまだ、続くのか。</div>
+    <div class="subt" id="sub260">無敗の記録は、20に、伸びるのか。二つのベルトは<br>、どちらの腰に、巻かれるのか。</div>
+    <div class="subt" id="sub261">日本だけでなく、世界中の、格闘技ファンが、<br>固唾をのんで見守る、最高峰の、頂上決戦。この、</div>
+    <div class="subt" id="sub262">歴史的な瞬間を、ぜひ、<br>あなたの目に、焼き付けてほしい。</div>
+    <div class="subt" id="sub263">なお、当初は、もう一つ、冨澤大智の試合も、<br>予定されていた。しかし、対戦相手の、</div>
+    <div class="subt" id="sub264">ドンマイ川端が、眼窩底骨折という、ケガを負い、<br>この試合は、残念ながら、中止となった。冨澤は、</div>
+    <div class="subt" id="sub265">栃木県宇都宮市の出身、身長168センチ。あの、<br>ブレイキングダウンで、名を上げ、RIZINにも、</div>
+    <div class="subt" id="sub266">参戦してきた、勢いのある、選手だ。彼の、新たな、<br>対戦相手が、誰になるのか。今後の、発表を、</div>
+    <div class="subt" id="sub267">待ちたい。</div>
+    <div class="subt" id="sub268">以上、超RIZIN.5、全試合の、徹底解説だった。<br>9月10日、京セラドーム大阪。無敗の王者への、</div>
+    <div class="subt" id="sub269">統一戦。世代を超えた、ドリームマッチ。因縁の、<br>仕切り直し。地元大阪の、選手たち。そして、</div>
+    <div class="subt" id="sub270">復活を懸けた、男たち、女たち。前座から、<br>メインまで、一つとして、見逃せる試合は、ない。</div>
+    <div class="subt" id="sub271">皆さんは、どの試合が、一番の注目だろうか。<br>そして、それぞれの試合、どちらが勝つと、</div>
+    <div class="subt" id="sub272">思うだろうか。予想や、見どころを、ぜひ、<br>コメント欄で、教えてほしい。皆さんの、意見を、</div>
+    <div class="subt" id="sub273">楽しみに、している。</div>
+    <div class="subt" id="sub274">この動画が、少しでも、参考になったら、<br>高評価と、チャンネル登録を、お願いします。</div>
+    <div class="subt" id="sub275">格闘技の魅力を、これからも、深く、発信していく。<br>格闘ニュースラボでした。それでは、また、</div>
+    <div class="subt" id="sub276">次の動画で、お会いしよう。</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      const tl = gsap.timeline({paused:true});
+      tl.fromTo('#bg0',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},0.25);
+      tl.fromTo('#src0',{opacity:0},{opacity:1,duration:.4},0.55);
+      tl.to('#src0',{opacity:0,duration:.3},30.69);
+      tl.fromTo('#bg1',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},30.86);
+      tl.fromTo('#bg1-v',{scale:1.0},{scale:1.09,duration:20.12,ease:'none'},30.86);
+      tl.fromTo('#src1',{opacity:0},{opacity:1,duration:.4},31.16);
+      tl.to('#src1',{opacity:0,duration:.3},50.33);
+      tl.fromTo('#bg2',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},50.50);
+      tl.fromTo('#bg2-v',{scale:1.0},{scale:1.09,duration:21.10,ease:'none'},50.50);
+      tl.fromTo('#src2',{opacity:0},{opacity:1,duration:.4},50.80);
+      tl.to('#src2',{opacity:0,duration:.3},70.95);
+      tl.fromTo('#bg3',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},71.12);
+      tl.fromTo('#src3',{opacity:0},{opacity:1,duration:.4},71.42);
+      tl.to('#src3',{opacity:0,duration:.3},106.75);
+      tl.fromTo('#bg4',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},106.92);
+      tl.fromTo('#bg4-v',{scale:1.0},{scale:1.09,duration:26.08,ease:'none'},106.92);
+      tl.fromTo('#src4',{opacity:0},{opacity:1,duration:.4},107.22);
+      tl.to('#src4',{opacity:0,duration:.3},132.35);
+      tl.fromTo('#bg5',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},132.52);
+      tl.fromTo('#src5',{opacity:0},{opacity:1,duration:.4},132.82);
+      tl.to('#src5',{opacity:0,duration:.3},155.34);
+      tl.fromTo('#bg6',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},155.51);
+      tl.fromTo('#src6',{opacity:0},{opacity:1,duration:.4},155.81);
+      tl.to('#src6',{opacity:0,duration:.3},182.37);
+      tl.fromTo('#bg7',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},182.54);
+      tl.fromTo('#src7',{opacity:0},{opacity:1,duration:.4},182.84);
+      tl.to('#src7',{opacity:0,duration:.3},208.46);
+      tl.fromTo('#bg8',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},208.63);
+      tl.fromTo('#src8',{opacity:0},{opacity:1,duration:.4},208.93);
+      tl.to('#src8',{opacity:0,duration:.3},232.11);
+      tl.fromTo('#bg9',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},232.28);
+      tl.fromTo('#src9',{opacity:0},{opacity:1,duration:.4},232.58);
+      tl.to('#src9',{opacity:0,duration:.3},260.08);
+      tl.fromTo('#bg10',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},260.25);
+      tl.fromTo('#src10',{opacity:0},{opacity:1,duration:.4},260.55);
+      tl.to('#src10',{opacity:0,duration:.3},285.30);
+      tl.fromTo('#bg11',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},285.47);
+      tl.fromTo('#src11',{opacity:0},{opacity:1,duration:.4},285.77);
+      tl.to('#src11',{opacity:0,duration:.3},303.60);
+      tl.fromTo('#bg12',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},303.77);
+      tl.fromTo('#bg12-v',{scale:1.0},{scale:1.09,duration:11.70,ease:'none'},303.77);
+      tl.fromTo('#src12',{opacity:0},{opacity:1,duration:.4},304.07);
+      tl.to('#src12',{opacity:0,duration:.3},314.82);
+      tl.fromTo('#bg13',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},314.99);
+      tl.fromTo('#src13',{opacity:0},{opacity:1,duration:.4},315.29);
+      tl.to('#src13',{opacity:0,duration:.3},343.95);
+      tl.fromTo('#bg14',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},344.12);
+      tl.fromTo('#src14',{opacity:0},{opacity:1,duration:.4},344.42);
+      tl.to('#src14',{opacity:0,duration:.3},371.74);
+      tl.fromTo('#bg15',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},371.90);
+      tl.fromTo('#src15',{opacity:0},{opacity:1,duration:.4},372.20);
+      tl.to('#src15',{opacity:0,duration:.3},398.97);
+      tl.fromTo('#bg16',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},399.14);
+      tl.fromTo('#src16',{opacity:0},{opacity:1,duration:.4},399.44);
+      tl.to('#src16',{opacity:0,duration:.3},426.28);
+      tl.fromTo('#bg17',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},426.45);
+      tl.fromTo('#src17',{opacity:0},{opacity:1,duration:.4},426.75);
+      tl.to('#src17',{opacity:0,duration:.3},450.69);
+      tl.fromTo('#bg18',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},450.86);
+      tl.fromTo('#src18',{opacity:0},{opacity:1,duration:.4},451.16);
+      tl.to('#src18',{opacity:0,duration:.3},483.44);
+      tl.fromTo('#bg19',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},483.61);
+      tl.fromTo('#bg19-v',{scale:1.0},{scale:1.09,duration:14.30,ease:'none'},483.61);
+      tl.fromTo('#src19',{opacity:0},{opacity:1,duration:.4},483.91);
+      tl.to('#src19',{opacity:0,duration:.3},497.26);
+      tl.fromTo('#bg20',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},497.43);
+      tl.fromTo('#src20',{opacity:0},{opacity:1,duration:.4},497.73);
+      tl.to('#src20',{opacity:0,duration:.3},523.64);
+      tl.fromTo('#bg21',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},523.82);
+      tl.fromTo('#src21',{opacity:0},{opacity:1,duration:.4},524.12);
+      tl.to('#src21',{opacity:0,duration:.3},555.10);
+      tl.fromTo('#bg22',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},555.26);
+      tl.fromTo('#src22',{opacity:0},{opacity:1,duration:.4},555.56);
+      tl.to('#src22',{opacity:0,duration:.3},584.79);
+      tl.fromTo('#bg23',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},584.96);
+      tl.fromTo('#src23',{opacity:0},{opacity:1,duration:.4},585.26);
+      tl.to('#src23',{opacity:0,duration:.3},618.86);
+      tl.fromTo('#bg24',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},619.03);
+      tl.fromTo('#src24',{opacity:0},{opacity:1,duration:.4},619.33);
+      tl.to('#src24',{opacity:0,duration:.3},643.68);
+      tl.fromTo('#bg25',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},643.86);
+      tl.fromTo('#src25',{opacity:0},{opacity:1,duration:.4},644.15);
+      tl.to('#src25',{opacity:0,duration:.3},669.28);
+      tl.fromTo('#bg26',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},669.45);
+      tl.fromTo('#src26',{opacity:0},{opacity:1,duration:.4},669.75);
+      tl.to('#src26',{opacity:0,duration:.3},690.14);
+      tl.fromTo('#bg27',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},690.31);
+      tl.fromTo('#bg27-v',{scale:1.0},{scale:1.09,duration:17.09,ease:'none'},690.31);
+      tl.fromTo('#src27',{opacity:0},{opacity:1,duration:.4},690.61);
+      tl.to('#src27',{opacity:0,duration:.3},706.75);
+      tl.fromTo('#bg28',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},706.92);
+      tl.fromTo('#src28',{opacity:0},{opacity:1,duration:.4},707.22);
+      tl.to('#src28',{opacity:0,duration:.3},734.24);
+      tl.fromTo('#bg29',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},734.41);
+      tl.fromTo('#src29',{opacity:0},{opacity:1,duration:.4},734.71);
+      tl.to('#src29',{opacity:0,duration:.3},764.15);
+      tl.fromTo('#bg30',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},764.32);
+      tl.fromTo('#src30',{opacity:0},{opacity:1,duration:.4},764.62);
+      tl.to('#src30',{opacity:0,duration:.3},787.73);
+      tl.fromTo('#bg31',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},787.90);
+      tl.fromTo('#src31',{opacity:0},{opacity:1,duration:.4},788.20);
+      tl.to('#src31',{opacity:0,duration:.3},815.21);
+      tl.fromTo('#bg32',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},815.38);
+      tl.fromTo('#src32',{opacity:0},{opacity:1,duration:.4},815.68);
+      tl.to('#src32',{opacity:0,duration:.3},847.62);
+      tl.fromTo('#bg33',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},847.78);
+      tl.fromTo('#src33',{opacity:0},{opacity:1,duration:.4},848.08);
+      tl.to('#src33',{opacity:0,duration:.3},880.80);
+      tl.fromTo('#bg34',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},880.97);
+      tl.fromTo('#src34',{opacity:0},{opacity:1,duration:.4},881.27);
+      tl.to('#src34',{opacity:0,duration:.3},893.32);
+      tl.fromTo('#bg35',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},893.49);
+      tl.fromTo('#bg35-v',{scale:1.0},{scale:1.09,duration:33.50,ease:'none'},893.49);
+      tl.fromTo('#src35',{opacity:0},{opacity:1,duration:.4},893.79);
+      tl.to('#src35',{opacity:0,duration:.3},926.34);
+      tl.fromTo('#bg36',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},926.51);
+      tl.fromTo('#src36',{opacity:0},{opacity:1,duration:.4},926.81);
+      tl.to('#src36',{opacity:0,duration:.3},946.91);
+      tl.fromTo('#bg37',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},947.08);
+      tl.fromTo('#src37',{opacity:0},{opacity:1,duration:.4},947.38);
+      tl.to('#src37',{opacity:0,duration:.3},978.74);
+      tl.fromTo('#bg38',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},978.91);
+      tl.fromTo('#src38',{opacity:0},{opacity:1,duration:.4},979.21);
+      tl.to('#src38',{opacity:0,duration:.3},1003.67);
+      tl.fromTo('#bg39',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1003.84);
+      tl.fromTo('#src39',{opacity:0},{opacity:1,duration:.4},1004.14);
+      tl.to('#src39',{opacity:0,duration:.3},1030.61);
+      tl.fromTo('#bg40',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1030.78);
+      tl.fromTo('#src40',{opacity:0},{opacity:1,duration:.4},1031.08);
+      tl.to('#src40',{opacity:0,duration:.3},1055.54);
+      tl.fromTo('#bg41',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1055.71);
+      tl.fromTo('#src41',{opacity:0},{opacity:1,duration:.4},1056.01);
+      tl.to('#src41',{opacity:0,duration:.3},1084.50);
+      tl.fromTo('#bg42',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1084.67);
+      tl.fromTo('#src42',{opacity:0},{opacity:1,duration:.4},1084.97);
+      tl.to('#src42',{opacity:0,duration:.3},1104.14);
+      tl.fromTo('#bg43',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1104.31);
+      tl.fromTo('#bg43-v',{scale:1.0},{scale:1.09,duration:18.73,ease:'none'},1104.31);
+      tl.fromTo('#src43',{opacity:0},{opacity:1,duration:.4},1104.61);
+      tl.to('#src43',{opacity:0,duration:.3},1122.38);
+      tl.fromTo('#bg44',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1122.55);
+      tl.fromTo('#src44',{opacity:0},{opacity:1,duration:.4},1122.85);
+      tl.to('#src44',{opacity:0,duration:.3},1150.33);
+      tl.fromTo('#bg45',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1150.49);
+      tl.fromTo('#src45',{opacity:0},{opacity:1,duration:.4},1150.79);
+      tl.to('#src45',{opacity:0,duration:.3},1177.36);
+      tl.fromTo('#bg46',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1177.53);
+      tl.fromTo('#src46',{opacity:0},{opacity:1,duration:.4},1177.83);
+      tl.to('#src46',{opacity:0,duration:.3},1193.92);
+      tl.fromTo('#bg47',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1194.09);
+      tl.fromTo('#src47',{opacity:0},{opacity:1,duration:.4},1194.39);
+      tl.to('#src47',{opacity:0,duration:.3},1212.58);
+      tl.fromTo('#bg48',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1212.75);
+      tl.fromTo('#src48',{opacity:0},{opacity:1,duration:.4},1213.05);
+      tl.to('#src48',{opacity:0,duration:.3},1236.70);
+      tl.fromTo('#bg49',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1236.87);
+      tl.fromTo('#src49',{opacity:0},{opacity:1,duration:.4},1237.17);
+      tl.to('#src49',{opacity:0,duration:.3},1264.75);
+      tl.fromTo('#bg50',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1264.92);
+      tl.fromTo('#src50',{opacity:0},{opacity:1,duration:.4},1265.22);
+      tl.to('#src50',{opacity:0,duration:.3},1276.89);
+      tl.fromTo('#bg51',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1277.07);
+      tl.fromTo('#bg51-v',{scale:1.0},{scale:1.09,duration:11.89,ease:'none'},1277.07);
+      tl.fromTo('#src51',{opacity:0},{opacity:1,duration:.4},1277.37);
+      tl.to('#src51',{opacity:0,duration:.3},1288.30);
+      tl.fromTo('#bg52',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1288.47);
+      tl.fromTo('#src52',{opacity:0},{opacity:1,duration:.4},1288.77);
+      tl.to('#src52',{opacity:0,duration:.3},1320.55);
+      tl.fromTo('#bg53',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1320.72);
+      tl.fromTo('#src53',{opacity:0},{opacity:1,duration:.4},1321.02);
+      tl.to('#src53',{opacity:0,duration:.3},1350.10);
+      tl.fromTo('#bg54',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1350.27);
+      tl.fromTo('#src54',{opacity:0},{opacity:1,duration:.4},1350.57);
+      tl.to('#src54',{opacity:0,duration:.3},1380.51);
+      tl.fromTo('#bg55',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1380.68);
+      tl.fromTo('#src55',{opacity:0},{opacity:1,duration:.4},1380.98);
+      tl.to('#src55',{opacity:0,duration:.3},1412.87);
+      tl.fromTo('#bg56',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1413.04);
+      tl.fromTo('#src56',{opacity:0},{opacity:1,duration:.4},1413.34);
+      tl.to('#src56',{opacity:0,duration:.3},1443.81);
+      tl.fromTo('#bg57',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1443.98);
+      tl.fromTo('#src57',{opacity:0},{opacity:1,duration:.4},1444.28);
+      tl.to('#src57',{opacity:0,duration:.3},1474.55);
+      tl.fromTo('#bg58',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1474.72);
+      tl.fromTo('#src58',{opacity:0},{opacity:1,duration:.4},1475.02);
+      tl.to('#src58',{opacity:0,duration:.3},1510.37);
+      tl.fromTo('#bg59',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1510.54);
+      tl.fromTo('#bg59-v',{scale:1.0},{scale:1.09,duration:18.47,ease:'none'},1510.54);
+      tl.fromTo('#src59',{opacity:0},{opacity:1,duration:.4},1510.84);
+      tl.to('#src59',{opacity:0,duration:.3},1528.37);
+      tl.fromTo('#bg60',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1528.54);
+      tl.fromTo('#src60',{opacity:0},{opacity:1,duration:.4},1528.84);
+      tl.to('#src60',{opacity:0,duration:.3},1556.01);
+      tl.fromTo('#bg61',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1556.18);
+      tl.fromTo('#src61',{opacity:0},{opacity:1,duration:.4},1556.48);
+      tl.to('#src61',{opacity:0,duration:.3},1581.58);
+      tl.fromTo('#bg62',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1581.75);
+      tl.fromTo('#src62',{opacity:0},{opacity:1,duration:.4},1582.05);
+      tl.to('#src62',{opacity:0,duration:.3},1617.47);
+      tl.fromTo('#bg63',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1617.64);
+      tl.fromTo('#src63',{opacity:0},{opacity:1,duration:.4},1617.94);
+      tl.to('#src63',{opacity:0,duration:.3},1643.31);
+      tl.fromTo('#bg64',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1643.47);
+      tl.fromTo('#src64',{opacity:0},{opacity:1,duration:.4},1643.77);
+      tl.to('#src64',{opacity:0,duration:.3},1674.08);
+      tl.fromTo('#bg65',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1674.25);
+      tl.fromTo('#src65',{opacity:0},{opacity:1,duration:.4},1674.55);
+      tl.to('#src65',{opacity:0,duration:.3},1704.74);
+      tl.fromTo('#bg66',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1704.91);
+      tl.fromTo('#src66',{opacity:0},{opacity:1,duration:.4},1705.21);
+      tl.to('#src66',{opacity:0,duration:.3},1733.60);
+      tl.fromTo('#bg67',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1733.77);
+      tl.fromTo('#src67',{opacity:0},{opacity:1,duration:.4},1734.07);
+      tl.to('#src67',{opacity:0,duration:.3},1753.92);
+      tl.fromTo('#bg68',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1754.09);
+      tl.fromTo('#bg68-v',{scale:1.0},{scale:1.09,duration:21.05,ease:'none'},1754.09);
+      tl.fromTo('#src68',{opacity:0},{opacity:1,duration:.4},1754.39);
+      tl.to('#src68',{opacity:0,duration:.3},1774.49);
+      tl.fromTo('#bg69',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1774.66);
+      tl.fromTo('#bg69-v',{scale:1.0},{scale:1.09,duration:31.61,ease:'none'},1774.66);
+      tl.fromTo('#src69',{opacity:0},{opacity:1,duration:.4},1774.96);
+      tl.to('#src69',{opacity:0,duration:.3},1805.62);
+      tl.fromTo('#bg70',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1805.79);
+      tl.fromTo('#bg70-v',{scale:1.0},{scale:1.09,duration:25.02,ease:'none'},1805.79);
+      tl.fromTo('#src70',{opacity:0},{opacity:1,duration:.4},1806.09);
+      tl.to('#src70',{opacity:0,duration:.3},1830.16);
+      tl.fromTo('#bg71',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1830.33);
+      tl.fromTo('#src71',{opacity:0},{opacity:1,duration:.4},1830.63);
+      tl.to('#src71',{opacity:0,duration:.3},1845.28);
+      tl.fromTo('#bg72',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},1845.45);
+      tl.fromTo('#src72',{opacity:0},{opacity:1,duration:.4},1845.75);
+      tl.to('#src72',{opacity:0,duration:.3},1859.62);
+      tl.fromTo('#chap1',{opacity:0,y:40},{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'},107.02);
+      tl.to('#chap1',{opacity:0,y:-26,duration:.4,ease:'power1.in'},110.52);
+      tl.fromTo('#chap2',{opacity:0,y:40},{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'},303.87);
+      tl.to('#chap2',{opacity:0,y:-26,duration:.4,ease:'power1.in'},307.37);
+      tl.fromTo('#chap3',{opacity:0,y:40},{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'},483.71);
+      tl.to('#chap3',{opacity:0,y:-26,duration:.4,ease:'power1.in'},487.21);
+      tl.fromTo('#chap4',{opacity:0,y:40},{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'},690.41);
+      tl.to('#chap4',{opacity:0,y:-26,duration:.4,ease:'power1.in'},693.91);
+      tl.fromTo('#chap5',{opacity:0,y:40},{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'},893.59);
+      tl.to('#chap5',{opacity:0,y:-26,duration:.4,ease:'power1.in'},897.09);
+      tl.fromTo('#chap6',{opacity:0,y:40},{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'},1104.41);
+      tl.to('#chap6',{opacity:0,y:-26,duration:.4,ease:'power1.in'},1107.91);
+      tl.fromTo('#chap7',{opacity:0,y:40},{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'},1277.16);
+      tl.to('#chap7',{opacity:0,y:-26,duration:.4,ease:'power1.in'},1280.66);
+      tl.fromTo('#chap8',{opacity:0,y:40},{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'},1510.64);
+      tl.to('#chap8',{opacity:0,y:-26,duration:.4,ease:'power1.in'},1514.14);
+      tl.fromTo('#sub0',{opacity:0},{opacity:1,duration:.18},0.25);
+      tl.to('#sub0',{opacity:0,duration:.14},7.37);
+      tl.fromTo('#sub1',{opacity:0},{opacity:1,duration:.18},7.42);
+      tl.to('#sub1',{opacity:0,duration:.14},14.53);
+      tl.fromTo('#sub2',{opacity:0},{opacity:1,duration:.18},14.58);
+      tl.to('#sub2',{opacity:0,duration:.14},22.45);
+      tl.fromTo('#sub3',{opacity:0},{opacity:1,duration:.18},22.50);
+      tl.to('#sub3',{opacity:0,duration:.14},28.82);
+      tl.fromTo('#sub4',{opacity:0},{opacity:1,duration:.18},28.87);
+      tl.to('#sub4',{opacity:0,duration:.14},30.55);
+      tl.fromTo('#sub5',{opacity:0},{opacity:1,duration:.18},30.86);
+      tl.to('#sub5',{opacity:0,duration:.14},38.01);
+      tl.fromTo('#sub6',{opacity:0},{opacity:1,duration:.18},38.06);
+      tl.to('#sub6',{opacity:0,duration:.14},46.24);
+      tl.fromTo('#sub7',{opacity:0},{opacity:1,duration:.18},46.29);
+      tl.to('#sub7',{opacity:0,duration:.14},50.19);
+      tl.fromTo('#sub8',{opacity:0},{opacity:1,duration:.18},50.50);
+      tl.to('#sub8',{opacity:0,duration:.14},57.63);
+      tl.fromTo('#sub9',{opacity:0},{opacity:1,duration:.18},57.68);
+      tl.to('#sub9',{opacity:0,duration:.14},64.50);
+      tl.fromTo('#sub10',{opacity:0},{opacity:1,duration:.18},64.55);
+      tl.to('#sub10',{opacity:0,duration:.14},70.81);
+      tl.fromTo('#sub11',{opacity:0},{opacity:1,duration:.18},71.12);
+      tl.to('#sub11',{opacity:0,duration:.14},78.01);
+      tl.fromTo('#sub12',{opacity:0},{opacity:1,duration:.18},78.06);
+      tl.to('#sub12',{opacity:0,duration:.14},86.02);
+      tl.fromTo('#sub13',{opacity:0},{opacity:1,duration:.18},86.07);
+      tl.to('#sub13',{opacity:0,duration:.14},94.21);
+      tl.fromTo('#sub14',{opacity:0},{opacity:1,duration:.18},94.26);
+      tl.to('#sub14',{opacity:0,duration:.14},102.40);
+      tl.fromTo('#sub15',{opacity:0},{opacity:1,duration:.18},102.45);
+      tl.to('#sub15',{opacity:0,duration:.14},105.96);
+      tl.fromTo('#sub16',{opacity:0},{opacity:1,duration:.18},106.92);
+      tl.to('#sub16',{opacity:0,duration:.14},114.18);
+      tl.fromTo('#sub17',{opacity:0},{opacity:1,duration:.18},114.23);
+      tl.to('#sub17',{opacity:0,duration:.14},120.54);
+      tl.fromTo('#sub18',{opacity:0},{opacity:1,duration:.18},120.59);
+      tl.to('#sub18',{opacity:0,duration:.14},127.17);
+      tl.fromTo('#sub19',{opacity:0},{opacity:1,duration:.18},127.22);
+      tl.to('#sub19',{opacity:0,duration:.14},132.21);
+      tl.fromTo('#sub20',{opacity:0},{opacity:1,duration:.18},132.52);
+      tl.to('#sub20',{opacity:0,duration:.14},141.34);
+      tl.fromTo('#sub21',{opacity:0},{opacity:1,duration:.18},141.39);
+      tl.to('#sub21',{opacity:0,duration:.14},150.72);
+      tl.fromTo('#sub22',{opacity:0},{opacity:1,duration:.18},150.78);
+      tl.to('#sub22',{opacity:0,duration:.14},155.20);
+      tl.fromTo('#sub23',{opacity:0},{opacity:1,duration:.18},155.51);
+      tl.to('#sub23',{opacity:0,duration:.14},163.52);
+      tl.fromTo('#sub24',{opacity:0},{opacity:1,duration:.18},163.57);
+      tl.to('#sub24',{opacity:0,duration:.14},171.59);
+      tl.fromTo('#sub25',{opacity:0},{opacity:1,duration:.18},171.64);
+      tl.to('#sub25',{opacity:0,duration:.14},179.48);
+      tl.fromTo('#sub26',{opacity:0},{opacity:1,duration:.18},179.53);
+      tl.to('#sub26',{opacity:0,duration:.14},182.23);
+      tl.fromTo('#sub27',{opacity:0},{opacity:1,duration:.18},182.54);
+      tl.to('#sub27',{opacity:0,duration:.14},190.35);
+      tl.fromTo('#sub28',{opacity:0},{opacity:1,duration:.18},190.41);
+      tl.to('#sub28',{opacity:0,duration:.14},197.93);
+      tl.fromTo('#sub29',{opacity:0},{opacity:1,duration:.18},197.98);
+      tl.to('#sub29',{opacity:0,duration:.14},205.03);
+      tl.fromTo('#sub30',{opacity:0},{opacity:1,duration:.18},205.08);
+      tl.to('#sub30',{opacity:0,duration:.14},208.32);
+      tl.fromTo('#sub31',{opacity:0},{opacity:1,duration:.18},208.63);
+      tl.to('#sub31',{opacity:0,duration:.14},217.72);
+      tl.fromTo('#sub32',{opacity:0},{opacity:1,duration:.18},217.76);
+      tl.to('#sub32',{opacity:0,duration:.14},227.16);
+      tl.fromTo('#sub33',{opacity:0},{opacity:1,duration:.18},227.21);
+      tl.to('#sub33',{opacity:0,duration:.14},231.97);
+      tl.fromTo('#sub34',{opacity:0},{opacity:1,duration:.18},232.28);
+      tl.to('#sub34',{opacity:0,duration:.14},239.85);
+      tl.fromTo('#sub35',{opacity:0},{opacity:1,duration:.18},239.90);
+      tl.to('#sub35',{opacity:0,duration:.14},247.19);
+      tl.fromTo('#sub36',{opacity:0},{opacity:1,duration:.18},247.24);
+      tl.to('#sub36',{opacity:0,duration:.14},253.88);
+      tl.fromTo('#sub37',{opacity:0},{opacity:1,duration:.18},253.93);
+      tl.to('#sub37',{opacity:0,duration:.14},259.94);
+      tl.fromTo('#sub38',{opacity:0},{opacity:1,duration:.18},260.25);
+      tl.to('#sub38',{opacity:0,duration:.14},267.57);
+      tl.fromTo('#sub39',{opacity:0},{opacity:1,duration:.18},267.62);
+      tl.to('#sub39',{opacity:0,duration:.14},274.78);
+      tl.fromTo('#sub40',{opacity:0},{opacity:1,duration:.18},274.83);
+      tl.to('#sub40',{opacity:0,duration:.14},282.48);
+      tl.fromTo('#sub41',{opacity:0},{opacity:1,duration:.18},282.53);
+      tl.to('#sub41',{opacity:0,duration:.14},285.16);
+      tl.fromTo('#sub42',{opacity:0},{opacity:1,duration:.18},285.47);
+      tl.to('#sub42',{opacity:0,duration:.14},292.06);
+      tl.fromTo('#sub43',{opacity:0},{opacity:1,duration:.18},292.11);
+      tl.to('#sub43',{opacity:0,duration:.14},299.12);
+      tl.fromTo('#sub44',{opacity:0},{opacity:1,duration:.18},299.17);
+      tl.to('#sub44',{opacity:0,duration:.14},302.81);
+      tl.fromTo('#sub45',{opacity:0},{opacity:1,duration:.18},303.77);
+      tl.to('#sub45',{opacity:0,duration:.14},311.59);
+      tl.fromTo('#sub46',{opacity:0},{opacity:1,duration:.18},311.64);
+      tl.to('#sub46',{opacity:0,duration:.14},314.68);
+      tl.fromTo('#sub47',{opacity:0},{opacity:1,duration:.18},314.99);
+      tl.to('#sub47',{opacity:0,duration:.14},322.65);
+      tl.fromTo('#sub48',{opacity:0},{opacity:1,duration:.18},322.70);
+      tl.to('#sub48',{opacity:0,duration:.14},329.64);
+      tl.fromTo('#sub49',{opacity:0},{opacity:1,duration:.18},329.69);
+      tl.to('#sub49',{opacity:0,duration:.14},337.31);
+      tl.fromTo('#sub50',{opacity:0},{opacity:1,duration:.18},337.36);
+      tl.to('#sub50',{opacity:0,duration:.14},343.81);
+      tl.fromTo('#sub51',{opacity:0},{opacity:1,duration:.18},344.12);
+      tl.to('#sub51',{opacity:0,duration:.14},351.94);
+      tl.fromTo('#sub52',{opacity:0},{opacity:1,duration:.18},351.99);
+      tl.to('#sub52',{opacity:0,duration:.14},360.21);
+      tl.fromTo('#sub53',{opacity:0},{opacity:1,duration:.18},360.26);
+      tl.to('#sub53',{opacity:0,duration:.14},368.26);
+      tl.fromTo('#sub54',{opacity:0},{opacity:1,duration:.18},368.31);
+      tl.to('#sub54',{opacity:0,duration:.14},371.60);
+      tl.fromTo('#sub55',{opacity:0},{opacity:1,duration:.18},371.90);
+      tl.to('#sub55',{opacity:0,duration:.14},378.71);
+      tl.fromTo('#sub56',{opacity:0},{opacity:1,duration:.18},378.76);
+      tl.to('#sub56',{opacity:0,duration:.14},385.86);
+      tl.fromTo('#sub57',{opacity:0},{opacity:1,duration:.18},385.91);
+      tl.to('#sub57',{opacity:0,duration:.14},392.35);
+      tl.fromTo('#sub58',{opacity:0},{opacity:1,duration:.18},392.40);
+      tl.to('#sub58',{opacity:0,duration:.14},398.83);
+      tl.fromTo('#sub59',{opacity:0},{opacity:1,duration:.18},399.14);
+      tl.to('#sub59',{opacity:0,duration:.14},406.87);
+      tl.fromTo('#sub60',{opacity:0},{opacity:1,duration:.18},406.92);
+      tl.to('#sub60',{opacity:0,duration:.14},412.51);
+      tl.fromTo('#sub61',{opacity:0},{opacity:1,duration:.18},412.56);
+      tl.to('#sub61',{opacity:0,duration:.14},420.27);
+      tl.fromTo('#sub62',{opacity:0},{opacity:1,duration:.18},420.32);
+      tl.to('#sub62',{opacity:0,duration:.14},426.14);
+      tl.fromTo('#sub63',{opacity:0},{opacity:1,duration:.18},426.45);
+      tl.to('#sub63',{opacity:0,duration:.14},433.75);
+      tl.fromTo('#sub64',{opacity:0},{opacity:1,duration:.18},433.80);
+      tl.to('#sub64',{opacity:0,duration:.14},441.49);
+      tl.fromTo('#sub65',{opacity:0},{opacity:1,duration:.18},441.54);
+      tl.to('#sub65',{opacity:0,duration:.14},448.16);
+      tl.fromTo('#sub66',{opacity:0},{opacity:1,duration:.18},448.21);
+      tl.to('#sub66',{opacity:0,duration:.14},450.55);
+      tl.fromTo('#sub67',{opacity:0},{opacity:1,duration:.18},450.86);
+      tl.to('#sub67',{opacity:0,duration:.14},455.50);
+      tl.fromTo('#sub68',{opacity:0},{opacity:1,duration:.18},455.55);
+      tl.to('#sub68',{opacity:0,duration:.14},462.98);
+      tl.fromTo('#sub69',{opacity:0},{opacity:1,duration:.18},463.02);
+      tl.to('#sub69',{opacity:0,duration:.14},470.15);
+      tl.fromTo('#sub70',{opacity:0},{opacity:1,duration:.18},470.20);
+      tl.to('#sub70',{opacity:0,duration:.14},477.17);
+      tl.fromTo('#sub71',{opacity:0},{opacity:1,duration:.18},477.22);
+      tl.to('#sub71',{opacity:0,duration:.14},482.65);
+      tl.fromTo('#sub72',{opacity:0},{opacity:1,duration:.18},483.61);
+      tl.to('#sub72',{opacity:0,duration:.14},491.91);
+      tl.fromTo('#sub73',{opacity:0},{opacity:1,duration:.18},491.96);
+      tl.to('#sub73',{opacity:0,duration:.14},497.12);
+      tl.fromTo('#sub74',{opacity:0},{opacity:1,duration:.18},497.43);
+      tl.to('#sub74',{opacity:0,duration:.14},506.13);
+      tl.fromTo('#sub75',{opacity:0},{opacity:1,duration:.18},506.18);
+      tl.to('#sub75',{opacity:0,duration:.14},514.32);
+      tl.fromTo('#sub76',{opacity:0},{opacity:1,duration:.18},514.37);
+      tl.to('#sub76',{opacity:0,duration:.14},522.59);
+      tl.fromTo('#sub77',{opacity:0},{opacity:1,duration:.18},522.64);
+      tl.to('#sub77',{opacity:0,duration:.14},523.50);
+      tl.fromTo('#sub78',{opacity:0},{opacity:1,duration:.18},523.82);
+      tl.to('#sub78',{opacity:0,duration:.14},530.32);
+      tl.fromTo('#sub79',{opacity:0},{opacity:1,duration:.18},530.37);
+      tl.to('#sub79',{opacity:0,duration:.14},537.87);
+      tl.fromTo('#sub80',{opacity:0},{opacity:1,duration:.18},537.92);
+      tl.to('#sub80',{opacity:0,duration:.14},545.42);
+      tl.fromTo('#sub81',{opacity:0},{opacity:1,duration:.18},545.47);
+      tl.to('#sub81',{opacity:0,duration:.14},552.21);
+      tl.fromTo('#sub82',{opacity:0},{opacity:1,duration:.18},552.26);
+      tl.to('#sub82',{opacity:0,duration:.14},554.96);
+      tl.fromTo('#sub83',{opacity:0},{opacity:1,duration:.18},555.26);
+      tl.to('#sub83',{opacity:0,duration:.14},563.39);
+      tl.fromTo('#sub84',{opacity:0},{opacity:1,duration:.18},563.44);
+      tl.to('#sub84',{opacity:0,duration:.14},570.84);
+      tl.fromTo('#sub85',{opacity:0},{opacity:1,duration:.18},570.89);
+      tl.to('#sub85',{opacity:0,duration:.14},578.65);
+      tl.fromTo('#sub86',{opacity:0},{opacity:1,duration:.18},578.70);
+      tl.to('#sub86',{opacity:0,duration:.14},584.65);
+      tl.fromTo('#sub87',{opacity:0},{opacity:1,duration:.18},584.96);
+      tl.to('#sub87',{opacity:0,duration:.14},593.60);
+      tl.fromTo('#sub88',{opacity:0},{opacity:1,duration:.18},593.65);
+      tl.to('#sub88',{opacity:0,duration:.14},602.19);
+      tl.fromTo('#sub89',{opacity:0},{opacity:1,duration:.18},602.24);
+      tl.to('#sub89',{opacity:0,duration:.14},610.87);
+      tl.fromTo('#sub90',{opacity:0},{opacity:1,duration:.18},610.92);
+      tl.to('#sub90',{opacity:0,duration:.14},618.72);
+      tl.fromTo('#sub91',{opacity:0},{opacity:1,duration:.18},619.03);
+      tl.to('#sub91',{opacity:0,duration:.14},625.54);
+      tl.fromTo('#sub92',{opacity:0},{opacity:1,duration:.18},625.60);
+      tl.to('#sub92',{opacity:0,duration:.14},632.59);
+      tl.fromTo('#sub93',{opacity:0},{opacity:1,duration:.18},632.64);
+      tl.to('#sub93',{opacity:0,duration:.14},640.43);
+      tl.fromTo('#sub94',{opacity:0},{opacity:1,duration:.18},640.48);
+      tl.to('#sub94',{opacity:0,duration:.14},643.54);
+      tl.fromTo('#sub95',{opacity:0},{opacity:1,duration:.18},643.86);
+      tl.to('#sub95',{opacity:0,duration:.14},651.19);
+      tl.fromTo('#sub96',{opacity:0},{opacity:1,duration:.18},651.24);
+      tl.to('#sub96',{opacity:0,duration:.14},658.93);
+      tl.fromTo('#sub97',{opacity:0},{opacity:1,duration:.18},658.98);
+      tl.to('#sub97',{opacity:0,duration:.14},666.15);
+      tl.fromTo('#sub98',{opacity:0},{opacity:1,duration:.18},666.20);
+      tl.to('#sub98',{opacity:0,duration:.14},669.14);
+      tl.fromTo('#sub99',{opacity:0},{opacity:1,duration:.18},669.45);
+      tl.to('#sub99',{opacity:0,duration:.14},677.15);
+      tl.fromTo('#sub100',{opacity:0},{opacity:1,duration:.18},677.20);
+      tl.to('#sub100',{opacity:0,duration:.14},685.08);
+      tl.fromTo('#sub101',{opacity:0},{opacity:1,duration:.18},685.13);
+      tl.to('#sub101',{opacity:0,duration:.14},689.35);
+      tl.fromTo('#sub102',{opacity:0},{opacity:1,duration:.18},690.31);
+      tl.to('#sub102',{opacity:0,duration:.14},698.15);
+      tl.fromTo('#sub103',{opacity:0},{opacity:1,duration:.18},698.20);
+      tl.to('#sub103',{opacity:0,duration:.14},705.17);
+      tl.fromTo('#sub104',{opacity:0},{opacity:1,duration:.18},705.22);
+      tl.to('#sub104',{opacity:0,duration:.14},706.61);
+      tl.fromTo('#sub105',{opacity:0},{opacity:1,duration:.18},706.92);
+      tl.to('#sub105',{opacity:0,duration:.14},715.07);
+      tl.fromTo('#sub106',{opacity:0},{opacity:1,duration:.18},715.12);
+      tl.to('#sub106',{opacity:0,duration:.14},722.49);
+      tl.fromTo('#sub107',{opacity:0},{opacity:1,duration:.18},722.54);
+      tl.to('#sub107',{opacity:0,duration:.14},732.01);
+      tl.fromTo('#sub108',{opacity:0},{opacity:1,duration:.18},732.07);
+      tl.to('#sub108',{opacity:0,duration:.14},734.10);
+      tl.fromTo('#sub109',{opacity:0},{opacity:1,duration:.18},734.41);
+      tl.to('#sub109',{opacity:0,duration:.14},742.14);
+      tl.fromTo('#sub110',{opacity:0},{opacity:1,duration:.18},742.19);
+      tl.to('#sub110',{opacity:0,duration:.14},750.65);
+      tl.fromTo('#sub111',{opacity:0},{opacity:1,duration:.18},750.70);
+      tl.to('#sub111',{opacity:0,duration:.14},758.39);
+      tl.fromTo('#sub112',{opacity:0},{opacity:1,duration:.18},758.44);
+      tl.to('#sub112',{opacity:0,duration:.14},764.01);
+      tl.fromTo('#sub113',{opacity:0},{opacity:1,duration:.18},764.32);
+      tl.to('#sub113',{opacity:0,duration:.14},771.46);
+      tl.fromTo('#sub114',{opacity:0},{opacity:1,duration:.18},771.50);
+      tl.to('#sub114',{opacity:0,duration:.14},779.16);
+      tl.fromTo('#sub115',{opacity:0},{opacity:1,duration:.18},779.21);
+      tl.to('#sub115',{opacity:0,duration:.14},786.87);
+      tl.fromTo('#sub116',{opacity:0},{opacity:1,duration:.18},786.92);
+      tl.to('#sub116',{opacity:0,duration:.14},787.59);
+      tl.fromTo('#sub117',{opacity:0},{opacity:1,duration:.18},787.90);
+      tl.to('#sub117',{opacity:0,duration:.14},796.14);
+      tl.fromTo('#sub118',{opacity:0},{opacity:1,duration:.18},796.19);
+      tl.to('#sub118',{opacity:0,duration:.14},804.92);
+      tl.fromTo('#sub119',{opacity:0},{opacity:1,duration:.18},804.97);
+      tl.to('#sub119',{opacity:0,duration:.14},813.13);
+      tl.fromTo('#sub120',{opacity:0},{opacity:1,duration:.18},813.18);
+      tl.to('#sub120',{opacity:0,duration:.14},815.07);
+      tl.fromTo('#sub121',{opacity:0},{opacity:1,duration:.18},815.38);
+      tl.to('#sub121',{opacity:0,duration:.14},822.87);
+      tl.fromTo('#sub122',{opacity:0},{opacity:1,duration:.18},822.92);
+      tl.to('#sub122',{opacity:0,duration:.14},830.72);
+      tl.fromTo('#sub123',{opacity:0},{opacity:1,duration:.18},830.77);
+      tl.to('#sub123',{opacity:0,duration:.14},838.33);
+      tl.fromTo('#sub124',{opacity:0},{opacity:1,duration:.18},838.38);
+      tl.to('#sub124',{opacity:0,duration:.14},846.38);
+      tl.fromTo('#sub125',{opacity:0},{opacity:1,duration:.18},846.43);
+      tl.to('#sub125',{opacity:0,duration:.14},847.48);
+      tl.fromTo('#sub126',{opacity:0},{opacity:1,duration:.18},847.78);
+      tl.to('#sub126',{opacity:0,duration:.14},855.16);
+      tl.fromTo('#sub127',{opacity:0},{opacity:1,duration:.18},855.22);
+      tl.to('#sub127',{opacity:0,duration:.14},862.37);
+      tl.fromTo('#sub128',{opacity:0},{opacity:1,duration:.18},862.42);
+      tl.to('#sub128',{opacity:0,duration:.14},868.89);
+      tl.fromTo('#sub129',{opacity:0},{opacity:1,duration:.18},868.94);
+      tl.to('#sub129',{opacity:0,duration:.14},876.15);
+      tl.fromTo('#sub130',{opacity:0},{opacity:1,duration:.18},876.20);
+      tl.to('#sub130',{opacity:0,duration:.14},880.66);
+      tl.fromTo('#sub131',{opacity:0},{opacity:1,duration:.18},880.97);
+      tl.to('#sub131',{opacity:0,duration:.14},887.34);
+      tl.fromTo('#sub132',{opacity:0},{opacity:1,duration:.18},887.38);
+      tl.to('#sub132',{opacity:0,duration:.14},892.53);
+      tl.fromTo('#sub133',{opacity:0},{opacity:1,duration:.18},893.49);
+      tl.to('#sub133',{opacity:0,duration:.14},901.48);
+      tl.fromTo('#sub134',{opacity:0},{opacity:1,duration:.18},901.53);
+      tl.to('#sub134',{opacity:0,duration:.14},908.66);
+      tl.fromTo('#sub135',{opacity:0},{opacity:1,duration:.18},908.71);
+      tl.to('#sub135',{opacity:0,duration:.14},916.33);
+      tl.fromTo('#sub136',{opacity:0},{opacity:1,duration:.18},916.38);
+      tl.to('#sub136',{opacity:0,duration:.14},924.18);
+      tl.fromTo('#sub137',{opacity:0},{opacity:1,duration:.18},924.23);
+      tl.to('#sub137',{opacity:0,duration:.14},926.20);
+      tl.fromTo('#sub138',{opacity:0},{opacity:1,duration:.18},926.51);
+      tl.to('#sub138',{opacity:0,duration:.14},935.00);
+      tl.fromTo('#sub139',{opacity:0},{opacity:1,duration:.18},935.05);
+      tl.to('#sub139',{opacity:0,duration:.14},943.82);
+      tl.fromTo('#sub140',{opacity:0},{opacity:1,duration:.18},943.87);
+      tl.to('#sub140',{opacity:0,duration:.14},946.77);
+      tl.fromTo('#sub141',{opacity:0},{opacity:1,duration:.18},947.08);
+      tl.to('#sub141',{opacity:0,duration:.14},954.49);
+      tl.fromTo('#sub142',{opacity:0},{opacity:1,duration:.18},954.54);
+      tl.to('#sub142',{opacity:0,duration:.14},962.14);
+      tl.fromTo('#sub143',{opacity:0},{opacity:1,duration:.18},962.19);
+      tl.to('#sub143',{opacity:0,duration:.14},970.21);
+      tl.fromTo('#sub144',{opacity:0},{opacity:1,duration:.18},970.26);
+      tl.to('#sub144',{opacity:0,duration:.14},978.60);
+      tl.fromTo('#sub145',{opacity:0},{opacity:1,duration:.18},978.91);
+      tl.to('#sub145',{opacity:0,duration:.14},986.56);
+      tl.fromTo('#sub146',{opacity:0},{opacity:1,duration:.18},986.61);
+      tl.to('#sub146',{opacity:0,duration:.14},994.44);
+      tl.fromTo('#sub147',{opacity:0},{opacity:1,duration:.18},994.49);
+      tl.to('#sub147',{opacity:0,duration:.14},1002.72);
+      tl.fromTo('#sub148',{opacity:0},{opacity:1,duration:.18},1002.77);
+      tl.to('#sub148',{opacity:0,duration:.14},1003.53);
+      tl.fromTo('#sub149',{opacity:0},{opacity:1,duration:.18},1003.84);
+      tl.to('#sub149',{opacity:0,duration:.14},1010.96);
+      tl.fromTo('#sub150',{opacity:0},{opacity:1,duration:.18},1011.01);
+      tl.to('#sub150',{opacity:0,duration:.14},1018.72);
+      tl.fromTo('#sub151',{opacity:0},{opacity:1,duration:.18},1018.77);
+      tl.to('#sub151',{opacity:0,duration:.14},1026.22);
+      tl.fromTo('#sub152',{opacity:0},{opacity:1,duration:.18},1026.27);
+      tl.to('#sub152',{opacity:0,duration:.14},1030.46);
+      tl.fromTo('#sub153',{opacity:0},{opacity:1,duration:.18},1030.78);
+      tl.to('#sub153',{opacity:0,duration:.14},1038.27);
+      tl.fromTo('#sub154',{opacity:0},{opacity:1,duration:.18},1038.32);
+      tl.to('#sub154',{opacity:0,duration:.14},1044.31);
+      tl.fromTo('#sub155',{opacity:0},{opacity:1,duration:.18},1044.36);
+      tl.to('#sub155',{opacity:0,duration:.14},1051.71);
+      tl.fromTo('#sub156',{opacity:0},{opacity:1,duration:.18},1051.76);
+      tl.to('#sub156',{opacity:0,duration:.14},1055.40);
+      tl.fromTo('#sub157',{opacity:0},{opacity:1,duration:.18},1055.71);
+      tl.to('#sub157',{opacity:0,duration:.14},1063.32);
+      tl.fromTo('#sub158',{opacity:0},{opacity:1,duration:.18},1063.37);
+      tl.to('#sub158',{opacity:0,duration:.14},1071.59);
+      tl.fromTo('#sub159',{opacity:0},{opacity:1,duration:.18},1071.64);
+      tl.to('#sub159',{opacity:0,duration:.14},1078.96);
+      tl.fromTo('#sub160',{opacity:0},{opacity:1,duration:.18},1079.01);
+      tl.to('#sub160',{opacity:0,duration:.14},1084.36);
+      tl.fromTo('#sub161',{opacity:0},{opacity:1,duration:.18},1084.67);
+      tl.to('#sub161',{opacity:0,duration:.14},1092.45);
+      tl.fromTo('#sub162',{opacity:0},{opacity:1,duration:.18},1092.50);
+      tl.to('#sub162',{opacity:0,duration:.14},1100.11);
+      tl.fromTo('#sub163',{opacity:0},{opacity:1,duration:.18},1100.16);
+      tl.to('#sub163',{opacity:0,duration:.14},1103.35);
+      tl.fromTo('#sub164',{opacity:0},{opacity:1,duration:.18},1104.31);
+      tl.to('#sub164',{opacity:0,duration:.14},1111.42);
+      tl.fromTo('#sub165',{opacity:0},{opacity:1,duration:.18},1111.47);
+      tl.to('#sub165',{opacity:0,duration:.14},1118.81);
+      tl.fromTo('#sub166',{opacity:0},{opacity:1,duration:.18},1118.86);
+      tl.to('#sub166',{opacity:0,duration:.14},1122.24);
+      tl.fromTo('#sub167',{opacity:0},{opacity:1,duration:.18},1122.55);
+      tl.to('#sub167',{opacity:0,duration:.14},1130.85);
+      tl.fromTo('#sub168',{opacity:0},{opacity:1,duration:.18},1130.89);
+      tl.to('#sub168',{opacity:0,duration:.14},1139.49);
+      tl.fromTo('#sub169',{opacity:0},{opacity:1,duration:.18},1139.54);
+      tl.to('#sub169',{opacity:0,duration:.14},1146.70);
+      tl.fromTo('#sub170',{opacity:0},{opacity:1,duration:.18},1146.75);
+      tl.to('#sub170',{opacity:0,duration:.14},1150.18);
+      tl.fromTo('#sub171',{opacity:0},{opacity:1,duration:.18},1150.49);
+      tl.to('#sub171',{opacity:0,duration:.14},1157.92);
+      tl.fromTo('#sub172',{opacity:0},{opacity:1,duration:.18},1157.97);
+      tl.to('#sub172',{opacity:0,duration:.14},1164.99);
+      tl.fromTo('#sub173',{opacity:0},{opacity:1,duration:.18},1165.04);
+      tl.to('#sub173',{opacity:0,duration:.14},1171.71);
+      tl.fromTo('#sub174',{opacity:0},{opacity:1,duration:.18},1171.76);
+      tl.to('#sub174',{opacity:0,duration:.14},1177.22);
+      tl.fromTo('#sub175',{opacity:0},{opacity:1,duration:.18},1177.53);
+      tl.to('#sub175',{opacity:0,duration:.14},1184.87);
+      tl.fromTo('#sub176',{opacity:0},{opacity:1,duration:.18},1184.92);
+      tl.to('#sub176',{opacity:0,duration:.14},1192.10);
+      tl.fromTo('#sub177',{opacity:0},{opacity:1,duration:.18},1192.15);
+      tl.to('#sub177',{opacity:0,duration:.14},1193.78);
+      tl.fromTo('#sub178',{opacity:0},{opacity:1,duration:.18},1194.09);
+      tl.to('#sub178',{opacity:0,duration:.14},1201.90);
+      tl.fromTo('#sub179',{opacity:0},{opacity:1,duration:.18},1201.95);
+      tl.to('#sub179',{opacity:0,duration:.14},1210.72);
+      tl.fromTo('#sub180',{opacity:0},{opacity:1,duration:.18},1210.77);
+      tl.to('#sub180',{opacity:0,duration:.14},1212.44);
+      tl.fromTo('#sub181',{opacity:0},{opacity:1,duration:.18},1212.75);
+      tl.to('#sub181',{opacity:0,duration:.14},1218.95);
+      tl.fromTo('#sub182',{opacity:0},{opacity:1,duration:.18},1219.00);
+      tl.to('#sub182',{opacity:0,duration:.14},1226.26);
+      tl.fromTo('#sub183',{opacity:0},{opacity:1,duration:.18},1226.31);
+      tl.to('#sub183',{opacity:0,duration:.14},1233.90);
+      tl.fromTo('#sub184',{opacity:0},{opacity:1,duration:.18},1233.95);
+      tl.to('#sub184',{opacity:0,duration:.14},1236.56);
+      tl.fromTo('#sub185',{opacity:0},{opacity:1,duration:.18},1236.87);
+      tl.to('#sub185',{opacity:0,duration:.14},1244.67);
+      tl.fromTo('#sub186',{opacity:0},{opacity:1,duration:.18},1244.72);
+      tl.to('#sub186',{opacity:0,duration:.14},1251.57);
+      tl.fromTo('#sub187',{opacity:0},{opacity:1,duration:.18},1251.62);
+      tl.to('#sub187',{opacity:0,duration:.14},1258.95);
+      tl.fromTo('#sub188',{opacity:0},{opacity:1,duration:.18},1259.00);
+      tl.to('#sub188',{opacity:0,duration:.14},1264.61);
+      tl.fromTo('#sub189',{opacity:0},{opacity:1,duration:.18},1264.92);
+      tl.to('#sub189',{opacity:0,duration:.14},1273.20);
+      tl.fromTo('#sub190',{opacity:0},{opacity:1,duration:.18},1273.26);
+      tl.to('#sub190',{opacity:0,duration:.14},1276.11);
+      tl.fromTo('#sub191',{opacity:0},{opacity:1,duration:.18},1277.07);
+      tl.to('#sub191',{opacity:0,duration:.14},1284.22);
+      tl.fromTo('#sub192',{opacity:0},{opacity:1,duration:.18},1284.27);
+      tl.to('#sub192',{opacity:0,duration:.14},1288.16);
+      tl.fromTo('#sub193',{opacity:0},{opacity:1,duration:.18},1288.47);
+      tl.to('#sub193',{opacity:0,duration:.14},1296.98);
+      tl.fromTo('#sub194',{opacity:0},{opacity:1,duration:.18},1297.03);
+      tl.to('#sub194',{opacity:0,duration:.14},1305.07);
+      tl.fromTo('#sub195',{opacity:0},{opacity:1,duration:.18},1305.12);
+      tl.to('#sub195',{opacity:0,duration:.14},1313.67);
+      tl.fromTo('#sub196',{opacity:0},{opacity:1,duration:.18},1313.72);
+      tl.to('#sub196',{opacity:0,duration:.14},1320.41);
+      tl.fromTo('#sub197',{opacity:0},{opacity:1,duration:.18},1320.72);
+      tl.to('#sub197',{opacity:0,duration:.14},1328.30);
+      tl.fromTo('#sub198',{opacity:0},{opacity:1,duration:.18},1328.35);
+      tl.to('#sub198',{opacity:0,duration:.14},1335.72);
+      tl.fromTo('#sub199',{opacity:0},{opacity:1,duration:.18},1335.77);
+      tl.to('#sub199',{opacity:0,duration:.14},1343.01);
+      tl.fromTo('#sub200',{opacity:0},{opacity:1,duration:.18},1343.06);
+      tl.to('#sub200',{opacity:0,duration:.14},1349.96);
+      tl.fromTo('#sub201',{opacity:0},{opacity:1,duration:.18},1350.27);
+      tl.to('#sub201',{opacity:0,duration:.14},1357.63);
+      tl.fromTo('#sub202',{opacity:0},{opacity:1,duration:.18},1357.68);
+      tl.to('#sub202',{opacity:0,duration:.14},1363.86);
+      tl.fromTo('#sub203',{opacity:0},{opacity:1,duration:.18},1363.91);
+      tl.to('#sub203',{opacity:0,duration:.14},1371.11);
+      tl.fromTo('#sub204',{opacity:0},{opacity:1,duration:.18},1371.16);
+      tl.to('#sub204',{opacity:0,duration:.14},1378.18);
+      tl.fromTo('#sub205',{opacity:0},{opacity:1,duration:.18},1378.23);
+      tl.to('#sub205',{opacity:0,duration:.14},1380.37);
+      tl.fromTo('#sub206',{opacity:0},{opacity:1,duration:.18},1380.68);
+      tl.to('#sub206',{opacity:0,duration:.14},1389.08);
+      tl.fromTo('#sub207',{opacity:0},{opacity:1,duration:.18},1389.13);
+      tl.to('#sub207',{opacity:0,duration:.14},1396.85);
+      tl.fromTo('#sub208',{opacity:0},{opacity:1,duration:.18},1396.90);
+      tl.to('#sub208',{opacity:0,duration:.14},1405.24);
+      tl.fromTo('#sub209',{opacity:0},{opacity:1,duration:.18},1405.29);
+      tl.to('#sub209',{opacity:0,duration:.14},1412.73);
+      tl.fromTo('#sub210',{opacity:0},{opacity:1,duration:.18},1413.04);
+      tl.to('#sub210',{opacity:0,duration:.14},1420.98);
+      tl.fromTo('#sub211',{opacity:0},{opacity:1,duration:.18},1421.03);
+      tl.to('#sub211',{opacity:0,duration:.14},1428.72);
+      tl.fromTo('#sub212',{opacity:0},{opacity:1,duration:.18},1428.77);
+      tl.to('#sub212',{opacity:0,duration:.14},1436.18);
+      tl.fromTo('#sub213',{opacity:0},{opacity:1,duration:.18},1436.23);
+      tl.to('#sub213',{opacity:0,duration:.14},1443.67);
+      tl.fromTo('#sub214',{opacity:0},{opacity:1,duration:.18},1443.98);
+      tl.to('#sub214',{opacity:0,duration:.14},1450.76);
+      tl.fromTo('#sub215',{opacity:0},{opacity:1,duration:.18},1450.81);
+      tl.to('#sub215',{opacity:0,duration:.14},1458.09);
+      tl.fromTo('#sub216',{opacity:0},{opacity:1,duration:.18},1458.14);
+      tl.to('#sub216',{opacity:0,duration:.14},1465.58);
+      tl.fromTo('#sub217',{opacity:0},{opacity:1,duration:.18},1465.63);
+      tl.to('#sub217',{opacity:0,duration:.14},1472.75);
+      tl.fromTo('#sub218',{opacity:0},{opacity:1,duration:.18},1472.80);
+      tl.to('#sub218',{opacity:0,duration:.14},1474.41);
+      tl.fromTo('#sub219',{opacity:0},{opacity:1,duration:.18},1474.72);
+      tl.to('#sub219',{opacity:0,duration:.14},1481.11);
+      tl.fromTo('#sub220',{opacity:0},{opacity:1,duration:.18},1481.16);
+      tl.to('#sub220',{opacity:0,duration:.14},1488.74);
+      tl.fromTo('#sub221',{opacity:0},{opacity:1,duration:.18},1488.79);
+      tl.to('#sub221',{opacity:0,duration:.14},1495.86);
+      tl.fromTo('#sub222',{opacity:0},{opacity:1,duration:.18},1495.91);
+      tl.to('#sub222',{opacity:0,duration:.14},1502.64);
+      tl.fromTo('#sub223',{opacity:0},{opacity:1,duration:.18},1502.69);
+      tl.to('#sub223',{opacity:0,duration:.14},1509.58);
+      tl.fromTo('#sub224',{opacity:0},{opacity:1,duration:.18},1510.54);
+      tl.to('#sub224',{opacity:0,duration:.14},1518.18);
+      tl.fromTo('#sub225',{opacity:0},{opacity:1,duration:.18},1518.23);
+      tl.to('#sub225',{opacity:0,duration:.14},1524.42);
+      tl.fromTo('#sub226',{opacity:0},{opacity:1,duration:.18},1524.47);
+      tl.to('#sub226',{opacity:0,duration:.14},1528.23);
+      tl.fromTo('#sub227',{opacity:0},{opacity:1,duration:.18},1528.54);
+      tl.to('#sub227',{opacity:0,duration:.14},1536.15);
+      tl.fromTo('#sub228',{opacity:0},{opacity:1,duration:.18},1536.20);
+      tl.to('#sub228',{opacity:0,duration:.14},1543.78);
+      tl.fromTo('#sub229',{opacity:0},{opacity:1,duration:.18},1543.83);
+      tl.to('#sub229',{opacity:0,duration:.14},1550.36);
+      tl.fromTo('#sub230',{opacity:0},{opacity:1,duration:.18},1550.41);
+      tl.to('#sub230',{opacity:0,duration:.14},1555.87);
+      tl.fromTo('#sub231',{opacity:0},{opacity:1,duration:.18},1556.18);
+      tl.to('#sub231',{opacity:0,duration:.14},1562.46);
+      tl.fromTo('#sub232',{opacity:0},{opacity:1,duration:.18},1562.51);
+      tl.to('#sub232',{opacity:0,duration:.14},1569.24);
+      tl.fromTo('#sub233',{opacity:0},{opacity:1,duration:.18},1569.29);
+      tl.to('#sub233',{opacity:0,duration:.14},1575.72);
+      tl.fromTo('#sub234',{opacity:0},{opacity:1,duration:.18},1575.77);
+      tl.to('#sub234',{opacity:0,duration:.14},1581.44);
+      tl.fromTo('#sub235',{opacity:0},{opacity:1,duration:.18},1581.75);
+      tl.to('#sub235',{opacity:0,duration:.14},1588.92);
+      tl.fromTo('#sub236',{opacity:0},{opacity:1,duration:.18},1588.97);
+      tl.to('#sub236',{opacity:0,duration:.14},1596.50);
+      tl.fromTo('#sub237',{opacity:0},{opacity:1,duration:.18},1596.55);
+      tl.to('#sub237',{opacity:0,duration:.14},1604.18);
+      tl.fromTo('#sub238',{opacity:0},{opacity:1,duration:.18},1604.23);
+      tl.to('#sub238',{opacity:0,duration:.14},1611.42);
+      tl.fromTo('#sub239',{opacity:0},{opacity:1,duration:.18},1611.47);
+      tl.to('#sub239',{opacity:0,duration:.14},1617.33);
+      tl.fromTo('#sub240',{opacity:0},{opacity:1,duration:.18},1617.64);
+      tl.to('#sub240',{opacity:0,duration:.14},1625.18);
+      tl.fromTo('#sub241',{opacity:0},{opacity:1,duration:.18},1625.23);
+      tl.to('#sub241',{opacity:0,duration:.14},1633.58);
+      tl.fromTo('#sub242',{opacity:0},{opacity:1,duration:.18},1633.63);
+      tl.to('#sub242',{opacity:0,duration:.14},1641.33);
+      tl.fromTo('#sub243',{opacity:0},{opacity:1,duration:.18},1641.38);
+      tl.to('#sub243',{opacity:0,duration:.14},1643.16);
+      tl.fromTo('#sub244',{opacity:0},{opacity:1,duration:.18},1643.47);
+      tl.to('#sub244',{opacity:0,duration:.14},1651.26);
+      tl.fromTo('#sub245',{opacity:0},{opacity:1,duration:.18},1651.31);
+      tl.to('#sub245',{opacity:0,duration:.14},1659.00);
+      tl.fromTo('#sub246',{opacity:0},{opacity:1,duration:.18},1659.05);
+      tl.to('#sub246',{opacity:0,duration:.14},1666.62);
+      tl.fromTo('#sub247',{opacity:0},{opacity:1,duration:.18},1666.67);
+      tl.to('#sub247',{opacity:0,duration:.14},1673.94);
+      tl.fromTo('#sub248',{opacity:0},{opacity:1,duration:.18},1674.25);
+      tl.to('#sub248',{opacity:0,duration:.14},1682.56);
+      tl.fromTo('#sub249',{opacity:0},{opacity:1,duration:.18},1682.61);
+      tl.to('#sub249',{opacity:0,duration:.14},1690.12);
+      tl.fromTo('#sub250',{opacity:0},{opacity:1,duration:.18},1690.17);
+      tl.to('#sub250',{opacity:0,duration:.14},1696.91);
+      tl.fromTo('#sub251',{opacity:0},{opacity:1,duration:.18},1696.96);
+      tl.to('#sub251',{opacity:0,duration:.14},1704.60);
+      tl.fromTo('#sub252',{opacity:0},{opacity:1,duration:.18},1704.91);
+      tl.to('#sub252',{opacity:0,duration:.14},1711.56);
+      tl.fromTo('#sub253',{opacity:0},{opacity:1,duration:.18},1711.61);
+      tl.to('#sub253',{opacity:0,duration:.14},1718.91);
+      tl.fromTo('#sub254',{opacity:0},{opacity:1,duration:.18},1718.96);
+      tl.to('#sub254',{opacity:0,duration:.14},1725.61);
+      tl.fromTo('#sub255',{opacity:0},{opacity:1,duration:.18},1725.66);
+      tl.to('#sub255',{opacity:0,duration:.14},1732.15);
+      tl.fromTo('#sub256',{opacity:0},{opacity:1,duration:.18},1732.20);
+      tl.to('#sub256',{opacity:0,duration:.14},1733.46);
+      tl.fromTo('#sub257',{opacity:0},{opacity:1,duration:.18},1733.77);
+      tl.to('#sub257',{opacity:0,duration:.14},1739.72);
+      tl.fromTo('#sub258',{opacity:0},{opacity:1,duration:.18},1739.77);
+      tl.to('#sub258',{opacity:0,duration:.14},1746.83);
+      tl.fromTo('#sub259',{opacity:0},{opacity:1,duration:.18},1746.88);
+      tl.to('#sub259',{opacity:0,duration:.14},1753.78);
+      tl.fromTo('#sub260',{opacity:0},{opacity:1,duration:.18},1754.09);
+      tl.to('#sub260',{opacity:0,duration:.14},1760.91);
+      tl.fromTo('#sub261',{opacity:0},{opacity:1,duration:.18},1760.96);
+      tl.to('#sub261',{opacity:0,duration:.14},1768.84);
+      tl.fromTo('#sub262',{opacity:0},{opacity:1,duration:.18},1768.88);
+      tl.to('#sub262',{opacity:0,duration:.14},1773.70);
+      tl.fromTo('#sub263',{opacity:0},{opacity:1,duration:.18},1774.66);
+      tl.to('#sub263',{opacity:0,duration:.14},1781.36);
+      tl.fromTo('#sub264',{opacity:0},{opacity:1,duration:.18},1781.41);
+      tl.to('#sub264',{opacity:0,duration:.14},1789.32);
+      tl.fromTo('#sub265',{opacity:0},{opacity:1,duration:.18},1789.37);
+      tl.to('#sub265',{opacity:0,duration:.14},1796.83);
+      tl.fromTo('#sub266',{opacity:0},{opacity:1,duration:.18},1796.88);
+      tl.to('#sub266',{opacity:0,duration:.14},1804.61);
+      tl.fromTo('#sub267',{opacity:0},{opacity:1,duration:.18},1804.66);
+      tl.to('#sub267',{opacity:0,duration:.14},1805.48);
+      tl.fromTo('#sub268',{opacity:0},{opacity:1,duration:.18},1805.79);
+      tl.to('#sub268',{opacity:0,duration:.14},1813.83);
+      tl.fromTo('#sub269',{opacity:0},{opacity:1,duration:.18},1813.88);
+      tl.to('#sub269',{opacity:0,duration:.14},1822.02);
+      tl.fromTo('#sub270',{opacity:0},{opacity:1,duration:.18},1822.07);
+      tl.to('#sub270',{opacity:0,duration:.14},1830.02);
+      tl.fromTo('#sub271',{opacity:0},{opacity:1,duration:.18},1830.33);
+      tl.to('#sub271',{opacity:0,duration:.14},1836.76);
+      tl.fromTo('#sub272',{opacity:0},{opacity:1,duration:.18},1836.81);
+      tl.to('#sub272',{opacity:0,duration:.14},1843.56);
+      tl.fromTo('#sub273',{opacity:0},{opacity:1,duration:.18},1843.61);
+      tl.to('#sub273',{opacity:0,duration:.14},1845.14);
+      tl.fromTo('#sub274',{opacity:0},{opacity:1,duration:.18},1845.45);
+      tl.to('#sub274',{opacity:0,duration:.14},1851.22);
+      tl.fromTo('#sub275',{opacity:0},{opacity:1,duration:.18},1851.28);
+      tl.to('#sub275',{opacity:0,duration:.14},1857.63);
+      tl.fromTo('#sub276',{opacity:0},{opacity:1,duration:.18},1857.68);
+      tl.to('#sub276',{opacity:0,duration:.14},1859.52);
+      window.__timelines = window.__timelines || {};
+      window.__timelines['rizin5'] = tl;
+    </script>
+  </div>
+</body>
+</html>
