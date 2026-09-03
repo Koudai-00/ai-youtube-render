@@ -97,7 +97,7 @@ def wrap_two(text, maxw):
 def fits_two(text, maxw):
     if zwidth(text) <= maxw: return True
     w = wrap_two(text, maxw)
-    return w is not None and zwidth(w[0]) <= maxw + 2 and zwidth(w[1]) <= maxw + 2
+    return w is not None and zwidth(w[0]) <= maxw + 0.5 and zwidth(w[1]) <= maxw + 0.5
 def split_two_lines(text, maxw=23.0):
     parts = [p for p in _re.split("(?<=[、。])", text) if p]
     cues, cur = [], ""
