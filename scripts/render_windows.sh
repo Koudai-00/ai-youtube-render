@@ -9,6 +9,15 @@ EP_SNAKE="${EP//-/_}"
 TPL="$ROOT/hyperframes/templates/$EP"
 OUTDIR="$ROOT/_segs"
 BUILD="$ROOT/tools/build_${EP_SNAKE}_template.py"
+# ★ビルダー名の別表記(アンダースコア無し)にもフォールバックし、どちらも無ければ即失敗させる。
+#   以前、名前不一致でビルダーが無言スキップされ、テンプレ修正が反映されない事故が起きた。
+if [ ! -f "$BUILD" ]; then
+  ALT="$ROOT/tools/build_$(echo "$EP_SNAKE" | tr -d _)_template.py"
+  if [ -f "$ALT" ]; then BUILD="$ALT"; else
+    echo "::error::template builder not found: $BUILD / $ALT"; exit 1
+  fi
+fi
+echo "BUILD=$BUILD"
 WINS_PY="$ROOT/tools/${EP_SNAKE}_windows.py"
 LEAD=1.0
 TRAIL=0.5
@@ -32,7 +41,7 @@ render_raw() {
   return 1
 }
 
-python3 "$BUILD" >/dev/null 2>&1
+python3 "$BUILD" || { echo "::error::builder failed"; exit 1; }
 mapfile -t WINS < <(python3 "$WINS_PY")
 echo "windows: ${#WINS[@]}"
 > "$OUTDIR/list.txt"

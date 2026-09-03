@@ -72,30 +72,32 @@ def zwidth(s):
     for ch in s:
         w += 0.55 if (ch.isascii() and (ch.isalnum() or ch in " .,'-〜!?%")) else 1.0
     return w
+# 行頭に置けない文字(小書きかな/長音/ん/中黒)＝ここで割ると語中改行になる
+_SMALL_LEAD = set("っゃゅょぁぃぅぇぉゎんー・")
+def _valid_cut(text, c):
+    if not (0 < c < len(text)): return False
+    if text[c] in _SMALL_LEAD: return False           # 2行目先頭が小書き等はNG(語中改行)
+    if text[c-1].isascii() and text[c].isascii() and (text[c-1].isalnum() or text[c].isalnum()):
+        return False                                   # ascii語(英数)の途中で割らない
+    return True
 def wrap_two(text, maxw):
-    segs = [s for s in _re.split("(?<=、)", text) if s]
-    best = None
-    for i in range(1, len(segs)):
-        l1 = "".join(segs[:i]); l2 = "".join(segs[i:])
-        if zwidth(l1) <= maxw and zwidth(l2) <= maxw:
-            if best is None or abs(zwidth(l1) - zwidth(l2)) < best[0]:
-                best = (abs(zwidth(l1) - zwidth(l2)), l1, l2)
-    if best: return (best[1], best[2])
-    if zwidth(text) <= maxw * 2:
-        target = int(len(text) * maxw / max(zwidth(text), 1))
-        BREAK_AFTER = set("、。」）】！？はがをにへとでものやねよ")
-        def snap(t):
-            for d in range(0, 9):
-                for c in (t - d, t + d):
-                    if 0 < c < len(text) and text[c-1] in BREAK_AFTER: return c
-            c = t
-            while 0 < c < len(text) and text[c-1].isascii() and text[c].isascii() and (text[c-1].isalnum() or text[c].isalnum()): c += 1
-            return c
-        cut = snap(target)
-        if cut >= len(text) or cut <= 0: cut = max(1, min(len(text) - 1, target))
-        return (text[:cut], text[cut:])
-    return None
-def fits_two(text, maxw): return zwidth(text) <= maxw or wrap_two(text, maxw) is not None
+    # 全ての有効な改行位置から「句読点/助詞優先・2行が均等・行幅が小さい」ものを選ぶ。
+    # 小書きかな行頭やascii語中では割らない(語中改行の根絶)。
+    cands = []
+    for c in range(1, len(text)):
+        if not _valid_cut(text, c): continue
+        l1, l2 = text[:c], text[c:]; w1, w2 = zwidth(l1), zwidth(l2)
+        prev = text[c-1]
+        pri = 0 if prev in "。、" else (1 if prev in "」）】！？はがをにへとでもとやねよ" else 2)
+        cands.append((pri, abs(w1 - w2), max(w1, w2), c, l1, l2))
+    if not cands: return None
+    cands.sort(key=lambda x: (x[0], x[1], x[2]))       # 区切り種別→均等さ→最大行幅
+    _, _, _, _, l1, l2 = cands[0]
+    return (l1, l2)
+def fits_two(text, maxw):
+    if zwidth(text) <= maxw: return True
+    w = wrap_two(text, maxw)
+    return w is not None and zwidth(w[0]) <= maxw + 0.5 and zwidth(w[1]) <= maxw + 0.5
 def split_two_lines(text, maxw=23.0):
     parts = [p for p in _re.split("(?<=[、。])", text) if p]
     cues, cur = [], ""
@@ -120,7 +122,16 @@ for i, (t0, t1, fn) in enumerate(BG_SEG):
     cont = vt0 <= 0.02
     cd = clip_dur(fn)
     ms = max(0.0, W0 - t0); ds = max(0.0, vt0)
-    dur = (min(t1, W1) - max(t0, W0)) + 0.6
+    # ★背景はpiece(窓)終端まで延長する。piece途中でvideoが終了すると、その瞬間に
+    #   次の背景videoが約2.7秒描画不能になり黒が出る(ローカル検証で特定)。
+    #   上に不透明な次セグメントが重なるため、延長しても見た目は変わらない。
+    dur = (W1 - max(t0, W0)) + 0.6
+    # ★プリロード先行: 要素をPRELOAD秒早く開始して読み込ませる(不透明化は従来どおりvt0)。
+    #   前セグメント終了時に次のvideoがまだ描画開始しておらず黒が出る事故を防ぐ。
+    PRELOAD = 1.5
+    lead = min(PRELOAD, ds)
+    if lead > 0:
+        ds -= lead; dur += lead
     if ms + dur > cd - 0.03: dur = max(0.3, cd - ms - 0.05)
     inner = (f'<video id="{bid}-v" src="assets/bgvid/{fn}.mp4" muted playsinline data-layout-allow-overflow '
              f'data-start="{ds:.2f}" data-duration="{dur:.2f}" data-media-start="{ms:.2f}" data-track-index="{10+i}"></video>')
