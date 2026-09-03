@@ -123,6 +123,12 @@ for i, (t0, t1, fn) in enumerate(BG_SEG):
     cd = clip_dur(fn)
     ms = max(0.0, W0 - t0); ds = max(0.0, vt0)
     dur = (min(t1, W1) - max(t0, W0)) + 0.6
+    # ★プリロード先行: 要素をPRELOAD秒早く開始して読み込ませる(不透明化は従来どおりvt0)。
+    #   前セグメント終了時に次のvideoがまだ描画開始しておらず黒が出る事故を防ぐ。
+    PRELOAD = 1.5
+    lead = min(PRELOAD, ds)
+    if lead > 0:
+        ds -= lead; dur += lead
     if ms + dur > cd - 0.03: dur = max(0.3, cd - ms - 0.05)
     inner = (f'<video id="{bid}-v" src="assets/bgvid/{fn}.mp4" muted playsinline data-layout-allow-overflow '
              f'data-start="{ds:.2f}" data-duration="{dur:.2f}" data-media-start="{ms:.2f}" data-track-index="{10+i}"></video>')
