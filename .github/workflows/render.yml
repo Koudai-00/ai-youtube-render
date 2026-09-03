@@ -38,6 +38,7 @@ jobs:
         id: hash
         run: |
           H=$(find "hyperframes/templates/$EP/assets" \
+                   "hyperframes/templates/$EP/src_kb.json" \
                    "subtitles/out/${EP//-/_}/timings.json" \
                    tools/build_${EP//-/_}_template.py \
                    tools/${EP//-/_}_windows.py \
