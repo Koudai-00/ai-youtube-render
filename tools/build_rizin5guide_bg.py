@@ -137,7 +137,7 @@ def build_split(bid, left, right, force=False):
     (lp, lms), (rp, rms) = left, right
     for p in (lp, rp):
         if not p or not Path(p).exists(): return f"MISSING {p}"
-    need = DUR.get(bid, 6.0) + 1.0
+    need = DUR.get(bid, 6.0) + 13.0   # ★piece終端まで延長できるよう十分な尾を確保(黒対策)
     def seg(p, ms, idx):
         sd = srcdur(p)
         return (["-stream_loop","-1","-i",str(p),"-ss",f"{ms:.2f}","-t",f"{need:.2f}"]
@@ -159,7 +159,7 @@ def build(bid, src, ms, filt, kb, force=False):
     out = OUT / f"{bid}.mp4"
     if out.exists() and out.stat().st_size > 5000 and not force: return "skip"
     if not src or not Path(src).exists(): return f"MISSING {src}"
-    need = DUR.get(bid, 6.0) + 1.0
+    need = DUR.get(bid, 6.0) + 13.0
     is_img = str(src).lower().endswith((".jpg", ".jpeg", ".png"))
     cmd = ["ffmpeg","-y","-v","error"]
     if is_img:
