@@ -33,6 +33,7 @@ SRC_OF_CLIP = {
     "nomura_other": "出典: RIZIN (試合映像)", "aoki_other": "出典: RIZIN (試合映像)",
     "usami_intro2": "出典: RIZIN (番組映像)", "ajmckee_pfl": "出典: PFL (試合映像)",
     "ajmckee_b263": "出典: Bellator (試合映像)",
+    "dautbek_intro2": "出典: RIZIN (試合映像)",
     # 他団体
     "beynoah_highkick": "出典: RISE (試合映像)", "usami_peemai": "出典: RISE (試合映像)",
     "aoki_hansen": "出典: DREAM (試合映像)", "ajmckee_bellator": "出典: Bellator (試合映像)",
@@ -40,6 +41,7 @@ SRC_OF_CLIP = {
     "openworkout": "出典: RIZIN公式 公開練習", "opening": "出典: RIZIN公式 大会映像",
     "presser1": "出典: RIZIN公式 記者会見", "presser2": "出典: RIZIN公式 記者会見",
     "presser3": "出典: RIZIN公式 記者会見",
+    "presser1_seg": "出典: RIZIN公式 記者会見",
 }
 CARD_LABEL = "出典: RIZIN公式 対戦カード"
 

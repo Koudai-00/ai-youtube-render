@@ -39,7 +39,8 @@ def FT(name, ms, f=None): return (FI / f"{name}.mp4", ms, f or F_FIGHT, False)  
 def CD(n, kb=True): return (CA / f"card_{n}.jpg", 0, F_COVER, kb)    # カード(静止画・KenBurns)
 def PE(name, ms): return (pex(name), ms, F_COVER, False)             # Pexels(動画)★この動画では使用禁止
 def PR(name, ms): return (PV / f"{name}.mp4", ms, F_FIGHT, False)    # 提供(会見/練習/冒頭)
-def PRC(name, ms): return (PV / f"{name}.mp4", ms, F_COVER, False)   # 提供(クロップ無し=会見の字幕を残す場合)
+def PRC(name, ms): return (PV / f"{name}.mp4", ms, F_COVER, False)
+def PRS(name, ms): return (PV / f"{name}.mp4", ms, F_COVER, False)   # 部分切り出し済みの提供素材(会見等・クロップ無し)   # 提供(クロップ無し=会見の字幕を残す場合)
 
 # ★画面左右2分割(対戦両者を対比表示)= チャーリー・ガイド型。SP("左clip",左ms,"右clip",右ms)
 def SP(lname, lms, rname, rms):
@@ -50,9 +51,9 @@ PLAN = {
     # ============ OP ============
     "o1": PR("opening", 5),                       # 大会オープニング映像
     "o2": CD("01"),                               # メインVSカード(シェイド×AJ)
-    "o3": CD("09"),                               # 大会キービジュアル(全選手)
-    "o4": PR("openworkout", 1997),                # ★B1 出場選手がマイクで話している様子(1:04〜。アナウンサー回避)
-    "z1": PR("openworkout", 3838),                # ★冨澤の対戦相手言及(1:03:52〜)ユーザー指定
+    "o3": PR("opening", 15),                      # ★A1 0:46〜 大会OP 0:15〜(o3/o4/z1で0:15-1:00を連続)
+    "o4": PR("opening", 33),                      # ★A1 1:04〜 大会OP 0:33〜
+    "z1": PR("openworkout", 3838),                # 冨澤の対戦相手言及(1:03:52〜)※0:46-1:30の指定範囲外なので維持
     # ============ 第1試合 ベイノア×宇佐美(OFGキック) ============
     "f1a": CD("08"),                              # 対戦カード
     "f1b": FT("usami_peemai", 32),                # 宇佐美 リング紹介(名前コール/ポーズ)
@@ -80,7 +81,7 @@ PLAN = {
     "f3e": FT("takagi_kaiwen", 55),               # ★高木 名前コール+プロフィール
     "f3f": FT("takagi_kaiwen", 184),              # ★カイウェン戦KO(C4/打撃の代表試合)
     "f3g": SP("takagi_other", 273, "takagi_kaiwen", 186),  # ★B14 左=niq1AKbWOCk 4:33
-    "f3h": PR("openworkout", 4094),               # ★B15 高木の公開練習(ベイノアと逆だったのを修正)
+    "f3h": PRS("presser1_seg", 16),               # ★A4 10:09〜 カード発表会見34:36(高木のプロフィール表示)
     # ============ 第4試合 斎藤×YA-MAN ============
     "f4a": CD("03"),
     "f4b": FT("saito_asakura", 200),              # 斎藤 紹介
@@ -89,7 +90,7 @@ PLAN = {
     "f4e": FT("yaman_asakura", 150),              # YA-MAN 紹介
     "f4f": FT("yaman_other", 325),                # ★B17 (12:24〜)
     "f4g": SP("saito_intro", 217, "yaman_other", 873),  # ★B18 2分割 左=AEZosftj1GE3:37/右=4r8TECMXsNI14:33
-    "f4h": PR("presser1", 2152),                  # ★B19 対戦カード発表(35:52〜)
+    "f4h": PRS("presser1_seg", 92),               # ★A6 13:00〜 カード発表会見35:52(斎藤vsYA-MANのカード)
     # ============ 第5試合 ダウトベック×平本 ============
     "f5a": CD("02"),
     "f5b": FT("dautbek_hagiwara", 180),           # ダウトベック 紹介
@@ -98,7 +99,7 @@ PLAN = {
     "f5d_2": FT("dautbek_intro", 242),            # ★B21 (14:33〜)
     "f5e": FT("hiramoto_other", 283),             # ★B22 (14:43〜)
     "f5f": FT("hiramoto_koji", 38),               # ★皇治との復帰戦・平本入場+プロフィール(C8)
-    "f5g": SP("hiramoto_intro", 164, "dautbek_hagiwara", 360), # ★B23 左=SKXpMO13OL8 2:44
+    "f5g": SP("hiramoto_intro", 164, "dautbek_intro2", 249), # ★A7 左=SKXpMO13OL8 2:44 / 右=Fo5Dv_AVHgc 4:09
     "f5h": PR("presser3", 1093),                  # ★B24 開催発表会見(18:13〜)
     # ============ 第6試合 サトシ×野村 ============
     "f6a": CD("07"),
