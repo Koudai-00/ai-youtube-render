@@ -64,7 +64,7 @@ PLAN = {
     "f1h": PR("openworkout", 783),                # ★B6 宇佐美の公開練習(13:03〜)
     # ============ 第2試合 RENA×クジュティナ ============
     "f2a": CD("06"),
-    "f2b": FT("rena_intro", 695),                 # ★B7 RENA本人(伊澤の映像を回避)
+    "f2b": FT("rena_intro", 57),                  # ★B7 RENA本人のアップ(伊澤の映像を回避・f2cと重複させない)
     "f2c": FT("rena_intro", 695),                 # ★B8 (5:24〜)
     "f2c_2": FT("rena_izawa", 170),               # ★B9 (5:37〜 lZ6r7WZWT28の2:50)
     "f2d": PR("presser1", 900),                   # 会見(王座返上→見えないトーナメント)
