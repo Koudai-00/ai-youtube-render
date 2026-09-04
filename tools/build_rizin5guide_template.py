@@ -26,7 +26,7 @@ def OV(t0, t1): return (t1 > W0 + 0.05) and (t0 < W1 - 0.02)
 def esc(s): return html.escape(s)
 
 # ---- 字幕表示置換(最小・ナレは既に表記形) ----
-DISP = {}
+DISP = {"三角絞めをきめて": "三角絞めを極めて", "していてもきめてしまう": "していても極めてしまう"}
 def disp(t):
     for k in sorted(DISP, key=len, reverse=True): t = t.replace(k, DISP[k])
     return t
@@ -55,9 +55,23 @@ def clip_dur(fn):
     try: return float(p.stdout.strip())
     except: return 0.0
 
+# ★ビート内分割: bg_splits.json = {"<beat_id>": [絶対秒, ...]} でビート内に切替点を追加できる。
+#   1ビートに複数の背景指定がある場合に使う(クリップ名は <beat_id>_2, _3 ... となる)。
+_SPLITS = {}
+_sp_path = TPL / "bg_splits.json"
+if _sp_path.exists():
+    _SPLITS = json.load(open(_sp_path, encoding="utf-8"))
+
 BG_SEG = []
 for b in BEATS:
-    BG_SEG.append((b["start"], b["end"], b["id"]))
+    cuts = sorted(t for t in _SPLITS.get(b["id"], []) if b["start"] + 0.4 < t < b["end"] - 0.4)
+    if not cuts:
+        BG_SEG.append((b["start"], b["end"], b["id"]))
+    else:
+        bounds = [b["start"]] + cuts + [b["end"]]
+        for k in range(len(bounds) - 1):
+            fn = b["id"] if k == 0 else f'{b["id"]}_{k+1}'
+            BG_SEG.append((bounds[k], bounds[k+1], fn))
 BG_SEG.sort(key=lambda e: e[0])
 _bg2 = []
 for i, (t0, t1, fn) in enumerate(BG_SEG):
