@@ -16,6 +16,10 @@ on:
         description: "窓範囲 lo-hi (例 0-5)。空=全窓。長尺を2並列に分けてtimeout回避"
         required: false
         default: ""
+      piece_sec:
+        description: "1ピースの秒数(既定12)。フレームキャプチャがハングする窓は6や4に下げて再実行する"
+        required: false
+        default: "12"
 
 concurrency:
   group: render-${{ github.event.inputs.episode }}-${{ github.event.inputs.win_range }}
@@ -105,7 +109,7 @@ jobs:
           PRODUCER_PUPPETEER_PROTOCOL_TIMEOUT_MS: "600000"
           PUPPETEER_ARGS: "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage"
           HYPERFRAMES_BROWSER_ARGS: "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage"
-          PIECE_SEC: "12"
+          PIECE_SEC: ${{ github.event.inputs.piece_sec || '12' }}
         run: |
           echo "browser = $HYPERFRAMES_BROWSER_PATH"
           WR="${{ github.event.inputs.win_range }}"
