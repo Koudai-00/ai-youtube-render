@@ -1,0 +1,399 @@
+{
+ "segments": [
+  {
+   "t0": 0.0,
+   "clip": "o1",
+   "src": "suzuki_rizin50"
+  },
+  {
+   "t0": 10.206,
+   "clip": "o2",
+   "src": "yaman_rizin49"
+  },
+  {
+   "t0": 19.747,
+   "clip": "o3",
+   "src": "hagiwara_lm15"
+  },
+  {
+   "t0": 29.707,
+   "clip": "o4",
+   "src": "kinoshita_rizin48"
+  },
+  {
+   "t0": 36.873,
+   "clip": "o5",
+   "src": "card_dautbek_hiramoto"
+  },
+  {
+   "t0": 43.064,
+   "clip": "o6",
+   "src": "seki_rizin47"
+  },
+  {
+   "t0": 49.269,
+   "clip": "c1_1",
+   "src": "kazakh_feature"
+  },
+  {
+   "t0": 57.41,
+   "clip": "c1_2",
+   "src": "kazakh_feature"
+  },
+  {
+   "t0": 64.39,
+   "clip": "c1_3",
+   "src": "ow13_a"
+  },
+  {
+   "t0": 70.813,
+   "clip": "c1_4",
+   "src": "o47_e"
+  },
+  {
+   "t0": 79.387,
+   "clip": "c2_1",
+   "src": "kazakh_feature"
+  },
+  {
+   "t0": 86.135,
+   "clip": "c2_2",
+   "src": "alash_neres"
+  },
+  {
+   "t0": 96.698,
+   "clip": "c2_3",
+   "src": "o47_b"
+  },
+  {
+   "t0": 106.146,
+   "clip": "c2_4",
+   "src": "kazakh_feature"
+  },
+  {
+   "t0": 113.141,
+   "clip": "c3_1",
+   "src": "silat_malaysia"
+  },
+  {
+   "t0": 121.561,
+   "clip": "c3_2",
+   "src": "silat_malaysia"
+  },
+  {
+   "t0": 131.799,
+   "clip": "c3_3",
+   "src": "silat_malaysia"
+  },
+  {
+   "t0": 139.058,
+   "clip": "c3_4",
+   "src": "silat_malaysia"
+  },
+  {
+   "t0": 144.798,
+   "clip": "c4_1",
+   "src": "alash_yousefi"
+  },
+  {
+   "t0": 152.011,
+   "clip": "c4_2",
+   "src": "alash_yousefi"
+  },
+  {
+   "t0": 159.223,
+   "clip": "c4_3",
+   "src": "alash_neres"
+  },
+  {
+   "t0": 168.433,
+   "clip": "c4_4",
+   "src": "matsushima_topbrights"
+  },
+  {
+   "t0": 179.335,
+   "clip": "c5_1",
+   "src": "asakura_rizin13"
+  },
+  {
+   "t0": 188.034,
+   "clip": "c5_2",
+   "src": "asakura_rizin13"
+  },
+  {
+   "t0": 195.85,
+   "clip": "c5_3",
+   "src": "asakura_rizin13"
+  },
+  {
+   "t0": 203.93,
+   "clip": "ko_asakura",
+   "src": "asakura_rizin13"
+  },
+  {
+   "t0": 217.13,
+   "clip": "c5_4",
+   "src": "o47_c"
+  },
+  {
+   "t0": 225.411,
+   "clip": "c5_5",
+   "src": "zhirkov_rcc"
+  },
+  {
+   "t0": 236.964,
+   "clip": "c6_1",
+   "src": "zhirkov_rcc"
+  },
+  {
+   "t0": 240.925,
+   "clip": "c6_2",
+   "src": "alash_yousefi"
+  },
+  {
+   "t0": 247.627,
+   "clip": "c6_3",
+   "src": "alash_neres"
+  },
+  {
+   "t0": 256.929,
+   "clip": "c6_4",
+   "src": "matsushima_topbrights"
+  },
+  {
+   "t0": 267.392,
+   "clip": "c6_5",
+   "src": "matsushima_topbrights"
+  },
+  {
+   "t0": 278.791,
+   "clip": "c6_6",
+   "src": "o47_d"
+  },
+  {
+   "t0": 283.882,
+   "clip": "c7_1",
+   "src": "seki_rizin47"
+  },
+  {
+   "t0": 287.983,
+   "clip": "c7_2",
+   "src": "seki_rizin47"
+  },
+  {
+   "t0": 295.645,
+   "clip": "ko_seki",
+   "src": "seki_rizin47"
+  },
+  {
+   "t0": 308.845,
+   "clip": "c7_3",
+   "src": "kinoshita_rizin48"
+  },
+  {
+   "t0": 318.18,
+   "clip": "ko_kinoshita",
+   "src": "kinoshita_rizin48"
+  },
+  {
+   "t0": 331.38,
+   "clip": "c7_4",
+   "src": "o47_a"
+  },
+  {
+   "t0": 341.618,
+   "clip": "c7_5",
+   "src": "yaman_rizin49"
+  },
+  {
+   "t0": 350.456,
+   "clip": "c7_6",
+   "src": "suzuki_rizin50"
+  },
+  {
+   "t0": 362.041,
+   "clip": "c7_7",
+   "src": "o50_a"
+  },
+  {
+   "t0": 371.536,
+   "clip": "c7_8",
+   "src": "o50_b"
+  },
+  {
+   "t0": 385.596,
+   "clip": "c8_1",
+   "src": "suzuki_rizin50"
+  },
+  {
+   "t0": 390.765,
+   "clip": "c8_2",
+   "src": "card_sr4_akimoto"
+  },
+  {
+   "t0": 405.647,
+   "clip": "c8_3",
+   "src": "yaman_rizin49"
+  },
+  {
+   "t0": 415.189,
+   "clip": "c8_4",
+   "src": "card_r52_fukuda"
+  },
+  {
+   "t0": 424.909,
+   "clip": "c8_5",
+   "src": "kazakh_feature"
+  },
+  {
+   "t0": 435.79,
+   "clip": "c8_6",
+   "src": "zhirkov_rcc"
+  },
+  {
+   "t0": 444.396,
+   "clip": "c8_7",
+   "src": "lm15_a"
+  },
+  {
+   "t0": 450.726,
+   "clip": "c8_8",
+   "src": "hagiwara_lm15"
+  },
+  {
+   "t0": 458.867,
+   "clip": "c8_9",
+   "src": "hagiwara_lm15"
+  },
+  {
+   "t0": 466.205,
+   "clip": "ko_hagiwara",
+   "src": "hagiwara_lm15"
+  },
+  {
+   "t0": 480.405,
+   "clip": "c8_10",
+   "src": "lm15_b"
+  },
+  {
+   "t0": 490.086,
+   "clip": "c8_11",
+   "src": "lm15_c"
+  },
+  {
+   "t0": 498.845,
+   "clip": "c9_1",
+   "src": "kinoshita_rizin48"
+  },
+  {
+   "t0": 507.69,
+   "clip": "c9_2",
+   "src": "o50_e"
+  },
+  {
+   "t0": 515.877,
+   "clip": "c9_3",
+   "src": "lm15_b"
+  },
+  {
+   "t0": 524.483,
+   "clip": "c9_4",
+   "src": "lm15_c"
+  },
+  {
+   "t0": 536.718,
+   "clip": "c9_5",
+   "src": "sr4_c"
+  },
+  {
+   "t0": 546.956,
+   "clip": "c9_6",
+   "src": "sr4_b"
+  },
+  {
+   "t0": 556.776,
+   "clip": "c9_7",
+   "src": "suzuki_rizin50"
+  },
+  {
+   "t0": 560.877,
+   "clip": "c9_8",
+   "src": "o50_d"
+  },
+  {
+   "t0": 574.645,
+   "clip": "c9_9",
+   "src": "lm15_a"
+  },
+  {
+   "t0": 588.273,
+   "clip": "c9_10",
+   "src": "o48_a"
+  },
+  {
+   "t0": 597.536,
+   "clip": "c9_11",
+   "src": "o50_c"
+  },
+  {
+   "t0": 606.256,
+   "clip": "c10_1",
+   "src": "sr4_a"
+  },
+  {
+   "t0": 613.19,
+   "clip": "c10_2",
+   "src": "sr4_a"
+  },
+  {
+   "t0": 621.57,
+   "clip": "c10_3",
+   "src": "sr4_b"
+  },
+  {
+   "t0": 638.735,
+   "clip": "c10_4",
+   "src": "sr4_c"
+  },
+  {
+   "t0": 650.977,
+   "clip": "c10_5",
+   "src": "kazakh_feature"
+  },
+  {
+   "t0": 659.769,
+   "clip": "c10_6",
+   "src": "kaiken_sr5"
+  },
+  {
+   "t0": 670.518,
+   "clip": "c10_7",
+   "src": "hagiwara_lm15"
+  },
+  {
+   "t0": 684.16,
+   "clip": "e1",
+   "src": "kazakh_feature"
+  },
+  {
+   "t0": 692.859,
+   "clip": "e2",
+   "src": "silat_malaysia"
+  },
+  {
+   "t0": 703.654,
+   "clip": "e3",
+   "src": "hagiwara_lm15"
+  },
+  {
+   "t0": 713.753,
+   "clip": "e4",
+   "src": "card_kv"
+  },
+  {
+   "t0": 724.177,
+   "clip": "e5",
+   "src": "suzuki_rizin50"
+  }
+ ]
+}
