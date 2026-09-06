@@ -44,10 +44,18 @@ def clip_dur(fn: str) -> float:
     except: return 0.0
 
 # ---- 背景セグメント(ビート=1セグメント) ----
+# ★章タグは「次のセクションの背景」の上に出す(前セクションの映像が残ると内容が食い違う)
+_CH_START = {}
+for c in CHAPS:
+    for b in BEATS:
+        if b["section"] == c["id"]:
+            _CH_START[b["id"]] = max(0.0, c["start"] - 0.15); break
+_starts = [_CH_START.get(b["id"], b["start"]) for b in BEATS]
+_starts[0] = 0.0          # ★冒頭を黒で始めない
 BG_SEG = []
 for i, b in enumerate(BEATS):
-    t1 = BEATS[i + 1]["start"] + 0.08 if i + 1 < len(BEATS) else COMP
-    BG_SEG.append((round(b["start"], 3), round(t1, 3), b["id"]))
+    t1 = _starts[i + 1] + 0.08 if i + 1 < len(BEATS) else COMP
+    BG_SEG.append((round(_starts[i], 3), round(t1, 3), b["id"]))
 
 # ---- 字幕分割(≤2行 各≤23全角) ----
 def zwidth(s):
@@ -199,7 +207,7 @@ HTML = f"""<!doctype html>
   .bgseg{{position:absolute;inset:0;opacity:0;overflow:hidden;}}
   .bgseg video{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:translateZ(0);backface-visibility:hidden;}}
   .veil{{position:absolute;inset:0;z-index:300;pointer-events:none;
-        background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,transparent 15%,transparent 55%,rgba(0,0,0,.55) 76%,rgba(0,0,0,.88) 100%);}}
+        background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,transparent 15%,transparent 52%,rgba(0,0,0,.45) 64%,rgba(0,0,0,.95) 75%,rgba(0,0,0,.95) 100%);}}
   .wm{{position:absolute;z-index:360;left:36px;top:30px;font-family:"JPHeavy";font-size:30px;color:#fff;letter-spacing:.04em;filter:var(--edge-sm);opacity:.9;}}
   .srclab{{position:absolute;z-index:340;left:40px;bottom:22px;font-family:"JPMed";font-size:22px;color:#eaeaea;opacity:0;
         background:rgba(0,0,0,.5);border-left:4px solid var(--yellow);padding:5px 12px;border-radius:3px;filter:var(--edge-sm);}}
