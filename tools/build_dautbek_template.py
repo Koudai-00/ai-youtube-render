@@ -135,7 +135,7 @@ def build_sfx():
     ev = [{"t": 1.2, "kind": "open"}]
     for ch, cst in CHAPS:
         if cst < 6.0: continue
-        ev.append({"t": round(cst + 0.05, 2), "kind": "chap"})
+        ev.append({"t": round(cst - 4.05, 2), "kind": "chap"})
     return sorted(ev, key=lambda e: e["t"])
 if EXPORT_SFX:
     (TPL / "sfx_events.json").write_text(json.dumps(build_sfx(), ensure_ascii=False, indent=1), encoding="utf-8")
@@ -179,15 +179,25 @@ if OV(0.3, 5.4):
 
 # 章タグ
 chap_divs = []
+CHAP_HOLD = 3.9                 # ★登場アニメ(約0.8s)を除いて3秒以上静止させる
 for j,(ch,cst) in enumerate(CHAPS):
     if cst < 6.0: continue          # ★冒頭は大タイトルを出すので章タグを重ねない
-    if not OV(cst, cst+3.6): continue
+    cs = cst - 4.1                  # ★章前の無音区間に出す(本編ナレに被せない)
+    if not OV(cs, cs + CHAP_HOLD + 0.5): continue
+    ts, te = T(cs), T(cs) + CHAP_HOLD
+    if te <= 0.02: continue         # ★窓開始前に消える章タグは出さない(出っぱなし防止)
     cid=f"chap{j}"
     chap_divs.append(f'<div class="chaptag" id="{cid}"><div class="chnum">CHAPTER {j+1:02d}</div><div class="chttl">{esc(ch)}</div></div>')
-    a=max(0.0,T(cst));
-    tws.append(f"tl.fromTo('#{cid} .chnum',{{opacity:0,x:-40}},{{opacity:1,x:0,duration:.5,ease:'power3.out'}},{a+0.05:.2f});")
-    tws.append(f"tl.fromTo('#{cid} .chttl',{{opacity:0,y:40}},{{opacity:1,y:0,duration:.6,ease:'power3.out'}},{a+0.2:.2f});")
-    tws.append(f"tl.to('#{cid}',{{opacity:0,duration:.4}},{T(cst)+3.4:.2f});")
+    if ts <= 0.02:                  # ★窓をまたいで継続中は再アニメせず不透明で開始
+        tws.append(f"tl.set('#{cid}',{{opacity:1}},0);")
+        tws.append(f"tl.set('#{cid} .chnum',{{opacity:1,x:0}},0);")
+        tws.append(f"tl.set('#{cid} .chttl',{{opacity:1,y:0}},0);")
+    else:
+        # ★コンテナのopacityを1にしないと子要素をアニメしても見えない(初回版の不具合)
+        tws.append(f"tl.set('#{cid}',{{opacity:1}},{ts:.2f});")
+        tws.append(f"tl.fromTo('#{cid} .chnum',{{opacity:0,x:-40}},{{opacity:1,x:0,duration:.5,ease:'power3.out'}},{ts+0.05:.2f});")
+        tws.append(f"tl.fromTo('#{cid} .chttl',{{opacity:0,y:40}},{{opacity:1,y:0,duration:.6,ease:'power3.out'}},{ts+0.2:.2f});")
+    tws.append(f"tl.to('#{cid}',{{opacity:0,duration:.4}},{te:.2f});")
 
 # 章SE(mux)
 chap_audio = []

@@ -31,367 +31,367 @@
    "src": "seki_rizin47"
   },
   {
-   "t0": 49.269,
+   "t0": 53.169,
    "clip": "c1_1",
    "src": "kazakh_feature"
   },
   {
-   "t0": 57.41,
+   "t0": 61.31,
    "clip": "c1_2",
    "src": "kazakh_feature"
   },
   {
-   "t0": 64.39,
+   "t0": 68.29,
    "clip": "c1_3",
    "src": "ow13_a"
   },
   {
-   "t0": 70.813,
+   "t0": 74.713,
    "clip": "c1_4",
    "src": "o47_e"
   },
   {
-   "t0": 79.387,
+   "t0": 87.187,
    "clip": "c2_1",
    "src": "kazakh_feature"
   },
   {
-   "t0": 86.135,
+   "t0": 93.935,
    "clip": "c2_2",
    "src": "alash_neres"
   },
   {
-   "t0": 96.698,
+   "t0": 104.498,
    "clip": "c2_3",
    "src": "o47_b"
   },
   {
-   "t0": 106.146,
+   "t0": 113.946,
    "clip": "c2_4",
    "src": "kazakh_feature"
   },
   {
-   "t0": 113.141,
+   "t0": 124.841,
    "clip": "c3_1",
    "src": "silat_malaysia"
   },
   {
-   "t0": 121.561,
+   "t0": 133.261,
    "clip": "c3_2",
    "src": "silat_malaysia"
   },
   {
-   "t0": 131.799,
+   "t0": 143.499,
    "clip": "c3_3",
    "src": "silat_malaysia"
   },
   {
-   "t0": 139.058,
+   "t0": 150.758,
    "clip": "c3_4",
    "src": "silat_malaysia"
   },
   {
-   "t0": 144.798,
+   "t0": 160.398,
    "clip": "c4_1",
    "src": "alash_yousefi"
   },
   {
-   "t0": 152.011,
+   "t0": 167.611,
    "clip": "c4_2",
    "src": "alash_yousefi"
   },
   {
-   "t0": 159.223,
+   "t0": 174.823,
    "clip": "c4_3",
    "src": "alash_neres"
   },
   {
-   "t0": 168.433,
+   "t0": 184.033,
    "clip": "c4_4",
    "src": "matsushima_topbrights"
   },
   {
-   "t0": 179.335,
+   "t0": 198.835,
    "clip": "c5_1",
    "src": "asakura_rizin13"
   },
   {
-   "t0": 188.034,
+   "t0": 207.534,
    "clip": "c5_2",
    "src": "asakura_rizin13"
   },
   {
-   "t0": 195.85,
+   "t0": 215.35,
    "clip": "c5_3",
    "src": "asakura_rizin13"
   },
   {
-   "t0": 203.93,
+   "t0": 223.43,
    "clip": "ko_asakura",
    "src": "asakura_rizin13"
   },
   {
-   "t0": 217.13,
+   "t0": 236.63,
    "clip": "c5_4",
    "src": "o47_c"
   },
   {
-   "t0": 225.411,
+   "t0": 244.911,
    "clip": "c5_5",
    "src": "zhirkov_rcc"
   },
   {
-   "t0": 236.964,
+   "t0": 260.364,
    "clip": "c6_1",
    "src": "zhirkov_rcc"
   },
   {
-   "t0": 240.925,
+   "t0": 264.325,
    "clip": "c6_2",
    "src": "alash_yousefi"
   },
   {
-   "t0": 247.627,
+   "t0": 271.027,
    "clip": "c6_3",
    "src": "alash_neres"
   },
   {
-   "t0": 256.929,
+   "t0": 280.329,
    "clip": "c6_4",
    "src": "matsushima_topbrights"
   },
   {
-   "t0": 267.392,
+   "t0": 290.792,
    "clip": "c6_5",
    "src": "matsushima_topbrights"
   },
   {
-   "t0": 278.791,
+   "t0": 302.191,
    "clip": "c6_6",
    "src": "o47_d"
   },
   {
-   "t0": 283.882,
+   "t0": 311.182,
    "clip": "c7_1",
    "src": "seki_rizin47"
   },
   {
-   "t0": 287.983,
+   "t0": 315.283,
    "clip": "c7_2",
    "src": "seki_rizin47"
   },
   {
-   "t0": 295.645,
+   "t0": 322.945,
    "clip": "ko_seki",
    "src": "seki_rizin47"
   },
   {
-   "t0": 308.845,
+   "t0": 336.145,
    "clip": "c7_3",
    "src": "kinoshita_rizin48"
   },
   {
-   "t0": 318.18,
+   "t0": 345.48,
    "clip": "ko_kinoshita",
    "src": "kinoshita_rizin48"
   },
   {
-   "t0": 331.38,
+   "t0": 358.68,
    "clip": "c7_4",
    "src": "o47_a"
   },
   {
-   "t0": 341.618,
+   "t0": 368.918,
    "clip": "c7_5",
    "src": "yaman_rizin49"
   },
   {
-   "t0": 350.456,
+   "t0": 377.756,
    "clip": "c7_6",
    "src": "suzuki_rizin50"
   },
   {
-   "t0": 362.041,
+   "t0": 389.341,
    "clip": "c7_7",
    "src": "o50_a"
   },
   {
-   "t0": 371.536,
+   "t0": 398.836,
    "clip": "c7_8",
    "src": "o50_b"
   },
   {
-   "t0": 385.596,
+   "t0": 416.796,
    "clip": "c8_1",
    "src": "suzuki_rizin50"
   },
   {
-   "t0": 390.765,
+   "t0": 421.965,
    "clip": "c8_2",
    "src": "card_sr4_akimoto"
   },
   {
-   "t0": 405.647,
+   "t0": 436.847,
    "clip": "c8_3",
    "src": "yaman_rizin49"
   },
   {
-   "t0": 415.189,
+   "t0": 446.389,
    "clip": "c8_4",
    "src": "card_r52_fukuda"
   },
   {
-   "t0": 424.909,
+   "t0": 456.109,
    "clip": "c8_5",
    "src": "kazakh_feature"
   },
   {
-   "t0": 435.79,
+   "t0": 466.99,
    "clip": "c8_6",
    "src": "zhirkov_rcc"
   },
   {
-   "t0": 444.396,
+   "t0": 475.596,
    "clip": "c8_7",
    "src": "lm15_a"
   },
   {
-   "t0": 450.726,
+   "t0": 481.926,
    "clip": "c8_8",
    "src": "hagiwara_lm15"
   },
   {
-   "t0": 458.867,
+   "t0": 490.067,
    "clip": "c8_9",
    "src": "hagiwara_lm15"
   },
   {
-   "t0": 466.205,
+   "t0": 497.405,
    "clip": "ko_hagiwara",
    "src": "hagiwara_lm15"
   },
   {
-   "t0": 480.405,
+   "t0": 511.605,
    "clip": "c8_10",
    "src": "lm15_b"
   },
   {
-   "t0": 490.086,
+   "t0": 521.286,
    "clip": "c8_11",
    "src": "lm15_c"
   },
   {
-   "t0": 498.845,
+   "t0": 533.945,
    "clip": "c9_1",
    "src": "kinoshita_rizin48"
   },
   {
-   "t0": 507.69,
+   "t0": 542.79,
    "clip": "c9_2",
    "src": "o50_e"
   },
   {
-   "t0": 515.877,
+   "t0": 550.977,
    "clip": "c9_3",
    "src": "lm15_b"
   },
   {
-   "t0": 524.483,
+   "t0": 559.583,
    "clip": "c9_4",
    "src": "lm15_c"
   },
   {
-   "t0": 536.718,
+   "t0": 571.818,
    "clip": "c9_5",
    "src": "sr4_c"
   },
   {
-   "t0": 546.956,
+   "t0": 582.056,
    "clip": "c9_6",
    "src": "sr4_b"
   },
   {
-   "t0": 556.776,
+   "t0": 591.876,
    "clip": "c9_7",
    "src": "suzuki_rizin50"
   },
   {
-   "t0": 560.877,
+   "t0": 595.977,
    "clip": "c9_8",
    "src": "o50_d"
   },
   {
-   "t0": 574.645,
+   "t0": 609.745,
    "clip": "c9_9",
    "src": "lm15_a"
   },
   {
-   "t0": 588.273,
+   "t0": 623.373,
    "clip": "c9_10",
    "src": "o48_a"
   },
   {
-   "t0": 597.536,
+   "t0": 632.636,
    "clip": "c9_11",
    "src": "o50_c"
   },
   {
-   "t0": 606.256,
+   "t0": 645.256,
    "clip": "c10_1",
    "src": "sr4_a"
   },
   {
-   "t0": 613.19,
+   "t0": 652.19,
    "clip": "c10_2",
    "src": "sr4_a"
   },
   {
-   "t0": 621.57,
+   "t0": 660.57,
    "clip": "c10_3",
    "src": "sr4_b"
   },
   {
-   "t0": 638.735,
+   "t0": 677.735,
    "clip": "c10_4",
    "src": "sr4_c"
   },
   {
-   "t0": 650.977,
+   "t0": 689.977,
    "clip": "c10_5",
    "src": "kazakh_feature"
   },
   {
-   "t0": 659.769,
+   "t0": 698.769,
    "clip": "c10_6",
    "src": "kaiken_sr5"
   },
   {
-   "t0": 670.518,
+   "t0": 709.518,
    "clip": "c10_7",
    "src": "hagiwara_lm15"
   },
   {
-   "t0": 684.16,
+   "t0": 727.06,
    "clip": "e1",
    "src": "kazakh_feature"
   },
   {
-   "t0": 692.859,
+   "t0": 735.759,
    "clip": "e2",
    "src": "silat_malaysia"
   },
   {
-   "t0": 703.654,
+   "t0": 746.554,
    "clip": "e3",
    "src": "hagiwara_lm15"
   },
   {
-   "t0": 713.753,
+   "t0": 756.653,
    "clip": "e4",
    "src": "card_kv"
   },
   {
-   "t0": 724.177,
+   "t0": 767.077,
    "clip": "e5",
    "src": "suzuki_rizin50"
   }
