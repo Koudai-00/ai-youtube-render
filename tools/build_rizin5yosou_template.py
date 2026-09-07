@@ -138,17 +138,23 @@ for i, (t0, t1, fn) in enumerate(BG_SEG):
         kbd = min(t1, W1) - max(t0, W0) + 0.4
         bg_tws.append(f"tl.fromTo('#{bid}-v',{{scale:1.0}},{{scale:1.08,duration:{kbd:.2f},ease:'none'}},{max(0.0,vt0):.2f});")
     seg_len = min(t1, W1) - max(t0, W0)
-    if seg_len > 0.6:
+    if seg_len > 0.6 and vt1 - 0.25 > 0.02:   # ★窓開始前に消えるラベルは出さない
         sid = f"src{i}"
         src_divs.append(f'<div class="srclab" id="{sid}">{esc(srcof(fn))}</div>')
-        bg_tws.append(f"tl.fromTo('#{sid}',{{opacity:0}},{{opacity:1,duration:.4}},{max(0.0,vt0+0.3):.2f});")
+        if vt0 + 0.3 <= 0.02:                 # ★窓をまたいで継続中は再アニメせず不透明で開始
+            bg_tws.append(f"tl.set('#{sid}',{{opacity:1}},0);")
+        else:
+            bg_tws.append(f"tl.fromTo('#{sid}',{{opacity:0}},{{opacity:1,duration:.4}},{vt0+0.3:.2f});")
         bg_tws.append(f"tl.to('#{sid}',{{opacity:0,duration:.3}},{vt1-0.25:.2f});")
         # 予想者ラベル(本人の解説映像を出している間だけ)
         nm = predof(fn)
-        if nm and seg_len > 1.2:
+        if nm and seg_len > 1.2 and vt1 - 0.3 > 0.02:
             pid = f"pl{i}"
             pl_divs.append(f'<div class="plab" id="{pid}"><span class="plname">{esc(nm)}</span></div>')
-            bg_tws.append(f"tl.fromTo('#{pid}',{{opacity:0,x:-30}},{{opacity:1,x:0,duration:.45,ease:'power2.out'}},{max(0.0,vt0+0.25):.2f});")
+            if vt0 + 0.25 <= 0.02:
+                bg_tws.append(f"tl.set('#{pid}',{{opacity:1,x:0}},0);")
+            else:
+                bg_tws.append(f"tl.fromTo('#{pid}',{{opacity:0,x:-30}},{{opacity:1,x:0,duration:.45,ease:'power2.out'}},{vt0+0.25:.2f});")
             bg_tws.append(f"tl.to('#{pid}',{{opacity:0,duration:.3}},{vt1-0.3:.2f});")
 
 # ---- 章タグ ----
@@ -156,14 +162,20 @@ chap_divs, chap_tws = [], []
 for j, c in enumerate(CHAPS):
     st, en = c["start"], c["end"]
     if not OV(st, en + 0.6): continue
+    ts, te = T(st), T(en - 0.34)
+    if te <= 0.02: continue      # ★窓開始前に消える章タグは出さない(出っぱなし防止)
     cid = f"chap{j}"
     chap_divs.append(f'<div class="chapscrim" id="{cid}s"></div>')
     chap_divs.append(f'<div class="chaptag" id="{cid}"><div class="chnum">{esc(c["title"])}</div>'
                      f'<div class="chttl">{esc(c["sub"])}</div></div>')
-    chap_tws.append(f"tl.fromTo('#{cid}s',{{opacity:0}},{{opacity:1,duration:.4}},{T(st):.2f});")
-    chap_tws.append(f"tl.to('#{cid}s',{{opacity:0,duration:.35}},{T(en-0.34):.2f});")
-    chap_tws.append(f"tl.fromTo('#{cid}',{{opacity:0,y:40}},{{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'}},{T(st):.2f});")
-    chap_tws.append(f"tl.to('#{cid}',{{opacity:0,y:-26,duration:.32,ease:'power1.in'}},{T(en-0.34):.2f});")
+    if ts <= 0.02:               # ★窓をまたいで継続中は再アニメせず不透明で開始
+        chap_tws.append(f"tl.set('#{cid}s',{{opacity:1}},0);")
+        chap_tws.append(f"tl.set('#{cid}',{{opacity:1,y:0}},0);")
+    else:
+        chap_tws.append(f"tl.fromTo('#{cid}s',{{opacity:0}},{{opacity:1,duration:.4}},{ts:.2f});")
+        chap_tws.append(f"tl.fromTo('#{cid}',{{opacity:0,y:40}},{{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'}},{ts:.2f});")
+    chap_tws.append(f"tl.to('#{cid}s',{{opacity:0,duration:.35}},{te:.2f});")
+    chap_tws.append(f"tl.to('#{cid}',{{opacity:0,y:-26,duration:.32,ease:'power1.in'}},{te:.2f});")
 
 # ---- 字幕 ----
 sub_divs, sub_tws = [], []
@@ -176,11 +188,16 @@ for b in BEATS:
     for cue in cues:
         cs = b["start"] + dur * acc / wsum; acc += zwidth(cue); ce = b["start"] + dur * acc / wsum
         if not OV(cs, ce): continue
+        tcs, tce = T(cs), T(ce - 0.05)
+        if tce <= 0.02: continue      # ★窓開始前に消える字幕は出さない(出っぱなし=二重表示の原因)
         inner = "<br>".join(esc(l) for l in sub_lines(cue))
         did = f"sub{sidx}"; sidx += 1
         sub_divs.append(f'<div class="subt" id="{did}">{inner}</div>')
-        sub_tws.append(f"tl.fromTo('#{did}',{{opacity:0}},{{opacity:1,duration:.18}},{max(0.0,T(cs)):.2f});")
-        sub_tws.append(f"tl.to('#{did}',{{opacity:0,duration:.14}},{T(ce-0.05):.2f});")
+        if tcs <= 0.02:               # ★窓をまたいで継続中は再アニメせず不透明で開始
+            sub_tws.append(f"tl.set('#{did}',{{opacity:1}},0);")
+        else:
+            sub_tws.append(f"tl.fromTo('#{did}',{{opacity:0}},{{opacity:1,duration:.18}},{tcs:.2f});")
+        sub_tws.append(f"tl.to('#{did}',{{opacity:0,duration:.14}},{tce:.2f});")
 
 def J(items, ind="      "): return "\n".join(ind + x for x in items)
 AUDIO = ("" if VISUAL_ONLY else
