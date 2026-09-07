@@ -265,16 +265,17 @@ HTML = f"""<!doctype html>
   #root{{position:absolute;inset:0;overflow:hidden;background:#05060a;font-family:"JPMed";}}
   .bgseg{{position:absolute;inset:0;opacity:0;overflow:hidden;}}
   .bgseg video{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:translateZ(0);backface-visibility:hidden;}}
-  .veil{{position:absolute;inset:0;z-index:30;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,transparent 20%,transparent 55%,rgba(0,0,0,.52) 82%,rgba(0,0,0,.8) 100%);}}
-  .wm{{position:absolute;z-index:60;left:36px;top:26px;font-family:"JPHeavy";font-size:27px;color:#fff;letter-spacing:.03em;filter:var(--edsm);opacity:.85;}}
-  .srclab{{position:absolute;z-index:55;left:40px;bottom:22px;font-family:"JPMed";font-size:22px;color:#eaeaea;opacity:0;background:rgba(0,0,0,.5);border-left:4px solid var(--gold);padding:6px 14px;border-radius:3px;filter:var(--edsm);}}
-  .chaptag{{position:absolute;z-index:48;left:120px;top:34%;opacity:0;}}
+  /* ★背景は z-index 1..N(ビート数) を使うため、前景は必ず300以上に置く */
+  .veil{{position:absolute;inset:0;z-index:300;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,transparent 20%,transparent 55%,rgba(0,0,0,.52) 82%,rgba(0,0,0,.8) 100%);}}
+  .wm{{position:absolute;z-index:360;left:36px;top:26px;font-family:"JPHeavy";font-size:27px;color:#fff;letter-spacing:.03em;filter:var(--edsm);opacity:.85;}}
+  .srclab{{position:absolute;z-index:350;left:40px;bottom:22px;font-family:"JPMed";font-size:22px;color:#eaeaea;opacity:0;background:rgba(0,0,0,.5);border-left:4px solid var(--gold);padding:6px 14px;border-radius:3px;filter:var(--edsm);}}
+  .chaptag{{position:absolute;z-index:320;left:120px;top:34%;opacity:0;}}
   .chaptag .chnum{{font-family:"JPHeavy";font-size:38px;color:var(--gold);letter-spacing:.14em;filter:var(--edge);}}
   .chaptag .chttl{{font-family:"Mincho";font-weight:900;font-size:82px;color:#fff;filter:var(--edge);margin-top:8px;white-space:nowrap;}}
-  .bigtitle{{position:absolute;z-index:49;left:0;right:0;top:30%;text-align:center;}}
+  .bigtitle{{position:absolute;z-index:330;left:0;right:0;top:30%;text-align:center;}}
   .bigtitle .ttlrow{{font-family:"Mincho";font-weight:900;font-size:96px;line-height:1.16;filter:var(--edge);opacity:0;white-space:nowrap;}}
   .bigtitle .ttlrow.y{{color:var(--yellow);}} .bigtitle .ttlrow.r{{color:#fff;}}
-  .subt{{position:absolute;z-index:50;left:0;right:0;bottom:104px;text-align:center;opacity:0;font-family:"JPHeavy";font-size:46px;line-height:1.34;color:#fff;filter:var(--edge);letter-spacing:.01em;white-space:pre-line;}}
+  .subt{{position:absolute;z-index:340;left:0;right:0;bottom:104px;text-align:center;opacity:0;font-family:"JPHeavy";font-size:46px;line-height:1.34;color:#fff;filter:var(--edge);letter-spacing:.01em;white-space:pre-line;}}
 </style></head><body>
   <div id="root" data-composition-id="dautbek" data-start="0" data-duration="{WIN}" data-width="1920" data-height="1080">
 {J(bg_divs,"    ")}
