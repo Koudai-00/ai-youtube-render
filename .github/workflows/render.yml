@@ -51,6 +51,7 @@ jobs:
               | sort | xargs sha256sum | sha256sum | cut -c1-16)
           echo "hash=$H" >> "$GITHUB_OUTPUT"
           WR="${{ github.event.inputs.win_range }}"
+          WR="${WR//:/-}"
           WRS=$(echo "$WR" | tr -c 'a-zA-Z0-9' '_' | sed 's/_*$//')
           echo "tag=$EP-$H${WRS:+-w$WRS}" >> "$GITHUB_OUTPUT"
           echo "content hash = $H  win_range=$WR"
@@ -113,7 +114,12 @@ jobs:
         run: |
           echo "browser = $HYPERFRAMES_BROWSER_PATH"
           WR="${{ github.event.inputs.win_range }}"
-          if [ -n "$WR" ]; then export WIN_FROM="${WR%-*}" WIN_TO="${WR#*-}"; echo "window slice: $WIN_FROM..$WIN_TO"; fi
+          WR="${WR//:/-}"   # ★"0:8" と書かれても受け付ける(区切り違いで無言に空回りするのを防ぐ)
+          if [ -n "$WR" ]; then
+            export WIN_FROM="${WR%-*}" WIN_TO="${WR#*-}"
+            case "$WIN_FROM$WIN_TO" in *[!0-9]*|"") echo "::error::win_range が不正です: ${{ github.event.inputs.win_range }} (例 0-8)"; exit 1;; esac
+            echo "window slice: $WIN_FROM..$WIN_TO"
+          fi
           bash scripts/render_windows.sh
 
       - name: Mux narration + single BGM + loudnorm
