@@ -7,6 +7,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TPL = ROOT / "hyperframes" / "templates" / "dautbek"
+LIB = ROOT / "hyperframes" / "_lib" / "textfx"
+TEXTFX_CSS = (LIB / "textfx.css").read_text(encoding="utf-8")
+TEXTFX_JS = (LIB / "textfx.js").read_text(encoding="utf-8")
 TIM = json.load(open(ROOT / "subtitles" / "out" / "dautbek" / "timings.json", encoding="utf-8"))
 CUES = TIM["cues"]; COMP = round(TIM["total"], 3)
 # bgセグ計画(CI側も素材に含まれる bg_plan.json を読む)
@@ -206,6 +209,56 @@ if not VISUAL_ONLY:
         if OV(cst, cst+1.0):
             chap_audio.append(f'<audio id="chs{j}" src="assets/se/se_impact.mp3" data-start="{T(cst+0.05):.2f}" data-track-index="{200+j}" data-volume="0.5"></audio>')
 
+
+# ===== 評伝型の大型テロップ（textfx。キーワード/スタッツ）=====
+# (ビートID, 小見出し, 本文, textfxデザイン, textfxアニメ)
+# ★下部字幕ゾーン(y820-1080)を避けて中央上部に出す。デザイン・アニメは毎回変える。
+KEYS = [
+ ("o3",    "PROFESSIONAL RECORD", "19勝3敗　うち15がKO・TKO", "tfx-gold",        "charRise"),
+ ("o4",    "SINCE MARCH 2019",    "7年間 無敗",                "tfx-fire",        "slam"),
+ ("c2_2",  "BOXING",              "カザフスタン王者 3度",        "tfx-heavy",       "wipe"),
+ ("c3_4",  "ONE SILAT / MALAYSIA","1日3試合 すべてKO",          "tfx-marker-red",  "charPop"),
+ ("c5_3",  "RIZIN.13",            "判定 0-3 敗北",              "tfx-outline",     "blurIn"),
+ ("c6_3",  "ALASH PRIDE 2023",    "3戦3勝 すべて1R KO",         "tfx-neon",        "riseMask"),
+ ("c7_2",  "RIZIN.47",            "1R 3分11秒 KO",              "tfx-gold-solid",  "scalePop"),
+ ("c7_3",  "RIZIN.48",            "1R 1分48秒 KO",              "tfx-gold-solid",  "lightspeed"),
+ ("c8_9",  "RIZIN LANDMARK 15",   "1R 4分08秒 TKO",             "tfx-gold-solid",  "slam"),
+ ("c9_8",  "MOTTO",               "正々堂々と戦う",              "tfx-mincho",      "fadeUp"),
+ ("c10_6", "SUPER RIZIN.5",       "9月10日 京セラドーム大阪",     "tfx-stripe",      "wipe"),
+ ("e5",    "KING OF KAZAKHSTAN",  "キング・オブ・カザフスタン",    "tfx-emboss",      "charRise"),
+]
+_KWSPAN = {}
+for _c in CUES:
+    _b = _c["base_id"]
+    _a, _z = _KWSPAN.get(_b, (_c["start"], _c["end"]))
+    _KWSPAN[_b] = (min(_a, _c["start"]), max(_z, _c["end"]))
+
+kw_divs, kw_tws = [], []
+for _i, (_bid, _kick, _main, _design, _anim) in enumerate(KEYS):
+    if _bid not in _KWSPAN: raise SystemExit(f"KEYS: ビート {_bid} が無い")
+    _s, _e = _KWSPAN[_bid]
+    _s += 0.9                       # ナレの語り出しに少し遅れて出す
+    _e = min(_e - 0.3, _s + 5.2)    # 長く出しすぎない
+    if _e - _s < 1.2 or not OV(_s, _e + 0.4): continue
+    # ★幅検算(セーフ幅1760px)。超えたらフォントを縮める
+    _fs = 88
+    while zwidth(_main) * _fs > 1700 and _fs > 52: _fs -= 4
+    _id = f"kw{_i}"
+    kw_divs.append(
+        f'<div class="kw" id="{_id}">'
+        f'<div class="kwkick tfx-kicker">{esc(_kick)}</div>'
+        f'<div class="kwmain {_design}" style="font-size:{_fs}px">{esc(_main)}</div></div>')
+    _ts, _te = T(_s), T(_e)
+    if _ts <= 0.02:                 # ★窓をまたいで継続中は再アニメせず不透明で開始
+        kw_tws.append(f"tl.set('#{_id}',{{opacity:1}},0);")
+        kw_tws.append(f"tl.set('#{_id} .kwkick',{{opacity:1,x:0}},0);")
+        kw_tws.append(f"tl.set('#{_id} .kwmain',{{opacity:1}},0);")
+    else:
+        kw_tws.append(f"tl.set('#{_id}',{{opacity:1}},{_ts:.2f});")
+        kw_tws.append(f"tl.fromTo('#{_id} .kwkick',{{opacity:0,x:-24}},{{opacity:1,x:0,duration:.4,ease:'power2.out'}},{_ts:.2f});")
+        kw_tws.append(f"TextFX.{_anim}(tl, document.getElementById('{_id}').querySelector('.kwmain'), {_ts + 0.15:.2f});")
+    kw_tws.append(f"tl.to('#{_id}',{{opacity:0,duration:.35}},{_te:.2f});")
+
 # 下部字幕
 def split_chunks(disp_text, maxw=24.0):
     """disp済みテキストを読点境界で1行チャンク(<=maxw)にまとめる。発話追従用。
@@ -255,6 +308,7 @@ AUDIO_BLOCK = ("" if VISUAL_ONLY else
 
 HTML = f"""<!doctype html>
 <html><head><meta charset="utf-8"><style>
+{TEXTFX_CSS}
   @font-face{{font-family:"Mincho";src:url("assets/fonts/GokubutoMincho.ttf");}}
   @font-face{{font-family:"JPHeavy";src:url("assets/fonts/SourceHanSansJP-Heavy.otf");}}
   @font-face{{font-family:"JPMed";src:url("assets/fonts/SourceHanSansJP-Medium.otf");}}
@@ -275,6 +329,9 @@ HTML = f"""<!doctype html>
   .bigtitle{{position:absolute;z-index:330;left:0;right:0;top:30%;text-align:center;}}
   .bigtitle .ttlrow{{font-family:"Mincho";font-weight:900;font-size:96px;line-height:1.16;filter:var(--edge);opacity:0;white-space:nowrap;}}
   .bigtitle .ttlrow.y{{color:var(--yellow);}} .bigtitle .ttlrow.r{{color:#fff;}}
+  .kw{{position:absolute;z-index:325;left:0;right:0;top:17%;text-align:center;opacity:0;}}
+  .kw .kwkick{{font-family:"JPHeavy";font-size:30px;letter-spacing:.22em;color:var(--gold);opacity:0;filter:var(--edsm);margin-bottom:14px;}}
+  .kw .kwmain{{font-family:"Mincho";font-weight:900;line-height:1.14;white-space:nowrap;filter:var(--edge);}}
   .subt{{position:absolute;z-index:340;left:0;right:0;bottom:104px;text-align:center;opacity:0;font-family:"JPHeavy";font-size:46px;line-height:1.34;color:#fff;filter:var(--edge);letter-spacing:.01em;white-space:pre-line;}}
 </style></head><body>
   <div id="root" data-composition-id="dautbek" data-start="0" data-duration="{WIN}" data-width="1920" data-height="1080">
@@ -286,11 +343,14 @@ HTML = f"""<!doctype html>
 {J(src_divs,"    ")}
 {J(title_divs,"    ")}
 {J(chap_divs,"    ")}
+{J(kw_divs,"    ")}
 {J(sub_divs,"    ")}
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>{TEXTFX_JS}</script>
     <script>
       const tl = gsap.timeline({{paused:true}});
 {J(tws)}
+{J(kw_tws)}
       window.__timelines = window.__timelines || {{}};
       window.__timelines['dautbek'] = tl;
     </script>
