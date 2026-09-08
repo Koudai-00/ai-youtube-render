@@ -133,7 +133,7 @@ PLAN = {
     "c6_1": FT("zhirkov_rcc", 1180),
     "c6_2": FT("alash_yousefi", 300),
     "c6_3": FT("alash_neres", 20),
-    "ko_alash": FT("alash_neres", 40),      # ★海外KO: Alash Pride ネレス戦の決着(約50s)の10秒前から
+    "ko_alash": FT("alash_neres", 34),      # ★海外KO(クロック無し素材): ダウン@39-40 → 別アングル@41-42 → 崩れ@43-44 → レフェリーストップ@45-46
     "c6_4": FT("matsushima_topbrights", 250),
     "c6_5": FT("matsushima_topbrights", 620),
     "c6_6": IVC("o47_d"),                  # RIZIN.47公式 試合後IV(再上陸の喜び)
@@ -141,7 +141,7 @@ PLAN = {
     # ===== 7章 RIZIN再上陸 =====
     "c7_1": FT("seki_rizin47", 80),       # ★@30は関鉄矢の公式ネームスーパーが下部字幕と重なるので、スーパー無しのワイドへ
     "c7_2": FT("seki_rizin47", 160),
-    "ko_seki": FT("seki_rizin47", 250),     # ★関戦のKO決着(約263s)の13秒前から
+    "ko_seki": FT("seki_rizin47", 261),     # ★ラウンドクロックで検証: 1R残り1:49(=経過3:11)がクリップ@270。決定打@267-268/ストップ@270-271/WINNER表示@274
     "c7_3": FT("kinoshita_rizin48", 120),
     "ko_kinoshita": FT("kinoshita_rizin48", 171),  # ★木下戦のKO決着(181s)の10秒前から
     "c7_4": IVC("o47_a"),                  # ★RIZIN.47公式「日本は初めてではない/東京・日本」の実発言
