@@ -52,6 +52,35 @@ def IVC(name, ms=1): return (IV / f"{name}.mp4", ms, F_COVER, False)  # イン�
 def CD(name):      return (CA / f"{name}.jpg", 0, F_COVER, True)      # 対戦カード(KenBurns)
 
 
+# ★超RIZIN.4のインタビュー(sr4_*)は、下部に「焼き込みの日本語字幕(y830-895)」と
+#   「超RIZIN.4の告知バナー(y910-)」が入っている。そのまま背景に使うと下部字幕と
+#   二重テロップになり、過去大会の告知も出てしまう。下端を切り落として使う。
+#   縦を820pxに切る -> 高さを1080へ拡大(1.317倍) -> 右寄せで1920幅を取り出す
+#   （ダウトベックが映る右パネルを欠けさせないため右端を基準にする）
+# 焼き込み字幕は2行になると y790 付近まで上がるため、下端を y775 で切る。
+# ただし y775 で切ると本人の口元・顎が欠けるので、切った映像を縮めずに
+# ぼかした同じ映像の上へ少し下げて重ね、下部字幕はぼかし帯の上に載せる。
+F_IV4 = ("split=2[a][b];"
+         "[a]crop=1920:775:0:0,scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,"
+         "boxblur=30:2,eq=brightness=-0.14[bg];"
+         "[b]crop=1920:775:0:0[fg];"
+         "[bg][fg]overlay=0:66,format=yuv420p")
+def IVC4(name, ms=1): return (IV / f"{name}.mp4", ms, F_IV4, False)
+
+
+# ★対戦カード画像は選手名が下端(縦の81-93%)にあるため、画面いっぱいに敷くと
+#   下部字幕が名前を潰す。カード全体を上寄せで縮小配置し、背後はぼかした同じ画像で埋める。
+#   （読ませるカードは静止・動かすのはぼかし背景だけ）
+def CDP(name):
+    f = ("split=2[a][b];"
+         "[a]scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,"
+         "boxblur=30:2,eq=brightness=-0.16,"
+         "zoompan=z='min(zoom+0.0004,1.12)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1920x1080:fps=30[bg];"
+         "[b]scale=1520:-1[fg];"
+         "[bg][fg]overlay=200:12,format=yuv420p")
+    return (CA / f"{name}.jpg", 0, f, False)
+
+
 # ★ピラーボックス(左右の黒帯)がある素材は、先に中身だけを切り出してから合わせる。
 #   kazakh_feature は区間により 1552/1584/1920 と横幅が変わるので beat 単位で指定する。
 def FTP(name, ms, cw, cx):
@@ -110,7 +139,7 @@ PLAN = {
     "c6_6": IVC("o47_d"),                  # RIZIN.47公式 試合後IV(再上陸の喜び)
 
     # ===== 7章 RIZIN再上陸 =====
-    "c7_1": FT("seki_rizin47", 30),
+    "c7_1": FT("seki_rizin47", 80),       # ★@30は関鉄矢の公式ネームスーパーが下部字幕と重なるので、スーパー無しのワイドへ
     "c7_2": FT("seki_rizin47", 160),
     "ko_seki": FT("seki_rizin47", 250),     # ★関戦のKO決着(約263s)の13秒前から
     "c7_3": FT("kinoshita_rizin48", 120),
@@ -123,9 +152,9 @@ PLAN = {
 
     # ===== 8章 離脱と復活 =====
     "c8_1": FT("suzuki_rizin50", 1560),
-    "c8_2": CD("card_sr4_akimoto"),         # ★超RIZIN.4 公式カード(ダウトベック×秋元強真。欠場した試合)
+    "c8_2": CDP("card_sr4_akimoto"),         # ★超RIZIN.4 公式カード(ダウトベック×秋元強真。欠場した試合)
     "c8_3": FT("yaman_rizin49", 300),
-    "c8_4": CD("card_r52_fukuda"),          # ★RIZIN.52 公式カード(ダウトベック×福田龍彌。中止した試合)
+    "c8_4": CDP("card_r52_fukuda"),          # ★RIZIN.52 公式カード(ダウトベック×福田龍彌。中止した試合)
     "c8_5": FT("kazakh_feature", 220),
     "c8_6": FT("zhirkov_rcc", 60),
     "c8_7": IVC("lm15_a"),                  # 「必ず戻ってきます」の文脈
@@ -140,8 +169,8 @@ PLAN = {
     "c9_2": IVC("o50_e"),                  # ★RIZIN.50公式「対戦相手を大変尊敬している」
     "c9_3": IVC("lm15_b", 30),              # 萩原の戦績について
     "c9_4": IVC("lm15_c", 30),
-    "c9_5": IVC("sr4_c"),                   # 「一人は挙げられない」
-    "c9_6": IVC("sr4_b"),                   # 「ランキングは関係ない」
+    "c9_5": IVC4("sr4_c", 12),      # ★@1は別選手の試合b-rollだった。本人が話す区間へ                   # 「一人は挙げられない」
+    "c9_6": IVC4("sr4_b"),                   # 「ランキングは関係ない」
     "c9_7": FT("suzuki_rizin50", 1400),
     "c9_8": IVC("o50_d"),                  # ★RIZIN.50公式 モットー「クリーンな試合で正々堂々と」
     "c9_9": IVC("lm15_a", 30),
@@ -149,10 +178,10 @@ PLAN = {
     "c9_11": IVC("o50_c"),                 # ★RIZIN.50公式「お寿司が大好き」の実発言
 
     # ===== 10章 そして平本蓮 =====
-    "c10_1": IVC("sr4_a"),                  # シェイドゥラエフの話
-    "c10_2": IVC("sr4_a", 30),
-    "c10_3": IVC("sr4_b", 30),
-    "c10_4": IVC("sr4_c", 30),              # ATT・元谷友貴
+    "c10_1": IVC4("sr4_a"),                  # シェイドゥラエフの話
+    "c10_2": IVC4("sr4_a", 30),
+    "c10_3": IVC4("sr4_b", 30),
+    "c10_4": IVC4("sr4_c", 30),              # ATT・元谷友貴
     "c10_5": FT("kazakh_feature", 250),     # シムケントで調整
     "c10_6": IVC("kaiken_sr5"),             # 超RIZIN.5 対戦カード発表記者会見(ダウトベックと平本蓮)
     "c10_7": IVC("kaiken_sr5", 26),         # ★平本評の続きなので本人の会見発言(350sは萩原戦の決着=ko_hagiwaraと同一シーン)
