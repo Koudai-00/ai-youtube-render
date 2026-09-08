@@ -231,7 +231,8 @@ def build(bid, src, ms, filt, kb, force=False):
     is_img = str(src).lower().endswith((".jpg", ".jpeg", ".png"))
     cmd = ["ffmpeg", "-y", "-v", "error"]
     if is_img:
-        cmd += ["-loop", "1", "-t", f"{need:.2f}", "-i", str(src), "-vf", F_COVER]
+        # ★画像でも渡された filt を使う(F_COVER 直書きだと CDP のような個別指定が無視される)
+        cmd += ["-loop", "1", "-t", f"{need:.2f}", "-i", str(src), "-vf", filt]
     else:
         sd = srcdur(src); loop = (ms + need) > (sd - 0.1)
         if loop:
