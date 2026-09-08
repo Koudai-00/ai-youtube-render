@@ -89,7 +89,7 @@ PLAN = {
     # ===== 4章 MMAへ =====
     "c4_1": FT("alash_yousefi", 20),
     "c4_2": FT("alash_yousefi", 150),
-    "c4_3": FT("alash_neres", 40),
+    "c4_3": FT("alash_yousefi", 211),      # ★ko_alashと同一映像(alash_neres@40)だったので別のKO(ユセフィ戦の決着216-218s)へ
     "c4_4": FT("matsushima_topbrights", 60),
 
     # ===== 5章 朝倉未来の壁 =====
