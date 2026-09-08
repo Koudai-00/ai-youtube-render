@@ -214,11 +214,11 @@ if not VISUAL_ONLY:
 # (ビートID, 小見出し, 本文, textfxデザイン, textfxアニメ)
 # ★下部字幕ゾーン(y820-1080)を避けて中央上部に出す。デザイン・アニメは毎回変える。
 KEYS = [
- ("o3",    "PROFESSIONAL RECORD", "19勝3敗　うち15がKO・TKO", "tfx-gold",        "charRise"),
+ ("o3",    "PROFESSIONAL RECORD", "19勝3敗　うち15がKO・TKO", "tfx-gold",        "shine"),
  ("o4",    "SINCE MARCH 2019",    "7年間 無敗",                "tfx-fire",        "slam"),
  ("c2_2",  "BOXING",              "カザフスタン王者 3度",        "tfx-heavy",       "wipe"),
- ("c3_4",  "ONE SILAT / MALAYSIA","1日3試合 すべてKO",          "tfx-marker-red",  "charPop"),
- ("c5_3",  "RIZIN.13",            "判定 0-3 敗北",              "tfx-outline",     "blurIn"),
+ ("c3_4",  "ONE SILAT / MALAYSIA","1日3試合 すべてKO",          "tfx-marker-red",  "blurIn"),
+ ("c5_3",  "RIZIN.13",            "判定 0-3 敗北",              "tfx-outline",     "charPop"),
  ("c6_3",  "ALASH PRIDE 2023",    "3戦3勝 すべて1R KO",         "tfx-neon",        "riseMask"),
  ("c7_2",  "RIZIN.47",            "1R 3分11秒 KO",              "tfx-gold-solid",  "scalePop"),
  ("c7_3",  "RIZIN.48",            "1R 1分48秒 KO",              "tfx-gold-solid",  "lightspeed"),
@@ -329,9 +329,12 @@ HTML = f"""<!doctype html>
   .bigtitle{{position:absolute;z-index:330;left:0;right:0;top:30%;text-align:center;}}
   .bigtitle .ttlrow{{font-family:"Mincho";font-weight:900;font-size:96px;line-height:1.16;filter:var(--edge);opacity:0;white-space:nowrap;}}
   .bigtitle .ttlrow.y{{color:var(--yellow);}} .bigtitle .ttlrow.r{{color:#fff;}}
-  .kw{{position:absolute;z-index:325;left:0;right:0;top:17%;text-align:center;opacity:0;}}
+  /* ★clip-textデザインは文字分割アニメ(charRise/charPop)と併用しない。
+     色指定のないデザイン(heavy/marker-red/mincho)はこの基本色を使う。 */
+  .kw{{position:absolute;z-index:325;left:0;right:0;top:15%;text-align:center;opacity:0;
+       padding:30px 0;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.46) 24%,rgba(0,0,0,.46) 76%,rgba(0,0,0,0) 100%);}}
   .kw .kwkick{{font-family:"JPHeavy";font-size:30px;letter-spacing:.22em;color:var(--gold);opacity:0;filter:var(--edsm);margin-bottom:14px;}}
-  .kw .kwmain{{font-family:"Mincho";font-weight:900;line-height:1.14;white-space:nowrap;filter:var(--edge);}}
+  .kw .kwmain{{font-family:"Mincho";font-weight:900;line-height:1.14;white-space:nowrap;color:#fff;filter:var(--edge);}}
   .subt{{position:absolute;z-index:340;left:0;right:0;bottom:104px;text-align:center;opacity:0;font-family:"JPHeavy";font-size:46px;line-height:1.34;color:#fff;filter:var(--edge);letter-spacing:.01em;white-space:pre-line;}}
 </style></head><body>
   <div id="root" data-composition-id="dautbek" data-start="0" data-duration="{WIN}" data-width="1920" data-height="1080">
