@@ -75,6 +75,11 @@ SRCLAB = {
   "matsushima_topbrights":"出典: TOP BRIGHTS", "zhirkov_rcc":"出典: RCC: MMA & Boxing",
   "silat_malaysia":"出典: nurik 777（シラット世界大会）", "alash_yousefi":"出典: Alash Pride TV",
   "alash_neres":"出典: Alash Pride TV", "kazakh_feature":"出典: Қазақ Батырлары",
+  # ★2026-09-10 背景差し替えで追加した素材の出典
+  "iv13_a":"出典: RIZIN公式 RIZIN.13 試合前インタビュー",
+  "iv13_b":"出典: RIZIN公式 RIZIN.13 試合前インタビュー",
+  "kubo_short":"出典: RIZIN公式 久保優太 vs カルシャガ・ダウトベック",
+  "55966_1280x720":"出典: イメージ映像（救急車）",
   "ow13_a":"出典: RIZIN公式 RIZIN.13 前日公開計量",
   "o47_a":"出典: RIZIN公式 試合後インタビュー / RIZIN.47",
   "o47_b":"出典: RIZIN公式 試合後インタビュー / RIZIN.47",
