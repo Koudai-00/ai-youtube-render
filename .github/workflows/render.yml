@@ -77,7 +77,14 @@ jobs:
       - name: Install ffmpeg + deps
         if: steps.check.outputs.exists == 'false'
         run: |
-          sudo apt-get update
+          # ★ランナー画像には Google Chrome の apt リポジトリが事前設定されているが、
+          #   Google側のRelease更新と重なると Hash Sum mismatch で apt-get update ごと落ちる
+          #   (2026-09-09 に2レンジ同時に失敗)。Chrome本体は下で .deb を直接入れるので無効化する。
+          sudo rm -f /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/google*.list || true
+          for i in 1 2 3; do
+            sudo apt-get update -o Acquire::Retries=3 && break
+            echo "::warning::apt-get update に失敗 ($i/3)。10秒後に再試行"; sleep 10
+          done
           sudo apt-get install -y ffmpeg xvfb
           # chrome-headless-shell が必要とする共有ライブラリ一式(google-chrome導入で満たす)
           wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
