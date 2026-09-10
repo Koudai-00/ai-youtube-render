@@ -73,42 +73,50 @@
   },
   {
     "t0": 42.896,
-    "t1": 50.926,
+    "t1": 48.407,
     "beat": "x2",
     "src": "sokuho_6.mp4",
     "ss": 250.0,
     "label": "RIZIN公式 超RIZIN.5 第6試合"
   },
   {
-    "t0": 50.926,
-    "t1": 57.482,
+    "t0": 48.407,
+    "t1": 54.963,
     "beat": "x3",
     "src": "hl6_IShJJtI2LhU.mp4",
     "ss": 12.0,
     "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
   },
   {
-    "t0": 57.482,
-    "t1": 62.503,
+    "t0": 54.963,
+    "t1": 59.984,
     "beat": "c7",
     "src": "sokuho_6.mp4",
     "ss": 300.0,
     "label": "RIZIN公式 超RIZIN.5 第6試合"
   },
   {
-    "t0": 62.503,
-    "t1": 66.135,
+    "t0": 59.984,
+    "t1": 67.564,
     "beat": "e1",
     "src": "sokuho_6.mp4",
     "ss": 170.0,
     "label": "RIZIN公式 超RIZIN.5 第6試合"
   },
   {
-    "t0": 66.135,
-    "t1": 68.938,
+    "t0": 67.564,
+    "t1": 71.317,
+    "beat": "e1b",
+    "src": "sokuho_6.mp4",
+    "ss": 230.0,
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "t0": 71.317,
+    "t1": 74.08,
     "beat": "e2",
-    "src": "hl6_IShJJtI2LhU.mp4",
-    "ss": 20.0,
-    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+    "src": "v_QxC20-pTRZ4.mp4",
+    "ss": 18.0,
+    "label": "RIZIN公式"
   }
 ]

@@ -54,10 +54,11 @@ PLAN = [
     ("x3",  None, "cover", HL6,     12.0, "RIZIN公式 超RIZIN.5 試合ハイライト"),
     ("c7",  None, "bc",    SOKUHO, 300.0, "RIZIN公式 超RIZIN.5 第6試合"),
     ("e1",  None, "bc",    SOKUHO, 170.0, "RIZIN公式 超RIZIN.5 第6試合"),
-    ("e2",  None, "cover", HL6,     20.0, "RIZIN公式 超RIZIN.5 試合ハイライト"),
+    ("e1b", None, "bc",    SOKUHO, 230.0, "RIZIN公式 超RIZIN.5 第6試合"),
+    ("e2",  None, "cover", FACE,    18.0, "RIZIN公式"),
 ]
 TRANS = ["dissolve", "fade", "dissolve", "smoothleft", "dissolve", "fade", "dissolve",
-         "circleopen", "dissolve", "fade", "dissolve", "smoothright", "dissolve"]
+         "circleopen", "dissolve", "fade", "dissolve", "smoothright", "dissolve", "fade"]
 
 
 def run(cmd):
@@ -80,6 +81,9 @@ def durations():
         s, e = span[bid]
         out.append((e - s) * (frac if frac else 1.0))
     # 端数を最後のセグメントで吸収し、合計をナレ尺に一致させる
+    missing = [b for b in order if b not in [p[0] for p in PLAN]]
+    if missing:
+        raise SystemExit(f"PLANに無いビートがあります: {missing}")
     out[-1] += total - sum(out)
     return out, total
 
