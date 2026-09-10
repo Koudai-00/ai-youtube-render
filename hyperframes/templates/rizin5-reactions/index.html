@@ -1,0 +1,570 @@
+<!doctype html>
+<!-- 朝倉海 UFC上海 勝利まとめ(多言語) 1920x1080 -->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face{font-family:"Mincho";src:url("assets/fonts/GokubutoMincho.ttf");}
+  @font-face{font-family:"JPHeavy";src:url("assets/fonts/SourceHanSansJP-Heavy.otf");}
+  @font-face{font-family:"JPMed";src:url("assets/fonts/SourceHanSansJP-Medium.otf");}
+  :root{
+    --white:#fff; --yellow:#ffe23a; --red:#ff3a3a; --blue:#36b6ff; --ink:#0a0c12;
+    --edge:drop-shadow(4px 0 0 var(--ink)) drop-shadow(-4px 0 0 var(--ink)) drop-shadow(0 4px 0 var(--ink)) drop-shadow(0 -4px 0 var(--ink))
+           drop-shadow(3px 3px 0 var(--ink)) drop-shadow(-3px 3px 0 var(--ink)) drop-shadow(0 8px 16px rgba(0,0,0,.8));
+    --edge-sm:drop-shadow(0 0 2px var(--ink)) drop-shadow(1px 1px 1px var(--ink)) drop-shadow(0 2px 6px rgba(0,0,0,.85));
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  #root{position:absolute;inset:0;overflow:hidden;background:#05060a;font-family:"JPMed";}
+  .bgseg{position:absolute;inset:0;opacity:0;overflow:hidden;}
+  .bgseg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:translateZ(0);backface-visibility:hidden;}
+  .veil{position:absolute;inset:0;z-index:300;pointer-events:none;
+        background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,transparent 16%,transparent 58%,rgba(0,0,0,.55) 84%,rgba(0,0,0,.8) 100%);}
+  .wm{position:absolute;z-index:360;left:36px;top:30px;font-family:"JPHeavy";font-size:30px;color:#fff;letter-spacing:.04em;filter:var(--edge-sm);opacity:.9;}
+  .srclab{position:absolute;z-index:340;left:40px;bottom:38px;font-family:"JPMed";font-size:23px;color:#eaeaea;opacity:0;
+        background:rgba(0,0,0,.5);border-left:4px solid var(--yellow);padding:6px 14px;border-radius:3px;filter:var(--edge-sm);}
+  .chaptag{position:absolute;z-index:320;left:110px;top:37%;opacity:0;}
+  .chaptag .chnum{font-family:"Mincho";font-size:44px;color:var(--yellow);filter:var(--edge);letter-spacing:.04em;}
+  .chaptag .chttl{font-family:"JPHeavy";font-size:62px;color:#fff;filter:var(--edge);margin-top:6px;white-space:nowrap;}
+  .ccard{position:absolute;z-index:330;right:74px;top:150px;width:800px;background:#fff;color:#0f1419;border-radius:20px;
+        padding:26px 30px;box-shadow:0 18px 50px rgba(0,0,0,.6);opacity:0;border:1px solid #cfd9de;}
+  .ccard .ctext{font-family:"JPMed";line-height:1.5;color:#0f1419;word-break:break-word;}
+  .ccard .cmeta{margin-top:16px;padding-top:12px;border-top:1px solid #eaeef0;font-size:23px;color:#536471;}
+  .ccard.media .mtag{display:inline-block;font-family:"JPHeavy";font-size:30px;color:#fff;background:#d62828;
+        padding:5px 16px;border-radius:6px;margin-bottom:16px;letter-spacing:.02em;}
+  .chead{display:flex;align-items:center;gap:16px;margin-bottom:16px;}
+  .cav{width:60px;height:60px;border-radius:50%;background:#1d9bf0;display:flex;align-items:center;justify-content:center;color:#fff;font-family:"JPHeavy";font-size:28px;flex:none;}
+  .cnm{flex:1;min-width:0;} .cname{font-family:"JPHeavy";font-size:29px;line-height:1.1;}
+  .chandle{font-size:24px;color:#536471;} .clogo{font-size:31px;flex:none;}
+  .subt{position:absolute;z-index:350;left:0;right:0;bottom:96px;text-align:center;opacity:0;
+        font-family:"JPHeavy";font-size:45px;line-height:1.34;color:#fff;filter:var(--edge);letter-spacing:.01em;white-space:pre-line;padding:0 90px;}
+</style>
+</head>
+<body>
+  <div id="root" data-composition-id="rizin5-reactions" data-start="0" data-duration="454.03" data-width="1920" data-height="1080">
+    <div class="bgseg" id="bg0" style="z-index:1"><video id="bg0-v" src="assets/bgvid/o1.mp4" muted playsinline data-layout-allow-overflow data-start="0.25" data-duration="15.36" data-media-start="0.00" data-track-index="10"></video></div>
+    <div class="bgseg" id="bg1" style="z-index:2"><video id="bg1-v" src="assets/bgvid/o2.mp4" muted playsinline data-layout-allow-overflow data-start="14.93" data-duration="13.37" data-media-start="0.00" data-track-index="11"></video></div>
+    <div class="bgseg" id="bg2" style="z-index:3"><video id="bg2-v" src="assets/bgvid/o3.mp4" muted playsinline data-layout-allow-overflow data-start="27.62" data-duration="7.14" data-media-start="0.00" data-track-index="12"></video></div>
+    <div class="bgseg" id="bg3" style="z-index:4"><video id="bg3-v" src="assets/bgvid/c1a.mp4" muted playsinline data-layout-allow-overflow data-start="34.07" data-duration="5.47" data-media-start="0.00" data-track-index="13"></video></div>
+    <div class="bgseg" id="bg4" style="z-index:5"><video id="bg4-v" src="assets/bgvid/c1b.mp4" muted playsinline data-layout-allow-overflow data-start="38.87" data-duration="14.48" data-media-start="0.00" data-track-index="14"></video></div>
+    <div class="bgseg" id="bg5" style="z-index:6"><video id="bg5-v" src="assets/bgvid/ko1.mp4" muted playsinline data-layout-allow-overflow data-start="52.67" data-duration="11.92" data-media-start="0.00" data-track-index="15"></video></div>
+    <div class="bgseg" id="bg6" style="z-index:7"><video id="bg6-v" src="assets/bgvid/c1c.mp4" muted playsinline data-layout-allow-overflow data-start="63.91" data-duration="6.40" data-media-start="0.00" data-track-index="16"></video></div>
+    <div class="bgseg" id="bg7" style="z-index:8"><video id="bg7-v" src="assets/bgvid/c1d.mp4" muted playsinline data-layout-allow-overflow data-start="69.63" data-duration="12.02" data-media-start="0.00" data-track-index="17"></video></div>
+    <div class="bgseg" id="bg8" style="z-index:9"><video id="bg8-v" src="assets/bgvid/c1e.mp4" muted playsinline data-layout-allow-overflow data-start="80.97" data-duration="11.04" data-media-start="0.00" data-track-index="18"></video></div>
+    <div class="bgseg" id="bg9" style="z-index:10"><video id="bg9-v" src="assets/bgvid/c1f.mp4" muted playsinline data-layout-allow-overflow data-start="91.33" data-duration="13.14" data-media-start="0.00" data-track-index="19"></video></div>
+    <div class="bgseg" id="bg10" style="z-index:11"><video id="bg10-v" src="assets/bgvid/c1g.mp4" muted playsinline data-layout-allow-overflow data-start="103.79" data-duration="15.29" data-media-start="0.00" data-track-index="20"></video></div>
+    <div class="bgseg" id="bg11" style="z-index:12"><video id="bg11-v" src="assets/bgvid/c1h.mp4" muted playsinline data-layout-allow-overflow data-start="118.40" data-duration="13.09" data-media-start="0.00" data-track-index="21"></video></div>
+    <div class="bgseg" id="bg12" style="z-index:13"><video id="bg12-v" src="assets/bgvid/c1i.mp4" muted playsinline data-layout-allow-overflow data-start="130.81" data-duration="13.32" data-media-start="0.00" data-track-index="22"></video></div>
+    <div class="bgseg" id="bg13" style="z-index:14"><video id="bg13-v" src="assets/bgvid/c1j.mp4" muted playsinline data-layout-allow-overflow data-start="143.45" data-duration="14.25" data-media-start="0.00" data-track-index="23"></video></div>
+    <div class="bgseg" id="bg14" style="z-index:15"><video id="bg14-v" src="assets/bgvid/c1k.mp4" muted playsinline data-layout-allow-overflow data-start="157.01" data-duration="11.51" data-media-start="0.00" data-track-index="24"></video></div>
+    <div class="bgseg" id="bg15" style="z-index:16"><video id="bg15-v" src="assets/bgvid/c1l.mp4" muted playsinline data-layout-allow-overflow data-start="167.84" data-duration="14.34" data-media-start="0.00" data-track-index="25"></video></div>
+    <div class="bgseg" id="bg16" style="z-index:17"><video id="bg16-v" src="assets/bgvid/c1m.mp4" muted playsinline data-layout-allow-overflow data-start="181.50" data-duration="5.52" data-media-start="0.00" data-track-index="26"></video></div>
+    <div class="bgseg" id="bg17" style="z-index:18"><video id="bg17-v" src="assets/bgvid/c1n.mp4" muted playsinline data-layout-allow-overflow data-start="186.34" data-duration="11.74" data-media-start="0.00" data-track-index="27"></video></div>
+    <div class="bgseg" id="bg18" style="z-index:19"><video id="bg18-v" src="assets/bgvid/c1o.mp4" muted playsinline data-layout-allow-overflow data-start="197.40" data-duration="9.51" data-media-start="0.00" data-track-index="28"></video></div>
+    <div class="bgseg" id="bg19" style="z-index:20"><video id="bg19-v" src="assets/bgvid/c1p.mp4" muted playsinline data-layout-allow-overflow data-start="206.23" data-duration="15.88" data-media-start="0.00" data-track-index="29"></video></div>
+    <div class="bgseg" id="bg20" style="z-index:21"><video id="bg20-v" src="assets/bgvid/c1q.mp4" muted playsinline data-layout-allow-overflow data-start="221.43" data-duration="7.42" data-media-start="0.00" data-track-index="30"></video></div>
+    <div class="bgseg" id="bg21" style="z-index:22"><video id="bg21-v" src="assets/bgvid/c1r.mp4" muted playsinline data-layout-allow-overflow data-start="228.18" data-duration="4.82" data-media-start="0.00" data-track-index="31"></video></div>
+    <div class="bgseg" id="bg22" style="z-index:23"><video id="bg22-v" src="assets/bgvid/c1s.mp4" muted playsinline data-layout-allow-overflow data-start="232.32" data-duration="14.16" data-media-start="0.00" data-track-index="32"></video></div>
+    <div class="bgseg" id="bg23" style="z-index:24"><video id="bg23-v" src="assets/bgvid/c1t.mp4" muted playsinline data-layout-allow-overflow data-start="245.79" data-duration="12.53" data-media-start="0.00" data-track-index="33"></video></div>
+    <div class="bgseg" id="bg24" style="z-index:25"><video id="bg24-v" src="assets/bgvid/c1u.mp4" muted playsinline data-layout-allow-overflow data-start="257.64" data-duration="13.50" data-media-start="0.00" data-track-index="34"></video></div>
+    <div class="bgseg" id="bg25" style="z-index:26"><video id="bg25-v" src="assets/bgvid/c2a.mp4" muted playsinline data-layout-allow-overflow data-start="270.46" data-duration="4.96" data-media-start="0.00" data-track-index="35"></video></div>
+    <div class="bgseg" id="bg26" style="z-index:27"><video id="bg26-v" src="assets/bgvid/c2b.mp4" muted playsinline data-layout-allow-overflow data-start="274.74" data-duration="5.70" data-media-start="0.00" data-track-index="36"></video></div>
+    <div class="bgseg" id="bg27" style="z-index:28"><video id="bg27-v" src="assets/bgvid/ko2.mp4" muted playsinline data-layout-allow-overflow data-start="279.76" data-duration="12.92" data-media-start="0.00" data-track-index="37"></video></div>
+    <div class="bgseg" id="bg28" style="z-index:29"><video id="bg28-v" src="assets/bgvid/c2c.mp4" muted playsinline data-layout-allow-overflow data-start="292.00" data-duration="9.32" data-media-start="0.00" data-track-index="38"></video></div>
+    <div class="bgseg" id="bg29" style="z-index:30"><video id="bg29-v" src="assets/bgvid/c2d.mp4" muted playsinline data-layout-allow-overflow data-start="300.65" data-duration="12.16" data-media-start="0.00" data-track-index="39"></video></div>
+    <div class="bgseg" id="bg30" style="z-index:31"><video id="bg30-v" src="assets/bgvid/c2e.mp4" muted playsinline data-layout-allow-overflow data-start="312.13" data-duration="13.32" data-media-start="0.00" data-track-index="40"></video></div>
+    <div class="bgseg" id="bg31" style="z-index:32"><video id="bg31-v" src="assets/bgvid/c2f.mp4" muted playsinline data-layout-allow-overflow data-start="324.77" data-duration="13.55" data-media-start="0.00" data-track-index="41"></video></div>
+    <div class="bgseg" id="bg32" style="z-index:33"><video id="bg32-v" src="assets/bgvid/c2g.mp4" muted playsinline data-layout-allow-overflow data-start="337.64" data-duration="12.39" data-media-start="0.00" data-track-index="42"></video></div>
+    <div class="bgseg" id="bg33" style="z-index:34"><video id="bg33-v" src="assets/bgvid/c2h.mp4" muted playsinline data-layout-allow-overflow data-start="349.35" data-duration="12.53" data-media-start="0.00" data-track-index="43"></video></div>
+    <div class="bgseg" id="bg34" style="z-index:35"><video id="bg34-v" src="assets/bgvid/c2i.mp4" muted playsinline data-layout-allow-overflow data-start="361.20" data-duration="8.11" data-media-start="0.00" data-track-index="44"></video></div>
+    <div class="bgseg" id="bg35" style="z-index:36"><video id="bg35-v" src="assets/bgvid/c3a.mp4" muted playsinline data-layout-allow-overflow data-start="368.63" data-duration="7.98" data-media-start="0.00" data-track-index="45"></video></div>
+    <div class="bgseg" id="bg36" style="z-index:37"><video id="bg36-v" src="assets/bgvid/c3b.mp4" muted playsinline data-layout-allow-overflow data-start="375.93" data-duration="8.21" data-media-start="0.00" data-track-index="46"></video></div>
+    <div class="bgseg" id="bg37" style="z-index:38"><video id="bg37-v" src="assets/bgvid/ko3.mp4" muted playsinline data-layout-allow-overflow data-start="383.46" data-duration="10.92" data-media-start="0.00" data-track-index="47"></video></div>
+    <div class="bgseg" id="bg38" style="z-index:39"><video id="bg38-v" src="assets/bgvid/c3c.mp4" muted playsinline data-layout-allow-overflow data-start="393.70" data-duration="12.39" data-media-start="0.00" data-track-index="48"></video></div>
+    <div class="bgseg" id="bg39" style="z-index:40"><video id="bg39-v" src="assets/bgvid/c3d.mp4" muted playsinline data-layout-allow-overflow data-start="405.41" data-duration="10.30" data-media-start="0.00" data-track-index="49"></video></div>
+    <div class="bgseg" id="bg40" style="z-index:41"><video id="bg40-v" src="assets/bgvid/c3e.mp4" muted playsinline data-layout-allow-overflow data-start="415.03" data-duration="10.25" data-media-start="0.00" data-track-index="50"></video></div>
+    <div class="bgseg" id="bg41" style="z-index:42"><video id="bg41-v" src="assets/bgvid/e1.mp4" muted playsinline data-layout-allow-overflow data-start="424.60" data-duration="8.54" data-media-start="0.00" data-track-index="51"></video></div>
+    <div class="bgseg" id="bg42" style="z-index:43"><video id="bg42-v" src="assets/bgvid/e2.mp4" muted playsinline data-layout-allow-overflow data-start="432.45" data-duration="16.66" data-media-start="0.00" data-track-index="52"></video></div>
+    <div class="bgseg" id="bg43" style="z-index:44"><video id="bg43-v" src="assets/bgvid/e3.mp4" muted playsinline data-layout-allow-overflow data-start="448.44" data-duration="6.19" data-media-start="0.00" data-track-index="53"></video></div>
+
+    
+
+
+    <div class="veil"></div>
+    <div class="wm">格闘ニュースラボ</div>
+    <div class="srclab" id="src0">出典: RIZIN公式 超RIZIN.5 試合ハイライト</div>
+    <div class="srclab" id="src1">出典: RIZIN公式 超RIZIN.5 試合ハイライト</div>
+    <div class="srclab" id="src2">出典: RIZIN公式 超RIZIN.5 試合ハイライト</div>
+    <div class="srclab" id="src3">出典: RIZIN公式 超RIZIN.5 第6試合</div>
+    <div class="srclab" id="src4">出典: RIZIN公式 超RIZIN.5 第6試合</div>
+    <div class="srclab" id="src5">出典: RIZIN公式 超RIZIN.5 試合ハイライト</div>
+    <div class="srclab" id="src6">出典: RIZIN公式 超RIZIN.5 第6試合</div>
+    <div class="srclab" id="src7">出典: RIZIN公式 超RIZIN.5 第6試合</div>
+    <div class="srclab" id="src8">出典: RIZIN公式 超RIZIN.5 第6試合</div>
+    <div class="srclab" id="src9">出典: RIZIN公式 超RIZIN.5 第6試合</div>
+    <div class="srclab" id="src10">出典: RIZIN公式 超RIZIN.5 第6試合</div>
+    <div class="srclab" id="src11">出典: RIZIN公式 超RIZIN.5 第6試合</div>
+    <div class="srclab" id="src12">出典: RIZIN公式 超RIZIN.5 第6試合</div>
+    <div class="srclab" id="src13">出典: RIZIN公式 超RIZIN.5 第6試合</div>
+    <div class="srclab" id="src14">出典: RIZIN公式 超RIZIN.5 第6試合</div>
+    <div class="srclab" id="src15">出典: RIZIN公式 超RIZIN.5 第6試合</div>
+    <div class="srclab" id="src16">出典: RIZIN公式 試合後インタビュー</div>
+    <div class="srclab" id="src17">出典: RIZIN公式 試合後インタビュー</div>
+    <div class="srclab" id="src18">出典: RIZIN公式 試合後インタビュー</div>
+    <div class="srclab" id="src19">出典: RIZIN公式 試合後インタビュー</div>
+    <div class="srclab" id="src20">出典: RIZIN公式 超RIZIN.5 第6試合</div>
+    <div class="srclab" id="src21">出典: RIZIN公式 試合後インタビュー</div>
+    <div class="srclab" id="src22">出典: RIZIN公式 試合後インタビュー</div>
+    <div class="srclab" id="src23">出典: RIZIN公式 超RIZIN.5 試合ハイライト</div>
+    <div class="srclab" id="src24">出典: RIZIN公式 試合後インタビュー</div>
+    <div class="srclab" id="src25">出典: RIZIN公式 超RIZIN.5 試合ハイライト</div>
+    <div class="srclab" id="src26">出典: RIZIN公式 超RIZIN.5 試合ハイライト</div>
+    <div class="srclab" id="src27">出典: RIZIN公式 超RIZIN.5 試合ハイライト</div>
+    <div class="srclab" id="src28">出典: RIZIN公式 試合後インタビュー</div>
+    <div class="srclab" id="src29">出典: RIZIN公式 試合後インタビュー</div>
+    <div class="srclab" id="src30">出典: RIZIN公式 超RIZIN.5 試合ハイライト</div>
+    <div class="srclab" id="src31">出典: RIZIN公式 試合後インタビュー</div>
+    <div class="srclab" id="src32">出典: RIZIN公式 試合後インタビュー</div>
+    <div class="srclab" id="src33">出典: RIZIN公式 試合後インタビュー</div>
+    <div class="srclab" id="src34">出典: RIZIN公式 試合後インタビュー</div>
+    <div class="srclab" id="src35">出典: RIZIN公式 超RIZIN.5 第8試合</div>
+    <div class="srclab" id="src36">出典: RIZIN公式 超RIZIN.5 試合ハイライト</div>
+    <div class="srclab" id="src37">出典: RIZIN公式 超RIZIN.5 試合ハイライト</div>
+    <div class="srclab" id="src38">出典: RIZIN公式 超RIZIN.5 第8試合</div>
+    <div class="srclab" id="src39">出典: RIZIN公式 超RIZIN.5 第8試合</div>
+    <div class="srclab" id="src40">出典: RIZIN公式 超RIZIN.5 第8試合</div>
+    <div class="srclab" id="src41">出典: RIZIN公式 超RIZIN.5 試合ハイライト</div>
+    <div class="srclab" id="src42">出典: RIZIN公式 超RIZIN.5 第8試合</div>
+    <div class="srclab" id="src43">出典: RIZIN公式 試合後インタビュー</div>
+    <div class="chaptag" id="chap1"><div class="chnum">平本蓮 vs. ダウトベック</div><div class="chttl">判定2-1に割れた評価</div></div>
+    <div class="chaptag" id="chap2"><div class="chnum">朝倉未来 vs. 青木真也</div><div class="chttl">1ラウンドで決着</div></div>
+    <div class="chaptag" id="chap3"><div class="chnum">シェイドゥラエフ vs. マッキー</div><div class="chttl">RIZIN・PFL 二冠</div></div>
+    <div class="chaptag" id="chap4"><div class="chnum">まとめ</div><div class="chttl">判定基準が主題になった一日</div></div>
+    <div class="ccard media" id="cc0"><div class="mtag">ジョビン</div><div class="ctext" style="font-size:38px">今までの判定で1番びっくりしたかも。平本自身が負けた顔してたもん。これはまずいんじゃない?</div><div class="cmeta">元DEEPフェザー級王者／実況配信</div></div>
+    <div class="ccard media" id="cc1"><div class="mtag">ジョビン</div><div class="ctext" style="font-size:38px">トータルマストなら100%ダウトベック。ただ、ラウンドマストならあり得る判定ですね。</div><div class="cmeta">元DEEPフェザー級王者／実況配信</div></div>
+    <div class="ccard media" id="cc2"><div class="mtag">河原由次</div><div class="ctext" style="font-size:38px">人気がある選手だから。スターだから。もし、そんなものが1%でも判定に入るなら、もうスポーツじゃない。</div><div class="cmeta">サムライソウルCOO</div></div>
+    <div class="ccard media" id="cc3"><div class="mtag">ジャン斉藤</div><div class="ctext" style="font-size:38px">1R ダウトベック、2R 平本蓮。3Rのダウトベックのポジションキープをどう見るか。手数は平本蓮だった。</div><div class="cmeta">格闘技ライター</div></div>
+    <div class="ccard media" id="cc4"><div class="mtag">平本 蓮</div><div class="ctext" style="font-size:33px">1R目は10-8取られるかと思ったけど、2・3取ってれば28-28。トータルじゃなくてラウンドマストだから大丈夫、とセコンドに言われた。</div><div class="cmeta">試合後インタビューより</div></div>
+    <div class="ccard media" id="cc5"><div class="mtag">カルシャガ・ダウトベック</div><div class="ctext" style="font-size:38px">自分が負けたとは思っていません。1Rで拳を折った感覚があった。それでも1Rと3Rは自分が取ったと理解しています。</div><div class="cmeta">試合後インタビューより</div></div>
+    <div class="ccard media" id="cc6"><div class="mtag">朝倉 未来</div><div class="ctext" style="font-size:38px">これが日本の格闘技の歴史の1ページです。俺はこの経験を経て先に進みたいと思います。</div><div class="cmeta">勝利者マイクより</div></div>
+    <div class="ccard media" id="cc7"><div class="mtag">青木 真也</div><div class="ctext" style="font-size:38px">この通りしっかりやられたから。今日は彼の方が強かった。それ以上でもそれ以下でもなし。乾杯。</div><div class="cmeta">試合後インタビューより</div></div>
+    <div class="subt" id="sub0">京セラドーム大阪で行われた、超RIZIN.5。<br>全8試合のうち、フィニッシュ決着は2つだけでした。</div>
+    <div class="subt" id="sub1">残る6試合は判定にもつれ、判定基準そのものが、<br>この大会の話題になっています。</div>
+    <div class="subt" id="sub2">この動画では、注目された3試合を取り上げます。<br>平本蓮対カルシャガ・ダウトベック。</div>
+    <div class="subt" id="sub3">朝倉未来対青木真也。そして、<br>RIZINとPFLの王座を懸けたメインイベントです。</div>
+    <div class="subt" id="sub4">選手本人の言葉と、解説者や関係者の見方を、<br>試合ごとにまとめてお届けします。</div>
+    <div class="subt" id="sub5">まずは第6試合。平本蓮対カルシャガ・ダウトベックで<br>す。</div>
+    <div class="subt" id="sub6">結果は、判定2-1で、平本の勝利。ダウトベックは<br>2019年3月を最後に公式戦で敗れておらず、</div>
+    <div class="subt" id="sub7">その相手を、<br>774日ぶりの復帰戦で止めた形になりました。</div>
+    <div class="subt" id="sub8">ただ、この判定に賛否が集まりました。まず、<br>試合の中身を確認します。</div>
+    <div class="subt" id="sub9">1R、ダウトベックの左が何度もクリーンヒットします。<br>平本は明らかに効かされました。ただ、</div>
+    <div class="subt" id="sub10">ダウンはしていません。ここが、<br>あとで大きな意味を持ちます。</div>
+    <div class="subt" id="sub11">2R、平本がインローを効かせて盛り返します。</div>
+    <div class="subt" id="sub12">3Rはダウトベックが何度もテイクダウンを<br>奪いましたが、</div>
+    <div class="subt" id="sub13">倒したあとの攻撃は多くありませんでした。</div>
+    <div class="subt" id="sub14">報じられたジャッジスコアは、29-28で平本が2人。<br>29-27でダウトベックが1人です。1人だけが、</div>
+    <div class="subt" id="sub15">1Rを10-8と見ていた計算になります。</div>
+    <div class="subt" id="sub16">元DEEPフェザー級王者のジョビンさんは、<br>実況配信でこう話しました。</div>
+    <div class="subt" id="sub17">1Rは自分の採点では10-8だが、<br>ダウンはしていないので10-9でもおかしくない。</div>
+    <div class="subt" id="sub18">2Rもダウトベックだと思う、と。</div>
+    <div class="subt" id="sub19">そして判定が読み上げられると、今までの判定で<br>いちばん驚いたかもしれない、と漏らしています。</div>
+    <div class="subt" id="sub20">平本自身が負けた顔をしていた。これはさすがに<br>まずいんじゃないか、とも語りました。</div>
+    <div class="subt" id="sub21">一方でジョビンさんは採点方式の違いにも<br>触れています。</div>
+    <div class="subt" id="sub22">試合全体で見るトータルマストなら100% ダウト<br>ベック。</div>
+    <div class="subt" id="sub23">ただラウンドごとに見るラウンドマストなら、<br>あり得る判定だという見方です。</div>
+    <div class="subt" id="sub24">サムライソウルの河原由次さんは、<br>自分にはどう見ても負けに見えた、と書きました。</div>
+    <div class="subt" id="sub25">人気があるから、スターだから。それが判定に<br>入るなら、もうスポーツじゃない、</div>
+    <div class="subt" id="sub26">という強い言葉です。</div>
+    <div class="subt" id="sub27">格闘技ライターのジャン斉藤さんは、<br>1Rはダウトベック、2Rは平本。分かれ目は、</div>
+    <div class="subt" id="sub28">3Rのポジションキープをどう見るかだ、<br>としています。</div>
+    <div class="subt" id="sub29">逆に、判定を理解できるという声もありました。<br>ダウトベックは組んだあとに何もしなかった。</div>
+    <div class="subt" id="sub30">コントロールしているだけではポイントにならない。<br>RIZINの基準なら、</div>
+    <div class="subt" id="sub31">有効打で平本だという見方です。</div>
+    <div class="subt" id="sub32">そして、平本本人の説明が、<br>この論点にそのまま重なります。</div>
+    <div class="subt" id="sub33">平本は試合後、頑丈なあごに産んでくれた親に感謝、<br>と笑いました。1Rでもらったことで、</div>
+    <div class="subt" id="sub34">逆に2R以降は全部見えたと振り返っています。</div>
+    <div class="subt" id="sub35">さらに組みの展開でダウトベックが力を使っている間に<br>、</div>
+    <div class="subt" id="sub36">自分は回復して打ち合いに集中しようと考えていたと<br>明かしました。</div>
+    <div class="subt" id="sub37">採点についても、本人は把握していました。1Rは<br>10-8を取られるかと思ったが、</div>
+    <div class="subt" id="sub38">2Rと3Rを取っていれば28-28。トータルでは<br>なくラウンドマストだから大丈夫だと、</div>
+    <div class="subt" id="sub39">セコンドに言われたそうです。</div>
+    <div class="subt" id="sub40">見ている側が割れた一方で、戦っていた本人は、<br>その計算のうえで戦っていたことになります。</div>
+    <div class="subt" id="sub41">そして、<br>敗れたダウトベックも試合後に口を開きました。</div>
+    <div class="subt" id="sub42">自分が負けたとは思っていない。1Rで拳を<br>折った感覚があり、そのあとは強い打撃を出せなかった。</div>
+    <div class="subt" id="sub43">それでも1Rと3Rは自分が取ったと考えている、<br>と話しています。</div>
+    <div class="subt" id="sub44">そのうえで、手が治れば大晦日にもう一度やりたいと<br>、再戦を求めました。</div>
+    <div class="subt" id="sub45">平本が自分の勝ちだと思っているなら、再戦では<br>っきり証明してほしい、という言い方です。</div>
+    <div class="subt" id="sub46">さらに、<br>平本は試合のあと少し泣いているように見えた。</div>
+    <div class="subt" id="sub47">だから彼も自分が負けたと思っていたはずだ、<br>とも述べています。なぜあの結果になったのか、</div>
+    <div class="subt" id="sub48">審判に聞いてみたい、と。</div>
+    <div class="subt" id="sub49">続いて第7試合。朝倉未来対青木真也です。</div>
+    <div class="subt" id="sub50">結果は、1R2分39秒。朝倉のKO勝ちでした。</div>
+    <div class="subt" id="sub51">試合は開始直後から、<br>青木が組みに行きます。朝倉が上を取ると、</div>
+    <div class="subt" id="sub52">青木は引き込んで下から三角絞めを狙いました。</div>
+    <div class="subt" id="sub53">朝倉がこれをかわすと、青木は再びタックル。四の<br>字にロックして、朝倉の背中を完全に奪います。</div>
+    <div class="subt" id="sub54">青木の土俵に入った、危険な場面でした。</div>
+    <div class="subt" id="sub55">しかし、朝倉はここをしのぎ切ります。ポジションを<br>入れ替えて上を奪うと、強烈なパウンドを連打。</div>
+    <div class="subt" id="sub56">青木が防戦一方になったところで、<br>レフェリーが試合を止めました。</div>
+    <div class="subt" id="sub57">勝利のマイクで、朝倉はこう言いました。これが<br>日本の格闘技の歴史の1ページです。</div>
+    <div class="subt" id="sub58">俺はこの経験を経て、先に進みたいと思います。<br>青木選手、ありがとうございました。</div>
+    <div class="subt" id="sub59">敗れた青木の言葉は、青木らしいものでした。この<br>通りしっかりやられたから、</div>
+    <div class="subt" id="sub60">今日は彼の方が強かった。それ以上でもそれ以下で<br>もなし、と。</div>
+    <div class="subt" id="sub61">今後については自分で分かっていると述べたうえで<br>、</div>
+    <div class="subt" id="sub62">ここでお前らにいいネタはやらないと続けました。<br>朝倉を通して自分と向き合い、</div>
+    <div class="subt" id="sub63">今の状況がよく分かったとも話しています。</div>
+    <div class="subt" id="sub64">元世界王者の具志堅用高さんは、強烈だった、<br>パンチで攻め込んで逃さなかったと語りました。</div>
+    <div class="subt" id="sub65">そしてメインイベント。RIZINとPFL、2つの<br>団体にまたがるフェザー級王座を懸けた一戦です。</div>
+    <div class="subt" id="sub66">ラジャブアリ・シェイドゥラエフ対AJ・マッキー。<br>結果は、判定3-0で、</div>
+    <div class="subt" id="sub67">シェイドゥラエフの勝利でした。</div>
+    <div class="subt" id="sub68">1Rはマッキーの右ジャブとカーフキックが<br>機能する場面もありました。解説からは、</div>
+    <div class="subt" id="sub69">こんな指摘も出ています。上を取っていたのは<br>シェイドゥラエフだが、</div>
+    <div class="subt" id="sub70">パンチを当てていたのはマッキーだ、と。</div>
+    <div class="subt" id="sub71">それでもシェイドゥラエフは組みで捕まえてテイクダウンを<br>奪い、グラウンドで上を取り続けました。</div>
+    <div class="subt" id="sub72">3Rを戦い切っての判定勝ちです。</div>
+    <div class="subt" id="sub73">この勝利で、シェイドゥラエフはRIZINとPFLの<br>二冠を達成。無敗記録も、20戦全勝に伸ばしました。</div>
+    <div class="subt" id="sub74">全8試合のうちフィニッシュで決着したのは、<br>だい2試合の一本と、朝倉のKOの2つだけでした。</div>
+    <div class="subt" id="sub75">残る6試合は判定にもつれ、そのなかで第6試合の<br>採点が、大きな議論になりました。</div>
+    <div class="subt" id="sub76">ラウンドごとに見るのか、<br>試合全体で見るのか。今大会は、</div>
+    <div class="subt" id="sub77">その違いが最も見えた一日だったのかも<br>しれません。</div>
+    <div class="subt" id="sub78">あなたは、あの判定をどう見ましたか。ぜひコメントで<br>教えてください。</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      const tl = gsap.timeline({paused:true});
+      tl.fromTo('#bg0',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},0.25);
+      tl.fromTo('#src0',{opacity:0},{opacity:1,duration:.4},0.55);
+      tl.to('#src0',{opacity:0,duration:.3},14.76);
+      tl.fromTo('#bg1',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},14.93);
+      tl.fromTo('#src1',{opacity:0},{opacity:1,duration:.4},15.23);
+      tl.to('#src1',{opacity:0,duration:.3},27.45);
+      tl.fromTo('#bg2',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},27.62);
+      tl.fromTo('#src2',{opacity:0},{opacity:1,duration:.4},27.92);
+      tl.to('#src2',{opacity:0,duration:.3},33.90);
+      tl.fromTo('#bg3',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},34.07);
+      tl.fromTo('#bg3-v',{scale:1.0},{scale:1.08,duration:5.27,ease:'none'},34.07);
+      tl.fromTo('#src3',{opacity:0},{opacity:1,duration:.4},34.37);
+      tl.to('#src3',{opacity:0,duration:.3},38.70);
+      tl.fromTo('#bg4',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},38.87);
+      tl.fromTo('#bg4-v',{scale:1.0},{scale:1.08,duration:14.28,ease:'none'},38.87);
+      tl.fromTo('#src4',{opacity:0},{opacity:1,duration:.4},39.16);
+      tl.to('#src4',{opacity:0,duration:.3},52.50);
+      tl.fromTo('#bg5',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},52.67);
+      tl.fromTo('#src5',{opacity:0},{opacity:1,duration:.4},52.97);
+      tl.to('#src5',{opacity:0,duration:.3},63.74);
+      tl.fromTo('#bg6',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},63.91);
+      tl.fromTo('#bg6-v',{scale:1.0},{scale:1.08,duration:6.20,ease:'none'},63.91);
+      tl.fromTo('#src6',{opacity:0},{opacity:1,duration:.4},64.21);
+      tl.to('#src6',{opacity:0,duration:.3},69.46);
+      tl.fromTo('#bg7',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},69.63);
+      tl.fromTo('#bg7-v',{scale:1.0},{scale:1.08,duration:11.82,ease:'none'},69.63);
+      tl.fromTo('#src7',{opacity:0},{opacity:1,duration:.4},69.93);
+      tl.to('#src7',{opacity:0,duration:.3},80.80);
+      tl.fromTo('#bg8',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},80.97);
+      tl.fromTo('#bg8-v',{scale:1.0},{scale:1.08,duration:10.84,ease:'none'},80.97);
+      tl.fromTo('#src8',{opacity:0},{opacity:1,duration:.4},81.27);
+      tl.to('#src8',{opacity:0,duration:.3},91.16);
+      tl.fromTo('#bg9',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},91.33);
+      tl.fromTo('#bg9-v',{scale:1.0},{scale:1.08,duration:12.94,ease:'none'},91.33);
+      tl.fromTo('#src9',{opacity:0},{opacity:1,duration:.4},91.63);
+      tl.to('#src9',{opacity:0,duration:.3},103.62);
+      tl.fromTo('#bg10',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},103.79);
+      tl.fromTo('#bg10-v',{scale:1.0},{scale:1.08,duration:15.09,ease:'none'},103.79);
+      tl.fromTo('#src10',{opacity:0},{opacity:1,duration:.4},104.09);
+      tl.to('#src10',{opacity:0,duration:.3},118.23);
+      tl.fromTo('#bg11',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},118.40);
+      tl.fromTo('#bg11-v',{scale:1.0},{scale:1.08,duration:12.89,ease:'none'},118.40);
+      tl.fromTo('#src11',{opacity:0},{opacity:1,duration:.4},118.70);
+      tl.to('#src11',{opacity:0,duration:.3},130.64);
+      tl.fromTo('#bg12',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},130.81);
+      tl.fromTo('#bg12-v',{scale:1.0},{scale:1.08,duration:13.12,ease:'none'},130.81);
+      tl.fromTo('#src12',{opacity:0},{opacity:1,duration:.4},131.11);
+      tl.to('#src12',{opacity:0,duration:.3},143.28);
+      tl.fromTo('#bg13',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},143.45);
+      tl.fromTo('#bg13-v',{scale:1.0},{scale:1.08,duration:14.05,ease:'none'},143.45);
+      tl.fromTo('#src13',{opacity:0},{opacity:1,duration:.4},143.75);
+      tl.to('#src13',{opacity:0,duration:.3},156.84);
+      tl.fromTo('#bg14',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},157.01);
+      tl.fromTo('#bg14-v',{scale:1.0},{scale:1.08,duration:11.31,ease:'none'},157.01);
+      tl.fromTo('#src14',{opacity:0},{opacity:1,duration:.4},157.31);
+      tl.to('#src14',{opacity:0,duration:.3},167.67);
+      tl.fromTo('#bg15',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},167.84);
+      tl.fromTo('#bg15-v',{scale:1.0},{scale:1.08,duration:14.14,ease:'none'},167.84);
+      tl.fromTo('#src15',{opacity:0},{opacity:1,duration:.4},168.14);
+      tl.to('#src15',{opacity:0,duration:.3},181.33);
+      tl.fromTo('#bg16',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},181.50);
+      tl.fromTo('#src16',{opacity:0},{opacity:1,duration:.4},181.80);
+      tl.to('#src16',{opacity:0,duration:.3},186.17);
+      tl.fromTo('#bg17',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},186.34);
+      tl.fromTo('#src17',{opacity:0},{opacity:1,duration:.4},186.64);
+      tl.to('#src17',{opacity:0,duration:.3},197.23);
+      tl.fromTo('#bg18',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},197.40);
+      tl.fromTo('#src18',{opacity:0},{opacity:1,duration:.4},197.70);
+      tl.to('#src18',{opacity:0,duration:.3},206.06);
+      tl.fromTo('#bg19',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},206.23);
+      tl.fromTo('#src19',{opacity:0},{opacity:1,duration:.4},206.53);
+      tl.to('#src19',{opacity:0,duration:.3},221.26);
+      tl.fromTo('#bg20',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},221.43);
+      tl.fromTo('#bg20-v',{scale:1.0},{scale:1.08,duration:7.22,ease:'none'},221.43);
+      tl.fromTo('#src20',{opacity:0},{opacity:1,duration:.4},221.73);
+      tl.to('#src20',{opacity:0,duration:.3},228.01);
+      tl.fromTo('#bg21',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},228.18);
+      tl.fromTo('#src21',{opacity:0},{opacity:1,duration:.4},228.48);
+      tl.to('#src21',{opacity:0,duration:.3},232.15);
+      tl.fromTo('#bg22',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},232.32);
+      tl.fromTo('#src22',{opacity:0},{opacity:1,duration:.4},232.62);
+      tl.to('#src22',{opacity:0,duration:.3},245.62);
+      tl.fromTo('#bg23',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},245.79);
+      tl.fromTo('#src23',{opacity:0},{opacity:1,duration:.4},246.09);
+      tl.to('#src23',{opacity:0,duration:.3},257.47);
+      tl.fromTo('#bg24',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},257.64);
+      tl.fromTo('#src24',{opacity:0},{opacity:1,duration:.4},257.94);
+      tl.to('#src24',{opacity:0,duration:.3},270.29);
+      tl.fromTo('#bg25',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},270.46);
+      tl.fromTo('#src25',{opacity:0},{opacity:1,duration:.4},270.76);
+      tl.to('#src25',{opacity:0,duration:.3},274.57);
+      tl.fromTo('#bg26',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},274.74);
+      tl.fromTo('#src26',{opacity:0},{opacity:1,duration:.4},275.04);
+      tl.to('#src26',{opacity:0,duration:.3},279.59);
+      tl.fromTo('#bg27',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},279.76);
+      tl.fromTo('#src27',{opacity:0},{opacity:1,duration:.4},280.06);
+      tl.to('#src27',{opacity:0,duration:.3},291.83);
+      tl.fromTo('#bg28',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},292.00);
+      tl.fromTo('#src28',{opacity:0},{opacity:1,duration:.4},292.30);
+      tl.to('#src28',{opacity:0,duration:.3},300.48);
+      tl.fromTo('#bg29',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},300.65);
+      tl.fromTo('#src29',{opacity:0},{opacity:1,duration:.4},300.95);
+      tl.to('#src29',{opacity:0,duration:.3},311.96);
+      tl.fromTo('#bg30',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},312.13);
+      tl.fromTo('#src30',{opacity:0},{opacity:1,duration:.4},312.43);
+      tl.to('#src30',{opacity:0,duration:.3},324.60);
+      tl.fromTo('#bg31',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},324.77);
+      tl.fromTo('#src31',{opacity:0},{opacity:1,duration:.4},325.07);
+      tl.to('#src31',{opacity:0,duration:.3},337.47);
+      tl.fromTo('#bg32',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},337.64);
+      tl.fromTo('#src32',{opacity:0},{opacity:1,duration:.4},337.94);
+      tl.to('#src32',{opacity:0,duration:.3},349.18);
+      tl.fromTo('#bg33',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},349.35);
+      tl.fromTo('#src33',{opacity:0},{opacity:1,duration:.4},349.65);
+      tl.to('#src33',{opacity:0,duration:.3},361.03);
+      tl.fromTo('#bg34',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},361.20);
+      tl.fromTo('#src34',{opacity:0},{opacity:1,duration:.4},361.50);
+      tl.to('#src34',{opacity:0,duration:.3},368.46);
+      tl.fromTo('#bg35',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},368.63);
+      tl.fromTo('#bg35-v',{scale:1.0},{scale:1.08,duration:7.78,ease:'none'},368.63);
+      tl.fromTo('#src35',{opacity:0},{opacity:1,duration:.4},368.93);
+      tl.to('#src35',{opacity:0,duration:.3},375.76);
+      tl.fromTo('#bg36',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},375.93);
+      tl.fromTo('#src36',{opacity:0},{opacity:1,duration:.4},376.23);
+      tl.to('#src36',{opacity:0,duration:.3},383.29);
+      tl.fromTo('#bg37',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},383.46);
+      tl.fromTo('#src37',{opacity:0},{opacity:1,duration:.4},383.76);
+      tl.to('#src37',{opacity:0,duration:.3},393.53);
+      tl.fromTo('#bg38',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},393.70);
+      tl.fromTo('#bg38-v',{scale:1.0},{scale:1.08,duration:12.19,ease:'none'},393.70);
+      tl.fromTo('#src38',{opacity:0},{opacity:1,duration:.4},394.00);
+      tl.to('#src38',{opacity:0,duration:.3},405.24);
+      tl.fromTo('#bg39',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},405.41);
+      tl.fromTo('#bg39-v',{scale:1.0},{scale:1.08,duration:10.10,ease:'none'},405.41);
+      tl.fromTo('#src39',{opacity:0},{opacity:1,duration:.4},405.71);
+      tl.to('#src39',{opacity:0,duration:.3},414.86);
+      tl.fromTo('#bg40',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},415.03);
+      tl.fromTo('#bg40-v',{scale:1.0},{scale:1.08,duration:10.05,ease:'none'},415.03);
+      tl.fromTo('#src40',{opacity:0},{opacity:1,duration:.4},415.33);
+      tl.to('#src40',{opacity:0,duration:.3},424.43);
+      tl.fromTo('#bg41',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},424.60);
+      tl.fromTo('#src41',{opacity:0},{opacity:1,duration:.4},424.90);
+      tl.to('#src41',{opacity:0,duration:.3},432.29);
+      tl.fromTo('#bg42',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},432.45);
+      tl.fromTo('#bg42-v',{scale:1.0},{scale:1.08,duration:16.46,ease:'none'},432.45);
+      tl.fromTo('#src42',{opacity:0},{opacity:1,duration:.4},432.75);
+      tl.to('#src42',{opacity:0,duration:.3},448.27);
+      tl.fromTo('#bg43',{opacity:0},{opacity:1,duration:.45,ease:'power1.inOut'},448.44);
+      tl.fromTo('#src43',{opacity:0},{opacity:1,duration:.4},448.74);
+      tl.to('#src43',{opacity:0,duration:.3},453.78);
+      tl.fromTo('#chap1',{opacity:0,y:40},{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'},34.17);
+      tl.to('#chap1',{opacity:0,y:-26,duration:.4,ease:'power1.in'},37.47);
+      tl.fromTo('#chap2',{opacity:0,y:40},{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'},270.56);
+      tl.to('#chap2',{opacity:0,y:-26,duration:.4,ease:'power1.in'},273.86);
+      tl.fromTo('#chap3',{opacity:0,y:40},{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'},368.73);
+      tl.to('#chap3',{opacity:0,y:-26,duration:.4,ease:'power1.in'},372.03);
+      tl.fromTo('#chap4',{opacity:0,y:40},{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'},424.70);
+      tl.to('#chap4',{opacity:0,y:-26,duration:.4,ease:'power1.in'},428.00);
+      tl.fromTo('#cc0',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},118.60);
+      tl.to('#cc0',{opacity:0,y:-14,duration:.35,ease:'power1.in'},130.42);
+      tl.fromTo('#cc1',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},131.01);
+      tl.to('#cc1',{opacity:0,y:-14,duration:.35,ease:'power1.in'},143.06);
+      tl.fromTo('#cc2',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},143.65);
+      tl.to('#cc2',{opacity:0,y:-14,duration:.35,ease:'power1.in'},156.62);
+      tl.fromTo('#cc3',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},157.21);
+      tl.to('#cc3',{opacity:0,y:-14,duration:.35,ease:'power1.in'},167.45);
+      tl.fromTo('#cc4',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},206.43);
+      tl.to('#cc4',{opacity:0,y:-14,duration:.35,ease:'power1.in'},221.04);
+      tl.fromTo('#cc5',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},232.52);
+      tl.to('#cc5',{opacity:0,y:-14,duration:.35,ease:'power1.in'},245.40);
+      tl.fromTo('#cc6',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},324.97);
+      tl.to('#cc6',{opacity:0,y:-14,duration:.35,ease:'power1.in'},337.25);
+      tl.fromTo('#cc7',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},337.84);
+      tl.to('#cc7',{opacity:0,y:-14,duration:.35,ease:'power1.in'},348.96);
+      tl.fromTo('#sub0',{opacity:0},{opacity:1,duration:.18},0.25);
+      tl.to('#sub0',{opacity:0,duration:.14},7.99);
+      tl.fromTo('#sub1',{opacity:0},{opacity:1,duration:.18},8.04);
+      tl.to('#sub1',{opacity:0,duration:.14},14.64);
+      tl.fromTo('#sub2',{opacity:0},{opacity:1,duration:.18},14.93);
+      tl.to('#sub2',{opacity:0,duration:.14},21.36);
+      tl.fromTo('#sub3',{opacity:0},{opacity:1,duration:.18},21.41);
+      tl.to('#sub3',{opacity:0,duration:.14},27.33);
+      tl.fromTo('#sub4',{opacity:0},{opacity:1,duration:.18},27.62);
+      tl.to('#sub4',{opacity:0,duration:.14},33.23);
+      tl.fromTo('#sub5',{opacity:0},{opacity:1,duration:.18},34.07);
+      tl.to('#sub5',{opacity:0,duration:.14},38.58);
+      tl.fromTo('#sub6',{opacity:0},{opacity:1,duration:.18},38.87);
+      tl.to('#sub6',{opacity:0,duration:.14},47.14);
+      tl.fromTo('#sub7',{opacity:0},{opacity:1,duration:.18},47.19);
+      tl.to('#sub7',{opacity:0,duration:.14},52.38);
+      tl.fromTo('#sub8',{opacity:0},{opacity:1,duration:.18},63.91);
+      tl.to('#sub8',{opacity:0,duration:.14},69.34);
+      tl.fromTo('#sub9',{opacity:0},{opacity:1,duration:.18},69.63);
+      tl.to('#sub9',{opacity:0,duration:.14},76.21);
+      tl.fromTo('#sub10',{opacity:0},{opacity:1,duration:.18},76.26);
+      tl.to('#sub10',{opacity:0,duration:.14},80.67);
+      tl.fromTo('#sub11',{opacity:0},{opacity:1,duration:.18},80.97);
+      tl.to('#sub11',{opacity:0,duration:.14},84.09);
+      tl.fromTo('#sub12',{opacity:0},{opacity:1,duration:.18},84.14);
+      tl.to('#sub12',{opacity:0,duration:.14},88.03);
+      tl.fromTo('#sub13',{opacity:0},{opacity:1,duration:.18},88.08);
+      tl.to('#sub13',{opacity:0,duration:.14},91.04);
+      tl.fromTo('#sub14',{opacity:0},{opacity:1,duration:.18},91.33);
+      tl.to('#sub14',{opacity:0,duration:.14},100.06);
+      tl.fromTo('#sub15',{opacity:0},{opacity:1,duration:.18},100.11);
+      tl.to('#sub15',{opacity:0,duration:.14},103.50);
+      tl.fromTo('#sub16',{opacity:0},{opacity:1,duration:.18},103.79);
+      tl.to('#sub16',{opacity:0,duration:.14},109.26);
+      tl.fromTo('#sub17',{opacity:0},{opacity:1,duration:.18},109.31);
+      tl.to('#sub17',{opacity:0,duration:.14},115.52);
+      tl.fromTo('#sub18',{opacity:0},{opacity:1,duration:.18},115.57);
+      tl.to('#sub18',{opacity:0,duration:.14},118.11);
+      tl.fromTo('#sub19',{opacity:0},{opacity:1,duration:.18},118.40);
+      tl.to('#sub19',{opacity:0,duration:.14},124.79);
+      tl.fromTo('#sub20',{opacity:0},{opacity:1,duration:.18},124.84);
+      tl.to('#sub20',{opacity:0,duration:.14},130.52);
+      tl.fromTo('#sub21',{opacity:0},{opacity:1,duration:.18},130.81);
+      tl.to('#sub21',{opacity:0,duration:.14},134.41);
+      tl.fromTo('#sub22',{opacity:0},{opacity:1,duration:.18},134.46);
+      tl.to('#sub22',{opacity:0,duration:.14},138.09);
+      tl.fromTo('#sub23',{opacity:0},{opacity:1,duration:.18},138.15);
+      tl.to('#sub23',{opacity:0,duration:.14},143.16);
+      tl.fromTo('#sub24',{opacity:0},{opacity:1,duration:.18},143.45);
+      tl.to('#sub24',{opacity:0,duration:.14},149.44);
+      tl.fromTo('#sub25',{opacity:0},{opacity:1,duration:.18},149.49);
+      tl.to('#sub25',{opacity:0,duration:.14},155.17);
+      tl.fromTo('#sub26',{opacity:0},{opacity:1,duration:.18},155.22);
+      tl.to('#sub26',{opacity:0,duration:.14},156.72);
+      tl.fromTo('#sub27',{opacity:0},{opacity:1,duration:.18},157.01);
+      tl.to('#sub27',{opacity:0,duration:.14},163.29);
+      tl.fromTo('#sub28',{opacity:0},{opacity:1,duration:.18},163.34);
+      tl.to('#sub28',{opacity:0,duration:.14},167.55);
+      tl.fromTo('#sub29',{opacity:0},{opacity:1,duration:.18},167.84);
+      tl.to('#sub29',{opacity:0,duration:.14},174.15);
+      tl.fromTo('#sub30',{opacity:0},{opacity:1,duration:.18},174.20);
+      tl.to('#sub30',{opacity:0,duration:.14},179.00);
+      tl.fromTo('#sub31',{opacity:0},{opacity:1,duration:.18},179.05);
+      tl.to('#sub31',{opacity:0,duration:.14},181.21);
+      tl.fromTo('#sub32',{opacity:0},{opacity:1,duration:.18},181.50);
+      tl.to('#sub32',{opacity:0,duration:.14},186.05);
+      tl.fromTo('#sub33',{opacity:0},{opacity:1,duration:.18},186.34);
+      tl.to('#sub33',{opacity:0,duration:.14},193.44);
+      tl.fromTo('#sub34',{opacity:0},{opacity:1,duration:.18},193.49);
+      tl.to('#sub34',{opacity:0,duration:.14},197.11);
+      tl.fromTo('#sub35',{opacity:0},{opacity:1,duration:.18},197.40);
+      tl.to('#sub35',{opacity:0,duration:.14},201.27);
+      tl.fromTo('#sub36',{opacity:0},{opacity:1,duration:.18},201.32);
+      tl.to('#sub36',{opacity:0,duration:.14},205.94);
+      tl.fromTo('#sub37',{opacity:0},{opacity:1,duration:.18},206.23);
+      tl.to('#sub37',{opacity:0,duration:.14},212.34);
+      tl.fromTo('#sub38',{opacity:0},{opacity:1,duration:.18},212.39);
+      tl.to('#sub38',{opacity:0,duration:.14},218.77);
+      tl.fromTo('#sub39',{opacity:0},{opacity:1,duration:.18},218.82);
+      tl.to('#sub39',{opacity:0,duration:.14},221.14);
+      tl.fromTo('#sub40',{opacity:0},{opacity:1,duration:.18},221.43);
+      tl.to('#sub40',{opacity:0,duration:.14},227.89);
+      tl.fromTo('#sub41',{opacity:0},{opacity:1,duration:.18},228.18);
+      tl.to('#sub41',{opacity:0,duration:.14},232.03);
+      tl.fromTo('#sub42',{opacity:0},{opacity:1,duration:.18},232.32);
+      tl.to('#sub42',{opacity:0,duration:.14},240.30);
+      tl.fromTo('#sub43',{opacity:0},{opacity:1,duration:.18},240.35);
+      tl.to('#sub43',{opacity:0,duration:.14},245.50);
+      tl.fromTo('#sub44',{opacity:0},{opacity:1,duration:.18},245.79);
+      tl.to('#sub44',{opacity:0,duration:.14},250.94);
+      tl.fromTo('#sub45',{opacity:0},{opacity:1,duration:.18},250.99);
+      tl.to('#sub45',{opacity:0,duration:.14},257.35);
+      tl.fromTo('#sub46',{opacity:0},{opacity:1,duration:.18},257.64);
+      tl.to('#sub46',{opacity:0,duration:.14},261.45);
+      tl.fromTo('#sub47',{opacity:0},{opacity:1,duration:.18},261.50);
+      tl.to('#sub47',{opacity:0,duration:.14},267.84);
+      tl.fromTo('#sub48',{opacity:0},{opacity:1,duration:.18},267.89);
+      tl.to('#sub48',{opacity:0,duration:.14},269.62);
+      tl.fromTo('#sub49',{opacity:0},{opacity:1,duration:.18},270.46);
+      tl.to('#sub49',{opacity:0,duration:.14},274.45);
+      tl.fromTo('#sub50',{opacity:0},{opacity:1,duration:.18},274.74);
+      tl.to('#sub50',{opacity:0,duration:.14},279.47);
+      tl.fromTo('#sub51',{opacity:0},{opacity:1,duration:.18},292.00);
+      tl.to('#sub51',{opacity:0,duration:.14},296.80);
+      tl.fromTo('#sub52',{opacity:0},{opacity:1,duration:.18},296.85);
+      tl.to('#sub52',{opacity:0,duration:.14},300.36);
+      tl.fromTo('#sub53',{opacity:0},{opacity:1,duration:.18},300.65);
+      tl.to('#sub53',{opacity:0,duration:.14},308.50);
+      tl.fromTo('#sub54',{opacity:0},{opacity:1,duration:.18},308.55);
+      tl.to('#sub54',{opacity:0,duration:.14},311.84);
+      tl.fromTo('#sub55',{opacity:0},{opacity:1,duration:.18},312.13);
+      tl.to('#sub55',{opacity:0,duration:.14},319.49);
+      tl.fromTo('#sub56',{opacity:0},{opacity:1,duration:.18},319.54);
+      tl.to('#sub56',{opacity:0,duration:.14},324.48);
+      tl.fromTo('#sub57',{opacity:0},{opacity:1,duration:.18},324.77);
+      tl.to('#sub57',{opacity:0,duration:.14},331.00);
+      tl.fromTo('#sub58',{opacity:0},{opacity:1,duration:.18},331.05);
+      tl.to('#sub58',{opacity:0,duration:.14},337.35);
+      tl.fromTo('#sub59',{opacity:0},{opacity:1,duration:.18},337.64);
+      tl.to('#sub59',{opacity:0,duration:.14},343.94);
+      tl.fromTo('#sub60',{opacity:0},{opacity:1,duration:.18},343.99);
+      tl.to('#sub60',{opacity:0,duration:.14},349.06);
+      tl.fromTo('#sub61',{opacity:0},{opacity:1,duration:.18},349.35);
+      tl.to('#sub61',{opacity:0,duration:.14},352.74);
+      tl.fromTo('#sub62',{opacity:0},{opacity:1,duration:.18},352.79);
+      tl.to('#sub62',{opacity:0,duration:.14},358.04);
+      tl.fromTo('#sub63',{opacity:0},{opacity:1,duration:.18},358.09);
+      tl.to('#sub63',{opacity:0,duration:.14},360.91);
+      tl.fromTo('#sub64',{opacity:0},{opacity:1,duration:.18},361.20);
+      tl.to('#sub64',{opacity:0,duration:.14},367.79);
+      tl.fromTo('#sub65',{opacity:0},{opacity:1,duration:.18},368.63);
+      tl.to('#sub65',{opacity:0,duration:.14},375.64);
+      tl.fromTo('#sub66',{opacity:0},{opacity:1,duration:.18},375.93);
+      tl.to('#sub66',{opacity:0,duration:.14},380.88);
+      tl.fromTo('#sub67',{opacity:0},{opacity:1,duration:.18},380.93);
+      tl.to('#sub67',{opacity:0,duration:.14},383.17);
+      tl.fromTo('#sub68',{opacity:0},{opacity:1,duration:.18},393.70);
+      tl.to('#sub68',{opacity:0,duration:.14},398.56);
+      tl.fromTo('#sub69',{opacity:0},{opacity:1,duration:.18},398.61);
+      tl.to('#sub69',{opacity:0,duration:.14},402.68);
+      tl.fromTo('#sub70',{opacity:0},{opacity:1,duration:.18},402.73);
+      tl.to('#sub70',{opacity:0,duration:.14},405.12);
+      tl.fromTo('#sub71',{opacity:0},{opacity:1,duration:.18},405.41);
+      tl.to('#sub71',{opacity:0,duration:.14},412.42);
+      tl.fromTo('#sub72',{opacity:0},{opacity:1,duration:.18},412.47);
+      tl.to('#sub72',{opacity:0,duration:.14},414.74);
+      tl.fromTo('#sub73',{opacity:0},{opacity:1,duration:.18},415.03);
+      tl.to('#sub73',{opacity:0,duration:.14},423.76);
+      tl.fromTo('#sub74',{opacity:0},{opacity:1,duration:.18},424.60);
+      tl.to('#sub74',{opacity:0,duration:.14},432.17);
+      tl.fromTo('#sub75',{opacity:0},{opacity:1,duration:.18},432.45);
+      tl.to('#sub75',{opacity:0,duration:.14},439.14);
+      tl.fromTo('#sub76',{opacity:0},{opacity:1,duration:.18},439.19);
+      tl.to('#sub76',{opacity:0,duration:.14},443.91);
+      tl.fromTo('#sub77',{opacity:0},{opacity:1,duration:.18},443.96);
+      tl.to('#sub77',{opacity:0,duration:.14},448.15);
+      tl.fromTo('#sub78',{opacity:0},{opacity:1,duration:.18},448.44);
+      tl.to('#sub78',{opacity:0,duration:.14},453.08);
+      window.__timelines = window.__timelines || {};
+      window.__timelines['rizin5-reactions'] = tl;
+    </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,310 @@
+[
+  {
+    "beat": "o1",
+    "src": "hl_qXZY9nrWMjY.mp4",
+    "ss": 1.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  },
+  {
+    "beat": "o2",
+    "src": "hl_1gCgKoJD9Xg.mp4",
+    "ss": 2.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  },
+  {
+    "beat": "o3",
+    "src": "hl6_IShJJtI2LhU.mp4",
+    "ss": 2.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  },
+  {
+    "beat": "c1a",
+    "src": "sokuho_6.mp4",
+    "ss": 20.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "beat": "c1b",
+    "src": "sokuho_6.mp4",
+    "ss": 45.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "beat": "ko1",
+    "src": "hl6_IShJJtI2LhU.mp4",
+    "ss": 0.5,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  },
+  {
+    "beat": "c1c",
+    "src": "sokuho_6.mp4",
+    "ss": 75.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "beat": "c1d",
+    "src": "sokuho_6.mp4",
+    "ss": 133.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "beat": "c1e",
+    "src": "sokuho_6.mp4",
+    "ss": 200.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "beat": "c1f",
+    "src": "sokuho_6.mp4",
+    "ss": 230.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "beat": "c1g",
+    "src": "sokuho_6.mp4",
+    "ss": 95.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "beat": "c1h",
+    "src": "sokuho_6.mp4",
+    "ss": 150.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "beat": "c1i",
+    "src": "sokuho_6.mp4",
+    "ss": 250.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "beat": "c1j",
+    "src": "sokuho_6.mp4",
+    "ss": 275.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "beat": "c1k",
+    "src": "sokuho_6.mp4",
+    "ss": 60.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "beat": "c1l",
+    "src": "sokuho_6.mp4",
+    "ss": 175.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "beat": "c1m",
+    "src": "iv_hiramoto_dautbek.mp4",
+    "ss": 15.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c1n",
+    "src": "iv_hiramoto_dautbek.mp4",
+    "ss": 40.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c1o",
+    "src": "iv_hiramoto_dautbek.mp4",
+    "ss": 90.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c1p",
+    "src": "iv_hiramoto_dautbek.mp4",
+    "ss": 140.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c1q",
+    "src": "sokuho_6.mp4",
+    "ss": 340.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "beat": "c1r",
+    "src": "iv_hiramoto_dautbek.mp4",
+    "ss": 300.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c1s",
+    "src": "iv_hiramoto_dautbek.mp4",
+    "ss": 330.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c1t",
+    "src": "hl6_IShJJtI2LhU.mp4",
+    "ss": 8.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  },
+  {
+    "beat": "c1u",
+    "src": "iv_hiramoto_dautbek.mp4",
+    "ss": 360.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c2a",
+    "src": "hl_qXZY9nrWMjY.mp4",
+    "ss": 6.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  },
+  {
+    "beat": "c2b",
+    "src": "hl_qXZY9nrWMjY.mp4",
+    "ss": 11.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  },
+  {
+    "beat": "ko2",
+    "src": "hl_qXZY9nrWMjY.mp4",
+    "ss": 0.5,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  },
+  {
+    "beat": "c2c",
+    "src": "iv_asakura_aoki.mp4",
+    "ss": 300.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c2d",
+    "src": "iv_asakura_aoki.mp4",
+    "ss": 330.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c2e",
+    "src": "hl_qXZY9nrWMjY.mp4",
+    "ss": 3.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  },
+  {
+    "beat": "c2f",
+    "src": "iv_asakura_aoki.mp4",
+    "ss": 120.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c2g",
+    "src": "iv_asakura_aoki.mp4",
+    "ss": 20.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c2h",
+    "src": "iv_asakura_aoki.mp4",
+    "ss": 60.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c2i",
+    "src": "iv_asakura_aoki.mp4",
+    "ss": 200.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c3a",
+    "src": "main_f8.mp4",
+    "ss": 15.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c3b",
+    "src": "hl_1gCgKoJD9Xg.mp4",
+    "ss": 1.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  },
+  {
+    "beat": "ko3",
+    "src": "hl_1gCgKoJD9Xg.mp4",
+    "ss": 8.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  },
+  {
+    "beat": "c3c",
+    "src": "main_f8.mp4",
+    "ss": 60.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c3d",
+    "src": "main_f8.mp4",
+    "ss": 200.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c3e",
+    "src": "main_f8.mp4",
+    "ss": 280.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "e1",
+    "src": "hl_1gCgKoJD9Xg.mp4",
+    "ss": 14.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  },
+  {
+    "beat": "e2",
+    "src": "main_f8.mp4",
+    "ss": 330.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "e3",
+    "src": "iv_asakura_aoki.mp4",
+    "ss": 250.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  }
+]
