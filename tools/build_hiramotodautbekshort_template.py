@@ -324,7 +324,7 @@ HTML = f"""<!doctype html>
   .bigtitle{{position:absolute;z-index:28;left:0;right:0;top:300px;text-align:center;opacity:0;}}
   .bigtitle .tl{{display:block;width:fit-content;margin:0 auto 12px;padding:6px 22px;border-radius:8px;
     background:rgba(0,0,0,.78);font-family:"JPHeavy";font-weight:900;font-size:104px;line-height:1.16;
-    letter-spacing:.01em;filter:var(--edge);white-space:nowrap;}}
+    letter-spacing:.01em;text-shadow:-6px 0px 0 var(--ink),6px 0px 0 var(--ink),0px -6px 0 var(--ink),0px 6px 0 var(--ink),-5px -5px 0 var(--ink),5px -5px 0 var(--ink),-5px 5px 0 var(--ink),5px 5px 0 var(--ink),-3px 0px 0 var(--ink),3px 0px 0 var(--ink),0px -3px 0 var(--ink),0px 3px 0 var(--ink),0 12px 26px rgba(0,0,0,.9);white-space:nowrap;}}
   .bigtitle .t-w{{color:#fff;}} .bigtitle .t-b{{color:var(--blue);}} .bigtitle .t-y{{color:var(--yellow);}}
   .src{{position:absolute;z-index:30;left:34px;top:1636px;font-family:"JPMed";font-size:25px;color:#eee;letter-spacing:.02em;
     background:rgba(0,0,0,.6);border-left:5px solid var(--yellow);padding:6px 14px;border-radius:3px;filter:var(--edsm);opacity:0;}}
