@@ -211,9 +211,15 @@ for bid in ORDER:
         sub_times.append(round(c0, 2))
         all_lines.append((sid, lines))
         body = "<br>".join(f'<span class="ln">{colorize(ln)}</span>' for ln in lines)
-        sub_divs.append(f'<div class="sub" id="{sid}"><span class="subtxt">{body}</span></div>')
-        tl.append(f"tl.fromTo('#{sid}',{{opacity:0,scale:1.12,y:16}},{{opacity:1,scale:1,y:0,duration:.18,ease:'back.out(1.5)'}},{T(c0):.2f});")
-        tl.append(f"tl.to('#{sid}',{{opacity:0,duration:.10,ease:'power1.in'}},{T(c1 - 0.02):.2f});")
+        sub_divs.append(f'<div class="sub" id="{sid}">{body}</div>')
+        # ★窓/pieceの先頭より前に始まったキュー(cont)は、先頭から不透明で出す。
+        #   負の位置に置くとGSAPが描画せず字幕が丸ごと消え、0でフェードさせると
+        #   piece境界で再フェード＝ちらつきになるため、どちらも避ける。
+        if T(c0) < 0:
+            tl.append(f"tl.fromTo('#{sid}',{{opacity:1}},{{opacity:1,duration:.01}},0.00);")
+        else:
+            tl.append(f"tl.fromTo('#{sid}',{{opacity:0}},{{opacity:1,duration:.14}},{T(c0):.2f});")
+        tl.append(f"tl.to('#{sid}',{{opacity:0,duration:.10}},{T(c1 - 0.02):.2f});")
 
 src_divs = []
 for n, (t0, t1, lab) in enumerate(merged_lab):
@@ -221,7 +227,10 @@ for n, (t0, t1, lab) in enumerate(merged_lab):
         continue
     sid = f"src{n}"
     src_divs.append(f'<div class="src" id="{sid}">{esc("出典: " + lab)}</div>')
-    tl.append(f"tl.fromTo('#{sid}',{{opacity:0}},{{opacity:.92,duration:.25}},{T(t0 + 0.15):.2f});")
+    if T(t0 + 0.15) < 0:
+        tl.append(f"tl.fromTo('#{sid}',{{opacity:.92}},{{opacity:.92,duration:.01}},0.00);")
+    else:
+        tl.append(f"tl.fromTo('#{sid}',{{opacity:0}},{{opacity:.92,duration:.25}},{T(t0 + 0.15):.2f});")
     tl.append(f"tl.to('#{sid}',{{opacity:0,duration:.15}},{T(t1 - 0.05):.2f});")
 
 # ★透かし・ヴェールもサムネ区間は出さない(支給素材を加工しない)
@@ -235,10 +244,11 @@ else:
     tl.append(f"tl.to('#veil',{{opacity:1,duration:.25}},{T(THUMB_END + 0.05):.2f});")
 
 # ===== SFX (背景切替 + 字幕切替), 近接除去+同音連続回避 =====
-raw = [(round(t, 2), "T") for t in BG_CUTS] + [(round(t, 2), "S") for t in sub_times]
-raw = [(t, k) for t, k in raw if 0.3 < t < DUR - 0.2]
+raw = ([(0.15, "M")]                                    # ★冒頭サムネ(全画面テキスト)は専用の衝撃音
+       + [(round(t, 2), "T") for t in BG_CUTS] + [(round(t, 2), "S") for t in sub_times])
+raw = [(t, k) for t, k in raw if 0.1 <= t < DUR - 0.2]
 raw.sort(key=lambda x: x[0])
-pri = {"T": 0, "S": 1}
+pri = {"M": 0, "T": 1, "S": 2}
 dd = []
 for t, k in raw:
     if dd and abs(t - dd[-1][0]) < 0.13:
@@ -246,8 +256,8 @@ for t, k in raw:
             dd[-1] = (t, k)
         continue
     dd.append((t, k))
-POOL = {"T": TRANS_SFX, "S": SUB_SFX}
-idxp = {"T": 0, "S": 0}
+POOL = {"M": ["se_moji.mp3"], "T": TRANS_SFX, "S": SUB_SFX}
+idxp = {"M": 0, "T": 0, "S": 0}
 sfx = []
 last = None
 for t, k in dd:
@@ -296,8 +306,8 @@ HTML = f"""<!doctype html>
   .bgv video{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:translateZ(0);backface-visibility:hidden;}}
   .veil{{position:absolute;inset:0;z-index:5;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.30) 0%,transparent 20%,transparent 52%,rgba(0,0,0,.55) 100%);}}
   .wm{{position:absolute;z-index:30;left:34px;top:40px;font-family:"JPHeavy";font-size:34px;color:#fff;letter-spacing:.04em;filter:var(--edsm);opacity:0;}}
-  .sub{{position:absolute;z-index:25;left:30px;right:30px;top:1120px;text-align:center;line-height:1.28;}}
-  .sub .subtxt{{font-family:"JPHeavy";font-weight:900;font-size:{FS}px;color:#fff;filter:var(--edge);letter-spacing:.01em;}}
+  .sub{{position:absolute;z-index:25;left:30px;right:30px;top:1120px;text-align:center;opacity:0;
+    font-family:"JPHeavy";font-weight:900;font-size:{FS}px;line-height:1.28;color:#fff;filter:var(--edge);letter-spacing:.01em;}}
   .sub .ln{{display:inline-block;white-space:nowrap;}}
   .sub .c-r{{color:var(--red);}} .sub .c-y{{color:var(--yellow);}} .sub .c-b{{color:var(--blue);}} .sub .c-w{{color:#fff;}}
   .src{{position:absolute;z-index:30;left:34px;top:1636px;font-family:"JPMed";font-size:25px;color:#eee;letter-spacing:.02em;
