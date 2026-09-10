@@ -232,32 +232,43 @@ def sub_lines(text, maxw=23.0):
     return [w[0], w[1]] if w else [text]
 
 # ---- 背景 DOM/TL ----
+# ★背景は事前に1本へ連結し、GitHubの100MB制限に収まるよう6分割したものを重ねて流す。
+#   ビート別に <video> を並べるとビート数が多い時に Chrome の同時メディア要素の上限に当たり、
+#   フレームキャプチャが同じフレームで固まる（80ビートで再現）。連結方式はショートで実績あり。
+#   各パートは次パート開始から8秒ぶん余分に持っているので、piece終端まで背景が途切れない。
 bg_divs, bg_tws, src_divs = [], [], []
+PARTS = json.load(open(TPL / "assets" / "bgvid_full" / "parts.json", encoding="utf-8"))
+for k, pt in enumerate(PARTS):
+    pt0, pt1 = pt["t0"], pt["t1"]
+    if not OV(pt0, pt1):
+        continue
+    bid = f"bgp{k}"
+    ds = max(0.0, T(pt0))                       # 窓内での表示開始
+    ms = max(0.0, W0 - pt0)                     # パート内の再生開始位置
+    dur = min(pt["media_len"] - ms, (W1 - max(pt0, W0)) + 0.6)   # piece終端まで持たせる
+    if dur <= 0.05:
+        continue
+    bg_divs.append(
+        f'<div class="bgseg" id="{bid}" style="z-index:{k + 1};opacity:1">'
+        f'<video id="{bid}-v" src="assets/bgvid_full/{pt["file"]}" muted playsinline '
+        f'data-layout-allow-overflow data-start="{ds:.2f}" data-duration="{dur:.2f}" '
+        f'data-media-start="{ms:.2f}" data-track-index="{10 + k}"></video></div>')
+    bg_tws.append(f"tl.set('#{bid}',{{opacity:1}},0);")
+
+# 出典ラベルは連結後も各ビートの時間帯に追従させる
 for i, (t0, t1, fn, mo, srcl) in enumerate(BG):
-    if not OV(t0, t1): continue
-    bid = f"bg{i}"; vt0, vt1 = T(t0), T(t1)
-    cont = vt0 <= 0.02
-    cd = clip_dur(fn)
-    ms = max(0.0, W0 - t0); ds = max(0.0, vt0)
-    dur = (min(t1, W1) - max(t0, W0)) + 0.6
-    if ms + dur > cd - 0.03:
-        dur = max(0.3, cd - ms - 0.05)
-    inner = (f'<video id="{bid}-v" src="assets/bgvid/{fn}.mp4" muted playsinline data-layout-allow-overflow '
-             f'data-start="{ds:.2f}" data-duration="{dur:.2f}" data-media-start="{ms:.2f}" data-track-index="{10+i}"></video>')
-    op = ";opacity:1" if cont else ""
-    bg_divs.append(f'<div class="bgseg" id="{bid}" style="z-index:{i+1}{op}">{inner}</div>')
-    if cont:
-        bg_tws.append(f"tl.set('#{bid}',{{opacity:1}},0);")
+    if not OV(t0, t1) or not srcl:
+        continue
+    if (min(t1, W1) - max(t0, W0)) <= 0.6:   # 窓端で可視が短い区間は出さない(残留防止)
+        continue
+    vt0, vt1 = T(t0), T(t1)
+    sid = f"src{i}"
+    src_divs.append(f'<div class="srclab" id="{sid}">{esc(srcl)}</div>')
+    if vt0 + 0.3 < 0:
+        bg_tws.append(f"tl.fromTo('#{sid}',{{opacity:1}},{{opacity:1,duration:.01}},0.00);")
     else:
-        bg_tws.append(f"tl.fromTo('#{bid}',{{opacity:0}},{{opacity:1,duration:.45,ease:'power1.inOut'}},{vt0:.2f});")
-    sel = f"'#{bid}-v'"; kbs = max(0.0, vt0); kbd = min(t1, W1) - max(t0, W0) + 0.4
-    if mo == "kb_zin":
-        bg_tws.append(f"tl.fromTo({sel},{{scale:1.0}},{{scale:1.08,duration:{kbd:.2f},ease:'none'}},{kbs:.2f});")
-    if srcl and (min(t1, W1) - max(t0, W0)) > 0.6:  # 窓端で可視が短いセグメントの出典ラベルは出さない(残留防止)
-        sid = f"src{i}"
-        src_divs.append(f'<div class="srclab" id="{sid}">{esc(srcl)}</div>')
-        bg_tws.append(f"tl.fromTo('#{sid}',{{opacity:0}},{{opacity:1,duration:.4}},{max(0.0,vt0+0.3):.2f});")
-        bg_tws.append(f"tl.to('#{sid}',{{opacity:0,duration:.3}},{vt1-0.25:.2f});")
+        bg_tws.append(f"tl.fromTo('#{sid}',{{opacity:0}},{{opacity:1,duration:.4}},{vt0 + 0.3:.2f});")
+    bg_tws.append(f"tl.to('#{sid}',{{opacity:0,duration:.3}},{vt1 - 0.25:.2f});")
 
 # ---- 章タグ ----
 chap_divs, chap_tws, chap_audio = [], [], []
