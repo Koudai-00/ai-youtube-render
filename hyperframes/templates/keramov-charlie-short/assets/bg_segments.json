@@ -1,0 +1,154 @@
+[
+  {
+    "t0": 0.0,
+    "t1": 5.677,
+    "beat": "t0",
+    "src": "柏木サムネイル.png",
+    "ss": 0.0,
+    "label": ""
+  },
+  {
+    "t0": 5.677,
+    "t1": 9.562,
+    "beat": "h1",
+    "src": "orig_1010.mp4",
+    "ss": 100.0,
+    "label": "RIZIN公式 テッペンまで生テレビ"
+  },
+  {
+    "t0": 9.562,
+    "t1": 13.771,
+    "beat": "h2",
+    "src": "vert_T2gRsGmJ-ZE.mp4",
+    "ss": 2.0,
+    "label": "RIZIN公式"
+  },
+  {
+    "t0": 13.771,
+    "t1": 18.464,
+    "beat": "c1",
+    "src": "weight_scale_1_7801722.mp4",
+    "ss": 2.0,
+    "label": "Pexels"
+  },
+  {
+    "t0": 18.464,
+    "t1": 21.286,
+    "beat": "c2",
+    "src": "weighin_keramov.mp4",
+    "ss": 36.0,
+    "label": "RIZIN公式 超RIZIN.5 公開計量"
+  },
+  {
+    "t0": 21.286,
+    "t1": 22.809,
+    "beat": "c3",
+    "src": "weighin_keramov.mp4",
+    "ss": 57.0,
+    "label": "RIZIN公式 超RIZIN.5 公開計量"
+  },
+  {
+    "t0": 22.809,
+    "t1": 26.653,
+    "beat": "c4",
+    "src": "orig_1010.mp4",
+    "ss": 118.0,
+    "label": "RIZIN公式 テッペンまで生テレビ"
+  },
+  {
+    "t0": 26.653,
+    "t1": 30.245,
+    "beat": "c5",
+    "src": "orig_1010.mp4",
+    "ss": 240.0,
+    "label": "RIZIN公式 テッペンまで生テレビ"
+  },
+  {
+    "t0": 30.245,
+    "t1": 33.97,
+    "beat": "c6",
+    "src": "weighin_keramov.mp4",
+    "ss": 65.0,
+    "label": "RIZIN公式 超RIZIN.5 公開計量"
+  },
+  {
+    "t0": 33.97,
+    "t1": 37.936,
+    "beat": "c7",
+    "src": "steam_room_hot_1_9145755.mp4",
+    "ss": 1.0,
+    "label": "Pexels"
+  },
+  {
+    "t0": 37.936,
+    "t1": 41.444,
+    "beat": "c9",
+    "src": "orig_1010.mp4",
+    "ss": 200.0,
+    "label": "RIZIN公式 テッペンまで生テレビ"
+  },
+  {
+    "t0": 41.444,
+    "t1": 44.952,
+    "beat": "c9",
+    "src": "orig_1010.mp4",
+    "ss": 220.0,
+    "label": "RIZIN公式 テッペンまで生テレビ"
+  },
+  {
+    "t0": 44.952,
+    "t1": 49.566,
+    "beat": "c10",
+    "src": "orig_1010.mp4",
+    "ss": 260.0,
+    "label": "RIZIN公式 テッペンまで生テレビ"
+  },
+  {
+    "t0": 49.566,
+    "t1": 54.584,
+    "beat": "c11",
+    "src": "orig_1010.mp4",
+    "ss": 290.0,
+    "label": "RIZIN公式 テッペンまで生テレビ"
+  },
+  {
+    "t0": 54.584,
+    "t1": 58.224,
+    "beat": "c12",
+    "src": "vert_L6qCoMGgLc0.mp4",
+    "ss": 8.0,
+    "label": "RIZIN公式"
+  },
+  {
+    "t0": 58.224,
+    "t1": 60.351,
+    "beat": "e1",
+    "src": "weighin_keramov.mp4",
+    "ss": 43.0,
+    "label": "RIZIN公式 超RIZIN.5 公開計量"
+  },
+  {
+    "t0": 60.351,
+    "t1": 64.19,
+    "beat": "e2",
+    "src": "weighin_keramov.mp4",
+    "ss": 103.0,
+    "label": "RIZIN公式 超RIZIN.5 公開計量"
+  },
+  {
+    "t0": 64.19,
+    "t1": 68.313,
+    "beat": "e3",
+    "src": "orig_1010.mp4",
+    "ss": 300.0,
+    "label": "RIZIN公式 テッペンまで生テレビ"
+  },
+  {
+    "t0": 68.313,
+    "t1": 71.321,
+    "beat": "e4",
+    "src": "weighin_keramov.mp4",
+    "ss": 92.0,
+    "label": "RIZIN公式 超RIZIN.5 公開計量"
+  }
+]
