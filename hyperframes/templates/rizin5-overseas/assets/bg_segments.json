@@ -1,0 +1,268 @@
+[
+  {
+    "beat": "o1",
+    "src": "main_f8.mp4",
+    "ss": 15.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "o2",
+    "src": "hl_1gCgKoJD9Xg.mp4",
+    "ss": 1.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  },
+  {
+    "beat": "o3",
+    "src": "arrival.mp4",
+    "ss": 30.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 選手会場入り"
+  },
+  {
+    "beat": "c1a",
+    "src": "iv8_full.mp4",
+    "ss": 1640.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c1b",
+    "src": "main_f8.mp4",
+    "ss": 45.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c1c",
+    "src": "main_f8.mp4",
+    "ss": 70.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c1d",
+    "src": "main_f8.mp4",
+    "ss": 95.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c1e",
+    "src": "main_f8.mp4",
+    "ss": 120.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c1f",
+    "src": "iv8_full.mp4",
+    "ss": 1690.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c1g",
+    "src": "arrival.mp4",
+    "ss": 120.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 選手会場入り"
+  },
+  {
+    "beat": "c1h",
+    "src": "hl_1gCgKoJD9Xg.mp4",
+    "ss": 12.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  },
+  {
+    "beat": "c2a",
+    "src": "main_f8.mp4",
+    "ss": 150.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c2b",
+    "src": "main_f8.mp4",
+    "ss": 170.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c2c",
+    "src": "main_f8.mp4",
+    "ss": 190.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c2d",
+    "src": "main_f8.mp4",
+    "ss": 215.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c2e",
+    "src": "main_f8.mp4",
+    "ss": 235.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c2f",
+    "src": "iv8_full.mp4",
+    "ss": 190.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c2g",
+    "src": "main_f8.mp4",
+    "ss": 260.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c2h",
+    "src": "main_f8.mp4",
+    "ss": 282.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c2i",
+    "src": "iv8_full.mp4",
+    "ss": 120.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c2j",
+    "src": "iv8_full.mp4",
+    "ss": 430.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c2k",
+    "src": "iv8_full.mp4",
+    "ss": 460.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c2l",
+    "src": "iv8_full.mp4",
+    "ss": 490.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c2m",
+    "src": "main_f8.mp4",
+    "ss": 305.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c2n",
+    "src": "main_f8.mp4",
+    "ss": 325.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c3a",
+    "src": "winner_loser.mp4",
+    "ss": 2120.0,
+    "kind": "plain",
+    "label": "RIZIN公式【勝者と敗者】"
+  },
+  {
+    "beat": "c3b",
+    "src": "iv8_full.mp4",
+    "ss": 1730.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c3c",
+    "src": "main_f8.mp4",
+    "ss": 350.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c3d",
+    "src": "iv8_full.mp4",
+    "ss": 1790.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c3e",
+    "src": "arrival.mp4",
+    "ss": 250.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 選手会場入り"
+  },
+  {
+    "beat": "c3f",
+    "src": "iv8_full.mp4",
+    "ss": 1840.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c3g",
+    "src": "main_f8.mp4",
+    "ss": 370.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c3h",
+    "src": "arrival.mp4",
+    "ss": 350.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 選手会場入り"
+  },
+  {
+    "beat": "c3i",
+    "src": "iv8_full.mp4",
+    "ss": 1880.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "e1",
+    "src": "iv8_full.mp4",
+    "ss": 1920.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "e2",
+    "src": "iv8_full.mp4",
+    "ss": 1975.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "e3",
+    "src": "winner_loser.mp4",
+    "ss": 2190.0,
+    "kind": "plain",
+    "label": "RIZIN公式【勝者と敗者】"
+  },
+  {
+    "beat": "e4",
+    "src": "winner_loser.mp4",
+    "ss": 2260.0,
+    "kind": "plain",
+    "label": "RIZIN公式【勝者と敗者】"
+  }
+]
