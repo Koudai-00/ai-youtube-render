@@ -1,0 +1,133 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  @font-face{font-family:"JPHeavy";src:url("assets/fonts/SourceHanSansJP-Heavy.otf");}
+  @font-face{font-family:"JPMed";src:url("assets/fonts/SourceHanSansJP-Medium.otf");}
+  :root{--yellow:#ffd21e;--white:#fff;--red:#ff3b3b;--blue:#36b3ff;--ink:#0a0a0a;
+    --edge:drop-shadow(5px 0 0 var(--ink)) drop-shadow(-5px 0 0 var(--ink)) drop-shadow(0 5px 0 var(--ink)) drop-shadow(0 -5px 0 var(--ink))
+      drop-shadow(4px 4px 0 var(--ink)) drop-shadow(-4px 4px 0 var(--ink)) drop-shadow(4px -4px 0 var(--ink)) drop-shadow(-4px -4px 0 var(--ink)) drop-shadow(0 10px 22px rgba(0,0,0,.9));
+    --edsm:drop-shadow(0 0 2px var(--ink)) drop-shadow(2px 0 1px var(--ink)) drop-shadow(-2px 0 1px var(--ink)) drop-shadow(0 2px 1px var(--ink)) drop-shadow(0 3px 8px rgba(0,0,0,.9));}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  #root{position:absolute;inset:0;overflow:hidden;background:#05060a;font-family:"JPHeavy";}
+  .bgv{position:absolute;inset:0;z-index:1;overflow:hidden;}
+  .bgv video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:translateZ(0);backface-visibility:hidden;}
+  .veil{position:absolute;inset:0;z-index:5;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.30) 0%,transparent 20%,transparent 52%,rgba(0,0,0,.55) 100%);}
+  .wm{position:absolute;z-index:30;left:34px;top:40px;font-family:"JPHeavy";font-size:34px;color:#fff;letter-spacing:.04em;filter:var(--edsm);opacity:0;}
+  .sub{position:absolute;z-index:25;left:30px;right:30px;top:1120px;text-align:center;opacity:0;
+    font-family:"JPHeavy";font-weight:900;font-size:68px;line-height:1.28;color:#fff;filter:var(--edge);letter-spacing:.01em;}
+  .sub .ln{display:inline-block;white-space:nowrap;}
+  .sub .c-r{color:var(--red);} .sub .c-y{color:var(--yellow);} .sub .c-b{color:var(--blue);} .sub .c-w{color:#fff;}
+  .bigtitle{position:absolute;z-index:28;left:0;right:0;top:300px;text-align:center;opacity:0;}
+  .bigtitle .tl{display:block;width:fit-content;margin:0 auto 12px;padding:6px 22px;border-radius:8px;
+    background:rgba(0,0,0,.78);font-family:"JPHeavy";font-weight:900;font-size:104px;line-height:1.16;
+    letter-spacing:.01em;filter:var(--edge);white-space:nowrap;}
+  .bigtitle .t-w{color:#fff;} .bigtitle .t-b{color:var(--blue);} .bigtitle .t-y{color:var(--yellow);}
+  .src{position:absolute;z-index:30;left:34px;top:1636px;font-family:"JPMed";font-size:25px;color:#eee;letter-spacing:.02em;
+    background:rgba(0,0,0,.6);border-left:5px solid var(--yellow);padding:6px 14px;border-radius:3px;filter:var(--edsm);opacity:0;}
+</style></head><body>
+  <div id="root" data-composition-id="hiramoto-dautbek-short" data-start="0" data-duration="69.24" data-width="1080" data-height="1920">
+    <div class="bgv" id="bg" style="opacity:1"><video id="bg-v" src="assets/bgvid/hiramoto_bg_full.mp4" muted playsinline data-start="0" data-duration="69.84" data-media-start="0.00" data-track-index="10"></video></div>
+    
+    
+    <div class="veil" id="veil"></div>
+    <div class="wm" id="wm">格闘ニュースラボ</div>
+    <div class="bigtitle" id="bigt"><span class="tl t-w">どう見ても</span><span class="tl t-b">ダウトベック</span><span class="tl t-y">判定2-1に賛否</span></div>
+    <div class="sub" id="sub0"><span class="ln">どう見ても<span class="c-b">ダウトベック</span></span></div><div class="sub" id="sub1"><span class="ln"><span class="c-r">平本蓮</span>の判定勝ちに</span><br><span class="ln"><span class="c-y">賛否</span>が割れています</span></div><div class="sub" id="sub2"><span class="ln"><span class="c-b">超RIZIN.5</span>第6試合</span></div><div class="sub" id="sub3"><span class="ln"><span class="c-r">平本蓮</span>とカルシャガダ</span><br><span class="ln">ウトベックの一戦です</span></div><div class="sub" id="sub4"><span class="ln">結果は<span class="c-y">判定2-1</span></span></div><div class="sub" id="sub5"><span class="ln">ジャッジ1人は</span><br><span class="ln"><span class="c-b">ダウトベック</span>を支持しました</span></div><div class="sub" id="sub6"><span class="ln">1R</span></div><div class="sub" id="sub7"><span class="ln"><span class="c-b">ダウトベック</span>の</span><br><span class="ln">左が<span class="c-y">クリーンヒット</span></span></div><div class="sub" id="sub8"><span class="ln"><span class="c-r">平本</span>はキャンバスに</span><br><span class="ln">落ちました</span></div><div class="sub" id="sub9"><span class="ln">2Rは</span></div><div class="sub" id="sub10"><span class="ln"><span class="c-r">平本</span>がインローを</span><br><span class="ln">効かせて盛り返します</span></div><div class="sub" id="sub11"><span class="ln">3Rは<span class="c-b">ダウトベック</span>が</span><br><span class="ln">何度も<span class="c-y">テイクダウン</span></span></div><div class="sub" id="sub12"><span class="ln">ただ倒したあとの攻撃は</span><br><span class="ln">多くありませんでした</span></div><div class="sub" id="sub13"><span class="ln">判定の瞬間</span></div><div class="sub" id="sub14"><span class="ln">いちばん<span class="c-y">驚いていた</span>の</span><br><span class="ln">は<span class="c-r">平本</span>本人</span></div><div class="sub" id="sub15"><span class="ln">そんな声も上がっています</span></div><div class="sub" id="sub16"><span class="ln"><span class="c-b">SNS</span>では</span></div><div class="sub" id="sub17"><span class="ln">どう見ても<span class="c-b">ダウトベック</span>と</span><br><span class="ln">いう声が多数です</span></div><div class="sub" id="sub18"><span class="ln"><span class="c-y">河原由次</span>さんは</span></div><div class="sub" id="sub19"><span class="ln">人気があるから</span></div><div class="sub" id="sub20"><span class="ln">スターだから</span></div><div class="sub" id="sub21"><span class="ln">それが判定に</span><br><span class="ln">入るなら<span class="c-y">スポーツじゃない</span></span></div><div class="sub" id="sub22"><span class="ln">としました</span></div><div class="sub" id="sub23"><span class="ln">格闘技ライターの</span><br><span class="ln"><span class="c-y">ジャン斉藤</span>さんは</span></div><div class="sub" id="sub24"><span class="ln">1Rは<span class="c-b">ダウトベック</span></span></div><div class="sub" id="sub25"><span class="ln">2Rは<span class="c-r">平本</span>と採点</span></div><div class="sub" id="sub26"><span class="ln">分かれ目は3Rだとしています</span></div><div class="sub" id="sub27"><span class="ln"><span class="c-b">ダウトベック</span>は組んだあと</span><br><span class="ln">に何もしなかった</span></div><div class="sub" id="sub28"><span class="ln"><span class="c-b">RIZIN</span>の</span><br><span class="ln">判定なら有効打で<span class="c-r">平本</span>だ</span></div><div class="sub" id="sub29"><span class="ln">という声もあります</span></div><div class="sub" id="sub30"><span class="ln">1Rを<span class="c-y">10-8</span>にしなければ</span></div><div class="sub" id="sub31"><span class="ln">2-1で<span class="c-r">平本</span>と</span><br><span class="ln">いう計算も成り立ちます</span></div><div class="sub" id="sub32"><span class="ln">公式の</span><br><span class="ln">ジャッジスコアの内訳は</span></div><div class="sub" id="sub33"><span class="ln">まだ公表されていません</span></div><div class="sub" id="sub34"><span class="ln">あなたはどちらの</span><br><span class="ln">勝ちだと思いますか</span></div>
+    <div class="src" id="src0">出典: RIZIN公式</div><div class="src" id="src1">出典: RIZIN公式 超RIZIN.5 試合ハイライト</div><div class="src" id="src2">出典: RIZIN公式 超RIZIN.5 第6試合</div><div class="src" id="src3">出典: RIZIN公式</div><div class="src" id="src4">出典: RIZIN公式 超RIZIN.5 第6試合</div><div class="src" id="src5">出典: RIZIN公式 超RIZIN.5 試合ハイライト</div><div class="src" id="src6">出典: RIZIN公式 超RIZIN.5 第6試合</div><div class="src" id="src7">出典: RIZIN公式 超RIZIN.5 試合ハイライト</div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      const tl = gsap.timeline({paused:true});
+      tl.fromTo('#sub0',{opacity:0},{opacity:1,duration:.14},0.18);
+      tl.to('#sub0',{opacity:0,duration:.10},1.72);
+      tl.fromTo('#sub1',{opacity:0},{opacity:1,duration:.14},1.74);
+      tl.to('#sub1',{opacity:0,duration:.10},4.27);
+      tl.fromTo('#sub2',{opacity:0},{opacity:1,duration:.14},4.46);
+      tl.to('#sub2',{opacity:0,duration:.10},6.19);
+      tl.fromTo('#sub3',{opacity:0},{opacity:1,duration:.14},6.21);
+      tl.to('#sub3',{opacity:0,duration:.10},9.12);
+      tl.fromTo('#sub4',{opacity:0},{opacity:1,duration:.14},9.30);
+      tl.to('#sub4',{opacity:0,duration:.10},10.42);
+      tl.fromTo('#sub5',{opacity:0},{opacity:1,duration:.14},10.44);
+      tl.to('#sub5',{opacity:0,duration:.10},13.28);
+      tl.fromTo('#sub6',{opacity:0},{opacity:1,duration:.14},13.46);
+      tl.to('#sub6',{opacity:0,duration:.10},13.76);
+      tl.fromTo('#sub7',{opacity:0},{opacity:1,duration:.14},13.78);
+      tl.to('#sub7',{opacity:0,duration:.10},16.31);
+      tl.fromTo('#sub8',{opacity:0},{opacity:1,duration:.14},16.33);
+      tl.to('#sub8',{opacity:0,duration:.10},18.54);
+      tl.fromTo('#sub9',{opacity:0},{opacity:1,duration:.14},18.72);
+      tl.to('#sub9',{opacity:0,duration:.10},19.16);
+      tl.fromTo('#sub10',{opacity:0},{opacity:1,duration:.14},19.18);
+      tl.to('#sub10',{opacity:0,duration:.10},21.89);
+      tl.fromTo('#sub11',{opacity:0},{opacity:1,duration:.14},22.07);
+      tl.to('#sub11',{opacity:0,duration:.10},24.47);
+      tl.fromTo('#sub12',{opacity:0},{opacity:1,duration:.14},24.49);
+      tl.to('#sub12',{opacity:0,duration:.10},27.15);
+      tl.fromTo('#sub13',{opacity:0},{opacity:1,duration:.14},27.33);
+      tl.to('#sub13',{opacity:0,duration:.10},28.06);
+      tl.fromTo('#sub14',{opacity:0},{opacity:1,duration:.14},28.08);
+      tl.to('#sub14',{opacity:0,duration:.10},30.34);
+      tl.fromTo('#sub15',{opacity:0},{opacity:1,duration:.14},30.36);
+      tl.to('#sub15',{opacity:0,duration:.10},32.16);
+      tl.fromTo('#sub16',{opacity:0},{opacity:1,duration:.14},32.34);
+      tl.to('#sub16',{opacity:0,duration:.10},33.10);
+      tl.fromTo('#sub17',{opacity:0},{opacity:1,duration:.14},33.12);
+      tl.to('#sub17',{opacity:0,duration:.10},36.24);
+      tl.fromTo('#sub18',{opacity:0},{opacity:1,duration:.14},36.42);
+      tl.to('#sub18',{opacity:0,duration:.10},37.46);
+      tl.fromTo('#sub19',{opacity:0},{opacity:1,duration:.14},37.48);
+      tl.to('#sub19',{opacity:0,duration:.10},38.52);
+      tl.fromTo('#sub20',{opacity:0},{opacity:1,duration:.14},38.54);
+      tl.to('#sub20',{opacity:0,duration:.10},39.42);
+      tl.fromTo('#sub21',{opacity:0},{opacity:1,duration:.14},39.44);
+      tl.to('#sub21',{opacity:0,duration:.10},42.14);
+      tl.fromTo('#sub22',{opacity:0},{opacity:1,duration:.14},42.16);
+      tl.to('#sub22',{opacity:0,duration:.10},42.90);
+      tl.fromTo('#sub23',{opacity:0},{opacity:1,duration:.14},43.08);
+      tl.to('#sub23',{opacity:0,duration:.10},45.74);
+      tl.fromTo('#sub24',{opacity:0},{opacity:1,duration:.14},45.76);
+      tl.to('#sub24',{opacity:0,duration:.10},47.24);
+      tl.fromTo('#sub25',{opacity:0},{opacity:1,duration:.14},47.26);
+      tl.to('#sub25',{opacity:0,duration:.10},48.58);
+      tl.fromTo('#sub26',{opacity:0},{opacity:1,duration:.14},48.60);
+      tl.to('#sub26',{opacity:0,duration:.10},50.93);
+      tl.fromTo('#sub27',{opacity:0},{opacity:1,duration:.14},51.11);
+      tl.to('#sub27',{opacity:0,duration:.10},53.87);
+      tl.fromTo('#sub28',{opacity:0},{opacity:1,duration:.14},53.89);
+      tl.to('#sub28',{opacity:0,duration:.10},56.23);
+      tl.fromTo('#sub29',{opacity:0},{opacity:1,duration:.14},56.25);
+      tl.to('#sub29',{opacity:0,duration:.10},57.48);
+      tl.fromTo('#sub30',{opacity:0},{opacity:1,duration:.14},57.66);
+      tl.to('#sub30',{opacity:0,duration:.10},59.68);
+      tl.fromTo('#sub31',{opacity:0},{opacity:1,duration:.14},59.70);
+      tl.to('#sub31',{opacity:0,duration:.10},62.50);
+      tl.fromTo('#sub32',{opacity:0},{opacity:1,duration:.14},62.68);
+      tl.to('#sub32',{opacity:0,duration:.10},64.61);
+      tl.fromTo('#sub33',{opacity:0},{opacity:1,duration:.14},64.63);
+      tl.to('#sub33',{opacity:0,duration:.10},66.14);
+      tl.fromTo('#sub34',{opacity:0},{opacity:1,duration:.14},66.31);
+      tl.to('#sub34',{opacity:0,duration:.10},68.47);
+      tl.fromTo('#bigt',{opacity:0},{opacity:1,duration:.18},0.15);
+      tl.to('#bigt',{opacity:0,duration:.20},4.16);
+      tl.fromTo('#src0',{opacity:0},{opacity:.92,duration:.25},0.15);
+      tl.to('#src0',{opacity:0,duration:.15},4.22);
+      tl.fromTo('#src1',{opacity:0},{opacity:.92,duration:.25},4.42);
+      tl.to('#src1',{opacity:0,duration:.15},9.07);
+      tl.fromTo('#src2',{opacity:0},{opacity:.92,duration:.25},9.27);
+      tl.to('#src2',{opacity:0,duration:.15},32.11);
+      tl.fromTo('#src3',{opacity:0},{opacity:.92,duration:.25},32.31);
+      tl.to('#src3',{opacity:0,duration:.15},36.19);
+      tl.fromTo('#src4',{opacity:0},{opacity:.92,duration:.25},36.39);
+      tl.to('#src4',{opacity:0,duration:.15},50.88);
+      tl.fromTo('#src5',{opacity:0},{opacity:.92,duration:.25},51.08);
+      tl.to('#src5',{opacity:0,duration:.15},57.43);
+      tl.fromTo('#src6',{opacity:0},{opacity:.92,duration:.25},57.63);
+      tl.to('#src6',{opacity:0,duration:.15},66.08);
+      tl.fromTo('#src7',{opacity:0},{opacity:.92,duration:.25},66.28);
+      tl.to('#src7',{opacity:0,duration:.15},68.89);
+      tl.set('#wm',{opacity:.92},0);
+      tl.set('#veil',{opacity:1},0);
+      window.__timelines = window.__timelines || {};
+      window.__timelines['hiramoto-dautbek-short'] = tl;
+    </script>
+  </div>
+</body></html>

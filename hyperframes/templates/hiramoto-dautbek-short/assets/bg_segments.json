@@ -1,0 +1,114 @@
+[
+  {
+    "t0": 0.0,
+    "t1": 4.275,
+    "beat": "t0",
+    "src": "v_QxC20-pTRZ4.mp4",
+    "ss": 2.0,
+    "label": "RIZIN公式"
+  },
+  {
+    "t0": 4.275,
+    "t1": 9.119,
+    "beat": "h1",
+    "src": "hl6_IShJJtI2LhU.mp4",
+    "ss": 1.0,
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  },
+  {
+    "t0": 9.119,
+    "t1": 13.284,
+    "beat": "h2",
+    "src": "sokuho_6.mp4",
+    "ss": 95.0,
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "t0": 13.284,
+    "t1": 18.542,
+    "beat": "c1",
+    "src": "sokuho_6.mp4",
+    "ss": 136.0,
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "t0": 18.542,
+    "t1": 21.894,
+    "beat": "c2",
+    "src": "sokuho_6.mp4",
+    "ss": 205.0,
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "t0": 21.894,
+    "t1": 27.146,
+    "beat": "c3",
+    "src": "sokuho_6.mp4",
+    "ss": 70.0,
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "t0": 27.146,
+    "t1": 32.161,
+    "beat": "c4",
+    "src": "sokuho_6.mp4",
+    "ss": 362.0,
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "t0": 32.161,
+    "t1": 36.241,
+    "beat": "c5",
+    "src": "v_QxC20-pTRZ4.mp4",
+    "ss": 12.0,
+    "label": "RIZIN公式"
+  },
+  {
+    "t0": 36.241,
+    "t1": 42.896,
+    "beat": "x1",
+    "src": "sokuho_6.mp4",
+    "ss": 40.0,
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "t0": 42.896,
+    "t1": 50.926,
+    "beat": "x2",
+    "src": "sokuho_6.mp4",
+    "ss": 250.0,
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "t0": 50.926,
+    "t1": 57.482,
+    "beat": "x3",
+    "src": "hl6_IShJJtI2LhU.mp4",
+    "ss": 12.0,
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  },
+  {
+    "t0": 57.482,
+    "t1": 62.503,
+    "beat": "c7",
+    "src": "sokuho_6.mp4",
+    "ss": 300.0,
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "t0": 62.503,
+    "t1": 66.135,
+    "beat": "e1",
+    "src": "sokuho_6.mp4",
+    "ss": 170.0,
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "t0": 66.135,
+    "t1": 68.938,
+    "beat": "e2",
+    "src": "hl6_IShJJtI2LhU.mp4",
+    "ss": 20.0,
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+  }
+]
