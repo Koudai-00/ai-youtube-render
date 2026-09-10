@@ -1,22 +1,22 @@
 [
   {
     "beat": "o1",
-    "src": "hl_qXZY9nrWMjY.mp4",
-    "ss": 1.0,
-    "kind": "vert",
-    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+    "src": "main_f8.mp4",
+    "ss": 15.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
   },
   {
     "beat": "o2",
-    "src": "hl_1gCgKoJD9Xg.mp4",
+    "src": "hl6_IShJJtI2LhU.mp4",
     "ss": 2.0,
     "kind": "vert",
     "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
   },
   {
     "beat": "o3",
-    "src": "hl6_IShJJtI2LhU.mp4",
-    "ss": 2.0,
+    "src": "hl_qXZY9nrWMjY.mp4",
+    "ss": 9.0,
     "kind": "vert",
     "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
   },
@@ -30,166 +30,201 @@
   {
     "beat": "c1b",
     "src": "sokuho_6.mp4",
-    "ss": 45.0,
+    "ss": 133.0,
     "kind": "bcast",
     "label": "RIZIN公式 超RIZIN.5 第6試合"
   },
   {
-    "beat": "ko1",
-    "src": "hl6_IShJJtI2LhU.mp4",
-    "ss": 0.5,
-    "kind": "vert",
-    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
-  },
-  {
     "beat": "c1c",
     "src": "sokuho_6.mp4",
-    "ss": 75.0,
+    "ss": 205.0,
     "kind": "bcast",
     "label": "RIZIN公式 超RIZIN.5 第6試合"
   },
   {
     "beat": "c1d",
     "src": "sokuho_6.mp4",
-    "ss": 133.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第6試合"
-  },
-  {
-    "beat": "c1e",
-    "src": "sokuho_6.mp4",
-    "ss": 200.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第6試合"
-  },
-  {
-    "beat": "c1f",
-    "src": "sokuho_6.mp4",
-    "ss": 230.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第6試合"
-  },
-  {
-    "beat": "c1g",
-    "src": "sokuho_6.mp4",
-    "ss": 95.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第6試合"
-  },
-  {
-    "beat": "c1h",
-    "src": "sokuho_6.mp4",
-    "ss": 150.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第6試合"
-  },
-  {
-    "beat": "c1i",
-    "src": "sokuho_6.mp4",
-    "ss": 250.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第6試合"
-  },
-  {
-    "beat": "c1j",
-    "src": "sokuho_6.mp4",
     "ss": 275.0,
     "kind": "bcast",
     "label": "RIZIN公式 超RIZIN.5 第6試合"
   },
   {
-    "beat": "c1k",
-    "src": "sokuho_6.mp4",
+    "beat": "c1e",
+    "src": "an_jobin1.mp4",
     "ss": 60.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第6試合"
+    "kind": "plain",
+    "label": "ジョビン切り抜きチャンネル"
+  },
+  {
+    "beat": "c1f",
+    "src": "an_jobin1.mp4",
+    "ss": 220.0,
+    "kind": "plain",
+    "label": "ジョビン切り抜きチャンネル"
+  },
+  {
+    "beat": "c1g",
+    "src": "an_ishiwatari.mp4",
+    "ss": 60.0,
+    "kind": "plain",
+    "label": "石渡伸太郎 Shintaro Ishiwatari"
+  },
+  {
+    "beat": "c1h",
+    "src": "an_ishiwatari.mp4",
+    "ss": 160.0,
+    "kind": "plain",
+    "label": "石渡伸太郎 Shintaro Ishiwatari"
+  },
+  {
+    "beat": "c1i",
+    "src": "an_ishiwatari.mp4",
+    "ss": 260.0,
+    "kind": "plain",
+    "label": "石渡伸太郎 Shintaro Ishiwatari"
+  },
+  {
+    "beat": "c1j",
+    "src": "an_ogikubo.mp4",
+    "ss": 400.0,
+    "kind": "plain",
+    "label": "扇久保博正 おぎちゃんねる。"
+  },
+  {
+    "beat": "c1k",
+    "src": "an_ogikubo.mp4",
+    "ss": 460.0,
+    "kind": "plain",
+    "label": "扇久保博正 おぎちゃんねる。"
+  },
+  {
+    "beat": "c1j2",
+    "src": "an_kanehara.mp4",
+    "ss": 430.0,
+    "kind": "plain",
+    "label": "金原正徳の金ちゃんTV"
+  },
+  {
+    "beat": "c1j3",
+    "src": "an_kanehara.mp4",
+    "ss": 470.0,
+    "kind": "plain",
+    "label": "金原正徳の金ちゃんTV"
+  },
+  {
+    "beat": "c1j4",
+    "src": "an_kanehara.mp4",
+    "ss": 505.0,
+    "kind": "plain",
+    "label": "金原正徳の金ちゃんTV"
+  },
+  {
+    "beat": "c1j5",
+    "src": "an_kanehara.mp4",
+    "ss": 545.0,
+    "kind": "plain",
+    "label": "金原正徳の金ちゃんTV"
+  },
+  {
+    "beat": "c1j6",
+    "src": "an_suzuki.mp4",
+    "ss": 140.0,
+    "kind": "plain",
+    "label": "鈴木千裕 Chihiro Suzuki"
+  },
+  {
+    "beat": "c1j7",
+    "src": "an_suzuki.mp4",
+    "ss": 175.0,
+    "kind": "plain",
+    "label": "鈴木千裕 Chihiro Suzuki"
+  },
+  {
+    "beat": "c1j8",
+    "src": "an_maeda.mp4",
+    "ss": 160.0,
+    "kind": "vpill",
+    "label": "前田日明チャンネル"
+  },
+  {
+    "beat": "c1j9",
+    "src": "an_maeda.mp4",
+    "ss": 195.0,
+    "kind": "vpill",
+    "label": "前田日明チャンネル"
   },
   {
     "beat": "c1l",
-    "src": "sokuho_6.mp4",
-    "ss": 175.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第6試合"
+    "src": "ceo_sakakibara.mp4",
+    "ss": 545.0,
+    "kind": "plain",
+    "label": "RIZIN公式 榊原信行CEO 大会後会見"
   },
   {
     "beat": "c1m",
-    "src": "iv_hiramoto_dautbek.mp4",
-    "ss": 15.0,
+    "src": "ceo_sakakibara.mp4",
+    "ss": 596.0,
     "kind": "plain",
-    "label": "RIZIN公式 試合後インタビュー"
+    "label": "RIZIN公式 榊原信行CEO 大会後会見"
   },
   {
     "beat": "c1n",
-    "src": "iv_hiramoto_dautbek.mp4",
+    "src": "ceo_sakakibara.mp4",
+    "ss": 640.0,
+    "kind": "plain",
+    "label": "RIZIN公式 榊原信行CEO 大会後会見"
+  },
+  {
+    "beat": "c1o",
+    "src": "winner_loser.mp4",
+    "ss": 1344.0,
+    "kind": "plain",
+    "label": "RIZIN公式【勝者と敗者】"
+  },
+  {
+    "beat": "c1p",
+    "src": "iv6_full.mp4",
     "ss": 40.0,
     "kind": "plain",
     "label": "RIZIN公式 試合後インタビュー"
   },
   {
-    "beat": "c1o",
-    "src": "iv_hiramoto_dautbek.mp4",
-    "ss": 90.0,
-    "kind": "plain",
-    "label": "RIZIN公式 試合後インタビュー"
-  },
-  {
-    "beat": "c1p",
-    "src": "iv_hiramoto_dautbek.mp4",
-    "ss": 140.0,
-    "kind": "plain",
-    "label": "RIZIN公式 試合後インタビュー"
-  },
-  {
     "beat": "c1q",
-    "src": "sokuho_6.mp4",
-    "ss": 340.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第6試合"
+    "src": "iv6_full.mp4",
+    "ss": 150.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
   },
   {
     "beat": "c1r",
-    "src": "iv_hiramoto_dautbek.mp4",
-    "ss": 300.0,
+    "src": "iv6_full.mp4",
+    "ss": 900.0,
     "kind": "plain",
     "label": "RIZIN公式 試合後インタビュー"
   },
   {
     "beat": "c1s",
-    "src": "iv_hiramoto_dautbek.mp4",
-    "ss": 330.0,
+    "src": "iv6_full.mp4",
+    "ss": 1020.0,
     "kind": "plain",
     "label": "RIZIN公式 試合後インタビュー"
   },
   {
     "beat": "c1t",
-    "src": "hl6_IShJJtI2LhU.mp4",
-    "ss": 8.0,
-    "kind": "vert",
-    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
-  },
-  {
-    "beat": "c1u",
-    "src": "iv_hiramoto_dautbek.mp4",
-    "ss": 360.0,
+    "src": "iv6_full.mp4",
+    "ss": 1150.0,
     "kind": "plain",
     "label": "RIZIN公式 試合後インタビュー"
   },
   {
     "beat": "c2a",
-    "src": "hl_qXZY9nrWMjY.mp4",
-    "ss": 6.0,
-    "kind": "vert",
-    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+    "src": "main_f7.mp4",
+    "ss": 1.0,
+    "kind": "plain",
+    "label": "ABEMA 格闘【公式】 超RIZIN.5 第7試合"
   },
   {
     "beat": "c2b",
-    "src": "hl_qXZY9nrWMjY.mp4",
-    "ss": 11.0,
-    "kind": "vert",
-    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
-  },
-  {
-    "beat": "ko2",
     "src": "hl_qXZY9nrWMjY.mp4",
     "ss": 0.5,
     "kind": "vert",
@@ -197,57 +232,190 @@
   },
   {
     "beat": "c2c",
-    "src": "iv_asakura_aoki.mp4",
-    "ss": 300.0,
+    "src": "main_f7.mp4",
+    "ss": 24.0,
     "kind": "plain",
-    "label": "RIZIN公式 試合後インタビュー"
+    "label": "ABEMA 格闘【公式】 超RIZIN.5 第7試合"
   },
   {
     "beat": "c2d",
-    "src": "iv_asakura_aoki.mp4",
-    "ss": 330.0,
+    "src": "winner_loser.mp4",
+    "ss": 1450.0,
     "kind": "plain",
-    "label": "RIZIN公式 試合後インタビュー"
+    "label": "RIZIN公式【勝者と敗者】"
   },
   {
     "beat": "c2e",
-    "src": "hl_qXZY9nrWMjY.mp4",
-    "ss": 3.0,
-    "kind": "vert",
-    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+    "src": "an_ishiwatari.mp4",
+    "ss": 360.0,
+    "kind": "plain",
+    "label": "石渡伸太郎 Shintaro Ishiwatari"
   },
   {
     "beat": "c2f",
-    "src": "iv_asakura_aoki.mp4",
-    "ss": 120.0,
+    "src": "an_ishiwatari.mp4",
+    "ss": 450.0,
     "kind": "plain",
-    "label": "RIZIN公式 試合後インタビュー"
+    "label": "石渡伸太郎 Shintaro Ishiwatari"
   },
   {
     "beat": "c2g",
-    "src": "iv_asakura_aoki.mp4",
-    "ss": 20.0,
+    "src": "an_ishiwatari.mp4",
+    "ss": 550.0,
     "kind": "plain",
-    "label": "RIZIN公式 試合後インタビュー"
+    "label": "石渡伸太郎 Shintaro Ishiwatari"
   },
   {
     "beat": "c2h",
-    "src": "iv_asakura_aoki.mp4",
+    "src": "an_strasser.mp4",
+    "ss": 30.0,
+    "kind": "plain",
+    "label": "ストラッサー起一 [ストチャンネル]"
+  },
+  {
+    "beat": "c2i",
+    "src": "an_strasser.mp4",
+    "ss": 130.0,
+    "kind": "plain",
+    "label": "ストラッサー起一 [ストチャンネル]"
+  },
+  {
+    "beat": "c2j",
+    "src": "an_strasser.mp4",
+    "ss": 330.0,
+    "kind": "plain",
+    "label": "ストラッサー起一 [ストチャンネル]"
+  },
+  {
+    "beat": "c2k",
+    "src": "an_hosokawa.mp4",
+    "ss": 20.0,
+    "kind": "cropr",
+    "label": "細川バレンタイン / 前向き教室"
+  },
+  {
+    "beat": "c2l",
+    "src": "an_hosokawa.mp4",
+    "ss": 120.0,
+    "kind": "cropr",
+    "label": "細川バレンタイン / 前向き教室"
+  },
+  {
+    "beat": "c2m",
+    "src": "an_hosokawa.mp4",
+    "ss": 260.0,
+    "kind": "cropr",
+    "label": "細川バレンタイン / 前向き教室"
+  },
+  {
+    "beat": "c2n",
+    "src": "an_ogikubo.mp4",
+    "ss": 530.0,
+    "kind": "plain",
+    "label": "扇久保博正 おぎちゃんねる。"
+  },
+  {
+    "beat": "c2n2",
+    "src": "an_kanehara.mp4",
+    "ss": 180.0,
+    "kind": "plain",
+    "label": "金原正徳の金ちゃんTV"
+  },
+  {
+    "beat": "c2n3",
+    "src": "an_kanehara.mp4",
+    "ss": 215.0,
+    "kind": "plain",
+    "label": "金原正徳の金ちゃんTV"
+  },
+  {
+    "beat": "c2n4",
+    "src": "an_kanehara.mp4",
+    "ss": 255.0,
+    "kind": "plain",
+    "label": "金原正徳の金ちゃんTV"
+  },
+  {
+    "beat": "c2n5",
+    "src": "an_maeda.mp4",
+    "ss": 20.0,
+    "kind": "vpill",
+    "label": "前田日明チャンネル"
+  },
+  {
+    "beat": "c2n6",
+    "src": "an_maeda.mp4",
+    "ss": 60.0,
+    "kind": "vpill",
+    "label": "前田日明チャンネル"
+  },
+  {
+    "beat": "c2o",
+    "src": "winner_loser.mp4",
+    "ss": 1660.0,
+    "kind": "plain",
+    "label": "RIZIN公式【勝者と敗者】"
+  },
+  {
+    "beat": "c2p",
+    "src": "iv7_full.mp4",
     "ss": 60.0,
     "kind": "plain",
     "label": "RIZIN公式 試合後インタビュー"
   },
   {
-    "beat": "c2i",
-    "src": "iv_asakura_aoki.mp4",
-    "ss": 200.0,
+    "beat": "c2q",
+    "src": "iv7_full.mp4",
+    "ss": 300.0,
     "kind": "plain",
     "label": "RIZIN公式 試合後インタビュー"
   },
   {
+    "beat": "c2r",
+    "src": "an_aoki.mp4",
+    "ss": 30.0,
+    "kind": "plain",
+    "label": "青木真也 [SHINYA AOKI] チャンネル"
+  },
+  {
+    "beat": "c2s",
+    "src": "an_aoki.mp4",
+    "ss": 70.0,
+    "kind": "plain",
+    "label": "青木真也 [SHINYA AOKI] チャンネル"
+  },
+  {
+    "beat": "c2t",
+    "src": "an_aoki.mp4",
+    "ss": 115.0,
+    "kind": "plain",
+    "label": "青木真也 [SHINYA AOKI] チャンネル"
+  },
+  {
+    "beat": "c2u",
+    "src": "an_aoki.mp4",
+    "ss": 265.0,
+    "kind": "plain",
+    "label": "青木真也 [SHINYA AOKI] チャンネル"
+  },
+  {
+    "beat": "c2v",
+    "src": "an_aoki.mp4",
+    "ss": 490.0,
+    "kind": "plain",
+    "label": "青木真也 [SHINYA AOKI] チャンネル"
+  },
+  {
+    "beat": "c2w",
+    "src": "an_aoki.mp4",
+    "ss": 660.0,
+    "kind": "plain",
+    "label": "青木真也 [SHINYA AOKI] チャンネル"
+  },
+  {
     "beat": "c3a",
     "src": "main_f8.mp4",
-    "ss": 15.0,
+    "ss": 40.0,
     "kind": "bcast",
     "label": "RIZIN公式 超RIZIN.5 第8試合"
   },
@@ -259,32 +427,116 @@
     "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
   },
   {
-    "beat": "ko3",
-    "src": "hl_1gCgKoJD9Xg.mp4",
-    "ss": 8.0,
-    "kind": "vert",
-    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
-  },
-  {
     "beat": "c3c",
     "src": "main_f8.mp4",
-    "ss": 60.0,
+    "ss": 130.0,
     "kind": "bcast",
     "label": "RIZIN公式 超RIZIN.5 第8試合"
   },
   {
     "beat": "c3d",
-    "src": "main_f8.mp4",
-    "ss": 200.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第8試合"
+    "src": "an_ishiwatari.mp4",
+    "ss": 100.0,
+    "kind": "plain",
+    "label": "石渡伸太郎 Shintaro Ishiwatari"
   },
   {
     "beat": "c3e",
-    "src": "main_f8.mp4",
-    "ss": 280.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第8試合"
+    "src": "an_ishiwatari.mp4",
+    "ss": 210.0,
+    "kind": "plain",
+    "label": "石渡伸太郎 Shintaro Ishiwatari"
+  },
+  {
+    "beat": "c3f",
+    "src": "an_ishiwatari.mp4",
+    "ss": 300.0,
+    "kind": "plain",
+    "label": "石渡伸太郎 Shintaro Ishiwatari"
+  },
+  {
+    "beat": "c3g",
+    "src": "an_jobin3.mp4",
+    "ss": 60.0,
+    "kind": "plain",
+    "label": "ジョビン切り抜きチャンネル"
+  },
+  {
+    "beat": "c3h",
+    "src": "an_ogikubo.mp4",
+    "ss": 700.0,
+    "kind": "plain",
+    "label": "扇久保博正 おぎちゃんねる。"
+  },
+  {
+    "beat": "c3h2",
+    "src": "an_kanehara.mp4",
+    "ss": 20.0,
+    "kind": "plain",
+    "label": "金原正徳の金ちゃんTV"
+  },
+  {
+    "beat": "c3h3",
+    "src": "an_kanehara.mp4",
+    "ss": 60.0,
+    "kind": "plain",
+    "label": "金原正徳の金ちゃんTV"
+  },
+  {
+    "beat": "c3h4",
+    "src": "an_kanehara.mp4",
+    "ss": 100.0,
+    "kind": "plain",
+    "label": "金原正徳の金ちゃんTV"
+  },
+  {
+    "beat": "c3h5",
+    "src": "an_suzuki.mp4",
+    "ss": 85.0,
+    "kind": "plain",
+    "label": "鈴木千裕 Chihiro Suzuki"
+  },
+  {
+    "beat": "c3h6",
+    "src": "an_maeda.mp4",
+    "ss": 230.0,
+    "kind": "vpill",
+    "label": "前田日明チャンネル"
+  },
+  {
+    "beat": "c3i",
+    "src": "iv8_full.mp4",
+    "ss": 100.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c3j",
+    "src": "iv8_full.mp4",
+    "ss": 430.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c3k",
+    "src": "iv8_full.mp4",
+    "ss": 1700.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c3l",
+    "src": "iv8_full.mp4",
+    "ss": 1850.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
+  },
+  {
+    "beat": "c3m",
+    "src": "iv8_full.mp4",
+    "ss": 2010.0,
+    "kind": "plain",
+    "label": "RIZIN公式 試合後インタビュー"
   },
   {
     "beat": "e1",
@@ -295,16 +547,16 @@
   },
   {
     "beat": "e2",
+    "src": "sokuho_6.mp4",
+    "ss": 330.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第6試合"
+  },
+  {
+    "beat": "e3",
     "src": "main_f8.mp4",
     "ss": 330.0,
     "kind": "bcast",
     "label": "RIZIN公式 超RIZIN.5 第8試合"
-  },
-  {
-    "beat": "e3",
-    "src": "iv_asakura_aoki.mp4",
-    "ss": 250.0,
-    "kind": "plain",
-    "label": "RIZIN公式 試合後インタビュー"
   }
 ]
