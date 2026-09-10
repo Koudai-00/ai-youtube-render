@@ -4,199 +4,231 @@
   "file": "se_moji.mp3"
  },
  {
-  "t": 1.74,
-  "file": "se_type.mp3"
- },
- {
-  "t": 4.28,
+  "t": 4.86,
   "file": "se_scene.mp3"
  },
  {
-  "t": 4.46,
-  "file": "se_shakiin.mp3"
- },
- {
-  "t": 6.21,
-  "file": "se_bell.mp3"
- },
- {
-  "t": 9.12,
-  "file": "se_taiko.mp3"
- },
- {
-  "t": 9.3,
-  "file": "se_hyoshigi.mp3"
- },
- {
-  "t": 10.44,
+  "t": 5.04,
   "file": "se_type.mp3"
  },
  {
-  "t": 13.28,
+  "t": 6.86,
+  "file": "se_taiko.mp3"
+ },
+ {
+  "t": 7.04,
+  "file": "se_shakiin.mp3"
+ },
+ {
+  "t": 8.84,
+  "file": "se_bell.mp3"
+ },
+ {
+  "t": 9.74,
+  "file": "se_hyoshigi.mp3"
+ },
+ {
+  "t": 12.87,
   "file": "se_metal.mp3"
  },
  {
-  "t": 13.46,
-  "file": "se_shakiin.mp3"
- },
- {
-  "t": 13.78,
-  "file": "se_bell.mp3"
- },
- {
-  "t": 16.82,
-  "file": "se_hyoshigi.mp3"
- },
- {
-  "t": 19.2,
-  "file": "se_scene.mp3"
- },
- {
-  "t": 19.38,
+  "t": 13.05,
   "file": "se_type.mp3"
  },
  {
-  "t": 19.84,
+  "t": 15.01,
   "file": "se_shakiin.mp3"
  },
  {
-  "t": 22.55,
-  "file": "se_taiko.mp3"
- },
- {
-  "t": 22.73,
+  "t": 16.8,
   "file": "se_bell.mp3"
  },
  {
-  "t": 25.15,
+  "t": 18.74,
+  "file": "se_scene.mp3"
+ },
+ {
+  "t": 18.92,
   "file": "se_hyoshigi.mp3"
  },
  {
-  "t": 27.8,
+  "t": 19.22,
+  "file": "se_type.mp3"
+ },
+ {
+  "t": 21.99,
+  "file": "se_shakiin.mp3"
+ },
+ {
+  "t": 23.74,
+  "file": "se_bell.mp3"
+ },
+ {
+  "t": 25.47,
+  "file": "se_taiko.mp3"
+ },
+ {
+  "t": 25.65,
+  "file": "se_hyoshigi.mp3"
+ },
+ {
+  "t": 27.25,
+  "file": "se_type.mp3"
+ },
+ {
+  "t": 29.11,
+  "file": "se_shakiin.mp3"
+ },
+ {
+  "t": 30.82,
   "file": "se_metal.mp3"
  },
  {
-  "t": 27.98,
-  "file": "se_type.mp3"
- },
- {
-  "t": 28.74,
-  "file": "se_shakiin.mp3"
- },
- {
-  "t": 31.02,
+  "t": 31.0,
   "file": "se_bell.mp3"
  },
  {
-  "t": 32.82,
+  "t": 32.78,
+  "file": "se_hyoshigi.mp3"
+ },
+ {
+  "t": 34.95,
+  "file": "se_type.mp3"
+ },
+ {
+  "t": 38.28,
   "file": "se_scene.mp3"
  },
  {
-  "t": 33.0,
-  "file": "se_hyoshigi.mp3"
- },
- {
-  "t": 33.78,
-  "file": "se_type.mp3"
- },
- {
-  "t": 36.9,
-  "file": "se_taiko.mp3"
- },
- {
-  "t": 37.08,
+  "t": 38.47,
   "file": "se_shakiin.mp3"
  },
  {
-  "t": 38.14,
+  "t": 39.86,
   "file": "se_bell.mp3"
  },
  {
-  "t": 39.19,
+  "t": 42.65,
   "file": "se_hyoshigi.mp3"
  },
  {
-  "t": 40.1,
+  "t": 44.33,
   "file": "se_type.mp3"
  },
  {
-  "t": 42.82,
+  "t": 46.28,
   "file": "se_shakiin.mp3"
  },
  {
-  "t": 43.55,
+  "t": 47.38,
+  "file": "se_taiko.mp3"
+ },
+ {
+  "t": 47.56,
+  "file": "se_bell.mp3"
+ },
+ {
+  "t": 48.76,
+  "file": "se_hyoshigi.mp3"
+ },
+ {
+  "t": 51.61,
+  "file": "se_type.mp3"
+ },
+ {
+  "t": 52.64,
   "file": "se_metal.mp3"
  },
  {
-  "t": 43.73,
-  "file": "se_bell.mp3"
- },
- {
-  "t": 45.77,
-  "file": "se_hyoshigi.mp3"
- },
- {
-  "t": 49.07,
-  "file": "se_scene.mp3"
- },
- {
-  "t": 49.25,
-  "file": "se_type.mp3"
- },
- {
-  "t": 52.03,
+  "t": 52.82,
   "file": "se_shakiin.mp3"
  },
  {
-  "t": 54.39,
+  "t": 55.01,
   "file": "se_bell.mp3"
  },
  {
-  "t": 55.62,
-  "file": "se_taiko.mp3"
- },
- {
-  "t": 55.8,
+  "t": 57.19,
   "file": "se_hyoshigi.mp3"
  },
  {
-  "t": 57.21,
+  "t": 58.28,
   "file": "se_type.mp3"
  },
  {
-  "t": 60.0,
+  "t": 59.35,
+  "file": "se_scene.mp3"
+ },
+ {
+  "t": 59.53,
+  "file": "se_shakiin.mp3"
+ },
+ {
+  "t": 61.53,
+  "file": "se_bell.mp3"
+ },
+ {
+  "t": 64.67,
+  "file": "se_hyoshigi.mp3"
+ },
+ {
+  "t": 65.66,
+  "file": "se_type.mp3"
+ },
+ {
+  "t": 68.23,
+  "file": "se_shakiin.mp3"
+ },
+ {
+  "t": 70.21,
+  "file": "se_taiko.mp3"
+ },
+ {
+  "t": 70.39,
+  "file": "se_bell.mp3"
+ },
+ {
+  "t": 72.23,
+  "file": "se_hyoshigi.mp3"
+ },
+ {
+  "t": 73.78,
+  "file": "se_type.mp3"
+ },
+ {
+  "t": 76.47,
+  "file": "se_shakiin.mp3"
+ },
+ {
+  "t": 77.59,
   "file": "se_metal.mp3"
  },
  {
-  "t": 60.18,
-  "file": "se_shakiin.mp3"
- },
- {
-  "t": 62.47,
+  "t": 77.77,
   "file": "se_bell.mp3"
  },
  {
-  "t": 64.42,
+  "t": 80.11,
   "file": "se_hyoshigi.mp3"
  },
  {
-  "t": 67.58,
-  "file": "se_scene.mp3"
- },
- {
-  "t": 67.76,
+  "t": 82.91,
   "file": "se_type.mp3"
  },
  {
-  "t": 68.5,
+  "t": 83.15,
   "file": "se_shakiin.mp3"
  },
  {
-  "t": 71.33,
-  "file": "se_taiko.mp3"
+  "t": 85.02,
+  "file": "se_bell.mp3"
  },
  {
-  "t": 71.51,
-  "file": "se_bell.mp3"
+  "t": 85.7,
+  "file": "se_scene.mp3"
+ },
+ {
+  "t": 85.88,
+  "file": "se_hyoshigi.mp3"
  }
 ]

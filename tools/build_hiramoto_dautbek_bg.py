@@ -17,7 +17,7 @@ BGV = TPL / "assets" / "bgvid"
 SRC = ROOT / "assets" / "source" / "episode_hiramoto_dautbek"
 CLIP = SRC / "clips"
 PX = SRC / "pexels"
-THUMB = ROOT / "assets" / "thumbnails" / "柏木サムネイル.png"
+THUMB = ROOT / "assets" / "thumbnails" / "平本サムネイル.png"
 WORK = TPL / "assets" / "_bgwork"
 for d in (BGV, WORK):
     d.mkdir(parents=True, exist_ok=True)
@@ -26,38 +26,46 @@ OUT = BGV / "hiramoto_bg_full.mp4"
 FPS = 30
 D = 0.45
 ENC = ["-r", "30", "-an", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-g", "30", "-keyint_min", "30", "-crf", "20"]
-# ★放送バナー(左上の大会名帯・右上のRIZIN LIVEロゴ)は上端120pxに収まるので落とす
-DEBAND = "crop=1920:958:0:122,setsar=1"
 BC = ("split[a][b];[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,"
       "gblur=sigma=26,eq=brightness=-0.30[bg];[b]scale=1080:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,format=yuv420p")
 COVER = "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1,format=yuv420p"
 
-SOKUHO = CLIP / "sokuho_6.mp4"          # RIZIN公式【速報】第6試合(1R全編)
-HL6 = CLIP / "hl6_IShJJtI2LhU.mp4"      # RIZIN公式 縦型ハイライト(ダウン前後)
-FACE = CLIP / "v_QxC20-pTRZ4.mp4"       # RIZIN公式 縦型 フェイスオフ
+SOKUHO = CLIP / "sokuho_6.mp4"          # RIZIN公式【速報】第6試合(1R全編・放送画面)
+HL6 = CLIP / "hl6_IShJJtI2LhU.mp4"      # RIZIN公式 縦型ハイライト(第6試合)
+FACE = CLIP / "v_QxC20-pTRZ4.mp4"       # RIZIN公式 縦型 公開計量のフェイスオフ
+IV = CLIP / "iv_hiramoto.mp4"           # RIZIN公式 試合後インタビュー(平本蓮 単独の会見)
+CEO = CLIP / "ceo_sakakibara.mp4"       # RIZIN公式 榊原信行CEO 大会後会見
+WL = CLIP / "winner_loser.mp4"          # RIZIN公式【勝者と敗者】試合直後の選手に密着
 
-# ★上部の配信帯(〜y114)と右端のPPV広告(x1672〜)を落としてから使う
+# ★上部の配信帯(〜y114)と右端のPPV広告(x1672〜)を落としてから使う（放送画面のみ）
 DEBAND = "crop=1672:966:0:114,setsar=1"
 
 # (beat_id, 分割, kind, source, 素材内の開始秒, 出典ラベル)
+#   ★t0 はユーザー支給サムネイル。完全静止（KenBurns禁止）。
+#   ★確認済みの人物・場面:
+#     WL 1145〜1195 = 敗れたダウトベックが控室へ戻り手当てを受ける（顔照合済み）
+#     WL 1300〜1370 = 勝った平本が控室へ戻り、目元の手当てを受ける
+#     CEO 596〜     = 「ディフェンシブなエスケープ的なテイクダウンは全くポイントにならない」
+#     CEO 640〜     = 「1ラウンド目で平本が片膝ついてますけど…」
+#     IV  15/90    = 平本蓮 単独の試合後会見
 PLAN = [
-    ("t0",  None, "cover", FACE,     2.0, "RIZIN公式"),
-    ("h1",  None, "cover", HL6,      1.0, "RIZIN公式 超RIZIN.5 試合ハイライト"),
-    ("h2",  None, "bc",    SOKUHO,  95.0, "RIZIN公式 超RIZIN.5 第6試合"),
-    ("c1",  None, "bc",    SOKUHO, 136.0, "RIZIN公式 超RIZIN.5 第6試合"),   # ★1R残り2:40のダウン
-    ("c2",  None, "bc",    SOKUHO, 205.0, "RIZIN公式 超RIZIN.5 第6試合"),
-    ("c3",  None, "bc",    SOKUHO,  70.0, "RIZIN公式 超RIZIN.5 第6試合"),
-    ("c4",  None, "bc",    SOKUHO, 362.0, "RIZIN公式 超RIZIN.5 第6試合"),   # ラウンド間のリング全景
-    ("c5",  None, "cover", FACE,    12.0, "RIZIN公式"),
-    ("x1",  None, "bc",    SOKUHO,  40.0, "RIZIN公式 超RIZIN.5 第6試合"),
-    ("x2",  None, "bc",    SOKUHO, 250.0, "RIZIN公式 超RIZIN.5 第6試合"),
-    ("x3",  None, "cover", HL6,     12.0, "RIZIN公式 超RIZIN.5 試合ハイライト"),
-    ("c7",  None, "bc",    SOKUHO, 300.0, "RIZIN公式 超RIZIN.5 第6試合"),
-    ("e1",  None, "bc",    SOKUHO, 170.0, "RIZIN公式 超RIZIN.5 第6試合"),
-    ("e1b", None, "bc",    SOKUHO, 230.0, "RIZIN公式 超RIZIN.5 第6試合"),
-    ("e2",  None, "cover", FACE,    18.0, "RIZIN公式"),
+    ("t0",  None, "still", THUMB,     0.0, ""),
+    ("h1",  None, "bcp",   WL,     1303.0, "RIZIN公式【勝者と敗者】"),
+    ("h2",  None, "bc",    SOKUHO,   95.0, "RIZIN公式 超RIZIN.5 第6試合"),
+    ("c1",  None, "bcp",   WL,     1344.0, "RIZIN公式【勝者と敗者】"),
+    ("c2",  None, "bc",    SOKUHO,  136.0, "RIZIN公式 超RIZIN.5 第6試合"),
+    ("c3",  None, "cover", HL6,       8.0, "RIZIN公式 超RIZIN.5 試合ハイライト"),
+    ("c4",  None, "bc",    SOKUHO,  205.0, "RIZIN公式 超RIZIN.5 第6試合"),
+    ("x1",  None, "bcp",   WL,     1145.0, "RIZIN公式【勝者と敗者】"),
+    ("x2",  None, "bcp",   IV,       15.0, "RIZIN公式 試合後インタビュー"),
+    ("x3",  None, "bcp",   IV,       90.0, "RIZIN公式 試合後インタビュー"),
+    ("x4",  None, "bcp",   CEO,     596.0, "RIZIN公式 榊原信行CEO 大会後会見"),
+    ("x5",  None, "bcp",   CEO,     640.0, "RIZIN公式 榊原信行CEO 大会後会見"),
+    ("x6",  None, "bc",    SOKUHO,  300.0, "RIZIN公式 超RIZIN.5 第6試合"),
+    ("e1",  None, "cover", FACE,      2.0, "RIZIN公式 超RIZIN.5 公開計量"),
 ]
-TRANS = ["dissolve", "fade", "dissolve", "smoothleft", "dissolve", "fade", "dissolve",
+# ★セグメント境界は n-1 個 = 13。同じトランジションを連続させない。
+TRANS = ["fade", "dissolve", "smoothleft", "dissolve", "fade", "dissolve",
          "circleopen", "dissolve", "fade", "dissolve", "smoothright", "dissolve", "fade"]
 
 
@@ -95,6 +103,10 @@ def build_seg(kind, src, ss, dur, out):
     elif kind == "bc":
         run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{ss}", "-i", str(src),
              "-filter_complex", "[0:v]" + DEBAND + "," + BC, "-t", f"{dur:.3f}", *ENC, str(out)])
+    elif kind == "bcp":
+        # 会見・密着など、放送用の帯や広告が無い16:9素材はそのまま blur-contain
+        run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{ss}", "-i", str(src),
+             "-filter_complex", "[0:v]setsar=1," + BC, "-t", f"{dur:.3f}", *ENC, str(out)])
     elif kind == "cover":
         run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{ss}", "-i", str(src),
              "-vf", COVER, "-t", f"{dur:.3f}", *ENC, str(out)])

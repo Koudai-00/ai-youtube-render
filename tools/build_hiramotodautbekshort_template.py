@@ -17,7 +17,7 @@ SEG = json.load(open(TPL / "assets" / "bg_segments.json", encoding="utf-8"))
 B = {b["id"]: b for b in TIM["beats"]}
 ORDER = [b["id"] for b in TIM["beats"]]
 DUR = round(TIM["total"] + 0.3, 2)
-THUMB_END = 0.0   # ★今回は支給サムネなし。冒頭から字幕・透かしを出し、別途タイトルを重ねる
+THUMB_END = B["h1"]["start"]   # ★冒頭 t0 はユーザー支給サムネ(平本サムネイル.png)。字幕・透かし・ヴェール・出典を一切載せない
 # ★CIの窓分割レンダー: HF_WIN_START/END の区間だけを 0 起点で描画する
 W0 = float(os.environ.get("HF_WIN_START") or 0)
 _w1 = os.environ.get("HF_WIN_END")
@@ -43,8 +43,12 @@ def esc(s): return html.escape(s)
 
 # ===== 読み(かな)→ 正式表記 DISP変換 (長いキー優先) =====
 DISP = [("にじゅうきゅうたいにじゅうはち", "29-28"), ("にじゅうきゅうたいにじゅうなな", "29-27"),
-        ("スーパーライジンファイブ", "超RIZIN.5"), ("かわはらゆうじ", "河原由次"),
-        ("ジャンさいとう", "ジャン斉藤"), ("ひらもとれん", "平本蓮"), ("ひらもと", "平本"),
+        ("さかきばらのぶゆきさん", "榊原信行CEO"), ("バーサス", "vs."),
+        ("かたひざ", "片膝"), ("てきかくに", "的確に"),
+        ("元ディープフェザー級王者のジョビンさん", "元DEEPフェザー級王者 ジョビンさん"),
+        ("ディープ", "DEEP"), ("ケーオー", "KO"), ("ラウンドマスト", "ラウンドマスト"),
+        ("スーパーライジンファイブ", "超RIZIN.5"),
+        ("ジャンさいとう", "ジャン斉藤"),("ひらもとれん", "平本蓮"), ("ひらもと", "平本"),
         ("ライジン", "RIZIN"), ("エスエヌエス", "SNS"),
         ("はんていにたいいち", "判定2-1"), ("にたいいち", "2-1"),
         ("じゅうたいはち", "10-8"), ("ジャッジひとり", "ジャッジ1人"),
@@ -60,11 +64,11 @@ def disp(s):
 
 # ===== キーワード原色 (人名=赤 / 数字・強調=黄 / 団体・大会=青) =====
 KWCOL = [("カルシャガ・ダウトベック", "b"), ("ダウトベック", "b"), ("平本蓮", "r"), ("平本", "r"),
-         ("河原由次", "y"), ("ジャン斉藤", "y"),
+         ("ジャン斉藤", "y"),
          ("超RIZIN.5", "b"), ("RIZIN", "b"), ("SNS", "b"),
          ("判定2-1", "y"), ("29-28", "y"), ("29-27", "y"), ("2-1", "y"), ("10-8", "y"), ("賛否", "y"),
          ("クリーンヒット", "y"), ("キャンバスに落ち", "y"), ("テイクダウン", "y"),
-         ("有効打", "y"), ("スポーツじゃない", "y"), ("驚いていた", "y")]
+         ("有効打", "y"), ("驚いていた", "y")]
 
 
 def colorize(s):
@@ -204,6 +208,8 @@ bg_div = ('<div class="bgv" id="bg" style="opacity:1">'
 sub_divs, sub_times, all_lines = [], [], []
 si = 0
 for bid in ORDER:
+    if en(bid) <= THUMB_END + 0.05:      # ★支給サムネ区間には字幕を載せない
+        continue
     for (c0, c1, lines) in phrase_cues(bid):
         if not OV(c0, c1):
             continue
@@ -223,10 +229,10 @@ for bid in ORDER:
         tl.append(f"tl.to('#{sid}',{{opacity:0,duration:.10}},{T(c1 - 0.02):.2f});")
 
 # ===== 冒頭タイトル(0〜t0終わり)。語ごとに原色で色分けし、行ごとに黒帯を敷く =====
-TITLE_LINES = [("どう見ても", "w"), ("ダウトベック", "b"), ("判定2-1に賛否", "y")]
+TITLE_LINES = []                      # ★支給サムネを使うのでタイトルは重ねない
 T_END = B["h1"]["start"]
 title_divs = []
-if OV(0.0, T_END):
+if TITLE_LINES and OV(0.0, T_END):
     inner = "".join(f'<span class="tl t-{c}">{esc(t)}</span>' for t, c in TITLE_LINES)
     title_divs.append(f'<div class="bigtitle" id="bigt">{inner}</div>')
     tl.append("tl.fromTo('#bigt',{opacity:0},{opacity:1,duration:.18},%.2f);" % max(0.0, T(0.15)))
