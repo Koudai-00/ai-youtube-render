@@ -203,6 +203,12 @@ def main() -> int:
             cmd += ["-vf", COVER]
         cmd += ["-t", f"{need:.2f}", *ENC, str(out)]
         run(cmd)
+        # ★生成直後にデコード検査する（途中で落ちた書きかけを「完成」と誤判定しないため）
+        chk = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                              "-of", "csv=p=0", str(out)], capture_output=True, text=True)
+        if chk.returncode != 0 or not chk.stdout.strip():
+            out.unlink(missing_ok=True)
+            raise SystemExit(f"{bid}.mp4 が壊れています（生成失敗）")
         segs.append({"beat": bid, "src": Path(src).name, "ss": ss, "kind": kind, "label": label})
         old[bid] = new[bid]
         sigf.write_text(json.dumps(old, ensure_ascii=False, indent=1), encoding="utf-8")

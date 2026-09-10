@@ -10,7 +10,6 @@
  "c1f": "an_jobin1.mp4|220.0|plain",
  "c1g": "an_ishiwatari.mp4|60.0|plain",
  "c1h": "an_ishiwatari.mp4|160.0|plain",
- "c1i": "an_ishiwatari.mp4|260.0|plain",
  "c1j": "an_ogikubo.mp4|400.0|plain",
  "c1k": "an_ogikubo.mp4|460.0|plain",
  "c1j2": "an_kanehara.mp4|430.0|plain",
@@ -78,5 +77,6 @@
  "c3m": "iv8_full.mp4|2010.0|plain",
  "e1": "hl_1gCgKoJD9Xg.mp4|14.0|vert",
  "e2": "sokuho_6.mp4|330.0|bcast",
- "e3": "main_f8.mp4|330.0|bcast"
+ "e3": "main_f8.mp4|330.0|bcast",
+ "c1i": "an_ishiwatari.mp4|260.0|plain"
 }
