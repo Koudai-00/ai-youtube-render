@@ -33,6 +33,7 @@ COVER = "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,set
 SOKUHO = CLIP / "sokuho_6.mp4"          # RIZIN公式【速報】第6試合(1R全編・放送画面)
 HL6 = CLIP / "hl6_IShJJtI2LhU.mp4"      # RIZIN公式 縦型ハイライト(第6試合)
 FACE = CLIP / "v_QxC20-pTRZ4.mp4"       # RIZIN公式 縦型 公開計量のフェイスオフ
+JOBIN = CLIP / "an_jobin1.mp4"          # ジョビン(元DEEPフェザー級王者) 判定への反応（本人の映像）
 IV = CLIP / "iv_hiramoto.mp4"           # RIZIN公式 試合後インタビュー(平本蓮 単独の会見)
 CEO = CLIP / "ceo_sakakibara.mp4"       # RIZIN公式 榊原信行CEO 大会後会見
 WL = CLIP / "winner_loser.mp4"          # RIZIN公式【勝者と敗者】試合直後の選手に密着
@@ -61,7 +62,7 @@ PLAN = [
     ("x3",  None, "bcp",   IV,       90.0, "RIZIN公式 試合後インタビュー"),
     ("x4",  None, "bcp",   CEO,     596.0, "RIZIN公式 榊原信行CEO 大会後会見"),
     ("x5",  None, "bcp",   CEO,     640.0, "RIZIN公式 榊原信行CEO 大会後会見"),
-    ("x6",  None, "bc",    SOKUHO,  300.0, "RIZIN公式 超RIZIN.5 第6試合"),
+    ("x6",  None, "bcp",   JOBIN,    60.0, "ジョビン切り抜きチャンネル"),
     ("e1",  None, "cover", FACE,      2.0, "RIZIN公式 超RIZIN.5 公開計量"),
 ]
 # ★セグメント境界は n-1 個 = 13。同じトランジションを連続させない。
