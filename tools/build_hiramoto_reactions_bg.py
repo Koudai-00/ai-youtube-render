@@ -95,8 +95,12 @@ PLAN = [
     ("c3g", IV6, 150.0, "plain", S_IV),
     ("c3h", WL, 1314.0, "plain", S_WL),
     ("c3i", WL, 1333.0, "plain", S_WL),
-    ("c3j", SUZU, 140.0, "plain", "鈴木千裕 Chihiro Suzuki"),
-    ("c3k", SUZU, 175.0, "plain", "鈴木千裕 Chihiro Suzuki"),
+    # ★本人が実際にその内容を話している区間を割り当てる（188〜210秒）。
+    #   同一人物の同じ画角なので、可視区間が重ならなければ巻き戻りには見えない。
+    ("c3j", SUZU, 176.0, "plain", "鈴木千裕 Chihiro Suzuki"),
+    ("c3k", SUZU, 194.0, "plain", "鈴木千裕 Chihiro Suzuki"),
+    ("c3k2", SUZU, 212.0, "plain", "鈴木千裕 Chihiro Suzuki"),
+    ("c3k3", SUZU, 226.0, "plain", "鈴木千裕 Chihiro Suzuki"),
     ("c3l", OGI, 400.0, "plain", "扇久保博正 おぎちゃんねる。"),
     ("c3m", OGI, 460.0, "plain", "扇久保博正 おぎちゃんねる。"),
     ("c3n", ISHI, 60.0,  "plain", "石渡伸太郎 Shintaro Ishiwatari"),
