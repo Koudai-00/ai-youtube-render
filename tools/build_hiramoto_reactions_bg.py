@@ -77,6 +77,7 @@ PLAN = [
     # 第2章 判定に反対・驚いた人たち
     ("c2a", FACE, 2.0, "vert",  S_WE),
     ("c2b", HIKA, 155.0, "plain", "HikakinClipTV（超RIZIN.5 同時視聴配信）"),
+    ("c2b2", HIKA, 178.0, "plain", "HikakinClipTV（超RIZIN.5 同時視聴配信）"),
     ("c2c", JOB1, 60.0,  "plain", "ジョビン切り抜きチャンネル"),
     ("c2d", JOB1, 200.0, "plain", "ジョビン切り抜きチャンネル"),
     ("c2e", WL, 1222.0,  "plain", S_WL),
@@ -128,7 +129,7 @@ def main() -> int:
 
     sigf = TPL / "assets" / "_assign.json"
     old = json.loads(sigf.read_text(encoding="utf-8")) if sigf.exists() else {}
-    new = {b: f"{Path(sr).name}|{s2}|{k}" for b, sr, s2, k, _ in PLAN}
+    new = {b: f"{Path(sr).name}|{s2}|{k}|{DUR[b]:.2f}" for b, sr, s2, k, _ in PLAN}
 
     segs = []
     for bid, src, ss, kind, label in PLAN:
