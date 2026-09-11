@@ -8,73 +8,73 @@
   },
   {
     "beat": "o2",
-    "src": "hl_1gCgKoJD9Xg.mp4",
-    "ss": 1.0,
-    "kind": "vert",
-    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
+    "src": "winner_loser.mp4",
+    "ss": 2120.0,
+    "kind": "plain",
+    "label": "RIZIN公式【勝者と敗者】"
   },
   {
     "beat": "o3",
-    "src": "arrival.mp4",
-    "ss": 30.0,
-    "kind": "plain",
-    "label": "RIZIN公式 超RIZIN.5 選手会場入り"
+    "src": "site_mmafighting.png",
+    "ss": 0.0,
+    "kind": "stillw",
+    "label": "MMA Fighting（記事）"
   },
   {
     "beat": "c1a",
+    "src": "tw_mmafighting.png",
+    "ss": 0.0,
+    "kind": "still",
+    "label": "MMA Fighting（X）"
+  },
+  {
+    "beat": "c1b",
+    "src": "tw_mmajunkie.png",
+    "ss": 0.0,
+    "kind": "still",
+    "label": "MMA Junkie（X）"
+  },
+  {
+    "beat": "c1c",
+    "src": "tw_uncrowned.png",
+    "ss": 0.0,
+    "kind": "still",
+    "label": "Uncrowned（X）"
+  },
+  {
+    "beat": "c1d",
+    "src": "site_pfl.png",
+    "ss": 0.0,
+    "kind": "stillw",
+    "label": "PFL 公式サイト"
+  },
+  {
+    "beat": "c1e",
+    "src": "site_sherdog.png",
+    "ss": 0.0,
+    "kind": "stillw",
+    "label": "Sherdog（記事）"
+  },
+  {
+    "beat": "c1f",
+    "src": "tw_helwani_osaka.png",
+    "ss": 0.0,
+    "kind": "still",
+    "label": "Ariel Helwani（X）"
+  },
+  {
+    "beat": "c1g",
+    "src": "main_f8.mp4",
+    "ss": 40.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
+  },
+  {
+    "beat": "c1h",
     "src": "iv8_full.mp4",
     "ss": 1640.0,
     "kind": "plain",
     "label": "RIZIN公式 試合後インタビュー"
-  },
-  {
-    "beat": "c1b",
-    "src": "main_f8.mp4",
-    "ss": 45.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第8試合"
-  },
-  {
-    "beat": "c1c",
-    "src": "main_f8.mp4",
-    "ss": 70.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第8試合"
-  },
-  {
-    "beat": "c1d",
-    "src": "main_f8.mp4",
-    "ss": 95.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第8試合"
-  },
-  {
-    "beat": "c1e",
-    "src": "main_f8.mp4",
-    "ss": 120.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第8試合"
-  },
-  {
-    "beat": "c1f",
-    "src": "iv8_full.mp4",
-    "ss": 1690.0,
-    "kind": "plain",
-    "label": "RIZIN公式 試合後インタビュー"
-  },
-  {
-    "beat": "c1g",
-    "src": "arrival.mp4",
-    "ss": 120.0,
-    "kind": "plain",
-    "label": "RIZIN公式 超RIZIN.5 選手会場入り"
-  },
-  {
-    "beat": "c1h",
-    "src": "hl_1gCgKoJD9Xg.mp4",
-    "ss": 12.0,
-    "kind": "vert",
-    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
   },
   {
     "beat": "c2a",
@@ -85,45 +85,45 @@
   },
   {
     "beat": "c2b",
-    "src": "main_f8.mp4",
-    "ss": 170.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第8試合"
+    "src": "tw_rizintv.png",
+    "ss": 0.0,
+    "kind": "still",
+    "label": "RIZIN.tv（X）"
   },
   {
     "beat": "c2c",
-    "src": "main_f8.mp4",
-    "ss": 190.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第8試合"
+    "src": "tw_champrds_slam.png",
+    "ss": 0.0,
+    "kind": "still",
+    "label": "Championship Rounds（X）"
   },
   {
     "beat": "c2d",
-    "src": "main_f8.mp4",
-    "ss": 215.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第8試合"
+    "src": "tw_hof_slam.png",
+    "ss": 0.0,
+    "kind": "still",
+    "label": "Home of Fight（X）"
   },
   {
     "beat": "c2e",
-    "src": "main_f8.mp4",
-    "ss": 235.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第8試合"
+    "src": "tw_cst.png",
+    "ss": 0.0,
+    "kind": "still",
+    "label": "Combat Sports Today（X）"
   },
   {
     "beat": "c2f",
-    "src": "iv8_full.mp4",
-    "ss": 190.0,
-    "kind": "plain",
-    "label": "RIZIN公式 試合後インタビュー"
+    "src": "yt_morningkombat.png",
+    "ss": 0.0,
+    "kind": "stillw",
+    "label": "Morning Kombat（YouTube）"
   },
   {
     "beat": "c2g",
-    "src": "main_f8.mp4",
-    "ss": 260.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第8試合"
+    "src": "tw_lukethomas.png",
+    "ss": 0.0,
+    "kind": "still",
+    "label": "Luke Thomas（X）"
   },
   {
     "beat": "c2h",
@@ -148,10 +148,10 @@
   },
   {
     "beat": "c2k",
-    "src": "iv8_full.mp4",
-    "ss": 460.0,
-    "kind": "plain",
-    "label": "RIZIN公式 試合後インタビュー"
+    "src": "main_f8.mp4",
+    "ss": 305.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
   },
   {
     "beat": "c2l",
@@ -162,94 +162,94 @@
   },
   {
     "beat": "c2m",
-    "src": "main_f8.mp4",
-    "ss": 305.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第8試合"
+    "src": "hl_1gCgKoJD9Xg.mp4",
+    "ss": 12.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
   },
   {
     "beat": "c2n",
     "src": "main_f8.mp4",
-    "ss": 325.0,
+    "ss": 330.0,
     "kind": "bcast",
     "label": "RIZIN公式 超RIZIN.5 第8試合"
   },
   {
     "beat": "c3a",
+    "src": "tw_helwani_mvp.png",
+    "ss": 0.0,
+    "kind": "still",
+    "label": "Ariel Helwani（X）"
+  },
+  {
+    "beat": "c3b",
+    "src": "jakepaul_bloomberg.mp4",
+    "ss": 30.0,
+    "kind": "plain",
+    "label": "Bloomberg Television"
+  },
+  {
+    "beat": "c3c",
+    "src": "tw_hof_mvp.png",
+    "ss": 0.0,
+    "kind": "still",
+    "label": "Home of Fight（X）"
+  },
+  {
+    "beat": "c3d",
+    "src": "jakepaul_bloomberg.mp4",
+    "ss": 58.0,
+    "kind": "plain",
+    "label": "Bloomberg Television"
+  },
+  {
+    "beat": "c3e",
+    "src": "ufc308_topuria_volk.mp4",
+    "ss": 60.0,
+    "kind": "plain",
+    "label": "UFC公式 UFC308 トポリア vs ボルカノフスキー"
+  },
+  {
+    "beat": "c3f",
     "src": "winner_loser.mp4",
-    "ss": 2120.0,
+    "ss": 2260.0,
     "kind": "plain",
     "label": "RIZIN公式【勝者と敗者】"
   },
   {
-    "beat": "c3b",
+    "beat": "c3g",
+    "src": "volk_streak.mp4",
+    "ss": 50.0,
+    "kind": "plain",
+    "label": "UFC公式 ボルカノフスキー"
+  },
+  {
+    "beat": "c3h",
+    "src": "evloev_interview.mp4",
+    "ss": 100.0,
+    "kind": "plain",
+    "label": "UFC公式 エヴロエフ"
+  },
+  {
+    "beat": "c3i",
+    "src": "rizin_pfl_ceos.mp4",
+    "ss": 150.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN×PFL CEO対談"
+  },
+  {
+    "beat": "e1",
     "src": "iv8_full.mp4",
     "ss": 1730.0,
     "kind": "plain",
     "label": "RIZIN公式 試合後インタビュー"
   },
   {
-    "beat": "c3c",
-    "src": "main_f8.mp4",
-    "ss": 350.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第8試合"
-  },
-  {
-    "beat": "c3d",
-    "src": "iv8_full.mp4",
-    "ss": 1790.0,
-    "kind": "plain",
-    "label": "RIZIN公式 試合後インタビュー"
-  },
-  {
-    "beat": "c3e",
-    "src": "arrival.mp4",
-    "ss": 250.0,
-    "kind": "plain",
-    "label": "RIZIN公式 超RIZIN.5 選手会場入り"
-  },
-  {
-    "beat": "c3f",
-    "src": "iv8_full.mp4",
-    "ss": 1840.0,
-    "kind": "plain",
-    "label": "RIZIN公式 試合後インタビュー"
-  },
-  {
-    "beat": "c3g",
-    "src": "main_f8.mp4",
-    "ss": 370.0,
-    "kind": "bcast",
-    "label": "RIZIN公式 超RIZIN.5 第8試合"
-  },
-  {
-    "beat": "c3h",
-    "src": "arrival.mp4",
-    "ss": 350.0,
-    "kind": "plain",
-    "label": "RIZIN公式 超RIZIN.5 選手会場入り"
-  },
-  {
-    "beat": "c3i",
-    "src": "iv8_full.mp4",
-    "ss": 1880.0,
-    "kind": "plain",
-    "label": "RIZIN公式 試合後インタビュー"
-  },
-  {
-    "beat": "e1",
-    "src": "iv8_full.mp4",
-    "ss": 1920.0,
-    "kind": "plain",
-    "label": "RIZIN公式 試合後インタビュー"
-  },
-  {
     "beat": "e2",
-    "src": "iv8_full.mp4",
-    "ss": 1975.0,
-    "kind": "plain",
-    "label": "RIZIN公式 試合後インタビュー"
+    "src": "main_f8.mp4",
+    "ss": 360.0,
+    "kind": "bcast",
+    "label": "RIZIN公式 超RIZIN.5 第8試合"
   },
   {
     "beat": "e3",
@@ -260,9 +260,9 @@
   },
   {
     "beat": "e4",
-    "src": "winner_loser.mp4",
-    "ss": 2260.0,
-    "kind": "plain",
-    "label": "RIZIN公式【勝者と敗者】"
+    "src": "hl_1gCgKoJD9Xg.mp4",
+    "ss": 14.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 試合ハイライト"
   }
 ]

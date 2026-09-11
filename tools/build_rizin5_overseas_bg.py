@@ -42,6 +42,13 @@ DEBAND = "crop=1672:966:0:114,setsar=1"
 COVER = "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,setsar=1,format=yuv420p"
 CROPR = "crop=1090:720:0:0,setsar=1"
 VPILL = "crop=406:720:437:0,setsar=1"
+# 静止画は必ず動きを付ける（ルール）: 2880x1620に組んでから zoompan で 5%ゆっくり寄る
+def ZP(nframes):
+    return (f"zoompan=z='1+0.05*on/{nframes}':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2'"
+            f":d=1:s=1920x1080:fps=30,format=yuv420p")
+STILL_CARD = ("split[a][b];[a]scale=2880:1620:force_original_aspect_ratio=increase,crop=2880:1620,"
+              "gblur=sigma=40,eq=brightness=-0.35[bg];[b]scale=-2:1500[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,setsar=1")
+STILL_WIDE = "scale=2880:1620:force_original_aspect_ratio=increase,crop=2880:1620,setsar=1"
 BC = ("split[a][b];[a]scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,"
       "gblur=sigma=28,eq=brightness=-0.26[bg];[b]scale=-2:1080[fg];"
       "[bg][fg]overlay=(W-w)/2:0,setsar=1,format=yuv420p")
@@ -52,49 +59,57 @@ S_HL = "RIZIN公式 超RIZIN.5 試合ハイライト"
 S_IV = "RIZIN公式 試合後インタビュー"
 S_AR = "RIZIN公式 超RIZIN.5 選手会場入り"
 S_WL = "RIZIN公式【勝者と敗者】"
+MED = SRC_OV.parent / "media"
+JP = SRC_OV / "jakepaul_bloomberg.mp4"       # Bloomberg TV: ジェイク・ポール本人が出演（MVP×PFL合併を語る）
+CEOS = SRC_OV / "rizin_pfl_ceos.mp4"          # RIZIN公式 [RIZIN×PFL] 榊原信行×John Martin（90〜=Martin / 150〜=榊原）
+UFC308 = SRC_OV / "ufc308_topuria_volk.mp4"   # UFC公式(ufcespanol) UFC308 トポリア vs ボルカノフスキー
+EVLO = SRC_OV / "evloev_interview.mp4"        # UFC公式 エヴロエフ オクタゴンインタビュー(100〜)
+VOLK = SRC_OV / "volk_streak.mp4"             # UFC公式 ボルカノフスキー10連勝
+S_MED = lambda n: f"出典: {n}"
+# ★メディアの紹介区間はそのメディアの実物（X投稿カード/サイト/チャンネル）を背景にする
 PLAN = [
     ("o1",  F8, 15.0,  "bcast", S_RZ),
-    ("o2",  H8, 1.0,   "vert",  S_HL),
-    ("o3",  ARR, 30.0, "plain", S_AR),
+    ("o2",  WL, 2120.0, "plain", S_WL),                              # 2冠のベルトを持って花道を戻る
+    ("o3",  MED / "site_mmafighting.png", 0.0, "stillw", "MMA Fighting（記事）"),
     # 第1章 海外メディアの速報
-    ("c1a", IV8, 1640.0, "plain", S_IV),
-    ("c1b", F8, 45.0,  "bcast", S_RZ),
-    ("c1c", F8, 70.0,  "bcast", S_RZ),
-    ("c1d", F8, 95.0,  "bcast", S_RZ),
-    ("c1e", F8, 120.0, "bcast", S_RZ),
-    ("c1f", IV8, 1690.0, "plain", S_IV),
-    ("c1g", ARR, 120.0, "plain", S_AR),
-    ("c1h", H8, 12.0,  "vert",  S_HL),
+    ("c1a", MED / "tw_mmafighting.png", 0.0, "still", "MMA Fighting（X）"),
+    ("c1b", MED / "tw_mmajunkie.png", 0.0, "still", "MMA Junkie（X）"),
+    ("c1c", MED / "tw_uncrowned.png", 0.0, "still", "Uncrowned（X）"),
+    ("c1d", MED / "site_pfl.png", 0.0, "stillw", "PFL 公式サイト"),
+    ("c1e", MED / "site_sherdog.png", 0.0, "stillw", "Sherdog（記事）"),
+    ("c1f", MED / "tw_helwani_osaka.png", 0.0, "still", "Ariel Helwani（X）"),
+    ("c1g", F8, 40.0,  "bcast", S_RZ),
+    ("c1h", IV8, 1640.0, "plain", S_IV),
     # 第2章 試合内容への評価
     ("c2a", F8, 150.0, "bcast", S_RZ),
-    ("c2b", F8, 170.0, "bcast", S_RZ),
-    ("c2c", F8, 190.0, "bcast", S_RZ),
-    ("c2d", F8, 215.0, "bcast", S_RZ),
-    ("c2e", F8, 235.0, "bcast", S_RZ),
-    ("c2f", IV8, 190.0, "plain", S_IV),
-    ("c2g", F8, 260.0, "bcast", S_RZ),
+    ("c2b", MED / "tw_rizintv.png", 0.0, "still", "RIZIN.tv（X）"),
+    ("c2c", MED / "tw_champrds_slam.png", 0.0, "still", "Championship Rounds（X）"),
+    ("c2d", MED / "tw_hof_slam.png", 0.0, "still", "Home of Fight（X）"),
+    ("c2e", MED / "tw_cst.png", 0.0, "still", "Combat Sports Today（X）"),
+    ("c2f", MED / "yt_morningkombat.png", 0.0, "stillw", "Morning Kombat（YouTube）"),
+    ("c2g", MED / "tw_lukethomas.png", 0.0, "still", "Luke Thomas（X）"),
     ("c2h", F8, 282.0, "bcast", S_RZ),
     ("c2i", IV8, 120.0, "plain", S_IV),
     ("c2j", IV8, 430.0, "plain", S_IV),
-    ("c2k", IV8, 460.0, "plain", S_IV),
+    ("c2k", F8, 305.0, "bcast", S_RZ),
     ("c2l", IV8, 490.0, "plain", S_IV),
-    ("c2m", F8, 305.0, "bcast", S_RZ),
-    ("c2n", F8, 325.0, "bcast", S_RZ),
+    ("c2m", H8, 12.0,  "vert",  S_HL),
+    ("c2n", F8, 330.0, "bcast", S_RZ),
     # 第3章 契約とUFC論
-    ("c3a", WL, 2120.0, "plain", S_WL),
-    ("c3b", IV8, 1730.0, "plain", S_IV),
-    ("c3c", F8, 350.0, "bcast", S_RZ),
-    ("c3d", IV8, 1790.0, "plain", S_IV),
-    ("c3e", ARR, 250.0, "plain", S_AR),
-    ("c3f", IV8, 1840.0, "plain", S_IV),
-    ("c3g", F8, 370.0, "bcast", S_RZ),
-    ("c3h", ARR, 350.0, "plain", S_AR),
-    ("c3i", IV8, 1880.0, "plain", S_IV),
+    ("c3a", MED / "tw_helwani_mvp.png", 0.0, "still", "Ariel Helwani（X）"),
+    ("c3b", JP, 30.0,  "plain", "Bloomberg Television"),           # ジェイク・ポールのアップ(30〜80秒)
+    ("c3c", MED / "tw_hof_mvp.png", 0.0, "still", "Home of Fight（X）"),
+    ("c3d", JP, 58.0,  "plain", "Bloomberg Television"),
+    ("c3e", UFC308, 60.0, "plain", "UFC公式 UFC308 トポリア vs ボルカノフスキー"),
+    ("c3f", WL, 2260.0, "plain", S_WL),
+    ("c3g", VOLK, 50.0, "plain", "UFC公式 ボルカノフスキー"),
+    ("c3h", EVLO, 100.0, "plain", "UFC公式 エヴロエフ"),
+    ("c3i", CEOS, 150.0, "plain", "RIZIN公式 RIZIN×PFL CEO対談"),
     # まとめ
-    ("e1",  IV8, 1920.0, "plain", S_IV),
-    ("e2",  IV8, 1975.0, "plain", S_IV),
+    ("e1",  IV8, 1730.0, "plain", S_IV),
+    ("e2",  F8, 360.0, "bcast", S_RZ),
     ("e3",  WL, 2190.0, "plain", S_WL),
-    ("e4",  WL, 2260.0, "plain", S_WL),
+    ("e4",  H8, 14.0,  "vert",  S_HL),
 ]
 
 
@@ -112,7 +127,7 @@ def main() -> int:
 
     sigf = TPL / "assets" / "_assign.json"
     old = json.loads(sigf.read_text(encoding="utf-8")) if sigf.exists() else {}
-    new = {b: f"{Path(sr).name}|{s2}|{k}" for b, sr, s2, k, _ in PLAN}
+    new = {b: f"{Path(sr).name}|{s2}|{k}|{DUR[b]:.2f}" for b, sr, s2, k, _ in PLAN}
 
     segs = []
     for bid, src, ss, kind, label in PLAN:
@@ -125,6 +140,21 @@ def main() -> int:
         # 短い素材(縦ハイライト等)は必要尺に足りないのでループさせる
         cmd = ["ffmpeg", "-y", "-loglevel", "error", "-stream_loop", "-1",
                "-ss", f"{ss}", "-i", str(src)]
+        if kind in ("still", "stillw"):
+            # 画像は -loop 1 で動画化する（-ss/-stream_loop は不要）
+            nf = int(need * 30) + 2
+            chain = (STILL_CARD if kind == "still" else STILL_WIDE) + "," + ZP(nf)
+            cmd = ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-i", str(src),
+                   "-filter_complex", "[0:v]" + chain, "-t", f"{need:.2f}", *ENC, str(out)]
+            run(cmd)
+            chk = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                                  "-of", "csv=p=0", str(out)], capture_output=True, text=True)
+            if chk.returncode != 0 or not chk.stdout.strip():
+                out.unlink(missing_ok=True); raise SystemExit(f"{bid}.mp4 が壊れています（生成失敗）")
+            segs.append({"beat": bid, "src": Path(src).name, "ss": ss, "kind": kind, "label": label})
+            old[bid] = new[bid]; sigf.write_text(json.dumps(old, ensure_ascii=False, indent=1), encoding="utf-8")
+            print(f"  {bid:4} {DUR[bid]:6.2f}s +尾13s  {kind:5} {Path(src).name}", flush=True)
+            continue
         if kind == "bcast":
             cmd += ["-vf", DEBAND + "," + COVER]
         elif kind == "cropr":

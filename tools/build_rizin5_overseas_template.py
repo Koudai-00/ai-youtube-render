@@ -42,8 +42,8 @@ DISP = {
     "エージェーマッキー": "AJ・マッキー", "マッキー": "マッキー",
     "トポリア": "トポリア", "エヴロエフ": "エヴロエフ", "あきもときょうま": "秋元強真",
     "はんていさんたいゼロ": "判定3-0", "さんたいゼロ": "3-0",
-    "にじゅっせんぜんしょう": "20戦全勝", "にじゅうごさい": "25歳", "じゅうごふん": "15分",
-    "さんしゅうかん": "3週間", "ごラウンド": "5R", "さんラウンド": "3R", "いちラウンド": "1R",
+    "にじゅっせんぜんしょう": "20戦全勝", "にじゅうせんぜんしょう": "20戦全勝", "にじゅうごさい": "25歳", "じゅうごふん": "15分",
+    "さんしゅうかん": "3週間", "ジェイクポールのかねを": "ジェイク・ポールの金を", "さんじゅうななまんかい": "37万回", "にじゅうねん": "20年", "ユーエスエートゥデイ": "USA TODAY", "ヤフースポーツ": "Yahoo Sports", "エムブイピー": "MVP", "イリアトポリア": "イリア・トポリア", "モフサルエヴロエフ": "モフサル・エヴロエフ", "ことし": "今年", "ごラウンド": "5R", "さんラウンド": "3R", "いちラウンド": "1R",
     "ひゃくさんじゅうまんかい": "130万回", "じゅうまんかい": "10万回", "せんいいね": "1000いいね",
     "にせんにじゅうななねんいちがつ": "2027年1月", "にねん契約": "2年契約",
     "おおみそか": "大晦日", "ひとりだ": "1人だ", "ひとりだと": "1人だと", "ふたつ": "2つ",
@@ -97,16 +97,10 @@ CHAP_LABEL = {
 # (beat, kind, title, body_en, meta)
 CARDS_SPEC = [
     # ★実名で出すのは大手メディア・著名記者・団体公式・実名のアナリストのみ。一般の海外ファンは匿名。
-    ("c1b", "media", "MMA Junkie", "#AndNew! Razhabali Shaydullaev defeats A.J. McKee at #SuperRIZIN5 to become the simultaneous PFL and Rizin featherweight champion.", "USA TODAY系MMAメディア"),
-    ("c1c", "media", "Uncrowned", "Razhabali Shaydullaev remains perfect, defeating AJ McKee via UD (30-27 x 3). He’s now 20-0 and holds featherweight gold in both PFL and RIZIN.", "Yahoo Sports / ヘルワニ系メディア"),
     ("c1d", "media", "PFL (団体公式)", "HISTORY MADE IN JAPAN　Razhabali Shaydullaev is your new PFL and RIZIN Featherweight World Champion.", "公式アカウント／10万回超の表示"),
     ("c1e", "media", "Sherdog", "Arguably one of the best mixed martial artists competing outside the Ultimate Fighting Championship.", "記事より（Robert Sargent）"),
     ("c1g", "media", "アリエル・ヘルワニ", "That scene in Osaka for the RIZIN main was so much fun. Such a great idea.", "Uncrowned / Yahoo Sports"),
     ("c1h", "media", "アリエル・ヘルワニ", "Without question the best 145er outside the UFC.", "Uncrowned / Yahoo Sports"),
-    ("c2c", "media", "Championship Rounds", "Razhabali Shaydullaev slams AJ McKee early in the first round 😲", "大規模MMAアカウント／1000いいね超"),
-    ("c2d", "media", "Home of Fight", "Beautiful slam by Razhabali Shaidulloev. AJ Mckee lost the 1st round", "大規模MMAアカウント"),
-    ("c2e", "media", "Combat Sports Today", "RAZHABALI SHAYDULLAEV MAKES HISTORY. TWO-PROMOTION WORLD CHAMPION! Shaydullaev dominated AJ McKee over 3 rounds.", "コンバットスポーツ報道"),
-    ("c2g", "media", "ルーク・トーマス", "Shaidulloev does not look unbeatable. If McKee wasn’t so uncharacteristically tired, this feels like it could be a very different fight.", "Morning Kombat／アナリスト"),
     ("c2j", "media", "AJ・マッキー", "3週間ぐらい前に足首を脱臼して、そこからしばらく走れなかった。最後の追い込みができなかったのは、少なからず影響があったと思う。", "RIZIN公式 試合後インタビューより"),
     ("c2k", "media", "AJ・マッキー", "打撃では自分の方が上回っていたと思う。ただテイクダウンとコントロールで、だいぶ押さえ付けられてしまった。", "RIZIN公式 試合後インタビューより"),
     ("c2l", "media", "AJ・マッキー", "今度はアメリカで、自分のルールで、5ラウンドでやってみたら面白いんじゃないかと思う。", "RIZIN公式 試合後インタビューより"),
@@ -167,13 +161,25 @@ def wrap_two(text, maxw):
         cut = snap(target)
         if cut >= len(text) or cut <= 0:
             cut = max(1, min(len(text) - 1, target))
-        # ★スナップで行が maxw を超えたら、素直に target で切り直す（幅の上限を必ず守る）
-        if zwidth(text[:cut]) > maxw or zwidth(text[cut:]) > maxw:
+        # ★カタカナ語・英数字・「ー」「・」の途中で切らない（語中改行の禁止）。
+        #   切る位置の前後±12文字で「語の途中でなく、両行が幅内」に収まる最も近い位置を探す。
+        KATA = _re.compile(r'[ァ-ヴーｦ-ﾟA-Za-z0-9・]')
+        def inside_word(c):
+            return 0 < c < len(text) and bool(KATA.match(text[c-1])) and bool(KATA.match(text[c]))
+        def ok(c):
+            # 語中改行を避けるためなら、設計幅(23)より少し広い 27全角（ルール上限）まで許す
+            lim = min(maxw + 4.5, 27.0)
+            return 0 < c < len(text) and not inside_word(c) and zwidth(text[:c]) <= lim and zwidth(text[c:]) <= lim
+        if not ok(cut):
+            for d in range(1, 13):
+                if ok(cut - d): cut = cut - d; break
+                if ok(cut + d): cut = cut + d; break
+        # ★幅の上限(27全角=ルール上限)だけは必ず守る。語中で切るしかない時のみ最後の手段として target で切る
+        if zwidth(text[:cut]) > 27.0 or zwidth(text[cut:]) > 27.0:
             c2 = max(1, min(len(text) - 1, target))
-            while c2 > 1 and zwidth(text[:c2]) > maxw:
+            while c2 > 1 and zwidth(text[:c2]) > 27.0:
                 c2 -= 1
-            if zwidth(text[:c2]) <= maxw and zwidth(text[c2:]) <= maxw:
-                cut = c2
+            cut = c2
         return (text[:cut], text[cut:])
     return None
 def fits_two(text, maxw):
