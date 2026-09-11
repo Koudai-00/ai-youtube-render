@@ -171,18 +171,30 @@ def wrap_two(text, maxw):
         KATA = _re.compile(r'[ァ-ヴーｦ-ﾟA-Za-z0-9・]')
         def inside_word(c):
             return 0 < c < len(text) and bool(KATA.match(text[c-1])) and bool(KATA.match(text[c]))
+        # ★行頭に読点・句点を置かない／句読点だけの行を作らない（2026-09-11 発生: 「…ベック」「。」）
+        PUNCT = set("、。」』）】！？")
         def ok(c):
             # 語中改行を避けるためなら、設計幅(23)より少し広い 27全角（ルール上限）まで許す
             lim = min(maxw + 4.5, 27.0)
-            return 0 < c < len(text) and not inside_word(c) and zwidth(text[:c]) <= lim and zwidth(text[c:]) <= lim
+            if not (0 < c < len(text)) or inside_word(c) or text[c] in PUNCT:
+                return False
+            if not any(ch not in PUNCT for ch in text[c:]) or not any(ch not in PUNCT for ch in text[:c]):
+                return False
+            return zwidth(text[:c]) <= lim and zwidth(text[c:]) <= lim
         if not ok(cut):
-            for d in range(1, 13):
-                if ok(cut - d): cut = cut - d; break
-                if ok(cut + d): cut = cut + d; break
+            # 候補: target±16 の中で「両行が幅内・語中でない」位置。句読点の直後を強く優先し、次に助詞の直後
+            cands = []
+            for c in range(max(1, cut - 16), min(len(text) - 1, cut + 16) + 1):
+                if not ok(c):
+                    continue
+                pen = 0 if text[c-1] in "、。" else (6 if text[c-1] in BREAK_AFTER else 10)
+                cands.append((abs(c - target) + pen, c))
+            if cands:
+                cut = min(cands)[1]
         # ★幅の上限(27全角=ルール上限)だけは必ず守る。語中で切るしかない時のみ最後の手段として target で切る
-        if zwidth(text[:cut]) > 27.0 or zwidth(text[cut:]) > 27.0:
+        if zwidth(text[:cut]) > 27.0 or zwidth(text[cut:]) > 27.0 or text[cut] in PUNCT:
             c2 = max(1, min(len(text) - 1, target))
-            while c2 > 1 and zwidth(text[:c2]) > 27.0:
+            while c2 > 1 and (zwidth(text[:c2]) > 27.0 or text[c2] in PUNCT):
                 c2 -= 1
             cut = c2
         return (text[:cut], text[cut:])
