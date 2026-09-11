@@ -165,7 +165,15 @@ def wrap_two(text, maxw):
                 c += 1
             return c
         cut = snap(target)
-        if cut >= len(text) or cut <= 0: cut = max(1, min(len(text) - 1, target))
+        if cut >= len(text) or cut <= 0:
+            cut = max(1, min(len(text) - 1, target))
+        # ★スナップで行が maxw を超えたら、素直に target で切り直す（幅の上限を必ず守る）
+        if zwidth(text[:cut]) > maxw or zwidth(text[cut:]) > maxw:
+            c2 = max(1, min(len(text) - 1, target))
+            while c2 > 1 and zwidth(text[:c2]) > maxw:
+                c2 -= 1
+            if zwidth(text[:c2]) <= maxw and zwidth(text[c2:]) <= maxw:
+                cut = c2
         return (text[:cut], text[cut:])
     return None
 def fits_two(text, maxw):
