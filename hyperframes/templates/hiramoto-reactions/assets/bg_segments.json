@@ -77,6 +77,13 @@
     "label": "HikakinClipTV（超RIZIN.5 同時視聴配信）"
   },
   {
+    "beat": "c2b2",
+    "src": "hikakin_raw.mp4",
+    "ss": 178.0,
+    "kind": "plain",
+    "label": "HikakinClipTV（超RIZIN.5 同時視聴配信）"
+  },
+  {
     "beat": "c2c",
     "src": "an_jobin1.mp4",
     "ss": 60.0,
@@ -191,14 +198,28 @@
   {
     "beat": "c3j",
     "src": "an_suzuki.mp4",
-    "ss": 140.0,
+    "ss": 176.0,
     "kind": "plain",
     "label": "鈴木千裕 Chihiro Suzuki"
   },
   {
     "beat": "c3k",
     "src": "an_suzuki.mp4",
-    "ss": 175.0,
+    "ss": 194.0,
+    "kind": "plain",
+    "label": "鈴木千裕 Chihiro Suzuki"
+  },
+  {
+    "beat": "c3k2",
+    "src": "an_suzuki.mp4",
+    "ss": 212.0,
+    "kind": "plain",
+    "label": "鈴木千裕 Chihiro Suzuki"
+  },
+  {
+    "beat": "c3k3",
+    "src": "an_suzuki.mp4",
+    "ss": 226.0,
     "kind": "plain",
     "label": "鈴木千裕 Chihiro Suzuki"
   },
