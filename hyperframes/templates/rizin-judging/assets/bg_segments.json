@@ -1,0 +1,1730 @@
+[
+  {
+    "beat": "h1#0",
+    "t0": 0.3,
+    "t1": 4.201,
+    "src": "n-HDGJox3fI.mp4",
+    "ss": 0.0,
+    "kind": "bcast",
+    "label": "RIZIN公式【速報】ダウトベック vs 平本蓮 (超RIZIN.5)"
+  },
+  {
+    "beat": "h1#1",
+    "t0": 4.301,
+    "t1": 12.289,
+    "src": "n-HDGJox3fI.mp4",
+    "ss": 40.0,
+    "kind": "bcast",
+    "label": "RIZIN公式【速報】ダウトベック vs 平本蓮 (超RIZIN.5)"
+  },
+  {
+    "beat": "h1#2",
+    "t0": 12.389,
+    "t1": 15.314,
+    "src": "IShJJtI2LhU.mp4",
+    "ss": 22.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 第6試合ハイライト"
+  },
+  {
+    "beat": "h2#0",
+    "t0": 15.534,
+    "t1": 23.94,
+    "src": "sKLKZqgPdAw.mp4",
+    "ss": 935.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 試合後インタビュー"
+  },
+  {
+    "beat": "h2#1",
+    "t0": 24.04,
+    "t1": 29.799,
+    "src": "4NXKp3q1bu4.mp4",
+    "ss": 1312.0,
+    "kind": "plain",
+    "label": "RIZIN公式【勝者と敗者】(超RIZIN.5)"
+  },
+  {
+    "beat": "h3",
+    "t0": 30.019,
+    "t1": 43.075,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 330.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "h4#0",
+    "t0": 43.295,
+    "t1": 51.051,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 1364.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "h4#1",
+    "t0": 51.151,
+    "t1": 58.442,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 1264.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "h5",
+    "t0": 58.662,
+    "t1": 72.136,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 95.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c1_1",
+    "t0": 72.586,
+    "t1": 79.552,
+    "src": "AEZosftj1GE.mp4",
+    "ss": 1546.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
+  },
+  {
+    "beat": "c1_2#0",
+    "t0": 79.772,
+    "t1": 85.113,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 183.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c1_2#1",
+    "t0": 85.213,
+    "t1": 91.25,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 1413.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c1_2#2",
+    "t0": 91.35,
+    "t1": 95.53,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 2072.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c1_3",
+    "t0": 95.75,
+    "t1": 108.528,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 150.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c1_4",
+    "t0": 108.748,
+    "t1": 122.501,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 140.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c1_5",
+    "t0": 122.721,
+    "t1": 131.266,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 160.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c1_6#0",
+    "t0": 131.486,
+    "t1": 140.681,
+    "src": "art_boutreview_seminar.png",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "BOUTREVIEW"
+  },
+  {
+    "beat": "c1_6#1",
+    "t0": 140.781,
+    "t1": 147.236,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 192.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c1_6#2",
+    "t0": 147.336,
+    "t1": 151.516,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 566.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c1_7",
+    "t0": 151.736,
+    "t1": 165.489,
+    "src": "art_boutreview_lms.png",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "BOUTREVIEW"
+  },
+  {
+    "beat": "c1_8",
+    "t0": 165.709,
+    "t1": 179.795,
+    "src": "b9I20IcVcRc.mp4",
+    "ss": 1556.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 朝倉未来 vs 斎藤裕 (RIZIN.25)"
+  },
+  {
+    "beat": "c1_9#0",
+    "t0": 180.015,
+    "t1": 187.677,
+    "src": "n-HDGJox3fI.mp4",
+    "ss": 286.0,
+    "kind": "bcast",
+    "label": "RIZIN公式【速報】ダウトベック vs 平本蓮 (超RIZIN.5)"
+  },
+  {
+    "beat": "c1_9#1",
+    "t0": 187.777,
+    "t1": 194.093,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 1083.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "c1_10",
+    "t0": 194.313,
+    "t1": 207.742,
+    "src": "site_jmoc_top.png",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "JMOC 日本MMA審判機構 公式サイト"
+  },
+  {
+    "beat": "c1_11#0",
+    "t0": 207.962,
+    "t1": 214.835,
+    "src": "site_jmoc_overview.png",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "JMOC 日本MMA審判機構 公式サイト"
+  },
+  {
+    "beat": "c1_11#1",
+    "t0": 214.935,
+    "t1": 222.365,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 840.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c1_11#2",
+    "t0": 222.465,
+    "t1": 224.555,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 1065.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c1_12",
+    "t0": 224.775,
+    "t1": 234.627,
+    "src": "7F5Z3RY7yQs.mp4",
+    "ss": 1632.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.10 前日公開計量"
+  },
+  {
+    "beat": "c2_1",
+    "t0": 235.077,
+    "t1": 246.369,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 0.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_2#0",
+    "t0": 246.589,
+    "t1": 253.462,
+    "src": "7F5Z3RY7yQs.mp4",
+    "ss": 1616.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.10 前日公開計量"
+  },
+  {
+    "beat": "c2_2#1",
+    "t0": 253.562,
+    "t1": 261.596,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 55.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_2#2",
+    "t0": 261.696,
+    "t1": 267.78,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 150.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_3#0",
+    "t0": 268.0,
+    "t1": 277.845,
+    "src": "7F5Z3RY7yQs.mp4",
+    "ss": 1626.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.10 前日公開計量"
+  },
+  {
+    "beat": "c2_3#1",
+    "t0": 277.945,
+    "t1": 284.4,
+    "src": "gHhVcRaURiE.mp4",
+    "ss": 25.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.10 試合後会見"
+  },
+  {
+    "beat": "c2_4",
+    "t0": 284.62,
+    "t1": 292.747,
+    "src": "TQ_LOVexU5E.mp4",
+    "ss": 62.0,
+    "kind": "cropb",
+    "label": "朝倉海 CONFESSIONS 舞台裏 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_5#0",
+    "t0": 292.967,
+    "t1": 296.683,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 165.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_5#1",
+    "t0": 296.783,
+    "t1": 302.123,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 190.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_5#2",
+    "t0": 302.223,
+    "t1": 309.979,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 198.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_6",
+    "t0": 310.199,
+    "t1": 320.933,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 561.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_7#0",
+    "t0": 321.153,
+    "t1": 325.658,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 1105.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_7#1",
+    "t0": 325.758,
+    "t1": 333.514,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 1112.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_7#2",
+    "t0": 333.614,
+    "t1": 337.979,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 1300.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_8",
+    "t0": 338.199,
+    "t1": 344.747,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 1360.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_9",
+    "t0": 344.967,
+    "t1": 354.348,
+    "src": "IaLRuOL1hyI.mp4",
+    "ss": 30.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.10 試合後会見"
+  },
+  {
+    "beat": "c2_10",
+    "t0": 354.568,
+    "t1": 370.704,
+    "src": "IaLRuOL1hyI.mp4",
+    "ss": 90.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.10 試合後会見"
+  },
+  {
+    "beat": "c2_11",
+    "t0": 370.924,
+    "t1": 381.148,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 1305.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_12",
+    "t0": 381.368,
+    "t1": 393.774,
+    "src": "TQ_LOVexU5E.mp4",
+    "ss": 330.0,
+    "kind": "cropb",
+    "label": "朝倉海 CONFESSIONS 舞台裏 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_13",
+    "t0": 393.994,
+    "t1": 407.841,
+    "src": "TQ_LOVexU5E.mp4",
+    "ss": 346.0,
+    "kind": "cropb",
+    "label": "朝倉海 CONFESSIONS 舞台裏 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_14#0",
+    "t0": 408.061,
+    "t1": 411.915,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 1371.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_14#1",
+    "t0": 412.015,
+    "t1": 417.123,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 1150.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_14#2",
+    "t0": 417.223,
+    "t1": 422.193,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 600.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_14#3",
+    "t0": 422.293,
+    "t1": 426.286,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 1332.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c2_15",
+    "t0": 426.506,
+    "t1": 439.006,
+    "src": "g1kj3mXTiLk.mp4",
+    "ss": 572.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.20 前日公開計量"
+  },
+  {
+    "beat": "c2_16",
+    "t0": 439.226,
+    "t1": 451.122,
+    "src": "rhQeXZ39Gw0.mp4",
+    "ss": 505.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 朝倉海 vs ケイプ 2 (RIZIN.20)"
+  },
+  {
+    "beat": "ko_kape",
+    "t0": 451.122,
+    "t1": 464.122,
+    "src": "rhQeXZ39Gw0.mp4",
+    "ss": 517.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 朝倉海 vs ケイプ 2 (RIZIN.20)"
+  },
+  {
+    "beat": "c2_17#0",
+    "t0": 464.342,
+    "t1": 469.311,
+    "src": "rhQeXZ39Gw0.mp4",
+    "ss": 655.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 朝倉海 vs ケイプ 2 (RIZIN.20)"
+  },
+  {
+    "beat": "c2_17#1",
+    "t0": 469.411,
+    "t1": 472.754,
+    "src": "rhQeXZ39Gw0.mp4",
+    "ss": 575.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 朝倉海 vs ケイプ 2 (RIZIN.20)"
+  },
+  {
+    "beat": "c2_17#2",
+    "t0": 472.854,
+    "t1": 478.566,
+    "src": "res_rizin20_kape.png",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "RIZIN公式サイト 試合結果"
+  },
+  {
+    "beat": "c3_1#0",
+    "t0": 479.016,
+    "t1": 487.004,
+    "src": "hnczL1Qunew.mp4",
+    "ss": 0.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #74"
+  },
+  {
+    "beat": "c3_1#1",
+    "t0": 487.104,
+    "t1": 496.113,
+    "src": "AEZosftj1GE.mp4",
+    "ss": 0.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
+  },
+  {
+    "beat": "c3_2#0",
+    "t0": 496.333,
+    "t1": 502.278,
+    "src": "Vp8U4gjEPOE.mp4",
+    "ss": 30.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.28 試合前インタビュー"
+  },
+  {
+    "beat": "c3_2#1",
+    "t0": 502.378,
+    "t1": 511.573,
+    "src": "b9I20IcVcRc.mp4",
+    "ss": 1556.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 朝倉未来 vs 斎藤裕 (RIZIN.25)"
+  },
+  {
+    "beat": "c3_3#0",
+    "t0": 511.793,
+    "t1": 514.951,
+    "src": "b9I20IcVcRc.mp4",
+    "ss": 1588.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 朝倉未来 vs 斎藤裕 (RIZIN.25)"
+  },
+  {
+    "beat": "c3_3#1",
+    "t0": 515.051,
+    "t1": 522.342,
+    "src": "art_gonkaku_saito_mikuru.png",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "ゴング格闘技"
+  },
+  {
+    "beat": "c3_3#2",
+    "t0": 522.442,
+    "t1": 529.222,
+    "src": "b9I20IcVcRc.mp4",
+    "ss": 205.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 朝倉未来 vs 斎藤裕 (RIZIN.25)"
+  },
+  {
+    "beat": "c3_4#0",
+    "t0": 529.442,
+    "t1": 537.29,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 1000.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c3_4#1",
+    "t0": 537.39,
+    "t1": 542.127,
+    "src": "b9I20IcVcRc.mp4",
+    "ss": 1650.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 朝倉未来 vs 斎藤裕 (RIZIN.25)"
+  },
+  {
+    "beat": "c3_4#2",
+    "t0": 542.227,
+    "t1": 547.382,
+    "src": "b9I20IcVcRc.mp4",
+    "ss": 1680.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 朝倉未来 vs 斎藤裕 (RIZIN.25)"
+  },
+  {
+    "beat": "c3_5#0",
+    "t0": 547.602,
+    "t1": 550.992,
+    "src": "hnczL1Qunew.mp4",
+    "ss": 1050.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #74"
+  },
+  {
+    "beat": "c3_5#1",
+    "t0": 551.092,
+    "t1": 556.433,
+    "src": "zpsU4RaOjzI.mp4",
+    "ss": 60.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.28 試合前インタビュー"
+  },
+  {
+    "beat": "c3_5#2",
+    "t0": 556.533,
+    "t1": 563.545,
+    "src": "AEZosftj1GE.mp4",
+    "ss": 88.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
+  },
+  {
+    "beat": "c3_6#0",
+    "t0": 563.765,
+    "t1": 569.292,
+    "src": "AEZosftj1GE.mp4",
+    "ss": 112.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
+  },
+  {
+    "beat": "c3_6#1",
+    "t0": 569.392,
+    "t1": 573.989,
+    "src": "AEZosftj1GE.mp4",
+    "ss": 322.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
+  },
+  {
+    "beat": "c3_6#2",
+    "t0": 574.089,
+    "t1": 578.547,
+    "src": "AEZosftj1GE.mp4",
+    "ss": 598.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
+  },
+  {
+    "beat": "c3_7",
+    "t0": 578.767,
+    "t1": 588.945,
+    "src": "AEZosftj1GE.mp4",
+    "ss": 702.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
+  },
+  {
+    "beat": "c3_8",
+    "t0": 589.165,
+    "t1": 598.831,
+    "src": "AEZosftj1GE.mp4",
+    "ss": 995.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
+  },
+  {
+    "beat": "c3_9",
+    "t0": 599.051,
+    "t1": 612.851,
+    "src": "AEZosftj1GE.mp4",
+    "ss": 1436.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
+  },
+  {
+    "beat": "c3_10",
+    "t0": 613.071,
+    "t1": 620.92,
+    "src": "AEZosftj1GE.mp4",
+    "ss": 1552.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
+  },
+  {
+    "beat": "c3_11#0",
+    "t0": 621.14,
+    "t1": 627.13,
+    "src": "dtdu1vAGanA.mp4",
+    "ss": 20.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.28 試合後インタビュー"
+  },
+  {
+    "beat": "c3_11#1",
+    "t0": 627.23,
+    "t1": 633.825,
+    "src": "AEZosftj1GE.mp4",
+    "ss": 678.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
+  },
+  {
+    "beat": "c3_11#2",
+    "t0": 633.925,
+    "t1": 638.383,
+    "src": "dtdu1vAGanA.mp4",
+    "ss": 200.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.28 試合後インタビュー"
+  },
+  {
+    "beat": "c3_12#0",
+    "t0": 638.603,
+    "t1": 647.287,
+    "src": "AEZosftj1GE.mp4",
+    "ss": 1560.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
+  },
+  {
+    "beat": "c3_12#1",
+    "t0": 647.387,
+    "t1": 653.517,
+    "src": "dtdu1vAGanA.mp4",
+    "ss": 150.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.28 試合後インタビュー"
+  },
+  {
+    "beat": "c3_13",
+    "t0": 653.737,
+    "t1": 666.051,
+    "src": "AEZosftj1GE.mp4",
+    "ss": 1009.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
+  },
+  {
+    "beat": "c3_14",
+    "t0": 666.271,
+    "t1": 674.637,
+    "src": "AEZosftj1GE.mp4",
+    "ss": 760.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
+  },
+  {
+    "beat": "c3_15#0",
+    "t0": 674.857,
+    "t1": 681.127,
+    "src": "hnczL1Qunew.mp4",
+    "ss": 1140.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #74"
+  },
+  {
+    "beat": "c3_15#1",
+    "t0": 681.227,
+    "t1": 685.313,
+    "src": "hnczL1Qunew.mp4",
+    "ss": 1200.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #74"
+  },
+  {
+    "beat": "c3_15#2",
+    "t0": 685.413,
+    "t1": 690.94,
+    "src": "hnczL1Qunew.mp4",
+    "ss": 1288.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #74"
+  },
+  {
+    "beat": "c3_16#0",
+    "t0": 691.16,
+    "t1": 693.946,
+    "src": "hnczL1Qunew.mp4",
+    "ss": 1322.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #74"
+  },
+  {
+    "beat": "c3_16#1",
+    "t0": 694.046,
+    "t1": 702.73,
+    "src": "niq1AKbWOCk.mp4",
+    "ss": 325.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 朝倉未来 vs ケラモフ (超RIZIN.2)"
+  },
+  {
+    "beat": "c3_16#2",
+    "t0": 702.83,
+    "t1": 707.01,
+    "src": "hnczL1Qunew.mp4",
+    "ss": 1330.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #74"
+  },
+  {
+    "beat": "c4_1#0",
+    "t0": 707.46,
+    "t1": 716.423,
+    "src": "IKPejmP-Zcc.mp4",
+    "ss": 16.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.4 Trailer"
+  },
+  {
+    "beat": "c4_1#1",
+    "t0": 716.523,
+    "t1": 723.442,
+    "src": "ul8GuART7CE.mp4",
+    "ss": 3096.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.4 公開計量"
+  },
+  {
+    "beat": "c4_2#0",
+    "t0": 723.662,
+    "t1": 733.74,
+    "src": "IKPejmP-Zcc.mp4",
+    "ss": 95.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.4 Trailer"
+  },
+  {
+    "beat": "c4_2#1",
+    "t0": 733.84,
+    "t1": 740.249,
+    "src": "wOirmNoNMHc.mp4",
+    "ss": 585.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 朝倉未来 vs クレベル (RIZIN.28)"
+  },
+  {
+    "beat": "ko_kleber1",
+    "t0": 740.249,
+    "t1": 752.249,
+    "src": "wOirmNoNMHc.mp4",
+    "ss": 594.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 朝倉未来 vs クレベル (RIZIN.28)"
+  },
+  {
+    "beat": "c4_3",
+    "t0": 752.469,
+    "t1": 764.504,
+    "src": "tLU5OwU6VqU.mp4",
+    "ss": 700.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.4 試合前インタビュー"
+  },
+  {
+    "beat": "c4_4#0",
+    "t0": 764.724,
+    "t1": 772.34,
+    "src": "tLU5OwU6VqU.mp4",
+    "ss": 200.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.4 試合前インタビュー"
+  },
+  {
+    "beat": "c4_4#1",
+    "t0": 772.44,
+    "t1": 774.994,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 700.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_4#2",
+    "t0": 775.094,
+    "t1": 780.945,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 720.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_4#3",
+    "t0": 781.045,
+    "t1": 783.739,
+    "src": "Qgjqy8rtOBU.mp4",
+    "ss": 300.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.4 試合後インタビュー"
+  },
+  {
+    "beat": "c4_5",
+    "t0": 783.959,
+    "t1": 797.023,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 302.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_6",
+    "t0": 797.243,
+    "t1": 810.996,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 660.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_7",
+    "t0": 811.216,
+    "t1": 824.459,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 1064.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_8",
+    "t0": 824.679,
+    "t1": 834.385,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 1258.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_9#0",
+    "t0": 834.605,
+    "t1": 843.01,
+    "src": "art_gonkaku_kleber_scores2.png",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "ゴング格闘技"
+  },
+  {
+    "beat": "c4_9#1",
+    "t0": 843.11,
+    "t1": 845.154,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 1234.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_9#2",
+    "t0": 845.254,
+    "t1": 852.87,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 1246.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_10",
+    "t0": 853.09,
+    "t1": 866.611,
+    "src": "art_gonkaku_kleber_scores.png",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "ゴング格闘技"
+  },
+  {
+    "beat": "c4_11",
+    "t0": 866.831,
+    "t1": 882.674,
+    "src": "Qgjqy8rtOBU.mp4",
+    "ss": 470.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.4 試合後インタビュー"
+  },
+  {
+    "beat": "c4_12",
+    "t0": 882.894,
+    "t1": 893.489,
+    "src": "Qgjqy8rtOBU.mp4",
+    "ss": 655.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.4 試合後インタビュー"
+  },
+  {
+    "beat": "c4_13",
+    "t0": 893.709,
+    "t1": 907.881,
+    "src": "Qgjqy8rtOBU.mp4",
+    "ss": 760.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.4 試合後インタビュー"
+  },
+  {
+    "beat": "c4_14#0",
+    "t0": 908.101,
+    "t1": 912.745,
+    "src": "Qgjqy8rtOBU.mp4",
+    "ss": 1490.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.4 試合後インタビュー"
+  },
+  {
+    "beat": "c4_14#1",
+    "t0": 912.845,
+    "t1": 919.346,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 900.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_14#2",
+    "t0": 919.446,
+    "t1": 925.483,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 915.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_15",
+    "t0": 925.703,
+    "t1": 938.721,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 486.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_16",
+    "t0": 938.941,
+    "t1": 959.628,
+    "src": "X5pJ04YLJVE.mp4",
+    "ss": 345.0,
+    "kind": "plain",
+    "label": "RIZIN公式 榊原CEO総括 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_17",
+    "t0": 959.848,
+    "t1": 977.238,
+    "src": "X5pJ04YLJVE.mp4",
+    "ss": 1486.0,
+    "kind": "plain",
+    "label": "RIZIN公式 榊原CEO総括 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_18#0",
+    "t0": 977.458,
+    "t1": 980.662,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 330.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_18#1",
+    "t0": 980.762,
+    "t1": 987.078,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 852.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_18#2",
+    "t0": 987.178,
+    "t1": 993.308,
+    "src": "X5pJ04YLJVE.mp4",
+    "ss": 1560.0,
+    "kind": "plain",
+    "label": "RIZIN公式 榊原CEO総括 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_18#3",
+    "t0": 993.408,
+    "t1": 996.009,
+    "src": "X5pJ04YLJVE.mp4",
+    "ss": 1590.0,
+    "kind": "plain",
+    "label": "RIZIN公式 榊原CEO総括 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_19#0",
+    "t0": 996.229,
+    "t1": 1000.269,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 200.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c4_19#1",
+    "t0": 1000.369,
+    "t1": 1004.92,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 1280.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "c4_19#2",
+    "t0": 1005.02,
+    "t1": 1012.451,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 0.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_1#0",
+    "t0": 1012.901,
+    "t1": 1020.656,
+    "src": "art_boutreview_dualmust.png",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "BOUTREVIEW"
+  },
+  {
+    "beat": "c5_1#1",
+    "t0": 1020.756,
+    "t1": 1030.09,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 28.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_2",
+    "t0": 1030.31,
+    "t1": 1049.093,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 48.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_3#0",
+    "t0": 1049.313,
+    "t1": 1055.908,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 185.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_3#1",
+    "t0": 1056.008,
+    "t1": 1064.321,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 480.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_4",
+    "t0": 1064.541,
+    "t1": 1073.457,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 210.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_5",
+    "t0": 1073.677,
+    "t1": 1083.994,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 495.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_6#0",
+    "t0": 1084.214,
+    "t1": 1090.994,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 570.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_6#1",
+    "t0": 1091.094,
+    "t1": 1095.46,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 630.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_6#2",
+    "t0": 1095.56,
+    "t1": 1101.272,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 660.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_6#3",
+    "t0": 1101.372,
+    "t1": 1104.669,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 690.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_7#0",
+    "t0": 1104.889,
+    "t1": 1110.88,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 720.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_7#1",
+    "t0": 1110.98,
+    "t1": 1114.323,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 1230.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_7#2",
+    "t0": 1114.423,
+    "t1": 1117.999,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 1236.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_7#3",
+    "t0": 1118.099,
+    "t1": 1125.53,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 1240.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_8",
+    "t0": 1125.75,
+    "t1": 1131.09,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 1100.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_9",
+    "t0": 1131.31,
+    "t1": 1145.249,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 240.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_10#0",
+    "t0": 1145.469,
+    "t1": 1152.9,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 270.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_10#1",
+    "t0": 1153.0,
+    "t1": 1155.879,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 300.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_10#2",
+    "t0": 1155.979,
+    "t1": 1162.48,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 303.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_11#0",
+    "t0": 1162.7,
+    "t1": 1166.416,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 830.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_11#1",
+    "t0": 1166.516,
+    "t1": 1170.417,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 850.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_11#2",
+    "t0": 1170.517,
+    "t1": 1177.39,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 854.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_11#3",
+    "t0": 1177.49,
+    "t1": 1184.363,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 861.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_12",
+    "t0": 1184.583,
+    "t1": 1196.757,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 890.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_13",
+    "t0": 1196.977,
+    "t1": 1208.687,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 975.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c5_14",
+    "t0": 1208.907,
+    "t1": 1215.455,
+    "src": "_clmmq_jst4.mp4",
+    "ss": 2220.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 公開計量"
+  },
+  {
+    "beat": "c6_1#0",
+    "t0": 1215.905,
+    "t1": 1226.168,
+    "src": "_clmmq_jst4.mp4",
+    "ss": 2238.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 公開計量"
+  },
+  {
+    "beat": "c6_1#1",
+    "t0": 1226.268,
+    "t1": 1233.095,
+    "src": "n-HDGJox3fI.mp4",
+    "ss": 20.0,
+    "kind": "bcast",
+    "label": "RIZIN公式【速報】ダウトベック vs 平本蓮 (超RIZIN.5)"
+  },
+  {
+    "beat": "c6_2",
+    "t0": 1233.315,
+    "t1": 1246.511,
+    "src": "xJ88QWWf4HQ.mp4",
+    "ss": 296.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 朝倉未来 vs 平本蓮 (超RIZIN.3)"
+  },
+  {
+    "beat": "c6_3#0",
+    "t0": 1246.731,
+    "t1": 1252.397,
+    "src": "_clmmq_jst4.mp4",
+    "ss": 2190.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 公開計量"
+  },
+  {
+    "beat": "c6_3#1",
+    "t0": 1252.497,
+    "t1": 1260.577,
+    "src": "sKLKZqgPdAw.mp4",
+    "ss": 1000.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 試合後インタビュー"
+  },
+  {
+    "beat": "c6_3#2",
+    "t0": 1260.677,
+    "t1": 1264.067,
+    "src": "_clmmq_jst4.mp4",
+    "ss": 2212.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 公開計量"
+  },
+  {
+    "beat": "c6_4#0",
+    "t0": 1264.287,
+    "t1": 1271.579,
+    "src": "n-HDGJox3fI.mp4",
+    "ss": 263.0,
+    "kind": "bcast",
+    "label": "RIZIN公式【速報】ダウトベック vs 平本蓮 (超RIZIN.5)"
+  },
+  {
+    "beat": "c6_4#1",
+    "t0": 1271.679,
+    "t1": 1279.109,
+    "src": "n-HDGJox3fI.mp4",
+    "ss": 274.0,
+    "kind": "bcast",
+    "label": "RIZIN公式【速報】ダウトベック vs 平本蓮 (超RIZIN.5)"
+  },
+  {
+    "beat": "c6_5",
+    "t0": 1279.329,
+    "t1": 1287.177,
+    "src": "4NXKp3q1bu4.mp4",
+    "ss": 1165.0,
+    "kind": "plain",
+    "label": "RIZIN公式【勝者と敗者】(超RIZIN.5)"
+  },
+  {
+    "beat": "c6_6",
+    "t0": 1287.397,
+    "t1": 1299.897,
+    "src": "IShJJtI2LhU.mp4",
+    "ss": 6.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 第6試合ハイライト"
+  },
+  {
+    "beat": "c6_7",
+    "t0": 1300.117,
+    "t1": 1311.502,
+    "src": "IShJJtI2LhU.mp4",
+    "ss": 18.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 第6試合ハイライト"
+  },
+  {
+    "beat": "c6_8",
+    "t0": 1311.722,
+    "t1": 1323.107,
+    "src": "sKLKZqgPdAw.mp4",
+    "ss": 396.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 試合後インタビュー"
+  },
+  {
+    "beat": "c6_9",
+    "t0": 1323.327,
+    "t1": 1335.076,
+    "src": "res_rizin5_hiramoto.png",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "RIZIN公式サイト 試合結果"
+  },
+  {
+    "beat": "c6_10#0",
+    "t0": 1335.296,
+    "t1": 1340.729,
+    "src": "sKLKZqgPdAw.mp4",
+    "ss": 20.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 試合後インタビュー"
+  },
+  {
+    "beat": "c6_10#1",
+    "t0": 1340.829,
+    "t1": 1347.935,
+    "src": "art_encount_hiramoto.png",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "ENCOUNT (Yahoo!ニュース)"
+  },
+  {
+    "beat": "c6_10#2",
+    "t0": 1348.035,
+    "t1": 1351.61,
+    "src": "4NXKp3q1bu4.mp4",
+    "ss": 1333.0,
+    "kind": "plain",
+    "label": "RIZIN公式【勝者と敗者】(超RIZIN.5)"
+  },
+  {
+    "beat": "c6_11",
+    "t0": 1351.83,
+    "t1": 1367.913,
+    "src": "sKLKZqgPdAw.mp4",
+    "ss": 930.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 試合後インタビュー"
+  },
+  {
+    "beat": "c6_12",
+    "t0": 1368.133,
+    "t1": 1381.608,
+    "src": "sKLKZqgPdAw.mp4",
+    "ss": 960.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 試合後インタビュー"
+  },
+  {
+    "beat": "c6_13",
+    "t0": 1381.828,
+    "t1": 1399.21,
+    "src": "sKLKZqgPdAw.mp4",
+    "ss": 420.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 試合後インタビュー"
+  },
+  {
+    "beat": "c6_14",
+    "t0": 1399.43,
+    "t1": 1418.074,
+    "src": "s2e_urKR_m4.mp4",
+    "ss": 568.0,
+    "kind": "plain",
+    "label": "RIZIN公式 榊原CEO総括 (超RIZIN.5)"
+  },
+  {
+    "beat": "c6_15",
+    "t0": 1418.294,
+    "t1": 1430.794,
+    "src": "art_nikkan_sakakibara.png",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "日刊スポーツ (Yahoo!ニュース)"
+  },
+  {
+    "beat": "c6_16",
+    "t0": 1431.014,
+    "t1": 1451.647,
+    "src": "s2e_urKR_m4.mp4",
+    "ss": 632.0,
+    "kind": "plain",
+    "label": "RIZIN公式 榊原CEO総括 (超RIZIN.5)"
+  },
+  {
+    "beat": "c6_17",
+    "t0": 1451.867,
+    "t1": 1475.898,
+    "src": "s2e_urKR_m4.mp4",
+    "ss": 665.0,
+    "kind": "plain",
+    "label": "RIZIN公式 榊原CEO総括 (超RIZIN.5)"
+  },
+  {
+    "beat": "c6_18#0",
+    "t0": 1476.118,
+    "t1": 1481.226,
+    "src": "n-HDGJox3fI.mp4",
+    "ss": 300.0,
+    "kind": "bcast",
+    "label": "RIZIN公式【速報】ダウトベック vs 平本蓮 (超RIZIN.5)"
+  },
+  {
+    "beat": "c6_18#1",
+    "t0": 1481.326,
+    "t1": 1486.713,
+    "src": "IShJJtI2LhU.mp4",
+    "ss": 0.0,
+    "kind": "vert",
+    "label": "RIZIN公式 超RIZIN.5 第6試合ハイライト"
+  },
+  {
+    "beat": "c6_18#2",
+    "t0": 1486.813,
+    "t1": 1491.179,
+    "src": "n-HDGJox3fI.mp4",
+    "ss": 330.0,
+    "kind": "bcast",
+    "label": "RIZIN公式【速報】ダウトベック vs 平本蓮 (超RIZIN.5)"
+  },
+  {
+    "beat": "c6_18#3",
+    "t0": 1491.279,
+    "t1": 1494.855,
+    "src": "sKLKZqgPdAw.mp4",
+    "ss": 600.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 試合後インタビュー"
+  },
+  {
+    "beat": "c7_1",
+    "t0": 1495.305,
+    "t1": 1508.872,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 1380.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c7_2#0",
+    "t0": 1509.092,
+    "t1": 1515.872,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 590.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c7_2#1",
+    "t0": 1515.972,
+    "t1": 1520.106,
+    "src": "hnczL1Qunew.mp4",
+    "ss": 1210.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #74"
+  },
+  {
+    "beat": "c7_2#2",
+    "t0": 1520.206,
+    "t1": 1523.271,
+    "src": "JOV6bK76FqU.mp4",
+    "ss": 1092.0,
+    "kind": "brd",
+    "label": "RIZIN公式 Full Fight クレベル vs 朝倉未来 2 (超RIZIN.4)"
+  },
+  {
+    "beat": "c7_3#0",
+    "t0": 1523.491,
+    "t1": 1529.946,
+    "src": "n-HDGJox3fI.mp4",
+    "ss": 322.0,
+    "kind": "bcast",
+    "label": "RIZIN公式【速報】ダウトベック vs 平本蓮 (超RIZIN.5)"
+  },
+  {
+    "beat": "c7_3#1",
+    "t0": 1530.046,
+    "t1": 1532.321,
+    "src": "IKPejmP-Zcc.mp4",
+    "ss": 130.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.4 Trailer"
+  },
+  {
+    "beat": "c7_3#2",
+    "t0": 1532.421,
+    "t1": 1538.133,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 1770.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c7_4#0",
+    "t0": 1538.353,
+    "t1": 1546.573,
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 1080.0,
+    "kind": "plain",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+  },
+  {
+    "beat": "c7_4#1",
+    "t0": 1546.673,
+    "t1": 1552.292,
+    "src": "n-HDGJox3fI.mp4",
+    "ss": 345.0,
+    "kind": "bcast",
+    "label": "RIZIN公式【速報】ダウトベック vs 平本蓮 (超RIZIN.5)"
+  },
+  {
+    "beat": "c7_4#2",
+    "t0": 1552.392,
+    "t1": 1560.566,
+    "src": "s2e_urKR_m4.mp4",
+    "ss": 1206.0,
+    "kind": "plain",
+    "label": "RIZIN公式 榊原CEO総括 (超RIZIN.5)"
+  },
+  {
+    "beat": "c7_5#0",
+    "t0": 1560.786,
+    "t1": 1568.17,
+    "src": "OT-7jvpoRzY.mp4",
+    "ss": 1381.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight ケイプ vs 朝倉海 (RIZIN.10)"
+  },
+  {
+    "beat": "c7_5#1",
+    "t0": 1568.27,
+    "t1": 1576.211,
+    "src": "AEZosftj1GE.mp4",
+    "ss": 1591.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
+  },
+  {
+    "beat": "c7_5#2",
+    "t0": 1576.311,
+    "t1": 1578.587,
+    "src": "_clmmq_jst4.mp4",
+    "ss": 2262.0,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.5 公開計量"
+  }
+]
