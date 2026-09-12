@@ -76,8 +76,8 @@
     "t0": 58.662,
     "t1": 72.136,
     "src": "YwbYDY6LNE0.mp4",
-    "ss": 95.0,
-    "kind": "plain",
+    "ss": 102.0,
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -95,7 +95,7 @@
     "t1": 85.113,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 183.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -122,7 +122,7 @@
     "t1": 108.528,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 150.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -131,7 +131,7 @@
     "t1": 122.501,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 140.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -140,7 +140,7 @@
     "t1": 131.266,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 160.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -230,7 +230,7 @@
     "t1": 222.365,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 840.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -239,7 +239,7 @@
     "t1": 224.555,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 1065.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -309,10 +309,10 @@
     "beat": "c2_4",
     "t0": 284.62,
     "t1": 292.747,
-    "src": "TQ_LOVexU5E.mp4",
-    "ss": 62.0,
-    "kind": "cropb",
-    "label": "朝倉海 CONFESSIONS 舞台裏 (RIZIN.10)"
+    "src": "gHhVcRaURiE.mp4",
+    "ss": 60.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.10 試合後会見"
   },
   {
     "beat": "c2_5#0",
@@ -417,19 +417,19 @@
     "beat": "c2_12",
     "t0": 381.368,
     "t1": 393.774,
-    "src": "TQ_LOVexU5E.mp4",
-    "ss": 330.0,
-    "kind": "cropb",
-    "label": "朝倉海 CONFESSIONS 舞台裏 (RIZIN.10)"
+    "src": "gHhVcRaURiE.mp4",
+    "ss": 140.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.10 試合後会見"
   },
   {
     "beat": "c2_13",
     "t0": 393.994,
     "t1": 407.841,
-    "src": "TQ_LOVexU5E.mp4",
-    "ss": 346.0,
-    "kind": "cropb",
-    "label": "朝倉海 CONFESSIONS 舞台裏 (RIZIN.10)"
+    "src": "gHhVcRaURiE.mp4",
+    "ss": 200.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.10 試合後会見"
   },
   {
     "beat": "c2_14#0",
@@ -525,17 +525,17 @@
     "beat": "c3_1#0",
     "t0": 479.016,
     "t1": 487.004,
-    "src": "hnczL1Qunew.mp4",
-    "ss": 0.0,
+    "src": "AEZosftj1GE.mp4",
+    "ss": 12.0,
     "kind": "plain",
-    "label": "RIZIN公式 RIZIN CONFESSIONS #74"
+    "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
   },
   {
     "beat": "c3_1#1",
     "t0": 487.104,
     "t1": 496.113,
     "src": "AEZosftj1GE.mp4",
-    "ss": 0.0,
+    "ss": 4.0,
     "kind": "plain",
     "label": "RIZIN公式 Full Fight 斎藤裕 vs ケラモフ (RIZIN.28)"
   },
@@ -590,7 +590,7 @@
     "t1": 537.29,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 1000.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -813,10 +813,10 @@
     "beat": "c3_16#2",
     "t0": 702.83,
     "t1": 707.01,
-    "src": "hnczL1Qunew.mp4",
-    "ss": 1330.0,
+    "src": "niq1AKbWOCk.mp4",
+    "ss": 336.5,
     "kind": "plain",
-    "label": "RIZIN公式 RIZIN CONFESSIONS #74"
+    "label": "RIZIN公式 Full Fight 朝倉未来 vs ケラモフ (超RIZIN.2)"
   },
   {
     "beat": "c4_1#0",
@@ -848,7 +848,7 @@
   {
     "beat": "c4_2#1",
     "t0": 733.84,
-    "t1": 740.249,
+    "t1": 740.248,
     "src": "wOirmNoNMHc.mp4",
     "ss": 585.0,
     "kind": "plain",
@@ -856,8 +856,8 @@
   },
   {
     "beat": "ko_kleber1",
-    "t0": 740.249,
-    "t1": 752.249,
+    "t0": 740.248,
+    "t1": 752.248,
     "src": "wOirmNoNMHc.mp4",
     "ss": 594.0,
     "kind": "plain",
@@ -865,7 +865,7 @@
   },
   {
     "beat": "c4_3",
-    "t0": 752.469,
+    "t0": 752.468,
     "t1": 764.504,
     "src": "tLU5OwU6VqU.mp4",
     "ss": 700.0,
@@ -929,7 +929,7 @@
   {
     "beat": "c4_7",
     "t0": 811.216,
-    "t1": 824.459,
+    "t1": 824.458,
     "src": "JOV6bK76FqU.mp4",
     "ss": 1064.0,
     "kind": "brd",
@@ -937,8 +937,8 @@
   },
   {
     "beat": "c4_8",
-    "t0": 824.679,
-    "t1": 834.385,
+    "t0": 824.678,
+    "t1": 834.384,
     "src": "JOV6bK76FqU.mp4",
     "ss": 1258.0,
     "kind": "brd",
@@ -946,7 +946,7 @@
   },
   {
     "beat": "c4_9#0",
-    "t0": 834.605,
+    "t0": 834.604,
     "t1": 843.01,
     "src": "art_gonkaku_kleber_scores2.png",
     "ss": 0,
@@ -956,7 +956,7 @@
   {
     "beat": "c4_9#1",
     "t0": 843.11,
-    "t1": 845.154,
+    "t1": 845.153,
     "src": "JOV6bK76FqU.mp4",
     "ss": 1234.0,
     "kind": "brd",
@@ -964,7 +964,7 @@
   },
   {
     "beat": "c4_9#2",
-    "t0": 845.254,
+    "t0": 845.253,
     "t1": 852.87,
     "src": "JOV6bK76FqU.mp4",
     "ss": 1246.0,
@@ -1118,29 +1118,29 @@
   {
     "beat": "c4_19#2",
     "t0": 1005.02,
-    "t1": 1012.451,
+    "t1": 1012.45,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 0.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
     "beat": "c5_1#0",
-    "t0": 1012.901,
+    "t0": 1012.9,
     "t1": 1020.656,
-    "src": "art_boutreview_dualmust.png",
-    "ss": 0,
-    "kind": "stillw",
-    "label": "BOUTREVIEW"
+    "src": "YwbYDY6LNE0.mp4",
+    "ss": 41.5,
+    "kind": "cropb",
+    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
     "beat": "c5_1#1",
     "t0": 1020.756,
     "t1": 1030.09,
-    "src": "YwbYDY6LNE0.mp4",
-    "ss": 28.0,
-    "kind": "plain",
-    "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
+    "src": "art_boutreview_dualmust_col.png",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "BOUTREVIEW"
   },
   {
     "beat": "c5_2",
@@ -1148,7 +1148,7 @@
     "t1": 1049.093,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 48.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -1157,7 +1157,7 @@
     "t1": 1055.908,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 185.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -1192,53 +1192,53 @@
     "t0": 1084.214,
     "t1": 1090.994,
     "src": "YwbYDY6LNE0.mp4",
-    "ss": 570.0,
-    "kind": "plain",
+    "ss": 721.0,
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
     "beat": "c5_6#1",
     "t0": 1091.094,
-    "t1": 1095.46,
+    "t1": 1095.459,
     "src": "YwbYDY6LNE0.mp4",
-    "ss": 630.0,
-    "kind": "plain",
+    "ss": 728.0,
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
     "beat": "c5_6#2",
-    "t0": 1095.56,
-    "t1": 1101.272,
+    "t0": 1095.559,
+    "t1": 1101.271,
     "src": "YwbYDY6LNE0.mp4",
-    "ss": 660.0,
-    "kind": "plain",
+    "ss": 751.0,
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
     "beat": "c5_6#3",
-    "t0": 1101.372,
+    "t0": 1101.371,
     "t1": 1104.669,
     "src": "YwbYDY6LNE0.mp4",
-    "ss": 690.0,
-    "kind": "plain",
+    "ss": 757.0,
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
     "beat": "c5_7#0",
     "t0": 1104.889,
-    "t1": 1110.88,
+    "t1": 1110.879,
     "src": "YwbYDY6LNE0.mp4",
-    "ss": 720.0,
-    "kind": "plain",
+    "ss": 732.5,
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
     "beat": "c5_7#1",
-    "t0": 1110.98,
+    "t0": 1110.979,
     "t1": 1114.323,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 1230.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -1247,25 +1247,25 @@
     "t1": 1117.999,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 1236.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
     "beat": "c5_7#3",
     "t0": 1118.099,
-    "t1": 1125.53,
+    "t1": 1125.529,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 1240.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
     "beat": "c5_8",
-    "t0": 1125.75,
+    "t0": 1125.749,
     "t1": 1131.09,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 1100.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -1274,25 +1274,25 @@
     "t1": 1145.249,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 240.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
     "beat": "c5_10#0",
     "t0": 1145.469,
-    "t1": 1152.9,
+    "t1": 1152.899,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 270.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
     "beat": "c5_10#1",
-    "t0": 1153.0,
+    "t0": 1152.999,
     "t1": 1155.879,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 300.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -1301,7 +1301,7 @@
     "t1": 1162.48,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 303.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -1310,25 +1310,25 @@
     "t1": 1166.416,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 830.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
     "beat": "c5_11#1",
     "t0": 1166.516,
-    "t1": 1170.417,
+    "t1": 1170.416,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 850.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
     "beat": "c5_11#2",
-    "t0": 1170.517,
+    "t0": 1170.516,
     "t1": 1177.39,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 854.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -1337,7 +1337,7 @@
     "t1": 1184.363,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 861.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -1346,7 +1346,7 @@
     "t1": 1196.757,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 890.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -1355,7 +1355,7 @@
     "t1": 1208.687,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 975.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -1424,7 +1424,7 @@
   {
     "beat": "c6_4#0",
     "t0": 1264.287,
-    "t1": 1271.579,
+    "t1": 1271.578,
     "src": "n-HDGJox3fI.mp4",
     "ss": 263.0,
     "kind": "bcast",
@@ -1432,7 +1432,7 @@
   },
   {
     "beat": "c6_4#1",
-    "t0": 1271.679,
+    "t0": 1271.678,
     "t1": 1279.109,
     "src": "n-HDGJox3fI.mp4",
     "ss": 274.0,
@@ -1460,7 +1460,7 @@
   {
     "beat": "c6_7",
     "t0": 1300.117,
-    "t1": 1311.502,
+    "t1": 1311.501,
     "src": "IShJJtI2LhU.mp4",
     "ss": 18.0,
     "kind": "vert",
@@ -1468,8 +1468,8 @@
   },
   {
     "beat": "c6_8",
-    "t0": 1311.722,
-    "t1": 1323.107,
+    "t0": 1311.721,
+    "t1": 1323.106,
     "src": "sKLKZqgPdAw.mp4",
     "ss": 396.0,
     "kind": "plain",
@@ -1477,7 +1477,7 @@
   },
   {
     "beat": "c6_9",
-    "t0": 1323.327,
+    "t0": 1323.326,
     "t1": 1335.076,
     "src": "res_rizin5_hiramoto.png",
     "ss": 0,
@@ -1496,7 +1496,7 @@
   {
     "beat": "c6_10#1",
     "t0": 1340.829,
-    "t1": 1347.935,
+    "t1": 1347.934,
     "src": "art_encount_hiramoto.png",
     "ss": 0,
     "kind": "stillw",
@@ -1504,7 +1504,7 @@
   },
   {
     "beat": "c6_10#2",
-    "t0": 1348.035,
+    "t0": 1348.034,
     "t1": 1351.61,
     "src": "4NXKp3q1bu4.mp4",
     "ss": 1333.0,
@@ -1523,7 +1523,7 @@
   {
     "beat": "c6_12",
     "t0": 1368.133,
-    "t1": 1381.608,
+    "t1": 1381.607,
     "src": "sKLKZqgPdAw.mp4",
     "ss": 960.0,
     "kind": "plain",
@@ -1531,7 +1531,7 @@
   },
   {
     "beat": "c6_13",
-    "t0": 1381.828,
+    "t0": 1381.827,
     "t1": 1399.21,
     "src": "sKLKZqgPdAw.mp4",
     "ss": 420.0,
@@ -1550,7 +1550,7 @@
   {
     "beat": "c6_15",
     "t0": 1418.294,
-    "t1": 1430.794,
+    "t1": 1430.793,
     "src": "art_nikkan_sakakibara.png",
     "ss": 0,
     "kind": "stillw",
@@ -1558,7 +1558,7 @@
   },
   {
     "beat": "c6_16",
-    "t0": 1431.014,
+    "t0": 1431.013,
     "t1": 1451.647,
     "src": "s2e_urKR_m4.mp4",
     "ss": 632.0,
@@ -1604,7 +1604,7 @@
   {
     "beat": "c6_18#3",
     "t0": 1491.279,
-    "t1": 1494.855,
+    "t1": 1494.854,
     "src": "sKLKZqgPdAw.mp4",
     "ss": 600.0,
     "kind": "plain",
@@ -1612,11 +1612,11 @@
   },
   {
     "beat": "c7_1",
-    "t0": 1495.305,
+    "t0": 1495.304,
     "t1": 1508.872,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 1380.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -1631,7 +1631,7 @@
   {
     "beat": "c7_2#1",
     "t0": 1515.972,
-    "t1": 1520.106,
+    "t1": 1520.105,
     "src": "hnczL1Qunew.mp4",
     "ss": 1210.0,
     "kind": "plain",
@@ -1639,8 +1639,8 @@
   },
   {
     "beat": "c7_2#2",
-    "t0": 1520.206,
-    "t1": 1523.271,
+    "t0": 1520.205,
+    "t1": 1523.27,
     "src": "JOV6bK76FqU.mp4",
     "ss": 1092.0,
     "kind": "brd",
@@ -1648,7 +1648,7 @@
   },
   {
     "beat": "c7_3#0",
-    "t0": 1523.491,
+    "t0": 1523.49,
     "t1": 1529.946,
     "src": "n-HDGJox3fI.mp4",
     "ss": 322.0,
@@ -1670,7 +1670,7 @@
     "t1": 1538.133,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 1770.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -1679,7 +1679,7 @@
     "t1": 1546.573,
     "src": "YwbYDY6LNE0.mp4",
     "ss": 1080.0,
-    "kind": "plain",
+    "kind": "cropb",
     "label": "RIZIN公式【新ルール解説】デュアル・マストシステム"
   },
   {
@@ -1721,7 +1721,7 @@
   {
     "beat": "c7_5#2",
     "t0": 1576.311,
-    "t1": 1578.587,
+    "t1": 1578.586,
     "src": "_clmmq_jst4.mp4",
     "ss": 2262.0,
     "kind": "plain",
