@@ -1,0 +1,1544 @@
+<!doctype html>
+<!-- 相本宗輝 完全解説 1920x1080 -->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face{font-family:"Mincho";src:url("assets/fonts/GokubutoMincho.ttf");}
+  @font-face{font-family:"JPHeavy";src:url("assets/fonts/SourceHanSansJP-Heavy.otf");}
+  @font-face{font-family:"JPMed";src:url("assets/fonts/SourceHanSansJP-Medium.otf");}
+  :root{
+    --white:#fff; --yellow:#ffe23a; --red:#ff3a3a; --blue:#36b6ff; --gold:#e8b64c; --ink:#0a0c12;
+    --edge:drop-shadow(4px 0 0 var(--ink)) drop-shadow(-4px 0 0 var(--ink)) drop-shadow(0 4px 0 var(--ink)) drop-shadow(0 -4px 0 var(--ink))
+           drop-shadow(3px 3px 0 var(--ink)) drop-shadow(-3px 3px 0 var(--ink)) drop-shadow(0 8px 16px rgba(0,0,0,.8));
+    --edge-sm:drop-shadow(0 0 2px var(--ink)) drop-shadow(1px 1px 1px var(--ink)) drop-shadow(0 2px 6px rgba(0,0,0,.85));
+    --tsh: 4px 0 0 var(--ink),-4px 0 0 var(--ink),0 4px 0 var(--ink),0 -4px 0 var(--ink),3px 3px 0 var(--ink),-3px 3px 0 var(--ink),3px -3px 0 var(--ink),-3px -3px 0 var(--ink),0 10px 22px rgba(0,0,0,.85);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  #root{position:absolute;inset:0;overflow:hidden;background:#05060a;font-family:"JPMed";}
+  .bgseg{position:absolute;inset:0;opacity:0;overflow:hidden;}
+  .bgseg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:translateZ(0);backface-visibility:hidden;}
+  .veil{position:absolute;inset:0;z-index:300;pointer-events:none;
+        background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,transparent 16%,transparent 58%,rgba(0,0,0,.55) 84%,rgba(0,0,0,.8) 100%);}
+  .wm{position:absolute;z-index:360;left:36px;top:30px;font-family:"JPHeavy";font-size:30px;color:#fff;letter-spacing:.04em;filter:var(--edge-sm);opacity:.9;}
+  .srclab{position:absolute;z-index:340;left:40px;bottom:38px;font-family:"JPMed";font-size:23px;color:#eaeaea;opacity:0;
+        background:rgba(0,0,0,.5);border-left:4px solid var(--yellow);padding:6px 14px;border-radius:3px;filter:var(--edge-sm);}
+  .bigtitle{position:absolute;z-index:330;left:0;right:0;top:27%;text-align:center;}
+  .bigtitle .ttlrow{font-family:"Mincho";font-weight:900;line-height:1.15;text-shadow:var(--tsh);opacity:0;white-space:nowrap;}
+  .bigtitle .ttlrow.w{font-size:84px;color:#fff;} .bigtitle .ttlrow.y{font-size:132px;color:var(--yellow);margin-top:10px;}
+  .chaptag{position:absolute;z-index:320;left:110px;top:34%;opacity:1;}
+  .chaptag .chnum{font-family:"JPHeavy";font-size:38px;color:var(--gold);letter-spacing:.06em;filter:var(--edge);opacity:0;white-space:nowrap;}
+  .chaptag .chttl{font-family:"Mincho";font-weight:900;font-size:80px;color:#fff;text-shadow:var(--tsh);margin-top:10px;white-space:nowrap;opacity:0;}
+  .ctag{position:absolute;z-index:325;right:40px;top:26px;text-align:right;opacity:0;}
+  .ctag .ctd{font-family:"JPMed";font-size:22px;color:var(--gold);letter-spacing:.04em;filter:var(--edge-sm);}
+  .ctag .ctc{font-family:"JPHeavy";font-size:30px;color:#fff;filter:var(--edge-sm);margin-top:2px;}
+  .ccard{position:absolute;z-index:330;right:74px;top:150px;width:820px;background:#fff;color:#0f1419;border-radius:20px;
+        padding:26px 30px;box-shadow:0 18px 50px rgba(0,0,0,.6);opacity:0;border:1px solid #cfd9de;}
+  .ccard .ctext{font-family:"JPMed";line-height:1.5;color:#0f1419;word-break:break-word;}
+  .ccard .cmeta{margin-top:16px;padding-top:12px;border-top:1px solid #eaeef0;font-size:22px;color:#536471;}
+  .ccard .mtag{display:inline-block;font-family:"JPHeavy";font-size:29px;color:#fff;background:#d62828;
+        padding:5px 16px;border-radius:6px;margin-bottom:16px;letter-spacing:.02em;max-width:100%;}
+  .ccard.table .tbl{display:flex;flex-direction:column;gap:8px;}
+  .ccard.table .trow{display:grid;grid-template-columns:200px 250px 1fr;align-items:center;gap:14px;padding:8px 10px;background:#f4f6f8;border-radius:8px;}
+  .ccard.table .tk{font-family:"JPHeavy";font-size:27px;color:#0f1419;}
+  .ccard.table .tv{font-family:"JPHeavy";font-size:30px;color:#d62828;}
+  .ccard.table .tn{font-family:"JPMed";font-size:22px;color:#333;line-height:1.3;}
+  .subt{position:absolute;z-index:350;left:0;right:0;bottom:96px;text-align:center;opacity:0;
+        font-family:"JPHeavy";font-size:45px;line-height:1.34;color:#fff;filter:var(--edge);letter-spacing:.01em;white-space:pre-line;padding:0 90px;}
+</style>
+</head>
+<body>
+  <div id="root" data-composition-id="aimoto" data-start="0" data-duration="1571.48" data-width="1920" data-height="1080">
+    <div class="bgseg" id="bgp0" style="z-index:1;opacity:1"><video id="bgp0-v" src="assets/bgvid_full/bg_part0.mp4" muted playsinline data-layout-allow-overflow data-start="0.00" data-duration="106.20" data-media-start="0.00" data-track-index="10"></video></div>
+    <div class="bgseg" id="bgp1" style="z-index:2;opacity:1"><video id="bgp1-v" src="assets/bgvid_full/bg_part1.mp4" muted playsinline data-layout-allow-overflow data-start="98.20" data-duration="106.20" data-media-start="0.00" data-track-index="11"></video></div>
+    <div class="bgseg" id="bgp2" style="z-index:3;opacity:1"><video id="bgp2-v" src="assets/bgvid_full/bg_part2.mp4" muted playsinline data-layout-allow-overflow data-start="196.40" data-duration="106.20" data-media-start="0.00" data-track-index="12"></video></div>
+    <div class="bgseg" id="bgp3" style="z-index:4;opacity:1"><video id="bgp3-v" src="assets/bgvid_full/bg_part3.mp4" muted playsinline data-layout-allow-overflow data-start="294.61" data-duration="106.20" data-media-start="0.00" data-track-index="13"></video></div>
+    <div class="bgseg" id="bgp4" style="z-index:5;opacity:1"><video id="bgp4-v" src="assets/bgvid_full/bg_part4.mp4" muted playsinline data-layout-allow-overflow data-start="392.81" data-duration="106.20" data-media-start="0.00" data-track-index="14"></video></div>
+    <div class="bgseg" id="bgp5" style="z-index:6;opacity:1"><video id="bgp5-v" src="assets/bgvid_full/bg_part5.mp4" muted playsinline data-layout-allow-overflow data-start="491.01" data-duration="106.20" data-media-start="0.00" data-track-index="15"></video></div>
+    <div class="bgseg" id="bgp6" style="z-index:7;opacity:1"><video id="bgp6-v" src="assets/bgvid_full/bg_part6.mp4" muted playsinline data-layout-allow-overflow data-start="589.21" data-duration="106.20" data-media-start="0.00" data-track-index="16"></video></div>
+    <div class="bgseg" id="bgp7" style="z-index:8;opacity:1"><video id="bgp7-v" src="assets/bgvid_full/bg_part7.mp4" muted playsinline data-layout-allow-overflow data-start="687.41" data-duration="106.20" data-media-start="0.00" data-track-index="17"></video></div>
+    <div class="bgseg" id="bgp8" style="z-index:9;opacity:1"><video id="bgp8-v" src="assets/bgvid_full/bg_part8.mp4" muted playsinline data-layout-allow-overflow data-start="785.62" data-duration="106.20" data-media-start="0.00" data-track-index="18"></video></div>
+    <div class="bgseg" id="bgp9" style="z-index:10;opacity:1"><video id="bgp9-v" src="assets/bgvid_full/bg_part9.mp4" muted playsinline data-layout-allow-overflow data-start="883.82" data-duration="106.20" data-media-start="0.00" data-track-index="19"></video></div>
+    <div class="bgseg" id="bgp10" style="z-index:11;opacity:1"><video id="bgp10-v" src="assets/bgvid_full/bg_part10.mp4" muted playsinline data-layout-allow-overflow data-start="982.02" data-duration="106.20" data-media-start="0.00" data-track-index="20"></video></div>
+    <div class="bgseg" id="bgp11" style="z-index:12;opacity:1"><video id="bgp11-v" src="assets/bgvid_full/bg_part11.mp4" muted playsinline data-layout-allow-overflow data-start="1080.22" data-duration="106.20" data-media-start="0.00" data-track-index="21"></video></div>
+    <div class="bgseg" id="bgp12" style="z-index:13;opacity:1"><video id="bgp12-v" src="assets/bgvid_full/bg_part12.mp4" muted playsinline data-layout-allow-overflow data-start="1178.42" data-duration="106.20" data-media-start="0.00" data-track-index="22"></video></div>
+    <div class="bgseg" id="bgp13" style="z-index:14;opacity:1"><video id="bgp13-v" src="assets/bgvid_full/bg_part13.mp4" muted playsinline data-layout-allow-overflow data-start="1276.63" data-duration="106.20" data-media-start="0.00" data-track-index="23"></video></div>
+    <div class="bgseg" id="bgp14" style="z-index:15;opacity:1"><video id="bgp14-v" src="assets/bgvid_full/bg_part14.mp4" muted playsinline data-layout-allow-overflow data-start="1374.83" data-duration="106.20" data-media-start="0.00" data-track-index="24"></video></div>
+    <div class="bgseg" id="bgp15" style="z-index:16;opacity:1"><video id="bgp15-v" src="assets/bgvid_full/bg_part15.mp4" muted playsinline data-layout-allow-overflow data-start="1473.03" data-duration="98.20" data-media-start="0.00" data-track-index="25"></video></div>
+
+    <audio id="narr" src="assets/audio/narration.wav" data-start="0" data-track-index="60" data-volume="1"></audio>
+    <audio id="chs0" src="assets/se/chapter.wav" data-start="72.72" data-track-index="200" data-volume="0.5"></audio>
+    <audio id="chs1" src="assets/se/chapter.wav" data-start="121.83" data-track-index="201" data-volume="0.5"></audio>
+    <audio id="chs2" src="assets/se/chapter.wav" data-start="191.16" data-track-index="202" data-volume="0.5"></audio>
+    <audio id="chs3" src="assets/se/chapter.wav" data-start="261.88" data-track-index="203" data-volume="0.5"></audio>
+    <audio id="chs4" src="assets/se/chapter.wav" data-start="337.45" data-track-index="204" data-volume="0.5"></audio>
+    <audio id="chs5" src="assets/se/chapter.wav" data-start="386.42" data-track-index="205" data-volume="0.5"></audio>
+    <audio id="chs6" src="assets/se/chapter.wav" data-start="471.52" data-track-index="206" data-volume="0.5"></audio>
+    <audio id="chs7" src="assets/se/chapter.wav" data-start="524.07" data-track-index="207" data-volume="0.5"></audio>
+    <audio id="chs8" src="assets/se/chapter.wav" data-start="614.10" data-track-index="208" data-volume="0.5"></audio>
+    <audio id="chs9" src="assets/se/chapter.wav" data-start="727.64" data-track-index="209" data-volume="0.5"></audio>
+    <audio id="chs10" src="assets/se/chapter.wav" data-start="816.63" data-track-index="210" data-volume="0.5"></audio>
+    <audio id="chs11" src="assets/se/chapter.wav" data-start="920.94" data-track-index="211" data-volume="0.5"></audio>
+    <audio id="chs12" src="assets/se/chapter.wav" data-start="1006.12" data-track-index="212" data-volume="0.5"></audio>
+    <audio id="chs13" src="assets/se/chapter.wav" data-start="1134.97" data-track-index="213" data-volume="0.5"></audio>
+    <audio id="chs14" src="assets/se/chapter.wav" data-start="1233.95" data-track-index="214" data-volume="0.5"></audio>
+    <audio id="chs15" src="assets/se/chapter.wav" data-start="1360.24" data-track-index="215" data-volume="0.5"></audio>
+    <audio id="chs16" src="assets/se/chapter.wav" data-start="1444.97" data-track-index="216" data-volume="0.5"></audio>
+    <audio id="chs17" src="assets/se/chapter.wav" data-start="1494.60" data-track-index="217" data-volume="0.5"></audio>
+    <audio id="chs18" src="assets/se/chapter.wav" data-start="1535.26" data-track-index="218" data-volume="0.5"></audio>
+
+    <div class="veil"></div>
+    <div class="wm">格闘ニュースラボ</div>
+    <div class="srclab" id="src0">出典: RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)</div>
+    <div class="srclab" id="src1">出典: RIZIN公式 RIZIN CONFESSIONS #225</div>
+    <div class="srclab" id="src2">出典: BellatorMMA Mean Tweets &amp; Trash Talk</div>
+    <div class="srclab" id="src3">出典: RIZIN公式 RIZIN LANDMARK 13 試合後インタビュー</div>
+    <div class="srclab" id="src4">出典: RIZIN公式 Full Fight 佐藤将光 vs サバテロ (RIZIN.51)</div>
+    <div class="srclab" id="src5">出典: RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)</div>
+    <div class="srclab" id="src6">出典: RIZIN公式 RIZIN LANDMARK 15 Trailer</div>
+    <div class="srclab" id="src7">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src8">出典: RIZIN公式 RIZIN LANDMARK 15 Trailer</div>
+    <div class="srclab" id="src9">出典: RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)</div>
+    <div class="srclab" id="src10">出典: RIZIN公式 RIZIN CONFESSIONS #225</div>
+    <div class="srclab" id="src11">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src12">出典: RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)</div>
+    <div class="srclab" id="src13">出典: RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)</div>
+    <div class="srclab" id="src14">出典: BellatorMMA Mean Tweets &amp; Trash Talk</div>
+    <div class="srclab" id="src15">出典: RIZIN公式 Full Fight 佐藤将光 vs サバテロ (RIZIN.51)</div>
+    <div class="srclab" id="src16">出典: Wikimedia Commons</div>
+    <div class="srclab" id="src17">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src18">出典: Wikimedia Commons</div>
+    <div class="srclab" id="src19">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src20">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src21">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src22">出典: Wikimedia Commons</div>
+    <div class="srclab" id="src23">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src24">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src25">出典: Wikimedia Commons</div>
+    <div class="srclab" id="src26">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src27">出典: Wikimedia Commons</div>
+    <div class="srclab" id="src28">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src29">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src30">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src31">出典: PurdueNJ Journeymen Duals</div>
+    <div class="srclab" id="src32">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src33">出典: Wikimedia Commons</div>
+    <div class="srclab" id="src34">出典: Big Ten Network Purdue Wrestling</div>
+    <div class="srclab" id="src35">出典: Purdue University Fast Track News</div>
+    <div class="srclab" id="src36">出典: PurdueNJ Journeymen Duals</div>
+    <div class="srclab" id="src37">出典: Wikimedia Commons</div>
+    <div class="srclab" id="src38">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src39">出典: BellatorMMA Mean Tweets &amp; Trash Talk</div>
+    <div class="srclab" id="src40">出典: Purdue University Fast Track News</div>
+    <div class="srclab" id="src41">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src42">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src43">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src44">出典: Purdue Wrestling</div>
+    <div class="srclab" id="src45">出典: Wikimedia Commons</div>
+    <div class="srclab" id="src46">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src47">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src48">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src49">出典: Titan FC 61 サバテロ vs ラモス</div>
+    <div class="srclab" id="src50">出典: BellatorMMA The Italian Gangster Highlights</div>
+    <div class="srclab" id="src51">出典: Titan FC 61 サバテロ vs ラモス</div>
+    <div class="srclab" id="src52">出典: Titan FC 67 サバテロ vs ブラックシアー</div>
+    <div class="srclab" id="src53">出典: Titan FC 61 サバテロ vs ラモス</div>
+    <div class="srclab" id="src54">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src55">出典: Titan FC 67 サバテロ vs ブラックシアー</div>
+    <div class="srclab" id="src56">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src57">出典: Titan FC 67 サバテロ vs ブラックシアー</div>
+    <div class="srclab" id="src58">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src59">出典: Titan FC 67 サバテロ vs ブラックシアー</div>
+    <div class="srclab" id="src60">出典: BellatorMMA Full Fight サバテロ vs ジョーンズ (Bellator 259)</div>
+    <div class="srclab" id="src61">出典: BellatorMMA Full Fight サバテロ vs ルーゴ (Bellator 278)</div>
+    <div class="srclab" id="src62">出典: BellatorMMA The Italian Gangster Highlights</div>
+    <div class="srclab" id="src63">出典: BellatorMMA Mean Tweets &amp; Trash Talk</div>
+    <div class="srclab" id="src64">出典: MMA Fighting The MMA Hour</div>
+    <div class="srclab" id="src65">出典: PFL MMA The Rivalry: Stots v Sabatello</div>
+    <div class="srclab" id="src66">出典: BellatorMMA Full Fight サバテロ vs ストッツ (Bellator 289)</div>
+    <div class="srclab" id="src67">出典: MMA Fighting The MMA Hour</div>
+    <div class="srclab" id="src68">出典: Wikimedia Commons</div>
+    <div class="srclab" id="src69">出典: PFL MMA The Rivalry: Stots v Sabatello</div>
+    <div class="srclab" id="src70">出典: BellatorMMA Full Fight ストッツ vs サバテロ (Bellator 301)</div>
+    <div class="srclab" id="src71">出典: PFL MMA The Rivalry: Stots v Sabatello</div>
+    <div class="srclab" id="src72">出典: Wikimedia Commons</div>
+    <div class="srclab" id="src73">出典: BellatorMMA Full Fight マゴメドフ vs サバテロ (Bellator×RIZIN 2)</div>
+    <div class="srclab" id="src74">出典: U-NEXT格闘技公式 超RIZIN.2 Preview</div>
+    <div class="srclab" id="src75">出典: BellatorMMA Full Fight マゴメドフ vs サバテロ (Bellator×RIZIN 2)</div>
+    <div class="srclab" id="src76">出典: BellatorMMA Full Fight ストッツ vs サバテロ (Bellator 301)</div>
+    <div class="srclab" id="src77">出典: PFL MMA The Rivalry: Stots v Sabatello</div>
+    <div class="srclab" id="src78">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src79">出典: RIZIN公式サイト</div>
+    <div class="srclab" id="src80">出典: RIZIN公式 Face to Face サバテロ vs 太田忍</div>
+    <div class="srclab" id="src81">出典: RIZIN公式 Full Fight サバテロ vs 太田忍 (RIZIN男祭り)</div>
+    <div class="srclab" id="src82">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src83">出典: RIZIN公式 Full Fight サバテロ vs 太田忍 (RIZIN男祭り)</div>
+    <div class="srclab" id="src84">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src85">出典: RIZIN公式サイト</div>
+    <div class="srclab" id="src86">出典: RIZIN公式 Full Fight 佐藤将光 vs サバテロ (RIZIN.51)</div>
+    <div class="srclab" id="src87">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src88">出典: RIZIN公式 Full Fight 佐藤将光 vs サバテロ (RIZIN.51)</div>
+    <div class="srclab" id="src89">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src90">出典: RIZIN公式 Full Fight 佐藤将光 vs サバテロ (RIZIN.51)</div>
+    <div class="srclab" id="src91">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src92">出典: RIZIN公式 Full Fight 佐藤将光 vs サバテロ (RIZIN.51)</div>
+    <div class="srclab" id="src93">出典: RIZIN公式 RIZIN師走の超強者祭り 試合後インタビュー</div>
+    <div class="srclab" id="src94">出典: RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)</div>
+    <div class="srclab" id="src95">出典: RIZIN公式サイト</div>
+    <div class="srclab" id="src96">出典: RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)</div>
+    <div class="srclab" id="src97">出典: RIZIN公式 RIZIN師走の超強者祭り 試合後インタビュー</div>
+    <div class="srclab" id="src98">出典: RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)</div>
+    <div class="srclab" id="src99">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src100">出典: RIZIN公式 Full Fight サバテロ vs 後藤丈治 (RIZIN LANDMARK 13)</div>
+    <div class="srclab" id="src101">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src102">出典: RIZIN公式サイト</div>
+    <div class="srclab" id="src103">出典: RIZIN公式 Full Fight サバテロ vs 後藤丈治 (RIZIN LANDMARK 13)</div>
+    <div class="srclab" id="src104">出典: RIZIN公式 RIZIN CONFESSIONS #225</div>
+    <div class="srclab" id="src105">出典: RIZIN公式 RIZIN LANDMARK 13 試合後インタビュー</div>
+    <div class="srclab" id="src106">出典: RIZIN公式 RIZIN LANDMARK 15 Trailer</div>
+    <div class="srclab" id="src107">出典: RIZIN公式 Face to Face サバテロ vs 太田忍</div>
+    <div class="srclab" id="src108">出典: RIZIN公式 RIZIN LANDMARK 15 試合前インタビュー</div>
+    <div class="srclab" id="src109">出典: RIZIN公式サイト</div>
+    <div class="srclab" id="src110">出典: RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)</div>
+    <div class="srclab" id="src111">出典: RIZIN公式 RIZIN CONFESSIONS #225</div>
+    <div class="srclab" id="src112">出典: RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)</div>
+    <div class="srclab" id="src113">出典: RIZIN公式 RIZIN CONFESSIONS #225</div>
+    <div class="srclab" id="src114">出典: RIZIN公式 RIZIN LANDMARK 15 Trailer</div>
+    <div class="srclab" id="src115">出典: RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)</div>
+    <div class="srclab" id="src116">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src117">出典: PFL MMA The Rivalry: Stots v Sabatello</div>
+    <div class="srclab" id="src118">出典: BellatorMMA Full Fight サバテロ vs ルーゴ (Bellator 278)</div>
+    <div class="srclab" id="src119">出典: BellatorMMA Full Fight サバテロ vs ジョーンズ (Bellator 259)</div>
+    <div class="srclab" id="src120">出典: PFL MMA The Rivalry: Stots v Sabatello</div>
+    <div class="srclab" id="src121">出典: RIZIN公式 Full Fight サバテロ vs 後藤丈治 (RIZIN LANDMARK 13)</div>
+    <div class="srclab" id="src122">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src123">出典: RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)</div>
+    <div class="srclab" id="src124">出典: RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)</div>
+    <div class="srclab" id="src125">出典: RIZIN公式 RIZIN Rundown</div>
+    <div class="srclab" id="src126">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src127">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src128">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src129">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src130">出典: RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview</div>
+    <div class="srclab" id="src131">出典: RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)</div>
+    <div class="srclab" id="src132">出典: RIZIN公式 RIZIN Rundown</div>
+    <div class="srclab" id="src133">出典: RIZIN公式 RIZIN CONFESSIONS #225</div>
+    <div class="srclab" id="src134">出典: RIZIN公式 RIZIN Rundown</div>
+    <div class="srclab" id="src135">出典: Big Ten Network Purdue Wrestling</div>
+    <div class="srclab" id="src136">出典: BellatorMMA Full Fight サバテロ vs ルーゴ (Bellator 278)</div>
+    <div class="srclab" id="src137">出典: RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)</div>
+    <div class="srclab" id="src138">出典: RIZIN公式 【密着】Preparation ダニー・サバテロ</div>
+    <div class="srclab" id="src139">出典: RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)</div>
+    <div class="bigtitle" id="bigttl"><div class="ttlrow w">アメリカが捨てた男</div><div class="ttlrow y">ダニー・サバテロ</div></div>
+    <div class="chaptag" id="chap0"><div class="chnum">CHAPTER 01　ダニー・サバテロとは何者か</div><div class="chttl">19勝4敗・RIZIN王者</div></div>
+    <div class="ctag" id="ctag0"><div class="ctd">ダニー・サバテロとは何者か</div><div class="ctc">19勝4敗・RIZIN王者</div></div>
+    <div class="chaptag" id="chap1"><div class="chnum">CHAPTER 02　1993〜 シカゴ</div><div class="chttl">生い立ち</div></div>
+    <div class="ctag" id="ctag1"><div class="ctd">1993〜 シカゴ</div><div class="ctc">生い立ち</div></div>
+    <div class="chaptag" id="chap2"><div class="chnum">CHAPTER 03　スティーブンソン高校</div><div class="chttl">州王者2連覇</div></div>
+    <div class="ctag" id="ctag2"><div class="ctd">スティーブンソン高校</div><div class="ctc">州王者2連覇</div></div>
+    <div class="chaptag" id="chap3"><div class="chnum">CHAPTER 04　パデュー大学</div><div class="chttl">Big Ten</div></div>
+    <div class="ctag" id="ctag3"><div class="ctd">パデュー大学</div><div class="ctc">Big Ten</div></div>
+    <div class="chaptag" id="chap4"><div class="chnum">CHAPTER 05　2016〜2017 シカゴ→フロリダ</div><div class="chttl">ATTへ</div></div>
+    <div class="ctag" id="ctag4"><div class="ctd">2016〜2017 シカゴ→フロリダ</div><div class="ctc">ATTへ</div></div>
+    <div class="chaptag" id="chap5"><div class="chnum">CHAPTER 06　2018〜2021 プロデビュー／Titan FC</div><div class="chttl">王座獲得</div></div>
+    <div class="ctag" id="ctag5"><div class="ctd">2018〜2021 プロデビュー／Titan FC</div><div class="ctc">王座獲得</div></div>
+    <div class="chaptag" id="chap6"><div class="chnum">CHAPTER 07　2020.11.10 コンテンダーシリーズ</div><div class="chttl">30対24の不採用</div></div>
+    <div class="ctag" id="ctag6"><div class="ctd">2020.11.10 コンテンダーシリーズ</div><div class="ctc">30対24の不採用</div></div>
+    <div class="chaptag" id="chap7"><div class="chnum">CHAPTER 08　2021〜2022 Bellator</div><div class="chttl">悪役の誕生</div></div>
+    <div class="ctag" id="ctag7"><div class="ctd">2021〜2022 Bellator</div><div class="ctc">悪役の誕生</div></div>
+    <div class="chaptag" id="chap8"><div class="chnum">CHAPTER 09　2022〜2023 ストッツとの因縁</div><div class="chttl">2連敗</div></div>
+    <div class="ctag" id="ctag8"><div class="ctd">2022〜2023 ストッツとの因縁</div><div class="ctc">2連敗</div></div>
+    <div class="chaptag" id="chap9"><div class="chnum">CHAPTER 10　2023〜2024 超RIZIN.2／PFL</div><div class="chttl">初来日と引退危機</div></div>
+    <div class="ctag" id="ctag9"><div class="ctd">2023〜2024 超RIZIN.2／PFL</div><div class="ctc">初来日と引退危機</div></div>
+    <div class="chaptag" id="chap10"><div class="chnum">CHAPTER 11　2025.5.4 RIZIN男祭り 太田忍</div><div class="chttl">サバテロムーブ</div></div>
+    <div class="ctag" id="ctag10"><div class="ctd">2025.5.4 RIZIN男祭り 太田忍</div><div class="ctc">サバテロムーブ</div></div>
+    <div class="chaptag" id="chap11"><div class="chnum">CHAPTER 12　2025.9.28 RIZIN.51 佐藤将光</div><div class="chttl">クビヲアラッテマッテオケ</div></div>
+    <div class="ctag" id="ctag11"><div class="ctd">2025.9.28 RIZIN.51 佐藤将光</div><div class="ctc">クビヲアラッテマッテオケ</div></div>
+    <div class="chaptag" id="chap12"><div class="chnum">CHAPTER 13　2025.12.31 井上直樹</div><div class="chttl">第8代王者</div></div>
+    <div class="ctag" id="ctag12"><div class="ctd">2025.12.31 井上直樹</div><div class="ctc">第8代王者</div></div>
+    <div class="chaptag" id="chap13"><div class="chnum">CHAPTER 14　2026.4.12 RIZIN LANDMARK 13 後藤丈治</div><div class="chttl">榊原CEOの叱責</div></div>
+    <div class="ctag" id="ctag13"><div class="ctd">2026.4.12 RIZIN LANDMARK 13 後藤丈治</div><div class="ctc">榊原CEOの叱責</div></div>
+    <div class="chaptag" id="chap14"><div class="chnum">CHAPTER 15　2026.7.18 RIZIN LANDMARK 15 鹿志村仁之介</div><div class="chttl">右フックKO</div></div>
+    <div class="ctag" id="ctag14"><div class="ctd">2026.7.18 RIZIN LANDMARK 15 鹿志村仁之介</div><div class="ctc">右フックKO</div></div>
+    <div class="chaptag" id="chap15"><div class="chnum">CHAPTER 16　ファイトスタイル徹底解剖</div><div class="chttl">レスリング・RIZINルール・口</div></div>
+    <div class="ctag" id="ctag15"><div class="ctd">ファイトスタイル徹底解剖</div><div class="ctc">レスリング・RIZINルール・口</div></div>
+    <div class="chaptag" id="chap16"><div class="chnum">CHAPTER 17　素顔</div><div class="chttl">家族・母・スポンサー</div></div>
+    <div class="ctag" id="ctag16"><div class="ctd">素顔</div><div class="ctc">家族・母・スポンサー</div></div>
+    <div class="chaptag" id="chap17"><div class="chnum">CHAPTER 18　次戦</div><div class="chttl">RIZIN.55と大晦日</div></div>
+    <div class="ctag" id="ctag17"><div class="ctd">次戦</div><div class="ctc">RIZIN.55と大晦日</div></div>
+    <div class="chaptag" id="chap18"><div class="chnum">CHAPTER 19　イタリアン・ギャングスター</div><div class="chttl">まとめ</div></div>
+    <div class="ctag" id="ctag18"><div class="ctd">イタリアン・ギャングスター</div><div class="ctc">まとめ</div></div>
+    <div class="ccard table" id="cc0"><div class="mtag">ダニー・サバテロ</div><div class="tbl"><div class="trow"><div class="tk">生年月日</div><div class="tv">1993.3.31（33歳）</div><div class="tn">米イリノイ州出身</div></div><div class="trow"><div class="tk">所属</div><div class="tv">アメリカン・トップチーム</div><div class="tn">身長175cm／バンタム級</div></div><div class="trow"><div class="tk">戦績</div><div class="tv">19勝4敗1分</div><div class="tn">KO5・一本5・判定9／RIZIN 5戦5勝</div></div></div><div class="cmeta">Sherdog／RIZIN公式サイト</div></div>
+    <div class="ccard media" id="cc1"><div class="mtag">イスラエル・マルティネス（Izzy Style）</div><div class="ctext" style="font-size:36px">州王者になりたいなら、フットボールを辞めろ。</div><div class="cmeta">サバテロが語る高校2年時の言葉（RIZIN公式インタビュー 2026年3月）</div></div>
+    <div class="ccard media" id="cc2"><div class="mtag">トニー・アースランド（パデュー大学 監督）</div><div class="ctext" style="font-size:36px">彼は将来ナショナルチャンピオンになる。生活態度がそのままマットに表れている。</div><div class="cmeta">Purdue Fast Track News（2015年）</div></div>
+    <div class="ccard table" id="cc3"><div class="mtag">ダナ・ホワイトのコンテンダーシリーズ（2020.11.10）</div><div class="tbl"><div class="trow"><div class="tk">判定</div><div class="tv">30-24／30-25／30-26</div><div class="tn">3-0 判定勝ち</div></div><div class="trow"><div class="tk">テイクダウン</div><div class="tv">3／4</div><div class="tn">グラウンド支配 14分06秒</div></div><div class="trow"><div class="tk">結果</div><div class="tv">UFC契約なし</div><div class="tn">30-24は番組史上唯一</div></div></div><div class="cmeta">UFC／ESPN／MMA Fighting</div></div>
+    <div class="ccard media" id="cc4"><div class="mtag">ダニー・サバテロ（Bellator 282 試合後マイク）</div><div class="ctext" style="font-size:36px">罰金と言われたが、俺は気にしないんでね。</div><div class="cmeta">2022年6月24日 モヒガン・サン・アリーナ（罰金5,000ドル）</div></div>
+    <div class="ccard table" id="cc5"><div class="mtag">Bellator 289 暫定王座戦 判定（2022.12.9）</div><div class="tbl"><div class="trow"><div class="tk">ダグ・クロスビー</div><div class="tv">50-45</div><div class="tn">サバテロ</div></div><div class="trow"><div class="tk">エリック・コロン</div><div class="tv">48-47</div><div class="tn">ストッツ</div></div><div class="trow"><div class="tk">ブライアン・マイナー</div><div class="tv">48-47</div><div class="tn">ストッツ</div></div></div><div class="cmeta">Bellator MMA 公式中継</div></div>
+    <div class="ccard media" id="cc6"><div class="mtag">ダニー・サバテロ</div><div class="ctext" style="font-size:36px">ヒップをずらして頭をマットに突き刺す。俺の代名詞『サバテロムーブ』が炸裂した。</div><div class="cmeta">ゴング格闘技 試合後インタビュー（2025年5月4日）</div></div>
+    <div class="ccard media" id="cc7"><div class="mtag">ダニー・サバテロ</div><div class="ctext" style="font-size:36px">今日が人生最高の日だ。クリスマスも祝日も家族と会うことも犠牲にした。母は自分の親友だが、この日のためだけにやってきた。</div><div class="cmeta">RIZIN師走の超強者祭り 試合後インタビュー（2025年12月31日）</div></div>
+    <div class="ccard media" id="cc8"><div class="mtag">榊原信行 RIZIN CEO</div><div class="ctext" style="font-size:32px">サバテロの戦い方は日本のファンは是としないんで、プロモーターである私も是としない。勝ちさえすればいいだったら他の団体行ってくれ。</div><div class="cmeta">RIZIN LANDMARK 13 大会後総括（2026年4月12日）</div></div>
+    <div class="ccard media" id="cc9"><div class="mtag">ダニー・サバテロ</div><div class="ctext" style="font-size:36px">他の選手は勝ちを拾いに行く。俺は勝った上でフィニッシュもする。今は俺の時代で、この時代は20年続く。</div><div class="cmeta">RIZIN LANDMARK 15 試合後インタビュー（2026年7月18日）</div></div>
+    <div class="ccard table" id="cc10"><div class="mtag">サバテロが誇る記録</div><div class="tbl"><div class="trow"><div class="tk">試合を断った回数</div><div class="tv">0</div><div class="tn">欠場も0</div></div><div class="trow"><div class="tk">計量失敗</div><div class="tv">0</div><div class="tn"></div></div><div class="trow"><div class="tk">禁止薬物の陽性</div><div class="tv">0</div><div class="tn"></div></div></div><div class="cmeta">RIZIN公式インタビュー（2026年3月）</div></div>
+    <div class="ccard table" id="cc11"><div class="mtag">RIZIN.55（2026.11.8 LaLa arena TOKYO-BAY）バンタム級</div><div class="tbl"><div class="trow"><div class="tk">第?試合</div><div class="tv">鹿志村仁之介 vs 太田忍</div><div class="tn">61.0kg</div></div><div class="trow"><div class="tk">第?試合</div><div class="tv">福田龍彌 vs キム・スーチョル</div><div class="tn">61.0kg</div></div><div class="trow"><div class="tk">王者サバテロ</div><div class="tv">次戦未定</div><div class="tn">大晦日が濃厚</div></div></div><div class="cmeta">RIZIN公式サイト</div></div>
+    <div class="subt" id="sub0">2026年7月18日、<br>広島グリーンアリーナ。RIZINバンタム級王者は、</div>
+    <div class="subt" id="sub1">寝技の名手を寝技に付き合わせなかった。</div>
+    <div class="subt" id="sub2">ダニー・サバテロ。33歳、<br>19勝4敗。RIZINでは5戦5勝。</div>
+    <div class="subt" id="sub3">イタリア系の血を引くシカゴ育ちのレスラーは、<br>自らをイタリアン・ギャングスターと名乗る。</div>
+    <div class="subt" id="sub4">UFCには最高得点で勝っても契約を断られた。<br>Bellatorでは会場中からブーイングを浴び、</div>
+    <div class="subt" id="sub5">罰金を科された。</div>
+    <div class="subt" id="sub6">日本ではプロモーターに、<br>その戦い方は是としないと言われた。</div>
+    <div class="subt" id="sub7">それでも彼は日本語でクビヲアラッテマッテオケと<br>叫び、王者井上直樹からベルトを奪った。</div>
+    <div class="subt" id="sub8">目標はベルトを87回防衛すること。</div>
+    <div class="subt" id="sub9">なぜこの男はこれほど嫌われ、<br>それでも勝ち続けるのか。</div>
+    <div class="subt" id="sub10">シカゴの少年がアメリカで居場所を失い、日本の<br>王者になるまで。その全てをゼロから解き明かす。</div>
+    <div class="subt" id="sub11">それでは、いきましょう。</div>
+    <div class="subt" id="sub12">ダニー・サバテロ。本名ダニエル・アンソニー・サバテロ。<br>1993年3月31日、</div>
+    <div class="subt" id="sub13">イリノイ州シカゴ郊外の生まれ。</div>
+    <div class="subt" id="sub14">身長175cm、バンタム級。</div>
+    <div class="subt" id="sub15">所属はフロリダ州ココナッツクリークの<br>アメリカン・トップチーム。</div>
+    <div class="subt" id="sub16">堀口恭司の同門であり、<br>コーチはマイク・ブラウンだ。</div>
+    <div class="subt" id="sub17">戦績は19勝4敗、引き分け1つ。</div>
+    <div class="subt" id="sub18">2025年12月31日、井上直樹を破って第8代<br>RIZINバンタム級王者となり、すでに2度防衛している。</div>
+    <div class="subt" id="sub19">リングネームはイタリアン・ギャングスター。<br>試合前には相手を罵り、勝てば観客に中指を立てる。</div>
+    <div class="subt" id="sub20">だがマイクを置いた瞬間、<br>相手への敬意を語る。日本のファンが最も戸惑い、</div>
+    <div class="subt" id="sub21">最も目を離せない王者だ。</div>
+    <div class="subt" id="sub22">サバテロ家は、シチリア島パレルモに祖父母の<br>ルーツを持つイタリア系の一家だ。</div>
+    <div class="subt" id="sub23">父グレッグと母ナンシーは高校時代からの恋人同士で、<br>今も一緒に暮らしている。</div>
+    <div class="subt" id="sub24">兄が2人いる。5歳上のジョーと、3歳上のヴィンス。<br>2人とも後にパデュー大学へ進んだ。</div>
+    <div class="subt" id="sub25">兄も叔父もいとこも全員レスラー。彼の言葉を<br>借りれば、レスリングはDNAに刻まれていた。</div>
+    <div class="subt" id="sub26">だから彼は4歳でマットに立った。本人は言う。</div>
+    <div class="subt" id="sub27">家族全員が同じことをしていても、<br>子どもが同じものを好きになるとは限らない。</div>
+    <div class="subt" id="sub28">幸運なことに自分は、<br>人を物理的に支配することが大好きだった。</div>
+    <div class="subt" id="sub29">10歳の頃には格闘技に夢中になっていた。</div>
+    <div class="subt" id="sub30">父や叔父たちが崇拝していたのは、<br>無敗のまま引退したロッキー・マルシアノ。</div>
+    <div class="subt" id="sub31">少年はマイク・タイソンに憧れ、<br>母に隠れてPRIDEを見た。</div>
+    <div class="subt" id="sub32">母は息子が殴られる仕事に就くことを望まなかった。<br>だが止められないと悟るのは早かった。</div>
+    <div class="subt" id="sub33">校庭で友達と喧嘩をするのが好きな子どもだった。<br>MMAがなければ路上で喧嘩をしていた。</div>
+    <div class="subt" id="sub34">本人がそう振り返る少年時代だ。</div>
+    <div class="subt" id="sub35">シカゴ郊外リンカーンシャーのスティーブンソン高<br>校。</div>
+    <div class="subt" id="sub36">一年生のサバテロはレスリングで目標に<br>届かなかった。</div>
+    <div class="subt" id="sub37">フットボールも大好きだったからだ。</div>
+    <div class="subt" id="sub38">二年生のとき、地元のレスリングジム、<br>Izzy Styleの門を叩く。</div>
+    <div class="subt" id="sub39">主宰するイスラエル・マルティネスは、後に<br>ジョン・ジョーンズのレスリングコーチも務める男だ。</div>
+    <div class="subt" id="sub40">彼はサバテロに1つだけ条件を出した。州王者に<br>なりたいなら、フットボールを辞めろ。</div>
+    <div class="subt" id="sub41">大きな要求だった。だが彼は最高のコーチを信じ、<br>大好きなフットボールを捨てた。</div>
+    <div class="subt" id="sub42">愛するものより、<br>もっと愛するもののために犠牲を払う。</div>
+    <div class="subt" id="sub43">その後の人生で何度も繰り返す選択の、<br>これが最初だった。</div>
+    <div class="subt" id="sub44">結果はすぐに出た。イリノイ州王者を2年連続で<br>獲得。スティーブンソン高校史上初の州王者だった。</div>
+    <div class="subt" id="sub45">最終学年は41勝0敗。高校通算152勝19敗。</div>
+    <div class="subt" id="sub46">ただし、優等生ではなかった。</div>
+    <div class="subt" id="sub47">本人によれば高校時代から相手の頭の中に<br>入り込む戦い方で、</div>
+    <div class="subt" id="sub48">トーナメントから退場させられたこともある。</div>
+    <div class="subt" id="sub49">挑発と支配。すでに原型は完成していた。</div>
+    <div class="subt" id="sub50">進学先はインディアナ州のパデュー大学。全米最強の<br>レスリング地区、Big Tenに属する名門だ。</div>
+    <div class="subt" id="sub51">2人の兄と同じ道だった。</div>
+    <div class="subt" id="sub52">ここで彼は開花する。NCAA全米選手権に3回出場。</div>
+    <div class="subt" id="sub53">Big Ten週間最優秀レスラーに2度選ばれ、<br>これはパデュー史上初の記録だった。主将も務めた。</div>
+    <div class="subt" id="sub54">当時の監督トニー・アースランドはカメラの前で<br>こう言った。</div>
+    <div class="subt" id="sub55">彼は将来ナショナルチャンピオンになる。</div>
+    <div class="subt" id="sub56">生活態度がそのままマットに表れている。<br>チームメイトは、</div>
+    <div class="subt" id="sub57">彼のインテンシティは誰にも真似できないと<br>語った。</div>
+    <div class="subt" id="sub58">だが本人の目標だった全米王者には届かなかった。<br>大学では喧嘩が絶えず、</div>
+    <div class="subt" id="sub59">一時は保護観察処分も受けている。</div>
+    <div class="subt" id="sub60">専攻は法と社会。卒業証書と、<br>行き場のない闘争心だけが残った。</div>
+    <div class="subt" id="sub61">リングネームが生まれたのもこの頃だ。</div>
+    <div class="subt" id="sub62">ロッキー好きの家族は彼をイタリアン・スタリオンと<br>呼んでいた。</div>
+    <div class="subt" id="sub63">だがそれはロッキー・バルボアのものだ。自分だけの<br>名前が欲しい。</div>
+    <div class="subt" id="sub64">パデューの仲間と座っていたとき、<br>誰かが言った。イタリアン・ギャングスター。</div>
+    <div class="subt" id="sub65">彼は即座に気に入った。</div>
+    <div class="subt" id="sub66">今では全員が、自分が言い出したと主張している。</div>
+    <div class="subt" id="sub67">2016年、卒業した彼はシカゴへ戻る。</div>
+    <div class="subt" id="sub68">シカゴ・カブスが108年ぶりにワールドシリーズを<br>制した年だった。</div>
+    <div class="subt" id="sub69">街は無政府状態で、<br>卒業したばかりの仲間と毎晩騒いだ。</div>
+    <div class="subt" id="sub70">だがシカゴにはMMAの大型ジムがなかった。</div>
+    <div class="subt" id="sub71">彼はIzzy Styleに通い、<br>レスラー相手にパンチを振るだけの日々を送る。</div>
+    <div class="subt" id="sub72">このままでは世界王者になれない。</div>
+    <div class="subt" id="sub73">およそ1年後、彼は荷物をまとめて南フロリダへ<br>向かった。最高のジムに行くなら、世界一のジムへ。</div>
+    <div class="subt" id="sub74">アメリカン・トップチーム。世界王者を量産する、<br>格闘技界最大級の拠点だ。</div>
+    <div class="subt" id="sub75">本人は今も言う。イリノイに残っていたら、<br>酒を飲んで路上で喧嘩をして、</div>
+    <div class="subt" id="sub76">馬鹿なことをしていただろう。</div>
+    <div class="subt" id="sub77">人生で最良の決断だった。</div>
+    <div class="subt" id="sub78">2018年7月21日、フロリダのローカル大会で<br>プロデビュー。1ラウンド一本勝ち。</div>
+    <div class="subt" id="sub79">2戦目は頭部への蹴りで53秒KO。</div>
+    <div class="subt" id="sub80">デビューから5連勝。うち4勝が1ラウンド決着だっ<br>た。</div>
+    <div class="subt" id="sub81">2019年、UFCのFight Passで配信されるTitan FCに<br>上がると、初戦も1ラウンドTKOで片付けた。</div>
+    <div class="subt" id="sub82">そして2019年12月20日、Titan FC 58。<br>6勝0敗の新鋭は、王者アーウィン・リベラに挑んだ。</div>
+    <div class="subt" id="sub83">リベラは全ラウンド、<br>ボディを攻め続けた。そして4ラウンド。</div>
+    <div class="subt" id="sub84">ボディへの一発でサバテロは崩れ落ちる。</div>
+    <div class="subt" id="sub85">キャリア初黒星。相手はその後UFCへ<br>進む男だった。</div>
+    <div class="subt" id="sub86">彼は半年で戻ってきた。2020年5月、<br>3ラウンド肩固めで一本勝ち。</div>
+    <div class="subt" id="sub87">翌月の6月26日、Titan FC 61の王座決定戦で<br>レイモンド・ラモスと対戦する。</div>
+    <div class="subt" id="sub88">ローキックで足を止め、テイクダウンからバックへ。<br>1ラウンド1分56秒、リアネイキドチョーク。</div>
+    <div class="subt" id="sub89">第7代Titan FCバンタム級王者。プロ2年目の<br>戴冠だった。</div>
+    <div class="subt" id="sub90">王座を獲った男に、<br>最大のチャンスが巡ってくる。2020年11月10日、</div>
+    <div class="subt" id="sub91">ダナ・ホワイトのコンテンダーシリーズ。</div>
+    <div class="subt" id="sub92">勝てばUFC契約という登竜門だ。</div>
+    <div class="subt" id="sub93">相手はテイラー・ムーア。サバテロは4回のタックルで<br>3回テイクダウンを奪い、</div>
+    <div class="subt" id="sub94">14分以上グラウンドで支配した。</div>
+    <div class="subt" id="sub95">判定は30対24、30対25、30対26。</div>
+    <div class="subt" id="sub96">30対24は、この番組の歴史で唯一のスコアだ。<br>だがUFCからの契約は、なかった。</div>
+    <div class="subt" id="sub97">支配しすぎると一方的で退屈に見える。本人は<br>そう分析した。そして言った。侮辱されたと感じた。</div>
+    <div class="subt" id="sub98">そんなふうに自分を扱う団体で働きたいとは<br>思わない。</div>
+    <div class="subt" id="sub99">以来、彼はUFCの話をするたびに、<br>あの夜のスコアを持ち出す。</div>
+    <div class="subt" id="sub100">2021年2月、Titan FCの王座を5ラウンドで<br>防衛したサバテロに、Bellatorから電話が鳴る。</div>
+    <div class="subt" id="sub101">マテウス・マトスがコロナで欠場した穴を、<br>1週間前に埋める代役だった。</div>
+    <div class="subt" id="sub102">彼の返事は、もちろんやる、<br>だった。2021年5月21日、Bellator 259。</div>
+    <div class="subt" id="sub103">元タイタン王者はブレット・ジョーンズに判定3対0で<br>勝ち、メジャーの舞台に居場所を作った。</div>
+    <div class="subt" id="sub104">翌年、Bellatorはバンタム級のワールド・グランプリを<br>開催する。優勝賞金100万ドル。</div>
+    <div class="subt" id="sub105">負傷者が出た枠を争うワイルドカード戦で、</div>
+    <div class="subt" id="sub106">サバテロはジョーネル・ルーゴをテイクダウンと<br>パウンドで削り切った。30対26の完封。</div>
+    <div class="subt" id="sub107">2022年6月24日、<br>準々決勝。レアンドロ・イーゴ戦。</div>
+    <div class="subt" id="sub108">2ラウンドにはキムラで背中を取られる逆境に<br>陥ったが、彼は笑って立ち上がり、</div>
+    <div class="subt" id="sub109">5ラウンドを押し切った。</div>
+    <div class="subt" id="sub110">問題はそのあとだ。コネチカットの観客はブーイングの<br>嵐。</div>
+    <div class="subt" id="sub111">委員会からは事前に、<br>放送で罵倒語を使えば罰金だと警告されていた。</div>
+    <div class="subt" id="sub112">彼はマイクを握ってこう言った。</div>
+    <div class="subt" id="sub113">罰金と言われたが、俺は気にしないんでね。</div>
+    <div class="subt" id="sub114">罰金は5,000ドル。彼は観客に中指を立て、<br>後日こう振り返った。</div>
+    <div class="subt" id="sub115">ブーイングは俺のカリフラワーイヤーには音楽だった。<br>歓声かブーイングか、どちらかが欲しい。</div>
+    <div class="subt" id="sub116">Bellator最大の悪役はこうして生まれた。</div>
+    <div class="subt" id="sub117">準決勝の相手は暫定王者ラウフェオン・ストッツ。<br>10連勝中のレスラーだ。</div>
+    <div class="subt" id="sub118">サバテロは公開の場で彼を罵り続け、<br>ストッツはサバテロを、</div>
+    <div class="subt" id="sub119">Bellatorで最も一次元的な選手と呼んだ。</div>
+    <div class="subt" id="sub120">2022年12月9日、Bellator 289の<br>メインイベント。5ラウンドの暫定王座戦。</div>
+    <div class="subt" id="sub121">サバテロは14回タックルに入り、4回倒した。</div>
+    <div class="subt" id="sub122">だが倒しても、ダメージを与えられない。解説の<br>ビッグ・ジョン・マッカーシーは繰り返した。</div>
+    <div class="subt" id="sub123">コントロールは最後に評価される要素だ。<br>抱えているだけでは勝てない。</div>
+    <div class="subt" id="sub124">判定は1対2。ひとりの審判は50対45でサバテロ。<br>残り2人は48対47でストッツ。</div>
+    <div class="subt" id="sub125">マイクを奪ったストッツは、観客と一緒に歌った。<br>ナーナーナーナー、グッバイ。</div>
+    <div class="subt" id="sub126">サバテロは会場を後にした。そして言った。俺が<br>勝っていた。はてなが多すぎて、</div>
+    <div class="subt" id="sub127">再戦せずには終われない。</div>
+    <div class="subt" id="sub128">再戦は1年後、2023年11月17日。地元シカゴの<br>ウィントラスト・アリーナだった。</div>
+    <div class="subt" id="sub129">サバテロは飛び膝で試合を始め、<br>ハイキックを蹴り、5回テイクダウンを奪った。</div>
+    <div class="subt" id="sub130">だが3ラウンド。ストッツの左が顔面を捉え、<br>サバテロは膝をついた。</div>
+    <div class="subt" id="sub131">判定は29対28が3つ。ストッツはマイクで叫んだ。<br>逃げるな、男らしく握手しろ。</div>
+    <div class="subt" id="sub132">サバテロは係員に連れられ、地元の観客の前から消えた。<br>因縁は、2連敗で終わった。</div>
+    <div class="subt" id="sub133">実はストッツとの再戦の前、彼は日本に来ていた。<br>2023年7月30日、さいたまスーパーアリーナ。</div>
+    <div class="subt" id="sub134">BellatorとRIZINの対抗戦、超RIZIN.2だ。</div>
+    <div class="subt" id="sub135">その年の4月にはマルコス・ブレノを<br>2ラウンドリアネイキドチョークで仕留め、</div>
+    <div class="subt" id="sub136">勢いを取り戻していた。</div>
+    <div class="subt" id="sub137">相手はダゲスタンのマゴメド・マゴメドフ。サバテロは<br>バックからチョークを狙った。</div>
+    <div class="subt" id="sub138">だがマゴメドフはニンジャチョークで応じ、<br>体を回したサバテロの首をギロチンで捕らえた。</div>
+    <div class="subt" id="sub139">1ラウンド3分55秒、タップ。初めての日本は、<br>最も苦い記憶になった。マゴメドフは言った。</div>
+    <div class="subt" id="sub140">タップしなければ失神していた。</div>
+    <div class="subt" id="sub141">マゴメドフ戦、ストッツ戦。2連敗の末にBellatorは<br>PFLに吸収された。</div>
+    <div class="subt" id="sub142">2024年8月16日、<br>PFLでの初戦はラザロ・ダイロンとのドロー。</div>
+    <div class="subt" id="sub143">記者の採点では3人が彼の勝ちにしていた。</div>
+    <div class="subt" id="sub144">Bellator参戦から3連勝で頂点に迫った男は、<br>そこから5戦で1勝。そして初めて口にした。</div>
+    <div class="subt" id="sub145">引退を考えている。</div>
+    <div class="subt" id="sub146">2025年2月27日、彼はPFLとの契約を解除し、<br>RIZINとの複数試合契約を発表した。</div>
+    <div class="subt" id="sub147">Instagramにこう書いた。</div>
+    <div class="subt" id="sub148">ベルトを獲りに来るんじゃない。キングになりに<br>来る。今日から俺がバンタム級を仕切る。</div>
+    <div class="subt" id="sub149">初戦の相手は太田忍。リオ五輪レスリング銀メダリスト。<br>2025年5月4日、</div>
+    <div class="subt" id="sub150">東京ドームのRIZIN男祭り。</div>
+    <div class="subt" id="sub151">公開計量のフェイスオフは、<br>スタッフが割って入る騒ぎになった。</div>
+    <div class="subt" id="sub152">誰もがレスラー同士の組み合いを予想した。だが<br>サバテロはタックルに一度も入らなかった。</div>
+    <div class="subt" id="sub153">長いジャブとローで太田を削り、<br>1ラウンドで効かせる。</div>
+    <div class="subt" id="sub154">太田は後に、距離設定をミスって好きなことを<br>させてしまったと認めた。</div>
+    <div class="subt" id="sub155">3ラウンド開始直後。太田がついにテイクダウンを<br>取り、持ち上げて叩きつける。その瞬間だった。</div>
+    <div class="subt" id="sub156">サバテロは空中で腰をずらし、<br>太田の頭をマットに突き刺した。</div>
+    <div class="subt" id="sub157">動きが止まったところへパウンドの連打。</div>
+    <div class="subt" id="sub158">3ラウンド20秒、TKO。</div>
+    <div class="subt" id="sub159">本人はこれを、サバテロムーブと呼んだ。MMAで<br>誰も見たことのない動き。</div>
+    <div class="subt" id="sub160">知っているのはアメリカン・トップチームの<br>仲間だけだ。青木真也も、偶然ではなく実力だと評した。</div>
+    <div class="subt" id="sub161">試合後のインタビューで彼は言った。世界の頂点に<br>立った気分だ。今夜、俺は井上直樹と戦いたい。</div>
+    <div class="subt" id="sub162">そして練習してきた日本語を披露しようとして、<br>興奮のあまり失敗した。</div>
+    <div class="subt" id="sub163">2戦目は佐藤将光。日本のベテランを、彼は<br>試合前から罵倒した。クソみたいなスタイルだ。</div>
+    <div class="subt" id="sub164">全てにおいてレベルが低い。2025年9月28日、<br>RIZIN.51。</div>
+    <div class="subt" id="sub165">だが1ラウンド、<br>佐藤がサバテロのローをキャッチして倒し、</div>
+    <div class="subt" id="sub166">顔面にサッカーボールキックを叩き込んだ。</div>
+    <div class="subt" id="sub167">効いた。それでもサバテロはクリンチから上を奪い、<br>テイクダウンを繰り返して主導権を取り戻す。</div>
+    <div class="subt" id="sub168">判定は2対1。</div>
+    <div class="subt" id="sub169">本人が認めた不細工な勝利だった。</div>
+    <div class="subt" id="sub170">試合後、彼は自分をこう評した。顔面をPKみたいに<br>蹴られて、そこから逆転した。</div>
+    <div class="subt" id="sub171">俺がタフなマザーファッカーだということは誰にも<br>否定できない。</div>
+    <div class="subt" id="sub172">そしてリング上のマイク。客席で見ていた王者井上直樹に<br>向かって、覚えたての日本語で叫んだ。</div>
+    <div class="subt" id="sub173">イノウエナオキ、クビヲアラッテマッテオケ。</div>
+    <div class="subt" id="sub174">同じ夜、彼はこうも語っている。トラッシュトークは<br>キャラクターじゃない。心の底から言っている。</div>
+    <div class="subt" id="sub175">スポンサーが付かなくても、<br>金のために自分を変えるつもりはない。</div>
+    <div class="subt" id="sub176">2025年11月5日、大晦日のカード発表会見。<br>リモートで出席したサバテロは言った。</div>
+    <div class="subt" id="sub177">ただ勝ってベルトを獲るんじゃない。ヤツの顔面を<br>粉砕して自分のものにする。</div>
+    <div class="subt" id="sub178">井上直樹は静かに返した。口うるさいので、<br>その口をかち割ってやろうと思う。</div>
+    <div class="subt" id="sub179">早めにアゴを打ち抜いて、喋れなくしてやる。</div>
+    <div class="subt" id="sub180">2025年12月31日、さいたまスーパーアリーナ。<br>RIZIN師走の超強者祭り。</div>
+    <div class="subt" id="sub181">1ラウンド、<br>井上のカーフキックでサバテロが転倒する。</div>
+    <div class="subt" id="sub182">だがすぐにシングルレッグからバックへ回り、<br>テイクダウンを重ねた。</div>
+    <div class="subt" id="sub183">2ラウンドは王者の時間だった。井上はサイドから上四方を<br>取り、</div>
+    <div class="subt" id="sub184">バックに回ってラウンド終了までキープする。</div>
+    <div class="subt" id="sub185">試合は振り出しに戻った。</div>
+    <div class="subt" id="sub186">最終3ラウンド。サバテロはダブルレッグで倒し、<br>アナコンダチョークを狙い、何度も倒し続けた。</div>
+    <div class="subt" id="sub187">そして残りわずか。立ち上がった彼は倒れた井上に<br>踏みつけを落とし、</div>
+    <div class="subt" id="sub188">サッカーボールキックを蹴り込んだ。</div>
+    <div class="subt" id="sub189">判定は2対1。第8代RIZINバンタム級王者、<br>ダニー・サバテロ。</div>
+    <div class="subt" id="sub190">ベルトを腰に巻いた男は日本語で言った。</div>
+    <div class="subt" id="sub191">私は日本が大好きです。</div>
+    <div class="subt" id="sub192">涙のインタビューで彼は語った。今日が人生最高の<br>日だ。</div>
+    <div class="subt" id="sub193">この試合のためにクリスマスも祝日も捨てた。</div>
+    <div class="subt" id="sub194">イタリア人にとって家族は全てで、<br>母親は自分の親友だ。その母にも会わず、</div>
+    <div class="subt" id="sub195">この日のためだけにやってきた。</div>
+    <div class="subt" id="sub196">だが涙は長く続かない。直前に勝った福田龍彌が<br>対戦を要求したと聞くと、彼は豹変した。</div>
+    <div class="subt" id="sub197">俺の名前を出す許可は与えていない。クソくらえ。<br>まだ会場にいるなら今すぐ来い。</div>
+    <div class="subt" id="sub198">そして彼は、日本のファンに向けて宣言した。俺を<br>外様だと思わないでほしい。</div>
+    <div class="subt" id="sub199">俺がRIZINで、俺が日本を代表するファイターだ。</div>
+    <div class="subt" id="sub200">初防衛戦の相手は後藤丈治。2026年2月13日の<br>会見で、サバテロは言い放った。</div>
+    <div class="subt" id="sub201">このベルトを87回防衛する。</div>
+    <div class="subt" id="sub202">ゴトウは一人目の餌食だ。後藤は返した。それなら私は<br>あなたを88回倒す。</div>
+    <div class="subt" id="sub203">RIZIN公式のインタビューで、彼はこの数字の<br>根拠を語っている。87回は控えめな数字だ。</div>
+    <div class="subt" id="sub204">本当は94回と言いたいが、先走りたくない。</div>
+    <div class="subt" id="sub205">2026年4月12日、<br>マリンメッセ福岡。RIZIN LANDMARK 13。</div>
+    <div class="subt" id="sub206">サバテロは後藤の左フックにタックルを合わせ、<br>バックからチョークを狙い、</div>
+    <div class="subt" id="sub207">肩固めとパウンドで漬け続けた。</div>
+    <div class="subt" id="sub208">最後は立ってのフットスタンプ。判定は3対0、<br>30対26を含む完勝だった。</div>
+    <div class="subt" id="sub209">だがフィニッシュはなかった。</div>
+    <div class="subt" id="sub210">その夜の総括会見で、榊原信行は言った。<br>5分3R漬けまくられても決めろよ。</div>
+    <div class="subt" id="sub211">サバテロの戦い方は日本のファンは是としない。<br>プロモーターである私も是としない。</div>
+    <div class="subt" id="sub212">さらに続けた。勝ちさえすればいいなら、<br>他の団体に行ってくれ。</div>
+    <div class="subt" id="sub213">それをやらない限り、<br>彼がスーパースターになることはない。王者は、</div>
+    <div class="subt" id="sub214">自分の団体のトップから公然と否定された。</div>
+    <div class="subt" id="sub215">サバテロの答えはこうだ。フィニッシュできなかったの<br>は自分の責任だ。</div>
+    <div class="subt" id="sub216">劣勢なのに相手の隙を待つなんて理解できないが、<br>それは言い訳になる。俺は必ずそこへ行く。</div>
+    <div class="subt" id="sub217">2度目の防衛戦は、DEEP暫定王者鹿志村仁之介。<br>2026年6月16日に決まった。</div>
+    <div class="subt" id="sub218">同じ大会には、リベンジを誓う太田忍も出場する。</div>
+    <div class="subt" id="sub219">会見で太田が絶対にリベンジすると宣言すると、<br>サバテロは笑った。</div>
+    <div class="subt" id="sub220">一回バスケットボールみたいにボコボコにされた後に、<br>まだそんな口をきくのか。</div>
+    <div class="subt" id="sub221">ラッキーなら、またその顔でドリブルしてやるよ。</div>
+    <div class="subt" id="sub222">矛先は平本蓮にも向いた。平本4勝3敗レン。<br>格闘技界最高のニックネームだ。クソでも食ってろ。</div>
+    <div class="subt" id="sub223">昔から嫌いで、将来好きになることはない。</div>
+    <div class="subt" id="sub224">7月18日、広島グリーンアリーナ。初めての<br>メインイベントだった。</div>
+    <div class="subt" id="sub225">1ラウンド、鹿志村は足関節から変則の横三角へ。<br>サバテロは頭と腕を抜いて立ち上がる。</div>
+    <div class="subt" id="sub226">2ラウンド、鹿志村はダブルレッグから引き込みを<br>繰り返す。だがサバテロは付き合わない。</div>
+    <div class="subt" id="sub227">寝技の名手を、寝技に誘わせなかった。</div>
+    <div class="subt" id="sub228">3ラウンド開始40秒。引き込みを拒否され、<br>立ち上がった鹿志村が右腕を伸ばした瞬間。</div>
+    <div class="subt" id="sub229">右フック一閃。鹿志村は後方に崩れ落ち、</div>
+    <div class="subt" id="sub230">ジャンプして踏みつけに入ったところでレフェリーが<br>割って入った。</div>
+    <div class="subt" id="sub231">挑戦者は担架で運ばれた。スタンドのパンチ一発で<br>のKOは、8年のキャリアで初めてだった。</div>
+    <div class="subt" id="sub232">彼は言った。フィニッシュは榊原さんだけじゃなく、<br>みんなが望んでいたものだ。</div>
+    <div class="subt" id="sub233">他の選手は勝ちを拾いに行く。</div>
+    <div class="subt" id="sub234">俺は勝った上でフィニッシュもする。今は俺の時代で、<br>この時代は20年続く。</div>
+    <div class="subt" id="sub235">同じ夜、フェザー級王者シェイドゥラエフがサバテロの<br>試合はつまらないと言い、</div>
+    <div class="subt" id="sub236">同門のティレノフをバンタム級王者にふさわしいと<br>推薦したと聞かされる。</div>
+    <div class="subt" id="sub237">返答は短かった。このベルトを見ろ。みんな欲しいに<br>決まってる。だが俺がキングだ。</div>
+    <div class="subt" id="sub238">サバテロのファイトスタイルを解剖する。核は<br>4歳から積み上げたレスリングだ。</div>
+    <div class="subt" id="sub239">ストッツ戦では14回タックルに入った。相手が<br>疲れるまで、無尽蔵のペースで組み続ける。</div>
+    <div class="subt" id="sub240">バックを取れば肩固め、アナコンダ、<br>リアネイキドチョーク。19勝のうち一本勝ちは5つ、</div>
+    <div class="subt" id="sub241">KO勝ちも5つ。</div>
+    <div class="subt" id="sub242">だがアメリカでは、<br>倒して抑えるだけの濡れた毛布と揶揄された。</div>
+    <div class="subt" id="sub243">それがUFC不採用とストッツ戦の敗因でもあった。</div>
+    <div class="subt" id="sub244">日本に来て、彼は武器を手に入れた。倒れた相手へ<br>の膝、踏みつけ、サッカーボールキック。</div>
+    <div class="subt" id="sub245">本人の言葉では、RIZINのルールはグラップラーの<br>ために作られたルールだ。倒したあとに蹴れる。</div>
+    <div class="subt" id="sub246">太田戦のスラム返し、井上戦終盤の踏みつけ、<br>後藤戦のフットスタンプ、そして鹿志村戦の右フック。</div>
+    <div class="subt" id="sub247">押さえ込む男は、<br>日本で仕留める男に変わりつつある。</div>
+    <div class="subt" id="sub248">もう1つの武器は口だ。ピンボールでもダーツでも<br>相手を罵る。相手の頭に入り込めば、</div>
+    <div class="subt" id="sub249">戦いは半分終わっている。</div>
+    <div class="subt" id="sub250">試合が終われば相手を称える。それが彼の<br>ルールだ。</div>
+    <div class="subt" id="sub251">彼が誇る記録がある。試合を断ったことがない。<br>欠場したことがない。計量に失敗したことがない。</div>
+    <div class="subt" id="sub252">禁止薬物で陽性になったこともない。だから俺は<br>言いたいことを言う。</div>
+    <div class="subt" id="sub253">RIZINの密着カメラは、<br>フロリダの海が見えるアパートを映した。</div>
+    <div class="subt" id="sub254">朝はゆっくり起きてコーヒーを飲み、<br>ジムまで車で30分。</div>
+    <div class="subt" id="sub255">イタリアン・ギャングスターはキャラクターじゃな<br>い。</div>
+    <div class="subt" id="sub256">それが俺だ。</div>
+    <div class="subt" id="sub257">家族との距離は遠い。両親も兄たちもイリノイに<br>いる。</div>
+    <div class="subt" id="sub258">それでも彼は、生まれてから毎晩欠かさず母親に<br>おやすみを言い、毎日電話をしている。</div>
+    <div class="subt" id="sub259">スポンサーはほとんど付かない。使いもしない商品を<br>宣伝する偽物にはなりたくない。</div>
+    <div class="subt" id="sub260">禁止用語で契約が消えるなら、そんな金は<br>こちらから願い下げだ。彼はそう言い切る。</div>
+    <div class="subt" id="sub261">そして日本への愛情だけは、皮肉抜きで語る。</div>
+    <div class="subt" id="sub262">日本のファンは技も状況も理解している世界一の<br>ファンだ。</div>
+    <div class="subt" id="sub263">アメリカに帰るたびにRIZINの素晴らしさを話すの<br>が、自分の責任だと。</div>
+    <div class="subt" id="sub264">鹿志村戦の夜、<br>彼は9月の大阪大会に出たいと言った。</div>
+    <div class="subt" id="sub265">だが超RIZIN.5にも、10月3日の長崎大会にも、<br>王者の名前はなかった。</div>
+    <div class="subt" id="sub266">代わりに動いたのは挑戦者たちだ。2026年11月8日、<br>RIZIN.55。</div>
+    <div class="subt" id="sub267">鹿志村仁之介対太田忍、福田龍彌対キム・スーチョル。<br>バンタム級の2試合は、</div>
+    <div class="subt" id="sub268">事実上の挑戦者決定戦だ。</div>
+    <div class="subt" id="sub269">サバテロは井上戦の夜に福田を名指しし、<br>鹿志村戦の夜には井上との再戦にも言及した。</div>
+    <div class="subt" id="sub270">次の防衛戦は大晦日が濃厚だ。相手が誰であれ、<br>彼はまた罵り、また倒しに来る。</div>
+    <div class="subt" id="sub271">4歳でマットに立ち、大好きなフットボールを捨て、<br>故郷と家族を離れてフロリダへ渡った。</div>
+    <div class="subt" id="sub272">UFCに拒まれ、Bellatorで嫌われ、<br>日本で叱られた。</div>
+    <div class="subt" id="sub273">それでも彼は一度も試合を断らず、<br>一度も逃げなかった。愛するものより、</div>
+    <div class="subt" id="sub274">もっと愛するもののために犠牲を払う。</div>
+    <div class="subt" id="sub275">高校2年生の少年の選択は、<br>今もサバテロの生き方そのものだ。</div>
+    <div class="subt" id="sub276">87回の防衛は、まだ2回だ。あなたはこの王者を<br>どう見るか。ぜひコメントで教えてほしい。</div>
+    <div class="subt" id="sub277">チャンネル登録もよろしくお願いします。</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      const tl = gsap.timeline({paused:true});
+      tl.set('#bgp0',{opacity:1},0);
+      tl.set('#bgp1',{opacity:1},0);
+      tl.set('#bgp2',{opacity:1},0);
+      tl.set('#bgp3',{opacity:1},0);
+      tl.set('#bgp4',{opacity:1},0);
+      tl.set('#bgp5',{opacity:1},0);
+      tl.set('#bgp6',{opacity:1},0);
+      tl.set('#bgp7',{opacity:1},0);
+      tl.set('#bgp8',{opacity:1},0);
+      tl.set('#bgp9',{opacity:1},0);
+      tl.set('#bgp10',{opacity:1},0);
+      tl.set('#bgp11',{opacity:1},0);
+      tl.set('#bgp12',{opacity:1},0);
+      tl.set('#bgp13',{opacity:1},0);
+      tl.set('#bgp14',{opacity:1},0);
+      tl.set('#bgp15',{opacity:1},0);
+      tl.fromTo('#src0',{opacity:0},{opacity:1,duration:.4},0.60);
+      tl.to('#src0',{opacity:0,duration:.3},29.05);
+      tl.fromTo('#src1',{opacity:0},{opacity:1,duration:.4},29.52);
+      tl.to('#src1',{opacity:0,duration:.3},35.12);
+      tl.fromTo('#src2',{opacity:0},{opacity:1,duration:.4},35.59);
+      tl.to('#src2',{opacity:0,duration:.3},44.05);
+      tl.fromTo('#src3',{opacity:0},{opacity:1,duration:.4},44.52);
+      tl.to('#src3',{opacity:0,duration:.3},48.63);
+      tl.fromTo('#src4',{opacity:0},{opacity:1,duration:.4},49.10);
+      tl.to('#src4',{opacity:0,duration:.3},55.14);
+      tl.fromTo('#src5',{opacity:0},{opacity:1,duration:.4},55.61);
+      tl.to('#src5',{opacity:0,duration:.3},58.75);
+      tl.fromTo('#src6',{opacity:0},{opacity:1,duration:.4},59.22);
+      tl.to('#src6',{opacity:0,duration:.3},63.08);
+      tl.fromTo('#src7',{opacity:0},{opacity:1,duration:.4},63.55);
+      tl.to('#src7',{opacity:0,duration:.3},70.47);
+      tl.fromTo('#src8',{opacity:0},{opacity:1,duration:.4},70.94);
+      tl.to('#src8',{opacity:0,duration:.3},72.50);
+      tl.fromTo('#src9',{opacity:0},{opacity:1,duration:.4},72.97);
+      tl.to('#src9',{opacity:0,duration:.3},82.17);
+      tl.fromTo('#src10',{opacity:0},{opacity:1,duration:.4},82.64);
+      tl.to('#src10',{opacity:0,duration:.3},85.50);
+      tl.fromTo('#src11',{opacity:0},{opacity:1,duration:.4},85.97);
+      tl.to('#src11',{opacity:0,duration:.3},93.34);
+      tl.fromTo('#src12',{opacity:0},{opacity:1,duration:.4},93.81);
+      tl.to('#src12',{opacity:0,duration:.3},96.69);
+      tl.fromTo('#src13',{opacity:0},{opacity:1,duration:.4},97.16);
+      tl.to('#src13',{opacity:0,duration:.3},106.01);
+      tl.fromTo('#src14',{opacity:0},{opacity:1,duration:.4},106.48);
+      tl.to('#src14',{opacity:0,duration:.3},113.17);
+      tl.fromTo('#src15',{opacity:0},{opacity:1,duration:.4},113.64);
+      tl.to('#src15',{opacity:0,duration:.3},121.61);
+      tl.fromTo('#src16',{opacity:0},{opacity:1,duration:.4},122.08);
+      tl.to('#src16',{opacity:0,duration:.3},126.91);
+      tl.fromTo('#src17',{opacity:0},{opacity:1,duration:.4},127.38);
+      tl.to('#src17',{opacity:0,duration:.3},140.33);
+      tl.fromTo('#src18',{opacity:0},{opacity:1,duration:.4},140.80);
+      tl.to('#src18',{opacity:0,duration:.3},148.07);
+      tl.fromTo('#src19',{opacity:0},{opacity:1,duration:.4},148.54);
+      tl.to('#src19',{opacity:0,duration:.3},152.07);
+      tl.fromTo('#src20',{opacity:0},{opacity:1,duration:.4},152.54);
+      tl.to('#src20',{opacity:0,duration:.3},157.28);
+      tl.fromTo('#src21',{opacity:0},{opacity:1,duration:.4},157.75);
+      tl.to('#src21',{opacity:0,duration:.3},162.38);
+      tl.fromTo('#src22',{opacity:0},{opacity:1,duration:.4},162.85);
+      tl.to('#src22',{opacity:0,duration:.3},165.50);
+      tl.fromTo('#src23',{opacity:0},{opacity:1,duration:.4},165.97);
+      tl.to('#src23',{opacity:0,duration:.3},187.98);
+      tl.fromTo('#src24',{opacity:0},{opacity:1,duration:.4},188.45);
+      tl.to('#src24',{opacity:0,duration:.3},190.94);
+      tl.fromTo('#src25',{opacity:0},{opacity:1,duration:.4},191.41);
+      tl.to('#src25',{opacity:0,duration:.3},198.42);
+      tl.fromTo('#src26',{opacity:0},{opacity:1,duration:.4},198.89);
+      tl.to('#src26',{opacity:0,duration:.3},205.43);
+      tl.fromTo('#src27',{opacity:0},{opacity:1,duration:.4},205.90);
+      tl.to('#src27',{opacity:0,duration:.3},211.52);
+      tl.fromTo('#src28',{opacity:0},{opacity:1,duration:.4},211.99);
+      tl.to('#src28',{opacity:0,duration:.3},228.29);
+      tl.fromTo('#src29',{opacity:0},{opacity:1,duration:.4},228.76);
+      tl.to('#src29',{opacity:0,duration:.3},232.87);
+      tl.fromTo('#src30',{opacity:0},{opacity:1,duration:.4},233.34);
+      tl.to('#src30',{opacity:0,duration:.3},241.24);
+      tl.fromTo('#src31',{opacity:0},{opacity:1,duration:.4},241.71);
+      tl.to('#src31',{opacity:0,duration:.3},247.59);
+      tl.fromTo('#src32',{opacity:0},{opacity:1,duration:.4},248.06);
+      tl.to('#src32',{opacity:0,duration:.3},261.66);
+      tl.fromTo('#src33',{opacity:0},{opacity:1,duration:.4},262.13);
+      tl.to('#src33',{opacity:0,duration:.3},268.96);
+      tl.fromTo('#src34',{opacity:0},{opacity:1,duration:.4},269.43);
+      tl.to('#src34',{opacity:0,duration:.3},284.73);
+      tl.fromTo('#src35',{opacity:0},{opacity:1,duration:.4},285.20);
+      tl.to('#src35',{opacity:0,duration:.3},299.45);
+      tl.fromTo('#src36',{opacity:0},{opacity:1,duration:.4},299.92);
+      tl.to('#src36',{opacity:0,duration:.3},307.86);
+      tl.fromTo('#src37',{opacity:0},{opacity:1,duration:.4},308.33);
+      tl.to('#src37',{opacity:0,duration:.3},313.88);
+      tl.fromTo('#src38',{opacity:0},{opacity:1,duration:.4},314.36);
+      tl.to('#src38',{opacity:0,duration:.3},320.49);
+      tl.fromTo('#src39',{opacity:0},{opacity:1,duration:.4},320.96);
+      tl.to('#src39',{opacity:0,duration:.3},325.72);
+      tl.fromTo('#src40',{opacity:0},{opacity:1,duration:.4},326.19);
+      tl.to('#src40',{opacity:0,duration:.3},337.23);
+      tl.fromTo('#src41',{opacity:0},{opacity:1,duration:.4},337.70);
+      tl.to('#src41',{opacity:0,duration:.3},345.23);
+      tl.fromTo('#src42',{opacity:0},{opacity:1,duration:.4},345.70);
+      tl.to('#src42',{opacity:0,duration:.3},350.09);
+      tl.fromTo('#src43',{opacity:0},{opacity:1,duration:.4},350.56);
+      tl.to('#src43',{opacity:0,duration:.3},353.44);
+      tl.fromTo('#src44',{opacity:0},{opacity:1,duration:.4},353.91);
+      tl.to('#src44',{opacity:0,duration:.3},361.19);
+      tl.fromTo('#src45',{opacity:0},{opacity:1,duration:.4},361.66);
+      tl.to('#src45',{opacity:0,duration:.3},369.55);
+      tl.fromTo('#src46',{opacity:0},{opacity:1,duration:.4},370.02);
+      tl.to('#src46',{opacity:0,duration:.3},375.95);
+      tl.fromTo('#src47',{opacity:0},{opacity:1,duration:.4},376.42);
+      tl.to('#src47',{opacity:0,duration:.3},383.34);
+      tl.fromTo('#src48',{opacity:0},{opacity:1,duration:.4},383.81);
+      tl.to('#src48',{opacity:0,duration:.3},386.20);
+      tl.fromTo('#src49',{opacity:0},{opacity:1,duration:.4},386.67);
+      tl.to('#src49',{opacity:0,duration:.3},397.11);
+      tl.fromTo('#src50',{opacity:0},{opacity:1,duration:.4},397.57);
+      tl.to('#src50',{opacity:0,duration:.3},401.52);
+      tl.fromTo('#src51',{opacity:0},{opacity:1,duration:.4},401.99);
+      tl.to('#src51',{opacity:0,duration:.3},419.56);
+      tl.fromTo('#src52',{opacity:0},{opacity:1,duration:.4},420.03);
+      tl.to('#src52',{opacity:0,duration:.3},438.79);
+      tl.fromTo('#src53',{opacity:0},{opacity:1,duration:.4},439.26);
+      tl.to('#src53',{opacity:0,duration:.3},479.76);
+      tl.fromTo('#src54',{opacity:0},{opacity:1,duration:.4},480.23);
+      tl.to('#src54',{opacity:0,duration:.3},483.00);
+      tl.fromTo('#src55',{opacity:0},{opacity:1,duration:.4},483.47);
+      tl.to('#src55',{opacity:0,duration:.3},496.79);
+      tl.fromTo('#src56',{opacity:0},{opacity:1,duration:.4},497.25);
+      tl.to('#src56',{opacity:0,duration:.3},513.73);
+      tl.fromTo('#src57',{opacity:0},{opacity:1,duration:.4},514.20);
+      tl.to('#src57',{opacity:0,duration:.3},517.64);
+      tl.fromTo('#src58',{opacity:0},{opacity:1,duration:.4},518.11);
+      tl.to('#src58',{opacity:0,duration:.3},523.85);
+      tl.fromTo('#src59',{opacity:0},{opacity:1,duration:.4},524.32);
+      tl.to('#src59',{opacity:0,duration:.3},531.38);
+      tl.fromTo('#src60',{opacity:0},{opacity:1,duration:.4},531.85);
+      tl.to('#src60',{opacity:0,duration:.3},551.28);
+      tl.fromTo('#src61',{opacity:0},{opacity:1,duration:.4},551.75);
+      tl.to('#src61',{opacity:0,duration:.3},568.33);
+      tl.fromTo('#src62',{opacity:0},{opacity:1,duration:.4},568.80);
+      tl.to('#src62',{opacity:0,duration:.3},593.55);
+      tl.fromTo('#src63',{opacity:0},{opacity:1,duration:.4},594.02);
+      tl.to('#src63',{opacity:0,duration:.3},613.88);
+      tl.fromTo('#src64',{opacity:0},{opacity:1,duration:.4},614.35);
+      tl.to('#src64',{opacity:0,duration:.3},627.39);
+      tl.fromTo('#src65',{opacity:0},{opacity:1,duration:.4},627.86);
+      tl.to('#src65',{opacity:0,duration:.3},658.55);
+      tl.fromTo('#src66',{opacity:0},{opacity:1,duration:.4},659.02);
+      tl.to('#src66',{opacity:0,duration:.3},674.95);
+      tl.fromTo('#src67',{opacity:0},{opacity:1,duration:.4},675.42);
+      tl.to('#src67',{opacity:0,duration:.3},683.85);
+      tl.fromTo('#src68',{opacity:0},{opacity:1,duration:.4},684.32);
+      tl.to('#src68',{opacity:0,duration:.3},691.57);
+      tl.fromTo('#src69',{opacity:0},{opacity:1,duration:.4},692.04);
+      tl.to('#src69',{opacity:0,duration:.3},697.31);
+      tl.fromTo('#src70',{opacity:0},{opacity:1,duration:.4},697.78);
+      tl.to('#src70',{opacity:0,duration:.3},720.05);
+      tl.fromTo('#src71',{opacity:0},{opacity:1,duration:.4},720.52);
+      tl.to('#src71',{opacity:0,duration:.3},727.42);
+      tl.fromTo('#src72',{opacity:0},{opacity:1,duration:.4},727.89);
+      tl.to('#src72',{opacity:0,duration:.3},735.93);
+      tl.fromTo('#src73',{opacity:0},{opacity:1,duration:.4},736.40);
+      tl.to('#src73',{opacity:0,duration:.3},740.00);
+      tl.fromTo('#src74',{opacity:0},{opacity:1,duration:.4},740.47);
+      tl.to('#src74',{opacity:0,duration:.3},756.68);
+      tl.fromTo('#src75',{opacity:0},{opacity:1,duration:.4},757.15);
+      tl.to('#src75',{opacity:0,duration:.3},789.68);
+      tl.fromTo('#src76',{opacity:0},{opacity:1,duration:.4},790.15);
+      tl.to('#src76',{opacity:0,duration:.3},796.19);
+      tl.fromTo('#src77',{opacity:0},{opacity:1,duration:.4},796.66);
+      tl.to('#src77',{opacity:0,duration:.3},816.41);
+      tl.fromTo('#src78',{opacity:0},{opacity:1,duration:.4},816.88);
+      tl.to('#src78',{opacity:0,duration:.3},833.36);
+      tl.fromTo('#src79',{opacity:0},{opacity:1,duration:.4},833.83);
+      tl.to('#src79',{opacity:0,duration:.3},842.98);
+      tl.fromTo('#src80',{opacity:0},{opacity:1,duration:.4},843.45);
+      tl.to('#src80',{opacity:0,duration:.3},853.70);
+      tl.fromTo('#src81',{opacity:0},{opacity:1,duration:.4},854.17);
+      tl.to('#src81',{opacity:0,duration:.3},893.71);
+      tl.fromTo('#src82',{opacity:0},{opacity:1,duration:.4},894.17);
+      tl.to('#src82',{opacity:0,duration:.3},906.84);
+      tl.fromTo('#src83',{opacity:0},{opacity:1,duration:.4},907.31);
+      tl.to('#src83',{opacity:0,duration:.3},915.21);
+      tl.fromTo('#src84',{opacity:0},{opacity:1,duration:.4},915.68);
+      tl.to('#src84',{opacity:0,duration:.3},928.62);
+      tl.fromTo('#src85',{opacity:0},{opacity:1,duration:.4},929.09);
+      tl.to('#src85',{opacity:0,duration:.3},935.21);
+      tl.fromTo('#src86',{opacity:0},{opacity:1,duration:.4},935.67);
+      tl.to('#src86',{opacity:0,duration:.3},970.94);
+      tl.fromTo('#src87',{opacity:0},{opacity:1,duration:.4},971.41);
+      tl.to('#src87',{opacity:0,duration:.3},974.97);
+      tl.fromTo('#src88',{opacity:0},{opacity:1,duration:.4},975.44);
+      tl.to('#src88',{opacity:0,duration:.3},982.60);
+      tl.fromTo('#src89',{opacity:0},{opacity:1,duration:.4},983.06);
+      tl.to('#src89',{opacity:0,duration:.3},985.85);
+      tl.fromTo('#src90',{opacity:0},{opacity:1,duration:.4},986.32);
+      tl.to('#src90',{opacity:0,duration:.3},994.07);
+      tl.fromTo('#src91',{opacity:0},{opacity:1,duration:.4},994.54);
+      tl.to('#src91',{opacity:0,duration:.3},1001.55);
+      tl.fromTo('#src92',{opacity:0},{opacity:1,duration:.4},1002.02);
+      tl.to('#src92',{opacity:0,duration:.3},1005.90);
+      tl.fromTo('#src93',{opacity:0},{opacity:1,duration:.4},1006.37);
+      tl.to('#src93',{opacity:0,duration:.3},1019.13);
+      tl.fromTo('#src94',{opacity:0},{opacity:1,duration:.4},1019.60);
+      tl.to('#src94',{opacity:0,duration:.3},1028.09);
+      tl.fromTo('#src95',{opacity:0},{opacity:1,duration:.4},1028.56);
+      tl.to('#src95',{opacity:0,duration:.3},1035.76);
+      tl.fromTo('#src96',{opacity:0},{opacity:1,duration:.4},1036.23);
+      tl.to('#src96',{opacity:0,duration:.3},1093.06);
+      tl.fromTo('#src97',{opacity:0},{opacity:1,duration:.4},1093.53);
+      tl.to('#src97',{opacity:0,duration:.3},1130.68);
+      tl.fromTo('#src98',{opacity:0},{opacity:1,duration:.4},1131.15);
+      tl.to('#src98',{opacity:0,duration:.3},1134.75);
+      tl.fromTo('#src99',{opacity:0},{opacity:1,duration:.4},1135.22);
+      tl.to('#src99',{opacity:0,duration:.3},1145.67);
+      tl.fromTo('#src100',{opacity:0},{opacity:1,duration:.4},1146.14);
+      tl.to('#src100',{opacity:0,duration:.3},1152.53);
+      tl.fromTo('#src101',{opacity:0},{opacity:1,duration:.4},1153.00);
+      tl.to('#src101',{opacity:0,duration:.3},1164.28);
+      tl.fromTo('#src102',{opacity:0},{opacity:1,duration:.4},1164.74);
+      tl.to('#src102',{opacity:0,duration:.3},1169.99);
+      tl.fromTo('#src103',{opacity:0},{opacity:1,duration:.4},1170.46);
+      tl.to('#src103',{opacity:0,duration:.3},1212.66);
+      tl.fromTo('#src104',{opacity:0},{opacity:1,duration:.4},1213.13);
+      tl.to('#src104',{opacity:0,duration:.3},1220.92);
+      tl.fromTo('#src105',{opacity:0},{opacity:1,duration:.4},1221.39);
+      tl.to('#src105',{opacity:0,duration:.3},1233.73);
+      tl.fromTo('#src106',{opacity:0},{opacity:1,duration:.4},1234.20);
+      tl.to('#src106',{opacity:0,duration:.3},1245.89);
+      tl.fromTo('#src107',{opacity:0},{opacity:1,duration:.4},1246.36);
+      tl.to('#src107',{opacity:0,duration:.3},1259.73);
+      tl.fromTo('#src108',{opacity:0},{opacity:1,duration:.4},1260.20);
+      tl.to('#src108',{opacity:0,duration:.3},1271.71);
+      tl.fromTo('#src109',{opacity:0},{opacity:1,duration:.4},1272.18);
+      tl.to('#src109',{opacity:0,duration:.3},1277.15);
+      tl.fromTo('#src110',{opacity:0},{opacity:1,duration:.4},1277.62);
+      tl.to('#src110',{opacity:0,duration:.3},1312.71);
+      tl.fromTo('#src111',{opacity:0},{opacity:1,duration:.4},1313.18);
+      tl.to('#src111',{opacity:0,duration:.3},1336.12);
+      tl.fromTo('#src112',{opacity:0},{opacity:1,duration:.4},1336.59);
+      tl.to('#src112',{opacity:0,duration:.3},1342.65);
+      tl.fromTo('#src113',{opacity:0},{opacity:1,duration:.4},1343.12);
+      tl.to('#src113',{opacity:0,duration:.3},1348.23);
+      tl.fromTo('#src114',{opacity:0},{opacity:1,duration:.4},1348.70);
+      tl.to('#src114',{opacity:0,duration:.3},1353.02);
+      tl.fromTo('#src115',{opacity:0},{opacity:1,duration:.4},1353.49);
+      tl.to('#src115',{opacity:0,duration:.3},1360.02);
+      tl.fromTo('#src116',{opacity:0},{opacity:1,duration:.4},1360.49);
+      tl.to('#src116',{opacity:0,duration:.3},1365.23);
+      tl.fromTo('#src117',{opacity:0},{opacity:1,duration:.4},1365.70);
+      tl.to('#src117',{opacity:0,duration:.3},1372.37);
+      tl.fromTo('#src118',{opacity:0},{opacity:1,duration:.4},1372.84);
+      tl.to('#src118',{opacity:0,duration:.3},1381.06);
+      tl.fromTo('#src119',{opacity:0},{opacity:1,duration:.4},1381.53);
+      tl.to('#src119',{opacity:0,duration:.3},1385.62);
+      tl.fromTo('#src120',{opacity:0},{opacity:1,duration:.4},1386.09);
+      tl.to('#src120',{opacity:0,duration:.3},1389.92);
+      tl.fromTo('#src121',{opacity:0},{opacity:1,duration:.4},1390.39);
+      tl.to('#src121',{opacity:0,duration:.3},1397.55);
+      tl.fromTo('#src122',{opacity:0},{opacity:1,duration:.4},1398.02);
+      tl.to('#src122',{opacity:0,duration:.3},1404.87);
+      tl.fromTo('#src123',{opacity:0},{opacity:1,duration:.4},1405.34);
+      tl.to('#src123',{opacity:0,duration:.3},1413.38);
+      tl.fromTo('#src124',{opacity:0},{opacity:1,duration:.4},1413.85);
+      tl.to('#src124',{opacity:0,duration:.3},1417.55);
+      tl.fromTo('#src125',{opacity:0},{opacity:1,duration:.4},1418.02);
+      tl.to('#src125',{opacity:0,duration:.3},1430.64);
+      tl.fromTo('#src126',{opacity:0},{opacity:1,duration:.4},1431.11);
+      tl.to('#src126',{opacity:0,duration:.3},1444.75);
+      tl.fromTo('#src127',{opacity:0},{opacity:1,duration:.4},1445.22);
+      tl.to('#src127',{opacity:0,duration:.3},1462.54);
+      tl.fromTo('#src128',{opacity:0},{opacity:1,duration:.4},1463.01);
+      tl.to('#src128',{opacity:0,duration:.3},1468.76);
+      tl.fromTo('#src129',{opacity:0},{opacity:1,duration:.4},1469.22);
+      tl.to('#src129',{opacity:0,duration:.3},1489.28);
+      tl.fromTo('#src130',{opacity:0},{opacity:1,duration:.4},1489.75);
+      tl.to('#src130',{opacity:0,duration:.3},1494.38);
+      tl.fromTo('#src131',{opacity:0},{opacity:1,duration:.4},1494.85);
+      tl.to('#src131',{opacity:0,duration:.3},1505.33);
+      tl.fromTo('#src132',{opacity:0},{opacity:1,duration:.4},1505.80);
+      tl.to('#src132',{opacity:0,duration:.3},1520.23);
+      tl.fromTo('#src133',{opacity:0},{opacity:1,duration:.4},1520.70);
+      tl.to('#src133',{opacity:0,duration:.3},1527.16);
+      tl.fromTo('#src134',{opacity:0},{opacity:1,duration:.4},1527.63);
+      tl.to('#src134',{opacity:0,duration:.3},1535.04);
+      tl.fromTo('#src135',{opacity:0},{opacity:1,duration:.4},1535.51);
+      tl.to('#src135',{opacity:0,duration:.3},1541.60);
+      tl.fromTo('#src136',{opacity:0},{opacity:1,duration:.4},1542.07);
+      tl.to('#src136',{opacity:0,duration:.3},1546.65);
+      tl.fromTo('#src137',{opacity:0},{opacity:1,duration:.4},1547.12);
+      tl.to('#src137',{opacity:0,duration:.3},1555.62);
+      tl.fromTo('#src138',{opacity:0},{opacity:1,duration:.4},1556.09);
+      tl.to('#src138',{opacity:0,duration:.3},1560.71);
+      tl.fromTo('#src139',{opacity:0},{opacity:1,duration:.4},1561.18);
+      tl.to('#src139',{opacity:0,duration:.3},1571.23);
+      tl.fromTo('#bigttl .ttlrow:nth-child(1)',{opacity:0,y:60},{opacity:1,y:0,duration:.6,ease:'power3.out'},24.24);
+      tl.fromTo('#bigttl .ttlrow:nth-child(2)',{opacity:0,y:60},{opacity:1,y:0,duration:.6,ease:'power3.out'},24.84);
+      tl.to('#bigttl',{opacity:0,duration:.5},48.08);
+      tl.fromTo('#chap0 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},72.72);
+      tl.fromTo('#chap0 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},72.87);
+      tl.to('#chap0',{opacity:0,duration:.4},76.07);
+      tl.fromTo('#ctag0',{opacity:0},{opacity:1,duration:.5},76.27);
+      tl.to('#ctag0',{opacity:0,duration:.3},121.48);
+      tl.fromTo('#chap1 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},121.83);
+      tl.fromTo('#chap1 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},121.98);
+      tl.to('#chap1',{opacity:0,duration:.4},125.18);
+      tl.fromTo('#ctag1',{opacity:0},{opacity:1,duration:.5},125.38);
+      tl.to('#ctag1',{opacity:0,duration:.3},190.81);
+      tl.fromTo('#chap2 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},191.16);
+      tl.fromTo('#chap2 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},191.31);
+      tl.to('#chap2',{opacity:0,duration:.4},194.51);
+      tl.fromTo('#ctag2',{opacity:0},{opacity:1,duration:.5},194.71);
+      tl.to('#ctag2',{opacity:0,duration:.3},261.53);
+      tl.fromTo('#chap3 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},261.88);
+      tl.fromTo('#chap3 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},262.03);
+      tl.to('#chap3',{opacity:0,duration:.4},265.23);
+      tl.fromTo('#ctag3',{opacity:0},{opacity:1,duration:.5},265.43);
+      tl.to('#ctag3',{opacity:0,duration:.3},337.10);
+      tl.fromTo('#chap4 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},337.45);
+      tl.fromTo('#chap4 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},337.60);
+      tl.to('#chap4',{opacity:0,duration:.4},340.80);
+      tl.fromTo('#ctag4',{opacity:0},{opacity:1,duration:.5},341.00);
+      tl.to('#ctag4',{opacity:0,duration:.3},386.07);
+      tl.fromTo('#chap5 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},386.42);
+      tl.fromTo('#chap5 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},386.57);
+      tl.to('#chap5',{opacity:0,duration:.4},389.77);
+      tl.fromTo('#ctag5',{opacity:0},{opacity:1,duration:.5},389.97);
+      tl.to('#ctag5',{opacity:0,duration:.3},471.17);
+      tl.fromTo('#chap6 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},471.52);
+      tl.fromTo('#chap6 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},471.67);
+      tl.to('#chap6',{opacity:0,duration:.4},474.87);
+      tl.fromTo('#ctag6',{opacity:0},{opacity:1,duration:.5},475.07);
+      tl.to('#ctag6',{opacity:0,duration:.3},523.72);
+      tl.fromTo('#chap7 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},524.07);
+      tl.fromTo('#chap7 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},524.22);
+      tl.to('#chap7',{opacity:0,duration:.4},527.42);
+      tl.fromTo('#ctag7',{opacity:0},{opacity:1,duration:.5},527.62);
+      tl.to('#ctag7',{opacity:0,duration:.3},613.75);
+      tl.fromTo('#chap8 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},614.10);
+      tl.fromTo('#chap8 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},614.25);
+      tl.to('#chap8',{opacity:0,duration:.4},617.45);
+      tl.fromTo('#ctag8',{opacity:0},{opacity:1,duration:.5},617.65);
+      tl.to('#ctag8',{opacity:0,duration:.3},727.29);
+      tl.fromTo('#chap9 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},727.64);
+      tl.fromTo('#chap9 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},727.79);
+      tl.to('#chap9',{opacity:0,duration:.4},730.99);
+      tl.fromTo('#ctag9',{opacity:0},{opacity:1,duration:.5},731.19);
+      tl.to('#ctag9',{opacity:0,duration:.3},816.28);
+      tl.fromTo('#chap10 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},816.63);
+      tl.fromTo('#chap10 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},816.78);
+      tl.to('#chap10',{opacity:0,duration:.4},819.98);
+      tl.fromTo('#ctag10',{opacity:0},{opacity:1,duration:.5},820.18);
+      tl.to('#ctag10',{opacity:0,duration:.3},920.59);
+      tl.fromTo('#chap11 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},920.94);
+      tl.fromTo('#chap11 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},921.09);
+      tl.to('#chap11',{opacity:0,duration:.4},924.29);
+      tl.fromTo('#ctag11',{opacity:0},{opacity:1,duration:.5},924.49);
+      tl.to('#ctag11',{opacity:0,duration:.3},1005.77);
+      tl.fromTo('#chap12 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},1006.12);
+      tl.fromTo('#chap12 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},1006.27);
+      tl.to('#chap12',{opacity:0,duration:.4},1009.47);
+      tl.fromTo('#ctag12',{opacity:0},{opacity:1,duration:.5},1009.67);
+      tl.to('#ctag12',{opacity:0,duration:.3},1134.62);
+      tl.fromTo('#chap13 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},1134.97);
+      tl.fromTo('#chap13 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},1135.12);
+      tl.to('#chap13',{opacity:0,duration:.4},1138.32);
+      tl.fromTo('#ctag13',{opacity:0},{opacity:1,duration:.5},1138.52);
+      tl.to('#ctag13',{opacity:0,duration:.3},1233.60);
+      tl.fromTo('#chap14 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},1233.95);
+      tl.fromTo('#chap14 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},1234.10);
+      tl.to('#chap14',{opacity:0,duration:.4},1237.30);
+      tl.fromTo('#ctag14',{opacity:0},{opacity:1,duration:.5},1237.50);
+      tl.to('#ctag14',{opacity:0,duration:.3},1359.89);
+      tl.fromTo('#chap15 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},1360.24);
+      tl.fromTo('#chap15 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},1360.39);
+      tl.to('#chap15',{opacity:0,duration:.4},1363.59);
+      tl.fromTo('#ctag15',{opacity:0},{opacity:1,duration:.5},1363.79);
+      tl.to('#ctag15',{opacity:0,duration:.3},1444.62);
+      tl.fromTo('#chap16 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},1444.97);
+      tl.fromTo('#chap16 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},1445.12);
+      tl.to('#chap16',{opacity:0,duration:.4},1448.32);
+      tl.fromTo('#ctag16',{opacity:0},{opacity:1,duration:.5},1448.52);
+      tl.to('#ctag16',{opacity:0,duration:.3},1494.25);
+      tl.fromTo('#chap17 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},1494.60);
+      tl.fromTo('#chap17 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},1494.75);
+      tl.to('#chap17',{opacity:0,duration:.4},1497.95);
+      tl.fromTo('#ctag17',{opacity:0},{opacity:1,duration:.5},1498.15);
+      tl.to('#ctag17',{opacity:0,duration:.3},1534.91);
+      tl.fromTo('#chap18 .chnum',{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:'power3.out'},1535.26);
+      tl.fromTo('#chap18 .chttl',{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:'power3.out'},1535.41);
+      tl.to('#chap18',{opacity:0,duration:.4},1538.61);
+      tl.fromTo('#ctag18',{opacity:0},{opacity:1,duration:.5},1538.81);
+      tl.to('#ctag18',{opacity:0,duration:.3},1571.18);
+      tl.fromTo('#cc0',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},72.92);
+      tl.to('#cc0',{opacity:0,y:-14,duration:.35,ease:'power1.in'},85.30);
+      tl.fromTo('#cc1',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},201.25);
+      tl.to('#cc1',{opacity:0,y:-14,duration:.35,ease:'power1.in'},217.62);
+      tl.fromTo('#cc2',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},285.15);
+      tl.to('#cc2',{opacity:0,y:-14,duration:.35,ease:'power1.in'},299.25);
+      tl.fromTo('#cc3',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},483.42);
+      tl.to('#cc3',{opacity:0,y:-14,duration:.35,ease:'power1.in'},496.58);
+      tl.fromTo('#cc4',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},581.70);
+      tl.to('#cc4',{opacity:0,y:-14,duration:.35,ease:'power1.in'},596.92);
+      tl.fromTo('#cc5',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},650.79);
+      tl.to('#cc5',{opacity:0,y:-14,duration:.35,ease:'power1.in'},664.75);
+      tl.fromTo('#cc6',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},894.12);
+      tl.to('#cc6',{opacity:0,y:-14,duration:.35,ease:'power1.in'},906.64);
+      tl.fromTo('#cc7',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},1093.48);
+      tl.to('#cc7',{opacity:0,y:-14,duration:.35,ease:'power1.in'},1109.86);
+      tl.fromTo('#cc8',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},1194.88);
+      tl.to('#cc8',{opacity:0,y:-14,duration:.35,ease:'power1.in'},1207.58);
+      tl.fromTo('#cc9',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},1328.22);
+      tl.to('#cc9',{opacity:0,y:-14,duration:.35,ease:'power1.in'},1342.45);
+      tl.fromTo('#cc10',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},1431.06);
+      tl.to('#cc10',{opacity:0,y:-14,duration:.35,ease:'power1.in'},1444.32);
+      tl.fromTo('#cc11',{opacity:0,x:60,y:18},{opacity:1,x:0,y:0,duration:.5,ease:'back.out(1.5)'},1505.75);
+      tl.to('#cc11',{opacity:0,y:-14,duration:.35,ease:'power1.in'},1520.03);
+      tl.fromTo('#sub0',{opacity:0},{opacity:1,duration:.18},0.30);
+      tl.to('#sub0',{opacity:0,duration:.14},6.12);
+      tl.fromTo('#sub1',{opacity:0},{opacity:1,duration:.18},6.17);
+      tl.to('#sub1',{opacity:0,duration:.14},9.77);
+      tl.fromTo('#sub2',{opacity:0},{opacity:1,duration:.18},23.04);
+      tl.to('#sub2',{opacity:0,duration:.14},29.07);
+      tl.fromTo('#sub3',{opacity:0},{opacity:1,duration:.18},29.22);
+      tl.to('#sub3',{opacity:0,duration:.14},35.02);
+      tl.fromTo('#sub4',{opacity:0},{opacity:1,duration:.18},35.30);
+      tl.to('#sub4',{opacity:0,duration:.14},42.63);
+      tl.fromTo('#sub5',{opacity:0},{opacity:1,duration:.18},42.68);
+      tl.to('#sub5',{opacity:0,duration:.14},44.07);
+      tl.fromTo('#sub6',{opacity:0},{opacity:1,duration:.18},44.22);
+      tl.to('#sub6',{opacity:0,duration:.14},48.53);
+      tl.fromTo('#sub7',{opacity:0},{opacity:1,duration:.18},48.80);
+      tl.to('#sub7',{opacity:0,duration:.14},55.16);
+      tl.fromTo('#sub8',{opacity:0},{opacity:1,duration:.18},55.31);
+      tl.to('#sub8',{opacity:0,duration:.14},58.65);
+      tl.fromTo('#sub9',{opacity:0},{opacity:1,duration:.18},58.92);
+      tl.to('#sub9',{opacity:0,duration:.14},63.10);
+      tl.fromTo('#sub10',{opacity:0},{opacity:1,duration:.18},63.25);
+      tl.to('#sub10',{opacity:0,duration:.14},70.49);
+      tl.fromTo('#sub11',{opacity:0},{opacity:1,duration:.18},70.64);
+      tl.to('#sub11',{opacity:0,duration:.14},72.17);
+      tl.fromTo('#sub12',{opacity:0},{opacity:1,duration:.18},72.67);
+      tl.to('#sub12',{opacity:0,duration:.14},79.31);
+      tl.fromTo('#sub13',{opacity:0},{opacity:1,duration:.18},79.36);
+      tl.to('#sub13',{opacity:0,duration:.14},82.19);
+      tl.fromTo('#sub14',{opacity:0},{opacity:1,duration:.18},82.34);
+      tl.to('#sub14',{opacity:0,duration:.14},85.40);
+      tl.fromTo('#sub15',{opacity:0},{opacity:1,duration:.18},85.67);
+      tl.to('#sub15',{opacity:0,duration:.14},89.52);
+      tl.fromTo('#sub16',{opacity:0},{opacity:1,duration:.18},89.67);
+      tl.to('#sub16',{opacity:0,duration:.14},93.24);
+      tl.fromTo('#sub17',{opacity:0},{opacity:1,duration:.18},93.51);
+      tl.to('#sub17',{opacity:0,duration:.14},96.71);
+      tl.fromTo('#sub18',{opacity:0},{opacity:1,duration:.18},96.86);
+      tl.to('#sub18',{opacity:0,duration:.14},105.91);
+      tl.fromTo('#sub19',{opacity:0},{opacity:1,duration:.18},106.18);
+      tl.to('#sub19',{opacity:0,duration:.14},113.19);
+      tl.fromTo('#sub20',{opacity:0},{opacity:1,duration:.18},113.34);
+      tl.to('#sub20',{opacity:0,duration:.14},119.24);
+      tl.fromTo('#sub21',{opacity:0},{opacity:1,duration:.18},119.29);
+      tl.to('#sub21',{opacity:0,duration:.14},121.28);
+      tl.fromTo('#sub22',{opacity:0},{opacity:1,duration:.18},121.78);
+      tl.to('#sub22',{opacity:0,duration:.14},126.93);
+      tl.fromTo('#sub23',{opacity:0},{opacity:1,duration:.18},127.08);
+      tl.to('#sub23',{opacity:0,duration:.14},132.65);
+      tl.fromTo('#sub24',{opacity:0},{opacity:1,duration:.18},132.92);
+      tl.to('#sub24',{opacity:0,duration:.14},140.35);
+      tl.fromTo('#sub25',{opacity:0},{opacity:1,duration:.18},140.50);
+      tl.to('#sub25',{opacity:0,duration:.14},147.97);
+      tl.fromTo('#sub26',{opacity:0},{opacity:1,duration:.18},148.24);
+      tl.to('#sub26',{opacity:0,duration:.14},152.09);
+      tl.fromTo('#sub27',{opacity:0},{opacity:1,duration:.18},152.24);
+      tl.to('#sub27',{opacity:0,duration:.14},157.30);
+      tl.fromTo('#sub28',{opacity:0},{opacity:1,duration:.18},157.45);
+      tl.to('#sub28',{opacity:0,duration:.14},162.28);
+      tl.fromTo('#sub29',{opacity:0},{opacity:1,duration:.18},162.55);
+      tl.to('#sub29',{opacity:0,duration:.14},165.51);
+      tl.fromTo('#sub30',{opacity:0},{opacity:1,duration:.18},165.66);
+      tl.to('#sub30',{opacity:0,duration:.14},170.72);
+      tl.fromTo('#sub31',{opacity:0},{opacity:1,duration:.18},170.87);
+      tl.to('#sub31',{opacity:0,duration:.14},175.19);
+      tl.fromTo('#sub32',{opacity:0},{opacity:1,duration:.18},175.46);
+      tl.to('#sub32',{opacity:0,duration:.14},181.96);
+      tl.fromTo('#sub33',{opacity:0},{opacity:1,duration:.18},182.11);
+      tl.to('#sub33',{opacity:0,duration:.14},188.00);
+      tl.fromTo('#sub34',{opacity:0},{opacity:1,duration:.18},188.15);
+      tl.to('#sub34',{opacity:0,duration:.14},190.61);
+      tl.fromTo('#sub35',{opacity:0},{opacity:1,duration:.18},191.11);
+      tl.to('#sub35',{opacity:0,duration:.14},194.75);
+      tl.fromTo('#sub36',{opacity:0},{opacity:1,duration:.18},194.80);
+      tl.to('#sub36',{opacity:0,duration:.14},198.44);
+      tl.fromTo('#sub37',{opacity:0},{opacity:1,duration:.18},198.59);
+      tl.to('#sub37',{opacity:0,duration:.14},200.72);
+      tl.fromTo('#sub38',{opacity:0},{opacity:1,duration:.18},201.00);
+      tl.to('#sub38',{opacity:0,duration:.14},205.45);
+      tl.fromTo('#sub39',{opacity:0},{opacity:1,duration:.18},205.60);
+      tl.to('#sub39',{opacity:0,duration:.14},211.54);
+      tl.fromTo('#sub40',{opacity:0},{opacity:1,duration:.18},211.69);
+      tl.to('#sub40',{opacity:0,duration:.14},217.72);
+      tl.fromTo('#sub41',{opacity:0},{opacity:1,duration:.18},217.99);
+      tl.to('#sub41',{opacity:0,duration:.14},224.40);
+      tl.fromTo('#sub42',{opacity:0},{opacity:1,duration:.18},224.55);
+      tl.to('#sub42',{opacity:0,duration:.14},228.31);
+      tl.fromTo('#sub43',{opacity:0},{opacity:1,duration:.18},228.46);
+      tl.to('#sub43',{opacity:0,duration:.14},232.77);
+      tl.fromTo('#sub44',{opacity:0},{opacity:1,duration:.18},233.04);
+      tl.to('#sub44',{opacity:0,duration:.14},241.26);
+      tl.fromTo('#sub45',{opacity:0},{opacity:1,duration:.18},241.41);
+      tl.to('#sub45',{opacity:0,duration:.14},247.49);
+      tl.fromTo('#sub46',{opacity:0},{opacity:1,duration:.18},247.76);
+      tl.to('#sub46',{opacity:0,duration:.14},250.08);
+      tl.fromTo('#sub47',{opacity:0},{opacity:1,duration:.18},250.23);
+      tl.to('#sub47',{opacity:0,duration:.14},254.40);
+      tl.fromTo('#sub48',{opacity:0},{opacity:1,duration:.18},254.45);
+      tl.to('#sub48',{opacity:0,duration:.14},257.56);
+      tl.fromTo('#sub49',{opacity:0},{opacity:1,duration:.18},257.71);
+      tl.to('#sub49',{opacity:0,duration:.14},261.33);
+      tl.fromTo('#sub50',{opacity:0},{opacity:1,duration:.18},261.83);
+      tl.to('#sub50',{opacity:0,duration:.14},268.98);
+      tl.fromTo('#sub51',{opacity:0},{opacity:1,duration:.18},269.13);
+      tl.to('#sub51',{opacity:0,duration:.14},271.17);
+      tl.fromTo('#sub52',{opacity:0},{opacity:1,duration:.18},271.44);
+      tl.to('#sub52',{opacity:0,duration:.14},276.77);
+      tl.fromTo('#sub53',{opacity:0},{opacity:1,duration:.18},276.93);
+      tl.to('#sub53',{opacity:0,duration:.14},284.63);
+      tl.fromTo('#sub54',{opacity:0},{opacity:1,duration:.18},284.90);
+      tl.to('#sub54',{opacity:0,duration:.14},288.81);
+      tl.fromTo('#sub55',{opacity:0},{opacity:1,duration:.18},288.86);
+      tl.to('#sub55',{opacity:0,duration:.14},291.49);
+      tl.fromTo('#sub56',{opacity:0},{opacity:1,duration:.18},291.64);
+      tl.to('#sub56',{opacity:0,duration:.14},295.70);
+      tl.fromTo('#sub57',{opacity:0},{opacity:1,duration:.18},295.75);
+      tl.to('#sub57',{opacity:0,duration:.14},299.35);
+      tl.fromTo('#sub58',{opacity:0},{opacity:1,duration:.18},299.62);
+      tl.to('#sub58',{opacity:0,duration:.14},305.22);
+      tl.fromTo('#sub59',{opacity:0},{opacity:1,duration:.18},305.27);
+      tl.to('#sub59',{opacity:0,duration:.14},307.88);
+      tl.fromTo('#sub60',{opacity:0},{opacity:1,duration:.18},308.03);
+      tl.to('#sub60',{opacity:0,duration:.14},313.79);
+      tl.fromTo('#sub61',{opacity:0},{opacity:1,duration:.18},314.06);
+      tl.to('#sub61',{opacity:0,duration:.14},316.44);
+      tl.fromTo('#sub62',{opacity:0},{opacity:1,duration:.18},316.49);
+      tl.to('#sub62',{opacity:0,duration:.14},320.51);
+      tl.fromTo('#sub63',{opacity:0},{opacity:1,duration:.18},320.66);
+      tl.to('#sub63',{opacity:0,duration:.14},325.62);
+      tl.fromTo('#sub64',{opacity:0},{opacity:1,duration:.18},325.89);
+      tl.to('#sub64',{opacity:0,duration:.14},331.57);
+      tl.fromTo('#sub65',{opacity:0},{opacity:1,duration:.18},331.62);
+      tl.to('#sub65',{opacity:0,duration:.14},333.27);
+      tl.fromTo('#sub66',{opacity:0},{opacity:1,duration:.18},333.42);
+      tl.to('#sub66',{opacity:0,duration:.14},336.90);
+      tl.fromTo('#sub67',{opacity:0},{opacity:1,duration:.18},337.40);
+      tl.to('#sub67',{opacity:0,duration:.14},340.19);
+      tl.fromTo('#sub68',{opacity:0},{opacity:1,duration:.18},340.24);
+      tl.to('#sub68',{opacity:0,duration:.14},345.25);
+      tl.fromTo('#sub69',{opacity:0},{opacity:1,duration:.18},345.40);
+      tl.to('#sub69',{opacity:0,duration:.14},349.99);
+      tl.fromTo('#sub70',{opacity:0},{opacity:1,duration:.18},350.26);
+      tl.to('#sub70',{opacity:0,duration:.14},353.46);
+      tl.fromTo('#sub71',{opacity:0},{opacity:1,duration:.18},353.61);
+      tl.to('#sub71',{opacity:0,duration:.14},358.65);
+      tl.fromTo('#sub72',{opacity:0},{opacity:1,duration:.18},358.70);
+      tl.to('#sub72',{opacity:0,duration:.14},361.08);
+      tl.fromTo('#sub73',{opacity:0},{opacity:1,duration:.18},361.36);
+      tl.to('#sub73',{opacity:0,duration:.14},369.57);
+      tl.fromTo('#sub74',{opacity:0},{opacity:1,duration:.18},369.72);
+      tl.to('#sub74',{opacity:0,duration:.14},375.85);
+      tl.fromTo('#sub75',{opacity:0},{opacity:1,duration:.18},376.12);
+      tl.to('#sub75',{opacity:0,duration:.14},381.23);
+      tl.fromTo('#sub76',{opacity:0},{opacity:1,duration:.18},381.28);
+      tl.to('#sub76',{opacity:0,duration:.14},383.36);
+      tl.fromTo('#sub77',{opacity:0},{opacity:1,duration:.18},383.51);
+      tl.to('#sub77',{opacity:0,duration:.14},385.87);
+      tl.fromTo('#sub78',{opacity:0},{opacity:1,duration:.18},386.37);
+      tl.to('#sub78',{opacity:0,duration:.14},393.93);
+      tl.fromTo('#sub79',{opacity:0},{opacity:1,duration:.18},393.98);
+      tl.to('#sub79',{opacity:0,duration:.14},397.00);
+      tl.fromTo('#sub80',{opacity:0},{opacity:1,duration:.18},397.27);
+      tl.to('#sub80',{opacity:0,duration:.14},401.54);
+      tl.fromTo('#sub81',{opacity:0},{opacity:1,duration:.18},401.69);
+      tl.to('#sub81',{opacity:0,duration:.14},410.05);
+      tl.fromTo('#sub82',{opacity:0},{opacity:1,duration:.18},410.32);
+      tl.to('#sub82',{opacity:0,duration:.14},419.46);
+      tl.fromTo('#sub83',{opacity:0},{opacity:1,duration:.18},419.73);
+      tl.to('#sub83',{opacity:0,duration:.14},424.29);
+      tl.fromTo('#sub84',{opacity:0},{opacity:1,duration:.18},424.33);
+      tl.to('#sub84',{opacity:0,duration:.14},427.35);
+      tl.fromTo('#sub85',{opacity:0},{opacity:1,duration:.18},427.50);
+      tl.to('#sub85',{opacity:0,duration:.14},432.32);
+      tl.fromTo('#sub86',{opacity:0},{opacity:1,duration:.18},432.59);
+      tl.to('#sub86',{opacity:0,duration:.14},438.81);
+      tl.fromTo('#sub87',{opacity:0},{opacity:1,duration:.18},438.96);
+      tl.to('#sub87',{opacity:0,duration:.14},446.11);
+      tl.fromTo('#sub88',{opacity:0},{opacity:1,duration:.18},458.38);
+      tl.to('#sub88',{opacity:0,duration:.14},465.44);
+      tl.fromTo('#sub89',{opacity:0},{opacity:1,duration:.18},465.59);
+      tl.to('#sub89',{opacity:0,duration:.14},470.97);
+      tl.fromTo('#sub90',{opacity:0},{opacity:1,duration:.18},471.47);
+      tl.to('#sub90',{opacity:0,duration:.14},476.63);
+      tl.fromTo('#sub91',{opacity:0},{opacity:1,duration:.18},476.68);
+      tl.to('#sub91',{opacity:0,duration:.14},479.78);
+      tl.fromTo('#sub92',{opacity:0},{opacity:1,duration:.18},479.93);
+      tl.to('#sub92',{opacity:0,duration:.14},482.90);
+      tl.fromTo('#sub93',{opacity:0},{opacity:1,duration:.18},483.17);
+      tl.to('#sub93',{opacity:0,duration:.14},488.72);
+      tl.fromTo('#sub94',{opacity:0},{opacity:1,duration:.18},488.77);
+      tl.to('#sub94',{opacity:0,duration:.14},491.06);
+      tl.fromTo('#sub95',{opacity:0},{opacity:1,duration:.18},491.21);
+      tl.to('#sub95',{opacity:0,duration:.14},496.69);
+      tl.fromTo('#sub96',{opacity:0},{opacity:1,duration:.18},496.95);
+      tl.to('#sub96',{opacity:0,duration:.14},505.31);
+      tl.fromTo('#sub97',{opacity:0},{opacity:1,duration:.18},505.58);
+      tl.to('#sub97',{opacity:0,duration:.14},513.75);
+      tl.fromTo('#sub98',{opacity:0},{opacity:1,duration:.18},513.90);
+      tl.to('#sub98',{opacity:0,duration:.14},517.66);
+      tl.fromTo('#sub99',{opacity:0},{opacity:1,duration:.18},517.81);
+      tl.to('#sub99',{opacity:0,duration:.14},523.52);
+      tl.fromTo('#sub100',{opacity:0},{opacity:1,duration:.18},524.02);
+      tl.to('#sub100',{opacity:0,duration:.14},531.40);
+      tl.fromTo('#sub101',{opacity:0},{opacity:1,duration:.18},531.55);
+      tl.to('#sub101',{opacity:0,duration:.14},536.61);
+      tl.fromTo('#sub102',{opacity:0},{opacity:1,duration:.18},536.88);
+      tl.to('#sub102',{opacity:0,duration:.14},544.72);
+      tl.fromTo('#sub103',{opacity:0},{opacity:1,duration:.18},544.87);
+      tl.to('#sub103',{opacity:0,duration:.14},551.18);
+      tl.fromTo('#sub104',{opacity:0},{opacity:1,duration:.18},551.45);
+      tl.to('#sub104',{opacity:0,duration:.14},558.04);
+      tl.fromTo('#sub105',{opacity:0},{opacity:1,duration:.18},558.19);
+      tl.to('#sub105',{opacity:0,duration:.14},561.30);
+      tl.fromTo('#sub106',{opacity:0},{opacity:1,duration:.18},561.45);
+      tl.to('#sub106',{opacity:0,duration:.14},568.23);
+      tl.fromTo('#sub107',{opacity:0},{opacity:1,duration:.18},568.50);
+      tl.to('#sub107',{opacity:0,duration:.14},573.97);
+      tl.fromTo('#sub108',{opacity:0},{opacity:1,duration:.18},574.12);
+      tl.to('#sub108',{opacity:0,duration:.14},579.47);
+      tl.fromTo('#sub109',{opacity:0},{opacity:1,duration:.18},579.52);
+      tl.to('#sub109',{opacity:0,duration:.14},581.18);
+      tl.fromTo('#sub110',{opacity:0},{opacity:1,duration:.18},581.45);
+      tl.to('#sub110',{opacity:0,duration:.14},585.95);
+      tl.fromTo('#sub111',{opacity:0},{opacity:1,duration:.18},586.10);
+      tl.to('#sub111',{opacity:0,duration:.14},591.17);
+      tl.fromTo('#sub112',{opacity:0},{opacity:1,duration:.18},591.22);
+      tl.to('#sub112',{opacity:0,duration:.14},593.57);
+      tl.fromTo('#sub113',{opacity:0},{opacity:1,duration:.18},593.72);
+      tl.to('#sub113',{opacity:0,duration:.14},597.02);
+      tl.fromTo('#sub114',{opacity:0},{opacity:1,duration:.18},597.29);
+      tl.to('#sub114',{opacity:0,duration:.14},603.37);
+      tl.fromTo('#sub115',{opacity:0},{opacity:1,duration:.18},603.52);
+      tl.to('#sub115',{opacity:0,duration:.14},610.25);
+      tl.fromTo('#sub116',{opacity:0},{opacity:1,duration:.18},610.40);
+      tl.to('#sub116',{opacity:0,duration:.14},613.55);
+      tl.fromTo('#sub117',{opacity:0},{opacity:1,duration:.18},614.05);
+      tl.to('#sub117',{opacity:0,duration:.14},619.39);
+      tl.fromTo('#sub118',{opacity:0},{opacity:1,duration:.18},619.54);
+      tl.to('#sub118',{opacity:0,duration:.14},624.10);
+      tl.fromTo('#sub119',{opacity:0},{opacity:1,duration:.18},624.15);
+      tl.to('#sub119',{opacity:0,duration:.14},627.29);
+      tl.fromTo('#sub120',{opacity:0},{opacity:1,duration:.18},627.56);
+      tl.to('#sub120',{opacity:0,duration:.14},634.89);
+      tl.fromTo('#sub121',{opacity:0},{opacity:1,duration:.18},635.04);
+      tl.to('#sub121',{opacity:0,duration:.14},638.90);
+      tl.fromTo('#sub122',{opacity:0},{opacity:1,duration:.18},639.17);
+      tl.to('#sub122',{opacity:0,duration:.14},645.15);
+      tl.fromTo('#sub123',{opacity:0},{opacity:1,duration:.18},645.30);
+      tl.to('#sub123',{opacity:0,duration:.14},650.27);
+      tl.fromTo('#sub124',{opacity:0},{opacity:1,duration:.18},650.54);
+      tl.to('#sub124',{opacity:0,duration:.14},658.57);
+      tl.fromTo('#sub125',{opacity:0},{opacity:1,duration:.18},658.72);
+      tl.to('#sub125',{opacity:0,duration:.14},664.85);
+      tl.fromTo('#sub126',{opacity:0},{opacity:1,duration:.18},675.12);
+      tl.to('#sub126',{opacity:0,duration:.14},681.62);
+      tl.fromTo('#sub127',{opacity:0},{opacity:1,duration:.18},681.67);
+      tl.to('#sub127',{opacity:0,duration:.14},683.75);
+      tl.fromTo('#sub128',{opacity:0},{opacity:1,duration:.18},684.02);
+      tl.to('#sub128',{opacity:0,duration:.14},691.59);
+      tl.fromTo('#sub129',{opacity:0},{opacity:1,duration:.18},691.74);
+      tl.to('#sub129',{opacity:0,duration:.14},697.21);
+      tl.fromTo('#sub130',{opacity:0},{opacity:1,duration:.18},697.48);
+      tl.to('#sub130',{opacity:0,duration:.14},702.87);
+      tl.fromTo('#sub131',{opacity:0},{opacity:1,duration:.18},712.14);
+      tl.to('#sub131',{opacity:0,duration:.14},720.07);
+      tl.fromTo('#sub132',{opacity:0},{opacity:1,duration:.18},720.22);
+      tl.to('#sub132',{opacity:0,duration:.14},727.09);
+      tl.fromTo('#sub133',{opacity:0},{opacity:1,duration:.18},727.59);
+      tl.to('#sub133',{opacity:0,duration:.14},735.95);
+      tl.fromTo('#sub134',{opacity:0},{opacity:1,duration:.18},736.10);
+      tl.to('#sub134',{opacity:0,duration:.14},739.90);
+      tl.fromTo('#sub135',{opacity:0},{opacity:1,duration:.18},740.17);
+      tl.to('#sub135',{opacity:0,duration:.14},745.07);
+      tl.fromTo('#sub136',{opacity:0},{opacity:1,duration:.18},745.12);
+      tl.to('#sub136',{opacity:0,duration:.14},746.58);
+      tl.fromTo('#sub137',{opacity:0},{opacity:1,duration:.18},756.85);
+      tl.to('#sub137',{opacity:0,duration:.14},761.81);
+      tl.fromTo('#sub138',{opacity:0},{opacity:1,duration:.18},761.96);
+      tl.to('#sub138',{opacity:0,duration:.14},767.90);
+      tl.fromTo('#sub139',{opacity:0},{opacity:1,duration:.18},779.17);
+      tl.to('#sub139',{opacity:0,duration:.14},787.39);
+      tl.fromTo('#sub140',{opacity:0},{opacity:1,duration:.18},787.54);
+      tl.to('#sub140',{opacity:0,duration:.14},789.58);
+      tl.fromTo('#sub141',{opacity:0},{opacity:1,duration:.18},789.85);
+      tl.to('#sub141',{opacity:0,duration:.14},796.21);
+      tl.fromTo('#sub142',{opacity:0},{opacity:1,duration:.18},796.36);
+      tl.to('#sub142',{opacity:0,duration:.14},802.09);
+      tl.fromTo('#sub143',{opacity:0},{opacity:1,duration:.18},802.14);
+      tl.to('#sub143',{opacity:0,duration:.14},806.06);
+      tl.fromTo('#sub144',{opacity:0},{opacity:1,duration:.18},806.33);
+      tl.to('#sub144',{opacity:0,duration:.14},814.32);
+      tl.fromTo('#sub145',{opacity:0},{opacity:1,duration:.18},814.37);
+      tl.to('#sub145',{opacity:0,duration:.14},816.08);
+      tl.fromTo('#sub146',{opacity:0},{opacity:1,duration:.18},816.58);
+      tl.to('#sub146',{opacity:0,duration:.14},824.58);
+      tl.fromTo('#sub147',{opacity:0},{opacity:1,duration:.18},824.63);
+      tl.to('#sub147',{opacity:0,duration:.14},827.17);
+      tl.fromTo('#sub148',{opacity:0},{opacity:1,duration:.18},827.32);
+      tl.to('#sub148',{opacity:0,duration:.14},833.26);
+      tl.fromTo('#sub149',{opacity:0},{opacity:1,duration:.18},833.53);
+      tl.to('#sub149',{opacity:0,duration:.14},840.36);
+      tl.fromTo('#sub150',{opacity:0},{opacity:1,duration:.18},840.41);
+      tl.to('#sub150',{opacity:0,duration:.14},843.00);
+      tl.fromTo('#sub151',{opacity:0},{opacity:1,duration:.18},843.15);
+      tl.to('#sub151',{opacity:0,duration:.14},847.32);
+      tl.fromTo('#sub152',{opacity:0},{opacity:1,duration:.18},847.59);
+      tl.to('#sub152',{opacity:0,duration:.14},853.72);
+      tl.fromTo('#sub153',{opacity:0},{opacity:1,duration:.18},853.87);
+      tl.to('#sub153',{opacity:0,duration:.14},857.81);
+      tl.fromTo('#sub154',{opacity:0},{opacity:1,duration:.18},857.96);
+      tl.to('#sub154',{opacity:0,duration:.14},862.60);
+      tl.fromTo('#sub155',{opacity:0},{opacity:1,duration:.18},862.87);
+      tl.to('#sub155',{opacity:0,duration:.14},870.25);
+      tl.fromTo('#sub156',{opacity:0},{opacity:1,duration:.18},883.52);
+      tl.to('#sub156',{opacity:0,duration:.14},887.99);
+      tl.fromTo('#sub157',{opacity:0},{opacity:1,duration:.18},888.04);
+      tl.to('#sub157',{opacity:0,duration:.14},890.95);
+      tl.fromTo('#sub158',{opacity:0},{opacity:1,duration:.18},891.10);
+      tl.to('#sub158',{opacity:0,duration:.14},893.61);
+      tl.fromTo('#sub159',{opacity:0},{opacity:1,duration:.18},893.88);
+      tl.to('#sub159',{opacity:0,duration:.14},899.86);
+      tl.fromTo('#sub160',{opacity:0},{opacity:1,duration:.18},900.01);
+      tl.to('#sub160',{opacity:0,duration:.14},906.74);
+      tl.fromTo('#sub161',{opacity:0},{opacity:1,duration:.18},907.01);
+      tl.to('#sub161',{opacity:0,duration:.14},915.23);
+      tl.fromTo('#sub162',{opacity:0},{opacity:1,duration:.18},915.38);
+      tl.to('#sub162',{opacity:0,duration:.14},920.39);
+      tl.fromTo('#sub163',{opacity:0},{opacity:1,duration:.18},920.89);
+      tl.to('#sub163',{opacity:0,duration:.14},928.64);
+      tl.fromTo('#sub164',{opacity:0},{opacity:1,duration:.18},928.79);
+      tl.to('#sub164',{opacity:0,duration:.14},935.11);
+      tl.fromTo('#sub165',{opacity:0},{opacity:1,duration:.18},935.38);
+      tl.to('#sub165',{opacity:0,duration:.14},939.55);
+      tl.fromTo('#sub166',{opacity:0},{opacity:1,duration:.18},939.60);
+      tl.to('#sub166',{opacity:0,duration:.14},942.62);
+      tl.fromTo('#sub167',{opacity:0},{opacity:1,duration:.18},951.89);
+      tl.to('#sub167',{opacity:0,duration:.14},960.01);
+      tl.fromTo('#sub168',{opacity:0},{opacity:1,duration:.18},960.07);
+      tl.to('#sub168',{opacity:0,duration:.14},961.12);
+      tl.fromTo('#sub169',{opacity:0},{opacity:1,duration:.18},961.27);
+      tl.to('#sub169',{opacity:0,duration:.14},963.78);
+      tl.fromTo('#sub170',{opacity:0},{opacity:1,duration:.18},964.05);
+      tl.to('#sub170',{opacity:0,duration:.14},970.96);
+      tl.fromTo('#sub171',{opacity:0},{opacity:1,duration:.18},971.11);
+      tl.to('#sub171',{opacity:0,duration:.14},974.87);
+      tl.fromTo('#sub172',{opacity:0},{opacity:1,duration:.18},975.14);
+      tl.to('#sub172',{opacity:0,duration:.14},982.62);
+      tl.fromTo('#sub173',{opacity:0},{opacity:1,duration:.18},982.76);
+      tl.to('#sub173',{opacity:0,duration:.14},985.97);
+      tl.fromTo('#sub174',{opacity:0},{opacity:1,duration:.18},994.24);
+      tl.to('#sub174',{opacity:0,duration:.14},1001.57);
+      tl.fromTo('#sub175',{opacity:0},{opacity:1,duration:.18},1001.72);
+      tl.to('#sub175',{opacity:0,duration:.14},1005.57);
+      tl.fromTo('#sub176',{opacity:0},{opacity:1,duration:.18},1006.07);
+      tl.to('#sub176',{opacity:0,duration:.14},1013.59);
+      tl.fromTo('#sub177',{opacity:0},{opacity:1,duration:.18},1013.74);
+      tl.to('#sub177',{opacity:0,duration:.14},1019.03);
+      tl.fromTo('#sub178',{opacity:0},{opacity:1,duration:.18},1019.30);
+      tl.to('#sub178',{opacity:0,duration:.14},1024.92);
+      tl.fromTo('#sub179',{opacity:0},{opacity:1,duration:.18},1025.07);
+      tl.to('#sub179',{opacity:0,duration:.14},1027.99);
+      tl.fromTo('#sub180',{opacity:0},{opacity:1,duration:.18},1028.26);
+      tl.to('#sub180',{opacity:0,duration:.14},1035.78);
+      tl.fromTo('#sub181',{opacity:0},{opacity:1,duration:.18},1035.93);
+      tl.to('#sub181',{opacity:0,duration:.14},1039.92);
+      tl.fromTo('#sub182',{opacity:0},{opacity:1,duration:.18},1040.07);
+      tl.to('#sub182',{opacity:0,duration:.14},1044.52);
+      tl.fromTo('#sub183',{opacity:0},{opacity:1,duration:.18},1044.79);
+      tl.to('#sub183',{opacity:0,duration:.14},1049.58);
+      tl.fromTo('#sub184',{opacity:0},{opacity:1,duration:.18},1049.63);
+      tl.to('#sub184',{opacity:0,duration:.14},1053.01);
+      tl.fromTo('#sub185',{opacity:0},{opacity:1,duration:.18},1053.16);
+      tl.to('#sub185',{opacity:0,duration:.14},1055.06);
+      tl.fromTo('#sub186',{opacity:0},{opacity:1,duration:.18},1055.33);
+      tl.to('#sub186',{opacity:0,duration:.14},1062.90);
+      tl.fromTo('#sub187',{opacity:0},{opacity:1,duration:.18},1063.05);
+      tl.to('#sub187',{opacity:0,duration:.14},1067.79);
+      tl.fromTo('#sub188',{opacity:0},{opacity:1,duration:.18},1067.84);
+      tl.to('#sub188',{opacity:0,duration:.14},1070.33);
+      tl.fromTo('#sub189',{opacity:0},{opacity:1,duration:.18},1082.60);
+      tl.to('#sub189',{opacity:0,duration:.14},1087.59);
+      tl.fromTo('#sub190',{opacity:0},{opacity:1,duration:.18},1087.64);
+      tl.to('#sub190',{opacity:0,duration:.14},1090.96);
+      tl.fromTo('#sub191',{opacity:0},{opacity:1,duration:.18},1091.11);
+      tl.to('#sub191',{opacity:0,duration:.14},1092.96);
+      tl.fromTo('#sub192',{opacity:0},{opacity:1,duration:.18},1093.23);
+      tl.to('#sub192',{opacity:0,duration:.14},1097.65);
+      tl.fromTo('#sub193',{opacity:0},{opacity:1,duration:.18},1097.70);
+      tl.to('#sub193',{opacity:0,duration:.14},1101.26);
+      tl.fromTo('#sub194',{opacity:0},{opacity:1,duration:.18},1101.41);
+      tl.to('#sub194',{opacity:0,duration:.14},1107.38);
+      tl.fromTo('#sub195',{opacity:0},{opacity:1,duration:.18},1107.43);
+      tl.to('#sub195',{opacity:0,duration:.14},1109.96);
+      tl.fromTo('#sub196',{opacity:0},{opacity:1,duration:.18},1110.23);
+      tl.to('#sub196',{opacity:0,duration:.14},1118.02);
+      tl.fromTo('#sub197',{opacity:0},{opacity:1,duration:.18},1118.17);
+      tl.to('#sub197',{opacity:0,duration:.14},1124.39);
+      tl.fromTo('#sub198',{opacity:0},{opacity:1,duration:.18},1124.66);
+      tl.to('#sub198',{opacity:0,duration:.14},1130.70);
+      tl.fromTo('#sub199',{opacity:0},{opacity:1,duration:.18},1130.85);
+      tl.to('#sub199',{opacity:0,duration:.14},1134.42);
+      tl.fromTo('#sub200',{opacity:0},{opacity:1,duration:.18},1134.92);
+      tl.to('#sub200',{opacity:0,duration:.14},1142.79);
+      tl.fromTo('#sub201',{opacity:0},{opacity:1,duration:.18},1142.84);
+      tl.to('#sub201',{opacity:0,duration:.14},1145.69);
+      tl.fromTo('#sub202',{opacity:0},{opacity:1,duration:.18},1145.84);
+      tl.to('#sub202',{opacity:0,duration:.14},1152.43);
+      tl.fromTo('#sub203',{opacity:0},{opacity:1,duration:.18},1152.70);
+      tl.to('#sub203',{opacity:0,duration:.14},1160.31);
+      tl.fromTo('#sub204',{opacity:0},{opacity:1,duration:.18},1160.46);
+      tl.to('#sub204',{opacity:0,duration:.14},1164.17);
+      tl.fromTo('#sub205',{opacity:0},{opacity:1,duration:.18},1164.44);
+      tl.to('#sub205',{opacity:0,duration:.14},1170.01);
+      tl.fromTo('#sub206',{opacity:0},{opacity:1,duration:.18},1170.16);
+      tl.to('#sub206',{opacity:0,duration:.14},1175.12);
+      tl.fromTo('#sub207',{opacity:0},{opacity:1,duration:.18},1175.17);
+      tl.to('#sub207',{opacity:0,duration:.14},1177.27);
+      tl.fromTo('#sub208',{opacity:0},{opacity:1,duration:.18},1177.54);
+      tl.to('#sub208',{opacity:0,duration:.14},1183.73);
+      tl.fromTo('#sub209',{opacity:0},{opacity:1,duration:.18},1183.78);
+      tl.to('#sub209',{opacity:0,duration:.14},1186.36);
+      tl.fromTo('#sub210',{opacity:0},{opacity:1,duration:.18},1194.63);
+      tl.to('#sub210',{opacity:0,duration:.14},1201.50);
+      tl.fromTo('#sub211',{opacity:0},{opacity:1,duration:.18},1201.65);
+      tl.to('#sub211',{opacity:0,duration:.14},1207.68);
+      tl.fromTo('#sub212',{opacity:0},{opacity:1,duration:.18},1207.95);
+      tl.to('#sub212',{opacity:0,duration:.14},1212.68);
+      tl.fromTo('#sub213',{opacity:0},{opacity:1,duration:.18},1212.83);
+      tl.to('#sub213',{opacity:0,duration:.14},1217.73);
+      tl.fromTo('#sub214',{opacity:0},{opacity:1,duration:.18},1217.78);
+      tl.to('#sub214',{opacity:0,duration:.14},1220.82);
+      tl.fromTo('#sub215',{opacity:0},{opacity:1,duration:.18},1221.09);
+      tl.to('#sub215',{opacity:0,duration:.14},1226.10);
+      tl.fromTo('#sub216',{opacity:0},{opacity:1,duration:.18},1226.25);
+      tl.to('#sub216',{opacity:0,duration:.14},1233.40);
+      tl.fromTo('#sub217',{opacity:0},{opacity:1,duration:.18},1233.90);
+      tl.to('#sub217',{opacity:0,duration:.14},1241.51);
+      tl.fromTo('#sub218',{opacity:0},{opacity:1,duration:.18},1241.66);
+      tl.to('#sub218',{opacity:0,duration:.14},1245.79);
+      tl.fromTo('#sub219',{opacity:0},{opacity:1,duration:.18},1246.06);
+      tl.to('#sub219',{opacity:0,duration:.14},1251.12);
+      tl.fromTo('#sub220',{opacity:0},{opacity:1,duration:.18},1251.27);
+      tl.to('#sub220',{opacity:0,duration:.14},1256.33);
+      tl.fromTo('#sub221',{opacity:0},{opacity:1,duration:.18},1256.48);
+      tl.to('#sub221',{opacity:0,duration:.14},1259.63);
+      tl.fromTo('#sub222',{opacity:0},{opacity:1,duration:.18},1259.90);
+      tl.to('#sub222',{opacity:0,duration:.14},1268.07);
+      tl.fromTo('#sub223',{opacity:0},{opacity:1,duration:.18},1268.22);
+      tl.to('#sub223',{opacity:0,duration:.14},1271.61);
+      tl.fromTo('#sub224',{opacity:0},{opacity:1,duration:.18},1271.88);
+      tl.to('#sub224',{opacity:0,duration:.14},1277.17);
+      tl.fromTo('#sub225',{opacity:0},{opacity:1,duration:.18},1277.32);
+      tl.to('#sub225',{opacity:0,duration:.14},1284.37);
+      tl.fromTo('#sub226',{opacity:0},{opacity:1,duration:.18},1284.64);
+      tl.to('#sub226',{opacity:0,duration:.14},1290.91);
+      tl.fromTo('#sub227',{opacity:0},{opacity:1,duration:.18},1291.06);
+      tl.to('#sub227',{opacity:0,duration:.14},1294.03);
+      tl.fromTo('#sub228',{opacity:0},{opacity:1,duration:.18},1294.30);
+      tl.to('#sub228',{opacity:0,duration:.14},1300.61);
+      tl.fromTo('#sub229',{opacity:0},{opacity:1,duration:.18},1312.88);
+      tl.to('#sub229',{opacity:0,duration:.14},1315.78);
+      tl.fromTo('#sub230',{opacity:0},{opacity:1,duration:.18},1315.83);
+      tl.to('#sub230',{opacity:0,duration:.14},1320.59);
+      tl.fromTo('#sub231',{opacity:0},{opacity:1,duration:.18},1320.73);
+      tl.to('#sub231',{opacity:0,duration:.14},1327.70);
+      tl.fromTo('#sub232',{opacity:0},{opacity:1,duration:.18},1327.97);
+      tl.to('#sub232',{opacity:0,duration:.14},1333.88);
+      tl.fromTo('#sub233',{opacity:0},{opacity:1,duration:.18},1333.93);
+      tl.to('#sub233',{opacity:0,duration:.14},1336.14);
+      tl.fromTo('#sub234',{opacity:0},{opacity:1,duration:.18},1336.29);
+      tl.to('#sub234',{opacity:0,duration:.14},1342.55);
+      tl.fromTo('#sub235',{opacity:0},{opacity:1,duration:.18},1342.82);
+      tl.to('#sub235',{opacity:0,duration:.14},1348.25);
+      tl.fromTo('#sub236',{opacity:0},{opacity:1,duration:.18},1348.40);
+      tl.to('#sub236',{opacity:0,duration:.14},1353.04);
+      tl.fromTo('#sub237',{opacity:0},{opacity:1,duration:.18},1353.19);
+      tl.to('#sub237',{opacity:0,duration:.14},1359.69);
+      tl.fromTo('#sub238',{opacity:0},{opacity:1,duration:.18},1360.19);
+      tl.to('#sub238',{opacity:0,duration:.14},1365.25);
+      tl.fromTo('#sub239',{opacity:0},{opacity:1,duration:.18},1365.40);
+      tl.to('#sub239',{opacity:0,duration:.14},1372.27);
+      tl.fromTo('#sub240',{opacity:0},{opacity:1,duration:.18},1372.54);
+      tl.to('#sub240',{opacity:0,duration:.14},1379.87);
+      tl.fromTo('#sub241',{opacity:0},{opacity:1,duration:.18},1379.92);
+      tl.to('#sub241',{opacity:0,duration:.14},1381.08);
+      tl.fromTo('#sub242',{opacity:0},{opacity:1,duration:.18},1381.23);
+      tl.to('#sub242',{opacity:0,duration:.14},1385.64);
+      tl.fromTo('#sub243',{opacity:0},{opacity:1,duration:.18},1385.79);
+      tl.to('#sub243',{opacity:0,duration:.14},1389.83);
+      tl.fromTo('#sub244',{opacity:0},{opacity:1,duration:.18},1390.10);
+      tl.to('#sub244',{opacity:0,duration:.14},1397.57);
+      tl.fromTo('#sub245',{opacity:0},{opacity:1,duration:.18},1397.72);
+      tl.to('#sub245',{opacity:0,duration:.14},1404.77);
+      tl.fromTo('#sub246',{opacity:0},{opacity:1,duration:.18},1405.04);
+      tl.to('#sub246',{opacity:0,duration:.14},1413.40);
+      tl.fromTo('#sub247',{opacity:0},{opacity:1,duration:.18},1413.55);
+      tl.to('#sub247',{opacity:0,duration:.14},1417.45);
+      tl.fromTo('#sub248',{opacity:0},{opacity:1,duration:.18},1417.72);
+      tl.to('#sub248',{opacity:0,duration:.14},1424.47);
+      tl.fromTo('#sub249',{opacity:0},{opacity:1,duration:.18},1424.52);
+      tl.to('#sub249',{opacity:0,duration:.14},1426.54);
+      tl.fromTo('#sub250',{opacity:0},{opacity:1,duration:.18},1426.69);
+      tl.to('#sub250',{opacity:0,duration:.14},1430.54);
+      tl.fromTo('#sub251',{opacity:0},{opacity:1,duration:.18},1430.81);
+      tl.to('#sub251',{opacity:0,duration:.14},1439.07);
+      tl.fromTo('#sub252',{opacity:0},{opacity:1,duration:.18},1439.22);
+      tl.to('#sub252',{opacity:0,duration:.14},1444.42);
+      tl.fromTo('#sub253',{opacity:0},{opacity:1,duration:.18},1444.92);
+      tl.to('#sub253',{opacity:0,duration:.14},1449.14);
+      tl.fromTo('#sub254',{opacity:0},{opacity:1,duration:.18},1449.29);
+      tl.to('#sub254',{opacity:0,duration:.14},1453.04);
+      tl.fromTo('#sub255',{opacity:0},{opacity:1,duration:.18},1453.09);
+      tl.to('#sub255',{opacity:0,duration:.14},1456.67);
+      tl.fromTo('#sub256',{opacity:0},{opacity:1,duration:.18},1456.82);
+      tl.to('#sub256',{opacity:0,duration:.14},1457.89);
+      tl.fromTo('#sub257',{opacity:0},{opacity:1,duration:.18},1458.16);
+      tl.to('#sub257',{opacity:0,duration:.14},1462.56);
+      tl.fromTo('#sub258',{opacity:0},{opacity:1,duration:.18},1462.71);
+      tl.to('#sub258',{opacity:0,duration:.14},1468.65);
+      tl.fromTo('#sub259',{opacity:0},{opacity:1,duration:.18},1468.92);
+      tl.to('#sub259',{opacity:0,duration:.14},1474.91);
+      tl.fromTo('#sub260',{opacity:0},{opacity:1,duration:.18},1475.06);
+      tl.to('#sub260',{opacity:0,duration:.14},1481.28);
+      tl.fromTo('#sub261',{opacity:0},{opacity:1,duration:.18},1481.55);
+      tl.to('#sub261',{opacity:0,duration:.14},1484.91);
+      tl.fromTo('#sub262',{opacity:0},{opacity:1,duration:.18},1484.96);
+      tl.to('#sub262',{opacity:0,duration:.14},1489.30);
+      tl.fromTo('#sub263',{opacity:0},{opacity:1,duration:.18},1489.45);
+      tl.to('#sub263',{opacity:0,duration:.14},1494.05);
+      tl.fromTo('#sub264',{opacity:0},{opacity:1,duration:.18},1494.55);
+      tl.to('#sub264',{opacity:0,duration:.14},1499.10);
+      tl.fromTo('#sub265',{opacity:0},{opacity:1,duration:.18},1499.24);
+      tl.to('#sub265',{opacity:0,duration:.14},1505.23);
+      tl.fromTo('#sub266',{opacity:0},{opacity:1,duration:.18},1505.50);
+      tl.to('#sub266',{opacity:0,duration:.14},1511.81);
+      tl.fromTo('#sub267',{opacity:0},{opacity:1,duration:.18},1511.96);
+      tl.to('#sub267',{opacity:0,duration:.14},1518.06);
+      tl.fromTo('#sub268',{opacity:0},{opacity:1,duration:.18},1518.11);
+      tl.to('#sub268',{opacity:0,duration:.14},1520.13);
+      tl.fromTo('#sub269',{opacity:0},{opacity:1,duration:.18},1520.40);
+      tl.to('#sub269',{opacity:0,duration:.14},1527.18);
+      tl.fromTo('#sub270',{opacity:0},{opacity:1,duration:.18},1527.33);
+      tl.to('#sub270',{opacity:0,duration:.14},1534.71);
+      tl.fromTo('#sub271',{opacity:0},{opacity:1,duration:.18},1535.21);
+      tl.to('#sub271',{opacity:0,duration:.14},1541.62);
+      tl.fromTo('#sub272',{opacity:0},{opacity:1,duration:.18},1541.77);
+      tl.to('#sub272',{opacity:0,duration:.14},1546.55);
+      tl.fromTo('#sub273',{opacity:0},{opacity:1,duration:.18},1546.82);
+      tl.to('#sub273',{opacity:0,duration:.14},1552.57);
+      tl.fromTo('#sub274',{opacity:0},{opacity:1,duration:.18},1552.62);
+      tl.to('#sub274',{opacity:0,duration:.14},1555.64);
+      tl.fromTo('#sub275',{opacity:0},{opacity:1,duration:.18},1555.79);
+      tl.to('#sub275',{opacity:0,duration:.14},1560.61);
+      tl.fromTo('#sub276',{opacity:0},{opacity:1,duration:.18},1560.88);
+      tl.to('#sub276',{opacity:0,duration:.14},1568.26);
+      tl.fromTo('#sub277',{opacity:0},{opacity:1,duration:.18},1568.41);
+      tl.to('#sub277',{opacity:0,duration:.14},1570.73);
+      window.__timelines = window.__timelines || {};
+      window.__timelines['aimoto'] = tl;
+    </script>
+  </div>
+</body>
+</html>

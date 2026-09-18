@@ -1,0 +1,2189 @@
+[
+  {
+    "beat": "h1#0",
+    "t0": 0.3,
+    "t1": 9.82,
+    "src": "I845NxSV12o.mp4",
+    "ss": 878.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  },
+  {
+    "beat": "ko_kashimura",
+    "t0": 9.82,
+    "t1": 22.82,
+    "src": "I845NxSV12o.mp4",
+    "ss": 893.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  },
+  {
+    "beat": "h2#0",
+    "t0": 23.04,
+    "t1": 29.124,
+    "src": "I845NxSV12o.mp4",
+    "ss": 930.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  },
+  {
+    "beat": "h2#1",
+    "t0": 29.224,
+    "t1": 35.075,
+    "src": "awGeVUS8FsU.mp4",
+    "ss": 1244.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #225"
+  },
+  {
+    "beat": "h3#0",
+    "t0": 35.295,
+    "t1": 44.119,
+    "src": "qMHM-xLsNO4.mp4",
+    "ss": 100.0,
+    "kind": "plain",
+    "label": "BellatorMMA Mean Tweets & Trash Talk"
+  },
+  {
+    "beat": "h3#1",
+    "t0": 44.219,
+    "t1": 48.584,
+    "src": "h3IYKaVmcOE_sec.mp4",
+    "ss": 900.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN LANDMARK 13 試合後インタビュー"
+  },
+  {
+    "beat": "h4#0",
+    "t0": 48.804,
+    "t1": 55.213,
+    "src": "EufvngFkj-s.mp4",
+    "ss": 1282.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 佐藤将光 vs サバテロ (RIZIN.51)"
+  },
+  {
+    "beat": "h4#1",
+    "t0": 55.313,
+    "t1": 58.703,
+    "src": "m4wLoHV3JF4.mp4",
+    "ss": 1350.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)"
+  },
+  {
+    "beat": "h5#0",
+    "t0": 58.923,
+    "t1": 63.149,
+    "src": "lcNiiFDvjj0.mp4",
+    "ss": 24.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN LANDMARK 15 Trailer"
+  },
+  {
+    "beat": "h5#1",
+    "t0": 63.249,
+    "t1": 70.54,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1120.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "h5#2",
+    "t0": 70.64,
+    "t1": 72.219,
+    "src": "lcNiiFDvjj0.mp4",
+    "ss": 36.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN LANDMARK 15 Trailer"
+  },
+  {
+    "beat": "c1_1#0",
+    "t0": 72.669,
+    "t1": 82.236,
+    "src": "I845NxSV12o.mp4",
+    "ss": 60.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  },
+  {
+    "beat": "c1_1#1",
+    "t0": 82.336,
+    "t1": 85.447,
+    "src": "awGeVUS8FsU.mp4",
+    "ss": 1276.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #225"
+  },
+  {
+    "beat": "c1_2#0",
+    "t0": 85.667,
+    "t1": 89.568,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1130.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c1_2#1",
+    "t0": 89.668,
+    "t1": 93.29,
+    "src": "N11tavw45uU.mp4",
+    "ss": 722.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c1_3#0",
+    "t0": 93.51,
+    "t1": 96.761,
+    "src": "I845NxSV12o.mp4",
+    "ss": 30.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  },
+  {
+    "beat": "c1_3#1",
+    "t0": 96.861,
+    "t1": 105.963,
+    "src": "m4wLoHV3JF4.mp4",
+    "ss": 1290.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)"
+  },
+  {
+    "beat": "c1_4#0",
+    "t0": 106.183,
+    "t1": 113.242,
+    "src": "qMHM-xLsNO4.mp4",
+    "ss": 64.0,
+    "kind": "plain",
+    "label": "BellatorMMA Mean Tweets & Trash Talk"
+  },
+  {
+    "beat": "c1_4#1",
+    "t0": 113.342,
+    "t1": 121.33,
+    "src": "EufvngFkj-s.mp4",
+    "ss": 1344.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 佐藤将光 vs サバテロ (RIZIN.51)"
+  },
+  {
+    "beat": "c2_1#0",
+    "t0": 121.78,
+    "t1": 126.981,
+    "src": "wm_palermo.jpg",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "Wikimedia Commons"
+  },
+  {
+    "beat": "c2_1#1",
+    "t0": 127.081,
+    "t1": 132.7,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 1420.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c2_2#0",
+    "t0": 132.92,
+    "t1": 140.397,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 14.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c2_2#1",
+    "t0": 140.497,
+    "t1": 148.021,
+    "src": "wm_long_grove.jpg",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "Wikimedia Commons"
+  },
+  {
+    "beat": "c2_3#0",
+    "t0": 148.241,
+    "t1": 152.141,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 32.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c2_3#1",
+    "t0": 152.241,
+    "t1": 157.35,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1000.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c2_3#2",
+    "t0": 157.45,
+    "t1": 162.326,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 48.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c2_4#0",
+    "t0": 162.546,
+    "t1": 165.565,
+    "src": "wm_chicago_skyline.jpg",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "Wikimedia Commons"
+  },
+  {
+    "beat": "c2_4#1",
+    "t0": 165.665,
+    "t1": 170.773,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 178.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c2_4#2",
+    "t0": 170.873,
+    "t1": 175.238,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 198.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c2_5#0",
+    "t0": 175.458,
+    "t1": 182.006,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 212.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c2_5#1",
+    "t0": 182.106,
+    "t1": 188.051,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 100.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c2_5#2",
+    "t0": 188.151,
+    "t1": 190.659,
+    "src": "N11tavw45uU.mp4",
+    "ss": 200.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c3_1#0",
+    "t0": 191.109,
+    "t1": 198.492,
+    "src": "wm_stevenson_hs.jpg",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "Wikimedia Commons"
+  },
+  {
+    "beat": "c3_1#1",
+    "t0": 198.592,
+    "t1": 200.775,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 332.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c3_2#0",
+    "t0": 200.995,
+    "t1": 205.5,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 306.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c3_2#1",
+    "t0": 205.6,
+    "t1": 211.591,
+    "src": "wm_lincolnshire_il.jpg",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "Wikimedia Commons"
+  },
+  {
+    "beat": "c3_2#2",
+    "t0": 211.691,
+    "t1": 217.774,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 358.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c3_3#0",
+    "t0": 217.994,
+    "t1": 224.449,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 366.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c3_3#1",
+    "t0": 224.549,
+    "t1": 228.357,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 386.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c3_3#2",
+    "t0": 228.457,
+    "t1": 232.823,
+    "src": "N11tavw45uU.mp4",
+    "ss": 220.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c3_4#0",
+    "t0": 233.043,
+    "t1": 241.309,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 396.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c3_4#1",
+    "t0": 241.409,
+    "t1": 247.539,
+    "src": "wrKHvMgR4Ho.mp4",
+    "ss": 10.0,
+    "kind": "plain",
+    "label": "PurdueNJ Journeymen Duals"
+  },
+  {
+    "beat": "c3_5#0",
+    "t0": 247.759,
+    "t1": 250.128,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 700.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c3_5#1",
+    "t0": 250.228,
+    "t1": 257.611,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 722.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c3_5#2",
+    "t0": 257.711,
+    "t1": 261.38,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 738.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c4_1#0",
+    "t0": 261.83,
+    "t1": 269.028,
+    "src": "wm_purdue_campus.jpg",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "Wikimedia Commons"
+  },
+  {
+    "beat": "c4_1#1",
+    "t0": 269.128,
+    "t1": 271.218,
+    "src": "4Pd0qDc_3_A.mp4",
+    "ss": 0.0,
+    "kind": "plain",
+    "label": "Big Ten Network Purdue Wrestling"
+  },
+  {
+    "beat": "c4_2#0",
+    "t0": 271.438,
+    "t1": 276.825,
+    "src": "4Pd0qDc_3_A.mp4",
+    "ss": 24.0,
+    "kind": "plain",
+    "label": "Big Ten Network Purdue Wrestling"
+  },
+  {
+    "beat": "c4_2#1",
+    "t0": 276.925,
+    "t1": 284.681,
+    "src": "blSMM_9Zjrk.mp4",
+    "ss": 40.0,
+    "kind": "plain",
+    "label": "Big Ten Network Purdue Wrestling"
+  },
+  {
+    "beat": "c4_3#0",
+    "t0": 284.901,
+    "t1": 291.542,
+    "src": "cYYIkTgiQiU.mp4",
+    "ss": 74.0,
+    "kind": "plain",
+    "label": "Purdue University Fast Track News"
+  },
+  {
+    "beat": "c4_3#1",
+    "t0": 291.642,
+    "t1": 299.397,
+    "src": "cYYIkTgiQiU.mp4",
+    "ss": 52.0,
+    "kind": "plain",
+    "label": "Purdue University Fast Track News"
+  },
+  {
+    "beat": "c4_4#0",
+    "t0": 299.617,
+    "t1": 307.93,
+    "src": "wrKHvMgR4Ho.mp4",
+    "ss": 40.0,
+    "kind": "plain",
+    "label": "PurdueNJ Journeymen Duals"
+  },
+  {
+    "beat": "c4_4#1",
+    "t0": 308.03,
+    "t1": 313.835,
+    "src": "wm_mackey_arena.jpg",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "Wikimedia Commons"
+  },
+  {
+    "beat": "c4_5#0",
+    "t0": 314.055,
+    "t1": 320.556,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 452.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c4_5#1",
+    "t0": 320.656,
+    "t1": 325.672,
+    "src": "qMHM-xLsNO4.mp4",
+    "ss": 2.0,
+    "kind": "plain",
+    "label": "BellatorMMA Mean Tweets & Trash Talk"
+  },
+  {
+    "beat": "c4_6#0",
+    "t0": 325.892,
+    "t1": 333.322,
+    "src": "cYYIkTgiQiU.mp4",
+    "ss": 100.0,
+    "kind": "plain",
+    "label": "Purdue University Fast Track News"
+  },
+  {
+    "beat": "c4_6#1",
+    "t0": 333.422,
+    "t1": 336.952,
+    "src": "cYYIkTgiQiU.mp4",
+    "ss": 124.0,
+    "kind": "plain",
+    "label": "Purdue University Fast Track News"
+  },
+  {
+    "beat": "c5_1#0",
+    "t0": 337.402,
+    "t1": 345.297,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 546.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c5_1#1",
+    "t0": 345.397,
+    "t1": 350.041,
+    "src": "N11tavw45uU.mp4",
+    "ss": 380.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c5_2#0",
+    "t0": 350.261,
+    "t1": 353.511,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 566.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c5_2#1",
+    "t0": 353.611,
+    "t1": 361.135,
+    "src": "vSpM_OJGy7A.mp4",
+    "ss": 30.0,
+    "kind": "plain",
+    "label": "Purdue Wrestling"
+  },
+  {
+    "beat": "c5_3#0",
+    "t0": 361.355,
+    "t1": 369.621,
+    "src": "wm_coconut_creek.jpg",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "Wikimedia Commons"
+  },
+  {
+    "beat": "c5_3#1",
+    "t0": 369.721,
+    "t1": 375.897,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1140.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c5_4#0",
+    "t0": 376.117,
+    "t1": 383.408,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 648.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c5_4#1",
+    "t0": 383.508,
+    "t1": 385.923,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1490.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c6_1#0",
+    "t0": 386.373,
+    "t1": 397.055,
+    "src": "zVzgAtgnn3E.mp4",
+    "ss": 72.0,
+    "kind": "plain",
+    "label": "Titan FC 61 サバテロ vs ラモス"
+  },
+  {
+    "beat": "c6_2#0",
+    "t0": 397.275,
+    "t1": 401.593,
+    "src": "yU9tpG6iWU4.mp4",
+    "ss": 30.0,
+    "kind": "plain",
+    "label": "BellatorMMA The Italian Gangster Highlights"
+  },
+  {
+    "beat": "c6_2#1",
+    "t0": 401.693,
+    "t1": 410.099,
+    "src": "zVzgAtgnn3E.mp4",
+    "ss": 8.0,
+    "kind": "plain",
+    "label": "Titan FC 61 サバテロ vs ラモス"
+  },
+  {
+    "beat": "c6_3#0",
+    "t0": 410.319,
+    "t1": 419.514,
+    "src": "zVzgAtgnn3E.mp4",
+    "ss": 100.0,
+    "kind": "plain",
+    "label": "Titan FC 61 サバテロ vs ラモス"
+  },
+  {
+    "beat": "c6_4#0",
+    "t0": 419.734,
+    "t1": 427.397,
+    "src": "XQBt4txZwNg.mp4",
+    "ss": 480.0,
+    "kind": "plain",
+    "label": "Titan FC 67 サバテロ vs ブラックシアー"
+  },
+  {
+    "beat": "c6_4#1",
+    "t0": 427.497,
+    "t1": 432.373,
+    "src": "XQBt4txZwNg.mp4",
+    "ss": 330.0,
+    "kind": "plain",
+    "label": "Titan FC 67 サバテロ vs ブラックシアー"
+  },
+  {
+    "beat": "c6_5#0",
+    "t0": 432.593,
+    "t1": 438.862,
+    "src": "XQBt4txZwNg.mp4",
+    "ss": 600.0,
+    "kind": "plain",
+    "label": "Titan FC 67 サバテロ vs ブラックシアー"
+  },
+  {
+    "beat": "c6_5#1",
+    "t0": 438.962,
+    "t1": 446.16,
+    "src": "zVzgAtgnn3E.mp4",
+    "ss": 128.0,
+    "kind": "plain",
+    "label": "Titan FC 61 サバテロ vs ラモス"
+  },
+  {
+    "beat": "ko_ramos",
+    "t0": 446.16,
+    "t1": 458.16,
+    "src": "zVzgAtgnn3E.mp4",
+    "ss": 238.0,
+    "kind": "plain",
+    "label": "Titan FC 61 サバテロ vs ラモス"
+  },
+  {
+    "beat": "c6_6#0",
+    "t0": 458.38,
+    "t1": 465.486,
+    "src": "zVzgAtgnn3E.mp4",
+    "ss": 300.0,
+    "kind": "plain",
+    "label": "Titan FC 61 サバテロ vs ラモス"
+  },
+  {
+    "beat": "c6_6#1",
+    "t0": 465.586,
+    "t1": 471.019,
+    "src": "zVzgAtgnn3E.mp4",
+    "ss": 400.0,
+    "kind": "plain",
+    "label": "Titan FC 61 サバテロ vs ラモス"
+  },
+  {
+    "beat": "c7_1#0",
+    "t0": 471.469,
+    "t1": 479.828,
+    "src": "zVzgAtgnn3E.mp4",
+    "ss": 440.0,
+    "kind": "plain",
+    "label": "Titan FC 61 サバテロ vs ラモス"
+  },
+  {
+    "beat": "c7_1#1",
+    "t0": 479.928,
+    "t1": 482.947,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 1123.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c7_2#0",
+    "t0": 483.167,
+    "t1": 491.108,
+    "src": "XQBt4txZwNg.mp4",
+    "ss": 900.0,
+    "kind": "plain",
+    "label": "Titan FC 67 サバテロ vs ブラックシアー"
+  },
+  {
+    "beat": "c7_2#1",
+    "t0": 491.208,
+    "t1": 496.735,
+    "src": "XQBt4txZwNg.mp4",
+    "ss": 1500.0,
+    "kind": "plain",
+    "label": "Titan FC 67 サバテロ vs ブラックシアー"
+  },
+  {
+    "beat": "c7_3#0",
+    "t0": 496.955,
+    "t1": 505.36,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 1150.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c7_4#0",
+    "t0": 505.58,
+    "t1": 513.8,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 1176.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c7_4#1",
+    "t0": 513.9,
+    "t1": 517.708,
+    "src": "XQBt4txZwNg.mp4",
+    "ss": 2340.0,
+    "kind": "plain",
+    "label": "Titan FC 67 サバテロ vs ブラックシアー"
+  },
+  {
+    "beat": "c7_4#2",
+    "t0": 517.808,
+    "t1": 523.567,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 1200.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c8_1#0",
+    "t0": 524.017,
+    "t1": 531.447,
+    "src": "XQBt4txZwNg.mp4",
+    "ss": 2430.0,
+    "kind": "plain",
+    "label": "Titan FC 67 サバテロ vs ブラックシアー"
+  },
+  {
+    "beat": "c8_1#1",
+    "t0": 531.547,
+    "t1": 536.656,
+    "src": "52XZm7fFCmo.mp4",
+    "ss": 0.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight サバテロ vs ジョーンズ (Bellator 259)"
+  },
+  {
+    "beat": "c8_2#0",
+    "t0": 536.876,
+    "t1": 544.77,
+    "src": "52XZm7fFCmo.mp4",
+    "ss": 15.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight サバテロ vs ジョーンズ (Bellator 259)"
+  },
+  {
+    "beat": "c8_2#1",
+    "t0": 544.87,
+    "t1": 551.233,
+    "src": "52XZm7fFCmo.mp4",
+    "ss": 1060.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight サバテロ vs ジョーンズ (Bellator 259)"
+  },
+  {
+    "beat": "c8_3#0",
+    "t0": 551.453,
+    "t1": 558.093,
+    "src": "IpgQNIn-ts4.mp4",
+    "ss": 0.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight サバテロ vs ルーゴ (Bellator 278)"
+  },
+  {
+    "beat": "c8_3#1",
+    "t0": 558.193,
+    "t1": 561.351,
+    "src": "IpgQNIn-ts4.mp4",
+    "ss": 15.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight サバテロ vs ルーゴ (Bellator 278)"
+  },
+  {
+    "beat": "c8_3#2",
+    "t0": 561.451,
+    "t1": 568.278,
+    "src": "IpgQNIn-ts4.mp4",
+    "ss": 600.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight サバテロ vs ルーゴ (Bellator 278)"
+  },
+  {
+    "beat": "c8_4#0",
+    "t0": 568.498,
+    "t1": 574.024,
+    "src": "yU9tpG6iWU4.mp4",
+    "ss": 272.0,
+    "kind": "plain",
+    "label": "BellatorMMA The Italian Gangster Highlights"
+  },
+  {
+    "beat": "c8_4#1",
+    "t0": 574.124,
+    "t1": 581.23,
+    "src": "yU9tpG6iWU4.mp4",
+    "ss": 300.0,
+    "kind": "plain",
+    "label": "BellatorMMA The Italian Gangster Highlights"
+  },
+  {
+    "beat": "c8_5#0",
+    "t0": 581.45,
+    "t1": 586.001,
+    "src": "yU9tpG6iWU4.mp4",
+    "ss": 340.0,
+    "kind": "plain",
+    "label": "BellatorMMA The Italian Gangster Highlights"
+  },
+  {
+    "beat": "c8_5#1",
+    "t0": 586.101,
+    "t1": 593.624,
+    "src": "yU9tpG6iWU4.mp4",
+    "ss": 372.0,
+    "kind": "plain",
+    "label": "BellatorMMA The Italian Gangster Highlights"
+  },
+  {
+    "beat": "c8_5#2",
+    "t0": 593.724,
+    "t1": 597.068,
+    "src": "qMHM-xLsNO4.mp4",
+    "ss": 138.0,
+    "kind": "plain",
+    "label": "BellatorMMA Mean Tweets & Trash Talk"
+  },
+  {
+    "beat": "c8_6#0",
+    "t0": 597.288,
+    "t1": 603.418,
+    "src": "qMHM-xLsNO4.mp4",
+    "ss": 120.0,
+    "kind": "plain",
+    "label": "BellatorMMA Mean Tweets & Trash Talk"
+  },
+  {
+    "beat": "c8_6#1",
+    "t0": 603.518,
+    "t1": 610.298,
+    "src": "qMHM-xLsNO4.mp4",
+    "ss": 22.0,
+    "kind": "plain",
+    "label": "BellatorMMA Mean Tweets & Trash Talk"
+  },
+  {
+    "beat": "c8_6#2",
+    "t0": 610.398,
+    "t1": 613.602,
+    "src": "qMHM-xLsNO4.mp4",
+    "ss": 185.0,
+    "kind": "plain",
+    "label": "BellatorMMA Mean Tweets & Trash Talk"
+  },
+  {
+    "beat": "c9_1#0",
+    "t0": 614.052,
+    "t1": 619.439,
+    "src": "5c4qVzxWwqw.mp4",
+    "ss": 4.0,
+    "kind": "plain",
+    "label": "MMA Fighting The MMA Hour"
+  },
+  {
+    "beat": "c9_1#1",
+    "t0": 619.539,
+    "t1": 627.341,
+    "src": "5c4qVzxWwqw.mp4",
+    "ss": 44.0,
+    "kind": "plain",
+    "label": "MMA Fighting The MMA Hour"
+  },
+  {
+    "beat": "c9_2#0",
+    "t0": 627.561,
+    "t1": 634.945,
+    "src": "cwqu7zUqCOM.mp4",
+    "ss": 60.0,
+    "kind": "plain",
+    "label": "PFL MMA The Rivalry: Stots v Sabatello"
+  },
+  {
+    "beat": "c9_2#1",
+    "t0": 635.045,
+    "t1": 638.946,
+    "src": "cwqu7zUqCOM.mp4",
+    "ss": 230.0,
+    "kind": "plain",
+    "label": "PFL MMA The Rivalry: Stots v Sabatello"
+  },
+  {
+    "beat": "c9_3#0",
+    "t0": 639.166,
+    "t1": 645.203,
+    "src": "cwqu7zUqCOM.mp4",
+    "ss": 1200.0,
+    "kind": "plain",
+    "label": "PFL MMA The Rivalry: Stots v Sabatello"
+  },
+  {
+    "beat": "c9_3#1",
+    "t0": 645.303,
+    "t1": 650.319,
+    "src": "cwqu7zUqCOM.mp4",
+    "ss": 1560.0,
+    "kind": "plain",
+    "label": "PFL MMA The Rivalry: Stots v Sabatello"
+  },
+  {
+    "beat": "c9_4#0",
+    "t0": 650.539,
+    "t1": 658.619,
+    "src": "cwqu7zUqCOM.mp4",
+    "ss": 1740.0,
+    "kind": "plain",
+    "label": "PFL MMA The Rivalry: Stots v Sabatello"
+  },
+  {
+    "beat": "c9_4#1",
+    "t0": 658.719,
+    "t1": 664.896,
+    "src": "e3RE15UFV9U.mp4",
+    "ss": 2001.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight サバテロ vs ストッツ (Bellator 289)"
+  },
+  {
+    "beat": "stots_goodbye",
+    "t0": 664.896,
+    "t1": 674.896,
+    "src": "e3RE15UFV9U.mp4",
+    "ss": 2011.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight サバテロ vs ストッツ (Bellator 289)"
+  },
+  {
+    "beat": "c9_5#0",
+    "t0": 675.116,
+    "t1": 683.8,
+    "src": "5c4qVzxWwqw.mp4",
+    "ss": 20.0,
+    "kind": "plain",
+    "label": "MMA Fighting The MMA Hour"
+  },
+  {
+    "beat": "c9_6#0",
+    "t0": 684.02,
+    "t1": 691.636,
+    "src": "wm_wintrust_arena.jpg",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "Wikimedia Commons"
+  },
+  {
+    "beat": "c9_6#1",
+    "t0": 691.736,
+    "t1": 697.263,
+    "src": "cwqu7zUqCOM.mp4",
+    "ss": 1920.0,
+    "kind": "plain",
+    "label": "PFL MMA The Rivalry: Stots v Sabatello"
+  },
+  {
+    "beat": "c9_7#0",
+    "t0": 697.483,
+    "t1": 702.916,
+    "src": "yN1Y7pnWZpQ.mp4",
+    "ss": 924.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight ストッツ vs サバテロ (Bellator 301)"
+  },
+  {
+    "beat": "stots2_drop",
+    "t0": 702.916,
+    "t1": 711.916,
+    "src": "yN1Y7pnWZpQ.mp4",
+    "ss": 930.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight ストッツ vs サバテロ (Bellator 301)"
+  },
+  {
+    "beat": "c9_8#0",
+    "t0": 712.136,
+    "t1": 720.124,
+    "src": "yN1Y7pnWZpQ.mp4",
+    "ss": 1030.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight ストッツ vs サバテロ (Bellator 301)"
+  },
+  {
+    "beat": "c9_8#1",
+    "t0": 720.224,
+    "t1": 727.143,
+    "src": "cwqu7zUqCOM.mp4",
+    "ss": 3060.0,
+    "kind": "plain",
+    "label": "PFL MMA The Rivalry: Stots v Sabatello"
+  },
+  {
+    "beat": "c10_1#0",
+    "t0": 727.593,
+    "t1": 735.999,
+    "src": "wm_saitama_super_arena.jpg",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "Wikimedia Commons"
+  },
+  {
+    "beat": "c10_1#1",
+    "t0": 736.099,
+    "t1": 739.954,
+    "src": "OvVZQd861BA.mp4",
+    "ss": 40.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight マゴメドフ vs サバテロ (Bellator×RIZIN 2)"
+  },
+  {
+    "beat": "c10_2#0",
+    "t0": 740.174,
+    "t1": 746.629,
+    "src": "eQjAJK-1s8w.mp4",
+    "ss": 16.0,
+    "kind": "cropbt",
+    "label": "U-NEXT格闘技公式 超RIZIN.2 Preview"
+  },
+  {
+    "beat": "ko_breno",
+    "t0": 746.629,
+    "t1": 756.629,
+    "src": "eQjAJK-1s8w.mp4",
+    "ss": 628.0,
+    "kind": "cropbt",
+    "label": "U-NEXT格闘技公式 超RIZIN.2 Preview"
+  },
+  {
+    "beat": "c10_3#0",
+    "t0": 756.849,
+    "t1": 761.864,
+    "src": "OvVZQd861BA.mp4",
+    "ss": 280.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight マゴメドフ vs サバテロ (Bellator×RIZIN 2)"
+  },
+  {
+    "beat": "c10_3#1",
+    "t0": 761.964,
+    "t1": 767.955,
+    "src": "OvVZQd861BA.mp4",
+    "ss": 292.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight マゴメドフ vs サバテロ (Bellator×RIZIN 2)"
+  },
+  {
+    "beat": "ko_magomedov",
+    "t0": 767.955,
+    "t1": 778.955,
+    "src": "OvVZQd861BA.mp4",
+    "ss": 303.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight マゴメドフ vs サバテロ (Bellator×RIZIN 2)"
+  },
+  {
+    "beat": "c10_4#0",
+    "t0": 779.175,
+    "t1": 787.441,
+    "src": "OvVZQd861BA.mp4",
+    "ss": 320.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight マゴメドフ vs サバテロ (Bellator×RIZIN 2)"
+  },
+  {
+    "beat": "c10_4#1",
+    "t0": 787.541,
+    "t1": 789.631,
+    "src": "OvVZQd861BA.mp4",
+    "ss": 376.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight マゴメドフ vs サバテロ (Bellator×RIZIN 2)"
+  },
+  {
+    "beat": "c10_5#0",
+    "t0": 789.851,
+    "t1": 796.26,
+    "src": "yN1Y7pnWZpQ.mp4",
+    "ss": 1078.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight ストッツ vs サバテロ (Bellator 301)"
+  },
+  {
+    "beat": "c10_5#1",
+    "t0": 796.36,
+    "t1": 806.112,
+    "src": "cwqu7zUqCOM.mp4",
+    "ss": 3010.0,
+    "kind": "plain",
+    "label": "PFL MMA The Rivalry: Stots v Sabatello"
+  },
+  {
+    "beat": "c10_6#0",
+    "t0": 806.332,
+    "t1": 816.131,
+    "src": "cwqu7zUqCOM.mp4",
+    "ss": 3040.0,
+    "kind": "plain",
+    "label": "PFL MMA The Rivalry: Stots v Sabatello"
+  },
+  {
+    "beat": "c11_1#0",
+    "t0": 816.581,
+    "t1": 827.216,
+    "src": "N11tavw45uU.mp4",
+    "ss": 20.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c11_1#1",
+    "t0": 827.316,
+    "t1": 833.306,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1600.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c11_2#0",
+    "t0": 833.526,
+    "t1": 843.047,
+    "src": "card_ota.jpg",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "RIZIN公式サイト"
+  },
+  {
+    "beat": "c11_2#1",
+    "t0": 843.147,
+    "t1": 847.373,
+    "src": "78lkPYQKU4k.mp4",
+    "ss": 0.0,
+    "kind": "cropb3",
+    "label": "RIZIN公式 Face to Face サバテロ vs 太田忍"
+  },
+  {
+    "beat": "c11_3#0",
+    "t0": 847.593,
+    "t1": 853.769,
+    "src": "78lkPYQKU4k.mp4",
+    "ss": 60.0,
+    "kind": "cropb3",
+    "label": "RIZIN公式 Face to Face サバテロ vs 太田忍"
+  },
+  {
+    "beat": "c11_3#1",
+    "t0": 853.869,
+    "t1": 857.863,
+    "src": "xFxzkjM4gT4.mp4",
+    "ss": 120.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 太田忍 (RIZIN男祭り)"
+  },
+  {
+    "beat": "c11_3#2",
+    "t0": 857.963,
+    "t1": 862.653,
+    "src": "xFxzkjM4gT4.mp4",
+    "ss": 300.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 太田忍 (RIZIN男祭り)"
+  },
+  {
+    "beat": "c11_4#0",
+    "t0": 862.873,
+    "t1": 870.304,
+    "src": "xFxzkjM4gT4.mp4",
+    "ss": 780.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 太田忍 (RIZIN男祭り)"
+  },
+  {
+    "beat": "ko_ota",
+    "t0": 870.304,
+    "t1": 883.304,
+    "src": "xFxzkjM4gT4.mp4",
+    "ss": 813.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 太田忍 (RIZIN男祭り)"
+  },
+  {
+    "beat": "c11_5#0",
+    "t0": 883.524,
+    "t1": 891.001,
+    "src": "xFxzkjM4gT4.mp4",
+    "ss": 840.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 太田忍 (RIZIN男祭り)"
+  },
+  {
+    "beat": "c11_5#1",
+    "t0": 891.101,
+    "t1": 893.655,
+    "src": "xFxzkjM4gT4.mp4",
+    "ss": 860.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 太田忍 (RIZIN男祭り)"
+  },
+  {
+    "beat": "c11_6#0",
+    "t0": 893.875,
+    "t1": 899.912,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1560.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c11_6#1",
+    "t0": 900.012,
+    "t1": 906.792,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1480.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c11_7#0",
+    "t0": 907.012,
+    "t1": 915.279,
+    "src": "xFxzkjM4gT4.mp4",
+    "ss": 880.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 太田忍 (RIZIN男祭り)"
+  },
+  {
+    "beat": "c11_7#1",
+    "t0": 915.379,
+    "t1": 920.441,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1620.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c12_1#0",
+    "t0": 920.891,
+    "t1": 928.692,
+    "src": "N11tavw45uU.mp4",
+    "ss": 600.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c12_1#1",
+    "t0": 928.792,
+    "t1": 935.155,
+    "src": "card_sato.jpg",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "RIZIN公式サイト"
+  },
+  {
+    "beat": "c12_2#0",
+    "t0": 935.375,
+    "t1": 942.666,
+    "src": "EufvngFkj-s.mp4",
+    "ss": 120.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 佐藤将光 vs サバテロ (RIZIN.51)"
+  },
+  {
+    "beat": "sato_kick",
+    "t0": 942.666,
+    "t1": 951.666,
+    "src": "EufvngFkj-s.mp4",
+    "ss": 151.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 佐藤将光 vs サバテロ (RIZIN.51)"
+  },
+  {
+    "beat": "c12_3#0",
+    "t0": 951.886,
+    "t1": 961.174,
+    "src": "EufvngFkj-s.mp4",
+    "ss": 300.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 佐藤将光 vs サバテロ (RIZIN.51)"
+  },
+  {
+    "beat": "c12_3#1",
+    "t0": 961.274,
+    "t1": 963.828,
+    "src": "EufvngFkj-s.mp4",
+    "ss": 1200.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 佐藤将光 vs サバテロ (RIZIN.51)"
+  },
+  {
+    "beat": "c12_4#0",
+    "t0": 964.048,
+    "t1": 971.014,
+    "src": "EufvngFkj-s.mp4",
+    "ss": 1316.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 佐藤将光 vs サバテロ (RIZIN.51)"
+  },
+  {
+    "beat": "c12_4#1",
+    "t0": 971.114,
+    "t1": 974.922,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1640.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c12_5#0",
+    "t0": 975.142,
+    "t1": 982.665,
+    "src": "EufvngFkj-s.mp4",
+    "ss": 1262.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 佐藤将光 vs サバテロ (RIZIN.51)"
+  },
+  {
+    "beat": "c12_5#1",
+    "t0": 982.765,
+    "t1": 986.016,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1660.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "mic_kubi",
+    "t0": 986.016,
+    "t1": 994.016,
+    "src": "EufvngFkj-s.mp4",
+    "ss": 1301.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 佐藤将光 vs サバテロ (RIZIN.51)"
+  },
+  {
+    "beat": "c12_6#0",
+    "t0": 994.236,
+    "t1": 1001.62,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1680.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c12_6#1",
+    "t0": 1001.72,
+    "t1": 1005.621,
+    "src": "EufvngFkj-s.mp4",
+    "ss": 1380.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 佐藤将光 vs サバテロ (RIZIN.51)"
+  },
+  {
+    "beat": "c13_1#0",
+    "t0": 1006.071,
+    "t1": 1013.641,
+    "src": "eQc2tyYXk7E_sec.mp4",
+    "ss": 880.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN師走の超強者祭り 試合後インタビュー"
+  },
+  {
+    "beat": "c13_1#1",
+    "t0": 1013.741,
+    "t1": 1019.081,
+    "src": "eQc2tyYXk7E_sec.mp4",
+    "ss": 900.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN師走の超強者祭り 試合後インタビュー"
+  },
+  {
+    "beat": "c13_2#0",
+    "t0": 1019.301,
+    "t1": 1024.967,
+    "src": "m4wLoHV3JF4.mp4",
+    "ss": 20.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)"
+  },
+  {
+    "beat": "c13_2#1",
+    "t0": 1025.067,
+    "t1": 1028.039,
+    "src": "m4wLoHV3JF4.mp4",
+    "ss": 70.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)"
+  },
+  {
+    "beat": "c13_3#0",
+    "t0": 1028.259,
+    "t1": 1035.829,
+    "src": "card_inoue.jpg",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "RIZIN公式サイト"
+  },
+  {
+    "beat": "c13_3#1",
+    "t0": 1035.929,
+    "t1": 1039.969,
+    "src": "m4wLoHV3JF4.mp4",
+    "ss": 130.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)"
+  },
+  {
+    "beat": "c13_3#2",
+    "t0": 1040.069,
+    "t1": 1044.574,
+    "src": "m4wLoHV3JF4.mp4",
+    "ss": 180.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)"
+  },
+  {
+    "beat": "c13_4#0",
+    "t0": 1044.794,
+    "t1": 1053.06,
+    "src": "m4wLoHV3JF4.mp4",
+    "ss": 700.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)"
+  },
+  {
+    "beat": "c13_4#1",
+    "t0": 1053.16,
+    "t1": 1055.11,
+    "src": "m4wLoHV3JF4.mp4",
+    "ss": 790.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)"
+  },
+  {
+    "beat": "c13_5#0",
+    "t0": 1055.33,
+    "t1": 1062.947,
+    "src": "m4wLoHV3JF4.mp4",
+    "ss": 900.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)"
+  },
+  {
+    "beat": "c13_5#1",
+    "t0": 1063.047,
+    "t1": 1070.384,
+    "src": "m4wLoHV3JF4.mp4",
+    "ss": 1100.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)"
+  },
+  {
+    "beat": "inoue_final",
+    "t0": 1070.384,
+    "t1": 1082.384,
+    "src": "m4wLoHV3JF4.mp4",
+    "ss": 1139.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)"
+  },
+  {
+    "beat": "c13_6#0",
+    "t0": 1082.604,
+    "t1": 1091.01,
+    "src": "m4wLoHV3JF4.mp4",
+    "ss": 1270.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)"
+  },
+  {
+    "beat": "c13_6#1",
+    "t0": 1091.11,
+    "t1": 1093.014,
+    "src": "m4wLoHV3JF4.mp4",
+    "ss": 1440.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)"
+  },
+  {
+    "beat": "c13_7#0",
+    "t0": 1093.234,
+    "t1": 1101.314,
+    "src": "eQc2tyYXk7E_sec.mp4",
+    "ss": 40.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN師走の超強者祭り 試合後インタビュー"
+  },
+  {
+    "beat": "c13_7#1",
+    "t0": 1101.414,
+    "t1": 1110.006,
+    "src": "eQc2tyYXk7E_sec.mp4",
+    "ss": 120.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN師走の超強者祭り 試合後インタビュー"
+  },
+  {
+    "beat": "c13_8#0",
+    "t0": 1110.226,
+    "t1": 1118.074,
+    "src": "eQc2tyYXk7E_sec.mp4",
+    "ss": 300.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN師走の超強者祭り 試合後インタビュー"
+  },
+  {
+    "beat": "c13_8#1",
+    "t0": 1118.174,
+    "t1": 1124.443,
+    "src": "eQc2tyYXk7E_sec.mp4",
+    "ss": 400.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN師走の超強者祭り 試合後インタビュー"
+  },
+  {
+    "beat": "c13_9#0",
+    "t0": 1124.663,
+    "t1": 1130.747,
+    "src": "eQc2tyYXk7E_sec.mp4",
+    "ss": 520.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN師走の超強者祭り 試合後インタビュー"
+  },
+  {
+    "beat": "c13_9#1",
+    "t0": 1130.847,
+    "t1": 1134.469,
+    "src": "m4wLoHV3JF4.mp4",
+    "ss": 1400.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)"
+  },
+  {
+    "beat": "c14_1#0",
+    "t0": 1134.919,
+    "t1": 1145.74,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 848.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c14_1#1",
+    "t0": 1145.84,
+    "t1": 1152.481,
+    "src": "8V14F2XfHo0.mp4",
+    "ss": 20.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 後藤丈治 (RIZIN LANDMARK 13)"
+  },
+  {
+    "beat": "c14_2#0",
+    "t0": 1152.701,
+    "t1": 1160.363,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 1228.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c14_2#1",
+    "t0": 1160.463,
+    "t1": 1164.225,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 1300.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c14_3#0",
+    "t0": 1164.445,
+    "t1": 1170.064,
+    "src": "card_goto.jpg",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "RIZIN公式サイト"
+  },
+  {
+    "beat": "c14_3#1",
+    "t0": 1170.164,
+    "t1": 1177.316,
+    "src": "8V14F2XfHo0.mp4",
+    "ss": 140.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 後藤丈治 (RIZIN LANDMARK 13)"
+  },
+  {
+    "beat": "c14_4#0",
+    "t0": 1177.536,
+    "t1": 1186.406,
+    "src": "8V14F2XfHo0.mp4",
+    "ss": 1100.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 後藤丈治 (RIZIN LANDMARK 13)"
+  },
+  {
+    "beat": "goto_end",
+    "t0": 1186.406,
+    "t1": 1194.406,
+    "src": "8V14F2XfHo0.mp4",
+    "ss": 1151.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 後藤丈治 (RIZIN LANDMARK 13)"
+  },
+  {
+    "beat": "c14_5#0",
+    "t0": 1194.626,
+    "t1": 1201.546,
+    "src": "8V14F2XfHo0.mp4",
+    "ss": 1262.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 後藤丈治 (RIZIN LANDMARK 13)"
+  },
+  {
+    "beat": "c14_5#1",
+    "t0": 1201.646,
+    "t1": 1207.729,
+    "src": "8V14F2XfHo0.mp4",
+    "ss": 1290.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 後藤丈治 (RIZIN LANDMARK 13)"
+  },
+  {
+    "beat": "c14_6#0",
+    "t0": 1207.949,
+    "t1": 1212.733,
+    "src": "8V14F2XfHo0.mp4",
+    "ss": 1312.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 後藤丈治 (RIZIN LANDMARK 13)"
+  },
+  {
+    "beat": "c14_6#1",
+    "t0": 1212.833,
+    "t1": 1220.867,
+    "src": "awGeVUS8FsU.mp4",
+    "ss": 1256.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #225"
+  },
+  {
+    "beat": "c14_7#0",
+    "t0": 1221.087,
+    "t1": 1226.149,
+    "src": "h3IYKaVmcOE_sec.mp4",
+    "ss": 60.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN LANDMARK 13 試合後インタビュー"
+  },
+  {
+    "beat": "c14_7#1",
+    "t0": 1226.249,
+    "t1": 1233.447,
+    "src": "h3IYKaVmcOE_sec.mp4",
+    "ss": 200.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN LANDMARK 13 試合後インタビュー"
+  },
+  {
+    "beat": "c15_1#0",
+    "t0": 1233.897,
+    "t1": 1241.559,
+    "src": "lcNiiFDvjj0.mp4",
+    "ss": 6.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN LANDMARK 15 Trailer"
+  },
+  {
+    "beat": "c15_1#1",
+    "t0": 1241.659,
+    "t1": 1245.839,
+    "src": "lcNiiFDvjj0.mp4",
+    "ss": 96.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN LANDMARK 15 Trailer"
+  },
+  {
+    "beat": "c15_2#0",
+    "t0": 1246.059,
+    "t1": 1251.167,
+    "src": "78lkPYQKU4k.mp4",
+    "ss": 300.0,
+    "kind": "cropb3",
+    "label": "RIZIN公式 Face to Face サバテロ vs 太田忍"
+  },
+  {
+    "beat": "c15_2#1",
+    "t0": 1251.267,
+    "t1": 1256.376,
+    "src": "78lkPYQKU4k.mp4",
+    "ss": 500.0,
+    "kind": "cropb3",
+    "label": "RIZIN公式 Face to Face サバテロ vs 太田忍"
+  },
+  {
+    "beat": "c15_2#2",
+    "t0": 1256.476,
+    "t1": 1259.68,
+    "src": "78lkPYQKU4k.mp4",
+    "ss": 700.0,
+    "kind": "cropb3",
+    "label": "RIZIN公式 Face to Face サバテロ vs 太田忍"
+  },
+  {
+    "beat": "c15_3#0",
+    "t0": 1259.9,
+    "t1": 1268.12,
+    "src": "Q37M3RbrqDA.mp4",
+    "ss": 200.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN LANDMARK 15 試合前インタビュー"
+  },
+  {
+    "beat": "c15_3#1",
+    "t0": 1268.22,
+    "t1": 1271.656,
+    "src": "Q37M3RbrqDA.mp4",
+    "ss": 600.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN LANDMARK 15 試合前インタビュー"
+  },
+  {
+    "beat": "c15_4#0",
+    "t0": 1271.876,
+    "t1": 1277.217,
+    "src": "card_kashimura.jpg",
+    "ss": 0,
+    "kind": "stillw",
+    "label": "RIZIN公式サイト"
+  },
+  {
+    "beat": "c15_4#1",
+    "t0": 1277.317,
+    "t1": 1284.422,
+    "src": "I845NxSV12o.mp4",
+    "ss": 200.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  },
+  {
+    "beat": "c15_5#0",
+    "t0": 1284.642,
+    "t1": 1290.958,
+    "src": "I845NxSV12o.mp4",
+    "ss": 560.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  },
+  {
+    "beat": "c15_5#1",
+    "t0": 1291.058,
+    "t1": 1294.077,
+    "src": "I845NxSV12o.mp4",
+    "ss": 700.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  },
+  {
+    "beat": "c15_6#0",
+    "t0": 1294.297,
+    "t1": 1300.659,
+    "src": "I845NxSV12o.mp4",
+    "ss": 866.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  },
+  {
+    "beat": "ko_kashimura2",
+    "t0": 1300.659,
+    "t1": 1312.659,
+    "src": "I845NxSV12o.mp4",
+    "ss": 895.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  },
+  {
+    "beat": "c15_7#0",
+    "t0": 1312.879,
+    "t1": 1320.635,
+    "src": "awGeVUS8FsU.mp4",
+    "ss": 1626.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #225"
+  },
+  {
+    "beat": "c15_7#1",
+    "t0": 1320.735,
+    "t1": 1327.747,
+    "src": "awGeVUS8FsU.mp4",
+    "ss": 1662.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #225"
+  },
+  {
+    "beat": "c15_8#0",
+    "t0": 1327.967,
+    "t1": 1336.187,
+    "src": "awGeVUS8FsU.mp4",
+    "ss": 1742.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #225"
+  },
+  {
+    "beat": "c15_8#1",
+    "t0": 1336.287,
+    "t1": 1342.603,
+    "src": "I845NxSV12o.mp4",
+    "ss": 960.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  },
+  {
+    "beat": "c15_9#0",
+    "t0": 1342.823,
+    "t1": 1348.303,
+    "src": "awGeVUS8FsU.mp4",
+    "ss": 1770.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #225"
+  },
+  {
+    "beat": "c15_9#1",
+    "t0": 1348.403,
+    "t1": 1353.093,
+    "src": "lcNiiFDvjj0.mp4",
+    "ss": 102.0,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN LANDMARK 15 Trailer"
+  },
+  {
+    "beat": "c15_9#2",
+    "t0": 1353.193,
+    "t1": 1359.741,
+    "src": "I845NxSV12o.mp4",
+    "ss": 990.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  },
+  {
+    "beat": "c16_1#0",
+    "t0": 1360.191,
+    "t1": 1365.299,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1020.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c16_1#1",
+    "t0": 1365.399,
+    "t1": 1372.319,
+    "src": "cwqu7zUqCOM.mp4",
+    "ss": 400.0,
+    "kind": "plain",
+    "label": "PFL MMA The Rivalry: Stots v Sabatello"
+  },
+  {
+    "beat": "c16_2#0",
+    "t0": 1372.539,
+    "t1": 1381.13,
+    "src": "IpgQNIn-ts4.mp4",
+    "ss": 800.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight サバテロ vs ルーゴ (Bellator 278)"
+  },
+  {
+    "beat": "c16_2#1",
+    "t0": 1381.23,
+    "t1": 1385.689,
+    "src": "52XZm7fFCmo.mp4",
+    "ss": 700.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight サバテロ vs ジョーンズ (Bellator 259)"
+  },
+  {
+    "beat": "c16_2#2",
+    "t0": 1385.789,
+    "t1": 1389.875,
+    "src": "cwqu7zUqCOM.mp4",
+    "ss": 1000.0,
+    "kind": "plain",
+    "label": "PFL MMA The Rivalry: Stots v Sabatello"
+  },
+  {
+    "beat": "c16_3#0",
+    "t0": 1390.095,
+    "t1": 1397.619,
+    "src": "8V14F2XfHo0.mp4",
+    "ss": 1000.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 後藤丈治 (RIZIN LANDMARK 13)"
+  },
+  {
+    "beat": "c16_3#1",
+    "t0": 1397.719,
+    "t1": 1404.824,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 990.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c16_4#0",
+    "t0": 1405.044,
+    "t1": 1413.449,
+    "src": "m4wLoHV3JF4.mp4",
+    "ss": 1000.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)"
+  },
+  {
+    "beat": "c16_4#1",
+    "t0": 1413.549,
+    "t1": 1417.497,
+    "src": "I845NxSV12o.mp4",
+    "ss": 916.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  },
+  {
+    "beat": "c16_5#0",
+    "t0": 1417.717,
+    "t1": 1426.587,
+    "src": "jJY_1cj4yKs.mp4",
+    "ss": 60.0,
+    "kind": "cropb3",
+    "label": "RIZIN公式 RIZIN Rundown"
+  },
+  {
+    "beat": "c16_5#1",
+    "t0": 1426.687,
+    "t1": 1430.588,
+    "src": "jJY_1cj4yKs.mp4",
+    "ss": 250.0,
+    "kind": "cropb3",
+    "label": "RIZIN公式 RIZIN Rundown"
+  },
+  {
+    "beat": "c16_6#0",
+    "t0": 1430.808,
+    "t1": 1439.121,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 1256.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c16_6#1",
+    "t0": 1439.221,
+    "t1": 1444.468,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 1290.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c17_1#0",
+    "t0": 1444.918,
+    "t1": 1449.191,
+    "src": "N11tavw45uU.mp4",
+    "ss": 0.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c17_1#1",
+    "t0": 1449.291,
+    "t1": 1456.721,
+    "src": "N11tavw45uU.mp4",
+    "ss": 60.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c17_1#2",
+    "t0": 1456.821,
+    "t1": 1457.936,
+    "src": "N11tavw45uU.mp4",
+    "ss": 100.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c17_2#0",
+    "t0": 1458.156,
+    "t1": 1462.614,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1826.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c17_2#1",
+    "t0": 1462.714,
+    "t1": 1468.705,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 1470.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c17_3#0",
+    "t0": 1468.925,
+    "t1": 1474.962,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1200.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c17_3#1",
+    "t0": 1475.062,
+    "t1": 1481.331,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1760.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c17_4#0",
+    "t0": 1481.551,
+    "t1": 1489.353,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1380.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c17_4#1",
+    "t0": 1489.453,
+    "t1": 1494.097,
+    "src": "aV3Mtulx8cg.mp4",
+    "ss": 1310.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN Landmark 13 Danny Sabatello Interview"
+  },
+  {
+    "beat": "c18_1#0",
+    "t0": 1494.547,
+    "t1": 1499.145,
+    "src": "I845NxSV12o.mp4",
+    "ss": 1020.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  },
+  {
+    "beat": "c18_1#1",
+    "t0": 1499.245,
+    "t1": 1505.282,
+    "src": "I845NxSV12o.mp4",
+    "ss": 1000.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  },
+  {
+    "beat": "c18_2#0",
+    "t0": 1505.502,
+    "t1": 1511.864,
+    "src": "jJY_1cj4yKs.mp4",
+    "ss": 174.0,
+    "kind": "cropb3",
+    "label": "RIZIN公式 RIZIN Rundown"
+  },
+  {
+    "beat": "c18_2#1",
+    "t0": 1511.964,
+    "t1": 1520.184,
+    "src": "jJY_1cj4yKs.mp4",
+    "ss": 340.0,
+    "kind": "cropb3",
+    "label": "RIZIN公式 RIZIN Rundown"
+  },
+  {
+    "beat": "c18_3#0",
+    "t0": 1520.404,
+    "t1": 1527.231,
+    "src": "awGeVUS8FsU.mp4",
+    "ss": 1790.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #225"
+  },
+  {
+    "beat": "c18_3#1",
+    "t0": 1527.331,
+    "t1": 1534.761,
+    "src": "jJY_1cj4yKs.mp4",
+    "ss": 390.0,
+    "kind": "cropb3",
+    "label": "RIZIN公式 RIZIN Rundown"
+  },
+  {
+    "beat": "c19_1#0",
+    "t0": 1535.211,
+    "t1": 1541.666,
+    "src": "blSMM_9Zjrk.mp4",
+    "ss": 300.0,
+    "kind": "plain",
+    "label": "Big Ten Network Purdue Wrestling"
+  },
+  {
+    "beat": "c19_1#1",
+    "t0": 1541.766,
+    "t1": 1546.596,
+    "src": "IpgQNIn-ts4.mp4",
+    "ss": 1080.0,
+    "kind": "plain",
+    "label": "BellatorMMA Full Fight サバテロ vs ルーゴ (Bellator 278)"
+  },
+  {
+    "beat": "c19_2#0",
+    "t0": 1546.816,
+    "t1": 1555.686,
+    "src": "m4wLoHV3JF4.mp4",
+    "ss": 1470.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight 井上直樹 vs サバテロ (RIZIN師走の超強者祭り)"
+  },
+  {
+    "beat": "c19_2#1",
+    "t0": 1555.786,
+    "t1": 1560.662,
+    "src": "N11tavw45uU.mp4",
+    "ss": 1700.0,
+    "kind": "cropb",
+    "label": "RIZIN公式 【密着】Preparation ダニー・サバテロ"
+  },
+  {
+    "beat": "c19_3#0",
+    "t0": 1560.882,
+    "t1": 1568.313,
+    "src": "I845NxSV12o.mp4",
+    "ss": 1040.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  },
+  {
+    "beat": "c19_3#1",
+    "t0": 1568.413,
+    "t1": 1570.781,
+    "src": "I845NxSV12o.mp4",
+    "ss": 1060.0,
+    "kind": "plain",
+    "label": "RIZIN公式 Full Fight サバテロ vs 鹿志村仁之介 (RIZIN LANDMARK 15)"
+  }
+]
