@@ -1,0 +1,744 @@
+[
+  {
+    "beat": "0_intro00",
+    "src": "lm16_openworkout.mp4",
+    "ss": 5640,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 合同公開練習"
+  },
+  {
+    "beat": "0_intro01",
+    "src": "usami_vs_yanbo.mp4",
+    "ss": 162,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.53 宇佐美正パトリック vs. 雑賀“ヤン坊”達也"
+  },
+  {
+    "beat": "0_intro02",
+    "src": "lm16_openworkout.mp4",
+    "ss": 4040,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 合同公開練習"
+  },
+  {
+    "beat": "0_intro03",
+    "src": "lm16_trailer.mp4",
+    "ss": 18,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 Trailer"
+  },
+  {
+    "beat": "0_intro04",
+    "src": "card_fullcard.jpg",
+    "ss": 0,
+    "kind": "vertstill",
+    "label": "RIZIN公式サイト 対戦カード"
+  },
+  {
+    "beat": "1_kate00",
+    "src": "card_kate_noel.jpg",
+    "ss": 0,
+    "kind": "still",
+    "label": "RIZIN公式サイト 対戦カード"
+  },
+  {
+    "beat": "1_kate01",
+    "src": "kate_vs_bomi.mp4",
+    "ss": 110,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 12 ケイト・ロータス vs. イ・ボミ"
+  },
+  {
+    "beat": "1_kate02",
+    "src": "kate_vs_oshima.mp4",
+    "ss": 1050,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.52 大島沙緒里 vs. ケイト・ロータス"
+  },
+  {
+    "beat": "1_kate03",
+    "src": "noel_vs_umisaki.mp4",
+    "ss": 60,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 12 NOEL vs. 海咲イルカ"
+  },
+  {
+    "beat": "1_kate04",
+    "src": "noel_vs_umisaki.mp4",
+    "ss": 594,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 12 NOEL vs. 海咲イルカ"
+  },
+  {
+    "beat": "1_kate05",
+    "src": "lm16_openworkout.mp4",
+    "ss": 4900,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 合同公開練習"
+  },
+  {
+    "beat": "1_kate06",
+    "src": "lm16_openworkout.mp4",
+    "ss": 5020,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 合同公開練習"
+  },
+  {
+    "beat": "1_kate07",
+    "src": "ogikubo.mp4",
+    "ss": 798,
+    "kind": "plain",
+    "label": "YouTube 扇久保博正 おぎちゃんねる。"
+  },
+  {
+    "beat": "1_kate08",
+    "src": "ogikubo.mp4",
+    "ss": 858,
+    "kind": "plain",
+    "label": "YouTube 扇久保博正 おぎちゃんねる。"
+  },
+  {
+    "beat": "1_kate09",
+    "src": "noel_vs_suda.mp4",
+    "ss": 240,
+    "kind": "plain",
+    "label": "RIZIN公式 超RIZIN.4 須田萌里 vs. NOEL"
+  },
+  {
+    "beat": "1_kate10",
+    "src": "arai.mp4",
+    "ss": 388,
+    "kind": "plain",
+    "label": "YouTube 新居すぐるチャンネル"
+  },
+  {
+    "beat": "1_kate11",
+    "src": "yachi.mp4",
+    "ss": 118,
+    "kind": "cropb",
+    "label": "YouTube 矢地祐介 Yusuke Yachi"
+  },
+  {
+    "beat": "1_kate12",
+    "src": "akimoto.mp4",
+    "ss": 430,
+    "kind": "cropb",
+    "label": "YouTube 秋元強真 Kyoma Akimoto"
+  },
+  {
+    "beat": "1_kate13",
+    "src": "kawajiri.mp4",
+    "ss": 1250,
+    "kind": "cropb",
+    "label": "YouTube 川尻達也のじりラジオ"
+  },
+  {
+    "beat": "1_kate14",
+    "src": "kawajiri.mp4",
+    "ss": 1295,
+    "kind": "cropb",
+    "label": "YouTube 川尻達也のじりラジオ"
+  },
+  {
+    "beat": "1_kate15",
+    "src": "kawajiri.mp4",
+    "ss": 1345,
+    "kind": "cropb",
+    "label": "YouTube 川尻達也のじりラジオ"
+  },
+  {
+    "beat": "1_kate16",
+    "src": "lm16_iv_noel_kate.mp4",
+    "ss": 800,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 試合前インタビュー"
+  },
+  {
+    "beat": "2_cafaro00",
+    "src": "card_cafaro_yasui.jpg",
+    "ss": 0,
+    "kind": "still",
+    "label": "RIZIN公式サイト 対戦カード"
+  },
+  {
+    "beat": "2_cafaro01",
+    "src": "confessions234.mp4",
+    "ss": 1050,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #234"
+  },
+  {
+    "beat": "2_cafaro02",
+    "src": "matsushima_vs_cafaro.mp4",
+    "ss": 940,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.53 松嶋こよみ vs. ライアン・カファロ"
+  },
+  {
+    "beat": "2_cafaro03",
+    "src": "yasui_vs_kurobara.mp4",
+    "ss": 300,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN DECADE 安井飛馬 vs. 黒薔薇くん"
+  },
+  {
+    "beat": "2_cafaro04",
+    "src": "lm16_openworkout.mp4",
+    "ss": 3790,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 合同公開練習"
+  },
+  {
+    "beat": "2_cafaro05",
+    "src": "lm16_openworkout.mp4",
+    "ss": 3600,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 合同公開練習"
+  },
+  {
+    "beat": "2_cafaro06",
+    "src": "ogikubo.mp4",
+    "ss": 745,
+    "kind": "plain",
+    "label": "YouTube 扇久保博正 おぎちゃんねる。"
+  },
+  {
+    "beat": "2_cafaro07",
+    "src": "arai.mp4",
+    "ss": 281,
+    "kind": "plain",
+    "label": "YouTube 新居すぐるチャンネル"
+  },
+  {
+    "beat": "2_cafaro08",
+    "src": "arai.mp4",
+    "ss": 330,
+    "kind": "plain",
+    "label": "YouTube 新居すぐるチャンネル"
+  },
+  {
+    "beat": "2_cafaro09",
+    "src": "kanehara.mp4",
+    "ss": 48,
+    "kind": "cropb",
+    "label": "YouTube 金原正徳の金ちゃんTV"
+  },
+  {
+    "beat": "2_cafaro10",
+    "src": "kanehara.mp4",
+    "ss": 90,
+    "kind": "cropb",
+    "label": "YouTube 金原正徳の金ちゃんTV"
+  },
+  {
+    "beat": "2_cafaro11",
+    "src": "kanehara.mp4",
+    "ss": 168,
+    "kind": "cropb",
+    "label": "YouTube 金原正徳の金ちゃんTV"
+  },
+  {
+    "beat": "2_cafaro12",
+    "src": "akimoto.mp4",
+    "ss": 385,
+    "kind": "cropb",
+    "label": "YouTube 秋元強真 Kyoma Akimoto"
+  },
+  {
+    "beat": "2_cafaro13",
+    "src": "lm16_openworkout.mp4",
+    "ss": 3760,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 合同公開練習"
+  },
+  {
+    "beat": "2_cafaro14",
+    "src": "kawajiri.mp4",
+    "ss": 1100,
+    "kind": "cropb",
+    "label": "YouTube 川尻達也のじりラジオ"
+  },
+  {
+    "beat": "2_cafaro15",
+    "src": "kawajiri.mp4",
+    "ss": 1155,
+    "kind": "cropb",
+    "label": "YouTube 川尻達也のじりラジオ"
+  },
+  {
+    "beat": "2_cafaro16",
+    "src": "saito.mp4",
+    "ss": 258,
+    "kind": "cropb",
+    "label": "YouTube 斎藤裕"
+  },
+  {
+    "beat": "3_kolesnik00",
+    "src": "card_kolesnik_matsushima.jpg",
+    "ss": 6,
+    "kind": "still",
+    "label": "RIZIN公式サイト 対戦カード"
+  },
+  {
+    "beat": "3_kolesnik01",
+    "src": "kolesnik_vs_sasuke.mp4",
+    "ss": 240,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 11 ビクター・コレスニック vs. SASUKE"
+  },
+  {
+    "beat": "3_kolesnik02",
+    "src": "matsushima_vs_cafaro.mp4",
+    "ss": 38,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.53 松嶋こよみ vs. ライアン・カファロ"
+  },
+  {
+    "beat": "3_kolesnik03",
+    "src": "lm16_openworkout.mp4",
+    "ss": 4320,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 合同公開練習"
+  },
+  {
+    "beat": "3_kolesnik04",
+    "src": "kolesnik_vs_shaydullaev.mp4",
+    "ss": 149,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.51 シェイドゥラエフ vs. ビクター・コレスニック"
+  },
+  {
+    "beat": "3_kolesnik05",
+    "src": "matsushima_vs_cafaro.mp4",
+    "ss": 1020,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.53 松嶋こよみ vs. ライアン・カファロ"
+  },
+  {
+    "beat": "3_kolesnik06",
+    "src": "aoki.mp4",
+    "ss": 790,
+    "kind": "plain",
+    "label": "YouTube 青木真也 [SHINYA AOKI] チャンネル"
+  },
+  {
+    "beat": "3_kolesnik07",
+    "src": "aoki.mp4",
+    "ss": 900,
+    "kind": "plain",
+    "label": "YouTube 青木真也 [SHINYA AOKI] チャンネル"
+  },
+  {
+    "beat": "3_kolesnik08",
+    "src": "aoki.mp4",
+    "ss": 1020,
+    "kind": "plain",
+    "label": "YouTube 青木真也 [SHINYA AOKI] チャンネル"
+  },
+  {
+    "beat": "3_kolesnik09",
+    "src": "ogikubo.mp4",
+    "ss": 1215,
+    "kind": "plain",
+    "label": "YouTube 扇久保博正 おぎちゃんねる。"
+  },
+  {
+    "beat": "3_kolesnik10",
+    "src": "arai.mp4",
+    "ss": 551,
+    "kind": "plain",
+    "label": "YouTube 新居すぐるチャンネル"
+  },
+  {
+    "beat": "3_kolesnik11",
+    "src": "arai.mp4",
+    "ss": 592,
+    "kind": "plain",
+    "label": "YouTube 新居すぐるチャンネル"
+  },
+  {
+    "beat": "3_kolesnik12",
+    "src": "akimoto.mp4",
+    "ss": 480,
+    "kind": "cropb",
+    "label": "YouTube 秋元強真 Kyoma Akimoto"
+  },
+  {
+    "beat": "3_kolesnik13",
+    "src": "kolesnik_vs_kishimoto.mp4",
+    "ss": 540,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.42 岸本篤史 vs. ビクター・コレスニック"
+  },
+  {
+    "beat": "3_kolesnik14",
+    "src": "saito.mp4",
+    "ss": 660,
+    "kind": "cropb",
+    "label": "YouTube 斎藤裕"
+  },
+  {
+    "beat": "3_kolesnik15",
+    "src": "saito.mp4",
+    "ss": 722,
+    "kind": "cropb",
+    "label": "YouTube 斎藤裕"
+  },
+  {
+    "beat": "3_kolesnik16",
+    "src": "yachi.mp4",
+    "ss": 280,
+    "kind": "cropb",
+    "label": "YouTube 矢地祐介 Yusuke Yachi"
+  },
+  {
+    "beat": "3_kolesnik17",
+    "src": "kanehara.mp4",
+    "ss": 200,
+    "kind": "cropb",
+    "label": "YouTube 金原正徳の金ちゃんTV"
+  },
+  {
+    "beat": "3_kolesnik18",
+    "src": "kanehara.mp4",
+    "ss": 262,
+    "kind": "cropb",
+    "label": "YouTube 金原正徳の金ちゃんTV"
+  },
+  {
+    "beat": "3_kolesnik19",
+    "src": "kawajiri.mp4",
+    "ss": 1765,
+    "kind": "cropb",
+    "label": "YouTube 川尻達也のじりラジオ"
+  },
+  {
+    "beat": "3_kolesnik20",
+    "src": "kawajiri.mp4",
+    "ss": 1835,
+    "kind": "cropb",
+    "label": "YouTube 川尻達也のじりラジオ"
+  },
+  {
+    "beat": "4_main00",
+    "src": "card_horie_usami.jpg",
+    "ss": 6,
+    "kind": "still",
+    "label": "RIZIN公式サイト 対戦カード"
+  },
+  {
+    "beat": "4_main01",
+    "src": "confessions234.mp4",
+    "ss": 122,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #234"
+  },
+  {
+    "beat": "4_main02",
+    "src": "horie_vs_patricky.mp4",
+    "ss": 900,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 13 堀江圭功 vs. パトリッキー・ピットブル"
+  },
+  {
+    "beat": "4_main03",
+    "src": "barasanpo_usami.mp4",
+    "ss": 180,
+    "kind": "plain",
+    "label": "ABEMA 格闘【公式】 バラさんぽ"
+  },
+  {
+    "beat": "4_main04",
+    "src": "usami_vs_hosokawa.mp4",
+    "ss": 374,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN DECADE 細川一颯 vs. 宇佐美正パトリック"
+  },
+  {
+    "beat": "4_main05",
+    "src": "lm16_openworkout.mp4",
+    "ss": 5440,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 合同公開練習"
+  },
+  {
+    "beat": "4_main06",
+    "src": "ishiwatari.mp4",
+    "ss": 120,
+    "kind": "cropb",
+    "label": "YouTube 石渡伸太郎 Shintaro Ishiwatari"
+  },
+  {
+    "beat": "4_main07",
+    "src": "ishiwatari.mp4",
+    "ss": 350,
+    "kind": "cropb",
+    "label": "YouTube 石渡伸太郎 Shintaro Ishiwatari"
+  },
+  {
+    "beat": "4_main08",
+    "src": "ishiwatari.mp4",
+    "ss": 420,
+    "kind": "cropb",
+    "label": "YouTube 石渡伸太郎 Shintaro Ishiwatari"
+  },
+  {
+    "beat": "4_main09",
+    "src": "ishiwatari.mp4",
+    "ss": 590,
+    "kind": "cropb",
+    "label": "YouTube 石渡伸太郎 Shintaro Ishiwatari"
+  },
+  {
+    "beat": "4_main10",
+    "src": "aoki.mp4",
+    "ss": 100,
+    "kind": "plain",
+    "label": "YouTube 青木真也 [SHINYA AOKI] チャンネル"
+  },
+  {
+    "beat": "4_main11",
+    "src": "aoki.mp4",
+    "ss": 240,
+    "kind": "plain",
+    "label": "YouTube 青木真也 [SHINYA AOKI] チャンネル"
+  },
+  {
+    "beat": "4_main12",
+    "src": "horie_vs_nishikawa.mp4",
+    "ss": 300,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 11 堀江圭功 vs. 西川大和"
+  },
+  {
+    "beat": "4_main13",
+    "src": "aoki.mp4",
+    "ss": 300,
+    "kind": "plain",
+    "label": "YouTube 青木真也 [SHINYA AOKI] チャンネル"
+  },
+  {
+    "beat": "4_main14",
+    "src": "aoki.mp4",
+    "ss": 430,
+    "kind": "plain",
+    "label": "YouTube 青木真也 [SHINYA AOKI] チャンネル"
+  },
+  {
+    "beat": "4_main15",
+    "src": "usami_vs_yanbo.mp4",
+    "ss": 120,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN.53 宇佐美正パトリック vs. 雑賀“ヤン坊”達也"
+  },
+  {
+    "beat": "4_main16",
+    "src": "ogikubo.mp4",
+    "ss": 1390,
+    "kind": "plain",
+    "label": "YouTube 扇久保博正 おぎちゃんねる。"
+  },
+  {
+    "beat": "4_main17",
+    "src": "arai.mp4",
+    "ss": 614,
+    "kind": "plain",
+    "label": "YouTube 新居すぐるチャンネル"
+  },
+  {
+    "beat": "4_main18",
+    "src": "arai.mp4",
+    "ss": 660,
+    "kind": "plain",
+    "label": "YouTube 新居すぐるチャンネル"
+  },
+  {
+    "beat": "4_main19",
+    "src": "kanehara.mp4",
+    "ss": 330,
+    "kind": "cropb",
+    "label": "YouTube 金原正徳の金ちゃんTV"
+  },
+  {
+    "beat": "4_main20",
+    "src": "barasanpo_usami.mp4",
+    "ss": 900,
+    "kind": "plain",
+    "label": "ABEMA 格闘【公式】 バラさんぽ"
+  },
+  {
+    "beat": "4_main21",
+    "src": "akimoto.mp4",
+    "ss": 525,
+    "kind": "cropb",
+    "label": "YouTube 秋元強真 Kyoma Akimoto"
+  },
+  {
+    "beat": "4_main22",
+    "src": "akimoto.mp4",
+    "ss": 545,
+    "kind": "cropb",
+    "label": "YouTube 秋元強真 Kyoma Akimoto"
+  },
+  {
+    "beat": "4_main23",
+    "src": "horie_vs_patricky.mp4",
+    "ss": 1400,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 13 堀江圭功 vs. パトリッキー・ピットブル"
+  },
+  {
+    "beat": "4_main24",
+    "src": "saito.mp4",
+    "ss": 900,
+    "kind": "cropb",
+    "label": "YouTube 斎藤裕"
+  },
+  {
+    "beat": "4_main25",
+    "src": "saito.mp4",
+    "ss": 980,
+    "kind": "cropb",
+    "label": "YouTube 斎藤裕"
+  },
+  {
+    "beat": "4_main26",
+    "src": "yachi.mp4",
+    "ss": 560,
+    "kind": "cropb",
+    "label": "YouTube 矢地祐介 Yusuke Yachi"
+  },
+  {
+    "beat": "4_main27",
+    "src": "yachi.mp4",
+    "ss": 700,
+    "kind": "cropb",
+    "label": "YouTube 矢地祐介 Yusuke Yachi"
+  },
+  {
+    "beat": "4_main28",
+    "src": "kawajiri.mp4",
+    "ss": 1965,
+    "kind": "cropb",
+    "label": "YouTube 川尻達也のじりラジオ"
+  },
+  {
+    "beat": "4_main29",
+    "src": "kawajiri.mp4",
+    "ss": 2110,
+    "kind": "cropb",
+    "label": "YouTube 川尻達也のじりラジオ"
+  },
+  {
+    "beat": "4_main30",
+    "src": "confessions234.mp4",
+    "ss": 215,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #234"
+  },
+  {
+    "beat": "4_main31",
+    "src": "lm16_openworkout.mp4",
+    "ss": 5600,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 合同公開練習"
+  },
+  {
+    "beat": "5_fans00",
+    "src": "lm16_charlie_guide.mp4",
+    "ss": 2200,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 チャーリーガイド"
+  },
+  {
+    "beat": "5_fans01",
+    "src": "confessions234.mp4",
+    "ss": 40,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN CONFESSIONS #234"
+  },
+  {
+    "beat": "5_fans02",
+    "src": "barasanpo_usami.mp4",
+    "ss": 1200,
+    "kind": "plain",
+    "label": "ABEMA 格闘【公式】 バラさんぽ"
+  },
+  {
+    "beat": "5_fans03",
+    "src": "lm16_openworkout.mp4",
+    "ss": 5480,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 合同公開練習"
+  },
+  {
+    "beat": "5_fans04",
+    "src": "usami_vs_hosokawa.mp4",
+    "ss": 180,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN DECADE 細川一颯 vs. 宇佐美正パトリック"
+  },
+  {
+    "beat": "5_fans05",
+    "src": "kolesnik_vs_takagi.mp4",
+    "ss": 600,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 6 ビクター・コレスニック vs. 高木凌"
+  },
+  {
+    "beat": "5_fans06",
+    "src": "lm16_openworkout.mp4",
+    "ss": 3700,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 合同公開練習"
+  },
+  {
+    "beat": "5_fans07",
+    "src": "yasui_vs_kashimura.mp4",
+    "ss": 1100,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 12 鹿志村仁之介 vs. 安井飛馬"
+  },
+  {
+    "beat": "5_fans08",
+    "src": "yasui_vs_kurobara.mp4",
+    "ss": 700,
+    "kind": "plain",
+    "label": "RIZIN公式 RIZIN DECADE 安井飛馬 vs. 黒薔薇くん"
+  },
+  {
+    "beat": "6_end00",
+    "src": "lm16_charlie_guide.mp4",
+    "ss": 1500,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 チャーリーガイド"
+  },
+  {
+    "beat": "6_end01",
+    "src": "lm16_iv_horie_usami.mp4",
+    "ss": 1000,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 試合前インタビュー"
+  },
+  {
+    "beat": "6_end02",
+    "src": "lm16_iv_matome1.mp4",
+    "ss": 1800,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 試合前インタビュー"
+  },
+  {
+    "beat": "6_end03",
+    "src": "lm16_trailer.mp4",
+    "ss": 3,
+    "kind": "plain",
+    "label": "RIZIN公式 LANDMARK 16 Trailer"
+  },
+  {
+    "beat": "6_end04",
+    "src": "card_fullcard.jpg",
+    "ss": 0,
+    "kind": "vertstill2",
+    "label": "RIZIN公式サイト 対戦カード"
+  }
+]
