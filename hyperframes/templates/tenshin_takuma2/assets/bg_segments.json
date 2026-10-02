@@ -1,0 +1,1370 @@
+[
+  {
+    "beat": "0_intro00",
+    "t0": 0.3,
+    "t1": 3.69,
+    "src": "g490.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "0_intro01",
+    "t0": 3.97,
+    "t1": 11.261,
+    "src": "n_hoch.jpg",
+    "ss": 0,
+    "kind": "sl",
+    "label": "出典: スポーツ報知"
+  },
+  {
+    "beat": "0_intro02",
+    "t0": 11.541,
+    "t1": 15.86,
+    "src": "n_tears.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: THE ANSWER"
+  },
+  {
+    "beat": "0_intro03",
+    "t0": 16.14,
+    "t1": 22.456,
+    "src": "shiino.mp4",
+    "ss": 474,
+    "kind": "ct",
+    "label": "出典: GACHIBOX 椎野大輝"
+  },
+  {
+    "beat": "0_intro04",
+    "t0": 22.736,
+    "t1": 30.166,
+    "src": "naito.mp4",
+    "ss": 101,
+    "kind": "cover",
+    "label": "出典: 内藤大助のチャレンジします!"
+  },
+  {
+    "beat": "0_intro05",
+    "t0": 30.446,
+    "t1": 33.836,
+    "src": "g498.jpg",
+    "ss": 0,
+    "kind": "sr",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "0_intro06",
+    "t0": 34.116,
+    "t1": 40.2,
+    "src": "pv_tenshin_cu.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: Prime Video 公式"
+  },
+  {
+    "beat": "1_what00",
+    "t0": 42.93,
+    "t1": 51.057,
+    "src": "ef05.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: eFight"
+  },
+  {
+    "beat": "1_what01",
+    "t0": 51.337,
+    "t1": 57.188,
+    "src": "ef07.jpg",
+    "ss": 0,
+    "kind": "sl",
+    "label": "出典: eFight"
+  },
+  {
+    "beat": "1_what02",
+    "t0": 57.468,
+    "t1": 59.883,
+    "src": "ann00.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "1_what03",
+    "t0": 60.163,
+    "t1": 68.894,
+    "src": "f101.jpg",
+    "ss": 0,
+    "kind": "sr",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "1_what04",
+    "t0": 69.174,
+    "t1": 77.719,
+    "src": "f104.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "1_what05",
+    "t0": 77.999,
+    "t1": 84.686,
+    "src": "f100.jpg",
+    "ss": 0,
+    "kind": "sl",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "1_what06",
+    "t0": 84.966,
+    "t1": 92.257,
+    "src": "card_ioka.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: boxmob（選手写真）"
+  },
+  {
+    "beat": "1_what07",
+    "t0": 92.537,
+    "t1": 98.853,
+    "src": "pv_doc2.mp4",
+    "ss": 398,
+    "kind": "pv",
+    "label": "出典: Prime Video 公式"
+  },
+  {
+    "beat": "1_what08",
+    "t0": 99.133,
+    "t1": 104.892,
+    "src": "ef00.jpg",
+    "ss": 0,
+    "kind": "sl",
+    "label": "出典: eFight"
+  },
+  {
+    "beat": "1_what09",
+    "t0": 105.172,
+    "t1": 108.748,
+    "src": "g487.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "1_what10",
+    "t0": 109.028,
+    "t1": 117.015,
+    "src": "n_daily.jpg",
+    "ss": 0,
+    "kind": "sr",
+    "label": "出典: THE ANSWER"
+  },
+  {
+    "beat": "1_what11",
+    "t0": 117.295,
+    "t1": 124.865,
+    "src": "g493.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "1_what12",
+    "t0": 125.145,
+    "t1": 129.928,
+    "src": "g496.jpg",
+    "ss": 0,
+    "kind": "sl",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "1_what13",
+    "t0": 130.208,
+    "t1": 136.756,
+    "src": "ef03.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: eFight"
+  },
+  {
+    "beat": "1_what14",
+    "t0": 137.036,
+    "t1": 142.423,
+    "src": "daily_tenshin.mp4",
+    "ss": 480,
+    "kind": "mask",
+    "label": "出典: デイリースポーツ 公式"
+  },
+  {
+    "beat": "1_what15",
+    "t0": 142.703,
+    "t1": 145.908,
+    "src": "daily_tenshin.mp4",
+    "ss": 640,
+    "kind": "mask",
+    "label": "出典: デイリースポーツ 公式"
+  },
+  {
+    "beat": "2_open00",
+    "t0": 148.638,
+    "t1": 154.675,
+    "src": "sasaki.mp4",
+    "ss": 268,
+    "kind": "ctb",
+    "label": "出典: ボクシングDEEP解説 佐々木浩一"
+  },
+  {
+    "beat": "2_open01",
+    "t0": 154.955,
+    "t1": 162.478,
+    "src": "naito.mp4",
+    "ss": 96,
+    "kind": "cover",
+    "label": "出典: 内藤大助のチャレンジします!"
+  },
+  {
+    "beat": "2_open02",
+    "t0": 162.758,
+    "t1": 169.446,
+    "src": "treasure.mp4",
+    "ss": 196,
+    "kind": "cover",
+    "label": "出典: Treasure Boxing Promotion"
+  },
+  {
+    "beat": "2_open03",
+    "t0": 169.726,
+    "t1": 175.67,
+    "src": "kyoguchi.mp4",
+    "ss": 230,
+    "kind": "ct",
+    "label": "出典: 京口紘人 Hiroto Kyoguchi"
+  },
+  {
+    "beat": "2_open04",
+    "t0": 175.95,
+    "t1": 180.315,
+    "src": "jobin.mp4",
+    "ss": 20,
+    "kind": "cb",
+    "label": "出典: ジョビン切り抜きチャンネル"
+  },
+  {
+    "beat": "2_open05",
+    "t0": 180.595,
+    "t1": 187.097,
+    "src": "asign.mp4",
+    "ss": 18,
+    "kind": "cover",
+    "label": "出典: A-SIGN.BOXING.COM"
+  },
+  {
+    "beat": "2_open06",
+    "t0": 187.377,
+    "t1": 193.507,
+    "src": "academy.mp4",
+    "ss": 903,
+    "kind": "cover",
+    "label": "出典: ボクシングアカデミーの放課後"
+  },
+  {
+    "beat": "2_open07",
+    "t0": 193.787,
+    "t1": 195.691,
+    "src": "g488.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "2_open08",
+    "t0": 195.971,
+    "t1": 203.355,
+    "src": "daily_tenshin.mp4",
+    "ss": 60,
+    "kind": "mask",
+    "label": "出典: デイリースポーツ 公式"
+  },
+  {
+    "beat": "2_open09",
+    "t0": 203.635,
+    "t1": 210.322,
+    "src": "daily_tenshin.mp4",
+    "ss": 200,
+    "kind": "mask",
+    "label": "出典: デイリースポーツ 公式"
+  },
+  {
+    "beat": "2_open10",
+    "t0": 210.602,
+    "t1": 217.94,
+    "src": "daily_tenshin.mp4",
+    "ss": 340,
+    "kind": "mask",
+    "label": "出典: デイリースポーツ 公式"
+  },
+  {
+    "beat": "2_open11",
+    "t0": 218.22,
+    "t1": 224.21,
+    "src": "pv_doc1.mp4",
+    "ss": 255,
+    "kind": "pv",
+    "label": "出典: Prime Video 公式"
+  },
+  {
+    "beat": "2_open12",
+    "t0": 224.49,
+    "t1": 232.85,
+    "src": "g494.jpg",
+    "ss": 0,
+    "kind": "sl",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "2_open13",
+    "t0": 233.13,
+    "t1": 240.235,
+    "src": "g497.jpg",
+    "ss": 0,
+    "kind": "sr",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "3_pros00",
+    "t0": 242.965,
+    "t1": 247.052,
+    "src": "g491.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "3_pros01",
+    "t0": 247.332,
+    "t1": 257.177,
+    "src": "gushiken.mp4",
+    "ss": 275,
+    "kind": "ctb",
+    "label": "出典: 具志堅用高のネクストチャレンジ"
+  },
+  {
+    "beat": "3_pros02",
+    "t0": 257.457,
+    "t1": 263.726,
+    "src": "gushiken.mp4",
+    "ss": 30,
+    "kind": "ctb",
+    "label": "出典: 具志堅用高のネクストチャレンジ"
+  },
+  {
+    "beat": "3_pros03",
+    "t0": 264.006,
+    "t1": 271.53,
+    "src": "naito.mp4",
+    "ss": 138,
+    "kind": "cover",
+    "label": "出典: 内藤大助のチャレンジします!"
+  },
+  {
+    "beat": "3_pros04",
+    "t0": 271.81,
+    "t1": 280.354,
+    "src": "naito.mp4",
+    "ss": 506,
+    "kind": "cover",
+    "label": "出典: 内藤大助のチャレンジします!"
+  },
+  {
+    "beat": "3_pros05",
+    "t0": 280.634,
+    "t1": 287.368,
+    "src": "ako.mp4",
+    "ss": 188,
+    "kind": "ct",
+    "label": "出典: 赤穂亮のルーTUBE"
+  },
+  {
+    "beat": "3_pros06",
+    "t0": 287.648,
+    "t1": 294.103,
+    "src": "shiino.mp4",
+    "ss": 226,
+    "kind": "ct",
+    "label": "出典: GACHIBOX 椎野大輝"
+  },
+  {
+    "beat": "3_pros07",
+    "t0": 294.383,
+    "t1": 296.566,
+    "src": "shiino.mp4",
+    "ss": 918,
+    "kind": "ct",
+    "label": "出典: GACHIBOX 椎野大輝"
+  },
+  {
+    "beat": "3_pros08",
+    "t0": 296.846,
+    "t1": 301.072,
+    "src": "g495.jpg",
+    "ss": 0,
+    "kind": "sl",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "3_pros09",
+    "t0": 301.352,
+    "t1": 308.318,
+    "src": "uchiyama.mp4",
+    "ss": 57,
+    "kind": "ctb",
+    "label": "出典: 内山高志KOチャンネル"
+  },
+  {
+    "beat": "3_pros10",
+    "t0": 308.598,
+    "t1": 315.703,
+    "src": "kawajiri.mp4",
+    "ss": 55,
+    "kind": "cb",
+    "label": "出典: 川尻達也【公認】切り抜きチャンネル"
+  },
+  {
+    "beat": "3_pros11",
+    "t0": 315.983,
+    "t1": 320.07,
+    "src": "kameda.mp4",
+    "ss": 457,
+    "kind": "ct",
+    "label": "出典: 亀田大毅"
+  },
+  {
+    "beat": "3_pros12",
+    "t0": 320.35,
+    "t1": 328.291,
+    "src": "kyoguchi.mp4",
+    "ss": 560,
+    "kind": "ct",
+    "label": "出典: 京口紘人 Hiroto Kyoguchi"
+  },
+  {
+    "beat": "3_pros13",
+    "t0": 328.571,
+    "t1": 338.045,
+    "src": "tokashiki.mp4",
+    "ss": 3293,
+    "kind": "cb",
+    "label": "出典: 渡嘉敷勝男&竹原慎二&畑山隆則 ぶっちゃけチャンネル"
+  },
+  {
+    "beat": "3_pros14",
+    "t0": 338.325,
+    "t1": 342.737,
+    "src": "hosokawa.mp4",
+    "ss": 448,
+    "kind": "cover",
+    "label": "出典: 細川バレンタイン / 前向き教室"
+  },
+  {
+    "beat": "3_pros15",
+    "t0": 343.017,
+    "t1": 347.661,
+    "src": "hosokawa.mp4",
+    "ss": 516,
+    "kind": "cover",
+    "label": "出典: 細川バレンタイン / 前向き教室"
+  },
+  {
+    "beat": "3_pros16",
+    "t0": 347.941,
+    "t1": 353.281,
+    "src": "horiguchi.mp4",
+    "ss": 112,
+    "kind": "cover",
+    "label": "出典: 堀口恭司 Kyoji Horiguchi"
+  },
+  {
+    "beat": "3_pros17",
+    "t0": 353.561,
+    "t1": 360.992,
+    "src": "g492.jpg",
+    "ss": 0,
+    "kind": "sr",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "4_fullmark00",
+    "t0": 363.722,
+    "t1": 368.923,
+    "src": "g484.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "4_fullmark01",
+    "t0": 369.203,
+    "t1": 372.825,
+    "src": "naito.mp4",
+    "ss": 94,
+    "kind": "cover",
+    "label": "出典: 内藤大助のチャレンジします!"
+  },
+  {
+    "beat": "4_fullmark02",
+    "t0": 373.105,
+    "t1": 378.075,
+    "src": "gushiken.mp4",
+    "ss": 74,
+    "kind": "ctb",
+    "label": "出典: 具志堅用高のネクストチャレンジ"
+  },
+  {
+    "beat": "4_fullmark03",
+    "t0": 378.355,
+    "t1": 383.324,
+    "src": "naito.mp4",
+    "ss": 155,
+    "kind": "cover",
+    "label": "出典: 内藤大助のチャレンジします!"
+  },
+  {
+    "beat": "4_fullmark04",
+    "t0": 383.604,
+    "t1": 389.362,
+    "src": "kubo.mp4",
+    "ss": 170,
+    "kind": "ct",
+    "label": "出典: 久保隼のボクシング設計図"
+  },
+  {
+    "beat": "4_fullmark05",
+    "t0": 389.642,
+    "t1": 395.958,
+    "src": "kubo.mp4",
+    "ss": 197,
+    "kind": "ct",
+    "label": "出典: 久保隼のボクシング設計図"
+  },
+  {
+    "beat": "4_fullmark06",
+    "t0": 396.238,
+    "t1": 401.579,
+    "src": "masato.mp4",
+    "ss": 386,
+    "kind": "cover",
+    "label": "出典: 魔裟斗チャンネル"
+  },
+  {
+    "beat": "4_fullmark07",
+    "t0": 401.859,
+    "t1": 407.71,
+    "src": "tokashiki.mp4",
+    "ss": 2346,
+    "kind": "cb",
+    "label": "出典: 渡嘉敷勝男&竹原慎二&畑山隆則 ぶっちゃけチャンネル"
+  },
+  {
+    "beat": "4_fullmark08",
+    "t0": 407.99,
+    "t1": 413.841,
+    "src": "asign.mp4",
+    "ss": 1137,
+    "kind": "cover",
+    "label": "出典: A-SIGN.BOXING.COM"
+  },
+  {
+    "beat": "4_fullmark09",
+    "t0": 414.121,
+    "t1": 419.044,
+    "src": "g485.jpg",
+    "ss": 0,
+    "kind": "sl",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "5_cards00",
+    "t0": 421.774,
+    "t1": 426.325,
+    "src": "ann01.jpg",
+    "ss": 0,
+    "kind": "sd",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "5_cards01",
+    "t0": 426.605,
+    "t1": 429.02,
+    "src": "n_daily.jpg",
+    "ss": 0,
+    "kind": "sdl",
+    "label": "出典: THE ANSWER"
+  },
+  {
+    "beat": "5_cards02",
+    "t0": 429.3,
+    "t1": 434.501,
+    "src": "naito.mp4",
+    "ss": 118,
+    "kind": "cover",
+    "label": "出典: 内藤大助のチャレンジします!"
+  },
+  {
+    "beat": "5_cards03",
+    "t0": 434.781,
+    "t1": 441.004,
+    "src": "radio.mp4",
+    "ss": 252,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "5_cards04",
+    "t0": 441.284,
+    "t1": 447.368,
+    "src": "shiino.mp4",
+    "ss": 468,
+    "kind": "ct",
+    "label": "出典: GACHIBOX 椎野大輝"
+  },
+  {
+    "beat": "5_cards05",
+    "t0": 447.648,
+    "t1": 451.456,
+    "src": "g487.jpg",
+    "ss": 0,
+    "kind": "sdr",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "5_cards06",
+    "t0": 451.736,
+    "t1": 458.238,
+    "src": "g489.jpg",
+    "ss": 0,
+    "kind": "sd",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "5_cards07",
+    "t0": 458.518,
+    "t1": 460.004,
+    "src": "f102.jpg",
+    "ss": 0,
+    "kind": "sdl",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "5_cards08",
+    "t0": 460.284,
+    "t1": 465.299,
+    "src": "ef07.jpg",
+    "ss": 0,
+    "kind": "sd",
+    "label": "出典: eFight"
+  },
+  {
+    "beat": "5_cards09",
+    "t0": 465.579,
+    "t1": 468.969,
+    "src": "g490.jpg",
+    "ss": 0,
+    "kind": "sdup",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "5_cards10",
+    "t0": 469.249,
+    "t1": 476.029,
+    "src": "g488.jpg",
+    "ss": 0,
+    "kind": "sdr",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "5_cards11",
+    "t0": 476.309,
+    "t1": 480.907,
+    "src": "radio.mp4",
+    "ss": 266,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "5_cards12",
+    "t0": 481.187,
+    "t1": 487.038,
+    "src": "radio.mp4",
+    "ss": 555,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "5_cards13",
+    "t0": 487.318,
+    "t1": 493.541,
+    "src": "g491.jpg",
+    "ss": 0,
+    "kind": "sdl",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "5_cards14",
+    "t0": 493.821,
+    "t1": 498.512,
+    "src": "radio.mp4",
+    "ss": 648,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "5_cards15",
+    "t0": 498.792,
+    "t1": 506.362,
+    "src": "g494.jpg",
+    "ss": 0,
+    "kind": "sd",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "5_cards16",
+    "t0": 506.642,
+    "t1": 511.796,
+    "src": "radio.mp4",
+    "ss": 714,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "5_cards17",
+    "t0": 512.076,
+    "t1": 517.278,
+    "src": "radio.mp4",
+    "ss": 858,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "5_cards18",
+    "t0": 517.558,
+    "t1": 521.133,
+    "src": "radio.mp4",
+    "ss": 903,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "5_cards19",
+    "t0": 521.413,
+    "t1": 524.664,
+    "src": "g492.jpg",
+    "ss": 0,
+    "kind": "sdup",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "5_cards20",
+    "t0": 524.944,
+    "t1": 531.817,
+    "src": "g496.jpg",
+    "ss": 0,
+    "kind": "sd",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "5_cards21",
+    "t0": 532.097,
+    "t1": 536.138,
+    "src": "g497.jpg",
+    "ss": 0,
+    "kind": "sdl",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "5_cards22",
+    "t0": 536.418,
+    "t1": 541.48,
+    "src": "radio.mp4",
+    "ss": 878,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "5_cards23",
+    "t0": 541.76,
+    "t1": 544.546,
+    "src": "g498.jpg",
+    "ss": 0,
+    "kind": "sd",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "5_cards24",
+    "t0": 544.826,
+    "t1": 551.095,
+    "src": "g493.jpg",
+    "ss": 0,
+    "kind": "sdr",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "5_cards25",
+    "t0": 551.375,
+    "t1": 555.509,
+    "src": "g495.jpg",
+    "ss": 0,
+    "kind": "sdup",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "5_cards26",
+    "t0": 555.789,
+    "t1": 560.34,
+    "src": "eto.mp4",
+    "ss": 133,
+    "kind": "cover",
+    "label": "出典: 江藤光喜 日本初の男チャンネル"
+  },
+  {
+    "beat": "5_cards27",
+    "t0": 560.62,
+    "t1": 565.124,
+    "src": "sasaki.mp4",
+    "ss": 488,
+    "kind": "ctb",
+    "label": "出典: ボクシングDEEP解説 佐々木浩一"
+  },
+  {
+    "beat": "6_criteria00",
+    "t0": 567.854,
+    "t1": 572.266,
+    "src": "ef0.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: eFight"
+  },
+  {
+    "beat": "6_criteria01",
+    "t0": 572.546,
+    "t1": 577.562,
+    "src": "g500.jpg",
+    "ss": 0,
+    "kind": "sl",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "6_criteria02",
+    "t0": 577.842,
+    "t1": 582.764,
+    "src": "g490.jpg",
+    "ss": 0,
+    "kind": "sr",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "6_criteria03",
+    "t0": 583.044,
+    "t1": 587.642,
+    "src": "g495.jpg",
+    "ss": 0,
+    "kind": "sr",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "6_criteria04",
+    "t0": 587.922,
+    "t1": 590.662,
+    "src": "g494.jpg",
+    "ss": 0,
+    "kind": "sr",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "6_criteria05",
+    "t0": 590.942,
+    "t1": 595.539,
+    "src": "g491.jpg",
+    "ss": 0,
+    "kind": "sr",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "6_criteria06",
+    "t0": 595.819,
+    "t1": 599.256,
+    "src": "ef07.jpg",
+    "ss": 0,
+    "kind": "sup",
+    "label": "出典: eFight"
+  },
+  {
+    "beat": "6_criteria07",
+    "t0": 599.536,
+    "t1": 602.09,
+    "src": "g492.jpg",
+    "ss": 0,
+    "kind": "sl",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "6_criteria08",
+    "t0": 602.37,
+    "t1": 607.571,
+    "src": "radio.mp4",
+    "ss": 288,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "6_criteria09",
+    "t0": 607.851,
+    "t1": 614.353,
+    "src": "radio.mp4",
+    "ss": 310,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "6_criteria10",
+    "t0": 614.633,
+    "t1": 616.862,
+    "src": "g489.jpg",
+    "ss": 0,
+    "kind": "sup",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "6_criteria11",
+    "t0": 617.142,
+    "t1": 623.086,
+    "src": "radio.mp4",
+    "ss": 338,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "6_criteria12",
+    "t0": 623.366,
+    "t1": 627.732,
+    "src": "radio.mp4",
+    "ss": 262,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "6_criteria13",
+    "t0": 628.012,
+    "t1": 635.349,
+    "src": "radio.mp4",
+    "ss": 393,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "6_criteria14",
+    "t0": 635.629,
+    "t1": 641.62,
+    "src": "radio.mp4",
+    "ss": 469,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "6_criteria15",
+    "t0": 641.9,
+    "t1": 647.426,
+    "src": "radio.mp4",
+    "ss": 490,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "6_criteria16",
+    "t0": 647.706,
+    "t1": 654.904,
+    "src": "g497.jpg",
+    "ss": 0,
+    "kind": "sup",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "6_criteria17",
+    "t0": 655.184,
+    "t1": 660.525,
+    "src": "abe.mp4",
+    "ss": 148,
+    "kind": "ct",
+    "label": "出典: 阿部麗也 / ボクサートリオch"
+  },
+  {
+    "beat": "6_criteria18",
+    "t0": 660.805,
+    "t1": 663.034,
+    "src": "daily_tenshin.mp4",
+    "ss": 120,
+    "kind": "mask",
+    "label": "出典: デイリースポーツ 公式"
+  },
+  {
+    "beat": "6_criteria19",
+    "t0": 663.314,
+    "t1": 670.28,
+    "src": "daily_tenshin.mp4",
+    "ss": 560,
+    "kind": "mask",
+    "label": "出典: デイリースポーツ 公式"
+  },
+  {
+    "beat": "7_last400",
+    "t0": 673.01,
+    "t1": 677.236,
+    "src": "shiino.mp4",
+    "ss": 495,
+    "kind": "ct",
+    "label": "出典: GACHIBOX 椎野大輝"
+  },
+  {
+    "beat": "7_last401",
+    "t0": 677.516,
+    "t1": 681.417,
+    "src": "uchiyama.mp4",
+    "ss": 324,
+    "kind": "ctb",
+    "label": "出典: 内山高志KOチャンネル"
+  },
+  {
+    "beat": "7_last402",
+    "t0": 681.697,
+    "t1": 687.502,
+    "src": "tokashiki.mp4",
+    "ss": 4128,
+    "kind": "cb",
+    "label": "出典: 渡嘉敷勝男&竹原慎二&畑山隆則 ぶっちゃけチャンネル"
+  },
+  {
+    "beat": "7_last403",
+    "t0": 687.782,
+    "t1": 694.423,
+    "src": "g488.jpg",
+    "ss": 0,
+    "kind": "sd",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "7_last404",
+    "t0": 694.703,
+    "t1": 701.158,
+    "src": "g496.jpg",
+    "ss": 0,
+    "kind": "sdr",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "7_last405",
+    "t0": 701.438,
+    "t1": 702.878,
+    "src": "g497.jpg",
+    "ss": 0,
+    "kind": "sd",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "7_last406",
+    "t0": 703.158,
+    "t1": 709.985,
+    "src": "g498.jpg",
+    "ss": 0,
+    "kind": "sdl",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "7_last407",
+    "t0": 710.265,
+    "t1": 715.605,
+    "src": "g487.jpg",
+    "ss": 0,
+    "kind": "sd",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "7_last408",
+    "t0": 715.885,
+    "t1": 717.882,
+    "src": "ef03.jpg",
+    "ss": 0,
+    "kind": "sr",
+    "label": "出典: eFight"
+  },
+  {
+    "beat": "7_last409",
+    "t0": 718.162,
+    "t1": 724.06,
+    "src": "g494.jpg",
+    "ss": 0,
+    "kind": "sdr",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "7_last410",
+    "t0": 724.34,
+    "t1": 730.981,
+    "src": "radio.mp4",
+    "ss": 882,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "7_last411",
+    "t0": 731.261,
+    "t1": 735.812,
+    "src": "g491.jpg",
+    "ss": 0,
+    "kind": "sdup",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "7_last412",
+    "t0": 736.092,
+    "t1": 740.736,
+    "src": "pv_doc3.mp4",
+    "ss": 618,
+    "kind": "pv",
+    "label": "出典: Prime Video 公式"
+  },
+  {
+    "beat": "8_down00",
+    "t0": 743.466,
+    "t1": 747.738,
+    "src": "g490.jpg",
+    "ss": 0,
+    "kind": "sl",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "8_down01",
+    "t0": 748.018,
+    "t1": 752.059,
+    "src": "uchiyama.mp4",
+    "ss": 63,
+    "kind": "ctb",
+    "label": "出典: 内山高志KOチャンネル"
+  },
+  {
+    "beat": "8_down02",
+    "t0": 752.339,
+    "t1": 759.072,
+    "src": "uchiyama.mp4",
+    "ss": 86,
+    "kind": "ctb",
+    "label": "出典: 内山高志KOチャンネル"
+  },
+  {
+    "beat": "8_down03",
+    "t0": 759.352,
+    "t1": 763.578,
+    "src": "n_hoch.jpg",
+    "ss": 0,
+    "kind": "sr",
+    "label": "出典: スポーツ報知"
+  },
+  {
+    "beat": "8_down04",
+    "t0": 763.858,
+    "t1": 767.574,
+    "src": "g493.jpg",
+    "ss": 0,
+    "kind": "sup",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "8_down05",
+    "t0": 767.854,
+    "t1": 771.615,
+    "src": "g495.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "8_down06",
+    "t0": 771.895,
+    "t1": 775.425,
+    "src": "gushiken.mp4",
+    "ss": 142,
+    "kind": "ctb",
+    "label": "出典: 具志堅用高のネクストチャレンジ"
+  },
+  {
+    "beat": "8_down07",
+    "t0": 775.705,
+    "t1": 780.163,
+    "src": "gushiken.mp4",
+    "ss": 312,
+    "kind": "ctb",
+    "label": "出典: 具志堅用高のネクストチャレンジ"
+  },
+  {
+    "beat": "8_down08",
+    "t0": 780.443,
+    "t1": 785.737,
+    "src": "hosokawa.mp4",
+    "ss": 285,
+    "kind": "cover",
+    "label": "出典: 細川バレンタイン / 前向き教室"
+  },
+  {
+    "beat": "8_down09",
+    "t0": 786.017,
+    "t1": 793.308,
+    "src": "sanspo_shingo.mp4",
+    "ss": 22,
+    "kind": "mask",
+    "label": "出典: サンスポ"
+  },
+  {
+    "beat": "8_down10",
+    "t0": 793.588,
+    "t1": 803.155,
+    "src": "radio.mp4",
+    "ss": 800,
+    "kind": "cover",
+    "label": "出典: ボクシング言いたい放題ラジオ"
+  },
+  {
+    "beat": "8_down11",
+    "t0": 803.435,
+    "t1": 805.757,
+    "src": "g500.jpg",
+    "ss": 0,
+    "kind": "sr",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "8_down12",
+    "t0": 806.037,
+    "t1": 812.817,
+    "src": "uchiyama.mp4",
+    "ss": 218,
+    "kind": "ctb",
+    "label": "出典: 内山高志KOチャンネル"
+  },
+  {
+    "beat": "8_down13",
+    "t0": 813.097,
+    "t1": 818.391,
+    "src": "g502.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "9_end00",
+    "t0": 821.121,
+    "t1": 827.298,
+    "src": "ef04.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: eFight"
+  },
+  {
+    "beat": "9_end01",
+    "t0": 827.578,
+    "t1": 831.804,
+    "src": "g492.jpg",
+    "ss": 0,
+    "kind": "sd",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "9_end02",
+    "t0": 832.084,
+    "t1": 836.635,
+    "src": "n_daily.jpg",
+    "ss": 0,
+    "kind": "sdr",
+    "label": "出典: THE ANSWER"
+  },
+  {
+    "beat": "9_end03",
+    "t0": 836.915,
+    "t1": 841.512,
+    "src": "g489.jpg",
+    "ss": 0,
+    "kind": "sdl",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "9_end04",
+    "t0": 841.792,
+    "t1": 847.319,
+    "src": "g498.jpg",
+    "ss": 0,
+    "kind": "sdup",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "9_end05",
+    "t0": 847.599,
+    "t1": 850.896,
+    "src": "daily_tenshin.mp4",
+    "ss": 760,
+    "kind": "mask",
+    "label": "出典: デイリースポーツ 公式"
+  },
+  {
+    "beat": "9_end06",
+    "t0": 851.176,
+    "t1": 857.306,
+    "src": "daily_tenshin.mp4",
+    "ss": 880,
+    "kind": "mask",
+    "label": "出典: デイリースポーツ 公式"
+  },
+  {
+    "beat": "9_end07",
+    "t0": 857.586,
+    "t1": 863.67,
+    "src": "ef03.jpg",
+    "ss": 0,
+    "kind": "sl",
+    "label": "出典: eFight"
+  },
+  {
+    "beat": "9_end08",
+    "t0": 863.95,
+    "t1": 867.293,
+    "src": "g491.jpg",
+    "ss": 0,
+    "kind": "s",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "9_end09",
+    "t0": 867.573,
+    "t1": 871.474,
+    "src": "g496.jpg",
+    "ss": 0,
+    "kind": "sup",
+    "label": "出典: ゴング格闘技"
+  },
+  {
+    "beat": "9_end10",
+    "t0": 871.754,
+    "t1": 876.305,
+    "src": "pv_doc1.mp4",
+    "ss": 452,
+    "kind": "pv",
+    "label": "出典: Prime Video 公式"
+  },
+  {
+    "beat": "9_end11",
+    "t0": 876.585,
+    "t1": 882.065,
+    "src": "ef05.jpg",
+    "ss": 0,
+    "kind": "sr",
+    "label": "出典: eFight"
+  }
+]
