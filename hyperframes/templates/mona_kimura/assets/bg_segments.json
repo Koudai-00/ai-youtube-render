@@ -1,0 +1,2306 @@
+[
+ {
+  "beat": "open_ko",
+  "t0": 0.3,
+  "t1": 10.3,
+  "src": "fight1_ogiwara.mp4",
+  "ss": 117.5,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "h1",
+  "t0": 10.52,
+  "t1": 17.393,
+  "src": "fight1_ogiwara.mp4",
+  "ss": 60.0,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "h2",
+  "t0": 17.613,
+  "t1": 20.771,
+  "src": "fight2_yuka.mp4",
+  "ss": 760.0,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "h3",
+  "t0": 20.771,
+  "t1": 23.771,
+  "src": "fight2_yuka.mp4",
+  "ss": 339.0,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "h4",
+  "t0": 23.991,
+  "t1": 29.796,
+  "src": "exp_fukuchi.mp4",
+  "ss": 82.0,
+  "kind": "fuk",
+  "label": "福地勇人チャンネル"
+ },
+ {
+  "beat": "h5",
+  "t0": 30.016,
+  "t1": 36.053,
+  "src": "exp_gushiken.mp4",
+  "ss": 606.0,
+  "kind": "gus",
+  "label": "具志堅用高のネクストチャレンジ"
+ },
+ {
+  "beat": "h6",
+  "t0": 36.273,
+  "t1": 43.146,
+  "src": "exp_masato.mp4",
+  "ss": 486.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "h7",
+  "t0": 43.366,
+  "t1": 47.221,
+  "src": "fight3_ozawa.mp4",
+  "ss": 24.0,
+  "kind": "k1c",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "h8",
+  "t0": 47.441,
+  "t1": 55.614,
+  "src": "probe1_k1official_worldmax_nicol.mp4",
+  "ss": 985.0,
+  "kind": "k1w",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "h9",
+  "t0": 55.834,
+  "t1": 65.733,
+  "src": "own_tiger.mp4",
+  "ss": 284.0,
+  "kind": "tig",
+  "label": "Fighters from Tokyo, Japan"
+ },
+ {
+  "beat": "a1",
+  "t0": 66.183,
+  "t1": 70.177,
+  "src": "pose_a1_a1.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "a2",
+  "t0": 70.177,
+  "t1": 74.177,
+  "src": "pose_a2_a2.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "a3",
+  "t0": 74.397,
+  "t1": 78.159,
+  "src": "pose_a3_a5.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "a4",
+  "t0": 78.379,
+  "t1": 82.883,
+  "src": "pose_a3_a5.mp4",
+  "ss": 3.982,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "a5",
+  "t0": 83.103,
+  "t1": 88.815,
+  "src": "pose_a3_a5.mp4",
+  "ss": 8.706,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "a6",
+  "t0": 89.035,
+  "t1": 96.698,
+  "src": "pose_a6_a7.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "a7",
+  "t0": 96.918,
+  "t1": 103.884,
+  "src": "pose_a6_a7.mp4",
+  "ss": 7.883,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "b1",
+  "t0": 104.104,
+  "t1": 111.023,
+  "src": "pose_b1_b2.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "b2",
+  "t0": 111.243,
+  "t1": 116.491,
+  "src": "pose_b1_b2.mp4",
+  "ss": 7.139,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "b3",
+  "t0": 116.711,
+  "t1": 124.142,
+  "src": "pose_b3_b4.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "b4",
+  "t0": 124.362,
+  "t1": 129.563,
+  "src": "pose_b3_b4.mp4",
+  "ss": 7.651,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "b5",
+  "t0": 129.563,
+  "t1": 133.063,
+  "src": "pose_b5_b5.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "c1",
+  "t0": 133.283,
+  "t1": 137.323,
+  "src": "pose_c1_c4.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "c2",
+  "t0": 137.543,
+  "t1": 143.859,
+  "src": "pose_c1_c4.mp4",
+  "ss": 4.26,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "c3",
+  "t0": 144.079,
+  "t1": 147.423,
+  "src": "pose_c1_c4.mp4",
+  "ss": 10.796,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "c4",
+  "t0": 147.643,
+  "t1": 153.169,
+  "src": "pose_c1_c4.mp4",
+  "ss": 14.36,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "c5",
+  "t0": 153.169,
+  "t1": 157.169,
+  "src": "pose_c5_c5.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "c6",
+  "t0": 157.389,
+  "t1": 163.194,
+  "src": "pose_c6_c7.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "c7",
+  "t0": 163.414,
+  "t1": 168.429,
+  "src": "pose_c6_c7.mp4",
+  "ss": 6.025,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "d1",
+  "t0": 168.649,
+  "t1": 170.321,
+  "src": "pose_d1_d2.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "d2",
+  "t0": 170.541,
+  "t1": 177.879,
+  "src": "pose_d1_d2.mp4",
+  "ss": 1.892,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "d3",
+  "t0": 177.879,
+  "t1": 182.379,
+  "src": "pose_d3_d3.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "d4",
+  "t0": 182.599,
+  "t1": 189.379,
+  "src": "pose_d4_d4.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "d5",
+  "t0": 189.599,
+  "t1": 197.401,
+  "src": "pose_d5_d6.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "d6",
+  "t0": 197.621,
+  "t1": 204.076,
+  "src": "pose_d5_d6.mp4",
+  "ss": 8.022,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "e1",
+  "t0": 204.296,
+  "t1": 205.921,
+  "src": "pose_e1_e3.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "e2",
+  "t0": 206.141,
+  "t1": 211.203,
+  "src": "pose_e1_e3.mp4",
+  "ss": 1.845,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "e3",
+  "t0": 211.423,
+  "t1": 215.185,
+  "src": "pose_e1_e3.mp4",
+  "ss": 7.127,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "e4",
+  "t0": 215.185,
+  "t1": 221.185,
+  "src": "pose_e4_e4.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "e5",
+  "t0": 221.405,
+  "t1": 225.074,
+  "src": "pose_e5_e6.mp4",
+  "ss": 0.0,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "e6",
+  "t0": 225.294,
+  "t1": 229.38,
+  "src": "pose_e5_e6.mp4",
+  "ss": 3.889,
+  "kind": "pose",
+  "label": ""
+ },
+ {
+  "beat": "f1",
+  "t0": 229.6,
+  "t1": 235.08,
+  "src": "own_qa.mp4",
+  "ss": 740.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "f2",
+  "t0": 235.3,
+  "t1": 239.341,
+  "src": "own_break2.mp4",
+  "ss": 680.0,
+  "kind": "brk",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "f3",
+  "t0": 239.561,
+  "t1": 245.737,
+  "src": "own_break2.mp4",
+  "ss": 712.0,
+  "kind": "brk",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "f4",
+  "t0": 245.957,
+  "t1": 248.883,
+  "src": "exp_fukuchi.mp4",
+  "ss": 474.0,
+  "kind": "fuk",
+  "label": "福地勇人チャンネル"
+ },
+ {
+  "beat": "f5",
+  "t0": 249.103,
+  "t1": 252.679,
+  "src": "own_break2.mp4",
+  "ss": 610.0,
+  "kind": "brk",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "f6",
+  "t0": 252.899,
+  "t1": 257.543,
+  "src": "exp_fukuchi.mp4",
+  "ss": 418.0,
+  "kind": "fuk",
+  "label": "福地勇人チャンネル"
+ },
+ {
+  "beat": "f7",
+  "t0": 257.763,
+  "t1": 263.289,
+  "src": "own_break2.mp4",
+  "ss": 720.0,
+  "kind": "brk",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "f8",
+  "t0": 263.509,
+  "t1": 267.178,
+  "src": "fight4_choi.mp4",
+  "ss": 356.0,
+  "kind": "k1g",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "g1",
+  "t0": 267.398,
+  "t1": 270.788,
+  "src": "exp_masato.mp4",
+  "ss": 945.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "g2",
+  "t0": 271.008,
+  "t1": 275.048,
+  "src": "exp_gushiken.mp4",
+  "ss": 754.0,
+  "kind": "gus",
+  "label": "具志堅用高のネクストチャレンジ"
+ },
+ {
+  "beat": "g3",
+  "t0": 275.268,
+  "t1": 279.448,
+  "src": "exp_masato.mp4",
+  "ss": 785.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "g4",
+  "t0": 279.668,
+  "t1": 283.569,
+  "src": "own_tiger.mp4",
+  "ss": 150.0,
+  "kind": "tig",
+  "label": "Fighters from Tokyo, Japan"
+ },
+ {
+  "beat": "i1",
+  "t0": 283.789,
+  "t1": 287.829,
+  "src": "exp_masato.mp4",
+  "ss": 420.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "i2",
+  "t0": 288.049,
+  "t1": 293.39,
+  "src": "exp_masato.mp4",
+  "ss": 538.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "i3",
+  "t0": 293.61,
+  "t1": 299.647,
+  "src": "exp_gushiken.mp4",
+  "ss": 545.0,
+  "kind": "gus",
+  "label": "具志堅用高のネクストチャレンジ"
+ },
+ {
+  "beat": "i4",
+  "t0": 299.867,
+  "t1": 306.972,
+  "src": "exp_fukuchi.mp4",
+  "ss": 57.5,
+  "kind": "fuk",
+  "label": "福地勇人チャンネル"
+ },
+ {
+  "beat": "i5",
+  "t0": 307.192,
+  "t1": 311.372,
+  "src": "exp_fukuchi.mp4",
+  "ss": 642.0,
+  "kind": "fuk2",
+  "label": "福地勇人チャンネル"
+ },
+ {
+  "beat": "i6",
+  "t0": 311.592,
+  "t1": 314.982,
+  "src": "exp_gushiken.mp4",
+  "ss": 658.0,
+  "kind": "gus",
+  "label": "具志堅用高のネクストチャレンジ"
+ },
+ {
+  "beat": "j1",
+  "t0": 315.202,
+  "t1": 317.617,
+  "src": "exp_masato.mp4",
+  "ss": 905.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "j2",
+  "t0": 317.837,
+  "t1": 322.202,
+  "src": "own_break2.mp4",
+  "ss": 1180.0,
+  "kind": "brk",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "j3",
+  "t0": 322.422,
+  "t1": 327.112,
+  "src": "own_qa.mp4",
+  "ss": 482.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "j4",
+  "t0": 327.332,
+  "t1": 334.298,
+  "src": "exp_masato.mp4",
+  "ss": 466.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "j5",
+  "t0": 334.518,
+  "t1": 339.906,
+  "src": "exp_masato.mp4",
+  "ss": 554.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "j6",
+  "t0": 340.126,
+  "t1": 344.955,
+  "src": "exp_masato.mp4",
+  "ss": 1122.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "j7",
+  "t0": 345.175,
+  "t1": 347.915,
+  "src": "exp_gushiken.mp4",
+  "ss": 732.0,
+  "kind": "gus",
+  "label": "具志堅用高のネクストチャレンジ"
+ },
+ {
+  "beat": "k1",
+  "t0": 348.365,
+  "t1": 353.566,
+  "src": "own_qa.mp4",
+  "ss": 310.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "k2",
+  "t0": 353.786,
+  "t1": 359.127,
+  "src": "own_prep.mp4",
+  "ss": 16.0,
+  "kind": "prep",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "k3",
+  "t0": 359.347,
+  "t1": 362.226,
+  "src": "own_qa.mp4",
+  "ss": 442.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "k4",
+  "t0": 362.446,
+  "t1": 366.765,
+  "src": "own_qa.mp4",
+  "ss": 130.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "k5",
+  "t0": 366.985,
+  "t1": 374.926,
+  "src": "own_qa.mp4",
+  "ss": 104.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "k6",
+  "t0": 375.146,
+  "t1": 378.769,
+  "src": "own_qa.mp4",
+  "ss": 125.5,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "k7",
+  "t0": 378.989,
+  "t1": 384.98,
+  "src": "exp_gushiken.mp4",
+  "ss": 1090.0,
+  "kind": "gus",
+  "label": "具志堅用高のネクストチャレンジ"
+ },
+ {
+  "beat": "l1",
+  "t0": 385.2,
+  "t1": 388.032,
+  "src": "own_tiger.mp4",
+  "ss": 228.0,
+  "kind": "tig",
+  "label": "Fighters from Tokyo, Japan"
+ },
+ {
+  "beat": "l2",
+  "t0": 388.252,
+  "t1": 394.382,
+  "src": "own_tiger.mp4",
+  "ss": 164.0,
+  "kind": "tig",
+  "label": "Fighters from Tokyo, Japan"
+ },
+ {
+  "beat": "l3",
+  "t0": 394.602,
+  "t1": 398.689,
+  "src": "own_qa.mp4",
+  "ss": 760.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "l4",
+  "t0": 398.909,
+  "t1": 404.9,
+  "src": "own_qa.mp4",
+  "ss": 561.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "l5",
+  "t0": 405.12,
+  "t1": 410.46,
+  "src": "own_qa.mp4",
+  "ss": 780.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "m1",
+  "t0": 410.68,
+  "t1": 414.071,
+  "src": "exp_fukuchi.mp4",
+  "ss": 261.5,
+  "kind": "fuk",
+  "label": "福地勇人チャンネル"
+ },
+ {
+  "beat": "m2",
+  "t0": 414.291,
+  "t1": 418.981,
+  "src": "exp_masato.mp4",
+  "ss": 344.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "m3",
+  "t0": 419.201,
+  "t1": 423.241,
+  "src": "own_tiger.mp4",
+  "ss": 182.0,
+  "kind": "tig",
+  "label": "Fighters from Tokyo, Japan"
+ },
+ {
+  "beat": "m4",
+  "t0": 423.461,
+  "t1": 429.777,
+  "src": "own_qa.mp4",
+  "ss": 830.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "m5",
+  "t0": 429.997,
+  "t1": 437.474,
+  "src": "exp_gushiken.mp4",
+  "ss": 679.0,
+  "kind": "gus",
+  "label": "具志堅用高のネクストチャレンジ"
+ },
+ {
+  "beat": "m6",
+  "t0": 437.694,
+  "t1": 440.805,
+  "src": "exp_gushiken.mp4",
+  "ss": 719.0,
+  "kind": "gus",
+  "label": "具志堅用高のネクストチャレンジ"
+ },
+ {
+  "beat": "m7",
+  "t0": 441.025,
+  "t1": 444.555,
+  "src": "own_qa.mp4",
+  "ss": 766.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "m8",
+  "t0": 444.775,
+  "t1": 450.255,
+  "src": "own_break2.mp4",
+  "ss": 38.0,
+  "kind": "brk",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "n1",
+  "t0": 450.475,
+  "t1": 452.379,
+  "src": "k1_iv_choi.mp4",
+  "ss": 340.0,
+  "kind": "ivc",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "n2",
+  "t0": 452.599,
+  "t1": 459.193,
+  "src": "exp_fukuchi.mp4",
+  "ss": 313.0,
+  "kind": "fuk",
+  "label": "福地勇人チャンネル"
+ },
+ {
+  "beat": "n3",
+  "t0": 459.413,
+  "t1": 465.125,
+  "src": "own_tiger.mp4",
+  "ss": 492.0,
+  "kind": "tig",
+  "label": "Fighters from Tokyo, Japan"
+ },
+ {
+  "beat": "n4",
+  "t0": 465.345,
+  "t1": 471.243,
+  "src": "own_qa.mp4",
+  "ss": 460.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "n5",
+  "t0": 471.463,
+  "t1": 476.014,
+  "src": "own_qa.mp4",
+  "ss": 341.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "n6",
+  "t0": 476.234,
+  "t1": 479.299,
+  "src": "exp_fukuchi.mp4",
+  "ss": 486.0,
+  "kind": "fuk",
+  "label": "福地勇人チャンネル"
+ },
+ {
+  "beat": "o1",
+  "t0": 479.749,
+  "t1": 483.975,
+  "src": "ama_narita.mp4",
+  "ss": 88.0,
+  "kind": "aman",
+  "label": "2021 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "o2",
+  "t0": 484.195,
+  "t1": 486.703,
+  "src": "ama_narita.mp4",
+  "ss": 145.0,
+  "kind": "aman",
+  "label": "2021 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "o3",
+  "t0": 486.923,
+  "t1": 489.617,
+  "src": "own_qa.mp4",
+  "ss": 1142.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "o4",
+  "t0": 489.837,
+  "t1": 496.153,
+  "src": "own_tiger.mp4",
+  "ss": 232.0,
+  "kind": "tig",
+  "label": "Fighters from Tokyo, Japan"
+ },
+ {
+  "beat": "o5",
+  "t0": 496.373,
+  "t1": 499.902,
+  "src": "own_qa.mp4",
+  "ss": 584.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "o6",
+  "t0": 500.122,
+  "t1": 504.348,
+  "src": "ama_narita.mp4",
+  "ss": 410.0,
+  "kind": "aman",
+  "label": "2021 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "o7",
+  "t0": 504.568,
+  "t1": 510.698,
+  "src": "k1_iv_choi.mp4",
+  "ss": 120.0,
+  "kind": "ivc",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "p1",
+  "t0": 510.918,
+  "t1": 514.262,
+  "src": "own_tiger.mp4",
+  "ss": 258.0,
+  "kind": "tig",
+  "label": "Fighters from Tokyo, Japan"
+ },
+ {
+  "beat": "p2",
+  "t0": 514.482,
+  "t1": 520.426,
+  "src": "k1_iv_choi.mp4",
+  "ss": 520.0,
+  "kind": "ivc",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "p3",
+  "t0": 520.646,
+  "t1": 525.569,
+  "src": "own_qa.mp4",
+  "ss": 1082.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "p4",
+  "t0": 525.789,
+  "t1": 532.987,
+  "src": "k1_iv_choi.mp4",
+  "ss": 760.0,
+  "kind": "ivc",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "p5",
+  "t0": 533.207,
+  "t1": 537.944,
+  "src": "own_qa.mp4",
+  "ss": 230.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "p6",
+  "t0": 538.164,
+  "t1": 542.483,
+  "src": "own_qa.mp4",
+  "ss": 604.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "q1",
+  "t0": 542.703,
+  "t1": 546.789,
+  "src": "own_qa.mp4",
+  "ss": 663.5,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "q2",
+  "t0": 547.009,
+  "t1": 554.393,
+  "src": "own_qa.mp4",
+  "ss": 676.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "q3",
+  "t0": 554.613,
+  "t1": 558.746,
+  "src": "own_tiger.mp4",
+  "ss": 265.0,
+  "kind": "tig",
+  "label": "Fighters from Tokyo, Japan"
+ },
+ {
+  "beat": "r1",
+  "t0": 559.196,
+  "t1": 561.658,
+  "src": "own_qa.mp4",
+  "ss": 702.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "r2",
+  "t0": 561.878,
+  "t1": 567.358,
+  "src": "ama_ogawa.mp4",
+  "ss": 342.0,
+  "kind": "amao",
+  "label": "2022 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "r3",
+  "t0": 567.578,
+  "t1": 574.033,
+  "src": "own_qa.mp4",
+  "ss": 705.5,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "r4",
+  "t0": 574.253,
+  "t1": 578.479,
+  "src": "ama_ogawa.mp4",
+  "ss": 546.0,
+  "kind": "amao",
+  "label": "2022 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "s1",
+  "t0": 578.699,
+  "t1": 584.225,
+  "src": "ama_narita.mp4",
+  "ss": 120.0,
+  "kind": "aman",
+  "label": "2021 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "s2",
+  "t0": 584.445,
+  "t1": 586.581,
+  "src": "ama_narita.mp4",
+  "ss": 165.0,
+  "kind": "aman",
+  "label": "2021 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "s3",
+  "t0": 586.801,
+  "t1": 594.371,
+  "src": "ama_narita.mp4",
+  "ss": 360.0,
+  "kind": "aman",
+  "label": "2021 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "s4",
+  "t0": 594.371,
+  "t1": 602.371,
+  "src": "ama_narita.mp4",
+  "ss": 700.0,
+  "kind": "aman",
+  "label": "2021 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "s5",
+  "t0": 602.591,
+  "t1": 607.421,
+  "src": "ama_narita.mp4",
+  "ss": 830.0,
+  "kind": "aman",
+  "label": "2021 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "s6",
+  "t0": 607.641,
+  "t1": 614.05,
+  "src": "ama_narita.mp4",
+  "ss": 848.0,
+  "kind": "aman",
+  "label": "2021 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "t1",
+  "t0": 614.5,
+  "t1": 618.215,
+  "src": "exp_masato.mp4",
+  "ss": 163.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "t2",
+  "t0": 618.435,
+  "t1": 625.865,
+  "src": "st_venue_out.jpg",
+  "ss": 0,
+  "kind": "stillw",
+  "label": "Wikimedia Commons"
+ },
+ {
+  "beat": "t3",
+  "t0": 626.085,
+  "t1": 633.144,
+  "src": "st_venue_in.jpg",
+  "ss": 0,
+  "kind": "stillw",
+  "label": "Wikimedia Commons"
+ },
+ {
+  "beat": "t4",
+  "t0": 633.364,
+  "t1": 635.779,
+  "src": "st_iba_draw_dk.jpg",
+  "ss": 0,
+  "kind": "stillw",
+  "label": "IBA公式ドローシート 2022"
+ },
+ {
+  "beat": "t5",
+  "t0": 635.999,
+  "t1": 640.55,
+  "src": "st_testa.png",
+  "ss": 0,
+  "kind": "stillc",
+  "label": "Wikimedia Commons"
+ },
+ {
+  "beat": "t6",
+  "t0": 640.55,
+  "t1": 645.55,
+  "src": "st_iba_result.jpg",
+  "ss": 0,
+  "kind": "stillw",
+  "label": "IBA公式ドローシート 2022"
+ },
+ {
+  "beat": "t7",
+  "t0": 645.77,
+  "t1": 653.015,
+  "src": "st_testa_b.jpg",
+  "ss": 0,
+  "kind": "stillc",
+  "label": "Wikimedia Commons"
+ },
+ {
+  "beat": "t8",
+  "t0": 653.235,
+  "t1": 655.882,
+  "src": "own_qa.mp4",
+  "ss": 1160.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "t9",
+  "t0": 656.102,
+  "t1": 663.997,
+  "src": "exp_masato.mp4",
+  "ss": 1163.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "t10",
+  "t0": 664.217,
+  "t1": 668.443,
+  "src": "st_iba_bracket.jpg",
+  "ss": 0,
+  "kind": "stillw",
+  "label": "IBA公式ドローシート 2022"
+ },
+ {
+  "beat": "u1",
+  "t0": 668.663,
+  "t1": 672.842,
+  "src": "k1_iv_choi.mp4",
+  "ss": 560.0,
+  "kind": "ivc",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "u2",
+  "t0": 673.062,
+  "t1": 679.935,
+  "src": "own_qa.mp4",
+  "ss": 402.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "u3",
+  "t0": 680.155,
+  "t1": 682.152,
+  "src": "ama_ogawa.mp4",
+  "ss": 128.0,
+  "kind": "amao",
+  "label": "2022 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "u4",
+  "t0": 682.372,
+  "t1": 687.295,
+  "src": "ama_ogawa.mp4",
+  "ss": 182.0,
+  "kind": "amao",
+  "label": "2022 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "u5",
+  "t0": 687.515,
+  "t1": 694.063,
+  "src": "ama_ogawa.mp4",
+  "ss": 230.0,
+  "kind": "amao",
+  "label": "2022 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "u6",
+  "t0": 694.283,
+  "t1": 698.462,
+  "src": "ama_ogawa.mp4",
+  "ss": 410.0,
+  "kind": "amao",
+  "label": "2022 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "u7",
+  "t0": 698.682,
+  "t1": 705.323,
+  "src": "ama_ogawa.mp4",
+  "ss": 472.0,
+  "kind": "amao",
+  "label": "2022 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "u8",
+  "t0": 705.543,
+  "t1": 710.837,
+  "src": "ama_ogawa.mp4",
+  "ss": 508.0,
+  "kind": "amao",
+  "label": "2022 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "v1",
+  "t0": 711.287,
+  "t1": 714.399,
+  "src": "k1_iv_choi.mp4",
+  "ss": 300.0,
+  "kind": "ivc",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "v2",
+  "t0": 714.619,
+  "t1": 719.263,
+  "src": "k1_iv_choi.mp4",
+  "ss": 480.0,
+  "kind": "ivc",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "v3",
+  "t0": 719.483,
+  "t1": 724.638,
+  "src": "ama_narita.mp4",
+  "ss": 620.0,
+  "kind": "aman",
+  "label": "2021 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "v4",
+  "t0": 724.858,
+  "t1": 730.059,
+  "src": "ama_narita.mp4",
+  "ss": 250.0,
+  "kind": "aman",
+  "label": "2021 全日本ボクシング選手権大会 公式"
+ },
+ {
+  "beat": "w1",
+  "t0": 730.509,
+  "t1": 733.806,
+  "src": "k1_iv_choi.mp4",
+  "ss": 640.0,
+  "kind": "ivc",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "w2",
+  "t0": 734.026,
+  "t1": 738.81,
+  "src": "own_tiger.mp4",
+  "ss": 416.0,
+  "kind": "tig",
+  "label": "Fighters from Tokyo, Japan"
+ },
+ {
+  "beat": "w3",
+  "t0": 739.03,
+  "t1": 741.677,
+  "src": "k1_iv_choi.mp4",
+  "ss": 400.0,
+  "kind": "ivc",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "w4",
+  "t0": 741.897,
+  "t1": 747.655,
+  "src": "exp_fukuchi.mp4",
+  "ss": 396.5,
+  "kind": "fuk",
+  "label": "福地勇人チャンネル"
+ },
+ {
+  "beat": "w5",
+  "t0": 747.875,
+  "t1": 752.844,
+  "src": "exp_masato.mp4",
+  "ss": 205.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "w6",
+  "t0": 753.064,
+  "t1": 757.105,
+  "src": "exp_masato.mp4",
+  "ss": 224.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "w7",
+  "t0": 757.325,
+  "t1": 759.507,
+  "src": "exp_masato.mp4",
+  "ss": 190.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "w8",
+  "t0": 759.727,
+  "t1": 763.535,
+  "src": "k1_iv_choi.mp4",
+  "ss": 20.0,
+  "kind": "ivc",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "x1",
+  "t0": 763.985,
+  "t1": 770.162,
+  "src": "card_krush167.jpg",
+  "ss": 0,
+  "kind": "stillw",
+  "label": "K-1公式（対戦カード）"
+ },
+ {
+  "beat": "x2",
+  "t0": 770.382,
+  "t1": 774.283,
+  "src": "fight1_ogiwara.mp4",
+  "ss": 14.0,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "x3",
+  "t0": 774.283,
+  "t1": 786.283,
+  "src": "fight1_ogiwara.mp4",
+  "ss": 114.5,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "x4",
+  "t0": 786.503,
+  "t1": 793.097,
+  "src": "fight1_ogiwara.mp4",
+  "ss": 162.0,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "x5",
+  "t0": 793.317,
+  "t1": 796.104,
+  "src": "fight1_ogiwara.mp4",
+  "ss": 135.0,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "x6",
+  "t0": 796.324,
+  "t1": 802.732,
+  "src": "fight1_ogiwara.mp4",
+  "ss": 152.0,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "y1",
+  "t0": 803.182,
+  "t1": 808.848,
+  "src": "card_krush170.jpg",
+  "ss": 0,
+  "kind": "stillw",
+  "label": "K-1公式（対戦カード）"
+ },
+ {
+  "beat": "y2",
+  "t0": 809.068,
+  "t1": 811.669,
+  "src": "fight2_yuka.mp4",
+  "ss": 30.0,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "y3",
+  "t0": 811.889,
+  "t1": 817.322,
+  "src": "fight2_yuka.mp4",
+  "ss": 53.5,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "y4",
+  "t0": 817.542,
+  "t1": 820.421,
+  "src": "fight2_yuka.mp4",
+  "ss": 546.0,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "y5",
+  "t0": 820.421,
+  "t1": 827.421,
+  "src": "fight2_yuka.mp4",
+  "ss": 662.4,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "y6",
+  "t0": 827.641,
+  "t1": 832.378,
+  "src": "fight2_yuka.mp4",
+  "ss": 743.6,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "z1",
+  "t0": 832.598,
+  "t1": 834.363,
+  "src": "fight2_yuka.mp4",
+  "ss": 766.0,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "z2",
+  "t0": 834.583,
+  "t1": 841.224,
+  "src": "fight2_yuka.mp4",
+  "ss": 155.0,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "z3",
+  "t0": 841.444,
+  "t1": 844.88,
+  "src": "exp_fukuchi.mp4",
+  "ss": 14.0,
+  "kind": "fuk",
+  "label": "福地勇人チャンネル"
+ },
+ {
+  "beat": "z4",
+  "t0": 845.1,
+  "t1": 851.045,
+  "src": "exp_gushiken.mp4",
+  "ss": 1133.0,
+  "kind": "gus",
+  "label": "具志堅用高のネクストチャレンジ"
+ },
+ {
+  "beat": "z5",
+  "t0": 851.265,
+  "t1": 854.841,
+  "src": "own_prep.mp4",
+  "ss": 36.0,
+  "kind": "prep",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "z6",
+  "t0": 855.061,
+  "t1": 861.376,
+  "src": "exp_fukuchi.mp4",
+  "ss": 437.5,
+  "kind": "fuk",
+  "label": "福地勇人チャンネル"
+ },
+ {
+  "beat": "z7",
+  "t0": 861.596,
+  "t1": 865.73,
+  "src": "fight2_yuka.mp4",
+  "ss": 777.0,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "z8",
+  "t0": 865.95,
+  "t1": 873.055,
+  "src": "exp_masato.mp4",
+  "ss": 1186.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "aa1",
+  "t0": 873.275,
+  "t1": 877.037,
+  "src": "own_qa.mp4",
+  "ss": 14.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "aa2",
+  "t0": 877.257,
+  "t1": 885.151,
+  "src": "fight2_yuka.mp4",
+  "ss": 231.0,
+  "kind": "k1",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "aa3",
+  "t0": 885.371,
+  "t1": 891.409,
+  "src": "own_prep.mp4",
+  "ss": 49.0,
+  "kind": "prep",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "aa4",
+  "t0": 891.629,
+  "t1": 896.319,
+  "src": "st_snoop.jpg",
+  "ss": 0,
+  "kind": "stillc",
+  "label": "Wikimedia Commons"
+ },
+ {
+  "beat": "aa5",
+  "t0": 896.539,
+  "t1": 901.833,
+  "src": "st_mcgregor_c.jpg",
+  "ss": 0,
+  "kind": "stillc",
+  "label": "Wikimedia Commons"
+ },
+ {
+  "beat": "aa6",
+  "t0": 902.053,
+  "t1": 905.49,
+  "src": "own_qa.mp4",
+  "ss": 262.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "aa7",
+  "t0": 905.71,
+  "t1": 913.93,
+  "src": "own_qa.mp4",
+  "ss": 1124.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "ab1",
+  "t0": 914.15,
+  "t1": 916.936,
+  "src": "k1_iv_choi.mp4",
+  "ss": 800.0,
+  "kind": "ivc",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ab2",
+  "t0": 917.156,
+  "t1": 920.035,
+  "src": "k1_iv_choi.mp4",
+  "ss": 840.0,
+  "kind": "ivc",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ab3",
+  "t0": 920.255,
+  "t1": 925.782,
+  "src": "own_break2.mp4",
+  "ss": 500.0,
+  "kind": "brk",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "ab4",
+  "t0": 926.002,
+  "t1": 930.831,
+  "src": "own_break2.mp4",
+  "ss": 540.0,
+  "kind": "brk",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "ab5",
+  "t0": 931.051,
+  "t1": 934.999,
+  "src": "own_break2.mp4",
+  "ss": 630.0,
+  "kind": "brk",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "ab6",
+  "t0": 935.219,
+  "t1": 938.655,
+  "src": "own_break2.mp4",
+  "ss": 68.0,
+  "kind": "brk",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "ab7",
+  "t0": 938.875,
+  "t1": 944.82,
+  "src": "own_break2.mp4",
+  "ss": 8.0,
+  "kind": "brk",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "ab8",
+  "t0": 945.04,
+  "t1": 951.68,
+  "src": "own_break2.mp4",
+  "ss": 690.0,
+  "kind": "brk",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "ac1",
+  "t0": 952.13,
+  "t1": 958.26,
+  "src": "card_krush177.jpg",
+  "ss": 0,
+  "kind": "stillw",
+  "label": "K-1公式（対戦カード）"
+ },
+ {
+  "beat": "ac2",
+  "t0": 958.48,
+  "t1": 965.261,
+  "src": "fight3_ozawa.mp4",
+  "ss": 219.5,
+  "kind": "k1cs",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ac3",
+  "t0": 965.481,
+  "t1": 971.1,
+  "src": "fight3_ozawa.mp4",
+  "ss": 168.5,
+  "kind": "k1c",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ac4",
+  "t0": 971.1,
+  "t1": 981.1,
+  "src": "fight3_ozawa.mp4",
+  "ss": 186.0,
+  "kind": "k1c",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ac5",
+  "t0": 981.32,
+  "t1": 985.035,
+  "src": "fight3_ozawa.mp4",
+  "ss": 339.0,
+  "kind": "k1c",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ac6",
+  "t0": 985.255,
+  "t1": 991.014,
+  "src": "fight3_ozawa.mp4",
+  "ss": 509.5,
+  "kind": "k1c",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ac7",
+  "t0": 991.234,
+  "t1": 994.67,
+  "src": "fight3_ozawa.mp4",
+  "ss": 516.3,
+  "kind": "k1c",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ac8",
+  "t0": 994.89,
+  "t1": 1002.506,
+  "src": "fight3_ozawa.mp4",
+  "ss": 536.0,
+  "kind": "k1c",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ac9",
+  "t0": 1002.726,
+  "t1": 1008.578,
+  "src": "fight3_ozawa.mp4",
+  "ss": 646.0,
+  "kind": "k1c",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ad1",
+  "t0": 1009.028,
+  "t1": 1016.18,
+  "src": "card_genki2026.jpg",
+  "ss": 0,
+  "kind": "stillw",
+  "label": "K-1公式（対戦カード）"
+ },
+ {
+  "beat": "ad2",
+  "t0": 1016.4,
+  "t1": 1021.554,
+  "src": "fight4_choi.mp4",
+  "ss": 8.0,
+  "kind": "k1g",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ad3",
+  "t0": 1021.774,
+  "t1": 1026.651,
+  "src": "fight4_choi.mp4",
+  "ss": 268.0,
+  "kind": "k1g",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ad4",
+  "t0": 1026.871,
+  "t1": 1031.468,
+  "src": "exp_masato.mp4",
+  "ss": 126.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "ad5",
+  "t0": 1031.688,
+  "t1": 1032.617,
+  "src": "exp_masato.mp4",
+  "ss": 118.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "ad6",
+  "t0": 1032.837,
+  "t1": 1040.035,
+  "src": "exp_masato.mp4",
+  "ss": 500.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "ad7",
+  "t0": 1040.255,
+  "t1": 1046.571,
+  "src": "exp_masato.mp4",
+  "ss": 521.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "ad8",
+  "t0": 1046.791,
+  "t1": 1052.41,
+  "src": "exp_masato.mp4",
+  "ss": 445.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "ad9",
+  "t0": 1052.63,
+  "t1": 1059.41,
+  "src": "exp_masato.mp4",
+  "ss": 694.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "ad10",
+  "t0": 1059.41,
+  "t1": 1065.41,
+  "src": "fight4_choi.mp4",
+  "ss": 198.0,
+  "kind": "k1g",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ad11",
+  "t0": 1065.63,
+  "t1": 1071.11,
+  "src": "fight4_choi.mp4",
+  "ss": 767.0,
+  "kind": "k1g",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ad12",
+  "t0": 1071.33,
+  "t1": 1079.272,
+  "src": "k1_iv_choi.mp4",
+  "ss": 160.0,
+  "kind": "ivc",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ae1",
+  "t0": 1079.722,
+  "t1": 1084.087,
+  "src": "fight4_choi.mp4",
+  "ss": 844.0,
+  "kind": "k1g",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ae2",
+  "t0": 1084.307,
+  "t1": 1090.298,
+  "src": "own_break2.mp4",
+  "ss": 1100.0,
+  "kind": "brk",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "ae3",
+  "t0": 1090.518,
+  "t1": 1095.208,
+  "src": "exp_masato.mp4",
+  "ss": 865.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "ae4",
+  "t0": 1095.428,
+  "t1": 1101.28,
+  "src": "own_prep.mp4",
+  "ss": 88.0,
+  "kind": "prep",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "ae5",
+  "t0": 1101.5,
+  "t1": 1106.608,
+  "src": "own_prep.mp4",
+  "ss": 40.0,
+  "kind": "prep",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "af1",
+  "t0": 1106.828,
+  "t1": 1111.425,
+  "src": "card_worldmax2026.jpg",
+  "ss": 0,
+  "kind": "stillw",
+  "label": "K-1公式（対戦カード）"
+ },
+ {
+  "beat": "af2",
+  "t0": 1111.645,
+  "t1": 1117.172,
+  "src": "probe1_k1official_worldmax_nicol.mp4",
+  "ss": 814.0,
+  "kind": "k1w",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "af3",
+  "t0": 1117.392,
+  "t1": 1122.64,
+  "src": "probe1_k1official_worldmax_nicol.mp4",
+  "ss": 526.0,
+  "kind": "k1w",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "af4",
+  "t0": 1122.86,
+  "t1": 1128.2,
+  "src": "probe1_k1official_worldmax_nicol.mp4",
+  "ss": 9.0,
+  "kind": "k1w",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "af5",
+  "t0": 1128.42,
+  "t1": 1135.34,
+  "src": "probe1_k1official_worldmax_nicol.mp4",
+  "ss": 859.0,
+  "kind": "k1w",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "af6",
+  "t0": 1135.34,
+  "t1": 1143.34,
+  "src": "probe1_k1official_worldmax_nicol.mp4",
+  "ss": 617.5,
+  "kind": "k1w",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "af7",
+  "t0": 1143.56,
+  "t1": 1145.928,
+  "src": "probe1_k1official_worldmax_nicol.mp4",
+  "ss": 586.0,
+  "kind": "k1w",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "af8",
+  "t0": 1146.148,
+  "t1": 1152.0,
+  "src": "probe1_k1official_worldmax_nicol.mp4",
+  "ss": 748.0,
+  "kind": "k1w",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "af9",
+  "t0": 1152.22,
+  "t1": 1159.511,
+  "src": "probe1_k1official_worldmax_nicol.mp4",
+  "ss": 1028.0,
+  "kind": "k1w",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ag1",
+  "t0": 1159.731,
+  "t1": 1162.656,
+  "src": "probe1_k1official_worldmax_nicol.mp4",
+  "ss": 1048.5,
+  "kind": "k1w",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ag2",
+  "t0": 1162.876,
+  "t1": 1167.985,
+  "src": "k1_iv_nicol.mp4",
+  "ss": 178.0,
+  "kind": "ivn",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ag3",
+  "t0": 1168.205,
+  "t1": 1174.195,
+  "src": "k1_iv_nicol.mp4",
+  "ss": 198.0,
+  "kind": "ivn",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ag4",
+  "t0": 1174.415,
+  "t1": 1178.27,
+  "src": "k1_iv_nicol.mp4",
+  "ss": 434.0,
+  "kind": "ivn",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ag5",
+  "t0": 1178.49,
+  "t1": 1182.53,
+  "src": "k1_iv_nicol.mp4",
+  "ss": 24.0,
+  "kind": "ivn",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ag6",
+  "t0": 1182.75,
+  "t1": 1186.93,
+  "src": "k1_iv_nicol.mp4",
+  "ss": 304.0,
+  "kind": "ivn",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ag7",
+  "t0": 1187.15,
+  "t1": 1191.887,
+  "src": "k1_iv_nicol.mp4",
+  "ss": 374.0,
+  "kind": "ivn",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ag8",
+  "t0": 1192.107,
+  "t1": 1196.797,
+  "src": "k1_iv_nicol.mp4",
+  "ss": 396.0,
+  "kind": "ivn",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ah1",
+  "t0": 1197.017,
+  "t1": 1201.661,
+  "src": "probe1_k1official_worldmax_nicol.mp4",
+  "ss": 1052.0,
+  "kind": "k1w",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ah2",
+  "t0": 1201.881,
+  "t1": 1205.782,
+  "src": "probe1_k1official_worldmax_nicol.mp4",
+  "ss": 1094.0,
+  "kind": "k1w",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ah3",
+  "t0": 1206.002,
+  "t1": 1208.696,
+  "src": "k1_iv_nicol.mp4",
+  "ss": 8.0,
+  "kind": "ivn",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ah4",
+  "t0": 1208.916,
+  "t1": 1212.352,
+  "src": "k1_iv_nicol.mp4",
+  "ss": 48.0,
+  "kind": "ivn",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ah5",
+  "t0": 1212.572,
+  "t1": 1218.098,
+  "src": "k1_iv_nicol.mp4",
+  "ss": 110.0,
+  "kind": "ivn",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ah6",
+  "t0": 1218.318,
+  "t1": 1225.284,
+  "src": "own_tiger.mp4",
+  "ss": 310.0,
+  "kind": "tig",
+  "label": "Fighters from Tokyo, Japan"
+ },
+ {
+  "beat": "ah7",
+  "t0": 1225.504,
+  "t1": 1230.984,
+  "src": "k1_iv_nicol.mp4",
+  "ss": 216.0,
+  "kind": "ivn",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ah8",
+  "t0": 1231.204,
+  "t1": 1236.777,
+  "src": "k1_iv_nicol.mp4",
+  "ss": 332.0,
+  "kind": "ivn",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "ai1",
+  "t0": 1237.227,
+  "t1": 1240.757,
+  "src": "exp_masato.mp4",
+  "ss": 962.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "ai2",
+  "t0": 1240.977,
+  "t1": 1242.648,
+  "src": "exp_masato.mp4",
+  "ss": 1025.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "ai3",
+  "t0": 1242.868,
+  "t1": 1248.07,
+  "src": "exp_gushiken.mp4",
+  "ss": 740.0,
+  "kind": "gus",
+  "label": "具志堅用高のネクストチャレンジ"
+ },
+ {
+  "beat": "ai4",
+  "t0": 1248.29,
+  "t1": 1255.256,
+  "src": "exp_masato.mp4",
+  "ss": 985.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "ai5",
+  "t0": 1255.476,
+  "t1": 1258.866,
+  "src": "own_qa.mp4",
+  "ss": 1004.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "ai6",
+  "t0": 1259.086,
+  "t1": 1266.377,
+  "src": "k1_iv_choi.mp4",
+  "ss": 700.0,
+  "kind": "ivc",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "aj1",
+  "t0": 1266.597,
+  "t1": 1270.08,
+  "src": "own_qa.mp4",
+  "ss": 844.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "aj2",
+  "t0": 1270.3,
+  "t1": 1277.173,
+  "src": "own_qa.mp4",
+  "ss": 822.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "aj3",
+  "t0": 1277.393,
+  "t1": 1282.919,
+  "src": "own_qa.mp4",
+  "ss": 922.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "aj4",
+  "t0": 1283.139,
+  "t1": 1286.483,
+  "src": "own_qa.mp4",
+  "ss": 964.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "aj5",
+  "t0": 1286.703,
+  "t1": 1290.372,
+  "src": "own_qa.mp4",
+  "ss": 1099.5,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "aj6",
+  "t0": 1290.592,
+  "t1": 1294.586,
+  "src": "own_qa.mp4",
+  "ss": 900.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "aj7",
+  "t0": 1294.806,
+  "t1": 1300.007,
+  "src": "own_qa.mp4",
+  "ss": 944.0,
+  "kind": "qa",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "ak1",
+  "t0": 1300.227,
+  "t1": 1303.245,
+  "src": "exp_fukuchi.mp4",
+  "ss": 667.0,
+  "kind": "fuk",
+  "label": "福地勇人チャンネル"
+ },
+ {
+  "beat": "ak2",
+  "t0": 1303.465,
+  "t1": 1310.524,
+  "src": "exp_gushiken.mp4",
+  "ss": 700.0,
+  "kind": "gus",
+  "label": "具志堅用高のネクストチャレンジ"
+ },
+ {
+  "beat": "ak3",
+  "t0": 1310.744,
+  "t1": 1314.692,
+  "src": "exp_masato.mp4",
+  "ss": 264.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "al1",
+  "t0": 1314.912,
+  "t1": 1318.441,
+  "src": "k1_iv_nicol.mp4",
+  "ss": 262.0,
+  "kind": "ivn",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "al2",
+  "t0": 1318.661,
+  "t1": 1322.701,
+  "src": "own_break2.mp4",
+  "ss": 580.0,
+  "kind": "brk",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "al3",
+  "t0": 1322.921,
+  "t1": 1327.194,
+  "src": "own_break2.mp4",
+  "ss": 550.0,
+  "kind": "brk",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ },
+ {
+  "beat": "al4",
+  "t0": 1327.414,
+  "t1": 1331.408,
+  "src": "exp_masato.mp4",
+  "ss": 1262.0,
+  "kind": "mas",
+  "label": "魔裟斗チャンネル"
+ },
+ {
+  "beat": "al5",
+  "t0": 1331.628,
+  "t1": 1337.34,
+  "src": "k1_iv_nicol.mp4",
+  "ss": 455.0,
+  "kind": "ivn",
+  "label": "K-1公式"
+ },
+ {
+  "beat": "al6",
+  "t0": 1337.56,
+  "t1": 1340.439,
+  "src": "own_prep.mp4",
+  "ss": 100.0,
+  "kind": "prep",
+  "label": "MONA KIMURA 木村萌那【OFFICIAL】"
+ }
+]
