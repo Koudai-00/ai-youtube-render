@@ -46,7 +46,8 @@ for i, x in enumerate(_SEG):
 
 # ---- 冒頭タイトル ----
 TITLE = [("誰も、攻略できなかった", "w", 0.92), ("木村萌那", "y", 1.58)]
-TITLE_T0, TITLE_T1 = 41.5, 50.5
+# ★41.5開始だと h7 の人物の顔に重なるので、引きの試合映像(h8=47.44〜55.61)の上に寄せる
+TITLE_T0, TITLE_T1 = 47.6, 55.4
 
 # ---- 発言カード / テーブル ----
 # (beat, kind, title, body, meta)  kind: media=発言カード / table=採点テーブル(bodyはrowsのlist)
