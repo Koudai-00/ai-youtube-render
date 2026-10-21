@@ -1,0 +1,2738 @@
+[
+ {
+  "beat": "open_win",
+  "t0": 0.3,
+  "t1": 10.3,
+  "src": "rizin_announce.mp4",
+  "ss": 240.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "h1",
+  "t0": 10.52,
+  "t1": 16.65,
+  "src": "rizin_announce.mp4",
+  "ss": 276.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "h2",
+  "t0": 16.87,
+  "t1": 21.56,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 6.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "h3",
+  "t0": 21.56,
+  "t1": 24.56,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 40.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "h4",
+  "t0": 24.78,
+  "t1": 30.26,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 58.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "h5",
+  "t0": 30.48,
+  "t1": 37.771,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 118.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "h6",
+  "t0": 37.991,
+  "t1": 43.425,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 218.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "h7",
+  "t0": 43.645,
+  "t1": 48.289,
+  "src": "hisha_gabriel.mp4",
+  "ss": 58.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "h8",
+  "t0": 48.509,
+  "t1": 53.106,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 1932.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "h9",
+  "t0": 53.326,
+  "t1": 60.478,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 1990.0,
+  "kind": "kkL",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "h10",
+  "t0": 60.698,
+  "t1": 67.989,
+  "src": "rizin_announce.mp4",
+  "ss": 22.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "n1",
+  "t0": 68.439,
+  "t1": 74.198,
+  "src": "iv_kiwami40.mp4",
+  "ss": 12.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "n2",
+  "t0": 74.418,
+  "t1": 79.944,
+  "src": "doc_brothers.mp4",
+  "ss": 40.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "n3",
+  "t0": 80.164,
+  "t1": 85.969,
+  "src": "danchi_a_1_31979796.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "n4",
+  "t0": 86.189,
+  "t1": 91.762,
+  "src": "iv_kiwami40.mp4",
+  "ss": 27.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "n5",
+  "t0": 91.982,
+  "t1": 97.694,
+  "src": "iv_kiwami40.mp4",
+  "ss": 62.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "n6",
+  "t0": 97.914,
+  "t1": 103.905,
+  "src": "judo_a_1_6766152.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "n7",
+  "t0": 104.125,
+  "t1": 108.583,
+  "src": "doc_brothers.mp4",
+  "ss": 120.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "n8",
+  "t0": 108.803,
+  "t1": 111.915,
+  "src": "iv_kiwami40.mp4",
+  "ss": 122.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "n9",
+  "t0": 112.135,
+  "t1": 120.215,
+  "src": "tv_a_1_15069622.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "n10",
+  "t0": 120.435,
+  "t1": 126.89,
+  "src": "iv_kiwami40.mp4",
+  "ss": 133.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "n11",
+  "t0": 127.11,
+  "t1": 133.426,
+  "src": "judo_b_1_6767170.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "n12",
+  "t0": 133.646,
+  "t1": 137.779,
+  "src": "iv_jobin.mp4",
+  "ss": 120.0,
+  "kind": "jb",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "n13",
+  "t0": 137.999,
+  "t1": 143.293,
+  "src": "iv_kiwami40.mp4",
+  "ss": 175.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "n14",
+  "t0": 143.513,
+  "t1": 146.625,
+  "src": "iv_kiwami40.mp4",
+  "ss": 186.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "n15",
+  "t0": 146.845,
+  "t1": 152.139,
+  "src": "iv_jobin.mp4",
+  "ss": 210.0,
+  "kind": "jbZ",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "n16",
+  "t0": 152.359,
+  "t1": 155.703,
+  "src": "iv_kiwami40.mp4",
+  "ss": 243.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "n17",
+  "t0": 155.923,
+  "t1": 163.539,
+  "src": "boxing_a_1_6684960.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "n18",
+  "t0": 163.759,
+  "t1": 168.124,
+  "src": "iv_kiwami40.mp4",
+  "ss": 212.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "n19",
+  "t0": 168.344,
+  "t1": 172.849,
+  "src": "iv_jobin.mp4",
+  "ss": 300.0,
+  "kind": "jb",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "n20",
+  "t0": 173.069,
+  "t1": 178.038,
+  "src": "iv_kiwami40.mp4",
+  "ss": 229.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "t1",
+  "t0": 178.488,
+  "t1": 184.572,
+  "src": "iv_kiwami40.mp4",
+  "ss": 277.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "t2",
+  "t0": 184.792,
+  "t1": 188.6,
+  "src": "judo_c_1_6765422.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "t3",
+  "t0": 188.82,
+  "t1": 195.135,
+  "src": "iv_kiwami40.mp4",
+  "ss": 287.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "t4",
+  "t0": 195.355,
+  "t1": 201.485,
+  "src": "iv_kiwami40.mp4",
+  "ss": 296.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "t5",
+  "t0": 201.705,
+  "t1": 204.306,
+  "src": "street_a_1_32979957.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "t6",
+  "t0": 204.526,
+  "t1": 207.916,
+  "src": "iv_kiwami40.mp4",
+  "ss": 328.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "t7",
+  "t0": 208.136,
+  "t1": 215.334,
+  "src": "muay_a_1_8612111.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "t8",
+  "t0": 215.554,
+  "t1": 219.548,
+  "src": "iv_jobin.mp4",
+  "ss": 420.0,
+  "kind": "jbZ",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "t9",
+  "t0": 219.768,
+  "t1": 225.898,
+  "src": "iv_kiwami40.mp4",
+  "ss": 335.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "t10",
+  "t0": 226.118,
+  "t1": 232.806,
+  "src": "muay_b_1_855993.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "t11",
+  "t0": 233.026,
+  "t1": 238.877,
+  "src": "fight7_apollo.mp4",
+  "ss": 196.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "t12",
+  "t0": 239.097,
+  "t1": 246.156,
+  "src": "fight6_harada.mp4",
+  "ss": 380.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "t13",
+  "t0": 246.376,
+  "t1": 249.302,
+  "src": "iv_kiwami40.mp4",
+  "ss": 360.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "t14",
+  "t0": 249.522,
+  "t1": 254.212,
+  "src": "box_b_1_6296692.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "t15",
+  "t0": 254.432,
+  "t1": 259.958,
+  "src": "iv_kiwami40.mp4",
+  "ss": 372.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "t16",
+  "t0": 260.178,
+  "t1": 267.609,
+  "src": "iv_kiwami40.mp4",
+  "ss": 380.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "t17",
+  "t0": 267.829,
+  "t1": 272.473,
+  "src": "iv_jobin.mp4",
+  "ss": 520.0,
+  "kind": "jb",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "r1",
+  "t0": 272.923,
+  "t1": 277.938,
+  "src": "iv_kiwami40.mp4",
+  "ss": 392.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "r2",
+  "t0": 278.158,
+  "t1": 282.942,
+  "src": "bar_a_1_6944324.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "r3",
+  "t0": 283.162,
+  "t1": 287.341,
+  "src": "iv_kiwami40.mp4",
+  "ss": 400.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "r4",
+  "t0": 287.561,
+  "t1": 289.837,
+  "src": "hisha_panda.mp4",
+  "ss": 36.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "r5",
+  "t0": 290.057,
+  "t1": 292.193,
+  "src": "iv_kiwami40.mp4",
+  "ss": 410.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "r6",
+  "t0": 292.193,
+  "t1": 294.693,
+  "src": "hisha_panda.mp4",
+  "ss": 96.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "r7",
+  "t0": 294.913,
+  "t1": 300.439,
+  "src": "street_b_1_36333696.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "r8",
+  "t0": 300.659,
+  "t1": 306.604,
+  "src": "iv_kiwami40.mp4",
+  "ss": 418.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "r9",
+  "t0": 306.824,
+  "t1": 310.864,
+  "src": "iv_jobin.mp4",
+  "ss": 640.0,
+  "kind": "jbZ",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "r10",
+  "t0": 311.084,
+  "t1": 313.87,
+  "src": "iv_kiwami40.mp4",
+  "ss": 426.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "r11",
+  "t0": 314.09,
+  "t1": 318.595,
+  "src": "iv_kiwami40.mp4",
+  "ss": 434.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "r12",
+  "t0": 318.815,
+  "t1": 320.905,
+  "src": "iv_kiwami40.mp4",
+  "ss": 441.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "r13",
+  "t0": 321.125,
+  "t1": 325.351,
+  "src": "gym_a_1_9777590.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "r14",
+  "t0": 325.571,
+  "t1": 328.915,
+  "src": "iv_kiwami40.mp4",
+  "ss": 448.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "r15",
+  "t0": 329.135,
+  "t1": 334.94,
+  "src": "iv_jobin.mp4",
+  "ss": 760.0,
+  "kind": "jb",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "r16",
+  "t0": 335.16,
+  "t1": 338.271,
+  "src": "iv_kiwami40.mp4",
+  "ss": 456.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "r17",
+  "t0": 338.491,
+  "t1": 345.225,
+  "src": "iv_kiwami40.mp4",
+  "ss": 464.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "r18",
+  "t0": 345.445,
+  "t1": 350.275,
+  "src": "belt_a_1_7005840.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "k1",
+  "t0": 350.725,
+  "t1": 354.718,
+  "src": "iv_kiwami40.mp4",
+  "ss": 630.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "k2",
+  "t0": 354.938,
+  "t1": 360.14,
+  "src": "hisha_panda.mp4",
+  "ss": 8.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "k3",
+  "t0": 360.36,
+  "t1": 363.053,
+  "src": "doc_brothers.mp4",
+  "ss": 300.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "k4",
+  "t0": 363.273,
+  "t1": 365.409,
+  "src": "iv_kiwami40.mp4",
+  "ss": 490.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "k5",
+  "t0": 365.629,
+  "t1": 369.205,
+  "src": "iv_jobin.mp4",
+  "ss": 880.0,
+  "kind": "jbZ",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "k6",
+  "t0": 369.425,
+  "t1": 373.883,
+  "src": "iv_kiwami40.mp4",
+  "ss": 498.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "k7",
+  "t0": 374.103,
+  "t1": 378.655,
+  "src": "iv_kiwami40.mp4",
+  "ss": 506.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "k8",
+  "t0": 378.875,
+  "t1": 385.933,
+  "src": "hisha_panda.mp4",
+  "ss": 150.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "f1",
+  "t0": 386.383,
+  "t1": 391.027,
+  "src": "hisha_panda.mp4",
+  "ss": 60.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "f2",
+  "t0": 391.247,
+  "t1": 395.473,
+  "src": "hisha_gabriel.mp4",
+  "ss": 6.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "f3",
+  "t0": 395.693,
+  "t1": 401.359,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 2520.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "f4",
+  "t0": 401.579,
+  "t1": 403.344,
+  "src": "hisha_gabriel.mp4",
+  "ss": 86.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "f5",
+  "t0": 403.564,
+  "t1": 409.23,
+  "src": "iv_kiwami40.mp4",
+  "ss": 520.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "f6",
+  "t0": 409.45,
+  "t1": 412.886,
+  "src": "iv_kiwami40.mp4",
+  "ss": 528.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "f7",
+  "t0": 413.106,
+  "t1": 420.444,
+  "src": "iv_kiwami40.mp4",
+  "ss": 536.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "f8",
+  "t0": 420.664,
+  "t1": 423.496,
+  "src": "hisha_panda.mp4",
+  "ss": 200.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "f9",
+  "t0": 423.716,
+  "t1": 429.243,
+  "src": "iv_kiwami40.mp4",
+  "ss": 548.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "f10",
+  "t0": 429.463,
+  "t1": 434.478,
+  "src": "iv_kiwami40.mp4",
+  "ss": 556.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "f11",
+  "t0": 434.698,
+  "t1": 440.178,
+  "src": "iv_jobin.mp4",
+  "ss": 1020.0,
+  "kind": "jb",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "f12",
+  "t0": 440.398,
+  "t1": 444.485,
+  "src": "iv_kiwami40.mp4",
+  "ss": 564.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "f13",
+  "t0": 444.705,
+  "t1": 447.073,
+  "src": "iv_kiwami40.mp4",
+  "ss": 572.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "f14",
+  "t0": 447.073,
+  "t1": 449.073,
+  "src": "hisha_panda.mp4",
+  "ss": 250.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "f15",
+  "t0": 449.293,
+  "t1": 456.259,
+  "src": "iv_kiwami40.mp4",
+  "ss": 580.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "f16",
+  "t0": 456.479,
+  "t1": 460.612,
+  "src": "hisha_gabriel.mp4",
+  "ss": 16.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "f17",
+  "t0": 460.832,
+  "t1": 464.548,
+  "src": "hisha_gabriel.mp4",
+  "ss": 200.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "f18",
+  "t0": 464.768,
+  "t1": 470.015,
+  "src": "hisha_gabriel.mp4",
+  "ss": 240.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "f19",
+  "t0": 470.235,
+  "t1": 473.626,
+  "src": "iv_jobin.mp4",
+  "ss": 1180.0,
+  "kind": "jbZ",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "f20",
+  "t0": 473.846,
+  "t1": 482.212,
+  "src": "iv_kiwami40.mp4",
+  "ss": 592.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "f21",
+  "t0": 482.432,
+  "t1": 486.611,
+  "src": "hisha_gabriel.mp4",
+  "ss": 300.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "f22",
+  "t0": 486.831,
+  "t1": 488.178,
+  "src": "iv_kiwami40.mp4",
+  "ss": 690.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "f23",
+  "t0": 488.398,
+  "t1": 492.624,
+  "src": "hisha_gabriel.mp4",
+  "ss": 340.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "f24",
+  "t0": 492.844,
+  "t1": 497.395,
+  "src": "iv_kiwami40.mp4",
+  "ss": 700.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "f25",
+  "t0": 497.615,
+  "t1": 502.445,
+  "src": "iv_kiwami40.mp4",
+  "ss": 710.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "f26",
+  "t0": 502.665,
+  "t1": 506.705,
+  "src": "iv_kiwami40.mp4",
+  "ss": 718.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "f27",
+  "t0": 506.925,
+  "t1": 513.195,
+  "src": "hisha_gabriel.mp4",
+  "ss": 120.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "f28",
+  "t0": 513.415,
+  "t1": 518.291,
+  "src": "hisha_gabriel.mp4",
+  "ss": 420.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "f29",
+  "t0": 518.511,
+  "t1": 523.155,
+  "src": "iv_kiwami40.mp4",
+  "ss": 726.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "f30",
+  "t0": 523.375,
+  "t1": 527.044,
+  "src": "iv_kiwami40.mp4",
+  "ss": 734.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "f31",
+  "t0": 527.264,
+  "t1": 533.765,
+  "src": "iv_kiwami40.mp4",
+  "ss": 742.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "d1",
+  "t0": 534.215,
+  "t1": 538.209,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 0.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "d2",
+  "t0": 538.429,
+  "t1": 543.352,
+  "src": "title_trailer1.mp4",
+  "ss": 4.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "d3",
+  "t0": 543.572,
+  "t1": 546.59,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 12.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "d4",
+  "t0": 546.81,
+  "t1": 550.2,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 20.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "d5",
+  "t0": 550.42,
+  "t1": 554.786,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 27.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "d6",
+  "t0": 555.006,
+  "t1": 558.117,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 36.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "d7",
+  "t0": 558.337,
+  "t1": 562.517,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 47.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "d8",
+  "t0": 562.517,
+  "t1": 565.017,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 54.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "d9",
+  "t0": 565.237,
+  "t1": 569.324,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 64.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "d10",
+  "t0": 569.544,
+  "t1": 574.373,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 130.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "d11",
+  "t0": 574.593,
+  "t1": 578.169,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 232.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "d12",
+  "t0": 578.389,
+  "t1": 582.104,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 168.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "d13",
+  "t0": 582.324,
+  "t1": 586.643,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 196.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "d14",
+  "t0": 586.863,
+  "t1": 591.368,
+  "src": "street_c_1_20762576.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "d15",
+  "t0": 591.588,
+  "t1": 596.743,
+  "src": "hisha_panda.mp4",
+  "ss": 280.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "d16",
+  "t0": 596.963,
+  "t1": 600.492,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 300.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w1",
+  "t0": 600.942,
+  "t1": 603.821,
+  "src": "fight2_hasegawa.mp4",
+  "ss": 40.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w2",
+  "t0": 604.041,
+  "t1": 608.5,
+  "src": "fight2_hasegawa.mp4",
+  "ss": 80.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w3",
+  "t0": 608.72,
+  "t1": 615.175,
+  "src": "fight2_hasegawa.mp4",
+  "ss": 420.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w4",
+  "t0": 615.395,
+  "t1": 618.506,
+  "src": "fight2_hasegawa.mp4",
+  "ss": 700.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w5",
+  "t0": 618.726,
+  "t1": 624.346,
+  "src": "fight3_hioki.mp4",
+  "ss": 20.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w6",
+  "t0": 624.566,
+  "t1": 628.234,
+  "src": "fight3_hioki.mp4",
+  "ss": 248.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w7",
+  "t0": 628.454,
+  "t1": 632.262,
+  "src": "fight3_hioki.mp4",
+  "ss": 300.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w8",
+  "t0": 632.482,
+  "t1": 636.29,
+  "src": "fight4_kengo.mp4",
+  "ss": 20.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w9",
+  "t0": 636.51,
+  "t1": 641.201,
+  "src": "fight4_kengo.mp4",
+  "ss": 295.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w10",
+  "t0": 641.421,
+  "t1": 644.857,
+  "src": "fight4_kengo.mp4",
+  "ss": 330.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w11",
+  "t0": 645.077,
+  "t1": 648.793,
+  "src": "fight5_arashi.mp4",
+  "ss": 30.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w12",
+  "t0": 649.013,
+  "t1": 652.449,
+  "src": "fight5_arashi.mp4",
+  "ss": 155.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w13",
+  "t0": 652.669,
+  "t1": 656.013,
+  "src": "fight5_arashi.mp4",
+  "ss": 163.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w14",
+  "t0": 656.233,
+  "t1": 659.994,
+  "src": "fight5_arashi.mp4",
+  "ss": 200.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w15",
+  "t0": 660.214,
+  "t1": 663.14,
+  "src": "iv_kiwami40.mp4",
+  "ss": 762.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "w16",
+  "t0": 663.36,
+  "t1": 668.887,
+  "src": "iv_kiwami40.mp4",
+  "ss": 857.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "w17",
+  "t0": 669.107,
+  "t1": 675.422,
+  "src": "iv_kiwami40.mp4",
+  "ss": 826.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "w18",
+  "t0": 675.642,
+  "t1": 679.636,
+  "src": "fight6_harada.mp4",
+  "ss": 40.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w19",
+  "t0": 679.856,
+  "t1": 686.915,
+  "src": "fight6_harada.mp4",
+  "ss": 120.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w20",
+  "t0": 687.135,
+  "t1": 691.315,
+  "src": "fight6_harada.mp4",
+  "ss": 700.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w21",
+  "t0": 691.535,
+  "t1": 697.758,
+  "src": "fight6_harada.mp4",
+  "ss": 740.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "w22",
+  "t0": 697.978,
+  "t1": 702.297,
+  "src": "fight6_harada.mp4",
+  "ss": 820.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "s1",
+  "t0": 702.747,
+  "t1": 705.579,
+  "src": "iv_jobin.mp4",
+  "ss": 1400.0,
+  "kind": "jb",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "s2",
+  "t0": 705.799,
+  "t1": 711.326,
+  "src": "fight7_apollo.mp4",
+  "ss": 240.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "s3",
+  "t0": 711.546,
+  "t1": 717.676,
+  "src": "iv_jobin.mp4",
+  "ss": 1460.0,
+  "kind": "jbZ",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "s4",
+  "t0": 717.896,
+  "t1": 724.397,
+  "src": "judo_d_1_4440998.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "s5",
+  "t0": 724.617,
+  "t1": 727.172,
+  "src": "iv_jobin.mp4",
+  "ss": 1540.0,
+  "kind": "jb",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "s6",
+  "t0": 727.392,
+  "t1": 733.011,
+  "src": "gym_b_1_6767179.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "s7",
+  "t0": 733.231,
+  "t1": 738.107,
+  "src": "fight7_apollo.mp4",
+  "ss": 300.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "s8",
+  "t0": 738.327,
+  "t1": 742.599,
+  "src": "iv_jobin.mp4",
+  "ss": 1620.0,
+  "kind": "jbZ",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "s9",
+  "t0": 742.819,
+  "t1": 745.559,
+  "src": "fight7_apollo.mp4",
+  "ss": 360.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "s10",
+  "t0": 745.779,
+  "t1": 751.213,
+  "src": "fight7_apollo.mp4",
+  "ss": 420.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "s11",
+  "t0": 751.433,
+  "t1": 756.866,
+  "src": "iv_jobin.mp4",
+  "ss": 1700.0,
+  "kind": "jb",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "s12",
+  "t0": 757.086,
+  "t1": 762.613,
+  "src": "fight7_apollo.mp4",
+  "ss": 480.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "s13",
+  "t0": 762.833,
+  "t1": 769.52,
+  "src": "fight2_hasegawa.mp4",
+  "ss": 300.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "s14",
+  "t0": 769.74,
+  "t1": 771.505,
+  "src": "fight7_apollo.mp4",
+  "ss": 540.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "s15",
+  "t0": 771.505,
+  "t1": 773.505,
+  "src": "fight7_apollo.mp4",
+  "ss": 600.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "s16",
+  "t0": 773.725,
+  "t1": 779.251,
+  "src": "iv_jobin.mp4",
+  "ss": 1800.0,
+  "kind": "jbZ",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "s17",
+  "t0": 779.471,
+  "t1": 785.323,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 1950.0,
+  "kind": "kkR",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "s18",
+  "t0": 785.543,
+  "t1": 792.648,
+  "src": "fight6_harada.mp4",
+  "ss": 300.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "b1",
+  "t0": 793.098,
+  "t1": 795.698,
+  "src": "doc_brothers.mp4",
+  "ss": 20.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "b2",
+  "t0": 795.918,
+  "t1": 798.844,
+  "src": "doc_brothers.mp4",
+  "ss": 60.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "b3",
+  "t0": 799.064,
+  "t1": 806.495,
+  "src": "doc_brothers.mp4",
+  "ss": 180.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "b4",
+  "t0": 806.715,
+  "t1": 809.826,
+  "src": "doc_brothers.mp4",
+  "ss": 240.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "b5",
+  "t0": 810.046,
+  "t1": 813.854,
+  "src": "iv_gong.mp4",
+  "ss": 300.0,
+  "kind": "gg",
+  "label": "ゴング格闘技"
+ },
+ {
+  "beat": "b6",
+  "t0": 814.074,
+  "t1": 816.21,
+  "src": "iv_gong.mp4",
+  "ss": 360.0,
+  "kind": "gg",
+  "label": "ゴング格闘技"
+ },
+ {
+  "beat": "b7",
+  "t0": 816.43,
+  "t1": 820.981,
+  "src": "iv_gong.mp4",
+  "ss": 420.0,
+  "kind": "gg",
+  "label": "ゴング格闘技"
+ },
+ {
+  "beat": "b8",
+  "t0": 821.201,
+  "t1": 825.753,
+  "src": "iv_gong.mp4",
+  "ss": 460.0,
+  "kind": "gg",
+  "label": "ゴング格闘技"
+ },
+ {
+  "beat": "b9",
+  "t0": 825.973,
+  "t1": 831.452,
+  "src": "iv_gong.mp4",
+  "ss": 500.0,
+  "kind": "gg",
+  "label": "ゴング格闘技"
+ },
+ {
+  "beat": "b10",
+  "t0": 831.672,
+  "t1": 834.923,
+  "src": "iv_gong.mp4",
+  "ss": 540.0,
+  "kind": "gg",
+  "label": "ゴング格闘技"
+ },
+ {
+  "beat": "b11",
+  "t0": 835.143,
+  "t1": 841.134,
+  "src": "doc_brothers.mp4",
+  "ss": 600.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "b12",
+  "t0": 841.354,
+  "t1": 844.094,
+  "src": "doc_brothers.mp4",
+  "ss": 660.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "b13",
+  "t0": 844.314,
+  "t1": 848.494,
+  "src": "doc_brothers.mp4",
+  "ss": 720.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "b14",
+  "t0": 848.714,
+  "t1": 853.079,
+  "src": "iv_gong.mp4",
+  "ss": 380.0,
+  "kind": "gg",
+  "label": "ゴング格闘技"
+ },
+ {
+  "beat": "b15",
+  "t0": 853.299,
+  "t1": 857.061,
+  "src": "doc_brothers.mp4",
+  "ss": 420.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "b16",
+  "t0": 857.281,
+  "t1": 864.247,
+  "src": "title_trailer1.mp4",
+  "ss": 30.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "b17",
+  "t0": 864.467,
+  "t1": 866.696,
+  "src": "title_trailer1.mp4",
+  "ss": 70.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "b18",
+  "t0": 866.916,
+  "t1": 873.557,
+  "src": "fight7_apollo.mp4",
+  "ss": 20.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "b19",
+  "t0": 873.777,
+  "t1": 877.213,
+  "src": "fight7_apollo.mp4",
+  "ss": 870.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "b20",
+  "t0": 877.433,
+  "t1": 882.124,
+  "src": "title_trailer1.mp4",
+  "ss": 110.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "b21",
+  "t0": 882.344,
+  "t1": 888.102,
+  "src": "fight7_apollo.mp4",
+  "ss": 44.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "b22",
+  "t0": 888.322,
+  "t1": 891.852,
+  "src": "fight7_apollo.mp4",
+  "ss": 120.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "b23",
+  "t0": 892.072,
+  "t1": 898.341,
+  "src": "fight7_apollo.mp4",
+  "ss": 160.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "b24",
+  "t0": 898.561,
+  "t1": 904.412,
+  "src": "fight7_apollo.mp4",
+  "ss": 320.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "b25",
+  "t0": 904.632,
+  "t1": 908.348,
+  "src": "fight7_apollo.mp4",
+  "ss": 700.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "b26",
+  "t0": 908.568,
+  "t1": 913.444,
+  "src": "fight7_apollo.mp4",
+  "ss": 760.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "b27",
+  "t0": 913.664,
+  "t1": 921.559,
+  "src": "fight7_apollo.mp4",
+  "ss": 800.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "b28",
+  "t0": 921.779,
+  "t1": 929.209,
+  "src": "fight7_apollo.mp4",
+  "ss": 840.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "b29",
+  "t0": 929.429,
+  "t1": 933.005,
+  "src": "iv_gong.mp4",
+  "ss": 60.0,
+  "kind": "gg",
+  "label": "ゴング格闘技"
+ },
+ {
+  "beat": "b30",
+  "t0": 933.225,
+  "t1": 938.565,
+  "src": "iv_gong.mp4",
+  "ss": 140.0,
+  "kind": "gg",
+  "label": "ゴング格闘技"
+ },
+ {
+  "beat": "b31",
+  "t0": 938.785,
+  "t1": 943.011,
+  "src": "iv_gong.mp4",
+  "ss": 220.0,
+  "kind": "gg",
+  "label": "ゴング格闘技"
+ },
+ {
+  "beat": "c1",
+  "t0": 943.461,
+  "t1": 945.458,
+  "src": "title_trailer2.mp4",
+  "ss": 6.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c2",
+  "t0": 945.678,
+  "t1": 951.298,
+  "src": "title_trailer2.mp4",
+  "ss": 40.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c3",
+  "t0": 951.518,
+  "t1": 957.462,
+  "src": "title_trailer2.mp4",
+  "ss": 80.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c4",
+  "t0": 957.682,
+  "t1": 960.886,
+  "src": "title_trailer2.mp4",
+  "ss": 120.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c5",
+  "t0": 961.106,
+  "t1": 965.797,
+  "src": "rizin_announce.mp4",
+  "ss": 40.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c6",
+  "t0": 966.017,
+  "t1": 969.825,
+  "src": "title_trailer2.mp4",
+  "ss": 170.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c7",
+  "t0": 970.045,
+  "t1": 975.571,
+  "src": "title_trailer2.mp4",
+  "ss": 210.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c8",
+  "t0": 975.791,
+  "t1": 981.039,
+  "src": "title_trailer2.mp4",
+  "ss": 250.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c9",
+  "t0": 981.259,
+  "t1": 987.76,
+  "src": "title_trailer2.mp4",
+  "ss": 290.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c10",
+  "t0": 987.98,
+  "t1": 992.206,
+  "src": "rizin_announce.mp4",
+  "ss": 56.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c11",
+  "t0": 992.426,
+  "t1": 996.374,
+  "src": "title_trailer2.mp4",
+  "ss": 330.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c12",
+  "t0": 996.594,
+  "t1": 1001.424,
+  "src": "title_trailer2.mp4",
+  "ss": 370.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c13",
+  "t0": 1001.644,
+  "t1": 1007.774,
+  "src": "title_trailer2.mp4",
+  "ss": 410.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c14",
+  "t0": 1007.774,
+  "t1": 1010.774,
+  "src": "title_trailer2.mp4",
+  "ss": 450.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c15",
+  "t0": 1010.994,
+  "t1": 1014.105,
+  "src": "rizin_announce.mp4",
+  "ss": 64.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c16",
+  "t0": 1014.325,
+  "t1": 1018.69,
+  "src": "iv_jobin.mp4",
+  "ss": 1900.0,
+  "kind": "jb",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "c17",
+  "t0": 1018.91,
+  "t1": 1024.251,
+  "src": "iv_jobin.mp4",
+  "ss": 1960.0,
+  "kind": "jbZ",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "c18",
+  "t0": 1024.471,
+  "t1": 1029.812,
+  "src": "iv_jobin.mp4",
+  "ss": 2020.0,
+  "kind": "jb",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "c19",
+  "t0": 1030.032,
+  "t1": 1035.465,
+  "src": "iv_jobin.mp4",
+  "ss": 2080.0,
+  "kind": "jbZ",
+  "label": "ジョビンチャンネル"
+ },
+ {
+  "beat": "c20",
+  "t0": 1035.685,
+  "t1": 1043.069,
+  "src": "rizin_announce.mp4",
+  "ss": 10.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c21",
+  "t0": 1043.289,
+  "t1": 1049.28,
+  "src": "rizin_announce.mp4",
+  "ss": 68.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c22",
+  "t0": 1049.5,
+  "t1": 1052.843,
+  "src": "rizin_announce.mp4",
+  "ss": 78.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c23",
+  "t0": 1053.063,
+  "t1": 1059.147,
+  "src": "rizin_announce.mp4",
+  "ss": 92.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c24",
+  "t0": 1059.367,
+  "t1": 1062.897,
+  "src": "rizin_announce.mp4",
+  "ss": 108.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c25",
+  "t0": 1063.117,
+  "t1": 1067.807,
+  "src": "rizin_announce.mp4",
+  "ss": 124.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c26",
+  "t0": 1068.027,
+  "t1": 1073.6,
+  "src": "rizin_announce.mp4",
+  "ss": 142.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c27",
+  "t0": 1073.82,
+  "t1": 1080.368,
+  "src": "rizin_announce.mp4",
+  "ss": 160.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c28",
+  "t0": 1080.588,
+  "t1": 1082.585,
+  "src": "rizin_announce.mp4",
+  "ss": 178.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c29",
+  "t0": 1082.805,
+  "t1": 1086.706,
+  "src": "rizin_announce.mp4",
+  "ss": 196.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c30",
+  "t0": 1086.926,
+  "t1": 1093.056,
+  "src": "rizin_announce.mp4",
+  "ss": 214.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c31",
+  "t0": 1093.276,
+  "t1": 1094.994,
+  "src": "rizin_announce.mp4",
+  "ss": 226.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c32",
+  "t0": 1095.214,
+  "t1": 1101.483,
+  "src": "rizin_announce.mp4",
+  "ss": 233.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c33",
+  "t0": 1101.703,
+  "t1": 1104.583,
+  "src": "rizin_announce.mp4",
+  "ss": 245.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c34",
+  "t0": 1104.583,
+  "t1": 1108.083,
+  "src": "rizin_announce.mp4",
+  "ss": 256.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c35",
+  "t0": 1108.303,
+  "t1": 1114.293,
+  "src": "rizin_announce.mp4",
+  "ss": 288.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c36",
+  "t0": 1114.513,
+  "t1": 1120.04,
+  "src": "rizin_announce.mp4",
+  "ss": 310.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c37",
+  "t0": 1120.26,
+  "t1": 1123.975,
+  "src": "rizin_announce.mp4",
+  "ss": 414.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c38",
+  "t0": 1124.195,
+  "t1": 1131.3,
+  "src": "rizin_announce.mp4",
+  "ss": 424.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c39",
+  "t0": 1131.52,
+  "t1": 1134.492,
+  "src": "rizin_announce.mp4",
+  "ss": 434.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c40",
+  "t0": 1134.712,
+  "t1": 1140.935,
+  "src": "rizin_announce.mp4",
+  "ss": 444.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c41",
+  "t0": 1141.155,
+  "t1": 1146.775,
+  "src": "rizin_announce.mp4",
+  "ss": 456.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c42",
+  "t0": 1146.995,
+  "t1": 1148.852,
+  "src": "rizin_announce.mp4",
+  "ss": 466.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c43",
+  "t0": 1148.852,
+  "t1": 1151.352,
+  "src": "rizin_announce.mp4",
+  "ss": 476.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c44",
+  "t0": 1151.572,
+  "t1": 1155.194,
+  "src": "rizin_announce.mp4",
+  "ss": 488.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c45",
+  "t0": 1155.414,
+  "t1": 1162.659,
+  "src": "rizin_announce.mp4",
+  "ss": 500.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c46",
+  "t0": 1162.879,
+  "t1": 1167.709,
+  "src": "rizin_announce.mp4",
+  "ss": 516.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c47",
+  "t0": 1167.929,
+  "t1": 1172.387,
+  "src": "rizin_announce.mp4",
+  "ss": 570.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c48",
+  "t0": 1172.607,
+  "t1": 1176.415,
+  "src": "rizin_announce.mp4",
+  "ss": 600.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c49",
+  "t0": 1176.635,
+  "t1": 1180.583,
+  "src": "rizin_announce.mp4",
+  "ss": 625.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "c50",
+  "t0": 1180.803,
+  "t1": 1186.329,
+  "src": "rizin_announce.mp4",
+  "ss": 650.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "g1",
+  "t0": 1186.779,
+  "t1": 1191.934,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 20.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g2",
+  "t0": 1192.154,
+  "t1": 1196.333,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 1940.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g3",
+  "t0": 1196.553,
+  "t1": 1198.179,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 1948.0,
+  "kind": "kkL",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g4",
+  "t0": 1198.399,
+  "t1": 1201.324,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 600.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g5",
+  "t0": 1201.544,
+  "t1": 1205.817,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 616.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g6",
+  "t0": 1206.037,
+  "t1": 1212.585,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 632.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g7",
+  "t0": 1212.805,
+  "t1": 1214.291,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 648.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g8",
+  "t0": 1214.511,
+  "t1": 1217.762,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 664.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g9",
+  "t0": 1217.982,
+  "t1": 1223.787,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 680.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g10",
+  "t0": 1224.007,
+  "t1": 1230.23,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 696.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g11",
+  "t0": 1230.45,
+  "t1": 1233.468,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 712.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g12",
+  "t0": 1233.688,
+  "t1": 1238.007,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 728.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g13",
+  "t0": 1238.227,
+  "t1": 1243.057,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 744.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g14",
+  "t0": 1243.277,
+  "t1": 1245.878,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 760.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g15",
+  "t0": 1246.098,
+  "t1": 1254.457,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 776.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g16",
+  "t0": 1254.677,
+  "t1": 1258.253,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 792.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g17",
+  "t0": 1258.473,
+  "t1": 1261.584,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 808.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g18",
+  "t0": 1261.804,
+  "t1": 1262.919,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 824.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g19",
+  "t0": 1262.919,
+  "t1": 1265.419,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 840.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g20",
+  "t0": 1265.639,
+  "t1": 1272.976,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 1958.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g21",
+  "t0": 1273.196,
+  "t1": 1276.122,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 2000.0,
+  "kind": "kkL",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g22",
+  "t0": 1276.342,
+  "t1": 1279.964,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 2004.0,
+  "kind": "kkL",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g23",
+  "t0": 1280.184,
+  "t1": 1287.715,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 856.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g24",
+  "t0": 1287.935,
+  "t1": 1290.86,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 872.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g25",
+  "t0": 1291.08,
+  "t1": 1297.257,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 1966.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g26",
+  "t0": 1297.477,
+  "t1": 1300.635,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 888.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g27",
+  "t0": 1300.855,
+  "t1": 1307.31,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 1974.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g28",
+  "t0": 1307.53,
+  "t1": 1311.524,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 1982.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g29",
+  "t0": 1311.744,
+  "t1": 1314.623,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 2012.0,
+  "kind": "kkL",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g30",
+  "t0": 1314.843,
+  "t1": 1319.812,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 2020.0,
+  "kind": "kkL",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g31",
+  "t0": 1320.032,
+  "t1": 1325.419,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 2028.0,
+  "kind": "kkL",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g32",
+  "t0": 1325.639,
+  "t1": 1327.868,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 2040.0,
+  "kind": "kkR",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g33",
+  "t0": 1328.088,
+  "t1": 1334.636,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 2048.0,
+  "kind": "kkR",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g34",
+  "t0": 1334.636,
+  "t1": 1336.636,
+  "src": "hisha_gabriel.mp4",
+  "ss": 520.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "g35",
+  "t0": 1336.856,
+  "t1": 1344.565,
+  "src": "hisha_gabriel.mp4",
+  "ss": 560.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "g36",
+  "t0": 1344.785,
+  "t1": 1348.965,
+  "src": "hisha_gabriel.mp4",
+  "ss": 600.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "g37",
+  "t0": 1349.185,
+  "t1": 1354.108,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 155.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "g38",
+  "t0": 1354.328,
+  "t1": 1356.928,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 2056.0,
+  "kind": "kkR",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g39",
+  "t0": 1357.148,
+  "t1": 1364.532,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 2064.0,
+  "kind": "kkR",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g40",
+  "t0": 1364.752,
+  "t1": 1368.049,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 2540.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g41",
+  "t0": 1368.269,
+  "t1": 1375.235,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 2600.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "g42",
+  "t0": 1375.455,
+  "t1": 1378.381,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 2680.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "z1",
+  "t0": 1378.831,
+  "t1": 1380.503,
+  "src": "rizin_announce.mp4",
+  "ss": 330.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "z2",
+  "t0": 1380.723,
+  "t1": 1385.971,
+  "src": "school_a_1_13008039.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "z3",
+  "t0": 1386.191,
+  "t1": 1391.856,
+  "src": "night_a_1_18662635.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "z4",
+  "t0": 1392.076,
+  "t1": 1396.674,
+  "src": "hisha_panda.mp4",
+  "ss": 120.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "z5",
+  "t0": 1396.894,
+  "t1": 1402.513,
+  "src": "hisha_gabriel.mp4",
+  "ss": 660.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "z6",
+  "t0": 1402.733,
+  "t1": 1406.773,
+  "src": "hisha_gabriel.mp4",
+  "ss": 700.0,
+  "kind": "hs",
+  "label": "飛車角 OFFICIAL"
+ },
+ {
+  "beat": "z7",
+  "t0": 1406.993,
+  "t1": 1411.126,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 320.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "z8",
+  "t0": 1411.346,
+  "t1": 1414.133,
+  "src": "rizin_announce.mp4",
+  "ss": 350.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ },
+ {
+  "beat": "z9",
+  "t0": 1414.353,
+  "t1": 1417.557,
+  "src": "iv_kiwami40.mp4",
+  "ss": 750.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "z10",
+  "t0": 1417.777,
+  "t1": 1422.793,
+  "src": "iv_kiwami40.mp4",
+  "ss": 790.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "z11",
+  "t0": 1423.013,
+  "t1": 1428.864,
+  "src": "iv_kiwami40.mp4",
+  "ss": 800.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "z12",
+  "t0": 1429.084,
+  "t1": 1432.474,
+  "src": "iv_kiwami40.mp4",
+  "ss": 812.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "z13",
+  "t0": 1432.474,
+  "t1": 1434.974,
+  "src": "youth_a_1_5544512.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "z14",
+  "t0": 1435.194,
+  "t1": 1442.532,
+  "src": "iv_kiwami40.mp4",
+  "ss": 870.0,
+  "kind": "kwZ",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "z15",
+  "t0": 1442.752,
+  "t1": 1449.021,
+  "src": "iv_kiwami40.mp4",
+  "ss": 890.0,
+  "kind": "kwT",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "z16",
+  "t0": 1449.241,
+  "t1": 1451.656,
+  "src": "iv_kiwami40.mp4",
+  "ss": 900.0,
+  "kind": "kw",
+  "label": "SOUL JAPAN／極め道"
+ },
+ {
+  "beat": "z17",
+  "t0": 1451.656,
+  "t1": 1454.656,
+  "src": "crowd_a_1_34605094.mp4",
+  "ss": 0.5,
+  "kind": "px",
+  "label": "Pexels"
+ },
+ {
+  "beat": "z18",
+  "t0": 1454.876,
+  "t1": 1457.802,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 2100.0,
+  "kind": "kk",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "z19",
+  "t0": 1458.022,
+  "t1": 1461.737,
+  "src": "rizin55_kaiken.mp4",
+  "ss": 2110.0,
+  "kind": "kkL",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "z20",
+  "t0": 1461.957,
+  "t1": 1467.715,
+  "src": "rizin_announce.mp4",
+  "ss": 640.0,
+  "kind": "nx",
+  "label": "NEXUS FIGHT CHANNEL"
+ }
+]
