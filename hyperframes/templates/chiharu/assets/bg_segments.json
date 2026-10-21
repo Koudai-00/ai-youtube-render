@@ -22,7 +22,7 @@
   "t0": 16.87,
   "t1": 21.56,
   "src": "fight1_iwamatsu.mp4",
-  "ss": 6.0,
+  "ss": 173,
   "kind": "nx",
   "label": "NEXUS FIGHT CHANNEL"
  },
@@ -679,7 +679,7 @@
   "t0": 391.247,
   "t1": 395.473,
   "src": "hisha_gabriel.mp4",
-  "ss": 6.0,
+  "ss": 40.5,
   "kind": "hs",
   "label": "飛車角 OFFICIAL"
  },
@@ -805,7 +805,7 @@
   "t0": 456.479,
   "t1": 460.612,
   "src": "hisha_gabriel.mp4",
-  "ss": 16.0,
+  "ss": 30.0,
   "kind": "hs",
   "label": "飛車角 OFFICIAL"
  },
@@ -957,8 +957,8 @@
   "beat": "d2",
   "t0": 538.429,
   "t1": 543.352,
-  "src": "title_trailer1.mp4",
-  "ss": 4.0,
+  "src": "fight1_iwamatsu.mp4",
+  "ss": 5.5,
   "kind": "nx",
   "label": "NEXUS FIGHT CHANNEL"
  },
@@ -1587,17 +1587,17 @@
   "beat": "b16",
   "t0": 857.791,
   "t1": 864.757,
-  "src": "title_trailer1.mp4",
-  "ss": 30.0,
-  "kind": "nx",
-  "label": "NEXUS FIGHT CHANNEL"
+  "src": "iv_jobin.mp4",
+  "ss": 1200,
+  "kind": "jbZ",
+  "label": "ジョビンチャンネル"
  },
  {
   "beat": "b17",
   "t0": 864.977,
   "t1": 867.207,
   "src": "title_trailer1.mp4",
-  "ss": 70.0,
+  "ss": 151,
   "kind": "nx",
   "label": "NEXUS FIGHT CHANNEL"
  },
@@ -1623,8 +1623,8 @@
   "beat": "b20",
   "t0": 877.944,
   "t1": 882.634,
-  "src": "title_trailer1.mp4",
-  "ss": 110.0,
+  "src": "fight7_apollo.mp4",
+  "ss": 876,
   "kind": "nx",
   "label": "NEXUS FIGHT CHANNEL"
  },
@@ -1732,7 +1732,7 @@
   "t0": 943.972,
   "t1": 945.969,
   "src": "title_trailer2.mp4",
-  "ss": 6.0,
+  "ss": 231,
   "kind": "nx",
   "label": "NEXUS FIGHT CHANNEL"
  },
@@ -1741,7 +1741,7 @@
   "t0": 946.189,
   "t1": 951.808,
   "src": "title_trailer2.mp4",
-  "ss": 40.0,
+  "ss": 166.8,
   "kind": "nx",
   "label": "NEXUS FIGHT CHANNEL"
  },
@@ -1750,7 +1750,7 @@
   "t0": 952.028,
   "t1": 957.973,
   "src": "title_trailer2.mp4",
-  "ss": 80.0,
+  "ss": 147,
   "kind": "nx",
   "label": "NEXUS FIGHT CHANNEL"
  },
@@ -1759,7 +1759,7 @@
   "t0": 958.193,
   "t1": 961.397,
   "src": "title_trailer2.mp4",
-  "ss": 120.0,
+  "ss": 500,
   "kind": "nx",
   "label": "NEXUS FIGHT CHANNEL"
  },
@@ -1777,7 +1777,7 @@
   "t0": 966.527,
   "t1": 970.336,
   "src": "title_trailer2.mp4",
-  "ss": 170.0,
+  "ss": 130.2,
   "kind": "nx",
   "label": "NEXUS FIGHT CHANNEL"
  },
@@ -1786,8 +1786,8 @@
   "t0": 970.556,
   "t1": 976.082,
   "src": "title_trailer2.mp4",
-  "ss": 210.0,
-  "kind": "nx",
+  "ss": 310,
+  "kind": "nxL",
   "label": "NEXUS FIGHT CHANNEL"
  },
  {
@@ -1795,8 +1795,8 @@
   "t0": 976.302,
   "t1": 981.55,
   "src": "title_trailer2.mp4",
-  "ss": 250.0,
-  "kind": "nx",
+  "ss": 316.1,
+  "kind": "nxL",
   "label": "NEXUS FIGHT CHANNEL"
  },
  {
@@ -1804,7 +1804,7 @@
   "t0": 981.77,
   "t1": 988.271,
   "src": "title_trailer2.mp4",
-  "ss": 290.0,
+  "ss": 108.7,
   "kind": "nx",
   "label": "NEXUS FIGHT CHANNEL"
  },
@@ -1822,7 +1822,7 @@
   "t0": 992.937,
   "t1": 996.885,
   "src": "title_trailer2.mp4",
-  "ss": 330.0,
+  "ss": 118.1,
   "kind": "nx",
   "label": "NEXUS FIGHT CHANNEL"
  },
@@ -1831,7 +1831,7 @@
   "t0": 997.105,
   "t1": 1001.934,
   "src": "title_trailer2.mp4",
-  "ss": 370.0,
+  "ss": 103.3,
   "kind": "nx",
   "label": "NEXUS FIGHT CHANNEL"
  },
@@ -1840,8 +1840,8 @@
   "t0": 1002.154,
   "t1": 1008.284,
   "src": "title_trailer2.mp4",
-  "ss": 410.0,
-  "kind": "nx",
+  "ss": 410.2,
+  "kind": "nxL",
   "label": "NEXUS FIGHT CHANNEL"
  },
  {
@@ -1849,7 +1849,7 @@
   "t0": 1008.284,
   "t1": 1011.284,
   "src": "title_trailer2.mp4",
-  "ss": 450.0,
+  "ss": 506.5,
   "kind": "nx",
   "label": "NEXUS FIGHT CHANNEL"
  },
