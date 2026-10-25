@@ -10,3 +10,6 @@ decode_err.txt
 *.log
 *.deb
 .DS_Store
+
+# 結合済みの元ファイル（2.5GB）。CIが使うのは分割後の bg_part*.mp4 なのでコミットしない
+**/assets/bgvid_full/*_bg_full.mp4
