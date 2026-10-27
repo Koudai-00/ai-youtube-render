@@ -93,11 +93,24 @@ jobs:
 
       - name: Install hyperframes
         if: steps.check.outputs.exists == 'false'
+        env:
+          # ★onnxruntime-node の postinstall が NuGet から CUDA 版(Microsoft.ML.OnnxRuntime.Gpu.Linux)を
+          #   取りに行き、解決に失敗して npm ごと落ちることがある(2026-10-27 に6レンジ同時に失敗)。
+          #   レンダーに ONNX は使わない(音声の文字起こし/TTS用)ので CUDA 導入を明示的にスキップする。
+          #   変数名はバージョンで変わっているので両方を立てる。
+          ONNXRUNTIME_NODE_INSTALL: skip
+          ONNXRUNTIME_NODE_INSTALL_CUDA: skip
         run: |
           for a in 1 2 3 4; do
             npm i -g hyperframes@0.6.22 && break
             echo "npm retry $a"; sleep $((a*15))
           done
+          # それでも postinstall で落ちる場合はスクリプトごと無効化して入れる。
+          # ブラウザは下で chrome-headless-shell を明示導入するので postinstall は不要。
+          if ! hyperframes --version >/dev/null 2>&1; then
+            echo "::warning::通常インストールが失敗。--ignore-scripts で再試行する"
+            npm i -g --ignore-scripts hyperframes@0.6.22 || true
+          fi
           hyperframes --version || { echo "::error::hyperframes install failed"; exit 1; }
 
       # beginFrame 対応の chrome-headless-shell を導入し、明示指定(system chromeの自動検出を上書き)。
