@@ -1,0 +1,2306 @@
+[
+ {
+  "beat": "open_ko",
+  "t0": 0.3,
+  "t1": 14.3,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 879.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "h1",
+  "t0": 14.52,
+  "t1": 19.536,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 852.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "h2",
+  "t0": 19.756,
+  "t1": 25.328,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 52.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "h3",
+  "t0": 25.548,
+  "t1": 29.96,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1008.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "h4",
+  "t0": 29.96,
+  "t1": 47.96,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1040.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "h5",
+  "t0": 48.18,
+  "t1": 51.895,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 24.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "h6",
+  "t0": 52.115,
+  "t1": 54.902,
+  "src": "st_snowleopard_b.jpg",
+  "ss": 0,
+  "kind": "stillw",
+  "label": "Wikimedia Commons"
+ },
+ {
+  "beat": "h7",
+  "t0": 55.122,
+  "t1": 58.883,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 104.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "h8",
+  "t0": 59.103,
+  "t1": 65.001,
+  "src": "f6_oct71_madiev.mp4",
+  "ss": 1286.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "h9",
+  "t0": 65.221,
+  "t1": 69.54,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 424.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "h10",
+  "t0": 69.76,
+  "t1": 74.915,
+  "src": "f1_atfc15_abduvohidov.mp4",
+  "ss": 0.0,
+  "kind": "atfc",
+  "label": "ATF CHAMPIONSHIP"
+ },
+ {
+  "beat": "h11",
+  "t0": 75.135,
+  "t1": 79.779,
+  "src": "f2_alash78_shashubaev.mp4",
+  "ss": 76.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "h12",
+  "t0": 79.999,
+  "t1": 83.482,
+  "src": "f7_oct79_temirov.mp4",
+  "ss": 1800.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "h13",
+  "t0": 83.702,
+  "t1": 89.6,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 920.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "a1",
+  "t0": 90.05,
+  "t1": 93.858,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 84.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "a2",
+  "t0": 94.078,
+  "t1": 97.282,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 30.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "a3",
+  "t0": 97.502,
+  "t1": 103.029,
+  "src": "rizin_lm15_weighin.mp4",
+  "ss": 1849.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "a4",
+  "t0": 103.249,
+  "t1": 108.264,
+  "src": "kg_namys_preview.mp4",
+  "ss": 116.0,
+  "kind": "kg",
+  "label": "NAMYS MMA"
+ },
+ {
+  "beat": "a5",
+  "t0": 108.484,
+  "t1": 111.27,
+  "src": "px_kyrgyzstan_mountains_1_29139425.mp4",
+  "ss": 1.0,
+  "kind": "plain",
+  "label": "Pexels"
+ },
+ {
+  "beat": "a6",
+  "t0": 111.49,
+  "t1": 116.785,
+  "src": "st_snowleopard_a.jpg",
+  "ss": 0,
+  "kind": "stillw",
+  "label": "Wikimedia Commons"
+ },
+ {
+  "beat": "a7",
+  "t0": 117.005,
+  "t1": 120.813,
+  "src": "px_central_asia_mountain_range_1_27428156.mp4",
+  "ss": 1.0,
+  "kind": "plain",
+  "label": "Pexels"
+ },
+ {
+  "beat": "a8",
+  "t0": 121.033,
+  "t1": 125.166,
+  "src": "rizin_lm15_weighin.mp4",
+  "ss": 1823.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "b1",
+  "t0": 125.386,
+  "t1": 127.986,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 400.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "b2",
+  "t0": 128.206,
+  "t1": 133.686,
+  "src": "f8_mangu2_alibabazade.mp4",
+  "ss": 1400.0,
+  "kind": "mangu",
+  "label": "Mangu Professional League"
+ },
+ {
+  "beat": "b3",
+  "t0": 133.906,
+  "t1": 138.04,
+  "src": "f6_oct71_madiev.mp4",
+  "ss": 1340.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "b4",
+  "t0": 138.26,
+  "t1": 143.275,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 2.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "b5",
+  "t0": 143.495,
+  "t1": 147.303,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 910.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "b6",
+  "t0": 147.523,
+  "t1": 150.635,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 620.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "b7",
+  "t0": 150.855,
+  "t1": 155.173,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1105.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "c1",
+  "t0": 155.623,
+  "t1": 160.128,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 100.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "c2",
+  "t0": 160.348,
+  "t1": 161.834,
+  "src": "px_mountain_peaks_snow_aerial_1_11449150.mp4",
+  "ss": 2.0,
+  "kind": "plain",
+  "label": "Pexels"
+ },
+ {
+  "beat": "c3",
+  "t0": 162.054,
+  "t1": 167.07,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 148.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "c4",
+  "t0": 167.29,
+  "t1": 172.12,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 440.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "c5",
+  "t0": 172.34,
+  "t1": 179.584,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 380.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "c6",
+  "t0": 179.804,
+  "t1": 183.519,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 520.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "c7",
+  "t0": 183.739,
+  "t1": 187.64,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 700.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "c8",
+  "t0": 187.86,
+  "t1": 193.062,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 830.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "d1",
+  "t0": 193.282,
+  "t1": 195.975,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 128.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "d2",
+  "t0": 196.195,
+  "t1": 200.468,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 196.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "d3",
+  "t0": 200.688,
+  "t1": 203.799,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 248.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "d4",
+  "t0": 204.019,
+  "t1": 205.459,
+  "src": "bro_kazakbay.mp4",
+  "ss": 20.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "d5",
+  "t0": 205.679,
+  "t1": 209.765,
+  "src": "bro_kazakbay.mp4",
+  "ss": 103.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "d6",
+  "t0": 209.985,
+  "t1": 212.772,
+  "src": "bro_kazakbay.mp4",
+  "ss": 150.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "d7",
+  "t0": 212.992,
+  "t1": 216.196,
+  "src": "bro_kazakbay.mp4",
+  "ss": 300.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "d8",
+  "t0": 216.416,
+  "t1": 220.131,
+  "src": "bro_kazakbay.mp4",
+  "ss": 93.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "d9",
+  "t0": 220.351,
+  "t1": 224.113,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 900.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "d10",
+  "t0": 224.333,
+  "t1": 229.674,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 960.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "d11",
+  "t0": 229.894,
+  "t1": 233.469,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 1030.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "e1",
+  "t0": 233.919,
+  "t1": 238.331,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 1100.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "e2",
+  "t0": 238.551,
+  "t1": 240.641,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 1160.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "e3",
+  "t0": 240.861,
+  "t1": 243.787,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 1196.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "e4",
+  "t0": 244.007,
+  "t1": 246.607,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1118.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "e5",
+  "t0": 246.827,
+  "t1": 253.793,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 640.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "e6",
+  "t0": 254.013,
+  "t1": 259.447,
+  "src": "f6_oct71_madiev.mp4",
+  "ss": 144.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "e7",
+  "t0": 259.667,
+  "t1": 263.707,
+  "src": "f7_oct79_temirov.mp4",
+  "ss": 91.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "f1",
+  "t0": 263.927,
+  "t1": 268.617,
+  "src": "f7_oct79_temirov.mp4",
+  "ss": 150.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "f2",
+  "t0": 268.837,
+  "t1": 273.714,
+  "src": "f7_oct79_temirov.mp4",
+  "ss": 112.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "f3",
+  "t0": 273.934,
+  "t1": 276.906,
+  "src": "f8_mangu2_alibabazade.mp4",
+  "ss": 30.0,
+  "kind": "mangu",
+  "label": "Mangu Professional League"
+ },
+ {
+  "beat": "f4",
+  "t0": 277.126,
+  "t1": 280.98,
+  "src": "f8_mangu2_alibabazade.mp4",
+  "ss": 100.0,
+  "kind": "mangu",
+  "label": "Mangu Professional League"
+ },
+ {
+  "beat": "g1",
+  "t0": 281.43,
+  "t1": 285.006,
+  "src": "f1_atfc15_abduvohidov.mp4",
+  "ss": 265.0,
+  "kind": "atfc",
+  "label": "ATF CHAMPIONSHIP"
+ },
+ {
+  "beat": "g2",
+  "t0": 285.226,
+  "t1": 289.731,
+  "src": "f1_atfc15_abduvohidov.mp4",
+  "ss": 290.0,
+  "kind": "atfc",
+  "label": "ATF CHAMPIONSHIP"
+ },
+ {
+  "beat": "g3",
+  "t0": 289.951,
+  "t1": 292.505,
+  "src": "f1_atfc15_abduvohidov.mp4",
+  "ss": 127.0,
+  "kind": "atfc",
+  "label": "ATF CHAMPIONSHIP"
+ },
+ {
+  "beat": "g4",
+  "t0": 292.725,
+  "t1": 297.276,
+  "src": "f1_atfc15_abduvohidov.mp4",
+  "ss": 465.0,
+  "kind": "atfc",
+  "label": "ATF CHAMPIONSHIP"
+ },
+ {
+  "beat": "g5",
+  "t0": 297.496,
+  "t1": 301.536,
+  "src": "f1_atfc15_abduvohidov.mp4",
+  "ss": 541.0,
+  "kind": "atfc",
+  "label": "ATF CHAMPIONSHIP"
+ },
+ {
+  "beat": "g6",
+  "t0": 301.756,
+  "t1": 307.84,
+  "src": "f1_atfc15_abduvohidov.mp4",
+  "ss": 932.0,
+  "kind": "atfc",
+  "label": "ATF CHAMPIONSHIP"
+ },
+ {
+  "beat": "g7",
+  "t0": 307.84,
+  "t1": 317.84,
+  "src": "f1_atfc15_abduvohidov.mp4",
+  "ss": 956.0,
+  "kind": "atfc",
+  "label": "ATF CHAMPIONSHIP"
+ },
+ {
+  "beat": "g8",
+  "t0": 318.06,
+  "t1": 320.15,
+  "src": "f1_atfc15_abduvohidov.mp4",
+  "ss": 975.0,
+  "kind": "atfc",
+  "label": "ATF CHAMPIONSHIP"
+ },
+ {
+  "beat": "g9",
+  "t0": 320.37,
+  "t1": 324.735,
+  "src": "f1_atfc15_abduvohidov.mp4",
+  "ss": 1036.0,
+  "kind": "atfc",
+  "label": "ATF CHAMPIONSHIP"
+ },
+ {
+  "beat": "i1",
+  "t0": 325.185,
+  "t1": 329.086,
+  "src": "f2_alash78_shashubaev.mp4",
+  "ss": 10.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "i2",
+  "t0": 329.306,
+  "t1": 334.554,
+  "src": "f2_alash78_shashubaev.mp4",
+  "ss": 40.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "i3",
+  "t0": 334.774,
+  "t1": 339.65,
+  "src": "f2_alash78_shashubaev.mp4",
+  "ss": 58.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "i4",
+  "t0": 339.87,
+  "t1": 343.214,
+  "src": "f2_alash78_shashubaev.mp4",
+  "ss": 104.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "i5",
+  "t0": 343.434,
+  "t1": 345.106,
+  "src": "f2_alash78_shashubaev.mp4",
+  "ss": 146.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "i6",
+  "t0": 345.106,
+  "t1": 359.106,
+  "src": "f2_alash78_shashubaev.mp4",
+  "ss": 153.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "i7",
+  "t0": 359.326,
+  "t1": 362.994,
+  "src": "f2_alash78_shashubaev.mp4",
+  "ss": 194.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "i8",
+  "t0": 363.214,
+  "t1": 367.765,
+  "src": "f2_alash78_shashubaev.mp4",
+  "ss": 200.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "i9",
+  "t0": 367.985,
+  "t1": 371.654,
+  "src": "f2_alash78_shashubaev.mp4",
+  "ss": 268.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "i10",
+  "t0": 371.874,
+  "t1": 375.45,
+  "src": "f2_alash78_shashubaev.mp4",
+  "ss": 280.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "j1",
+  "t0": 375.9,
+  "t1": 378.64,
+  "src": "f3_alash84_esdaulet.mp4",
+  "ss": 12.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "j2",
+  "t0": 378.86,
+  "t1": 385.362,
+  "src": "f3_alash84_esdaulet.mp4",
+  "ss": 24.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "j3",
+  "t0": 385.582,
+  "t1": 390.876,
+  "src": "f3_alash84_esdaulet.mp4",
+  "ss": 1.0,
+  "kind": "alashc",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "j4",
+  "t0": 391.096,
+  "t1": 394.393,
+  "src": "f3_alash84_esdaulet.mp4",
+  "ss": 36.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "j5",
+  "t0": 394.613,
+  "t1": 401.3,
+  "src": "f3_alash84_esdaulet.mp4",
+  "ss": 60.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "j6",
+  "t0": 401.52,
+  "t1": 405.236,
+  "src": "f3_alash84_esdaulet.mp4",
+  "ss": 150.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "j7",
+  "t0": 405.236,
+  "t1": 420.236,
+  "src": "f3_alash84_esdaulet.mp4",
+  "ss": 238.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "j8",
+  "t0": 420.456,
+  "t1": 424.635,
+  "src": "f3_alash84_esdaulet.mp4",
+  "ss": 256.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "j9",
+  "t0": 424.855,
+  "t1": 428.849,
+  "src": "f3_alash84_esdaulet.mp4",
+  "ss": 286.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "k1",
+  "t0": 429.069,
+  "t1": 435.013,
+  "src": "f4_alash91_nurmukha.mp4",
+  "ss": 2.0,
+  "kind": "alash4",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "k2",
+  "t0": 435.233,
+  "t1": 436.998,
+  "src": "f4_alash91_nurmukha.mp4",
+  "ss": 40.0,
+  "kind": "alash4",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "k3",
+  "t0": 437.218,
+  "t1": 440.376,
+  "src": "f4_alash91_nurmukha.mp4",
+  "ss": 150.0,
+  "kind": "alash4",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "k4",
+  "t0": 440.376,
+  "t1": 456.376,
+  "src": "f4_alash91_nurmukha.mp4",
+  "ss": 215.0,
+  "kind": "alash4",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "k5",
+  "t0": 456.596,
+  "t1": 460.358,
+  "src": "f4_alash91_nurmukha.mp4",
+  "ss": 244.0,
+  "kind": "alash4",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "k6",
+  "t0": 460.578,
+  "t1": 466.94,
+  "src": "f4_alash91_nurmukha.mp4",
+  "ss": 290.0,
+  "kind": "alash4",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "l1",
+  "t0": 467.39,
+  "t1": 469.805,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 8.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "l2",
+  "t0": 470.025,
+  "t1": 475.18,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 36.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "l3",
+  "t0": 475.4,
+  "t1": 479.951,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 240.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "l4",
+  "t0": 480.171,
+  "t1": 487.276,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 272.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "l5",
+  "t0": 487.496,
+  "t1": 494.09,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 76.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "l6",
+  "t0": 494.31,
+  "t1": 497.561,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 108.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "m1",
+  "t0": 497.781,
+  "t1": 502.797,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 176.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "m2",
+  "t0": 503.017,
+  "t1": 506.685,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 140.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "m3",
+  "t0": 506.905,
+  "t1": 510.296,
+  "src": "oct66_weighin_faceoff.mp4",
+  "ss": 1100.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "m4",
+  "t0": 510.516,
+  "t1": 515.113,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 530.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "m5",
+  "t0": 515.333,
+  "t1": 519.095,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 930.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "m6",
+  "t0": 519.095,
+  "t1": 536.095,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 995.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "m7",
+  "t0": 536.315,
+  "t1": 538.915,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 1014.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "m8",
+  "t0": 539.135,
+  "t1": 542.851,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 1046.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "m9",
+  "t0": 543.071,
+  "t1": 545.811,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 1080.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "n1",
+  "t0": 546.031,
+  "t1": 550.257,
+  "src": "f6_oct71_madiev.mp4",
+  "ss": 46.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "n2",
+  "t0": 550.477,
+  "t1": 555.074,
+  "src": "f6_oct71_madiev.mp4",
+  "ss": 234.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "n3",
+  "t0": 555.294,
+  "t1": 559.567,
+  "src": "f6_oct71_madiev.mp4",
+  "ss": 434.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "n4",
+  "t0": 559.787,
+  "t1": 562.48,
+  "src": "f6_oct71_madiev.mp4",
+  "ss": 600.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "n5",
+  "t0": 562.7,
+  "t1": 566.648,
+  "src": "f6_oct71_madiev.mp4",
+  "ss": 1090.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "n6",
+  "t0": 566.648,
+  "t1": 583.648,
+  "src": "f6_oct71_madiev.mp4",
+  "ss": 1432.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "n7",
+  "t0": 583.868,
+  "t1": 587.815,
+  "src": "f6_oct71_madiev.mp4",
+  "ss": 1450.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "n8",
+  "t0": 588.035,
+  "t1": 592.307,
+  "src": "f6_oct71_madiev.mp4",
+  "ss": 1480.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "n9",
+  "t0": 592.527,
+  "t1": 596.057,
+  "src": "f6_oct71_madiev.mp4",
+  "ss": 1532.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "o1",
+  "t0": 596.277,
+  "t1": 601.06,
+  "src": "f7_oct79_temirov.mp4",
+  "ss": 28.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "o2",
+  "t0": 601.28,
+  "t1": 605.878,
+  "src": "f7_oct79_temirov.mp4",
+  "ss": 408.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "o3",
+  "t0": 606.098,
+  "t1": 609.859,
+  "src": "f7_oct79_temirov.mp4",
+  "ss": 1120.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "o4",
+  "t0": 610.079,
+  "t1": 611.658,
+  "src": "f7_oct79_temirov.mp4",
+  "ss": 1694.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "o5",
+  "t0": 611.878,
+  "t1": 616.569,
+  "src": "f7_oct79_temirov.mp4",
+  "ss": 1775.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "o6",
+  "t0": 616.789,
+  "t1": 621.526,
+  "src": "f7_oct79_temirov.mp4",
+  "ss": 1818.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "p1",
+  "t0": 621.746,
+  "t1": 624.114,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 660.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "p2",
+  "t0": 624.334,
+  "t1": 631.95,
+  "src": "f6_oct71_madiev.mp4",
+  "ss": 870.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "p3",
+  "t0": 632.17,
+  "t1": 635.096,
+  "src": "f7_oct79_temirov.mp4",
+  "ss": 860.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "p4",
+  "t0": 635.316,
+  "t1": 641.771,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 790.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "p5",
+  "t0": 641.991,
+  "t1": 646.728,
+  "src": "kg_namys_preview.mp4",
+  "ss": 68.0,
+  "kind": "kg",
+  "label": "NAMYS MMA"
+ },
+ {
+  "beat": "p6",
+  "t0": 646.948,
+  "t1": 649.363,
+  "src": "kg_namys_preview.mp4",
+  "ss": 327.5,
+  "kind": "kg",
+  "label": "NAMYS MMA"
+ },
+ {
+  "beat": "q1",
+  "t0": 649.813,
+  "t1": 652.506,
+  "src": "f8_mangu2_alibabazade.mp4",
+  "ss": 160.0,
+  "kind": "mangu",
+  "label": "Mangu Professional League"
+ },
+ {
+  "beat": "q2",
+  "t0": 652.726,
+  "t1": 658.438,
+  "src": "f8_mangu2_alibabazade.mp4",
+  "ss": 186.0,
+  "kind": "mangu",
+  "label": "Mangu Professional League"
+ },
+ {
+  "beat": "q3",
+  "t0": 658.658,
+  "t1": 664.51,
+  "src": "f8_mangu2_alibabazade.mp4",
+  "ss": 204.0,
+  "kind": "mangu",
+  "label": "Mangu Professional League"
+ },
+ {
+  "beat": "q4",
+  "t0": 664.73,
+  "t1": 670.721,
+  "src": "f8_mangu2_alibabazade.mp4",
+  "ss": 420.0,
+  "kind": "mangu",
+  "label": "Mangu Professional League"
+ },
+ {
+  "beat": "q5",
+  "t0": 670.941,
+  "t1": 675.12,
+  "src": "f8_mangu2_alibabazade.mp4",
+  "ss": 700.0,
+  "kind": "mangu",
+  "label": "Mangu Professional League"
+ },
+ {
+  "beat": "q6",
+  "t0": 675.34,
+  "t1": 679.241,
+  "src": "f8_mangu2_alibabazade.mp4",
+  "ss": 1330.0,
+  "kind": "mangu",
+  "label": "Mangu Professional League"
+ },
+ {
+  "beat": "q7",
+  "t0": 679.461,
+  "t1": 680.715,
+  "src": "f8_mangu2_alibabazade.mp4",
+  "ss": 1427.0,
+  "kind": "mangu",
+  "label": "Mangu Professional League"
+ },
+ {
+  "beat": "r1",
+  "t0": 680.935,
+  "t1": 685.579,
+  "src": "f1_atfc15_abduvohidov.mp4",
+  "ss": 420.0,
+  "kind": "atfc",
+  "label": "ATF CHAMPIONSHIP"
+ },
+ {
+  "beat": "r2",
+  "t0": 685.799,
+  "t1": 690.164,
+  "src": "f3_alash84_esdaulet.mp4",
+  "ss": 100.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "r3",
+  "t0": 690.384,
+  "t1": 695.911,
+  "src": "f6_oct71_madiev.mp4",
+  "ss": 690.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "r4",
+  "t0": 696.131,
+  "t1": 699.892,
+  "src": "f8_mangu2_alibabazade.mp4",
+  "ss": 980.0,
+  "kind": "mangu",
+  "label": "Mangu Professional League"
+ },
+ {
+  "beat": "r5",
+  "t0": 700.112,
+  "t1": 704.292,
+  "src": "f8_mangu2_alibabazade.mp4",
+  "ss": 1362.0,
+  "kind": "mangu",
+  "label": "Mangu Professional League"
+ },
+ {
+  "beat": "s1",
+  "t0": 704.742,
+  "t1": 707.621,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 2.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "s2",
+  "t0": 707.841,
+  "t1": 710.256,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 70.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "s3",
+  "t0": 710.476,
+  "t1": 715.724,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 90.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "s4",
+  "t0": 715.944,
+  "t1": 720.82,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 45.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "s5",
+  "t0": 721.04,
+  "t1": 725.73,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 27.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "s6",
+  "t0": 725.73,
+  "t1": 737.73,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 10.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "s7",
+  "t0": 737.95,
+  "t1": 739.854,
+  "src": "kg_namys_preview.mp4",
+  "ss": 63.0,
+  "kind": "kg",
+  "label": "NAMYS MMA"
+ },
+ {
+  "beat": "s8",
+  "t0": 740.074,
+  "t1": 744.765,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 46.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "t1",
+  "t0": 744.985,
+  "t1": 748.468,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 66.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "t2",
+  "t0": 748.688,
+  "t1": 751.288,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 198.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "t3",
+  "t0": 751.508,
+  "t1": 757.639,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 230.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "t4",
+  "t0": 757.859,
+  "t1": 761.852,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 262.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "t5",
+  "t0": 762.072,
+  "t1": 764.394,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 294.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "t6",
+  "t0": 764.614,
+  "t1": 769.212,
+  "src": "px_mountain_peaks_snow_aerial_1_11449150.mp4",
+  "ss": 20.0,
+  "kind": "plain",
+  "label": "Pexels"
+ },
+ {
+  "beat": "t7",
+  "t0": 769.432,
+  "t1": 773.147,
+  "src": "px_central_asia_mountain_range_1_27428156.mp4",
+  "ss": 6.0,
+  "kind": "plain",
+  "label": "Pexels"
+ },
+ {
+  "beat": "t8",
+  "t0": 773.367,
+  "t1": 778.893,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 326.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "t9",
+  "t0": 779.113,
+  "t1": 785.244,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1086.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "t10",
+  "t0": 785.464,
+  "t1": 789.179,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 356.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "t11",
+  "t0": 789.399,
+  "t1": 795.993,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 480.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "u1",
+  "t0": 796.213,
+  "t1": 799.139,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 520.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "u2",
+  "t0": 799.359,
+  "t1": 805.21,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 556.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "u3",
+  "t0": 805.43,
+  "t1": 809.796,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 596.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "u4",
+  "t0": 810.016,
+  "t1": 813.917,
+  "src": "kg_namys_preview.mp4",
+  "ss": 300.0,
+  "kind": "kg",
+  "label": "NAMYS MMA"
+ },
+ {
+  "beat": "u5",
+  "t0": 814.137,
+  "t1": 817.202,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 628.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "u6",
+  "t0": 817.422,
+  "t1": 823.784,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 148.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "u7",
+  "t0": 824.004,
+  "t1": 829.67,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 176.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "u8",
+  "t0": 829.89,
+  "t1": 832.769,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 390.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "u9",
+  "t0": 832.989,
+  "t1": 837.633,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 424.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "u10",
+  "t0": 837.853,
+  "t1": 841.847,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 450.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "u11",
+  "t0": 842.067,
+  "t1": 846.246,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 580.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "u12",
+  "t0": 846.466,
+  "t1": 851.342,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 654.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "u13",
+  "t0": 851.562,
+  "t1": 856.253,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "v1",
+  "t0": 856.473,
+  "t1": 862.649,
+  "src": "rizin_lm15_weighin.mp4",
+  "ss": 1808.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "v2",
+  "t0": 862.869,
+  "t1": 867.746,
+  "src": "rizin_lm15_weighin.mp4",
+  "ss": 1835.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "v3",
+  "t0": 867.966,
+  "t1": 870.845,
+  "src": "rizin_lm15_weighin.mp4",
+  "ss": 1856.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "w1",
+  "t0": 871.295,
+  "t1": 877.936,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 15.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "w2",
+  "t0": 878.156,
+  "t1": 884.564,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 34.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "w3",
+  "t0": 884.784,
+  "t1": 888.082,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 94.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "x1",
+  "t0": 888.302,
+  "t1": 892.76,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 140.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "x2",
+  "t0": 892.98,
+  "t1": 897.485,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 222.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "x3",
+  "t0": 897.705,
+  "t1": 901.838,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 248.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "x4",
+  "t0": 901.838,
+  "t1": 920.838,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 258.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "x5",
+  "t0": 921.058,
+  "t1": 927.281,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 300.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "x6",
+  "t0": 927.501,
+  "t1": 930.984,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 604.5,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "x7",
+  "t0": 931.204,
+  "t1": 934.733,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 360.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "x8",
+  "t0": 934.953,
+  "t1": 939.04,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 388.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "y1",
+  "t0": 939.26,
+  "t1": 942.325,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 470.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "y2",
+  "t0": 942.545,
+  "t1": 945.238,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 495.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "y3",
+  "t0": 945.458,
+  "t1": 949.777,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 512.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "y4",
+  "t0": 949.997,
+  "t1": 956.499,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 700.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "y5",
+  "t0": 956.719,
+  "t1": 964.474,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 590.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "y6",
+  "t0": 964.694,
+  "t1": 970.546,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 678.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "y7",
+  "t0": 970.766,
+  "t1": 976.106,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 742.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "z1",
+  "t0": 976.326,
+  "t1": 978.556,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 820.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "z2",
+  "t0": 978.556,
+  "t1": 1000.556,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 875.5,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "z3",
+  "t0": 1000.776,
+  "t1": 1004.909,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 898.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "z4",
+  "t0": 1005.129,
+  "t1": 1011.77,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 946.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "z5",
+  "t0": 1011.99,
+  "t1": 1015.24,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 978.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "aa1",
+  "t0": 1015.46,
+  "t1": 1020.29,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 660.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "aa2",
+  "t0": 1020.51,
+  "t1": 1023.436,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 840.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "aa3",
+  "t0": 1023.656,
+  "t1": 1028.3,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 174.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "aa4",
+  "t0": 1028.52,
+  "t1": 1032.56,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 996.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "aa5",
+  "t0": 1032.78,
+  "t1": 1036.542,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1126.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "aa6",
+  "t0": 1036.762,
+  "t1": 1040.198,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 928.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "ab1",
+  "t0": 1040.648,
+  "t1": 1043.156,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1014.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "ab2",
+  "t0": 1043.376,
+  "t1": 1046.72,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1022.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "ab3",
+  "t0": 1046.94,
+  "t1": 1051.63,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1030.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "ab4",
+  "t0": 1051.85,
+  "t1": 1056.169,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1046.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "ab5",
+  "t0": 1056.389,
+  "t1": 1060.151,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1112.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "ab6",
+  "t0": 1060.371,
+  "t1": 1067.151,
+  "src": "f7_oct79_temirov.mp4",
+  "ss": 1840.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "ab7",
+  "t0": 1067.371,
+  "t1": 1070.761,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1070.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "ab8",
+  "t0": 1070.981,
+  "t1": 1075.439,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 962.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "ab9",
+  "t0": 1075.659,
+  "t1": 1078.353,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1074.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "ab10",
+  "t0": 1078.573,
+  "t1": 1082.706,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1094.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "ab11",
+  "t0": 1082.926,
+  "t1": 1087.152,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1131.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "ac1",
+  "t0": 1087.372,
+  "t1": 1092.062,
+  "src": "f8_mangu2_alibabazade.mp4",
+  "ss": 1392.0,
+  "kind": "mangu",
+  "label": "Mangu Professional League"
+ },
+ {
+  "beat": "ac2",
+  "t0": 1092.282,
+  "t1": 1095.998,
+  "src": "f7_oct79_temirov.mp4",
+  "ss": 1736.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "ac3",
+  "t0": 1096.218,
+  "t1": 1097.75,
+  "src": "f6_oct71_madiev.mp4",
+  "ss": 1545.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "ac4",
+  "t0": 1097.97,
+  "t1": 1103.496,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 1110.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "ac5",
+  "t0": 1103.716,
+  "t1": 1109.103,
+  "src": "f7_oct79_temirov.mp4",
+  "ss": 130.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "ac6",
+  "t0": 1109.323,
+  "t1": 1114.246,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1002.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "ac7",
+  "t0": 1114.466,
+  "t1": 1116.695,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1060.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "ac8",
+  "t0": 1116.915,
+  "t1": 1121.002,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1064.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "ad1",
+  "t0": 1121.452,
+  "t1": 1125.167,
+  "src": "abema_lm16_card.mp4",
+  "ss": 6.0,
+  "kind": "abema",
+  "label": "ABEMA 格闘【公式】"
+ },
+ {
+  "beat": "ad2",
+  "t0": 1125.387,
+  "t1": 1130.217,
+  "src": "abema_lm16_card.mp4",
+  "ss": 18.0,
+  "kind": "abema",
+  "label": "ABEMA 格闘【公式】"
+ },
+ {
+  "beat": "ad3",
+  "t0": 1130.437,
+  "t1": 1134.245,
+  "src": "abema_lm16_card.mp4",
+  "ss": 36.0,
+  "kind": "abema",
+  "label": "ABEMA 格闘【公式】"
+ },
+ {
+  "beat": "ad4",
+  "t0": 1134.465,
+  "t1": 1139.016,
+  "src": "abema_lm16_card.mp4",
+  "ss": 28.0,
+  "kind": "abema",
+  "label": "ABEMA 格闘【公式】"
+ },
+ {
+  "beat": "ad5",
+  "t0": 1139.236,
+  "t1": 1141.14,
+  "src": "abema_lm16_card.mp4",
+  "ss": 44.0,
+  "kind": "abema",
+  "label": "ABEMA 格闘【公式】"
+ },
+ {
+  "beat": "ae1",
+  "t0": 1141.36,
+  "t1": 1144.75,
+  "src": "abema_lm16_card.mp4",
+  "ss": 56.0,
+  "kind": "abema",
+  "label": "ABEMA 格闘【公式】"
+ },
+ {
+  "beat": "ae2",
+  "t0": 1144.97,
+  "t1": 1152.865,
+  "src": "abema_lm16_card.mp4",
+  "ss": 70.0,
+  "kind": "abema",
+  "label": "ABEMA 格闘【公式】"
+ },
+ {
+  "beat": "ae3",
+  "t0": 1153.085,
+  "t1": 1157.683,
+  "src": "abema_lm16_card.mp4",
+  "ss": 86.0,
+  "kind": "abema",
+  "label": "ABEMA 格闘【公式】"
+ },
+ {
+  "beat": "ae4",
+  "t0": 1157.903,
+  "t1": 1160.642,
+  "src": "abema_lm16_card.mp4",
+  "ss": 100.0,
+  "kind": "abema",
+  "label": "ABEMA 格闘【公式】"
+ },
+ {
+  "beat": "ae5",
+  "t0": 1160.862,
+  "t1": 1164.624,
+  "src": "abema_lm16_card.mp4",
+  "ss": 112.0,
+  "kind": "abema",
+  "label": "ABEMA 格闘【公式】"
+ },
+ {
+  "beat": "ae6",
+  "t0": 1164.844,
+  "t1": 1170.138,
+  "src": "abema_lm16_card.mp4",
+  "ss": 124.0,
+  "kind": "abema",
+  "label": "ABEMA 格闘【公式】"
+ },
+ {
+  "beat": "ae7",
+  "t0": 1170.358,
+  "t1": 1175.281,
+  "src": "abema_lm16_card.mp4",
+  "ss": 136.0,
+  "kind": "abema",
+  "label": "ABEMA 格闘【公式】"
+ },
+ {
+  "beat": "ae8",
+  "t0": 1175.501,
+  "t1": 1181.259,
+  "src": "abema_lm16_card.mp4",
+  "ss": 105.0,
+  "kind": "abema",
+  "label": "ABEMA 格闘【公式】"
+ },
+ {
+  "beat": "ae9",
+  "t0": 1181.479,
+  "t1": 1183.755,
+  "src": "abema_lm16_card.mp4",
+  "ss": 92.0,
+  "kind": "abema",
+  "label": "ABEMA 格闘【公式】"
+ },
+ {
+  "beat": "af1",
+  "t0": 1183.975,
+  "t1": 1186.622,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 310.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "af2",
+  "t0": 1186.842,
+  "t1": 1189.396,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 340.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "af3",
+  "t0": 1189.616,
+  "t1": 1196.257,
+  "src": "jp_ota_shinobu.mp4",
+  "ss": 372.0,
+  "kind": "ota",
+  "label": "太田忍 Ota Shinobu"
+ },
+ {
+  "beat": "af4",
+  "t0": 1196.477,
+  "t1": 1199.449,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 954.0,
+  "kind": "rz",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "af5",
+  "t0": 1199.669,
+  "t1": 1203.477,
+  "src": "abema_lm16_card.mp4",
+  "ss": 66.0,
+  "kind": "abema",
+  "label": "ABEMA 格闘【公式】"
+ },
+ {
+  "beat": "ag1",
+  "t0": 1203.927,
+  "t1": 1207.364,
+  "src": "f1_atfc15_abduvohidov.mp4",
+  "ss": 600.0,
+  "kind": "atfc",
+  "label": "ATF CHAMPIONSHIP"
+ },
+ {
+  "beat": "ag2",
+  "t0": 1207.584,
+  "t1": 1209.767,
+  "src": "f3_alash84_esdaulet.mp4",
+  "ss": 180.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "ag3",
+  "t0": 1209.987,
+  "t1": 1215.42,
+  "src": "f2_alash78_shashubaev.mp4",
+  "ss": 118.0,
+  "kind": "alash",
+  "label": "Alash Pride TV"
+ },
+ {
+  "beat": "ag4",
+  "t0": 1215.64,
+  "t1": 1218.519,
+  "src": "f8_mangu2_alibabazade.mp4",
+  "ss": 577.0,
+  "kind": "mangu",
+  "label": "Mangu Professional League"
+ },
+ {
+  "beat": "ag5",
+  "t0": 1218.739,
+  "t1": 1225.148,
+  "src": "f5_oct66_batyrbek.mp4",
+  "ss": 152.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "ah1",
+  "t0": 1225.368,
+  "t1": 1230.059,
+  "src": "f6_oct71_madiev.mp4",
+  "ss": 920.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "ah2",
+  "t0": 1230.279,
+  "t1": 1233.947,
+  "src": "f7_oct79_temirov.mp4",
+  "ss": 1340.0,
+  "kind": "oct",
+  "label": "OCTAGON TV"
+ },
+ {
+  "beat": "ah3",
+  "t0": 1234.167,
+  "t1": 1238.022,
+  "src": "f8_mangu2_alibabazade.mp4",
+  "ss": 870.0,
+  "kind": "mangu",
+  "label": "Mangu Professional League"
+ },
+ {
+  "beat": "ah4",
+  "t0": 1238.242,
+  "t1": 1243.025,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1121.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ },
+ {
+  "beat": "ah5",
+  "t0": 1243.245,
+  "t1": 1245.474,
+  "src": "kg_beknazar_iv.mp4",
+  "ss": 1210.0,
+  "kind": "kg",
+  "label": "BEKNAZAR"
+ },
+ {
+  "beat": "ai1",
+  "t0": 1245.694,
+  "t1": 1249.038,
+  "src": "abema_lm16_card.mp4",
+  "ss": 80.0,
+  "kind": "abema",
+  "label": "ABEMA 格闘【公式】"
+ },
+ {
+  "beat": "ai2",
+  "t0": 1249.258,
+  "t1": 1252.369,
+  "src": "st_snowleopard_c.jpg",
+  "ss": 0,
+  "kind": "stillw",
+  "label": "Wikimedia Commons"
+ },
+ {
+  "beat": "ai3",
+  "t0": 1252.589,
+  "t1": 1255.422,
+  "src": "f9_rizin_lm15_ota.mp4",
+  "ss": 1080.0,
+  "kind": "rzf",
+  "label": "RIZIN FIGHTING FEDERATION"
+ }
+]
