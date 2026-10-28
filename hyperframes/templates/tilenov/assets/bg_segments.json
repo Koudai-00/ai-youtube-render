@@ -409,7 +409,7 @@
   "t0": 219.885,
   "t1": 222.857,
   "src": "f8_mangu2_alibabazade.mp4",
-  "ss": 30.0,
+  "ss": 34.0,
   "kind": "mangu",
   "label": "Mangu Professional League"
  },
@@ -742,7 +742,7 @@
   "t0": 415.929,
   "t1": 421.084,
   "src": "f5_oct66_batyrbek.mp4",
-  "ss": 36.0,
+  "ss": 41.0,
   "kind": "oct",
   "label": "OCTAGON TV"
  },
@@ -787,7 +787,7 @@
   "t0": 443.686,
   "t1": 448.701,
   "src": "f5_oct66_batyrbek.mp4",
-  "ss": 176.0,
+  "ss": 178.5,
   "kind": "oct",
   "label": "OCTAGON TV"
  },
@@ -1714,7 +1714,7 @@
   "t0": 965.707,
   "t1": 969.933,
   "src": "f9_rizin_lm15_ota.mp4",
-  "ss": 1131.0,
+  "ss": 1098.8,
   "kind": "rzf",
   "label": "RIZIN FIGHTING FEDERATION"
  },
