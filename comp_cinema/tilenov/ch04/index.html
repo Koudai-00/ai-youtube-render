@@ -4,12 +4,12 @@
 <meta charset="UTF-8" />
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 <style>
-@font-face { font-family:"Dela","ZenBlack"; src: url("fonts/dela.woff2") format("woff2"); }
+@font-face { font-family: "Dela"; src: url("fonts/dela.woff2") format("woff2"); }
 @font-face { font-family: "ZenBlack"; src: url("fonts/zenblack.woff2") format("woff2"); }
 @font-face { font-family: "ZenBold"; src: url("fonts/zenbold.woff2") format("woff2"); }
 @font-face { font-family: "SerifJP"; src: url("fonts/serif.woff2") format("woff2"); font-weight: 200 900; }
-@font-face { font-family:"Anton","ZenBlack"; src: url("fonts/anton.woff2") format("woff2"); }
-@font-face { font-family:"Oswald","ZenBold"; src: url("fonts/oswald.woff2") format("woff2"); font-weight: 200 700; }
+@font-face { font-family: "Anton"; src: url("fonts/anton.woff2") format("woff2"); }
+@font-face { font-family: "Oswald"; src: url("fonts/oswald.woff2") format("woff2"); font-weight: 200 700; }
 
 :root {
   --bg: #07080b; --ink: #f4f1ea; --gold: #f2c230; --gold-deep: #c98e12;
@@ -30,10 +30,13 @@ body { font-family: "ZenBold", sans-serif; color: #f4f1ea; }
 .shade { position: absolute; inset: 0; pointer-events: none; }
 
 /* ------------------------------------------------ persistent chrome */
-#tag { position: absolute; left: 0; top: 34px; z-index: 50; opacity: 0; height: 64px; padding: 0 30px 0 34px;
-  background: #f2c230; color: #07080b; display: flex; align-items: center; overflow: hidden; }
-#tag .t { font-family:"Oswald","ZenBold"; font-weight: 700; font-size: 38px; letter-spacing: 3px; line-height: 64px; }
-#tag .t2 { font-family: "ZenBlack"; font-size: 36px; letter-spacing: 4px; position: absolute; left: 34px; top: 0; line-height: 64px; opacity: 0; }
+#tag { position: absolute; left: 0; top: 36px; z-index: 50; opacity: 0; display: flex; align-items: stretch;
+  filter: drop-shadow(0 4px 14px rgba(0,0,0,0.55)); }
+#tag .bar { width: 7px; background: linear-gradient(180deg, #f2c230, #c99416); }
+#tag .bd { background: rgba(7,8,11,0.84); padding: 9px 30px 11px 18px;
+  border-top: 1px solid rgba(242,194,48,0.4); border-bottom: 1px solid rgba(242,194,48,0.4); }
+#tag .no { font-family:"Oswald","ZenBold"; font-weight: 600; font-size: 17px; letter-spacing: 6px; color: #f2c230; line-height: 1; }
+#tag .t { font-family: "ZenBlack"; font-size: 31px; letter-spacing: 3px; color: #fff; line-height: 1.15; margin-top: 4px; display: block; }
 #series { position: absolute; right: 40px; top: 30px; z-index: 50; opacity: 0; display: flex; align-items: center; gap: 16px; }
 #series .av { width: 70px; height: 70px; border-radius: 50%; overflow: hidden; border: 3px solid #f2c230;
   background: radial-gradient(circle at 50% 40%, #b0161c, #3a0507); }
@@ -408,7 +411,7 @@ window.CINEMA = (function () {
   return { setup: setup };
 })();
 </script>
-<!--TAG:底-->
+<!--TAG:59秒の敗北-->
 <style>
 .gap45 { position: absolute; inset: 0; z-index: 6; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding-bottom: 110px; }
 .gap45 .a { font-family:"Anton","ZenBlack"; font-size: 240px; line-height: 0.95; color: #fff; letter-spacing: 6px; }
@@ -457,7 +460,7 @@ window.CINEMA = (function () {
 
   <!-- S4 唯一の黒星 -->
   <div id="c4s4" class="scene">
-    <div class="vw"><video id="vch0402" src="media/95_mangu_backstage_walkout_p2.mp4" data-start="37.76" data-duration="12.6" data-track-index="2" data-media-start="0" muted playsinline style="filter:grayscale(1) contrast(1.25) brightness(0.55)"></video></div>
+    <div class="vw"><video id="vch0402" src="media/x95_mangu_backstage.mp4" data-start="37.76" data-duration="12.6" data-track-index="2" data-media-start="0" muted playsinline style="filter:grayscale(1) contrast(1.25) brightness(0.55)"></video></div>
     <div class="shade" style="background:linear-gradient(90deg,rgba(7,8,11,0.88) 0%,rgba(7,8,11,0.5) 55%,rgba(7,8,11,0.15) 100%)"></div>
     <div class="kuro" id="c4kuro">
       <div class="wl" id="c4wl"><b>W</b><b class="l">L</b></div>
@@ -482,7 +485,7 @@ window.CINEMA = (function () {
   <div class="sub" id="sub_ch04_05">1ラウンドの1分も、立っていられなかった。</div>
   <div class="sub" id="sub_ch04_06">19歳の誕生日を迎える、5日前のことだ。</div>
   <div class="sub" id="sub_ch04_07">これが、9戦でただ一つの黒星である。</div>
-  <div id="tag"><span class="t" id="tag1">底</span></div>
+  <div id="tag"><span class="t" id="tag1">59秒の敗北</span></div>
   <div id="series"><div class="av"><img src="media/profile_cutout.png" /></div><span class="no">No.56</span><span class="nm">イリスベク・ティレノフ</span></div>
   <div id="black"></div>
   <div id="flash"></div>

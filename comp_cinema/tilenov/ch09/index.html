@@ -4,12 +4,12 @@
 <meta charset="UTF-8" />
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 <style>
-@font-face { font-family:"Dela","ZenBlack"; src: url("fonts/dela.woff2") format("woff2"); }
+@font-face { font-family: "Dela"; src: url("fonts/dela.woff2") format("woff2"); }
 @font-face { font-family: "ZenBlack"; src: url("fonts/zenblack.woff2") format("woff2"); }
 @font-face { font-family: "ZenBold"; src: url("fonts/zenbold.woff2") format("woff2"); }
 @font-face { font-family: "SerifJP"; src: url("fonts/serif.woff2") format("woff2"); font-weight: 200 900; }
-@font-face { font-family:"Anton","ZenBlack"; src: url("fonts/anton.woff2") format("woff2"); }
-@font-face { font-family:"Oswald","ZenBold"; src: url("fonts/oswald.woff2") format("woff2"); font-weight: 200 700; }
+@font-face { font-family: "Anton"; src: url("fonts/anton.woff2") format("woff2"); }
+@font-face { font-family: "Oswald"; src: url("fonts/oswald.woff2") format("woff2"); font-weight: 200 700; }
 
 :root {
   --bg: #07080b; --ink: #f4f1ea; --gold: #f2c230; --gold-deep: #c98e12;
@@ -30,10 +30,13 @@ body { font-family: "ZenBold", sans-serif; color: #f4f1ea; }
 .shade { position: absolute; inset: 0; pointer-events: none; }
 
 /* ------------------------------------------------ persistent chrome */
-#tag { position: absolute; left: 0; top: 34px; z-index: 50; opacity: 0; height: 64px; padding: 0 30px 0 34px;
-  background: #f2c230; color: #07080b; display: flex; align-items: center; overflow: hidden; }
-#tag .t { font-family:"Oswald","ZenBold"; font-weight: 700; font-size: 38px; letter-spacing: 3px; line-height: 64px; }
-#tag .t2 { font-family: "ZenBlack"; font-size: 36px; letter-spacing: 4px; position: absolute; left: 34px; top: 0; line-height: 64px; opacity: 0; }
+#tag { position: absolute; left: 0; top: 36px; z-index: 50; opacity: 0; display: flex; align-items: stretch;
+  filter: drop-shadow(0 4px 14px rgba(0,0,0,0.55)); }
+#tag .bar { width: 7px; background: linear-gradient(180deg, #f2c230, #c99416); }
+#tag .bd { background: rgba(7,8,11,0.84); padding: 9px 30px 11px 18px;
+  border-top: 1px solid rgba(242,194,48,0.4); border-bottom: 1px solid rgba(242,194,48,0.4); }
+#tag .no { font-family:"Oswald","ZenBold"; font-weight: 600; font-size: 17px; letter-spacing: 6px; color: #f2c230; line-height: 1; }
+#tag .t { font-family: "ZenBlack"; font-size: 31px; letter-spacing: 3px; color: #fff; line-height: 1.15; margin-top: 4px; display: block; }
 #series { position: absolute; right: 40px; top: 30px; z-index: 50; opacity: 0; display: flex; align-items: center; gap: 16px; }
 #series .av { width: 70px; height: 70px; border-radius: 50%; overflow: hidden; border: 3px solid #f2c230;
   background: radial-gradient(circle at 50% 40%, #b0161c, #3a0507); }
@@ -408,7 +411,7 @@ window.CINEMA = (function () {
   return { setup: setup };
 })();
 </script>
-<!--TAG:広島-->
+<!--TAG:太田忍戦-->
 <style>
 .michi { position: absolute; left: 100px; top: 240px; z-index: 6; width: 1050px; }
 .michi .qt { font-family: "ZenBlack"; font-size: 64px; line-height: 1.35; color: #fff; -webkit-text-stroke: 10px #000; paint-order: stroke fill; }
@@ -432,7 +435,7 @@ window.CINEMA = (function () {
 
   <!-- S1 スレート＋faceoff -->
   <div id="c9s1" class="scene grade-fight" style="opacity:1">
-    <div class="vw"><video id="vch0901" src="media/02_ota_faceoff_referee_p2.mp4" data-start="0" data-duration="9.2" data-track-index="1" data-media-start="0.2" muted playsinline></video></div>
+    <div class="vw"><video id="vch0901" src="media/x02_faceoff.mp4" data-start="0" data-duration="9.2" data-track-index="1" data-media-start="0.2" muted playsinline></video></div>
     <div class="shade" style="background:linear-gradient(90deg,rgba(7,8,11,0.82) 0%,rgba(7,8,11,0.3) 55%,rgba(7,8,11,0) 100%)"></div>
     <div class="slate" style="top:300px">
       <div class="l1" id="c9l1"><b></b>RIZIN DEBUT</div>
@@ -457,18 +460,18 @@ window.CINEMA = (function () {
   <div id="c9s3" class="scene grade-fight">
     <div class="vw">
       <video id="vch0903" src="media/04_ota_r1_striking_kick.mp4" data-start="14.9" data-duration="2.6" data-track-index="3" data-media-start="0.6" muted playsinline></video>
-      <video id="vch0904" src="media/44_ota_r1_clinch_cage.mp4" data-start="17.5" data-duration="2.2" data-track-index="4" data-media-start="0.8" muted playsinline></video>
+      <video id="vch0904" src="media/44_ota_r1_clinch_cage.mp4" data-start="17.5" data-duration="1.9" data-track-index="4" data-media-start="0.8" muted playsinline></video><video id="vch0905" src="media/x101_r1_late.mp4" data-start="19.4" data-duration="4.3" data-track-index="13" data-media-start="1.0" muted playsinline></video>
     </div>
   </div>
 
   <!-- LIVE 膝 -->
   <div id="c9live1" class="scene grade-fight">
-    <div class="vw"><video id="vch0905" src="media/68_ota_r1_knee.mp4" data-start="23.7" data-duration="19.5" data-track-index="5" data-media-start="0" muted playsinline></video></div>
+    <div class="vw"><video id="vch0906" src="media/68_ota_r1_knee.mp4" data-start="23.7" data-duration="19.5" data-track-index="5" data-media-start="0" muted playsinline></video></div>
   </div>
 
   <!-- S4 実況＝王者の声 -->
   <div id="c9s4" class="scene grade-fight">
-    <div class="vw"><video id="vch0906" src="media/86_ota_corner_champion_p2.mp4" data-start="43.7" data-duration="8.6" data-track-index="6" data-media-start="0.2" muted playsinline></video></div>
+    <div class="vw"><video id="vch0907" src="media/x86_corner.mp4" data-start="43.7" data-duration="8.6" data-track-index="6" data-media-start="0.2" muted playsinline></video></div>
     <div class="shade" style="background:linear-gradient(90deg,rgba(7,8,11,0) 0%,rgba(7,8,11,0.3) 50%,rgba(7,8,11,0.82) 100%)"></div>
     <div class="jik" id="c9j1">
       <div class="qt">“シェイドゥラエフが、<br /><em>大きな声</em>を出しています”</div>
@@ -478,7 +481,7 @@ window.CINEMA = (function () {
 
   <!-- S5 解説＝出力コントロール -->
   <div id="c9s5" class="scene grade-fight">
-    <div class="vw"><video id="vch0907" src="media/45_ota_r1_exchange_wide_p2.mp4" data-start="52.3" data-duration="6.0" data-track-index="7" data-media-start="0.5" muted playsinline></video></div>
+    <div class="vw"><video id="vch0908" src="media/x45_r1_mid.mp4" data-start="52.3" data-duration="6.0" data-track-index="7" data-media-start="0.5" muted playsinline></video></div>
     <div class="shade" style="background:linear-gradient(90deg,rgba(7,8,11,0.8) 0%,rgba(7,8,11,0.35) 55%,rgba(7,8,11,0) 100%)"></div>
     <div class="michi" id="c9j2" style="top:280px">
       <div class="qt">“出力をコントロールしてくる。<br />だから、<em>やりすぎない</em>”</div>
@@ -488,13 +491,13 @@ window.CINEMA = (function () {
 
   <!-- S6 R2中断（ロー） -->
   <div id="c9s6" class="scene grade-fight">
-    <div class="vw"><video id="vch0908" src="media/92_ota_lowblow_long.mp4" data-start="58.3" data-duration="14.5" data-track-index="8" data-media-start="0" muted playsinline style="filter:saturate(0.7) contrast(1.15) brightness(0.8)"></video></div>
-    <div class="pause3" id="c9p3" style="opacity:0"><div class="a">3:00+</div><div class="b">試合中断 — 下腹部への蹴り</div></div>
+    <div class="vw"><video id="vch0909" src="media/92_ota_lowblow_long.mp4" data-start="58.3" data-duration="14.5" data-track-index="8" data-media-start="0" muted playsinline style="filter:saturate(0.7) contrast(1.15) brightness(0.8)"></video></div>
+    <div class="pause3" id="c9p3" style="opacity:0"><div class="a" style="font-size:150px">約3分半</div><div class="b">試合中断 — 下腹部への蹴り</div></div>
   </div>
 
   <!-- S7 太田の証言 -->
   <div id="c9s7" class="scene grade-fight">
-    <div class="vw"><video id="vch0909" src="media/93_ota_restart_reset.mp4" data-start="72.8" data-duration="5.5" data-track-index="9" data-media-start="0.4" muted playsinline style="filter:grayscale(0.6) contrast(1.2) brightness(0.55)"></video></div>
+    <div class="vw"><video id="vch0910" src="media/93_ota_restart_reset.mp4" data-start="72.8" data-duration="5.5" data-track-index="9" data-media-start="0.4" muted playsinline style="filter:grayscale(0.6) contrast(1.2) brightness(0.55)"></video></div>
     <div class="shade" style="background:linear-gradient(90deg,rgba(7,8,11,0.85) 0%,rgba(7,8,11,0.45) 55%,rgba(7,8,11,0.1) 100%)"></div>
     <div class="michi" id="c9j3" style="top:300px">
       <div class="qt">“金的を食らって、<br />5分では<em>何ともならない</em>”</div>
@@ -504,18 +507,18 @@ window.CINEMA = (function () {
 
   <!-- LIVE 決着 -->
   <div id="c9live2" class="scene grade-fight">
-    <div class="vw"><video id="vch0910" src="media/69_ota_finish_full.mp4" data-start="81.3" data-duration="21.5" data-track-index="10" data-media-start="0" muted playsinline></video></div>
+    <div class="vw"><video id="vch0911" src="media/69_ota_finish_full.mp4" data-start="81.3" data-duration="21.5" data-track-index="10" data-media-start="0" muted playsinline></video></div>
   </div>
 
   <!-- S8 TKOスタンプ -->
   <div id="c9s8" class="scene grade-fight">
-    <div class="vw"><video id="vch0911" src="media/48_unext_hl_r1_scramble.mp4" data-start="103.3" data-duration="5.1" data-track-index="11" data-media-start="0.4" muted playsinline style="filter:grayscale(1) contrast(1.3) brightness(0.5)"></video></div>
+    <div class="vw"><video id="vch0912" src="media/48_unext_hl_r1_scramble.mp4" data-start="103.3" data-duration="5.1" data-track-index="11" data-media-start="0.4" muted playsinline style="filter:grayscale(1) contrast(1.3) brightness(0.5)"></video></div>
     <div class="tko9" id="c9tko"><div class="big">TKO</div><div class="sm">ROUND 2 — 3:04 / パンチと膝</div></div>
   </div>
 
   <!-- S9 解説評価 -->
   <div id="c9s9" class="scene grade-fight">
-    <div class="vw"><video id="vch0912" src="media/96_ota_r1_pressure.mp4" data-start="108.4" data-duration="16.0" data-track-index="12" data-media-start="0.5" muted playsinline style="filter:saturate(0.85) contrast(1.12) brightness(0.65)"></video></div>
+    <div class="vw"><video id="vch0913" src="media/96_ota_r1_pressure.mp4" data-start="108.4" data-duration="16.0" data-track-index="12" data-media-start="0.5" muted playsinline style="filter:saturate(0.85) contrast(1.12) brightness(0.65)"></video></div>
     <div class="shade" style="background:linear-gradient(90deg,rgba(7,8,11,0.85) 0%,rgba(7,8,11,0.5) 55%,rgba(7,8,11,0.1) 100%)"></div>
     <div class="michi" id="c9j4" style="top:250px;width:1100px">
       <div class="qt">“打撃力が、今、強い。<br />グラップリングの力をつけていくと、<br /><em>怖い存在になる</em>”</div>
@@ -548,7 +551,7 @@ window.CINEMA = (function () {
   <div class="sub" id="sub_ch09_14">解説の言葉が、彼の現在地を言い当てている。</div>
   <div class="sub" id="sub_ch09_15">打撃力が、今、強い。グラップリングの力をつけていくと、怖い存在になる。</div>
   <div class="sub" id="sub_ch09_16">完成していないことが、そのまま怖さとして語られた。</div>
-  <div id="tag"><span class="t" id="tag1">広島</span></div>
+  <div id="tag"><span class="t" id="tag1">太田忍戦</span></div>
   <div id="series"><div class="av"><img src="media/profile_cutout.png" /></div><span class="no">No.56</span><span class="nm">イリスベク・ティレノフ</span></div>
   <div id="black"></div>
   <div id="flash"></div>

@@ -4,12 +4,12 @@
 <meta charset="UTF-8" />
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 <style>
-@font-face { font-family:"Dela","ZenBlack"; src: url("fonts/dela.woff2") format("woff2"); }
+@font-face { font-family: "Dela"; src: url("fonts/dela.woff2") format("woff2"); }
 @font-face { font-family: "ZenBlack"; src: url("fonts/zenblack.woff2") format("woff2"); }
 @font-face { font-family: "ZenBold"; src: url("fonts/zenbold.woff2") format("woff2"); }
 @font-face { font-family: "SerifJP"; src: url("fonts/serif.woff2") format("woff2"); font-weight: 200 900; }
-@font-face { font-family:"Anton","ZenBlack"; src: url("fonts/anton.woff2") format("woff2"); }
-@font-face { font-family:"Oswald","ZenBold"; src: url("fonts/oswald.woff2") format("woff2"); font-weight: 200 700; }
+@font-face { font-family: "Anton"; src: url("fonts/anton.woff2") format("woff2"); }
+@font-face { font-family: "Oswald"; src: url("fonts/oswald.woff2") format("woff2"); font-weight: 200 700; }
 
 :root {
   --bg: #07080b; --ink: #f4f1ea; --gold: #f2c230; --gold-deep: #c98e12;
@@ -30,10 +30,13 @@ body { font-family: "ZenBold", sans-serif; color: #f4f1ea; }
 .shade { position: absolute; inset: 0; pointer-events: none; }
 
 /* ------------------------------------------------ persistent chrome */
-#tag { position: absolute; left: 0; top: 34px; z-index: 50; opacity: 0; height: 64px; padding: 0 30px 0 34px;
-  background: #f2c230; color: #07080b; display: flex; align-items: center; overflow: hidden; }
-#tag .t { font-family:"Oswald","ZenBold"; font-weight: 700; font-size: 38px; letter-spacing: 3px; line-height: 64px; }
-#tag .t2 { font-family: "ZenBlack"; font-size: 36px; letter-spacing: 4px; position: absolute; left: 34px; top: 0; line-height: 64px; opacity: 0; }
+#tag { position: absolute; left: 0; top: 36px; z-index: 50; opacity: 0; display: flex; align-items: stretch;
+  filter: drop-shadow(0 4px 14px rgba(0,0,0,0.55)); }
+#tag .bar { width: 7px; background: linear-gradient(180deg, #f2c230, #c99416); }
+#tag .bd { background: rgba(7,8,11,0.84); padding: 9px 30px 11px 18px;
+  border-top: 1px solid rgba(242,194,48,0.4); border-bottom: 1px solid rgba(242,194,48,0.4); }
+#tag .no { font-family:"Oswald","ZenBold"; font-weight: 600; font-size: 17px; letter-spacing: 6px; color: #f2c230; line-height: 1; }
+#tag .t { font-family: "ZenBlack"; font-size: 31px; letter-spacing: 3px; color: #fff; line-height: 1.15; margin-top: 4px; display: block; }
 #series { position: absolute; right: 40px; top: 30px; z-index: 50; opacity: 0; display: flex; align-items: center; gap: 16px; }
 #series .av { width: 70px; height: 70px; border-radius: 50%; overflow: hidden; border: 3px solid #f2c230;
   background: radial-gradient(circle at 50% 40%, #b0161c, #3a0507); }
@@ -408,7 +411,7 @@ window.CINEMA = (function () {
   return { setup: setup };
 })();
 </script>
-<!--TAG:百万回-->
+<!--TAG:100万回再生の試合-->
 <style>
 .views { position: absolute; inset: 0; z-index: 7; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding-bottom: 110px; }
 .views .n { font-family:"Anton","ZenBlack"; font-size: 300px; line-height: 0.95; color: #fff; letter-spacing: 4px; font-variant-numeric: tabular-nums; text-shadow: 0 0 70px rgba(242,194,48,0.55), 0 10px 0 #000; }
@@ -431,10 +434,18 @@ window.CINEMA = (function () {
 .sensa { position: absolute; left: 50%; top: 46%; transform: translate(-50%,-50%) rotate(-7deg); z-index: 8; font-family:"Dela","ZenBlack"; font-size: 120px; color: #e1262d; border: 11px solid #e1262d; padding: 4px 36px; background: rgba(7,8,11,0.4); white-space: nowrap; }
 .sensa small { display: block; text-align: center; font-size: 36px; color: #fff; border: 0; font-family:"Oswald","ZenBold"; letter-spacing: 6px; }
 #c6thumb .ph2 { position: absolute; inset: 0; background: url("media/83_oct66_thumbnail.jpg") center / cover; }
+.temi { position: absolute; left: 100px; top: 280px; z-index: 6; }
+.temi .k { font-family: "ZenBlack"; font-size: 40px; color: #f2c230; -webkit-text-stroke: 7px #000; paint-order: stroke fill; }
+.temi .n { font-family: "SerifJP"; font-weight: 900; font-size: 108px; color: #fff; -webkit-text-stroke: 12px #000; paint-order: stroke fill; letter-spacing: 2px; margin-top: 6px; }
+.temi .s { font-family:"Oswald","ZenBold"; font-weight: 600; font-size: 30px; letter-spacing: 5px; color: #fff; background: rgba(7,8,11,0.78); padding: 8px 20px; border-left: 6px solid #e1262d; margin-top: 14px; display: inline-block; }
+.judge30 { position: absolute; right: 120px; top: 300px; z-index: 6; text-align: right; }
+.judge30 .n3 { font-family:"Anton","ZenBlack"; font-size: 220px; line-height: 0.95; color: #fff; text-shadow: 0 8px 0 #000; letter-spacing: 4px; }
+.judge30 .n3 small { font-size: 120px; color: #f2c230; vertical-align: 18px; }
+.judge30 .w { font-family: "ZenBlack"; font-size: 40px; letter-spacing: 4px; color: #cfe3ee; -webkit-text-stroke: 7px #000; paint-order: stroke fill; margin-top: 10px; }
 </style>
 </head>
 <body>
-<div id="root" data-composition-id="main" data-width="1920" data-height="1080" data-start="0" data-duration="132.17">
+<div id="root" data-composition-id="main" data-width="1920" data-height="1080" data-start="0" data-duration="147.87">
 <div id="cam">
 
   <!-- S1 LED名前 -->
@@ -446,7 +457,7 @@ window.CINEMA = (function () {
   <div id="c6s2" class="scene grade-fight">
     <div class="vw">
       <video id="vch0602" src="media/91_oct66_arena_hype.mp4" data-start="4.1" data-duration="8.0" data-track-index="2" data-media-start="0.4" muted playsinline></video>
-      <video id="vch0603" src="media/51_octagon_batyrbek_walkout_cage_p2.mp4" data-start="12.1" data-duration="4.6" data-track-index="3" data-media-start="0.2" muted playsinline></video>
+      <video id="vch0603" src="media/x51_oct_walkout.mp4" data-start="12.1" data-duration="4.6" data-track-index="3" data-media-start="0.2" muted playsinline></video>
     </div>
     <div class="shade" style="background:linear-gradient(90deg,rgba(7,8,11,0.82) 0%,rgba(7,8,11,0.35) 55%,rgba(7,8,11,0) 100%)"></div>
     <div class="slate" style="top:300px">
@@ -460,13 +471,13 @@ window.CINEMA = (function () {
 
   <!-- S3 入場画面＝肩書きなし -->
   <div id="c6s3" class="scene grade-fight">
-    <div class="vw"><video id="vch0604" src="media/11_octagon_profile_bishkek_p2.mp4" data-start="16.7" data-duration="8.6" data-track-index="4" data-media-start="0.2" muted playsinline></video></div>
+    <div class="vw"><video id="vch0604" src="media/x11_oct_profile.mp4" data-start="16.7" data-duration="8.6" data-track-index="4" data-media-start="0.2" muted playsinline></video></div>
     <div class="shade" style="background:linear-gradient(180deg,rgba(7,8,11,0.4) 0%,rgba(7,8,11,0) 45%,rgba(7,8,11,0.55) 100%)"></div>
   </div>
 
   <!-- S4 対戦数字 -->
   <div id="c6s4" class="scene grade-fight">
-    <div class="vw"><video id="vch0605" src="media/50_octagon_batyrbek_exchange_p2.mp4" data-start="25.3" data-duration="8.2" data-track-index="5" data-media-start="0.6" muted playsinline></video></div>
+    <div class="vw"><video id="vch0605" src="media/x50_oct_exchange.mp4" data-start="25.3" data-duration="8.2" data-track-index="5" data-media-start="0.6" muted playsinline></video></div>
     <div class="shade" style="background:linear-gradient(90deg,rgba(7,8,11,0) 0%,rgba(7,8,11,0.3) 50%,rgba(7,8,11,0.85) 100%)"></div>
     <div class="cmpnum" id="c6vs">
       <div class="row" id="c6v1">31歳 <b>7-2</b> バトゥルベク</div>
@@ -487,7 +498,7 @@ window.CINEMA = (function () {
 
   <!-- S6 OCT71 -->
   <div id="c6s6" class="scene grade-fight">
-    <div class="vw"><video id="vch0607" src="media/15_octagon_madiev_name_graphic_p4.mp4" data-start="59.58" data-duration="8.4" data-track-index="7" data-media-start="0.2" muted playsinline></video></div>
+    <div class="vw"><video id="vch0607" src="media/x15_oct71_super.mp4" data-start="59.58" data-duration="8.4" data-track-index="7" data-media-start="0.2" muted playsinline></video></div>
     <div class="shade" style="background:linear-gradient(180deg,rgba(7,8,11,0.45) 0%,rgba(7,8,11,0) 50%,rgba(7,8,11,0.5) 100%)"></div>
     <div class="slate" style="top:620px">
       <div class="ev" id="c6ev2" style="font-size:40px;letter-spacing:10px">2025.04.19 — OCTAGON 71 / vs サイムミン・マディエフ</div>
@@ -514,9 +525,36 @@ window.CINEMA = (function () {
     <div class="shade" style="background:linear-gradient(180deg,rgba(7,8,11,0.4) 0%,rgba(7,8,11,0) 50%,rgba(7,8,11,0.5) 100%)"></div>
   </div>
 
+
+  <!-- S8b テミロフ紹介 -->
+  <div id="c6s8b" class="scene grade-fight">
+    <div class="vw"><video id="vch0611" src="media/x97_temirov_super.mp4" data-start="99.98" data-duration="4.97" data-track-index="13" data-media-start="0.3" muted playsinline></video></div>
+    <div class="shade" style="background:linear-gradient(90deg,rgba(7,8,11,0.8) 0%,rgba(7,8,11,0.35) 55%,rgba(7,8,11,0) 100%)"></div>
+    <div class="temi" id="c6temi">
+      <div class="k" id="c6tmk">OCTAGON 79 — この日の相手</div>
+      <div class="n" id="c6tmn">アジズベク・テミロフ</div>
+    </div>
+  </div>
+
+  <!-- S8c テミロフのRIZIN KO -->
+  <div id="c6s8c" class="scene grade-fight">
+    <div class="vw"><video id="vch0612" src="media/x98_temirov_fukuda_ko.mp4" data-start="104.95" data-duration="5.45" data-track-index="14" data-media-start="0.2" muted playsinline></video></div>
+    <div class="shade" style="background:linear-gradient(180deg,rgba(7,8,11,0.45) 0%,rgba(7,8,11,0) 50%,rgba(7,8,11,0.55) 100%)"></div>
+    <div class="temi" id="c6temi2" style="top:170px">
+      <div class="s" id="c6tms">2026.04.12 RIZIN LANDMARK 13 — 福田龍彌を 2R KO</div>
+    </div>
+  </div>
+
+  <!-- S8d 3-0 -->
+  <div id="c6s8d" class="scene grade-fight">
+    <div class="vw"><video id="vch0613" src="media/x99_oct79_decision.mp4" data-start="110.4" data-duration="5.27" data-track-index="15" data-media-start="0.3" muted playsinline></video></div>
+    <div class="shade" style="background:linear-gradient(90deg,rgba(7,8,11,0) 0%,rgba(7,8,11,0.25) 50%,rgba(7,8,11,0.8) 100%)"></div>
+    <div class="judge30" id="c6j30"><div class="n3">3<small>&ndash;</small>0</div><div class="w">ジャッジ3者 — ティレノフ</div></div>
+  </div>
+
   <!-- S9 比較バー -->
   <div id="c6s9" class="scene grade-fight">
-    <div class="vw"><video id="vch0611" src="media/73_oct79_kalpak_celebr_p2.mp4" data-start="99.98" data-duration="9.1" data-track-index="11" data-media-start="0.3" muted playsinline style="filter:saturate(0.7) contrast(1.15) brightness(0.5)"></video></div>
+    <div class="vw"><video id="vch0614" src="media/x73_oct79_celebr.mp4" data-start="115.67" data-duration="9.11" data-track-index="11" data-media-start="0.3" muted playsinline style="filter:saturate(0.7) contrast(1.15) brightness(0.5)"></video></div>
     <div class="shade" style="background:rgba(7,8,11,0.45)"></div>
     <div class="cmpbar" id="c6bars">
       <div class="r"><span class="lb">OCTAGON 66</span><i style="width:620px"></i><span class="v">102万</span></div>
@@ -528,7 +566,7 @@ window.CINEMA = (function () {
 
   <!-- S10 理由→サムネ -->
   <div id="c6s10" class="scene grade-fight">
-    <div class="vw"><video id="vch0612" src="media/53_mangu_flag_flex_p2.mp4" data-start="109.08" data-duration="10.0" data-track-index="12" data-media-start="0.3" muted playsinline></video></div>
+    <div class="vw"><video id="vch0615" src="media/x53_mangu_flex.mp4" data-start="124.78" data-duration="10.02" data-track-index="12" data-media-start="0.3" muted playsinline></video></div>
     <div class="shade" style="background:linear-gradient(180deg,rgba(7,8,11,0.5) 0%,rgba(7,8,11,0.05) 50%,rgba(7,8,11,0.55) 100%)"></div>
   </div>
   <div id="c6thumb" class="scene">
@@ -558,12 +596,15 @@ window.CINEMA = (function () {
   <div class="sub" id="sub_ch06_10">3ラウンド、3分2秒。</div>
   <div class="sub" id="sub_ch06_11">彼のキャリアで今も一番見られている、111万回の試合だ。</div>
   <div class="sub" id="sub_ch06_12">9月のOCTAGON 79は、初めて判定までもつれた。それでも、3対0。</div>
+  <div class="sub" id="sub_ch06_12b">このときの相手を、日本のファンは知っている。アジズベク・テミロフ。</div>
+  <div class="sub" id="sub_ch06_12c">翌年の春、RIZINのケージで、福田龍彌を一撃で沈める男だ。</div>
+  <div class="sub" id="sub_ch06_12d">ティレノフは、その男から、ジャッジ3者の票をすべて取り切っている。</div>
   <div class="sub" id="sub_ch06_13">OCTAGONでの3戦。102万。111万。58万。合計で、270万回を超える。</div>
   <div class="sub" id="sub_ch06_14">なぜ、これほど見られたのか。</div>
   <div class="sub" id="sub_ch06_15">OCTAGONはカザフスタンの団体だ。彼の試合は毎回、キルギス人が他国の選手に挑む形になった。</div>
   <div class="sub" id="sub_ch06_16">カザフ、ウズベク、タジク。コメント欄には、中央アジア中から人が集まる。</div>
   <div class="sub" id="sub_ch06_17">公式もその構図で売った。バトゥルベク戦のタイトルは、キルギスの衝撃。</div>
-  <div id="tag"><span class="t" id="tag1">百万回</span></div>
+  <div id="tag"><span class="t" id="tag1">100万回再生の試合</span></div>
   <div id="series"><div class="av"><img src="media/profile_cutout.png" /></div><span class="no">No.56</span><span class="nm">イリスベク・ティレノフ</span></div>
   <div id="black"></div>
   <div id="flash"></div>
@@ -571,18 +612,19 @@ window.CINEMA = (function () {
   <div class="srclab" id="src_a">出典: OCTAGON TV</div>
   <div class="srclab" id="src_b">出典: Mangu Professional League</div>
   <div class="srclab" id="src_c">出典: OCTAGON TV</div>
+  <div class="srclab" id="src_r">出典: RIZIN FIGHTING FEDERATION</div>
 </div>
 
 <script>
 (function () {
   window.__timelines = window.__timelines || {};
   var tl = gsap.timeline({ paused: true });
-  var D = 132.17;
-  var NARR = [{"id": "ch06_01", "t": 1.1, "dur": 2.44, "text": "ここから、彼を見る人の数が変わる。"}, {"id": "ch06_02", "t": 4.14, "dur": 7.373, "text": "二千二十四年、十一月二十二日。カザフスタンの、アルマトイ。オクタゴン、六十六。", "disp": "2024年11月22日。カザフスタンの、アルマトイ。OCTAGON 66。"}, {"id": "ch06_03", "t": 12.113, "dur": 4.088, "text": "オクタゴンは、中央アジア最大級の総合格闘技団体だ。", "disp": "OCTAGONは、中央アジア最大級の総合格闘技団体だ。"}, {"id": "ch06_04", "t": 16.701, "dur": 4.59, "text": "入場の画面に出たのは、拠点と、エスエヌエスのアカウントだけ。"}, {"id": "ch06_05", "t": 21.691, "dur": 2.969, "text": "肩書きで売る段階には、まだ無い選手だった。"}, {"id": "ch06_06", "t": 25.26, "dur": 7.06, "text": "相手のアクトレ・バトゥルベクは三十一歳、七勝二敗。こちらは二十一歳、四勝一敗。", "disp": "相手のアクトレ・バトゥルベクは31歳、7勝2敗。こちらは21歳、4勝1敗。"}, {"id": "ch06_07", "t": 51.47, "dur": 3.107, "text": "二ラウンド、三分四秒。ティーケーオー。", "disp": "2ラウンド、3分4秒。TKO。"}, {"id": "ch06_08", "t": 55.177, "dur": 3.6, "text": "この試合の動画が、百二万回、再生される。", "disp": "この試合の動画が、102万回、再生される。"}, {"id": "ch06_09", "t": 59.577, "dur": 7.278, "text": "翌年の四月。オクタゴン、七十一。相手はタジキスタンの、サイムミン・マディエフ。", "disp": "翌年の4月。OCTAGON 71。相手はタジキスタンの、サイムミン・マディエフ。"}, {"id": "ch06_10", "t": 86.005, "dur": 2.12, "text": "三ラウンド、三分二秒。", "disp": "3ラウンド、3分2秒。"}, {"id": "ch06_11", "t": 88.525, "dur": 4.398, "text": "彼のキャリアで今も一番見られている、百十一万回の試合だ。", "disp": "彼のキャリアで今も一番見られている、111万回の試合だ。"}, {"id": "ch06_12", "t": 93.623, "dur": 5.657, "text": "九月のオクタゴン七十九は、初めて判定までもつれた。それでも、三対ゼロ。", "disp": "9月のOCTAGON 79は、初めて判定までもつれた。それでも、3対0。"}, {"id": "ch06_13", "t": 99.98, "dur": 8.4, "text": "オクタゴンでの三戦。百二万。百十一万。五十八万。合計で、二百七十万回を超える。", "disp": "OCTAGONでの3戦。102万。111万。58万。合計で、270万回を超える。"}, {"id": "ch06_14", "t": 109.08, "dur": 2.157, "text": "なぜ、これほど見られたのか。"}, {"id": "ch06_15", "t": 111.837, "dur": 6.765, "text": "オクタゴンはカザフスタンの団体だ。彼の試合は毎回、キルギス人が他国の選手に挑む形になった。", "disp": "OCTAGONはカザフスタンの団体だ。彼の試合は毎回、キルギス人が他国の選手に挑む形になった。"}, {"id": "ch06_16", "t": 119.102, "dur": 5.89, "text": "カザフ、ウズベク、タジク。コメント欄には、中央アジア中から人が集まる。"}, {"id": "ch06_17", "t": 125.492, "dur": 4.878, "text": "公式もその構図で売った。バトゥルベク戦のタイトルは、キルギスの衝撃。"}];
+  var D = 147.87;
+  var NARR = [{"id": "ch06_01", "t": 1.1, "dur": 2.44, "text": "ここから、彼を見る人の数が変わる。"}, {"id": "ch06_02", "t": 4.14, "dur": 7.373, "text": "二千二十四年、十一月二十二日。カザフスタンの、アルマトイ。オクタゴン、六十六。", "disp": "2024年11月22日。カザフスタンの、アルマトイ。OCTAGON 66。"}, {"id": "ch06_03", "t": 12.113, "dur": 4.088, "text": "オクタゴンは、中央アジア最大級の総合格闘技団体だ。", "disp": "OCTAGONは、中央アジア最大級の総合格闘技団体だ。"}, {"id": "ch06_04", "t": 16.701, "dur": 4.59, "text": "入場の画面に出たのは、拠点と、エスエヌエスのアカウントだけ。"}, {"id": "ch06_05", "t": 21.691, "dur": 2.969, "text": "肩書きで売る段階には、まだ無い選手だった。"}, {"id": "ch06_06", "t": 25.26, "dur": 7.06, "text": "相手のアクトレ・バトゥルベクは三十一歳、七勝二敗。こちらは二十一歳、四勝一敗。", "disp": "相手のアクトレ・バトゥルベクは31歳、7勝2敗。こちらは21歳、4勝1敗。"}, {"id": "ch06_07", "t": 51.47, "dur": 3.107, "text": "二ラウンド、三分四秒。ティーケーオー。", "disp": "2ラウンド、3分4秒。TKO。"}, {"id": "ch06_08", "t": 55.177, "dur": 3.6, "text": "この試合の動画が、百二万回、再生される。", "disp": "この試合の動画が、102万回、再生される。"}, {"id": "ch06_09", "t": 59.577, "dur": 7.278, "text": "翌年の四月。オクタゴン、七十一。相手はタジキスタンの、サイムミン・マディエフ。", "disp": "翌年の4月。OCTAGON 71。相手はタジキスタンの、サイムミン・マディエフ。"}, {"id": "ch06_10", "t": 86.005, "dur": 2.12, "text": "三ラウンド、三分二秒。", "disp": "3ラウンド、3分2秒。"}, {"id": "ch06_11", "t": 88.525, "dur": 4.398, "text": "彼のキャリアで今も一番見られている、百十一万回の試合だ。", "disp": "彼のキャリアで今も一番見られている、111万回の試合だ。"}, {"id": "ch06_12", "t": 93.623, "dur": 5.657, "text": "九月のオクタゴン七十九は、初めて判定までもつれた。それでも、三対ゼロ。", "disp": "9月のOCTAGON 79は、初めて判定までもつれた。それでも、3対0。"}, {"id": "ch06_12b", "t": 99.98, "dur": 4.366, "text": "このときの相手を、にほんのファンは知っている。アジズベクテミロフ。", "disp": "このときの相手を、日本のファンは知っている。アジズベク・テミロフ。"}, {"id": "ch06_12c", "t": 104.946, "dur": 4.857, "text": "よくねんのはる、ライジンのケージで、ふくだりゅうやを一撃で沈める男だ。", "disp": "翌年の春、RIZINのケージで、福田龍彌を一撃で沈める男だ。"}, {"id": "ch06_12d", "t": 110.403, "dur": 4.473, "text": "ティレノフは、その男から、ジャッジさんしゃの票をすべて取り切っている。", "disp": "ティレノフは、その男から、ジャッジ3者の票をすべて取り切っている。"}, {"id": "ch06_13", "t": 115.675, "dur": 8.4, "text": "オクタゴンでの三戦。百二万。百十一万。五十八万。合計で、二百七十万回を超える。", "disp": "OCTAGONでの3戦。102万。111万。58万。合計で、270万回を超える。"}, {"id": "ch06_14", "t": 124.775, "dur": 2.157, "text": "なぜ、これほど見られたのか。"}, {"id": "ch06_15", "t": 127.532, "dur": 6.765, "text": "オクタゴンはカザフスタンの団体だ。彼の試合は毎回、キルギス人が他国の選手に挑む形になった。", "disp": "OCTAGONはカザフスタンの団体だ。彼の試合は毎回、キルギス人が他国の選手に挑む形になった。"}, {"id": "ch06_16", "t": 134.797, "dur": 5.89, "text": "カザフ、ウズベク、タジク。コメント欄には、中央アジア中から人が集まる。"}, {"id": "ch06_17", "t": 141.187, "dur": 4.878, "text": "公式もその構図で売った。バトゥルベク戦のタイトルは、キルギスの衝撃。"}];
   var C = CINEMA.setup(tl, D, 2606);
   C.chrome();
   C.subsFrom(NARR);
-  C.srcLabels([["a", 0.5, 109.08], ["b", 109.08, 119.1], ["c", 119.1, D - 0.6]]);
+  C.srcLabels([["a", 0.5, 104.95], ["r", 104.95, 110.4], ["a", 110.4, 124.78], ["b", 124.78, 134.8], ["c", 134.8, D - 0.6]]);
 
   tl.fromTo("#black", { opacity: 1 }, { opacity: 0, duration: 0.6, ease: "sine.inOut" }, 0.1);
   tl.fromTo("#c6s1 .vw", { scale: 1.08 }, { scale: 1.0, duration: 4.1, ease: "none" }, 0);
@@ -614,6 +656,7 @@ window.CINEMA = (function () {
   tl.fromTo("#c6tko .a", { opacity: 0, clipPath: "inset(0 100% 0 0)" }, { opacity: 1, clipPath: "inset(0 0% 0 0)", duration: 0.6, ease: "power3.inOut" }, 51.8);
   tl.fromTo("#c6tko .b", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "sine.out" }, 52.3);
   tl.fromTo("#c6view1", { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.4, ease: "power2.out" }, 55.0);
+  tl.to("#c6tko", { opacity: 0, duration: 0.3, ease: "sine.in" }, 54.55);
   C.bigCounter("#c6vn1", 1020000, 55.2, 1.2);
   C.shake(56.4, 0.25, 12); C.flash(56.4, 0.3, 0.2);
   // S6 OCT71
@@ -629,26 +672,44 @@ window.CINEMA = (function () {
   tl.fromTo("#c6tko2 .a", { opacity: 0, clipPath: "inset(0 100% 0 0)" }, { opacity: 1, clipPath: "inset(0 0% 0 0)", duration: 0.6, ease: "power3.inOut" }, 86.3);
   tl.fromTo("#c6tko2 .b", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "sine.out" }, 86.8);
   tl.fromTo("#c6view2", { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.4, ease: "power2.out" }, 88.5);
+  tl.to("#c6tko2", { opacity: 0, duration: 0.3, ease: "sine.in" }, 88.05);
   C.bigCounter("#c6vn2", 1110000, 88.7, 1.2);
   C.shake(89.9, 0.25, 12); C.flash(89.9, 0.3, 0.2);
   // S8 OCT79
   C.whip("#c6s7", "#c6s8", 93.62, 1);
   C.flash(97.02, 0.3, 0.15);
+  // S8b テミロフ紹介
+  C.cut("#c6s8", "#c6s8b", 99.98);
+  tl.fromTo("#c6s8b .vw", { scale: 1.05 }, { scale: 1.0, duration: 4.97, ease: "none" }, 99.98);
+  tl.fromTo("#c6tmk", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 100.9);
+  var tmn = C.splitChars(document.getElementById("c6tmn"));
+  tl.fromTo(tmn, { opacity: 0, scale: 1.7, filter: "blur(10px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.35, ease: "expo.out", stagger: 0.06 }, 101.6);
+  C.shake(101.9, 0.2, 10);
+  // S8c RIZIN KO
+  C.cut("#c6s8b", "#c6s8c", 104.95);
+  tl.fromTo("#c6s8c .vw", { scale: 1.0 }, { scale: 1.06, duration: 5.45, ease: "none" }, 104.95);
+  tl.fromTo("#c6tms", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 105.6);
+  // S8d 3-0
+  C.cut("#c6s8c", "#c6s8d", 110.4);
+  tl.fromTo("#c6s8d .vw", { scale: 1.04 }, { scale: 1.0, duration: 5.27, ease: "none" }, 110.4);
+  tl.fromTo("#c6j30 .n3", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power4.in", immediateRender: false }, 111.3);
+  C.shake(111.6, 0.25, 12); C.flash(111.6, 0.3, 0.2);
+  tl.fromTo("#c6j30 .w", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 112.0);
   // S9 比較バー
-  C.cut("#c6s8", "#c6s9", 99.98);
-  tl.fromTo("#c6s9 .vw", { scale: 1.0 }, { scale: 1.06, duration: 9.1, ease: "none" }, 99.98);
-  tl.fromTo("#c6bars .r", { opacity: 0, x: -36 }, { opacity: 1, x: 0, duration: 0.35, ease: "power2.out", stagger: 0.55 }, 100.6);
-  tl.fromTo("#c6bars .r i", { scaleX: 0 }, { scaleX: 1, duration: 0.55, ease: "expo.out", stagger: 0.55 }, 100.7);
+  C.cut("#c6s8d", "#c6s9", 115.67);
+  tl.fromTo("#c6s9 .vw", { scale: 1.0 }, { scale: 1.06, duration: 9.11, ease: "none" }, 115.67);
+  tl.fromTo("#c6bars .r", { opacity: 0, x: -36 }, { opacity: 1, x: 0, duration: 0.35, ease: "power2.out", stagger: 0.55 }, 116.3);
+  tl.fromTo("#c6bars .r i", { scaleX: 0 }, { scaleX: 1, duration: 0.55, ease: "expo.out", stagger: 0.55 }, 116.4);
   // S10 理由
-  C.cut("#c6s9", "#c6s10", 109.08);
-  tl.fromTo("#c6s10 .vw", { scale: 1.0 }, { scale: 1.09, duration: 10.0, ease: "none" }, 109.08);
+  C.cut("#c6s9", "#c6s10", 124.78);
+  tl.fromTo("#c6s10 .vw", { scale: 1.0 }, { scale: 1.09, duration: 10.02, ease: "none" }, 124.78);
   // サムネ
-  C.glitch(118.9, 0.3, null);
-  C.cut("#c6s10", "#c6thumb", 119.1);
-  tl.fromTo("#c6ph", { scale: 1.12 }, { scale: 1.02, duration: 13.0, ease: "none" }, 119.1);
+  C.glitch(134.6, 0.3, null);
+  C.cut("#c6s10", "#c6thumb", 134.8);
+  tl.fromTo("#c6ph", { scale: 1.12 }, { scale: 1.02, duration: 13.0, ease: "none" }, 134.8);
   tl.set("#c6sensa", { opacity: 0 }, 0);
-  tl.fromTo("#c6sensa", { opacity: 0, scale: 2.6, rotation: -22 }, { opacity: 1, scale: 1, rotation: -7, duration: 0.22, ease: "power4.in", immediateRender: false }, 126.0);
-  C.shake(126.22, 0.35, 20); C.flash(126.22, 0.4, 0.2);
+  tl.fromTo("#c6sensa", { opacity: 0, scale: 2.6, rotation: -22 }, { opacity: 1, scale: 1, rotation: -7, duration: 0.22, ease: "power4.in", immediateRender: false }, 141.7);
+  C.shake(141.92, 0.35, 20); C.flash(141.92, 0.4, 0.2);
   tl.to("#black", { opacity: 1, duration: 0.5, ease: "power1.in" }, D - 0.55);
 
   window.__timelines["main"] = tl;

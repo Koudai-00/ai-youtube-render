@@ -4,12 +4,12 @@
 <meta charset="UTF-8" />
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 <style>
-@font-face { font-family:"Dela","ZenBlack"; src: url("fonts/dela.woff2") format("woff2"); }
+@font-face { font-family: "Dela"; src: url("fonts/dela.woff2") format("woff2"); }
 @font-face { font-family: "ZenBlack"; src: url("fonts/zenblack.woff2") format("woff2"); }
 @font-face { font-family: "ZenBold"; src: url("fonts/zenbold.woff2") format("woff2"); }
 @font-face { font-family: "SerifJP"; src: url("fonts/serif.woff2") format("woff2"); font-weight: 200 900; }
-@font-face { font-family:"Anton","ZenBlack"; src: url("fonts/anton.woff2") format("woff2"); }
-@font-face { font-family:"Oswald","ZenBold"; src: url("fonts/oswald.woff2") format("woff2"); font-weight: 200 700; }
+@font-face { font-family: "Anton"; src: url("fonts/anton.woff2") format("woff2"); }
+@font-face { font-family: "Oswald"; src: url("fonts/oswald.woff2") format("woff2"); font-weight: 200 700; }
 
 :root {
   --bg: #07080b; --ink: #f4f1ea; --gold: #f2c230; --gold-deep: #c98e12;
@@ -30,10 +30,13 @@ body { font-family: "ZenBold", sans-serif; color: #f4f1ea; }
 .shade { position: absolute; inset: 0; pointer-events: none; }
 
 /* ------------------------------------------------ persistent chrome */
-#tag { position: absolute; left: 0; top: 34px; z-index: 50; opacity: 0; height: 64px; padding: 0 30px 0 34px;
-  background: #f2c230; color: #07080b; display: flex; align-items: center; overflow: hidden; }
-#tag .t { font-family:"Oswald","ZenBold"; font-weight: 700; font-size: 38px; letter-spacing: 3px; line-height: 64px; }
-#tag .t2 { font-family: "ZenBlack"; font-size: 36px; letter-spacing: 4px; position: absolute; left: 34px; top: 0; line-height: 64px; opacity: 0; }
+#tag { position: absolute; left: 0; top: 36px; z-index: 50; opacity: 0; display: flex; align-items: stretch;
+  filter: drop-shadow(0 4px 14px rgba(0,0,0,0.55)); }
+#tag .bar { width: 7px; background: linear-gradient(180deg, #f2c230, #c99416); }
+#tag .bd { background: rgba(7,8,11,0.84); padding: 9px 30px 11px 18px;
+  border-top: 1px solid rgba(242,194,48,0.4); border-bottom: 1px solid rgba(242,194,48,0.4); }
+#tag .no { font-family:"Oswald","ZenBold"; font-weight: 600; font-size: 17px; letter-spacing: 6px; color: #f2c230; line-height: 1; }
+#tag .t { font-family: "ZenBlack"; font-size: 31px; letter-spacing: 3px; color: #fff; line-height: 1.15; margin-top: 4px; display: block; }
 #series { position: absolute; right: 40px; top: 30px; z-index: 50; opacity: 0; display: flex; align-items: center; gap: 16px; }
 #series .av { width: 70px; height: 70px; border-radius: 50%; overflow: hidden; border: 3px solid #f2c230;
   background: radial-gradient(circle at 50% 40%, #b0161c, #3a0507); }
@@ -408,7 +411,7 @@ window.CINEMA = (function () {
   return { setup: setup };
 })();
 </script>
-<!--TAG:未完成-->
+<!--TAG:未完成の強さ-->
 <style>
 .recap { position: absolute; left: 110px; top: 220px; z-index: 6; display: flex; flex-direction: column; gap: 22px; }
 .recap .dots2 { display: flex; gap: 20px; }
@@ -434,7 +437,7 @@ window.CINEMA = (function () {
 
   <!-- S1 戦績リキャップ -->
   <div id="e1s1" class="scene" style="opacity:1;background:#07080b">
-    <div class="vw" style="opacity:0.3"><video id="vend01" src="media/13_octagon_headkick_p4.mp4" data-start="0" data-duration="14.3" data-track-index="1" data-media-start="0.4" muted playsinline style="filter:grayscale(1) contrast(1.3) brightness(0.5)"></video></div>
+    <div class="vw" style="opacity:0.3"><video id="vend01" src="media/x13_oct_headkick.mp4" data-start="0" data-duration="14.3" data-track-index="1" data-media-start="0.4" muted playsinline style="filter:grayscale(1) contrast(1.3) brightness(0.5)"></video></div>
     <div class="recap" id="e1rc">
       <div class="dots2" id="e1d"><b>W</b><b class="l">L</b><b>W</b><b>W</b><b>W</b><b>W</b><b>W</b><b>W</b><b>W</b></div>
       <div class="t1" id="e1t1">まだ<em>9戦</em>。デビューから<em>4年未満</em></div>
@@ -444,20 +447,20 @@ window.CINEMA = (function () {
 
   <!-- S2 未完成 -->
   <div id="e1s2" class="scene">
-    <div class="vw"><video id="vend02" src="media/40_broll_snowleopard_gopro_closeup_p4.mp4" data-start="14.3" data-duration="10.7" data-track-index="2" data-media-start="0.4" muted playsinline style="filter:saturate(0.6) contrast(1.18) brightness(0.72)"></video></div>
+    <div class="vw"><video id="vend02" src="media/x40_leopard_closeup.mp4" data-start="14.3" data-duration="10.7" data-track-index="2" data-media-start="0.4" muted playsinline style="filter:saturate(0.6) contrast(1.18) brightness(0.72)"></video></div>
     <div class="shade" style="background:radial-gradient(ellipse 60% 70% at 50% 45%,rgba(7,8,11,0.05) 30%,rgba(7,8,11,0.72) 100%)"></div>
     <div class="mikan" id="e1mk"><div class="t"><em>未完成</em>のまま、勝ち続ける</div></div>
   </div>
 
   <!-- S3 背中 -->
   <div id="e1s3" class="scene grade-fight">
-    <div class="vw"><video id="vend03" src="media/47_ota_shaidulaev_ihlas_kalpak_p2.mp4" data-start="25.0" data-duration="6.0" data-track-index="3" data-media-start="0.2" muted playsinline></video></div>
+    <div class="vw"><video id="vend03" src="media/x47_shaidullaev_flag.mp4" data-start="25.0" data-duration="6.0" data-track-index="3" data-media-start="0.2" muted playsinline></video></div>
     <div class="shade" style="background:linear-gradient(180deg,rgba(7,8,11,0.5) 0%,rgba(7,8,11,0.05) 50%,rgba(7,8,11,0.55) 100%)"></div>
   </div>
 
   <!-- S4 11.8 -->
   <div id="e1s4" class="scene" style="background:#050608">
-    <div class="vw" style="opacity:0.4"><video id="vend04" src="media/24_mangu_kalpak_scream_promo_p2.mp4" data-start="31.0" data-duration="6.8" data-track-index="4" data-media-start="0.5" muted playsinline style="filter:saturate(0.8) brightness(0.6)"></video></div>
+    <div class="vw" style="opacity:0.4"><video id="vend04" src="media/x24_kalpak_scream.mp4" data-start="31.0" data-duration="6.8" data-track-index="4" data-media-start="0.5" muted playsinline style="filter:saturate(0.8) brightness(0.6)"></video></div>
     <div class="last" id="e1dt"><div class="d">11.8<small>SUN</small></div><div class="v">RIZIN.55 — 日本で二度目のケージへ</div></div>
   </div>
 
@@ -485,7 +488,7 @@ window.CINEMA = (function () {
   <div class="sub" id="sub_end_07">11月8日。千葉。</div>
   <div class="sub" id="sub_end_08">日本で2度目のケージに、雪豹が入る。</div>
   <div class="sub" id="sub_end_09">最後までご覧いただき、ありがとうございました。</div>
-  <div id="tag"><span class="t" id="tag1">未完成</span></div>
+  <div id="tag"><span class="t" id="tag1">未完成の強さ</span></div>
   <div id="series"><div class="av"><img src="media/profile_cutout.png" /></div><span class="no">No.56</span><span class="nm">イリスベク・ティレノフ</span></div>
   <div id="black"></div>
   <div id="flash"></div>

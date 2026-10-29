@@ -4,12 +4,12 @@
 <meta charset="UTF-8" />
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 <style>
-@font-face { font-family:"Dela","ZenBlack"; src: url("fonts/dela.woff2") format("woff2"); }
+@font-face { font-family: "Dela"; src: url("fonts/dela.woff2") format("woff2"); }
 @font-face { font-family: "ZenBlack"; src: url("fonts/zenblack.woff2") format("woff2"); }
 @font-face { font-family: "ZenBold"; src: url("fonts/zenbold.woff2") format("woff2"); }
 @font-face { font-family: "SerifJP"; src: url("fonts/serif.woff2") format("woff2"); font-weight: 200 900; }
-@font-face { font-family:"Anton","ZenBlack"; src: url("fonts/anton.woff2") format("woff2"); }
-@font-face { font-family:"Oswald","ZenBold"; src: url("fonts/oswald.woff2") format("woff2"); font-weight: 200 700; }
+@font-face { font-family: "Anton"; src: url("fonts/anton.woff2") format("woff2"); }
+@font-face { font-family: "Oswald"; src: url("fonts/oswald.woff2") format("woff2"); font-weight: 200 700; }
 
 :root {
   --bg: #07080b; --ink: #f4f1ea; --gold: #f2c230; --gold-deep: #c98e12;
@@ -30,10 +30,13 @@ body { font-family: "ZenBold", sans-serif; color: #f4f1ea; }
 .shade { position: absolute; inset: 0; pointer-events: none; }
 
 /* ------------------------------------------------ persistent chrome */
-#tag { position: absolute; left: 0; top: 34px; z-index: 50; opacity: 0; height: 64px; padding: 0 30px 0 34px;
-  background: #f2c230; color: #07080b; display: flex; align-items: center; overflow: hidden; }
-#tag .t { font-family:"Oswald","ZenBold"; font-weight: 700; font-size: 38px; letter-spacing: 3px; line-height: 64px; }
-#tag .t2 { font-family: "ZenBlack"; font-size: 36px; letter-spacing: 4px; position: absolute; left: 34px; top: 0; line-height: 64px; opacity: 0; }
+#tag { position: absolute; left: 0; top: 36px; z-index: 50; opacity: 0; display: flex; align-items: stretch;
+  filter: drop-shadow(0 4px 14px rgba(0,0,0,0.55)); }
+#tag .bar { width: 7px; background: linear-gradient(180deg, #f2c230, #c99416); }
+#tag .bd { background: rgba(7,8,11,0.84); padding: 9px 30px 11px 18px;
+  border-top: 1px solid rgba(242,194,48,0.4); border-bottom: 1px solid rgba(242,194,48,0.4); }
+#tag .no { font-family:"Oswald","ZenBold"; font-weight: 600; font-size: 17px; letter-spacing: 6px; color: #f2c230; line-height: 1; }
+#tag .t { font-family: "ZenBlack"; font-size: 31px; letter-spacing: 3px; color: #fff; line-height: 1.15; margin-top: 4px; display: block; }
 #series { position: absolute; right: 40px; top: 30px; z-index: 50; opacity: 0; display: flex; align-items: center; gap: 16px; }
 #series .av { width: 70px; height: 70px; border-radius: 50%; overflow: hidden; border: 3px solid #f2c230;
   background: radial-gradient(circle at 50% 40%, #b0161c, #3a0507); }
@@ -408,7 +411,7 @@ window.CINEMA = (function () {
   return { setup: setup };
 })();
 </script>
-<!--TAG:宣言-->
+<!--TAG:王者サバテロを指名-->
 <style>
 .mic1 { position: absolute; left: 110px; top: 250px; z-index: 6; font-family: "SerifJP"; font-weight: 900; font-size: 100px; color: #fff; -webkit-text-stroke: 11px #000; paint-order: stroke fill; letter-spacing: 4px; }
 .say { position: absolute; left: 120px; right: 120px; bottom: 250px; z-index: 46; text-align: center; font-family: "ZenBlack"; font-size: 54px; line-height: 1.4; color: #ffe49a; -webkit-text-stroke: 9px #000; paint-order: stroke fill; opacity: 0; }
@@ -441,13 +444,13 @@ window.CINEMA = (function () {
 
   <!-- S2 名指し＋感謝 -->
   <div id="c10s2" class="scene grade-fight">
-    <div class="vw"><video id="vch1003" src="media/09_ota_kyrgyz_flag_cage_p2.mp4" data-start="24.2" data-duration="9.0" data-track-index="3" data-media-start="0.4" muted playsinline></video></div>
+    <div class="vw"><video id="vch1003" src="media/x09_flag_photo.mp4" data-start="24.2" data-duration="9.0" data-track-index="3" data-media-start="0.4" muted playsinline></video></div>
     <div class="shade" style="background:linear-gradient(180deg,rgba(7,8,11,0.45) 0%,rgba(7,8,11,0) 50%,rgba(7,8,11,0.5) 100%)"></div>
   </div>
 
   <!-- S3 公式IV 1時間 -->
   <div id="c10s3" class="scene grade-fight">
-    <div class="vw"><video id="vch1004" src="media/07_ota_kalpak_flag_closeup_p4.mp4" data-start="33.2" data-duration="15.3" data-track-index="4" data-media-start="0.3" muted playsinline style="filter:saturate(0.85) contrast(1.1) brightness(0.68)"></video></div>
+    <div class="vw"><video id="vch1004" src="media/x07_kalpak_closeup.mp4" data-start="33.2" data-duration="15.3" data-track-index="4" data-media-start="0.3" muted playsinline style="filter:saturate(0.85) contrast(1.1) brightness(0.68)"></video></div>
     <div class="shade" style="background:linear-gradient(90deg,rgba(7,8,11,0.85) 0%,rgba(7,8,11,0.5) 55%,rgba(7,8,11,0.1) 100%)"></div>
     <div class="q10" id="c10q1">
       <div class="qm">“</div>
@@ -478,7 +481,7 @@ window.CINEMA = (function () {
   <div class="sub" id="sub_ch10_08">1日に3試合でも平気だという、あの言葉と同じ構えだ。</div>
   <div class="sub" id="sub_ch10_09">王者サバテロの印象を聞かれると、答えは短かった。</div>
   <div class="sub" id="sub_ch10_10">結構、つまらない試合をします。</div>
-  <div id="tag"><span class="t" id="tag1">宣言</span></div>
+  <div id="tag"><span class="t" id="tag1">王者サバテロを指名</span></div>
   <div id="series"><div class="av"><img src="media/profile_cutout.png" /></div><span class="no">No.56</span><span class="nm">イリスベク・ティレノフ</span></div>
   <div id="black"></div>
   <div id="flash"></div>

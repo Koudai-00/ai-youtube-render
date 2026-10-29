@@ -4,12 +4,12 @@
 <meta charset="UTF-8" />
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 <style>
-@font-face { font-family:"Dela","ZenBlack"; src: url("fonts/dela.woff2") format("woff2"); }
+@font-face { font-family: "Dela"; src: url("fonts/dela.woff2") format("woff2"); }
 @font-face { font-family: "ZenBlack"; src: url("fonts/zenblack.woff2") format("woff2"); }
 @font-face { font-family: "ZenBold"; src: url("fonts/zenbold.woff2") format("woff2"); }
 @font-face { font-family: "SerifJP"; src: url("fonts/serif.woff2") format("woff2"); font-weight: 200 900; }
-@font-face { font-family:"Anton","ZenBlack"; src: url("fonts/anton.woff2") format("woff2"); }
-@font-face { font-family:"Oswald","ZenBold"; src: url("fonts/oswald.woff2") format("woff2"); font-weight: 200 700; }
+@font-face { font-family: "Anton"; src: url("fonts/anton.woff2") format("woff2"); }
+@font-face { font-family: "Oswald"; src: url("fonts/oswald.woff2") format("woff2"); font-weight: 200 700; }
 
 :root {
   --bg: #07080b; --ink: #f4f1ea; --gold: #f2c230; --gold-deep: #c98e12;
@@ -30,10 +30,13 @@ body { font-family: "ZenBold", sans-serif; color: #f4f1ea; }
 .shade { position: absolute; inset: 0; pointer-events: none; }
 
 /* ------------------------------------------------ persistent chrome */
-#tag { position: absolute; left: 0; top: 34px; z-index: 50; opacity: 0; height: 64px; padding: 0 30px 0 34px;
-  background: #f2c230; color: #07080b; display: flex; align-items: center; overflow: hidden; }
-#tag .t { font-family:"Oswald","ZenBold"; font-weight: 700; font-size: 38px; letter-spacing: 3px; line-height: 64px; }
-#tag .t2 { font-family: "ZenBlack"; font-size: 36px; letter-spacing: 4px; position: absolute; left: 34px; top: 0; line-height: 64px; opacity: 0; }
+#tag { position: absolute; left: 0; top: 36px; z-index: 50; opacity: 0; display: flex; align-items: stretch;
+  filter: drop-shadow(0 4px 14px rgba(0,0,0,0.55)); }
+#tag .bar { width: 7px; background: linear-gradient(180deg, #f2c230, #c99416); }
+#tag .bd { background: rgba(7,8,11,0.84); padding: 9px 30px 11px 18px;
+  border-top: 1px solid rgba(242,194,48,0.4); border-bottom: 1px solid rgba(242,194,48,0.4); }
+#tag .no { font-family:"Oswald","ZenBold"; font-weight: 600; font-size: 17px; letter-spacing: 6px; color: #f2c230; line-height: 1; }
+#tag .t { font-family: "ZenBlack"; font-size: 31px; letter-spacing: 3px; color: #fff; line-height: 1.15; margin-top: 4px; display: block; }
 #series { position: absolute; right: 40px; top: 30px; z-index: 50; opacity: 0; display: flex; align-items: center; gap: 16px; }
 #series .av { width: 70px; height: 70px; border-radius: 50%; overflow: hidden; border: 3px solid #f2c230;
   background: radial-gradient(circle at 50% 40%, #b0161c, #3a0507); }
@@ -435,14 +438,14 @@ window.CINEMA = (function () {
 
   <!-- S1 天山（中央アジアの屋根） -->
   <div id="c1s1" class="scene" style="opacity:1">
-    <div class="vw" id="c1s1v"><video id="vch0101" src="media/33_broll_alaarcha_peak_sunrise_p2.mp4" data-start="0" data-duration="5.9" data-track-index="1" data-media-start="0.3" muted playsinline></video></div>
+    <div class="vw" id="c1s1v"><video id="vch0101" src="media/x33_alaarcha.mp4" data-start="0" data-duration="5.9" data-track-index="1" data-media-start="0.3" muted playsinline></video></div>
     <div class="shade" style="background:linear-gradient(180deg,rgba(7,8,11,0.5) 0%,rgba(7,8,11,0) 45%,rgba(7,8,11,0.45) 100%)"></div>
     <div class="roof" id="c1roof"><div class="r1">天山山脈</div><div class="r2">THE ROOF OF CENTRAL ASIA</div></div>
   </div>
 
   <!-- S2 誕生 -->
   <div id="c1s2" class="scene">
-    <div class="vw"><video id="vch0102" src="media/35_broll_kyrgyz_valley_green_p2.mp4" data-start="5.9" data-duration="7.4" data-track-index="2" data-media-start="0.5" muted playsinline></video></div>
+    <div class="vw"><video id="vch0102" src="media/x35_valley.mp4" data-start="5.9" data-duration="7.4" data-track-index="2" data-media-start="0.5" muted playsinline></video></div>
     <div class="shade" style="background:linear-gradient(90deg,rgba(7,8,11,0.8) 0%,rgba(7,8,11,0.3) 55%,rgba(7,8,11,0) 100%)"></div>
     <div class="birth" id="c1birth">
       <div class="b2" id="c1b2">KYRGYZSTAN</div>
@@ -486,7 +489,7 @@ window.CINEMA = (function () {
 
   <!-- S6 雪豹→門 -->
   <div id="c1s6" class="scene">
-    <div class="vw"><video id="vch0110" src="media/39_broll_snowleopard_gopro_approach_p2.mp4" data-start="35.3" data-duration="5.1" data-track-index="10" data-media-start="0.5" muted playsinline></video></div>
+    <div class="vw"><video id="vch0110" src="media/x39_leopard_approach.mp4" data-start="35.3" data-duration="5.1" data-track-index="10" data-media-start="0.5" muted playsinline></video></div>
     <div class="shade" style="background:linear-gradient(180deg,rgba(7,8,11,0.5) 0%,rgba(7,8,11,0) 45%,rgba(7,8,11,0.5) 100%)"></div>
     <div class="mon" id="c1mon">同じ道場の、<br />門を叩く</div>
   </div>
