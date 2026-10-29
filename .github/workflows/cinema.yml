@@ -1,0 +1,71 @@
+name: cinema
+
+# シネマ様式（profile-cinema.md）の章単位レンダー。
+# comp_cinema/<project>/<chapter>/ を hyperframes で直接レンダーして artifact にする。
+# 旧 render.yml（窓分割・ビルダー方式）とは独立。手動起動のみ。
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        description: "プロジェクト名 (comp_cinema/ 直下)"
+        required: true
+        default: "tilenov"
+      chapters:
+        description: "章をスペース区切りで (例: ch01 ch02 ch03)。空=全章"
+        required: false
+        default: ""
+
+concurrency:
+  group: cinema-${{ github.event.inputs.project }}-${{ github.event.inputs.chapters }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      chapters: ${{ steps.set.outputs.chapters }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: set
+        run: |
+          P="${{ github.event.inputs.project }}"
+          REQ="${{ github.event.inputs.chapters }}"
+          if [ -z "$REQ" ]; then
+            CHS=$(ls -d comp_cinema/$P/*/ | xargs -n1 basename)
+          else
+            CHS="$REQ"
+          fi
+          echo "chapters=$(echo $CHS | tr ' ' '\n' | jq -R . | jq -cs .)" >> "$GITHUB_OUTPUT"
+          echo "chapters: $CHS"
+
+  render:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        chapter: ${{ fromJson(needs.plan.outputs.chapters) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # ローカル検証と同じバージョンに固定（2026-10-29 時点 0.8.214）
+      - name: Render
+        run: |
+          set -e
+          P="${{ github.event.inputs.project }}"
+          CH="${{ matrix.chapter }}"
+          cd "comp_cinema/$P/$CH"
+          npx -y hyperframes@0.8.214 render . --quality high -o final.mp4
+          ffprobe -v error -count_frames -select_streams v:0 \
+            -show_entries stream=nb_read_frames -of csv=p=0 final.mp4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cinema-${{ github.event.inputs.project }}-${{ matrix.chapter }}
+          path: comp_cinema/${{ github.event.inputs.project }}/${{ matrix.chapter }}/final.mp4
+          retention-days: 3
