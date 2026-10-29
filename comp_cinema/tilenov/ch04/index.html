@@ -488,6 +488,7 @@ window.CINEMA = (function () {
   <div id="flash"></div>
 
   <div class="srclab" id="src_a">出典: Alash Pride TV</div>
+  <div class="srclab" id="src_b">出典: Mangu Professional League</div>
 </div>
 
 <script>
@@ -499,7 +500,7 @@ window.CINEMA = (function () {
   var C = CINEMA.setup(tl, D, 2404);
   C.chrome();
   C.subsFrom(NARR);
-  C.srcLabels([["a", 15.82, D - 0.6]]);
+  C.srcLabels([["a", 15.82, 37.76], ["b", 37.76, D - 0.6]]);
 
   tl.fromTo("#black", { opacity: 1 }, { opacity: 0, duration: 0.6, ease: "sine.inOut" }, 0.1);
   // S1 45日後

@@ -555,6 +555,7 @@ window.CINEMA = (function () {
 
   <div class="srclab" id="src_a">出典: RIZIN FIGHTING FEDERATION</div>
   <div class="srclab" id="src_b">出典: U-NEXT 公式ハイライト</div>
+  <div class="srclab" id="src_c">出典: RIZIN FIGHTING FEDERATION</div>
 </div>
 
 <script>
@@ -566,7 +567,7 @@ window.CINEMA = (function () {
   var C = CINEMA.setup(tl, D, 2909);
   C.chrome();
   C.subsFrom(NARR);
-  C.srcLabels([["a", 0.5, 103.3], ["b", 103.3, D - 0.6]]);
+  C.srcLabels([["a", 0.5, 103.3], ["b", 103.3, 108.4], ["c", 108.4, D - 0.6]]);
 
   tl.fromTo("#black", { opacity: 1 }, { opacity: 0, duration: 0.6, ease: "sine.inOut" }, 0.1);
   tl.fromTo("#c9s1 .vw", { scale: 1.1 }, { scale: 1.0, duration: 9.2, ease: "none" }, 0);
