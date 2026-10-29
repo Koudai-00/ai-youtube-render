@@ -54,6 +54,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Install deps (ffmpeg)
+        run: |
+          # ★render.yml と同じ対策: Google の apt リポジトリが Hash Sum mismatch を起こすので先に無効化
+          sudo rm -f /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/google*.list || true
+          for i in 1 2 3; do
+            sudo apt-get update -o Acquire::Retries=3 && break
+            echo "::warning::apt-get update に失敗 ($i/3)。10秒後に再試行"; sleep 10
+          done
+          sudo apt-get install -y ffmpeg
+          ffmpeg -version | head -1
       # ローカル検証と同じバージョンに固定（2026-10-29 時点 0.8.214）
       - name: Render
         run: |
