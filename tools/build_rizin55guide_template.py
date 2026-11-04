@@ -294,7 +294,7 @@ HTML = f"""<!doctype html>
   .wm{{position:absolute;z-index:360;left:36px;top:30px;font-family:"JPHeavy";font-size:30px;color:#fff;letter-spacing:.04em;filter:var(--edge-sm);opacity:.9;}}
   .srclab{{position:absolute;z-index:340;left:40px;bottom:38px;font-family:"JPMed";font-size:23px;color:#eaeaea;opacity:0;
         background:rgba(0,0,0,.5);border-left:4px solid var(--yellow);padding:6px 14px;border-radius:3px;filter:var(--edge-sm);}}
-  .chaptag{{position:absolute;z-index:320;left:100px;top:35%;opacity:0;}}
+  .chaptag{{position:absolute;z-index:320;left:100px;top:47%;opacity:0;}}
   .chaptag .chnum{{font-family:"Mincho";font-size:42px;color:var(--yellow);filter:var(--edge);letter-spacing:.04em;}}
   .chaptag .chttl{{font-family:"JPHeavy";font-size:58px;color:#fff;filter:var(--edge);margin-top:6px;white-space:nowrap;}}
   .subt{{position:absolute;z-index:350;left:0;right:0;bottom:96px;text-align:center;opacity:0;
