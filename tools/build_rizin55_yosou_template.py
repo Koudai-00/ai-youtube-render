@@ -154,7 +154,7 @@ def add_score(sec, who, pick, t, flip=False):
     for k in "lr":
         if who in L[k]: L[k].remove(who)
     L[pick].append(who)
-SHORT = {"ストラッサー起一": "ストラッサー", "扇久保博正": "扇久保", "ジョビン": "ジョビン", "井上雄策": "雄策", "チャーリー柏": "チャーリー"}
+SHORT = {"ストラッサー起一": "ストラッサー", "扇久保博正": "扇久保", "ジョビン": "ジョビン", "井上雄策": "雄策", "チャーリー柏木": "チャーリー"}
 def lineup_col(a, c, i, lift=0):
     w = min(235, int(920 / max(1, len(a)))); ih = min(600, int(w * 2.55)); fz = 40 if w >= 190 else 30; o = ""; nmrow = ""
     for j, p in enumerate(a):
