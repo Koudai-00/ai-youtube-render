@@ -211,7 +211,7 @@ for i, b in enumerate(SS):
         else:
             if b.get("ending"):
                 video("bg/f13c_2", s - .05, vis_e, 8, 1.25, .3, .5, .05, side="l"); video("bg/f13f", s - .05, vis_e, 6, 1.2, .5, .42, .05, side="r")
-                timed("split", s - .05, vis_e, '<div class="spl r"><span id="spl">王者の<br>初防衛か</span></div><div class="spl b"><span id="spr">新王者の<br>誕生か</span></div><div class="mid"></div>', z=24)
+                timed("split", s - .05, vis_e, '<div class="spl r"><span id="spl">王者の<br>初防衛か</span></div><div class="spl b"><span id="spr">新王者の<br>誕生か</span></div>', z=24)
                 J(s, e, f'tl.from("#spl",{{x:-90,opacity:0,duration:.3,ease:"expo.out"}},{s + .05:.3f});tl.from("#spr",{{x:90,opacity:0,duration:.3,ease:"expo.out"}},{s + dur * .5:.3f});')
                 flash(s - .05, "#fff", .7, .25); hit(s - .05, "whoosh"); hit(s + dur * .5, "thud")
             else:
