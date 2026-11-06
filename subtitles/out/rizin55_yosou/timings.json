@@ -47,16 +47,16 @@
 "id": "o6",
 "kind": "n",
 "start": 17.579,
-"end": 24.909,
-"dur": 6.13,
-"wav": "subtitles/out/rizin55_yosou/wavs/o6_5ad9fa2684.wav",
-"read": "じゅういちがつようか、ライジンごじゅうご。五つの試合を、格闘家たちはどうよんだのか。"
+"end": 25.42,
+"dur": 6.641,
+"wav": "subtitles/out/rizin55_yosou/wavs/o6_d54f51dca9.wav",
+"read": "じゅういちがつようか、ライジンごじゅうご。五つの試合を、にじゅういちにんのプロたちはどうよんだのか。"
 },
 {
 "id": "f5i1",
 "kind": "n",
-"start": 25.129,
-"end": 29.959,
+"start": 25.64,
+"end": 30.47,
 "dur": 4.83,
 "wav": "subtitles/out/rizin55_yosou/wavs/f5i1_52ff95fc38.wav",
 "read": "だいごしあい。よんじゅういっさい、ばんにんをじにんするすずきひろあき。"
@@ -64,222 +64,519 @@
 {
 "id": "f5i2",
 "kind": "n",
-"start": 30.179,
-"end": 35.334,
-"dur": 5.155,
-"wav": "subtitles/out/rizin55_yosou/wavs/f5i2_a1c2f06d73.wav",
-"read": "迎え撃つのは、ななれんしょう中のちはる。にじゅうごさいの挑戦だ。"
+"start": 30.69,
+"end": 36.123,
+"dur": 5.433,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5i2_7ec518c8da.wav",
+"read": "迎え撃つのはちはる。ななれんしょうをひっさげた、にじゅうごさいの挑戦者だ。"
 },
 {
 "id": "f5a",
 "kind": "n",
-"start": 35.554,
-"end": 41.305,
-"dur": 5.201,
-"wav": "subtitles/out/rizin55_yosou/wavs/f5a_ee80d962d4.wav",
-"read": "じょびんさんは、かいぶつくんが優勢という空気をよんだ上でちはると言い切った。"
+"start": 36.343,
+"end": 41.862,
+"dur": 4.969,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5a_baeb897cd1.wav",
+"read": "じょびんは、かいぶつくんが優勢という空気をよんだ上でちはると言い切った。"
 },
 {
 "id": "f5b",
 "kind": "n",
-"start": 41.525,
-"end": 47.516,
-"dur": 5.991,
-"wav": "subtitles/out/rizin55_yosou/wavs/f5b_2dc91872b6.wav",
-"read": "スパーでちはると手を合わせた弟のけんみん選手が、兄は強いと話すからだという。"
+"start": 42.082,
+"end": 47.841,
+"dur": 5.759,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5b_c73a6efe8e.wav",
+"read": "スパーでちはると手を合わせた弟のけんみんが、兄は強いと話すからだという。"
+},
+{
+"id": "f5b2",
+"kind": "n",
+"start": 48.061,
+"end": 53.727,
+"dur": 5.666,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5b2_73b7215cc2.wav",
+"read": "だげきでもちはるが上回る。パウンドで効かせて、さんラウンドにチョークでしとめるとよむ。"
 },
 {
 "id": "f5c",
 "kind": "n",
-"start": 47.736,
-"end": 52.326,
-"dur": 4.04,
-"wav": "subtitles/out/rizin55_yosou/wavs/f5c_ed6592b75f.wav",
-"read": "かわじりたつやさんもちはる。じょびんさんのみたてに乗った。"
+"start": 53.947,
+"end": 57.422,
+"dur": 2.926,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5c_8b536b47f1.wav",
+"read": "一方でいしわたりしんたろうは鈴木を選んだ。"
 },
 {
 "id": "f5d",
 "kind": "n",
-"start": 52.546,
-"end": 58.065,
-"dur": 4.969,
-"wav": "subtitles/out/rizin55_yosou/wavs/f5d_ccc12a571b.wav",
-"read": "ストラッサーきいち選手はさらに踏み込む。いちラウンド、いっぽんがち。"
+"start": 57.642,
+"end": 62.147,
+"dur": 4.505,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5d_852d99f69d.wav",
+"read": "組みながら殴るくびずもうのだげきに、対応できる選手は少ないと見る。"
 },
 {
 "id": "f5e",
 "kind": "n",
-"start": 58.285,
-"end": 61.947,
-"dur": 3.111,
-"wav": "subtitles/out/rizin55_yosou/wavs/f5e_0acf7ae36d.wav",
-"read": "だがいしわたりしんたろうさんは鈴木を選んだ。"
+"start": 62.367,
+"end": 68.025,
+"dur": 5.108,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5e_9ac0c73b0b.wav",
+"read": "かわじりたつやもちはるを選んだ。ただし正直わからないとも付け加えた。"
+},
+{
+"id": "f5e2",
+"kind": "n",
+"start": 68.245,
+"end": 77.115,
+"dur": 8.87,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5e2_5c2ba785ca.wav",
+"read": "くびずもうが強く、ぎゃくてん勝ちもできる鈴木は嫌な相手だ。それでもスターになる選手は、こういう試合で勝つものだと話す。"
 },
 {
 "id": "f5f",
 "kind": "n",
-"start": 62.167,
-"end": 67.136,
-"dur": 4.969,
-"wav": "subtitles/out/rizin55_yosou/wavs/f5f_852d99f69d.wav",
-"read": "組みながら殴るくびずもうのだげきに、対応できる選手は少ないと見る。"
+"start": 77.335,
+"end": 80.44,
+"dur": 2.554,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5f_e1cf8357c4.wav",
+"read": "いとうゆうきはかいぶつくんのはんてい勝ち。"
+},
+{
+"id": "f5f2",
+"kind": "n",
+"start": 80.66,
+"end": 88.833,
+"dur": 8.173,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5f2_7d1106aa41.wav",
+"read": "今の鈴木は、上がってくる若手を実力で抑え込むもんばんだ。だげきでしおづけにして、はんていで勝つと見る。"
 },
 {
 "id": "f5g",
 "kind": "n",
-"start": 67.356,
-"end": 72.457,
-"dur": 4.551,
-"wav": "subtitles/out/rizin55_yosou/wavs/f5g_3003e914f4.wav",
-"read": "いざわせいか選手もかいぶつくん。けいけんの差がありすぎると話した。"
+"start": 89.053,
+"end": 93.922,
+"dur": 4.319,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5g_3e0a74ad7a.wav",
+"read": "ストラッサーきいちはさらに踏み込む。いちラウンド、いっぽんがち。"
+},
+{
+"id": "f5g2",
+"kind": "n",
+"start": 94.142,
+"end": 103.383,
+"dur": 9.242,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5g2_9f2577bbab.wav",
+"read": "ちはるはひゃくはちじゅうにセンチ、鈴木はひゃくろくじゅうななセンチ。距離のこうぼうから、スクランブルでちはるが背中を取ってきめるとよむ。"
 },
 {
 "id": "f5h",
 "kind": "n",
-"start": 72.677,
-"end": 79.032,
-"dur": 5.805,
-"wav": "subtitles/out/rizin55_yosou/wavs/f5h_0cb8745059.wav",
-"read": "鈴木と戦ったけいけんを持つあきもと きょうま選手の答えは、条件付きだった。"
+"start": 103.603,
+"end": 107.869,
+"dur": 3.715,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5h_1ff81c48ed.wav",
+"read": "かつてライジンにも出たきたかただいちは鈴木のはんてい勝ち。"
+},
+{
+"id": "f5h2",
+"kind": "n",
+"start": 108.089,
+"end": 117.702,
+"dur": 9.613,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5h2_cca0c8e834.wav",
+"read": "ちはるはちょうしんで、じょうたいを反らしながらのフックがある。ただステップは速くない。ローで下を削れば、じわじわ捕まえられると見る。"
 },
 {
 "id": "f5j",
 "kind": "n",
-"start": 79.252,
-"end": 84.499,
-"dur": 5.248,
-"wav": "subtitles/out/rizin55_yosou/wavs/f5j_9f172558d7.wav",
-"read": "鈴木が前に出れば鈴木のはんてい勝ち。出られなければちはるのはんてい勝ち。"
+"start": 117.922,
+"end": 121.258,
+"dur": 2.786,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5j_18d2e8672e.wav",
+"read": "あんどうたつやは、期待を込めてちはる。"
+},
+{
+"id": "f5j2",
+"kind": "n",
+"start": 121.478,
+"end": 130.069,
+"dur": 8.591,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5j2_0791d4efc3.wav",
+"read": "けいけんの差は細かいところで出るかもしれない。それでもちはるには、チャンスを掴みに行くやせいてきなきゅうかくがあると話す。"
 },
 {
 "id": "f5k",
 "kind": "n",
-"start": 84.719,
-"end": 89.085,
-"dur": 4.365,
-"wav": "subtitles/out/rizin55_yosou/wavs/f5k_5b0cbe92d3.wav",
-"read": "さんたいに。ばんにんが止めるのか。ちはるが越えていくのか。"
+"start": 130.289,
+"end": 135.669,
+"dur": 4.83,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5k_70fb82e95b.wav",
+"read": "いざわせいかの答えはかいぶつくん。けいけんの差がありすぎると話した。"
+},
+{
+"id": "f5m",
+"kind": "n",
+"start": 135.889,
+"end": 142.755,
+"dur": 6.316,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5m_5e94ca8478.wav",
+"read": "そしていのうえゆうさくもちはるを選んだ。ちはるとは長く一緒に練習してきたあいだがらだ。"
+},
+{
+"id": "f5m2",
+"kind": "n",
+"start": 142.975,
+"end": 150.545,
+"dur": 7.57,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5m2_2a84749698.wav",
+"read": "ひきだしの数はちはるが上。ただ近い距離のだげきは鈴木が強い。そこをどう避けるかが鍵だという。"
+},
+{
+"id": "f5n",
+"kind": "n",
+"start": 150.765,
+"end": 153.923,
+"dur": 3.158,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5n_3e16b7e394.wav",
+"read": "ごたいよん。ちはるがわずかに上回った。"
+},
+{
+"id": "f5p",
+"kind": "n",
+"start": 154.143,
+"end": 159.894,
+"dur": 5.201,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5p_19927ce472.wav",
+"read": "鈴木と戦ったけいけんを持つあきもと きょうまは、勝敗を明言していない。"
+},
+{
+"id": "f5q",
+"kind": "n",
+"start": 160.114,
+"end": 168.194,
+"dur": 8.081,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5q_d5ee2ff016.wav",
+"read": "鈴木が前に出れば鈴木のはんてい勝ち。出られなければちはるのはんてい勝ち。どちらが勝っても、ケーオーはないと見ている。"
+},
+{
+"id": "f5r",
+"kind": "n",
+"start": 168.414,
+"end": 173.423,
+"dur": 4.458,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5r_fb08588e92.wav",
+"read": "ライジンこうしき解説のチャーリーかしわも、勝敗には触れていない。"
+},
+{
+"id": "f5r2",
+"kind": "n",
+"start": 173.643,
+"end": 181.63,
+"dur": 7.988,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5r2_4d0533f833.wav",
+"read": "焦点は、ちはるがだげきの中でていくだうんを取れるかどうか。鈴木がそこぢからでかんぷうする可能性もあるという。"
+},
+{
+"id": "f5s",
+"kind": "n",
+"start": 181.85,
+"end": 186.541,
+"dur": 4.69,
+"wav": "subtitles/out/rizin55_yosou/wavs/f5s_84fcda97a4.wav",
+"read": "ごたいよん。ばんにんが止めるのか。ちはるが越えていくのか。"
 },
 {
 "id": "f9i1",
 "kind": "n",
-"start": 89.305,
-"end": 93.949,
-"dur": 4.644,
-"wav": "subtitles/out/rizin55_yosou/wavs/f9i1_f44387aa70.wav",
-"read": "だいきゅうしあい。国内じゅうれんしょう、むはいのあいもとかずき。"
+"start": 186.761,
+"end": 191.59,
+"dur": 4.83,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9i1_3615c15f6c.wav",
+"read": "だいきゅうしあい。国内じゅうれんしょう、むはいの男、あいもと。"
 },
 {
 "id": "f9i2",
 "kind": "n",
-"start": 94.169,
-"end": 98.395,
-"dur": 4.226,
-"wav": "subtitles/out/rizin55_yosou/wavs/f9i2_0f1e41e57c.wav",
-"read": "初めて向き合う外国人が、ハワイのアバイジャカレオメヘウラだ。"
+"start": 191.81,
+"end": 196.315,
+"dur": 4.505,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9i2_7e6cfc520f.wav",
+"read": "初めて向き合うがいこくじんが、ハワイのアバイジャカレオメヘウラだ。"
 },
 {
 "id": "f9a",
 "kind": "n",
-"start": 98.615,
-"end": 104.784,
-"dur": 5.619,
-"wav": "subtitles/out/rizin55_yosou/wavs/f9a_64f0fc1291.wav",
-"read": "いしわたりしんたろうさんはあいもと。ケーオーになる、これは自信があると言い切った。"
+"start": 196.535,
+"end": 202.565,
+"dur": 5.48,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9a_c1577374b7.wav",
+"read": "いしわたりしんたろうはあいもと。ケーオーになる、これは自信があると言い切った。"
+},
+{
+"id": "f9a2",
+"kind": "n",
+"start": 202.785,
+"end": 212.166,
+"dur": 9.381,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9a2_4226ddf926.wav",
+"read": "メヘウラは目が良い。それでもあいもとは、倒すまで前に出続ける。詰められて消耗し、にラウンド以降に捕まるとよむ。"
 },
 {
 "id": "f9b",
 "kind": "n",
-"start": 105.004,
-"end": 108.666,
-"dur": 3.111,
-"wav": "subtitles/out/rizin55_yosou/wavs/f9b_12ad4930c4.wav",
-"read": "ストラッサーきいち選手も、にラウンドケーオー。"
+"start": 212.386,
+"end": 215.862,
+"dur": 2.926,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9b_af276f36d9.wav",
+"read": "ストラッサーきいちも、にラウンドでのケーオー。"
+},
+{
+"id": "f9b2",
+"kind": "n",
+"start": 216.082,
+"end": 222.537,
+"dur": 6.455,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9b2_33d3279dd5.wav",
+"read": "メヘウラの武器はくびずもう。だがタイでも練習してきたあいもとには、通用しないと見る。"
 },
 {
 "id": "f9c",
 "kind": "n",
-"start": 108.886,
-"end": 112.454,
-"dur": 3.019,
-"wav": "subtitles/out/rizin55_yosou/wavs/f9c_c07392460c.wav",
-"read": "じょびんさんもにラウンドの最後にしとめるとよむ。"
+"start": 222.757,
+"end": 226.093,
+"dur": 2.786,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9c_37c89ec3aa.wav",
+"read": "じょびんもにラウンドの最後にしとめるとよむ。"
+},
+{
+"id": "f9c2",
+"kind": "n",
+"start": 226.313,
+"end": 233.836,
+"dur": 7.523,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9c2_9a67c0775f.wav",
+"read": "メヘウラは目が良すぎて、いちラウンドは当たらない。それでも詰め続けたあいもとが、終盤に捕まえるという。"
 },
 {
 "id": "f9d",
 "kind": "n",
-"start": 112.674,
-"end": 116.939,
-"dur": 3.715,
-"wav": "subtitles/out/rizin55_yosou/wavs/f9d_a01d9b9007.wav",
-"read": "あおきしんや選手は、減量さえ乗り越えればあいもと。"
+"start": 234.056,
+"end": 237.95,
+"dur": 3.344,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9d_f8b1e74921.wav",
+"read": "あおきしんやは、げんりょうさえ乗り越えればあいもと。"
+},
+{
+"id": "f9d2",
+"kind": "n",
+"start": 238.17,
+"end": 246.576,
+"dur": 8.406,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9d2_bb366b30d6.wav",
+"read": "あいもとは体格で勝負するタイプだ。フェザーきゅうでこそ、その強みが出る。メヘウラはあいしょうの良い相手だとも話す。"
 },
 {
 "id": "f9e",
 "kind": "n",
-"start": 117.159,
-"end": 123.7,
+"start": 246.796,
+"end": 253.337,
 "dur": 5.991,
-"wav": "subtitles/out/rizin55_yosou/wavs/f9e_b6b073eff2.wav",
-"read": "あきもと きょうま選手もあいもとのはんてい勝ち。ただし勝つ確率はごぶごぶだと話す。"
+"wav": "subtitles/out/rizin55_yosou/wavs/f9e_9e5542eca5.wav",
+"read": "あきもと きょうまもあいもとのはんてい勝ち。ただし勝つ確率はごぶごぶだと話す。"
+},
+{
+"id": "f9e2",
+"kind": "n",
+"start": 253.557,
+"end": 261.498,
+"dur": 7.941,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9e2_a77464eb65.wav",
+"read": "だげきのポイントで、あいもとが少し上回る。くびずもうからのひざも、あいもとはたいさくしているはずだと見る。"
 },
 {
 "id": "f9f",
 "kind": "n",
-"start": 123.92,
-"end": 127.814,
-"dur": 3.344,
-"wav": "subtitles/out/rizin55_yosou/wavs/f9f_3ebeaf2863.wav",
-"read": "うしくじゅんたろう選手も、まよったすえにあいもと。"
+"start": 261.718,
+"end": 265.333,
+"dur": 3.065,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9f_2604d573ad.wav",
+"read": "うしくじゅんたろうも、まよったすえにあいもと。"
 },
 {
 "id": "f9g",
 "kind": "n",
-"start": 128.034,
-"end": 131.192,
-"dur": 3.158,
-"wav": "subtitles/out/rizin55_yosou/wavs/f9g_792709bfda.wav",
-"read": "ろくたいゼロ。ところが、ただひとり。"
+"start": 265.553,
+"end": 270.84,
+"dur": 4.737,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9g_9fb56570b0.wav",
+"read": "ディープだいひょうのさえきしげるは、公開練習を見てあいもとに傾いた。"
+},
+{
+"id": "f9g2",
+"kind": "n",
+"start": 271.06,
+"end": 278.072,
+"dur": 7.012,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9g2_b42ad20c35.wav",
+"read": "ディープでやれば余裕で勝つ。勝敗を分けるのは、おおぶたいのこくさいせんでメンタルが出るかどうかだという。"
 },
 {
 "id": "f9h",
 "kind": "n",
-"start": 131.412,
-"end": 134.523,
-"dur": 3.111,
-"wav": "subtitles/out/rizin55_yosou/wavs/f9h_736ed2e19c.wav",
-"read": "あいもとと同じいばらきの、かわじりたつやさんだ。"
+"start": 278.292,
+"end": 282.836,
+"dur": 3.994,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9h_7b51a7edb5.wav",
+"read": "いとうゆうきは、けいりょうさえ無事ならあいもとのケーオー勝ち。"
 },
 {
 "id": "f9h2",
-"kind": "r",
-"start": 134.743,
-"end": 142.743,
-"dur": 8.0
+"kind": "n",
+"start": 283.056,
+"end": 291.322,
+"dur": 8.266,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9h2_564646d434.wav",
+"read": "強い相手をことごとく倒してきたあいもとは、ばけものだと話す。大会でいちばんだげきで盛り上がる試合になると見る。"
 },
 {
 "id": "f9j",
 "kind": "n",
-"start": 142.923,
-"end": 151.793,
-"dur": 8.87,
-"wav": "subtitles/out/rizin55_yosou/wavs/f9j_ada0099406.wav",
-"read": "勝ってほしいのはあいもと。でも勝つと思うのはメヘウラ。国際戦では、日本人相手のようにのみこめないと見ている。"
+"start": 291.542,
+"end": 293.718,
+"dur": 1.625,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9j_e7e5c6e3bf.wav",
+"read": "いのうえゆうさくもあいもと。"
+},
+{
+"id": "f9j2",
+"kind": "n",
+"start": 293.938,
+"end": 304.526,
+"dur": 10.588,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9j2_a773ca720f.wav",
+"read": "メヘウラのだげきは、ナジームハメドのような独特のステップ。それでも野生的なあいもとには効かない。スピーディーなだげき戦から、ケーオーになるとよむ。"
 },
 {
 "id": "f9k",
 "kind": "n",
-"start": 152.013,
-"end": 158.004,
-"dur": 5.991,
-"wav": "subtitles/out/rizin55_yosou/wavs/f9k_931da1fda9.wav",
-"read": "ろくたいいち。それでも全員が口をそろえて心配するのが、あいもとの減量だ。"
+"start": 304.746,
+"end": 309.15,
+"dur": 3.855,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9k_bb1515fd7f.wav",
+"read": "あんどうたつやは、にちべいの野獣対決と呼んであいもと。"
+},
+{
+"id": "f9m",
+"kind": "n",
+"start": 309.37,
+"end": 313.45,
+"dur": 3.529,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9m_7a657601ff.wav",
+"read": "きたかただいちも、期待を込めてあいもとのケーオー勝ち。"
+},
+{
+"id": "f9m2",
+"kind": "n",
+"start": 313.67,
+"end": 322.215,
+"dur": 8.545,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9m2_1a9fcfcac9.wav",
+"read": "パワーはあいもと、テクニックはメヘウラ。大きくてタフながいこくじんに、あいもとの圧力が通じるかが焦点だという。"
+},
+{
+"id": "f9n",
+"kind": "n",
+"start": 322.435,
+"end": 328.232,
+"dur": 5.248,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9n_f8e87b02b2.wav",
+"read": "やちゆうすけもあいもと。ただ、こればかりはたいじゅうしだいだと話す。"
+},
+{
+"id": "f9p",
+"kind": "n",
+"start": 328.452,
+"end": 331.371,
+"dur": 2.368,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9p_069d6cdbde.wav",
+"read": "いざわせいかもあいもとと答えた。"
+},
+{
+"id": "f9q",
+"kind": "n",
+"start": 331.591,
+"end": 334.842,
+"dur": 3.251,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9q_aff0e5f1da.wav",
+"read": "じゅうさんたいゼロ。ところが、ただひとり。"
+},
+{
+"id": "f9r",
+"kind": "n",
+"start": 335.062,
+"end": 338.08,
+"dur": 3.019,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9r_b592650cfe.wav",
+"read": "あいもとと同じいばらきの、かわじりたつやだ。"
+},
+{
+"id": "f9r2",
+"kind": "r",
+"start": 338.3,
+"end": 346.3,
+"dur": 8.0
+},
+{
+"id": "f9s",
+"kind": "n",
+"start": 346.48,
+"end": 354.84,
+"dur": 8.359,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9s_49a7e8f2a0.wav",
+"read": "勝ってほしいのはあいもと。でも勝つと思うのはメヘウラ。こくさいせんでは、日本人相手のようにのみこめないと見ている。"
+},
+{
+"id": "f9t",
+"kind": "n",
+"start": 355.06,
+"end": 359.928,
+"dur": 4.319,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9t_f5791074ec.wav",
+"read": "もとフェザーきゅうおうじゃのさいとうゆたかは、勝敗を明言していない。"
+},
+{
+"id": "f9t2",
+"kind": "n",
+"start": 360.148,
+"end": 368.879,
+"dur": 8.731,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9t2_1891c6f9cb.wav",
+"read": "駆け引きなしの正面衝突。先にきょうだを当てた方が、いっきに持っていく。いちラウンドから目が離せないと語った。"
+},
+{
+"id": "f9u",
+"kind": "n",
+"start": 369.099,
+"end": 374.99,
+"dur": 5.341,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9u_e0e23e8a00.wav",
+"read": "チャーリーかしわは、あいもとがねわざに行かない限り立っただげき戦になると見る。"
+},
+{
+"id": "f9v",
+"kind": "n",
+"start": 375.21,
+"end": 381.386,
+"dur": 6.177,
+"wav": "subtitles/out/rizin55_yosou/wavs/f9v_9ff418926d.wav",
+"read": "じゅうさんたいいち。それでも全員が口をそろえて心配するのが、あいもとのげんりょうだ。"
 },
 {
 "id": "f10i",
 "kind": "n",
-"start": 158.224,
-"end": 166.397,
+"start": 381.606,
+"end": 389.78,
 "dur": 8.173,
 "wav": "subtitles/out/rizin55_yosou/wavs/f10i_0041a13334.wav",
 "read": "だいじゅうしあい。トラッシュトークに火がついた、かしむらじんのすけとおおたしのぶ。じゅうじゅつとレスリングのぶつかり合いだ。"
@@ -287,125 +584,294 @@
 {
 "id": "f10a",
 "kind": "n",
-"start": 166.617,
-"end": 170.883,
-"dur": 3.715,
-"wav": "subtitles/out/rizin55_yosou/wavs/f10a_3f353918be.wav",
-"read": "おおたと練習したいとうゆうき選手は、ものがちがうと言う。"
+"start": 390.0,
+"end": 394.172,
+"dur": 3.622,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10a_eccb235e98.wav",
+"read": "おおたと手を合わせたいとうゆうきは、おおたのティーケーオー。"
+},
+{
+"id": "f10a2",
+"kind": "n",
+"start": 394.392,
+"end": 402.38,
+"dur": 7.988,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10a2_d5ed9fa45d.wav",
+"read": "スパーでは、返されないはずのトップから投げ返された。かしむらが下から狙うところを潰し、パウンドでしとめるとよむ。"
 },
 {
 "id": "f10b",
 "kind": "n",
-"start": 171.103,
-"end": 176.25,
-"dur": 4.598,
-"wav": "subtitles/out/rizin55_yosou/wavs/f10b_4e7da732ff.wav",
-"read": "あきもと きょうま選手は、迷いに迷っておおたのに対いちはんてい。"
+"start": 402.6,
+"end": 407.608,
+"dur": 4.458,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10b_5db753a326.wav",
+"read": "あきもと きょうまは、迷いに迷っておおたのにたいいちはんてい。"
+},
+{
+"id": "f10b2",
+"kind": "n",
+"start": 407.828,
+"end": 414.84,
+"dur": 7.012,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10b2_c89a1c7e28.wav",
+"read": "おおたはあしかんせつの対処がうまく、パワーもある。今回、かしむらが引き込むのは良くないと話す。"
 },
 {
 "id": "f10c",
 "kind": "n",
-"start": 176.47,
-"end": 179.574,
-"dur": 2.554,
-"wav": "subtitles/out/rizin55_yosou/wavs/f10c_323bb5cb0e.wav",
-"read": "ストラッサーきいち選手もおおたのはんてい。"
+"start": 415.06,
+"end": 417.979,
+"dur": 2.368,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10c_12cfb40c87.wav",
+"read": "ストラッサーきいちもおおたのはんてい。"
+},
+{
+"id": "f10c2",
+"kind": "n",
+"start": 418.199,
+"end": 426.233,
+"dur": 8.034,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10c2_13ddba76ae.wav",
+"read": "いっぱつのきめはかしむら。だがおおたは背中について殴り、引き込まれても立ち上がる。てがたくポイントを取ると見る。"
 },
 {
 "id": "f10d",
 "kind": "n",
-"start": 179.794,
-"end": 182.109,
-"dur": 1.765,
-"wav": "subtitles/out/rizin55_yosou/wavs/f10d_4db24e11fe.wav",
-"read": "いざわせいか選手もおおた。"
+"start": 426.453,
+"end": 428.628,
+"dur": 1.625,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10d_bb00118760.wav",
+"read": "いざわせいかもおおた。"
 },
 {
 "id": "f10e",
 "kind": "n",
-"start": 182.329,
-"end": 189.706,
-"dur": 6.827,
-"wav": "subtitles/out/rizin55_yosou/wavs/f10e_8c6c277103.wav",
-"read": "ししょうのつるやひろしさんはもちろんおおた。強敵だと認めた上で、いっぽんは無理だと話す。"
+"start": 428.848,
+"end": 436.039,
+"dur": 6.641,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10e_4f735ebaa9.wav",
+"read": "ししょうのつるやひろしはもちろんおおた。強敵だと認めた上で、いっぽんは無理だと話す。"
+},
+{
+"id": "f10e2",
+"kind": "n",
+"start": 436.259,
+"end": 443.272,
+"dur": 7.012,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10e2_9ee5bdd623.wav",
+"read": "今はどうじょうでも、おおたをきめられる選手はほとんどいない。ケーオーかいっぽんで決まる試合になるという。"
 },
 {
 "id": "f10f",
 "kind": "n",
-"start": 189.926,
-"end": 195.77,
-"dur": 5.294,
-"wav": "subtitles/out/rizin55_yosou/wavs/f10f_3f5944271f.wav",
-"read": "ディープのさえきしげるだいひょうもおおた。勝つのはおおただと思うと話した。"
+"start": 443.492,
+"end": 449.011,
+"dur": 4.969,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10f_c42d7d92bd.wav",
+"read": "かしむら側のゲストに呼ばれたディープだいひょうのさえきしげるも、予想はおおた。"
+},
+{
+"id": "f10f2",
+"kind": "n",
+"start": 449.231,
+"end": 458.565,
+"dur": 9.334,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10f2_35decfb09b.wav",
+"read": "かしむらの負けパターンは、きめを防がれて下になる形。おおたならそれができる。だげきのさっしょうのうりょくもおおたが上だと話した。"
 },
 {
 "id": "f10g",
 "kind": "n",
-"start": 195.99,
-"end": 199.001,
-"dur": 2.461,
-"wav": "subtitles/out/rizin55_yosou/wavs/f10g_73480edcc7.wav",
-"read": "かわじりたつやさんもおおたのはんてい。"
+"start": 458.785,
+"end": 461.611,
+"dur": 2.276,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10g_4d9e514af9.wav",
+"read": "かわじりたつやもおおたのはんてい。"
+},
+{
+"id": "f10g2",
+"kind": "n",
+"start": 461.831,
+"end": 470.701,
+"dur": 8.87,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10g2_16ada48dd2.wav",
+"read": "レスラーは世界最強のじんしゅだと思っている。かしむらのケーオー勝ちは絶対にない。逆におおたの右は見えづらいとも語った。"
 },
 {
 "id": "f10h",
 "kind": "n",
-"start": 199.221,
-"end": 203.44,
-"dur": 3.669,
-"wav": "subtitles/out/rizin55_yosou/wavs/f10h_bc4dd494b9.wav",
-"read": "かしむらを推してきたじょびんさんまで、予想はおおた。"
+"start": 470.921,
+"end": 474.629,
+"dur": 3.158,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10h_da7858e21d.wav",
+"read": "かしむらを推してきたじょびんまで、予想はおおた。"
 },
 {
 "id": "f10j",
 "kind": "n",
-"start": 203.66,
-"end": 207.7,
-"dur": 4.04,
-"wav": "subtitles/out/rizin55_yosou/wavs/f10j_8580f0187f.wav",
-"read": "はったいゼロ。ここでも、ただひとりが逆を行く。"
+"start": 474.849,
+"end": 478.742,
+"dur": 3.344,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10j_93502f559e.wav",
+"read": "あんどうたつやもおおた。ただし条件付きだ。"
+},
+{
+"id": "f10j2",
+"kind": "n",
+"start": 478.962,
+"end": 486.903,
+"dur": 7.941,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10j2_f9a458a6e6.wav",
+"read": "かしむらは倒されてもいいから殴りに来る。おおたが無駄なタックルを打たず、上で勝負できればじりきで勝つと見る。"
 },
 {
 "id": "f10k",
 "kind": "n",
-"start": 207.92,
-"end": 212.139,
-"dur": 3.669,
-"wav": "subtitles/out/rizin55_yosou/wavs/f10k_7bdd497247.wav",
-"read": "いしわたりしんたろうさん。かしむらのいっぽんがち。"
+"start": 487.123,
+"end": 492.41,
+"dur": 4.737,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10k_24a6e317c8.wav",
+"read": "きたかただいちもおおたを選んだ。しょうりつはおおたの方が高いという。"
+},
+{
+"id": "f10k2",
+"kind": "n",
+"start": 492.63,
+"end": 502.615,
+"dur": 9.985,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10k2_51adce008a.wav",
+"read": "首を触られた時の反応は、ぎんメダリストそのもの。決着はおおたのバックハンドやかしむらのひざのような、意外なだげきでとうとつに来るとよむ。"
 },
 {
 "id": "f10m",
 "kind": "n",
-"start": 212.359,
-"end": 216.399,
-"dur": 4.04,
-"wav": "subtitles/out/rizin55_yosou/wavs/f10m_09c15a6545.wav",
-"read": "おおたが上でくっつきにいく癖を、下から狙えると見ている。"
+"start": 502.835,
+"end": 507.982,
+"dur": 4.598,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10m_1919effee3.wav",
+"read": "おおたのセコンドにつくすぎやまこうへいは、おおたの圧勝を予想した。"
+},
+{
+"id": "f10m2",
+"kind": "r",
+"start": 508.202,
+"end": 513.302,
+"dur": 5.1
 },
 {
 "id": "f10n",
 "kind": "n",
-"start": 216.619,
-"end": 223.307,
-"dur": 6.687,
-"wav": "subtitles/out/rizin55_yosou/wavs/f10n_7d98bcc496.wav",
-"read": "ライジンこうしきの解説を務めるチャーリーかしわさんも、かしむらはおおたにとってあいしょうが悪いと話した。"
+"start": 513.482,
+"end": 517.708,
+"dur": 4.226,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10n_521472eea1.wav",
+"read": "じゅういちたいゼロ。だが、逆を行く者がふたりいる。"
 },
 {
 "id": "f10p",
 "kind": "n",
-"start": 223.527,
-"end": 228.914,
-"dur": 5.387,
-"wav": "subtitles/out/rizin55_yosou/wavs/f10p_5ed861b315.wav",
-"read": "はったいいち。おおたが上で固めるのか。かしむらがいっぱつでしとめるのか。"
+"start": 517.928,
+"end": 521.265,
+"dur": 2.786,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10p_1beffde64a.wav",
+"read": "いしわたりしんたろうはかしむらのいっぽんがち。"
+},
+{
+"id": "f10q",
+"kind": "n",
+"start": 521.485,
+"end": 525.711,
+"dur": 4.226,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10q_09c15a6545.wav",
+"read": "おおたが上でくっつきにいく癖を、下から狙えると見ている。"
+},
+{
+"id": "f10r",
+"kind": "n",
+"start": 525.931,
+"end": 531.496,
+"dur": 5.016,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10r_4b61e2ae04.wav",
+"read": "かねはらまさのりは勝敗を明言しないが、かしむらが若干有利と見る。"
+},
+{
+"id": "f10r2",
+"kind": "n",
+"start": 531.716,
+"end": 541.469,
+"dur": 9.752,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10r2_167c3254c8.wav",
+"read": "かしむらには下からのあしかんせつも十字もある。ガチャガチャした中で、おおたがいっぽんを取られるのではないか。ただはんていまでいけばおおただと話す。"
+},
+{
+"id": "f10s",
+"kind": "n",
+"start": 541.689,
+"end": 547.254,
+"dur": 5.016,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10s_65cc3f3abe.wav",
+"read": "チャーリーかしわは、かしむらはおおたにとってすこぶるあいしょうが悪いと話した。"
+},
+{
+"id": "f10s2",
+"kind": "n",
+"start": 547.474,
+"end": 557.459,
+"dur": 9.985,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10s2_b937abf054.wav",
+"read": "上から固めてパウンドする、おおたの最強のワンパターン。最初のこうぼうで、かしむらの下からのきめが間に合うかが最大の注目だという。"
+},
+{
+"id": "f10t",
+"kind": "n",
+"start": 557.679,
+"end": 562.501,
+"dur": 4.272,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10t_34faf5f8d1.wav",
+"read": "うしくじゅんたろうは、勝敗ではなく試合の展開を語った。"
+},
+{
+"id": "f10t2",
+"kind": "n",
+"start": 562.721,
+"end": 570.337,
+"dur": 7.616,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10t2_bfb7a3eaf9.wav",
+"read": "おおたは危ない場面で、かしむらに付き合わない。自分の得意な形の中だけで戦い、はんていまでいくと見る。"
+},
+{
+"id": "f10u",
+"kind": "n",
+"start": 570.557,
+"end": 577.377,
+"dur": 6.269,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10u_d1bae360e7.wav",
+"read": "やちゆうすけは、序盤にかしむらが仕掛けるきめをおおたがしのげるかで、戦況が変わると見る。"
+},
+{
+"id": "f10v",
+"kind": "n",
+"start": 577.597,
+"end": 584.648,
+"dur": 6.502,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10v_92e367aaf4.wav",
+"read": "いのうえゆうさくは、あえてケーオー決着を予想した。グラップラー同士のだげき戦になると見る。"
+},
+{
+"id": "f10w",
+"kind": "n",
+"start": 584.868,
+"end": 590.534,
+"dur": 5.666,
+"wav": "subtitles/out/rizin55_yosou/wavs/f10w_3a83a8bca1.wav",
+"read": "じゅういちたいに。おおたが上で固めるのか。かしむらがいっぱつでしとめるのか。"
 },
 {
 "id": "f12i",
 "kind": "n",
-"start": 229.134,
-"end": 236.517,
+"start": 590.754,
+"end": 598.138,
 "dur": 7.384,
 "wav": "subtitles/out/rizin55_yosou/wavs/f12i_6993716ed6.wav",
 "read": "だいじゅうにしあいはじきちょうせんしゃけっていせん。ぜんおうじゃのいのうえなおきに、ななれんしょう中のティレノフが挑む。"
@@ -413,24 +879,33 @@
 {
 "id": "f12a",
 "kind": "n",
-"start": 236.737,
-"end": 240.267,
-"dur": 3.529,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12a_9b48bb6b7a.wav",
-"read": "おおたしのぶ選手は、唯一の対戦けいけん者だ。"
+"start": 598.358,
+"end": 601.562,
+"dur": 3.204,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12a_7d9f97362d.wav",
+"read": "おおたしのぶは、唯一の対戦けいけん者だ。"
 },
 {
 "id": "f12a2",
 "kind": "r",
-"start": 240.487,
-"end": 247.637,
+"start": 601.782,
+"end": 608.932,
 "dur": 7.15
+},
+{
+"id": "f12a3",
+"kind": "n",
+"start": 609.112,
+"end": 618.075,
+"dur": 8.963,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12a3_44c77e61e1.wav",
+"read": "いちラウンドは、さんにんのジャッジ全員が自分につけた。きんてきを受けるまでは優勢だった。俺のせいで評価が上がっていると話す。"
 },
 {
 "id": "f12b",
 "kind": "n",
-"start": 247.817,
-"end": 252.182,
+"start": 618.295,
+"end": 622.661,
 "dur": 4.365,
 "wav": "subtitles/out/rizin55_yosou/wavs/f12b_dfbe05200e.wav",
 "read": "ただ本音を言えば、自分に勝ったティレノフに勝ってほしいとも話す。"
@@ -438,89 +913,179 @@
 {
 "id": "f12c",
 "kind": "n",
-"start": 252.402,
-"end": 257.782,
-"dur": 4.83,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12c_85a0c9b69e.wav",
-"read": "あおきしんや選手は、井上がだげきでポイントを重ねて圧倒するとよむ。"
+"start": 622.881,
+"end": 627.889,
+"dur": 4.458,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12c_c84c047409.wav",
+"read": "あおきしんやは、井上がだげきでポイントを重ねて圧倒するとよむ。"
+},
+{
+"id": "f12c2",
+"kind": "n",
+"start": 628.109,
+"end": 635.539,
+"dur": 7.43,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12c2_106a2feab8.wav",
+"read": "構えが綺麗で、まっすぐ打てる。きめるほどの組みもある。だげき戦で井上が負けるイメージはないという。"
 },
 {
 "id": "f12d",
 "kind": "n",
-"start": 258.002,
-"end": 262.453,
-"dur": 3.901,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12d_ba68220405.wav",
-"read": "おうぎくぼひろまさ選手も、問題なく井上のはんてい勝ち。"
+"start": 635.759,
+"end": 640.024,
+"dur": 3.715,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12d_c4380242f3.wav",
+"read": "おうぎくぼひろまさも、問題なく井上のはんてい勝ち。"
+},
+{
+"id": "f12d2",
+"kind": "n",
+"start": 640.244,
+"end": 648.371,
+"dur": 8.127,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12d2_d8c14fe3c5.wav",
+"read": "自身も井上と戦い、ジャブとぶれないワンツーをたいかんした。距離をせいあつし、いつものはんてい勝ちになると見る。"
 },
 {
 "id": "f12e",
 "kind": "n",
-"start": 262.673,
-"end": 266.334,
-"dur": 3.111,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12e_68cc18133e.wav",
-"read": "あきもと きょうま選手も、井上のはんてい。"
+"start": 648.591,
+"end": 652.207,
+"dur": 3.065,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12e_d72411e368.wav",
+"read": "続いてあきもと きょうまも、井上のはんてい。"
 },
 {
 "id": "f12f",
 "kind": "n",
-"start": 266.554,
-"end": 269.937,
-"dur": 2.833,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12f_2c1486fb56.wav",
-"read": "いとうゆうき選手は、井上のバックチョーク。"
+"start": 652.427,
+"end": 655.577,
+"dur": 2.601,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12f_ab47d0d463.wav",
+"read": "いとうゆうきは、井上のはんてい勝ち。"
+},
+{
+"id": "f12f2",
+"kind": "n",
+"start": 655.797,
+"end": 662.438,
+"dur": 6.641,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12f2_cd3f8c8e53.wav",
+"read": "じゅうがつには、だげきで効かせてバックチョークと話していた。ティレノフのだげきには穴があると見ている。"
 },
 {
 "id": "f12g",
 "kind": "n",
-"start": 270.157,
-"end": 273.169,
-"dur": 2.461,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12g_c4b3e9825e.wav",
-"read": "かねはらまさのり選手も、井上。"
+"start": 662.658,
+"end": 665.205,
+"dur": 1.997,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12g_18194130cf.wav",
+"read": "かねはらまさのりも、井上。"
+},
+{
+"id": "f12g2",
+"kind": "n",
+"start": 665.425,
+"end": 674.063,
+"dur": 8.638,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12g2_23dfd251d9.wav",
+"read": "前半は井上が押す。後半のしっそくはあり得るが、ねわざでやられることはない。ジャブが良いのではんていだと話す。"
 },
 {
 "id": "f12h",
 "kind": "n",
-"start": 273.389,
-"end": 276.307,
-"dur": 2.368,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12h_d463b1341e.wav",
-"read": "うしくじゅんたろう選手、井上。"
+"start": 674.283,
+"end": 676.923,
+"dur": 2.09,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12h_e6ed42f238.wav",
+"read": "うしくじゅんたろう、井上。"
 },
 {
 "id": "f12j",
 "kind": "n",
-"start": 276.527,
-"end": 279.306,
-"dur": 2.229,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12j_31d2205467.wav",
-"read": "いざわせいか選手、井上。"
+"start": 677.143,
+"end": 679.504,
+"dur": 1.811,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12j_ed79537f71.wav",
+"read": "いざわせいか、井上。"
 },
 {
 "id": "f12k",
 "kind": "n",
-"start": 279.526,
-"end": 284.767,
-"dur": 4.69,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12k_d83aa7cbf9.wav",
-"read": "そしてさえきしげるだいひょうも、最後は井上のペースになると話す。"
+"start": 679.724,
+"end": 684.871,
+"dur": 4.598,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12k_749b7be1e0.wav",
+"read": "ディープだいひょうのさえきしげるも、最後は井上のペースになると話す。"
+},
+{
+"id": "f12k2",
+"kind": "n",
+"start": 685.091,
+"end": 689.264,
+"dur": 3.622,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12k2_ed714ca3dc.wav",
+"read": "きたかただいちは井上。いっぽんまであると見る。"
+},
+{
+"id": "f12k3",
+"kind": "n",
+"start": 689.484,
+"end": 700.815,
+"dur": 11.331,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12k3_9f554a42a4.wav",
+"read": "きるぎす勢はレスリングが強い。だがじゅうじゅつ的な攻撃への反応は、フィジカル頼みだという。タックルに来たところで背中を取れば、バックチョークまで行けるとよむ。"
+},
+{
+"id": "f12k4",
+"kind": "n",
+"start": 701.035,
+"end": 703.257,
+"dur": 1.672,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12k4_e25ede591e.wav",
+"read": "あんどうたつやも井上。"
+},
+{
+"id": "f12k5",
+"kind": "n",
+"start": 703.477,
+"end": 713.043,
+"dur": 9.567,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12k5_8b4d3426bc.wav",
+"read": "海外でライジンをだいひょうして勝ったことで、さらに強くなった。作戦を立ててすいこうする力は、ばんたむきゅうで一番だと話す。"
+},
+{
+"id": "f12k6",
+"kind": "n",
+"start": 713.263,
+"end": 715.625,
+"dur": 1.811,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12k6_e0f1fcbd59.wav",
+"read": "いのうえゆうさくも井上。"
+},
+{
+"id": "f12k7",
+"kind": "n",
+"start": 715.845,
+"end": 724.157,
+"dur": 8.313,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12k7_ff09d8456d.wav",
+"read": "おおたの話を信じるなら、井上のエムエムエー力がいちまいうえ。リーチとジャブで遠い距離から削り、はんていで勝つと見る。"
 },
 {
 "id": "f12m",
 "kind": "n",
-"start": 284.987,
-"end": 287.587,
-"dur": 2.601,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12m_8e6f6ddcc9.wav",
-"read": "きゅうたいゼロ。井上で決まりか。"
+"start": 724.377,
+"end": 727.257,
+"dur": 2.879,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12m_f202b4ecf2.wav",
+"read": "じゅうにたいゼロ。井上で決まりか。"
 },
 {
 "id": "f12n",
 "kind": "n",
-"start": 287.807,
-"end": 289.318,
+"start": 727.477,
+"end": 728.987,
 "dur": 0.511,
 "wav": "subtitles/out/rizin55_yosou/wavs/f12n_905931e69c.wav",
 "read": "だが。"
@@ -528,96 +1093,150 @@
 {
 "id": "f12p",
 "kind": "n",
-"start": 289.538,
-"end": 295.8,
-"dur": 5.712,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12p_9437d98b49.wav",
-"read": "おおたのセコンドで、ティレノフを間近で見たすぎやまこうへい選手は違う答えを出した。"
+"start": 729.207,
+"end": 735.052,
+"dur": 5.294,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12p_3d3493185a.wav",
+"read": "おおたのセコンドで、ティレノフを間近で見たすぎやまこうへいは違う答えを出した。"
+},
+{
+"id": "f12p2",
+"kind": "n",
+"start": 735.272,
+"end": 743.677,
+"dur": 8.406,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12p2_4673a84ee5.wav",
+"read": "しぇいどらえふとの過酷な練習で、スタミナもある。組みで井上を削り、体力勝負に持ち込めばティレノフが勝つと見る。"
 },
 {
 "id": "f12q",
 "kind": "n",
-"start": 296.02,
-"end": 298.706,
-"dur": 2.136,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12q_f0bd218586.wav",
-"read": "じょびんさんは絶対にティレノフ。"
+"start": 743.897,
+"end": 746.537,
+"dur": 2.09,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12q_8f2bb82f40.wav",
+"read": "じょびんは絶対にティレノフ。"
+},
+{
+"id": "f12q2",
+"kind": "n",
+"start": 746.757,
+"end": 753.444,
+"dur": 6.687,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12q2_c9283add62.wav",
+"read": "サバテロより強いとまで評価する。井上は後半にしっそくし、どんどんけずられていくとよむ。"
 },
 {
 "id": "f12r",
 "kind": "n",
-"start": 298.926,
-"end": 305.699,
-"dur": 6.223,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12r_e98eafba0b.wav",
-"read": "かわじりたつやさんもティレノフ。組まれてけずられ、後半に落ちる姿が見えると語った。"
+"start": 753.664,
+"end": 760.252,
+"dur": 6.037,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12r_f3f602b8a2.wav",
+"read": "かわじりたつやもティレノフ。組まれてけずられ、後半に落ちる姿が見えると語った。"
 },
 {
 "id": "f12s",
 "kind": "n",
-"start": 305.919,
-"end": 310.463,
+"start": 760.472,
+"end": 765.015,
 "dur": 3.994,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12s_c33efcbc2a.wav",
-"read": "ストラッサーきいち選手は、話しながら考えを変えてティレノフ。"
+"wav": "subtitles/out/rizin55_yosou/wavs/f12s_5895e54eb2.wav",
+"read": "ストラッサーきいちは、話しながら考えを変えてティレノフ。"
+},
+{
+"id": "f12s2",
+"kind": "n",
+"start": 765.235,
+"end": 774.291,
+"dur": 9.056,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12s2_ec1f765396.wav",
+"read": "いちラウンドは井上。だがにじゅうにさいのティレノフは成長のまっただなかだ。後半から圧をかけ、残りのラウンドを取ると見る。"
 },
 {
 "id": "f12t",
 "kind": "n",
-"start": 310.683,
-"end": 315.652,
-"dur": 4.969,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12t_49b7f1ba53.wav",
-"read": "きゅうたいよん。そしてもうひとり、答えが動いた男がいる。"
+"start": 774.511,
+"end": 779.666,
+"dur": 5.155,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12t_4f9b4a159c.wav",
+"read": "じゅうにたいよん。そしてもうひとり、答えが動いた男がいる。"
 },
 {
 "id": "f12u",
 "kind": "n",
-"start": 315.872,
-"end": 320.834,
-"dur": 4.412,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12u_430df2de8b.wav",
-"read": "いしわたりしんたろうさん。じゅうがつじゅうごにちは、ティレノフ。"
+"start": 779.886,
+"end": 784.244,
+"dur": 3.808,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12u_f1dece2f92.wav",
+"read": "いしわたりしんたろう。じゅうがつじゅうごにちは、ティレノフ。"
 },
 {
 "id": "f12v",
 "kind": "n",
-"start": 321.054,
-"end": 322.54,
-"dur": 1.486,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12v_df0d5279c9.wav",
-"read": "ところが、じゅうにちご。"
+"start": 784.464,
+"end": 786.275,
+"dur": 1.811,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12v_0e6787faaa.wav",
+"read": "ところが、じゅうににちご。"
 },
 {
 "id": "f12w",
 "kind": "r",
-"start": 322.76,
-"end": 331.46,
+"start": 786.495,
+"end": 795.195,
 "dur": 8.7
 },
 {
 "id": "f12x",
 "kind": "n",
-"start": 331.64,
-"end": 338.002,
+"start": 795.375,
+"end": 801.737,
 "dur": 6.362,
 "wav": "subtitles/out/rizin55_yosou/wavs/f12x_18bb55afe7.wav",
 "read": "ティレノフはパンチのつなぎが重い。そこに井上のワンツーが先に入ると考えを改めた。"
 },
 {
+"id": "f12x2",
+"kind": "n",
+"start": 801.957,
+"end": 807.291,
+"dur": 4.783,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12x2_5c21b9aa5b.wav",
+"read": "さいとうゆたかは井上を応援しつつも、非常に危険な相手だと見る。"
+},
+{
+"id": "f12x3",
+"kind": "n",
+"start": 807.511,
+"end": 815.545,
+"dur": 8.034,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12x3_7c0151b423.wav",
+"read": "勝負の分かれ目は、井上の長い距離にティレノフが入ってこられるか。フィジカルでごういんに突破してくる気もするという。"
+},
+{
+"id": "f12x4",
+"kind": "n",
+"start": 815.765,
+"end": 821.284,
+"dur": 4.969,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12x4_1d9901fbfa.wav",
+"read": "チャーリーかしわは、ティレノフにとって井上は過去最強の相手だと話す。"
+},
+{
 "id": "f12y",
 "kind": "n",
-"start": 338.222,
-"end": 343.702,
-"dur": 5.48,
-"wav": "subtitles/out/rizin55_yosou/wavs/f12y_48634c0558.wav",
-"read": "じゅったいよん。井上が距離を支配するのか。ティレノフがけずりきるのか。"
+"start": 821.504,
+"end": 827.495,
+"dur": 5.991,
+"wav": "subtitles/out/rizin55_yosou/wavs/f12y_ebb571a775.wav",
+"read": "じゅうさんたいよん。井上が距離を支配するのか。ティレノフがけずりきるのか。"
 },
 {
 "id": "f13i",
 "kind": "n",
-"start": 343.922,
-"end": 352.003,
+"start": 827.715,
+"end": 835.795,
 "dur": 8.081,
 "wav": "subtitles/out/rizin55_yosou/wavs/f13i_e9ef9ced62.wav",
 "read": "そしてメインイベント。ふらいきゅうタイトルマッチ。王者、しんりゅうまことのしょぼうえいせん。挑むのはトニーララミー。"
@@ -625,80 +1244,188 @@
 {
 "id": "f13a",
 "kind": "n",
-"start": 352.223,
-"end": 359.182,
-"dur": 6.409,
-"wav": "subtitles/out/rizin55_yosou/wavs/f13a_73c7fd877b.wav",
-"read": "ろくがつ、この王者に敗れたおうぎくぼひろまさ選手。答えはしんりゅうのはんてい勝ち。"
+"start": 836.015,
+"end": 842.788,
+"dur": 6.223,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13a_4d8a1ad61c.wav",
+"read": "ろくがつ、この王者に敗れたおうぎくぼひろまさ。答えはしんりゅうのはんてい勝ち。"
 },
 {
 "id": "f13b",
 "kind": "n",
-"start": 359.402,
-"end": 365.207,
+"start": 843.008,
+"end": 848.813,
 "dur": 5.805,
 "wav": "subtitles/out/rizin55_yosou/wavs/f13b_f022e9f2ba.wav",
 "read": "自分を倒した男を、選んだ。ただし、接戦になると付け加えている。"
 },
 {
+"id": "f13b2",
+"kind": "n",
+"start": 849.033,
+"end": 858.693,
+"dur": 9.66,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13b2_34379d8d88.wav",
+"read": "しんりゅうは距離とスピードが上がった。しゃていに入らず、遠い距離からまっすぐのパンチを当てる。じれて飛び込んだところに、タックルが入ると見る。"
+},
+{
 "id": "f13c",
 "kind": "n",
-"start": 365.427,
-"end": 369.042,
-"dur": 3.065,
-"wav": "subtitles/out/rizin55_yosou/wavs/f13c_0a4989a2e6.wav",
-"read": "あきもと きょうま選手、しんりゅうのはんてい。"
+"start": 858.913,
+"end": 862.342,
+"dur": 2.879,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13c_796e7f4b74.wav",
+"read": "あきもと きょうま、しんりゅうのはんてい。"
 },
 {
 "id": "f13d",
 "kind": "n",
-"start": 369.262,
-"end": 372.83,
-"dur": 3.019,
-"wav": "subtitles/out/rizin55_yosou/wavs/f13d_46ea7b1359.wav",
-"read": "やちゆうすけ選手、しんりゅうのいっぽん。"
+"start": 862.562,
+"end": 865.62,
+"dur": 2.508,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13d_00e1bba1e6.wav",
+"read": "やちゆうすけ、しんりゅうのいっぽん。"
 },
 {
 "id": "f13e",
 "kind": "n",
-"start": 373.05,
-"end": 376.851,
-"dur": 3.251,
-"wav": "subtitles/out/rizin55_yosou/wavs/f13e_044ef3d29e.wav",
-"read": "両者と戦ったいとうゆうき選手も、しんりゅう。"
+"start": 865.84,
+"end": 873.541,
+"dur": 7.152,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13e_ea9fccd773.wav",
+"read": "両者と戦ったいとうゆうきもしんりゅう。応援はララミーだが、ひゃくまんえんかけるならしんりゅうだという。"
+},
+{
+"id": "f13e2",
+"kind": "n",
+"start": 873.761,
+"end": 880.542,
+"dur": 6.78,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13e2_dedb706d4d.wav",
+"read": "ララミーの攻撃を外して当て、最後に嫌なタックルを見せる。はんていでしんりゅうが勝つとよむ。"
 },
 {
 "id": "f13f",
 "kind": "n",
-"start": 377.071,
-"end": 380.593,
-"dur": 2.972,
-"wav": "subtitles/out/rizin55_yosou/wavs/f13f_1ffb41a6ea.wav",
-"read": "うしくじゅんたろう選手も、しんりゅうと答えた。"
+"start": 880.762,
+"end": 886.467,
+"dur": 5.155,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13f_d8501c874c.wav",
+"read": "うしくじゅんたろうもしんりゅう。にラウンドの後半から、フィニッシュもあると見る。"
 },
 {
 "id": "f13g",
 "kind": "n",
-"start": 380.813,
-"end": 385.264,
-"dur": 3.901,
-"wav": "subtitles/out/rizin55_yosou/wavs/f13g_e57d4fe80e.wav",
-"read": "じょびんさんはおうぎくぼ戦よりも明確に勝つと断言した。"
+"start": 886.687,
+"end": 890.905,
+"dur": 3.669,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13g_6f51516872.wav",
+"read": "じょびんはおうぎくぼ戦よりも明確に勝つと断言した。"
+},
+{
+"id": "f13g2",
+"kind": "n",
+"start": 891.125,
+"end": 900.042,
+"dur": 8.916,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13g2_8384c29001.wav",
+"read": "おうぎくぼにあの勝ち方ができるなら、ララミーにもできる。だげきのスピードが違い、ララミーの攻撃が当たるとは思えないと話す。"
+},
+{
+"id": "f13g3",
+"kind": "n",
+"start": 900.262,
+"end": 903.273,
+"dur": 2.461,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13g3_23fdcf8aad.wav",
+"read": "かねはらまさのりもしんりゅうのはんてい。"
+},
+{
+"id": "f13g4",
+"kind": "n",
+"start": 903.493,
+"end": 907.526,
+"dur": 3.483,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13g4_2f5ec56f70.wav",
+"read": "さえきしげるは、しんりゅうがていくだうんを取ると見る。"
+},
+{
+"id": "f13g5",
+"kind": "n",
+"start": 907.746,
+"end": 914.565,
+"dur": 6.269,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13g5_58a97e7b86.wav",
+"read": "きたかただいちは、しんりゅうのさんたいゼロはんていが、この大会でいちばん固いと言い切る。"
+},
+{
+"id": "f13g6",
+"kind": "n",
+"start": 914.785,
+"end": 925.838,
+"dur": 11.053,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13g6_c03df0043e.wav",
+"read": "ララミーはオーソドックス相手が得意だ。サウスポーのしんりゅうに外へ抜けられると、攻撃はちょくせんだけになる。れんだせんに付き合わなければ、フックは当たらないとよむ。"
+},
+{
+"id": "f13g7",
+"kind": "n",
+"start": 926.058,
+"end": 929.627,
+"dur": 3.019,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13g7_9fb4bf9973.wav",
+"read": "あんどうたつやは、期待を込めてしんりゅう。"
+},
+{
+"id": "f13g8",
+"kind": "n",
+"start": 929.847,
+"end": 936.441,
+"dur": 6.594,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13g8_cd50a32522.wav",
+"read": "ケーオーで決まるならララミー。だがさんラウンドまで行けば、しんりゅうのいっぽんかはんていだと見る。"
+},
+{
+"id": "f13g9",
+"kind": "n",
+"start": 936.661,
+"end": 940.555,
+"dur": 3.344,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13g9_e9b40c88f4.wav",
+"read": "おおたしのぶは、しんりゅうが組みで圧倒すると見る。"
+},
+{
+"id": "f13g10",
+"kind": "n",
+"start": 940.775,
+"end": 948.391,
+"dur": 7.616,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13g10_f0b375cb31.wav",
+"read": "だげきには付き合わず、すぐにタックル。おうぎくぼ戦のようにわきをさして固め、コツコツとラウンドを取るとよむ。"
+},
+{
+"id": "f13g11",
+"kind": "n",
+"start": 948.611,
+"end": 954.455,
+"dur": 5.294,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13g11_846bec6e13.wav",
+"read": "いのうえゆうさくもしんりゅう。ただしあいしょうは、ララミーに分があると話す。"
 },
 {
 "id": "f13h",
 "kind": "n",
-"start": 385.484,
-"end": 388.27,
-"dur": 2.786,
-"wav": "subtitles/out/rizin55_yosou/wavs/f13h_9cda8bd8e4.wav",
-"read": "ろくたいゼロ。王者でてっぱんか。"
+"start": 954.675,
+"end": 957.554,
+"dur": 2.879,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13h_603f9238cb.wav",
+"read": "じゅうにたいゼロ。王者でてっぱんか。"
 },
 {
 "id": "f13j",
 "kind": "n",
-"start": 388.49,
-"end": 390.341,
+"start": 957.774,
+"end": 959.625,
 "dur": 0.65,
 "wav": "subtitles/out/rizin55_yosou/wavs/f13j_905931e69c.wav",
 "read": "だが。"
@@ -706,78 +1433,96 @@
 {
 "id": "f13k",
 "kind": "n",
-"start": 390.561,
-"end": 394.129,
-"dur": 3.019,
-"wav": "subtitles/out/rizin55_yosou/wavs/f13k_76858ca499.wav",
-"read": "あおきしんや選手はあいしょうでララミーと見た。"
+"start": 959.845,
+"end": 962.995,
+"dur": 2.601,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13k_65919f4043.wav",
+"read": "あおきしんやはあいしょうでララミーと見た。"
 },
 {
 "id": "f13m",
 "kind": "n",
-"start": 394.349,
-"end": 400.804,
+"start": 963.215,
+"end": 969.67,
 "dur": 6.455,
 "wav": "subtitles/out/rizin55_yosou/wavs/f13m_9ba40485c9.wav",
 "read": "クリンチのこうぼうが得意なララミーは、遠い距離で戦いたいしんりゅうにとって嫌な相手だという。"
 },
 {
+"id": "f13m2",
+"kind": "n",
+"start": 969.89,
+"end": 977.785,
+"dur": 7.895,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13m2_33678978e5.wav",
+"read": "来日当初のララミーは、時差で調子が悪かった。今は日本での試合に慣れ、コンディションも上がっているという。"
+},
+{
 "id": "f13n",
 "kind": "r",
-"start": 401.024,
-"end": 406.324,
+"start": 978.005,
+"end": 983.305,
 "dur": 5.3
 },
 {
 "id": "f13p",
 "kind": "n",
-"start": 406.504,
-"end": 413.51,
+"start": 983.485,
+"end": 990.49,
 "dur": 6.455,
-"wav": "subtitles/out/rizin55_yosou/wavs/f13p_c676f5b23c.wav",
-"read": "かわじりたつやさんもララミー。だげきの圧力とパワーの中で、ていくだうんを奪うと見る。"
+"wav": "subtitles/out/rizin55_yosou/wavs/f13p_7c23d65301.wav",
+"read": "かわじりたつやもララミー。だげきの圧力とパワーの中で、ていくだうんを奪うと見る。"
+},
+{
+"id": "f13p2",
+"kind": "n",
+"start": 990.71,
+"end": 999.302,
+"dur": 8.591,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13p2_220593e980.wav",
+"read": "スピードはしんりゅうが圧倒的に上。それでもララミーと向き合えば、いっぱつもらったらやばいという中で戦うことになると話す。"
 },
 {
 "id": "f13q",
 "kind": "n",
-"start": 413.73,
-"end": 417.345,
-"dur": 3.065,
-"wav": "subtitles/out/rizin55_yosou/wavs/f13q_98f2ed5d6a.wav",
-"read": "ストラッサーきいち選手は、ララミーのはんてい。"
+"start": 999.522,
+"end": 1005.784,
+"dur": 5.712,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13q_3ad094b1c1.wav",
+"read": "ストラッサーきいちはララミーのはんてい。倒されてもたおしきられない強さを評価する。"
 },
 {
 "id": "f13r",
 "kind": "n",
-"start": 417.565,
-"end": 421.365,
-"dur": 3.251,
-"wav": "subtitles/out/rizin55_yosou/wavs/f13r_f4c0837ac4.wav",
-"read": "すぎやまこうへい選手も、ララミーのはんてい。"
+"start": 1006.004,
+"end": 1012.498,
+"dur": 5.944,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13r_d44fe877c4.wav",
+"read": "すぎやまこうへいもララミーのはんてい。圧をかけ続け、右の蹴りで削ると見る。"
 },
 {
 "id": "f13s",
 "kind": "n",
-"start": 421.585,
-"end": 425.626,
+"start": 1012.718,
+"end": 1016.758,
 "dur": 4.04,
-"wav": "subtitles/out/rizin55_yosou/wavs/f13s_dd646f45bb.wav",
-"read": "ろくたいご。答えを変えた男が、ここにもいる。"
+"wav": "subtitles/out/rizin55_yosou/wavs/f13s_263d00d6ed.wav",
+"read": "じゅうにたいご。答えを変えた男が、ここにもいる。"
 },
 {
 "id": "f13t",
 "kind": "n",
-"start": 425.846,
-"end": 431.55,
-"dur": 5.155,
-"wav": "subtitles/out/rizin55_yosou/wavs/f13t_df3da3e62d.wav",
-"read": "いしわたりしんたろうさん。じゅうがつここのかは、しんりゅうのいっぽんがち。"
+"start": 1016.978,
+"end": 1022.126,
+"dur": 4.598,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13t_e0f8580065.wav",
+"read": "いしわたりしんたろう。じゅうがつここのかは、しんりゅうのいっぽんがち。"
 },
 {
 "id": "f13u",
 "kind": "n",
-"start": 431.77,
-"end": 433.396,
+"start": 1022.346,
+"end": 1023.971,
 "dur": 1.625,
 "wav": "subtitles/out/rizin55_yosou/wavs/f13u_a110807f02.wav",
 "read": "ところが、むいかご。"
@@ -785,24 +1530,51 @@
 {
 "id": "f13v",
 "kind": "r",
-"start": 433.616,
-"end": 439.516,
+"start": 1024.191,
+"end": 1030.091,
 "dur": 5.9
+},
+{
+"id": "f13v3",
+"kind": "n",
+"start": 1030.271,
+"end": 1035.187,
+"dur": 4.365,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13v3_fe6be7d163.wav",
+"read": "チャーリーかしわは、スクランブルのこうぼうこそが見どころだと話す。"
+},
+{
+"id": "f13v4",
+"kind": "n",
+"start": 1035.407,
+"end": 1045.67,
+"dur": 10.263,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13v4_d3c32dad64.wav",
+"read": "両者とも組みが強く、押さえ込んでこうちゃくする展開にはならない。頭で考えるしんりゅうと、反射で戦うララミーの対比が面白いという。"
+},
+{
+"id": "f13v5",
+"kind": "n",
+"start": 1045.89,
+"end": 1053.081,
+"dur": 6.641,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13v5_492eb2e50f.wav",
+"read": "さいとうゆたかはしんりゅうの応援一択。その上で、組んでていくだうんを取る試合になると見る。"
 },
 {
 "id": "f13w",
 "kind": "n",
-"start": 439.696,
-"end": 441.657,
-"dur": 1.161,
-"wav": "subtitles/out/rizin55_yosou/wavs/f13w_5bf2b3e685.wav",
-"read": "ろくたいろく。"
+"start": 1053.301,
+"end": 1055.215,
+"dur": 1.115,
+"wav": "subtitles/out/rizin55_yosou/wavs/f13w_d5bbeccd36.wav",
+"read": "じゅうにたいろく。"
 },
 {
 "id": "f13x",
 "kind": "n",
-"start": 441.877,
-"end": 445.36,
+"start": 1055.435,
+"end": 1058.918,
 "dur": 3.483,
 "wav": "subtitles/out/rizin55_yosou/wavs/f13x_a4ad77c656.wav",
 "read": "王者のしょぼうえいか。しんおうじゃの誕生か。"
@@ -810,21 +1582,21 @@
 {
 "id": "e1",
 "kind": "n",
-"start": 445.58,
-"end": 456.772,
-"dur": 11.192,
-"wav": "subtitles/out/rizin55_yosou/wavs/e1_987c6f8079.wav",
-"read": "第五試合はさんたいに。第九試合はろくたいいち。第十試合ははったいいち。第十二試合はじゅったいよん。そしてメインは、ろくたいろく。"
+"start": 1059.138,
+"end": 1070.423,
+"dur": 11.285,
+"wav": "subtitles/out/rizin55_yosou/wavs/e1_ede1c247d3.wav",
+"read": "第五試合はごたいよん。第九試合はじゅうさんたいいち。第十試合はじゅういちたいに。第十二試合はじゅうさんたいよん。そしてメインは、じゅうにたいろく。"
 },
 {
 "id": "e2",
 "kind": "n",
-"start": 456.992,
-"end": 462.054,
+"start": 1070.643,
+"end": 1075.705,
 "dur": 5.062,
 "wav": "subtitles/out/rizin55_yosou/wavs/e2_f1682a3f79.wav",
 "read": "十一月八日。最後に答えを出すのは、ケージの中のふたりだ。"
 }
 ],
-"total": 463.274
+"total": 1076.925
 }
