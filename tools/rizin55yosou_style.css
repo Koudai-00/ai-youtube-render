@@ -54,10 +54,10 @@ b.r{color:var(--lr)}b.b{color:var(--lb)}
 .lineup{inset:0}.lh{position:absolute;top:0;bottom:0;width:50%;overflow:hidden}.lh.red{left:0;background:radial-gradient(circle at 40% 40%,#E8192C,#470109)}.lh.blue{left:50%;background:radial-gradient(circle at 60% 40%,#0F6FFF,#020F3D)}
 .lw{position:absolute;left:0;right:0;top:300px;text-align:center;font-family:Dela;line-height:1;opacity:.3;white-space:nowrap}
 .lr{position:absolute;left:0;right:0;bottom:0;height:640px;display:flex;justify-content:center}
-.lu{position:relative;flex:none;height:640px}.lu img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);max-width:none}
+.lu{position:relative;flex:none;height:640px}.lrn{z-index:3;pointer-events:none}.lu img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);max-width:none}
 .lu img.ff{bottom:140px;object-fit:cover;background:#fff;padding:5px}
-.lu span{position:absolute;left:-30px;right:-30px;bottom:150px;z-index:2;text-align:center;font-weight:800;paint-order:stroke fill;-webkit-text-stroke:7px #000;white-space:nowrap}
-.lu span.vt{writing-mode:vertical-rl;left:50%;right:auto;transform:translateX(-50%);bottom:120px}
+.lu span{position:absolute;left:-30px;right:-30px;bottom:275px;z-index:2;text-align:center;font-weight:800;paint-order:stroke fill;-webkit-text-stroke:7px #000;white-space:nowrap}
+.lu span.vt{writing-mode:vertical-rl;left:50%;right:auto;transform:translateX(-50%);bottom:275px}
 .sc{position:absolute;left:0;right:0;top:100px;display:flex;justify-content:center;gap:24px;font-family:AntonL;font-size:280px;line-height:1;paint-order:stroke fill;-webkit-text-stroke:14px #000}.sc i{font-style:normal}.sc b{font-weight:400}
 .slash{position:absolute;left:50%;top:-20px;bottom:-20px;width:14px;background:#fff;transform:translateX(-50%) rotate(4deg)}
 .split{inset:0}.spl{position:absolute;top:0;bottom:0;width:50%;display:flex;align-items:center;justify-content:center;padding-bottom:150px;font-family:Dela;font-size:104px;line-height:1.25;text-align:center;paint-order:stroke fill;-webkit-text-stroke:12px #000}.spl.r{left:0;background:linear-gradient(to right,rgba(232,25,44,.55),rgba(232,25,44,.12))}.spl.b{left:50%;background:linear-gradient(to left,rgba(15,111,255,.55),rgba(15,111,255,.12))}

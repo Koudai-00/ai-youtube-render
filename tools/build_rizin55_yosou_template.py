@@ -21,7 +21,7 @@ def video(src, s, e, ms=0, z=1, fx=.5, fy=.5, push=.04, side=None, gray=False):
     n[0] += 1; i = n[0]; W = 960 if side else 1920
     tx = W / 2 - 1920 * z * fx; ty = 540 - 1080 * z * fy; tx = min(0, max(tx, W - 1920 * z)); ty = min(0, max(ty, 1080 - 1080 * z))
     pos = f"left:{W if side == 'r' else 0}px;width:{W}px" + (";filter:grayscale(.9) brightness(.6)" if gray else "")
-    st, du = attr(s, e); m = round(ms + max(0, W0 - s), 3)
+    st, du = attr(s, e + .4); m = round(ms + max(0, W0 - s), 3)  # +.4s: 次の映像の初フレーム待ちで黒が出ないよう下に残す
     trk = (3 if side == "l" else 4) if side else i % 2 + 1
     vid.append(f'<div class="vw" id="w{i}" style="{pos}"><video id="v{i}" class="clip" data-start="{st}" data-duration="{du}" data-track-index="{trk}" data-media-start="{m}" src="assets/{src}.mp4" muted playsinline style="width:1920px;height:1080px;transform-origin:0 0;transform:translate({tx:.1f}px,{ty:.1f}px) scale({z})"></video></div>')
     J(s, e, f'tl.fromTo("#w{i}",{{scale:1}},{{scale:{1 + push},duration:{round(e - s, 3)},ease:"none"}},{round(s, 3)});')
@@ -85,7 +85,7 @@ def color(x, F):
     if not F: return x
     for nm, cl in ((F["l"], "r"), (F["r"], "b")): x = x.replace(nm, f'<b class="{cl}">{nm}</b>')
     return x
-BG_ALIAS = {"f12ishi": ("pred/f12_ishi_b", 2), "f12ishi_a": ("pred/f12_ishi_a", 4), "f12ishi_a2": ("pred/f12_ishi_a", 26), "f13_ishi_a": ("pred/f13_ishi_a", 4), "f13_ishi_b": ("pred/f13_ishi_b", 4)}
+BG_ALIAS = {"f12ishi": ("pred/f12_ishi_b", 2), "f12ishi_a": ("pred/f12_ishi_a", 9), "f12ishi_a2": ("pred/f12_ishi_a", 26), "f13_ishi_a": ("pred/f13_ishi_a", 4), "f13_ishi_b": ("pred/f13_ishi_b", 4)}
 USED = {}
 def bgv(name, dur):
     if name in BG_ALIAS: return BG_ALIAS[name]
@@ -142,13 +142,14 @@ def add_score(sec, who, pick, t, flip=False):
     L[pick].append(who)
 SHORT = {"ストラッサー起一": "ストラッサー", "扇久保博正": "扇久保", "ジョビン": "ジョビン"}
 def lineup_col(a, c, i):
-    w = min(235, int(920 / max(1, len(a)))); ih = min(600, int(w * 2.55)); fz = 40 if w >= 190 else 30; o = ""
+    w = min(235, int(920 / max(1, len(a)))); ih = min(600, int(w * 2.55)); fz = 40 if w >= 190 else 30; o = ""; nmrow = ""
     for j, p in enumerate(a):
         nmf, key, _ = SC.P[p]; short = SHORT.get(nmf, nmf[:2])
         im = f'<img class="ff" src="assets/cut/{key}.jpg" style="width:{int(w * .92)}px;height:{int(w * .92)}px">' if isframe(key) else f'<img src="assets/cut/{key}.png" style="height:{ih}px">'
         vt = ' class="vt"' if w < 150 else ""
-        o += f'<div class="lu" id="lu{i}{c}{j}" style="width:{w}px">{im}<span{vt} style="font-size:{fz}px">{short}</span></div>'
-    return o
+        o += f'<div class="lu" id="lu{i}{c}{j}" style="width:{w}px">{im}</div>'
+        nmrow += f'<div class="lu" id="lu{i}{c}{j}n" style="width:{w}px"><span{vt} style="font-size:{fz}px">{short}</span></div>'
+    return o + f'</div><div class="lr lrn">{nmrow}'  # 名前は別レイヤー(全員の写真より上)
 first_seen = set()
 for i, b in enumerate(SS):
     t = TB[b["id"]]; s, e = t["start"], t["end"]; sec = b.get("sec", "op"); F = SC.FIGHTS.get(sec)
@@ -214,7 +215,7 @@ for i, b in enumerate(SS):
                 timed("lineup", s, vis_e, f'<div class="lh red"><div class="lw" style="font-size:{min(300, int(860 / len(F["l"])))}px">{F["l"]}</div><div class="lr">{lineup_col(L["l"], "r", i)}</div></div><div class="lh blue"><div class="lw" style="font-size:{min(300, int(860 / len(F["r"])))}px">{F["r"]}</div><div class="lr">{lineup_col(L["r"], "b", i)}</div></div><div class="sc" id="sc{i}"><b>{sc["l"]}</b><i>:</i><b>{sc["r"]}</b></div><div class="slash"></div>', idv=f"lua{i}", z=22)
                 for j in range(max(len(L["l"]), len(L["r"]))):
                     for c, lst in (("r", L["l"]), ("b", L["r"])):
-                        if j < len(lst): J(s, e, f'tl.from("#lu{i}{c}{j}",{{y:520,duration:.26,ease:"back.out(1.3)"}},{s + .05 + j * .08:.3f});')
+                        if j < len(lst): J(s, e, f'tl.from("#lu{i}{c}{j}",{{y:520,duration:.26,ease:"back.out(1.3)"}},{s + .05 + j * .08:.3f});tl.from("#lu{i}{c}{j}n",{{y:520,duration:.26,ease:"back.out(1.3)"}},{s + .05 + j * .08:.3f});')
                     hit(s + .05 + j * .08, "thud")
                 J(s, e, f'tl.from("#sc{i}",{{scale:3,opacity:0,duration:.2,ease:"power4.in"}},{s + .3:.3f});'); flash(s, "#fff", .9, .3); shake(f"#lua{i}", s + .5, 22, .3); hit(s + .5, "boom")
             if b.get("title_at"):
