@@ -85,7 +85,7 @@ def color(x, F):
     if not F: return x
     for nm, cl in ((F["l"], "r"), (F["r"], "b")): x = x.replace(nm, f'<b class="{cl}">{nm}</b>')
     return x
-BG_ALIAS = {"f12ishi": ("pred/f12_ishi_b", 2), "f12ishi_a": ("pred/f12_ishi_a", 9), "f12ishi_a2": ("pred/f12_ishi_a", 26), "f13_ishi_a": ("pred/f13_ishi_a", 4), "f13_ishi_b": ("pred/f13_ishi_b", 4)}
+BG_ALIAS = {"f12ishi": ("pred/f12_ishi_b", 36), "f12ishi_a": ("pred/f12_ishi_a", 9), "f12ishi_a2": ("pred/f12_ishi_a", 26), "f13_ishi_a": ("pred/f13_ishi_a", 4), "f13_ishi_b": ("pred/f13_ishi_b", 4)}
 USED = {}
 def bgv(name, dur):
     if name in BG_ALIAS: return BG_ALIAS[name]
