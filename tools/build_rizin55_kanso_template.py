@@ -37,8 +37,8 @@ def timed(cls, s, e, inner, idv=None, z=None):
     if OV(s, e) and min(e, W1) - max(s, W0) > .02:
         st, du = attr(s, e); zs = f"z-index:{z};" if z else ""
         ov.append(f'<div id="{i}" class="clip {cls}" data-start="{st}" data-duration="{du}" data-track-index="{tk[0]}" style="{zs}">{inner}</div>')
-        # 表示/非表示をGSAPでも明示する（層合成モードのピースでは clip の自動切替が効かず前のテロップが残るため。2026-11-09）
-        js.append(f'tl.set("#{i}",{{visibility:"hidden"}},{W0:.3f});tl.set("#{i}",{{visibility:"visible"}},{max(s, W0):.3f});tl.set("#{i}",{{visibility:"hidden"}},{e:.3f});')
+        # 表示/非表示をGSAPのopacityで明示する（visibilityは層合成で上書きされる。層合成モードのピースでは clip の自動切替が効かず前のテロップが残るため。2026-11-09）
+        js.append(f'tl.set("#{i}",{{opacity:0}},{W0:.3f});tl.set("#{i}",{{opacity:1}},{max(s, W0):.3f});tl.set("#{i}",{{opacity:0}},{e:.3f});')
     return i
 def flash(t, c="#fff", a=.9, d=.22):
     J(t, t + d, f'tl.set("#fl",{{background:"{c}"}},{t:.3f});tl.fromTo("#fl",{{opacity:{a}}},{{opacity:0,duration:{d},ease:"power2.out"}},{t:.3f});')
