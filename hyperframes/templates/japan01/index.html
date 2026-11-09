@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family:'NotoB'; src:url('assets/fonts/NotoSansJP-Black.otf') format('opentype'); }
+@font-face { font-family:'NotoBd'; src:url('assets/fonts/NotoSansJP-Bold.otf') format('opentype'); }
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#000; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden;
+  background:#07080b; font-family:'NotoB','NotoBd',sans-serif; color:#f2f1ec; }
+#stage { position:absolute; inset:0; }
+.clip { position:absolute; inset:0; width:100%; height:100%; }
+video.bgv { object-fit:cover; transform:translateZ(0); backface-visibility:hidden; }
+em { font-style:normal; color:#e8322e; }
+/* overlays */
+#scan { position:absolute; inset:0; z-index:40; pointer-events:none; opacity:.14;
+  background:repeating-linear-gradient(0deg, rgba(0,0,0,.55) 0 2px, rgba(0,0,0,0) 2px 5px); }
+#vig { position:absolute; inset:0; z-index:41; pointer-events:none;
+  background:radial-gradient(ellipse 115% 105% at 50% 46%, rgba(0,0,0,0) 58%, rgba(0,0,0,.52) 100%); }
+#flash { position:absolute; inset:0; z-index:60; background:#e9e6df; opacity:0; pointer-events:none; }
+.gl { position:absolute; left:-80px; right:-80px; z-index:59; opacity:0; pointer-events:none; }
+#gl1 { background:rgba(232,50,46,.55); }
+#gl2 { background:rgba(70,224,212,.45); }
+#gl3 { background:rgba(242,241,236,.75); }
+/* quote overlays */
+.qov { z-index:10; }
+.qscrim { position:absolute; left:0; right:0; bottom:0; height:460px;
+  background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(2,3,5,.62) 42%, rgba(2,3,5,.86) 100%); }
+.ch1scrim { position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(2,3,5,.35) 0%, rgba(2,3,5,.72) 70%, rgba(2,3,5,.9) 100%); }
+.credit { position:absolute; top:34px; right:44px; font-family:'NotoBd'; font-size:26px;
+  color:rgba(242,241,236,.85); background:rgba(5,6,9,.55); padding:8px 18px; border-left:4px solid #e8322e; }
+.qcap { position:absolute; left:0; right:0; bottom:150px; text-align:center; font-size:84px;
+  letter-spacing:.02em; text-shadow:0 4px 26px rgba(0,0,0,.9), 0 0 2px rgba(0,0,0,.9); opacity:0; }
+.qcap2 { bottom:56px; }
+.qsub { position:absolute; left:0; right:0; bottom:66px; text-align:center; font-family:'NotoBd';
+  font-size:34px; color:rgba(242,241,236,.8); text-shadow:0 2px 12px rgba(0,0,0,.9); opacity:0; }
+.stm { position:absolute; left:0; right:0; bottom:236px; text-align:center; font-size:72px;
+  text-shadow:0 4px 26px rgba(0,0,0,.92); opacity:0; }
+.stm2 { bottom:118px; font-size:92px; }
+.uline { position:absolute; left:50%; margin-left:-330px; bottom:-14px; width:660px; height:10px;
+  background:#e8322e; transform:scaleX(0); transform-origin:left; }
+/* lower third */
+.lt { position:absolute; left:70px; bottom:96px; display:flex; opacity:0; }
+.ltbar { width:12px; background:#e8322e; }
+.ltbody { background:rgba(5,6,9,.78); padding:22px 38px 24px 30px; }
+.ltname { font-size:52px; }
+.ltrole { font-family:'NotoBd'; font-size:28px; color:#ffb648; margin-top:6px; }
+.chips { position:absolute; right:70px; bottom:110px; display:flex; gap:22px; }
+.chip { font-size:36px; background:rgba(5,6,9,.72); border:2px solid #e8322e;
+  padding:12px 26px; border-radius:999px; opacity:0; }
+/* panels */
+.panel { z-index:10; background:#0c1016; }
+.phead { position:absolute; left:110px; top:50%; transform:translateY(-50%); width:720px;
+  font-size:80px; line-height:1.26; opacity:0; }
+.phline { width:230px; height:12px; background:#e8322e; margin-top:30px; transform-origin:left; transform:scaleX(0); }
+.irows { position:absolute; right:100px; top:50%; transform:translateY(-50%); width:880px; }
+.tline { position:absolute; left:-56px; top:14px; bottom:10px; width:6px; background:#2a3140;
+  transform-origin:top; transform:scaleY(0); }
+.irow { display:flex; align-items:center; gap:36px; margin-bottom:74px; opacity:0; }
+.irow:last-child { margin-bottom:0; }
+.iic { width:110px; height:110px; flex:none; color:#ffb648; background:#121825;
+  border:3px solid #232c3d; border-radius:18px; display:flex; align-items:center; justify-content:center; }
+.iic svg { width:64px; height:64px; }
+.iplace { font-size:30px; color:#e8322e; font-family:'NotoBd'; letter-spacing:.14em; }
+.idesc { font-size:44px; line-height:1.3; margin-top:4px; }
+/* diagram */
+.dhead { position:absolute; left:0; right:0; top:96px; text-align:center; font-size:86px; opacity:0; }
+.cnode { position:absolute; left:50%; top:54%; width:340px; height:340px; margin:-170px 0 0 -170px;
+  background:radial-gradient(circle at 50% 42%, #3a1113, #1c0a0c 70%); border:6px solid #e8322e; border-radius:50%;
+  display:flex; align-items:center; justify-content:center; text-align:center; font-size:64px; line-height:1.2;
+  box-shadow:0 0 90px rgba(232,50,46,.45); opacity:0; }
+.onode { position:absolute; width:150px; height:150px; margin:-75px 0 0 -75px; color:#8a93a0;
+  background:#121825; border:3px solid #2a3140; border-radius:50%; padding:26px; opacity:0; }
+.onode svg { width:100%; height:100%; }
+.arrow { position:absolute; width:250px; height:8px; background:linear-gradient(90deg, rgba(138,147,160,0), #e8322e);
+  opacity:0; }
+.arrow::after { content:''; position:absolute; right:-4px; top:-10px; border:14px solid transparent;
+  border-left:18px solid #e8322e; }
+.dnote { position:absolute; left:0; right:0; bottom:64px; text-align:center; font-family:'NotoBd';
+  font-size:34px; color:#8a93a0; opacity:0; }
+/* title */
+.tpanel { background:radial-gradient(ellipse 90% 80% at 50% 42%, #10151d 0%, #07080b 70%); }
+.glow { position:absolute; left:50%; top:50%; width:1500px; height:700px; margin:-350px 0 0 -750px;
+  background:radial-gradient(ellipse, rgba(232,50,46,.17), rgba(232,50,46,0) 65%); opacity:0; }
+.ttl-wrap { position:absolute; inset:0; }
+.ttl-top { position:absolute; left:0; right:0; top:286px; text-align:center; font-size:58px;
+  color:rgba(242,241,236,.92); letter-spacing:.06em; opacity:0; }
+.ttl-main, .ttl-ghost { position:absolute; left:0; right:0; top:380px; text-align:center;
+  font-size:170px; letter-spacing:.02em; }
+.ttl-main { opacity:0; text-shadow:0 10px 60px rgba(0,0,0,.8); }
+.ttl-ghost { opacity:0; }
+.ttl-r { color:#e8322e; transform:translateX(-9px); } .ttl-r em { color:#e8322e; }
+.ttl-b { color:#46e0d4; transform:translateX(9px); } .ttl-b em { color:#46e0d4; }
+.ttl-sub { position:absolute; left:0; right:0; top:648px; text-align:center; font-family:'NotoBd';
+  font-size:40px; color:#ffb648; letter-spacing:.1em; opacity:0; }
+/* cards */
+.chead { position:absolute; left:0; right:0; top:84px; text-align:center; font-family:'NotoBd';
+  font-size:36px; letter-spacing:.5em; color:#8a93a0; opacity:0; }
+.cgrid { position:absolute; left:90px; right:90px; top:190px; bottom:120px; display:flex; gap:34px; }
+.card { position:relative; flex:1; border-radius:14px; overflow:hidden; background:#121825; opacity:0; }
+.card img { position:absolute; width:auto; height:100%; left:50%; transform:translateX(-50%); filter:saturate(.85); }
+.cshade { position:absolute; inset:0; background:linear-gradient(180deg, rgba(2,3,5,.08) 35%, rgba(2,3,5,.88) 88%); }
+.cnum { position:absolute; left:26px; top:18px; font-size:54px; color:#e8322e; }
+.clab { position:absolute; left:0; right:0; bottom:34px; text-align:center; font-size:46px;
+  text-shadow:0 3px 14px rgba(0,0,0,.9); }
+/* chapter */
+.chno { position:absolute; left:150px; top:330px; font-size:56px; color:#e8322e; letter-spacing:.4em; opacity:0; }
+.chttl { position:absolute; left:144px; top:404px; font-size:150px; letter-spacing:.04em;
+  text-shadow:0 8px 50px rgba(0,0,0,.85); opacity:0; }
+.chsub { position:absolute; left:152px; top:624px; font-family:'NotoBd'; font-size:40px;
+  color:#ffb648; text-shadow:0 2px 14px rgba(0,0,0,.95); opacity:0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="root" data-width="1920" data-height="1080" data-start="0" data-duration="66.95">
+<div id="stage">
+<video id="qbv" class="clip bgv " data-start="0.5" data-duration="4.1" data-media-start="0.9" data-track-index="1" src="assets/bg/qb.mp4" muted playsinline></video>
+<div id="qbo" class="clip qov" data-start="0.5" data-duration="4.1" data-track-index="2" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="qb-c">一歩間違えば <em>最悪の事態</em>になるぞ</div></div>
+<video id="qdv" class="clip bgv " data-start="4.6" data-duration="4.7" data-media-start="0.6" data-track-index="3" src="assets/bg/qd.mp4" muted playsinline></video>
+<div id="qdo" class="clip qov" data-start="4.6" data-duration="4.7" data-track-index="4" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="qd-c">芸者は撮影の<em>"小道具"</em>じゃない</div></div>
+<video id="qcv" class="clip bgv " data-start="9.3" data-duration="3.8" data-media-start="0.7" data-track-index="5" src="assets/bg/qc.mp4" muted playsinline></video>
+<div id="qco" class="clip qov" data-start="9.3" data-duration="3.8" data-track-index="6" style=""><div class="qscrim"></div><div class="credit">引用: Japanese Immersion Lab</div><div class="qcap" id="qc-c"><em>出て行け。国へ帰れ。</em></div><div class="qsub" id="qc-s">— 日本好きの外国人が、店で投げつけられた言葉</div></div>
+<video id="qav" class="clip bgv " data-start="19.0" data-duration="6.4" data-media-start="0.6" data-track-index="7" src="assets/bg/qa.mp4" muted playsinline></video>
+<div id="qao" class="clip qov" data-start="19.0" data-duration="6.4" data-track-index="8" style=""><div class="qscrim"></div><div class="credit">引用: Axel in Japan</div><div class="qcap" id="qa-c1">君らは<em>2週間</em>で帰る</div><div class="qcap qcap2" id="qa-c2"><em>汚名</em>を背負うのは 残る俺たちだ</div></div>
+<video id="n01v" class="clip bgv " data-start="13.1" data-duration="5.9" data-media-start="0.0" data-track-index="9" src="assets/bg/dance.mp4" muted playsinline></video>
+<div id="n01o" class="clip qov" data-start="13.1" data-duration="5.9" data-track-index="10" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="stm" id="stm1">日本を愛する外国人が</div><div class="stm stm2" id="stm2"><em>"同じ外国人"</em>に怒っている<div class="uline" id="ul1"></div></div></div>
+<video id="n02v" class="clip bgv " data-start="25.4" data-duration="6.28" data-media-start="0.0" data-track-index="11" src="assets/bg/axel.mp4" muted playsinline></video>
+<div id="n02o" class="clip qov" data-start="25.4" data-duration="6.28" data-track-index="12" style=""><div class="qscrim"></div><div class="credit">引用: Axel in Japan</div><div class="lt" id="lt1"><div class="ltbar"></div><div class="ltbody"><div class="ltname">日本在住8年の外国人男性</div><div class="ltrole">Axel in Japan — 怒りの告白</div></div></div><div class="chips"><div class="chip" id="chip1">在住 8年</div><div class="chip" id="chip2">2児の父</div><div class="chip" id="chip3">会社経営</div></div></div>
+<div id="infop" class="clip panel" data-start="31.68" data-duration="11.36" data-track-index="13" style=""><div class="phead" id="ph1">怒るのは、<br>日本人だけじゃない<div class="phline" id="phl"></div></div><div class="irows"><div class="irow" id="i1"><div class="iic"><svg viewBox="0 0 48 48"><path d="M8 14h8l4-5h8l4 5h8a3 3 0 0 1 3 3v20a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V17a3 3 0 0 1 3-3z" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="27" r="7" fill="none" stroke="currentColor" stroke-width="3"/><line x1="6" y1="42" x2="42" y2="6" stroke="#e8322e" stroke-width="4"/></svg></div><div class="itx"><div class="iplace">祇園</div><div class="idesc">私道での撮影・立ち入りが禁止に</div></div></div><div class="irow" id="i2"><div class="iic"><svg viewBox="0 0 48 48"><path d="M4 40 L20 12 L24 18 L28 10 L44 40 Z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M18 16 L21 20 L25 14 L29 19" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></div><div class="itx"><div class="iplace">富士山</div><div class="idesc">ローソン前に「目隠し幕」設置</div></div></div><div class="irow" id="i3"><div class="iic"><svg viewBox="0 0 48 48"><rect x="10" y="6" width="28" height="30" rx="5" fill="none" stroke="currentColor" stroke-width="3"/><line x1="10" y1="22" x2="38" y2="22" stroke="currentColor" stroke-width="3"/><circle cx="17" cy="29" r="2.6" fill="currentColor"/><circle cx="31" cy="29" r="2.6" fill="currentColor"/><line x1="16" y1="42" x2="12" y2="36" stroke="currentColor" stroke-width="3"/><line x1="32" y1="42" x2="36" y2="36" stroke="currentColor" stroke-width="3"/></svg></div><div class="itx"><div class="iplace">鉄道会社</div><div class="idesc">車内ダンスに法的措置を検討へ</div></div></div><div class="tline" id="tl1"></div></div></div>
+<div id="diag" class="clip panel" data-start="43.04" data-duration="5.49" data-track-index="14" style=""><div class="dhead" id="dh1">怒りの矛先は <em>"同胞"</em>へ</div><div class="onode" id="on1" style="left:13%;top:22%"><svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="6.5" fill="currentColor"/><path d="M5 33 a13 11 0 0 1 26 0z" fill="currentColor"/></svg></div><div class="onode" id="on2" style="left:78%;top:16%"><svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="6.5" fill="currentColor"/><path d="M5 33 a13 11 0 0 1 26 0z" fill="currentColor"/></svg></div><div class="onode" id="on3" style="left:12%;top:68%"><svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="6.5" fill="currentColor"/><path d="M5 33 a13 11 0 0 1 26 0z" fill="currentColor"/></svg></div><div class="onode" id="on4" style="left:76%;top:72%"><svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="6.5" fill="currentColor"/><path d="M5 33 a13 11 0 0 1 26 0z" fill="currentColor"/></svg></div><div class="arrow" id="ar1" style="left:27%;top:33%;transform:rotate(35deg)"></div><div class="arrow" id="ar2" style="left:63%;top:29%;transform:rotate(145deg)"></div><div class="arrow" id="ar3" style="left:27%;top:63%;transform:rotate(-35deg)"></div><div class="arrow" id="ar4" style="left:62%;top:66%;transform:rotate(-145deg)"></div><div class="cnode" id="cn1"><span>迷惑<br>外国人</span></div><div class="dnote" id="dn1">日本を愛する外国人たち</div></div>
+<div id="titlebeat" class="clip panel tpanel" data-start="48.53" data-duration="7.22" data-track-index="15" style=""><div class="glow" id="tglow"></div><div class="ttl-wrap"><div class="ttl-top" id="tt1">なぜ、日本を愛する外国人は</div><div class="ttl-ghost ttl-r" id="ttr"><em>"同胞"</em>に怒るのか</div><div class="ttl-ghost ttl-b" id="ttb"><em>"同胞"</em>に怒るのか</div><div class="ttl-main" id="ttm"><em>"同胞"</em>に怒るのか</div><div class="ttl-sub" id="tts">4人の外国人の告白から 徹底深掘り</div></div></div>
+<div id="cardbeat" class="clip panel" data-start="55.75" data-duration="7.13" data-track-index="16" style=""><div class="chead" id="chd">4人の告白</div><div class="cgrid"><div class="card" id="c1"><img src="assets/img/card15.jpg" alt=""><div class="cshade"></div><div class="cnum">01</div><div class="clab">汚名を背負う者</div></div><div class="card" id="c2"><img src="assets/img/card17.jpg" alt=""><div class="cshade"></div><div class="cnum">02</div><div class="clab">警告する者</div></div><div class="card" id="c3"><img src="assets/img/card18.jpg" alt=""><div class="cshade"></div><div class="cnum">03</div><div class="clab">差別された者</div></div><div class="card" id="c4"><img src="assets/img/card19.jpg" alt=""><div class="cshade"></div><div class="cnum">04</div><div class="clab">絶望する者</div></div></div></div>
+<video id="ch1v" class="clip bgv " data-start="62.88" data-duration="3.77" data-media-start="0.5" data-track-index="17" src="assets/bg/intro15.mp4" muted playsinline></video>
+<div id="ch1o" class="clip qov" data-start="62.88" data-duration="3.77" data-track-index="18" style=""><div class="ch1scrim"></div><div class="credit">引用: Axel in Japan</div><div class="chno" id="chno">第 1 章</div><div class="chttl" id="chttl">俺たちは、残る</div><div class="chsub" id="chsub">— 在住8年、2児の父の告白</div></div>
+<div id="scan"></div>
+<div id="vig"></div>
+<div id="gl1" class="gl"></div>
+<div id="gl2" class="gl"></div>
+<div id="gl3" class="gl"></div>
+<div id="flash"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#qb-c", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 0.95);
+tl.fromTo("#qd-c", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 5.05);
+tl.fromTo("#qc-c", {scale: 1.18, opacity: 0}, {scale: 1, opacity: 1, duration: 0.28, ease: "power4.out", immediateRender: false}, 9.75);
+tl.fromTo("#qc-s", {opacity: 0}, {opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 10.6);
+tl.fromTo("#qa-c1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 19.45);
+tl.fromTo("#qa-c2", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 21.35);
+tl.set("#gl1", {opacity: 0.68, top: "46%", height: 39, x: -58}, 0.5);
+tl.set("#gl1", {top: "24%", height: 44, x: -52}, 0.567);
+tl.set("#gl1", {opacity: 0, x: 0}, 0.667);
+tl.set("#gl2", {opacity: 0.68, top: "17%", height: 51, x: -56}, 0.5);
+tl.set("#gl2", {top: "51%", height: 23, x: 59}, 0.567);
+tl.set("#gl2", {opacity: 0, x: 0}, 0.667);
+tl.set("#gl3", {opacity: 0.68, top: "9%", height: 41, x: 37}, 0.5);
+tl.set("#gl3", {top: "16%", height: 25, x: -53}, 0.567);
+tl.set("#gl3", {opacity: 0, x: 0}, 0.667);
+tl.set("#flash", {opacity: 0.77}, 0.5);
+tl.set("#flash", {opacity: 0.23}, 0.567);
+tl.set("#flash", {opacity: 0}, 0.633);
+tl.set("#stage", {x: -12}, 0.5);
+tl.set("#stage", {x: 12}, 0.567);
+tl.set("#stage", {x: 0}, 0.633);
+tl.set("#gl1", {opacity: 0.75, top: "16%", height: 41, x: -55}, 4.6);
+tl.set("#gl1", {top: "75%", height: 24, x: -39}, 4.667);
+tl.set("#gl1", {opacity: 0, x: 0}, 4.767);
+tl.set("#gl2", {opacity: 0.75, top: "85%", height: 51, x: -55}, 4.6);
+tl.set("#gl2", {top: "85%", height: 13, x: 31}, 4.667);
+tl.set("#gl2", {opacity: 0, x: 0}, 4.767);
+tl.set("#gl3", {opacity: 0.75, top: "33%", height: 49, x: -36}, 4.6);
+tl.set("#gl3", {top: "10%", height: 36, x: 4}, 4.667);
+tl.set("#gl3", {opacity: 0, x: 0}, 4.767);
+tl.set("#flash", {opacity: 0.85}, 4.6);
+tl.set("#flash", {opacity: 0.25}, 4.667);
+tl.set("#flash", {opacity: 0}, 4.733);
+tl.set("#stage", {x: -14}, 4.6);
+tl.set("#stage", {x: 14}, 4.667);
+tl.set("#stage", {x: 0}, 4.733);
+tl.set("#gl1", {opacity: 0.75, top: "23%", height: 21, x: 8}, 9.3);
+tl.set("#gl1", {top: "74%", height: 16, x: -24}, 9.367);
+tl.set("#gl1", {opacity: 0, x: 0}, 9.467);
+tl.set("#gl2", {opacity: 0.75, top: "79%", height: 54, x: -22}, 9.3);
+tl.set("#gl2", {top: "78%", height: 16, x: 25}, 9.367);
+tl.set("#gl2", {opacity: 0, x: 0}, 9.467);
+tl.set("#gl3", {opacity: 0.75, top: "75%", height: 50, x: -55}, 9.3);
+tl.set("#gl3", {top: "13%", height: 41, x: -18}, 9.367);
+tl.set("#gl3", {opacity: 0, x: 0}, 9.467);
+tl.set("#flash", {opacity: 0.85}, 9.3);
+tl.set("#flash", {opacity: 0.25}, 9.367);
+tl.set("#flash", {opacity: 0}, 9.433);
+tl.set("#stage", {x: -14}, 9.3);
+tl.set("#stage", {x: 14}, 9.367);
+tl.set("#stage", {x: 0}, 9.433);
+tl.set("#gl1", {opacity: 0.60, top: "73%", height: 34, x: 49}, 13.1);
+tl.set("#gl1", {top: "59%", height: 33, x: 46}, 13.167);
+tl.set("#gl1", {opacity: 0, x: 0}, 13.267);
+tl.set("#gl2", {opacity: 0.60, top: "43%", height: 25, x: -8}, 13.1);
+tl.set("#gl2", {top: "36%", height: 29, x: -50}, 13.167);
+tl.set("#gl2", {opacity: 0, x: 0}, 13.267);
+tl.set("#gl3", {opacity: 0.60, top: "72%", height: 35, x: 44}, 13.1);
+tl.set("#gl3", {top: "68%", height: 14, x: 3}, 13.167);
+tl.set("#gl3", {opacity: 0, x: 0}, 13.267);
+tl.set("#flash", {opacity: 0.68}, 13.1);
+tl.set("#flash", {opacity: 0.20}, 13.167);
+tl.set("#flash", {opacity: 0}, 13.233);
+tl.set("#stage", {x: -11}, 13.1);
+tl.set("#stage", {x: 11}, 13.167);
+tl.set("#stage", {x: 0}, 13.233);
+tl.set("#gl1", {opacity: 0.75, top: "20%", height: 40, x: -28}, 19.0);
+tl.set("#gl1", {top: "70%", height: 19, x: 17}, 19.067);
+tl.set("#gl1", {opacity: 0, x: 0}, 19.167);
+tl.set("#gl2", {opacity: 0.75, top: "67%", height: 16, x: -51}, 19.0);
+tl.set("#gl2", {top: "58%", height: 31, x: 10}, 19.067);
+tl.set("#gl2", {opacity: 0, x: 0}, 19.167);
+tl.set("#gl3", {opacity: 0.75, top: "49%", height: 45, x: 46}, 19.0);
+tl.set("#gl3", {top: "81%", height: 15, x: -53}, 19.067);
+tl.set("#gl3", {opacity: 0, x: 0}, 19.167);
+tl.set("#flash", {opacity: 0.85}, 19.0);
+tl.set("#flash", {opacity: 0.25}, 19.067);
+tl.set("#flash", {opacity: 0}, 19.133);
+tl.set("#stage", {x: -14}, 19.0);
+tl.set("#stage", {x: 14}, 19.067);
+tl.set("#stage", {x: 0}, 19.133);
+tl.fromTo("#stm1", {y: 24, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power3.out", immediateRender: false}, 13.55);
+tl.fromTo("#stm2", {y: 24, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power3.out", immediateRender: false}, 15.05);
+tl.fromTo("#ul1", {scaleX: 0}, {scaleX: 1, duration: 0.45, ease: "power2.inOut", immediateRender: false}, 16.75);
+tl.set("#gl1", {opacity: 0.52, top: "39%", height: 58, x: -54}, 25.4);
+tl.set("#gl1", {top: "65%", height: 29, x: -55}, 25.467);
+tl.set("#gl1", {opacity: 0, x: 0}, 25.567);
+tl.set("#gl2", {opacity: 0.52, top: "78%", height: 32, x: 28}, 25.4);
+tl.set("#gl2", {top: "62%", height: 11, x: 18}, 25.467);
+tl.set("#gl2", {opacity: 0, x: 0}, 25.567);
+tl.set("#gl3", {opacity: 0.52, top: "64%", height: 24, x: -41}, 25.4);
+tl.set("#gl3", {top: "50%", height: 13, x: 56}, 25.467);
+tl.set("#gl3", {opacity: 0, x: 0}, 25.567);
+tl.set("#flash", {opacity: 0.59}, 25.4);
+tl.set("#flash", {opacity: 0.17}, 25.467);
+tl.set("#flash", {opacity: 0}, 25.533);
+tl.set("#stage", {x: -9}, 25.4);
+tl.set("#stage", {x: 9}, 25.467);
+tl.set("#stage", {x: 0}, 25.533);
+tl.fromTo("#lt1", {x: -70, opacity: 0}, {x: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 25.8);
+tl.fromTo("#chip1", {y: 18, opacity: 0, scale: 0.9}, {y: 0, opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false}, 27.3);
+tl.fromTo("#chip2", {y: 18, opacity: 0, scale: 0.9}, {y: 0, opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false}, 28.1);
+tl.fromTo("#chip3", {y: 18, opacity: 0, scale: 0.9}, {y: 0, opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false}, 28.9);
+tl.fromTo("#ph1", {x: -50, opacity: 0}, {x: 0, opacity: 1, duration: 0.5, ease: "power3.out", immediateRender: false}, 32.03);
+tl.fromTo("#phl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 32.48);
+tl.fromTo("#tl1", {scaleY: 0}, {scaleY: 1, duration: 8.0, ease: "none", immediateRender: false}, 32.28);
+tl.fromTo("#i1", {x: 70, opacity: 0}, {x: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 36.5);
+tl.fromTo("#i2", {x: 70, opacity: 0}, {x: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 38.1);
+tl.fromTo("#i3", {x: 70, opacity: 0}, {x: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 39.85);
+tl.set("#gl1", {opacity: 0.45, top: "32%", height: 22, x: -7}, 31.68);
+tl.set("#gl1", {top: "41%", height: 35, x: 31}, 31.747);
+tl.set("#gl1", {opacity: 0, x: 0}, 31.847);
+tl.set("#gl2", {opacity: 0.45, top: "68%", height: 24, x: 44}, 31.68);
+tl.set("#gl2", {top: "15%", height: 27, x: 32}, 31.747);
+tl.set("#gl2", {opacity: 0, x: 0}, 31.847);
+tl.set("#gl3", {opacity: 0.45, top: "22%", height: 49, x: 1}, 31.68);
+tl.set("#gl3", {top: "60%", height: 32, x: 36}, 31.747);
+tl.set("#gl3", {opacity: 0, x: 0}, 31.847);
+tl.set("#flash", {opacity: 0.51}, 31.68);
+tl.set("#flash", {opacity: 0.15}, 31.747);
+tl.set("#flash", {opacity: 0}, 31.813);
+tl.set("#stage", {x: -8}, 31.68);
+tl.set("#stage", {x: 8}, 31.747);
+tl.set("#stage", {x: 0}, 31.813);
+tl.fromTo("#dh1", {y: -30, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 43.29);
+tl.fromTo("#cn1", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.6)", immediateRender: false}, 43.59);
+tl.fromTo("#on1", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)", immediateRender: false}, 43.99);
+tl.fromTo("#on2", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)", immediateRender: false}, 44.14);
+tl.fromTo("#on3", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)", immediateRender: false}, 44.29);
+tl.fromTo("#on4", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)", immediateRender: false}, 44.44);
+tl.fromTo("#ar1", {opacity: 0}, {opacity: 1, duration: 0.25, ease: "power2.out", immediateRender: false}, 44.59);
+tl.fromTo("#ar2", {opacity: 0}, {opacity: 1, duration: 0.25, ease: "power2.out", immediateRender: false}, 44.69);
+tl.fromTo("#ar3", {opacity: 0}, {opacity: 1, duration: 0.25, ease: "power2.out", immediateRender: false}, 44.79);
+tl.fromTo("#ar4", {opacity: 0}, {opacity: 1, duration: 0.25, ease: "power2.out", immediateRender: false}, 44.89);
+tl.fromTo("#dn1", {opacity: 0}, {opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 44.04);
+tl.to("#cn1", {scale: 1.07, duration: 0.38, ease: "sine.inOut", repeat: 5, yoyo: true}, 45.14);
+tl.set("#gl1", {opacity: 0.75, top: "53%", height: 23, x: -49}, 48.53);
+tl.set("#gl1", {top: "34%", height: 19, x: -25}, 48.597);
+tl.set("#gl1", {opacity: 0, x: 0}, 48.697);
+tl.set("#gl2", {opacity: 0.75, top: "34%", height: 14, x: 54}, 48.53);
+tl.set("#gl2", {top: "34%", height: 26, x: -24}, 48.597);
+tl.set("#gl2", {opacity: 0, x: 0}, 48.697);
+tl.set("#gl3", {opacity: 0.75, top: "41%", height: 23, x: 37}, 48.53);
+tl.set("#gl3", {top: "5%", height: 33, x: 66}, 48.597);
+tl.set("#gl3", {opacity: 0, x: 0}, 48.697);
+tl.set("#flash", {opacity: 0.85}, 48.53);
+tl.set("#flash", {opacity: 0.25}, 48.597);
+tl.set("#flash", {opacity: 0}, 48.663);
+tl.set("#stage", {x: -14}, 48.53);
+tl.set("#stage", {x: 14}, 48.597);
+tl.set("#stage", {x: 0}, 48.663);
+tl.fromTo("#tt1", {y: -26, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 48.73);
+tl.fromTo("#ttm", {scale: 1.45, opacity: 0}, {scale: 1, opacity: 1, duration: 0.38, ease: "expo.out", immediateRender: false}, 48.95);
+tl.set("#ttr", {opacity: 0.55}, 48.98);
+tl.set("#ttb", {opacity: 0.55}, 48.98);
+tl.set("#ttr", {opacity: 0}, 49.28);
+tl.set("#ttb", {opacity: 0}, 49.28);
+tl.fromTo("#tglow", {opacity: 0}, {opacity: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 49.08);
+tl.fromTo("#tts", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 50.03);
+tl.set("#ttr", {opacity: 0.45, x: -10}, 52.33);
+tl.set("#ttb", {opacity: 0.45, x: 10}, 52.33);
+tl.set("#ttr", {opacity: 0, x: -6}, 52.46);
+tl.set("#ttb", {opacity: 0, x: 6}, 52.46);
+tl.set("#gl1", {opacity: 0.38, top: "83%", height: 34, x: -38}, 52.33);
+tl.set("#gl1", {top: "77%", height: 13, x: 61}, 52.397);
+tl.set("#gl1", {opacity: 0, x: 0}, 52.497);
+tl.set("#gl2", {opacity: 0.38, top: "63%", height: 39, x: 31}, 52.33);
+tl.set("#gl2", {top: "76%", height: 35, x: 32}, 52.397);
+tl.set("#gl2", {opacity: 0, x: 0}, 52.497);
+tl.set("#gl3", {opacity: 0.38, top: "18%", height: 54, x: 32}, 52.33);
+tl.set("#gl3", {top: "66%", height: 22, x: -55}, 52.397);
+tl.set("#gl3", {opacity: 0, x: 0}, 52.497);
+tl.set("#flash", {opacity: 0.42}, 52.33);
+tl.set("#flash", {opacity: 0.12}, 52.397);
+tl.set("#flash", {opacity: 0}, 52.463);
+tl.set("#stage", {x: -7}, 52.33);
+tl.set("#stage", {x: 7}, 52.397);
+tl.set("#stage", {x: 0}, 52.463);
+tl.set("#gl1", {opacity: 0.52, top: "13%", height: 42, x: -29}, 55.75);
+tl.set("#gl1", {top: "31%", height: 31, x: -42}, 55.817);
+tl.set("#gl1", {opacity: 0, x: 0}, 55.917);
+tl.set("#gl2", {opacity: 0.52, top: "81%", height: 20, x: -70}, 55.75);
+tl.set("#gl2", {top: "11%", height: 44, x: -32}, 55.817);
+tl.set("#gl2", {opacity: 0, x: 0}, 55.917);
+tl.set("#gl3", {opacity: 0.52, top: "17%", height: 53, x: -64}, 55.75);
+tl.set("#gl3", {top: "51%", height: 23, x: -52}, 55.817);
+tl.set("#gl3", {opacity: 0, x: 0}, 55.917);
+tl.set("#flash", {opacity: 0.59}, 55.75);
+tl.set("#flash", {opacity: 0.17}, 55.817);
+tl.set("#flash", {opacity: 0}, 55.883);
+tl.set("#stage", {x: -9}, 55.75);
+tl.set("#stage", {x: 9}, 55.817);
+tl.set("#stage", {x: 0}, 55.883);
+tl.fromTo("#chd", {opacity: 0}, {opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 55.95);
+tl.fromTo("#c1", {y: 90, opacity: 0, rotation: 1.5}, {y: 0, opacity: 1, rotation: 0, duration: 0.5, ease: "power3.out", immediateRender: false}, 56.2);
+tl.fromTo("#c2", {y: 90, opacity: 0, rotation: 1.5}, {y: 0, opacity: 1, rotation: 0, duration: 0.5, ease: "power3.out", immediateRender: false}, 57.65);
+tl.fromTo("#c3", {y: 90, opacity: 0, rotation: 1.5}, {y: 0, opacity: 1, rotation: 0, duration: 0.5, ease: "power3.out", immediateRender: false}, 59.05);
+tl.fromTo("#c4", {y: 90, opacity: 0, rotation: 1.5}, {y: 0, opacity: 1, rotation: 0, duration: 0.5, ease: "power3.out", immediateRender: false}, 60.5);
+tl.set("#gl1", {opacity: 0.75, top: "83%", height: 23, x: -6}, 62.88);
+tl.set("#gl1", {top: "53%", height: 33, x: 18}, 62.947);
+tl.set("#gl1", {opacity: 0, x: 0}, 63.047);
+tl.set("#gl2", {opacity: 0.75, top: "65%", height: 21, x: 54}, 62.88);
+tl.set("#gl2", {top: "20%", height: 40, x: 49}, 62.947);
+tl.set("#gl2", {opacity: 0, x: 0}, 63.047);
+tl.set("#gl3", {opacity: 0.75, top: "66%", height: 19, x: -34}, 62.88);
+tl.set("#gl3", {top: "44%", height: 31, x: -44}, 62.947);
+tl.set("#gl3", {opacity: 0, x: 0}, 63.047);
+tl.set("#flash", {opacity: 0.85}, 62.88);
+tl.set("#flash", {opacity: 0.25}, 62.947);
+tl.set("#flash", {opacity: 0}, 63.013);
+tl.set("#stage", {x: -14}, 62.88);
+tl.set("#stage", {x: 14}, 62.947);
+tl.set("#stage", {x: 0}, 63.013);
+tl.fromTo("#chno", {x: -40, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 63.13);
+tl.fromTo("#chttl", {scale: 1.3, opacity: 0}, {scale: 1, opacity: 1, duration: 0.45, ease: "expo.out", immediateRender: false}, 63.38);
+tl.fromTo("#chsub", {opacity: 0}, {opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 63.98);
+tl.to("#stage", {opacity: 0, duration: 0.9, ease: "power1.in"}, 65.9);
+const root = gsap.timeline({ paused: true });
+tl.time(0.0);
+root.fromTo(tl, { time: 0.0 }, { time: 66.95, duration: 66.95, ease: "none" }, 0);
+window.__timelines["root"] = root;
+</script>
+</div>
+</body>
+</html>

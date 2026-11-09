@@ -1,0 +1,128 @@
+{
+ "total": 66.65,
+ "beats": [
+  {
+   "id": "qb",
+   "start": 0.5,
+   "end": 4.6
+  },
+  {
+   "id": "qd",
+   "start": 4.6,
+   "end": 9.3
+  },
+  {
+   "id": "qc",
+   "start": 9.3,
+   "end": 13.1
+  },
+  {
+   "id": "n01",
+   "start": 13.1,
+   "end": 19.0
+  },
+  {
+   "id": "qa",
+   "start": 19.0,
+   "end": 25.4
+  },
+  {
+   "id": "n02",
+   "start": 25.4,
+   "end": 31.68
+  },
+  {
+   "id": "info",
+   "start": 31.68,
+   "end": 43.04
+  },
+  {
+   "id": "diagram",
+   "start": 43.04,
+   "end": 48.53
+  },
+  {
+   "id": "title",
+   "start": 48.53,
+   "end": 55.75
+  },
+  {
+   "id": "cards",
+   "start": 55.75,
+   "end": 62.88
+  },
+  {
+   "id": "ch1",
+   "start": 62.88,
+   "end": 66.65
+  }
+ ],
+ "narr": {
+  "n01": {
+   "start": 13.45,
+   "dur": 5.15
+  },
+  "n02": {
+   "start": 25.65,
+   "dur": 5.67
+  },
+  "n03": {
+   "start": 31.83,
+   "dur": 4.17
+  },
+  "n04": {
+   "start": 36.35,
+   "dur": 6.2
+  },
+  "n05": {
+   "start": 43.34,
+   "dur": 4.74
+  },
+  "n06": {
+   "start": 49.33,
+   "dur": 6.02
+  },
+  "n07": {
+   "start": 56.15,
+   "dur": 6.34
+  },
+  "n08": {
+   "start": 63.18,
+   "dur": 1.87
+  }
+ },
+ "quotes": {
+  "qb": {
+   "beat_start": 0.5,
+   "lead": 0.4,
+   "adur": 3.2,
+   "media_start": 0.9,
+   "dur": 4.1,
+   "clip": "qb.mp4"
+  },
+  "qd": {
+   "beat_start": 4.6,
+   "lead": 0.4,
+   "adur": 3.8,
+   "media_start": 0.6,
+   "dur": 4.7,
+   "clip": "qd.mp4"
+  },
+  "qc": {
+   "beat_start": 9.3,
+   "lead": 0.4,
+   "adur": 2.9,
+   "media_start": 0.7,
+   "dur": 3.8,
+   "clip": "qc.mp4"
+  },
+  "qa": {
+   "beat_start": 19.0,
+   "lead": 0.4,
+   "adur": 5.4,
+   "media_start": 0.6,
+   "dur": 6.4,
+   "clip": "qa.mp4"
+  }
+ }
+}
