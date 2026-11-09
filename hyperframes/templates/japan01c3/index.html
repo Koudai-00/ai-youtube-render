@@ -1,0 +1,507 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family:'NotoB'; src:url('assets/fonts/NotoSansJP-Black.otf') format('opentype'); }
+@font-face { font-family:'NotoBd'; src:url('assets/fonts/NotoSansJP-Bold.otf') format('opentype'); }
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#000; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden;
+  background:#07080b; font-family:'NotoB','NotoBd',sans-serif; color:#f2f1ec; }
+#stage { position:absolute; inset:0; }
+.clip { position:absolute; inset:0; width:100%; height:100%; }
+video.bgv { object-fit:cover; transform:translateZ(0); backface-visibility:hidden; }
+em { font-style:normal; color:#e8322e; }
+#scan { position:absolute; inset:0; z-index:40; pointer-events:none; opacity:.14;
+  background:repeating-linear-gradient(0deg, rgba(0,0,0,.55) 0 2px, rgba(0,0,0,0) 2px 5px); }
+#vig { position:absolute; inset:0; z-index:41; pointer-events:none;
+  background:radial-gradient(ellipse 115% 105% at 50% 46%, rgba(0,0,0,0) 58%, rgba(0,0,0,.52) 100%); }
+#flash { position:absolute; inset:0; z-index:60; background:#e9e6df; opacity:0; pointer-events:none; }
+.gl { position:absolute; left:-80px; right:-80px; z-index:59; opacity:0; pointer-events:none; }
+#gl1 { background:rgba(232,50,46,.55); } #gl2 { background:rgba(70,224,212,.45); }
+#gl3 { background:rgba(242,241,236,.75); }
+.qov { z-index:10; }
+.qscrim { position:absolute; left:0; right:0; bottom:0; height:430px;
+  background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(2,3,5,.6) 42%, rgba(2,3,5,.85) 100%); }
+.ch1scrim { position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(2,3,5,.35) 0%, rgba(2,3,5,.72) 70%, rgba(2,3,5,.9) 100%); }
+.credit { position:absolute; top:34px; right:44px; font-family:'NotoBd'; font-size:26px;
+  color:rgba(242,241,236,.85); background:rgba(5,6,9,.55); padding:8px 18px; border-left:4px solid #e8322e; }
+.qcap { position:absolute; left:60px; right:60px; bottom:92px; text-align:center; font-size:66px;
+  letter-spacing:.02em; text-shadow:0 4px 26px rgba(0,0,0,.9), 0 0 2px rgba(0,0,0,.9); opacity:0; }
+.biglabel { position:absolute; left:70px; top:120px; font-size:72px; color:#f2f1ec;
+  background:rgba(5,6,9,.66); border-left:10px solid #e8322e; padding:16px 36px; opacity:0; }
+.lt { position:absolute; left:70px; bottom:96px; display:flex; opacity:0; }
+.ltbar { width:12px; background:#e8322e; }
+.ltbody { background:rgba(5,6,9,.78); padding:22px 38px 24px 30px; }
+.ltname { font-size:48px; } .ltrole { font-family:'NotoBd'; font-size:27px; color:#ffb648; margin-top:6px; }
+.panel { z-index:10; background:#0c1016; }
+.tpanel { background:radial-gradient(ellipse 90% 80% at 50% 42%, #10151d 0%, #07080b 70%); }
+.glow { position:absolute; left:50%; top:50%; width:1500px; height:700px; margin:-350px 0 0 -750px;
+  background:radial-gradient(ellipse, rgba(232,50,46,.17), rgba(232,50,46,0) 65%); opacity:0; }
+.kick { position:absolute; left:120px; right:120px; top:44%; transform:translateY(-50%);
+  text-align:center; font-size:84px; letter-spacing:.04em; opacity:0; text-shadow:0 6px 40px rgba(0,0,0,.8); }
+.kline { position:absolute; left:50%; top:62%; width:460px; margin-left:-230px; height:10px;
+  background:#e8322e; transform:scaleX(0); }
+.dhead { position:absolute; left:0; right:0; top:96px; text-align:center; font-size:82px; opacity:0; }
+.dnote { position:absolute; left:0; right:0; bottom:64px; text-align:center; font-family:'NotoBd';
+  font-size:32px; color:#8a93a0; opacity:0; }
+/* mech */
+.mstep { position:absolute; top:40%; width:26%; height:270px; display:flex; align-items:center;
+  justify-content:center; text-align:center; font-size:46px; line-height:1.3;
+  background:#121825; border:3px solid #232c3d; border-radius:18px; opacity:0; }
+.mnum { position:absolute; left:50%; top:-34px; width:68px; height:68px; margin-left:-34px; line-height:62px;
+  background:#e8322e; border-radius:50%; font-size:38px; }
+.mtx { padding:0 24px; }
+/* 箱(高さ270px)の垂直中心 = 40%+135px に矢印(高さ36px)の中心を合わせる */
+.marrs { position:absolute; top:calc(40% + 117px); width:5%; height:36px; opacity:0; transform-origin:left; }
+.stamp { position:absolute; left:50%; top:66%; transform:translateX(-50%) rotate(-8deg);
+  font-size:110px; color:#e8322e; border:10px solid #e8322e; padding:6px 46px; border-radius:10px;
+  background:rgba(232,50,46,.08); opacity:0; }
+/* counter */
+.cntlab { position:absolute; left:0; right:0; top:120px; text-align:center; font-family:'NotoBd';
+  font-size:44px; color:#8a93a0; letter-spacing:.2em; opacity:0; }
+.cntnum { position:absolute; left:0; right:0; top:190px; text-align:center; font-size:200px;
+  font-variant-numeric:tabular-nums; letter-spacing:.02em; }
+.cntnum span { font-size:70px; color:#ffb648; margin-left:12px; }
+.cbars { position:absolute; left:320px; right:320px; top:510px; }
+.cbar { position:relative; height:74px; margin-bottom:38px; opacity:0; }
+.cbv { position:absolute; left:120px; top:12px; height:50px; max-width:72%;
+  background:linear-gradient(90deg, #5a2422, #e8322e); transform-origin:left; border-radius:6px; }
+.cby { position:absolute; left:0; top:10px; font-size:40px; color:#8a93a0; font-family:'NotoBd'; }
+.cbn { position:absolute; right:0; top:10px; font-size:40px; }
+.cntsrc { position:absolute; right:60px; bottom:40px; font-family:'NotoBd'; font-size:24px; color:#5b6472; }
+/* news */
+.nband { position:absolute; left:0; top:200px; font-size:40px; background:#e8322e; color:#fff;
+  padding:14px 60px 14px 40px; font-family:'NotoBd'; }
+.ntag { background:#07080b; color:#e8322e; padding:4px 18px; margin-right:26px; letter-spacing:.3em; }
+.nhead { position:absolute; left:120px; top:330px; font-size:128px; line-height:1.22; opacity:0; }
+.nsub { position:absolute; left:124px; top:700px; font-family:'NotoBd'; font-size:34px; color:#8a93a0; opacity:0; }
+/* journey: ◯✕マーク(直径120px, 中心y=34%+60px, 中心x=27%/73%)を縁から縁まで結ぶ */
+.jarr { position:absolute; left:calc(27% + 70px); top:calc(34% + 46px); width:744px; height:28px;
+  transform-origin:left; transform:scaleX(0); }
+.jstop { position:absolute; top:34%; width:26%; text-align:center; opacity:0; }
+.jmark { width:120px; height:120px; margin:0 auto 26px; border-radius:50%; font-size:60px; line-height:112px; }
+.jx { background:#1c0a0c; border:4px solid #e8322e; color:#e8322e; }
+.jo { background:#0e1f18; border:4px solid #46e0a0; color:#46e0a0; }
+.jname { font-size:56px; } .jdesc { font-family:'NotoBd'; font-size:33px; color:#8a93a0; margin-top:14px; line-height:1.4; }
+/* sign */
+.sign { position:absolute; left:50%; top:46%; transform:translate(-50%,-50%); display:flex; gap:40px;
+  align-items:center; background:#f2f1ec; color:#14161b; padding:52px 70px; border-radius:14px;
+  border:6px solid #b8352f; opacity:0; }
+.signic { width:150px; height:150px; color:#14161b; } .signic svg { width:100%; height:100%; }
+.signtx { font-size:64px; line-height:1.3; }
+.signtx span { color:#b8352f; font-size:54px; }
+/* msg */
+.msgt { position:absolute; left:0; right:0; top:34%; text-align:center; font-size:128px; line-height:1.3; opacity:0; }
+.msgby { position:absolute; left:0; right:0; top:72%; text-align:center; font-family:'NotoBd';
+  font-size:38px; color:#ffb648; opacity:0; }
+/* chapter card */
+.chno { position:absolute; left:150px; top:330px; font-size:56px; color:#e8322e; letter-spacing:.4em; opacity:0; }
+.chttl { position:absolute; left:144px; top:404px; font-size:132px; letter-spacing:.03em;
+  text-shadow:0 8px 50px rgba(0,0,0,.85); opacity:0; }
+.chsub { position:absolute; left:152px; top:608px; font-family:'NotoBd'; font-size:38px;
+  color:#ffb648; text-shadow:0 2px 14px rgba(0,0,0,.95); opacity:0; }
+/* recap cards */
+.chead { position:absolute; left:0; right:0; top:84px; text-align:center; font-family:'NotoBd';
+  font-size:36px; letter-spacing:.5em; color:#8a93a0; opacity:0; }
+.cgrid { position:absolute; left:90px; right:90px; top:190px; bottom:120px; display:flex; gap:34px; }
+.card { position:relative; flex:1; border-radius:14px; overflow:hidden; background:#121825; opacity:0; }
+.card img { position:absolute; width:auto; height:100%; left:50%; transform:translateX(-50%); filter:saturate(.85); }
+.cshade { position:absolute; inset:0; background:linear-gradient(180deg, rgba(2,3,5,.08) 35%, rgba(2,3,5,.88) 88%); }
+.cnum { position:absolute; left:26px; top:18px; font-size:54px; color:#e8322e; }
+.clab { position:absolute; left:0; right:0; bottom:34px; text-align:center; font-size:42px;
+  text-shadow:0 3px 14px rgba(0,0,0,.9); }
+.ckw { position:absolute; left:6%; top:38%; width:88%; text-align:center; font-size:44px; color:#ffb648;
+  border:5px solid #ffb648; border-radius:8px; padding:10px 4px; transform:rotate(-6deg);
+  background:rgba(5,6,9,.55); opacity:0; }
+/* ask / end */
+.askt { position:absolute; left:0; right:0; top:38%; text-align:center; font-size:118px; opacity:0; }
+.asks { position:absolute; left:0; right:0; top:62%; text-align:center; font-family:'NotoBd';
+  font-size:44px; color:#ffb648; opacity:0; }
+.endt { position:absolute; left:0; right:0; top:42%; text-align:center; font-size:92px; opacity:0; }
+.ends { position:absolute; left:0; right:0; top:60%; text-align:center; font-family:'NotoBd';
+  font-size:38px; color:#8a93a0; opacity:0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="root" data-width="1920" data-height="1080" data-start="0" data-duration="181.46">
+<div id="stage">
+<video id="s_introv" class="clip bgv " data-start="0.6" data-duration="6.81" data-media-start="0.0" data-track-index="1" src="assets/bg/jil.mp4" muted playsinline></video>
+<div id="s_introsc" class="clip qov" data-start="0.6" data-duration="6.81" data-track-index="2" style=""><div class="qscrim"></div><div class="credit">引用: Japanese Immersion Lab</div></div>
+<div id="s_introlt" class="clip qov" data-start="0.6" data-duration="6.81" data-track-index="3" style=""><div class="lt" id="s_introlt1"><div class="ltbar"></div><div class="ltbody"><div class="ltname">日本語ほぼネイティブの豪州人</div><div class="ltrole">Japanese Immersion Lab — 告白 その3</div></div></div></div>
+<video id="c1qv" class="clip bgv " data-start="7.41" data-duration="15.21" data-media-start="0.6" data-track-index="4" src="assets/bg/c1q.mp4" muted playsinline></video>
+<div id="c1qo" class="clip qov" data-start="7.41" data-duration="15.21" data-track-index="5" style=""><div class="qscrim"></div><div class="credit">引用: Japanese Immersion Lab</div><div class="qcap" id="c1qcap0">今じゃ日本で<em>差別</em>される側だ</div><div class="qcap" id="c1qcap1">日本語は ほぼネイティブなのに</div><div class="qcap" id="c1qcap2">誰よりも日本に<em>溶け込もうと</em>してきた</div></div>
+<div id="jour" class="clip panel" data-start="22.62" data-duration="12.05" data-track-index="6" style=""><div class="dhead" id="jh">"本物の下駄" を探して</div><svg class="jarr" id="jl" viewBox="0 0 744 28" fill="none"><line x1="0" y1="14" x2="706" y2="14" stroke="#8a93a0" stroke-width="8"/><polygon points="704,1 704,27 742,14" fill="#46e0a0"/></svg><div class="jstop" id="j1" style="left:14%"><div class="jmark jx">✕</div><div class="jname">浅草</div><div class="jdesc">土産物の下駄<br>→ 裏は「中国製」</div></div><div class="jstop" id="j2" style="left:60%"><div class="jmark jo">○</div><div class="jname">自由が丘</div><div class="jdesc">老店主の<br>小さな下駄屋</div></div></div>
+<video id="c2qv" class="clip bgv " data-start="34.67" data-duration="9.52" data-media-start="0.6" data-track-index="7" src="assets/bg/c2q.mp4" muted playsinline></video>
+<div id="c2qo" class="clip qov" data-start="34.67" data-duration="9.52" data-track-index="8" style=""><div class="qscrim"></div><div class="credit">引用: Japanese Immersion Lab</div><div class="qcap" id="c2qcap0">自由が丘で 見つけたんだ</div><div class="qcap" id="c2qcap1">おじいさんが営む<em>老舗の下駄屋</em></div></div>
+<div id="s_m03p" class="clip panel" data-start="44.19" data-duration="5.44" data-track-index="9" style=""><div class="kick" id="s_m03k">その瞬間——</div><div class="kline" id="s_m03kl"></div></div>
+<video id="c3rv" class="clip bgv " data-start="49.78" data-duration="3.6" data-media-start="0.7" data-track-index="10" src="assets/bg/c3r.mp4" muted playsinline></video>
+<div id="c3ro" class="clip qov" data-start="49.78" data-duration="3.6" data-track-index="11" style=""><div class="qscrim"></div><div class="credit">引用: Japanese Immersion Lab</div><div class="qcap" id="c3rcap0">「<em>出て行け 国へ帰れ</em>」</div></div>
+<div id="s_m04p" class="clip panel" data-start="53.68" data-duration="6.14" data-track-index="12" style=""><div class="kick" id="s_m04k">日本語で返しても</div><div class="kline" id="s_m04kl"></div></div>
+<video id="c4qv" class="clip bgv " data-start="59.82" data-duration="5.14" data-media-start="0.6" data-track-index="13" src="assets/bg/c4q.mp4" muted playsinline></video>
+<div id="c4qo" class="clip qov" data-start="59.82" data-duration="5.14" data-track-index="14" style=""><div class="qscrim"></div><div class="credit">引用: Japanese Immersion Lab</div><div class="qcap" id="c4qcap0">「<em>さっさと出て行け</em>」</div><div class="qcap" id="c4qcap1">「どうせ何も買わないだろ」</div></div>
+<video id="c5qv" class="clip bgv " data-start="64.96" data-duration="11.86" data-media-start="0.6" data-track-index="15" src="assets/bg/c5q.mp4" muted playsinline></video>
+<div id="c5qo" class="clip qov" data-start="64.96" data-duration="11.86" data-track-index="16" style=""><div class="qscrim"></div><div class="credit">引用: Japanese Immersion Lab</div><div class="qcap" id="c5qcap0">"すみません 邪魔するつもりは…"</div><div class="qcap" id="c5qcap1">悲しいよ でも<em>ただの差別じゃない</em>んだ</div></div>
+<div id="s_m05p" class="clip panel" data-start="76.82" data-duration="8.16" data-track-index="17" style=""><div class="kick" id="s_m05k">なぜ、店主を責めないのか</div><div class="kline" id="s_m05kl"></div></div>
+<video id="c6qv" class="clip bgv " data-start="84.98" data-duration="4.93" data-media-start="0.6" data-track-index="18" src="assets/bg/c6q.mp4" muted playsinline></video>
+<div id="c6qo" class="clip qov" data-start="84.98" data-duration="4.93" data-track-index="19" style=""><div class="qscrim"></div><div class="credit">引用: Japanese Immersion Lab</div><div class="qcap" id="c6qcap0">街は<em>路上で酒を飲み騒ぐ外国人</em>だらけ</div></div>
+<video id="c6rv" class="clip bgv " data-start="89.91" data-duration="5.68" data-media-start="0.6" data-track-index="20" src="assets/bg/c6r.mp4" muted playsinline></video>
+<div id="c6ro" class="clip qov" data-start="89.91" data-duration="5.68" data-track-index="21" style=""><div class="qscrim"></div><div class="credit">引用: Japanese Immersion Lab</div><div class="qcap" id="c6rcap0">今じゃ<em>日本中が外国人にうんざり</em>だ</div></div>
+<div id="s_d11p" class="clip panel" data-start="95.59" data-duration="6.24" data-track-index="22" style=""><div class="kline" id="s_d11kl"></div></div>
+<video id="c11av" class="clip bgv " data-start="101.83" data-duration="3.26" data-media-start="0.6" data-track-index="23" src="assets/bg/c11a.mp4" muted playsinline></video>
+<div id="c11ao" class="clip qov" data-start="101.83" data-duration="3.26" data-track-index="24" style=""><div class="qscrim"></div><div class="credit">引用: Japanese Immersion Lab</div><div class="qcap" id="c11acap0">12時間働いて 疲れた会社員が</div></div>
+<video id="c11bv" class="clip bgv " data-start="105.09" data-duration="3.12" data-media-start="0.6" data-track-index="25" src="assets/bg/c11b.mp4" muted playsinline></video>
+<div id="c11bo" class="clip qov" data-start="105.09" data-duration="3.12" data-track-index="26" style=""><div class="qscrim"></div><div class="credit">引用: Japanese Immersion Lab</div><div class="qcap" id="c11bcap0">路上で<em>"晒し者"</em>にされていく</div></div>
+<div id="s_m06p" class="clip panel" data-start="108.21" data-duration="5.38" data-track-index="27" style=""><div class="kick" id="s_m06k">立場が逆なら——</div><div class="kline" id="s_m06kl"></div></div>
+<video id="c7qv" class="clip bgv " data-start="113.59" data-duration="5.65" data-media-start="0.6" data-track-index="28" src="assets/bg/c7q.mp4" muted playsinline></video>
+<div id="c7qo" class="clip qov" data-start="113.59" data-duration="5.65" data-track-index="29" style=""><div class="qscrim"></div><div class="credit">引用: Japanese Immersion Lab</div><div class="qcap" id="c7qcap0">逆の立場なら 俺も言うさ</div><div class="qcap" id="c7qcap1">「<em>国に帰れ</em>」ってね</div></div>
+<div id="s_m06bp" class="clip panel" data-start="119.24" data-duration="7.23" data-track-index="30" style=""><div class="kline" id="s_m06bkl"></div></div>
+<div id="s_m07p" class="clip panel" data-start="126.47" data-duration="7.59" data-track-index="31" style=""><div class="kick" id="s_m07k">それでも、恨まない</div><div class="kline" id="s_m07kl"></div></div>
+<video id="c8qv" class="clip bgv " data-start="134.06" data-duration="9.59" data-media-start="0.6" data-track-index="32" src="assets/bg/c8q.mp4" muted playsinline></video>
+<div id="c8qo" class="clip qov" data-start="134.06" data-duration="9.59" data-track-index="33" style=""><div class="qscrim"></div><div class="credit">引用: Japanese Immersion Lab</div><div class="qcap" id="c8qcap0">日本人は 外国人が嫌いなんじゃない</div><div class="qcap" id="c8qcap1">"<em>あなたみたいな人なら大歓迎</em>"って</div></div>
+<div id="s_m08p" class="clip panel" data-start="143.65" data-duration="9.31" data-track-index="34" style=""><div class="kick" id="s_m08k">最後のメッセージ</div><div class="kline" id="s_m08kl"></div></div>
+<video id="c9qv" class="clip bgv " data-start="152.96" data-duration="5.46" data-media-start="0.6" data-track-index="35" src="assets/bg/c9q.mp4" muted playsinline></video>
+<div id="c9qo" class="clip qov" data-start="152.96" data-duration="5.46" data-track-index="36" style=""><div class="qscrim"></div><div class="credit">引用: Japanese Immersion Lab</div><div class="qcap" id="c9qcap0">日本を<em>特別扱いしなくていい</em></div><div class="qcap" id="c9qcap1">ただ "<em>普通の人</em>" でいてくれ</div></div>
+<video id="c12v" class="clip bgv " data-start="158.42" data-duration="6.94" data-media-start="0.6" data-track-index="37" src="assets/bg/c12.mp4" muted playsinline></video>
+<div id="c12o" class="clip qov" data-start="158.42" data-duration="6.94" data-track-index="38" style=""><div class="qscrim"></div><div class="credit">引用: Japanese Immersion Lab</div><div class="qcap" id="c12cap0">肩の力を抜けばいい</div><div class="qcap" id="c12cap1">日本は<em>遊び場</em>じゃない それだけさ</div></div>
+<div id="s_msgm" class="clip panel tpanel" data-start="165.36" data-duration="5.62" data-track-index="39" style=""><div class="glow" id="s_msgg"></div><div class="msgt" id="s_msgt">普通の人で、<br>いてくれ。</div><div class="msgby" id="s_msgb">— Japanese Immersion Lab</div></div>
+<video id="s_card4v" class="clip bgv " data-start="170.98" data-duration="9.18" data-media-start="0.0" data-track-index="40" src="assets/bg/intro19.mp4" muted playsinline></video>
+<div id="s_card4o" class="clip qov" data-start="170.98" data-duration="9.18" data-track-index="41" style=""><div class="ch1scrim"></div><div class="credit">引用: Addy</div><div class="chno" id="s_card4n">第 4 章</div><div class="chttl" id="s_card4t">愛するがゆえの絶望</div><div class="chsub" id="s_card4s">— 日本を愛しすぎた彼女の、最後の願い</div></div>
+<div id="scan"></div>
+<div id="vig"></div>
+<div id="gl1" class="gl"></div>
+<div id="gl2" class="gl"></div>
+<div id="gl3" class="gl"></div>
+<div id="flash"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#s_introlt1", {x: -70, opacity: 0}, {x: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 1.1);
+tl.set("#gl1", {opacity: 0.60, top: "62%", height: 43, x: 45}, 0.6);
+tl.set("#gl1", {top: "76%", height: 42, x: -22}, 0.667);
+tl.set("#gl1", {opacity: 0, x: 0}, 0.767);
+tl.set("#gl2", {opacity: 0.60, top: "28%", height: 44, x: -23}, 0.6);
+tl.set("#gl2", {top: "70%", height: 16, x: 44}, 0.667);
+tl.set("#gl2", {opacity: 0, x: 0}, 0.767);
+tl.set("#gl3", {opacity: 0.60, top: "43%", height: 19, x: 67}, 0.6);
+tl.set("#gl3", {top: "23%", height: 12, x: 31}, 0.667);
+tl.set("#gl3", {opacity: 0, x: 0}, 0.767);
+tl.set("#flash", {opacity: 0.68}, 0.6);
+tl.set("#flash", {opacity: 0.20}, 0.667);
+tl.set("#flash", {opacity: 0}, 0.733);
+tl.set("#stage", {x: -11}, 0.6);
+tl.set("#stage", {x: 11}, 0.667);
+tl.set("#stage", {x: 0}, 0.733);
+tl.fromTo("#c1qcap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 7.64);
+tl.set("#c1qcap0", {opacity: 0}, 12.29);
+tl.fromTo("#c1qcap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 12.42);
+tl.set("#c1qcap1", {opacity: 0}, 15.96);
+tl.fromTo("#c1qcap2", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 16.09);
+tl.set("#gl1", {opacity: 0.52, top: "62%", height: 55, x: -30}, 7.41);
+tl.set("#gl1", {top: "83%", height: 10, x: 65}, 7.477);
+tl.set("#gl1", {opacity: 0, x: 0}, 7.577);
+tl.set("#gl2", {opacity: 0.52, top: "13%", height: 16, x: -22}, 7.41);
+tl.set("#gl2", {top: "12%", height: 25, x: -63}, 7.477);
+tl.set("#gl2", {opacity: 0, x: 0}, 7.577);
+tl.set("#gl3", {opacity: 0.52, top: "64%", height: 42, x: -20}, 7.41);
+tl.set("#gl3", {top: "46%", height: 43, x: -11}, 7.477);
+tl.set("#gl3", {opacity: 0, x: 0}, 7.577);
+tl.set("#flash", {opacity: 0.59}, 7.41);
+tl.set("#flash", {opacity: 0.17}, 7.477);
+tl.set("#flash", {opacity: 0}, 7.543);
+tl.set("#stage", {x: -9}, 7.41);
+tl.set("#stage", {x: 9}, 7.477);
+tl.set("#stage", {x: 0}, 7.543);
+tl.fromTo("#jh", {y: -26, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 22.92);
+tl.fromTo("#j1", {y: 40, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 23.62);
+tl.fromTo("#jl", {scaleX: 0}, {scaleX: 1, duration: 1.2, ease: "power2.inOut", immediateRender: false}, 24.82);
+tl.fromTo("#j2", {y: 40, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 26.22);
+tl.set("#gl1", {opacity: 0.45, top: "42%", height: 14, x: -49}, 22.62);
+tl.set("#gl1", {top: "68%", height: 39, x: 1}, 22.687);
+tl.set("#gl1", {opacity: 0, x: 0}, 22.787);
+tl.set("#gl2", {opacity: 0.45, top: "57%", height: 19, x: -5}, 22.62);
+tl.set("#gl2", {top: "75%", height: 30, x: -12}, 22.687);
+tl.set("#gl2", {opacity: 0, x: 0}, 22.787);
+tl.set("#gl3", {opacity: 0.45, top: "70%", height: 15, x: -53}, 22.62);
+tl.set("#gl3", {top: "41%", height: 16, x: 32}, 22.687);
+tl.set("#gl3", {opacity: 0, x: 0}, 22.787);
+tl.set("#flash", {opacity: 0.51}, 22.62);
+tl.set("#flash", {opacity: 0.15}, 22.687);
+tl.set("#flash", {opacity: 0}, 22.753);
+tl.set("#stage", {x: -8}, 22.62);
+tl.set("#stage", {x: 8}, 22.687);
+tl.set("#stage", {x: 0}, 22.753);
+tl.fromTo("#c2qcap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 34.9);
+tl.set("#c2qcap0", {opacity: 0}, 38.72);
+tl.fromTo("#c2qcap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 38.85);
+tl.fromTo("#c2qv", {filter: "saturate(1) sepia(0) contrast(1) brightness(1)"}, {filter: "saturate(1.15) sepia(0.18) contrast(1.02) brightness(1.04)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 35.07);
+tl.set("#gl1", {opacity: 0.52, top: "18%", height: 38, x: -53}, 34.67);
+tl.set("#gl1", {top: "42%", height: 11, x: -70}, 34.737);
+tl.set("#gl1", {opacity: 0, x: 0}, 34.837);
+tl.set("#gl2", {opacity: 0.52, top: "32%", height: 17, x: 50}, 34.67);
+tl.set("#gl2", {top: "31%", height: 34, x: 31}, 34.737);
+tl.set("#gl2", {opacity: 0, x: 0}, 34.837);
+tl.set("#gl3", {opacity: 0.52, top: "58%", height: 50, x: -20}, 34.67);
+tl.set("#gl3", {top: "14%", height: 27, x: 16}, 34.737);
+tl.set("#gl3", {opacity: 0, x: 0}, 34.837);
+tl.set("#flash", {opacity: 0.59}, 34.67);
+tl.set("#flash", {opacity: 0.17}, 34.737);
+tl.set("#flash", {opacity: 0}, 34.803);
+tl.set("#stage", {x: -9}, 34.67);
+tl.set("#stage", {x: 9}, 34.737);
+tl.set("#stage", {x: 0}, 34.803);
+tl.fromTo("#s_m03k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 44.44);
+tl.fromTo("#s_m03kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 44.49);
+tl.fromTo("#c3rcap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 50.08);
+tl.fromTo("#c3rv", {filter: "grayscale(0) saturate(1) contrast(1) brightness(1)"}, {filter: "grayscale(1) saturate(0.35) contrast(1.08) brightness(0.9)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 50.38);
+tl.set("#gl1", {opacity: 0.68, top: "16%", height: 35, x: -67}, 49.78);
+tl.set("#gl1", {top: "44%", height: 36, x: -40}, 49.847);
+tl.set("#gl1", {opacity: 0, x: 0}, 49.947);
+tl.set("#gl2", {opacity: 0.68, top: "22%", height: 59, x: -45}, 49.78);
+tl.set("#gl2", {top: "36%", height: 10, x: -55}, 49.847);
+tl.set("#gl2", {opacity: 0, x: 0}, 49.947);
+tl.set("#gl3", {opacity: 0.68, top: "64%", height: 25, x: -22}, 49.78);
+tl.set("#gl3", {top: "67%", height: 38, x: 60}, 49.847);
+tl.set("#gl3", {opacity: 0, x: 0}, 49.947);
+tl.set("#flash", {opacity: 0.77}, 49.78);
+tl.set("#flash", {opacity: 0.23}, 49.847);
+tl.set("#flash", {opacity: 0}, 49.913);
+tl.set("#stage", {x: -12}, 49.78);
+tl.set("#stage", {x: 12}, 49.847);
+tl.set("#stage", {x: 0}, 49.913);
+tl.fromTo("#s_m04k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 53.93);
+tl.fromTo("#s_m04kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 53.98);
+tl.fromTo("#c4qcap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 60.05);
+tl.set("#c4qcap0", {opacity: 0}, 61.92);
+tl.fromTo("#c4qcap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 62.05);
+tl.fromTo("#c4qv", {filter: "grayscale(0) saturate(1) contrast(1) brightness(1)"}, {filter: "grayscale(1) saturate(0.35) contrast(1.08) brightness(0.9)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 60.22);
+tl.set("#gl1", {opacity: 0.52, top: "29%", height: 40, x: 28}, 59.82);
+tl.set("#gl1", {top: "21%", height: 17, x: 31}, 59.887);
+tl.set("#gl1", {opacity: 0, x: 0}, 59.987);
+tl.set("#gl2", {opacity: 0.52, top: "58%", height: 14, x: -1}, 59.82);
+tl.set("#gl2", {top: "32%", height: 29, x: -65}, 59.887);
+tl.set("#gl2", {opacity: 0, x: 0}, 59.987);
+tl.set("#gl3", {opacity: 0.52, top: "31%", height: 39, x: -45}, 59.82);
+tl.set("#gl3", {top: "28%", height: 12, x: -33}, 59.887);
+tl.set("#gl3", {opacity: 0, x: 0}, 59.987);
+tl.set("#flash", {opacity: 0.59}, 59.82);
+tl.set("#flash", {opacity: 0.17}, 59.887);
+tl.set("#flash", {opacity: 0}, 59.953);
+tl.set("#stage", {x: -9}, 59.82);
+tl.set("#stage", {x: 9}, 59.887);
+tl.set("#stage", {x: 0}, 59.953);
+tl.fromTo("#c5qcap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 65.19);
+tl.set("#c5qcap0", {opacity: 0}, 71.21);
+tl.fromTo("#c5qcap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 71.34);
+tl.set("#gl1", {opacity: 0.52, top: "32%", height: 30, x: -68}, 64.96);
+tl.set("#gl1", {top: "61%", height: 31, x: 5}, 65.027);
+tl.set("#gl1", {opacity: 0, x: 0}, 65.127);
+tl.set("#gl2", {opacity: 0.52, top: "54%", height: 18, x: -47}, 64.96);
+tl.set("#gl2", {top: "14%", height: 23, x: -8}, 65.027);
+tl.set("#gl2", {opacity: 0, x: 0}, 65.127);
+tl.set("#gl3", {opacity: 0.52, top: "6%", height: 37, x: 25}, 64.96);
+tl.set("#gl3", {top: "81%", height: 39, x: -38}, 65.027);
+tl.set("#gl3", {opacity: 0, x: 0}, 65.127);
+tl.set("#flash", {opacity: 0.59}, 64.96);
+tl.set("#flash", {opacity: 0.17}, 65.027);
+tl.set("#flash", {opacity: 0}, 65.093);
+tl.set("#stage", {x: -9}, 64.96);
+tl.set("#stage", {x: 9}, 65.027);
+tl.set("#stage", {x: 0}, 65.093);
+tl.fromTo("#s_m05k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 77.07);
+tl.fromTo("#s_m05kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 77.12);
+tl.fromTo("#c6qcap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 85.21);
+tl.set("#gl1", {opacity: 0.52, top: "80%", height: 50, x: -36}, 84.98);
+tl.set("#gl1", {top: "66%", height: 34, x: -24}, 85.047);
+tl.set("#gl1", {opacity: 0, x: 0}, 85.147);
+tl.set("#gl2", {opacity: 0.52, top: "85%", height: 33, x: -12}, 84.98);
+tl.set("#gl2", {top: "24%", height: 25, x: -22}, 85.047);
+tl.set("#gl2", {opacity: 0, x: 0}, 85.147);
+tl.set("#gl3", {opacity: 0.52, top: "25%", height: 49, x: -20}, 84.98);
+tl.set("#gl3", {top: "85%", height: 34, x: 53}, 85.047);
+tl.set("#gl3", {opacity: 0, x: 0}, 85.147);
+tl.set("#flash", {opacity: 0.59}, 84.98);
+tl.set("#flash", {opacity: 0.17}, 85.047);
+tl.set("#flash", {opacity: 0}, 85.113);
+tl.set("#stage", {x: -9}, 84.98);
+tl.set("#stage", {x: 9}, 85.047);
+tl.set("#stage", {x: 0}, 85.113);
+tl.fromTo("#c6rcap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 90.09);
+tl.set("#gl1", {opacity: 0.52, top: "82%", height: 40, x: -58}, 89.91);
+tl.set("#gl1", {top: "15%", height: 16, x: -43}, 89.977);
+tl.set("#gl1", {opacity: 0, x: 0}, 90.077);
+tl.set("#gl2", {opacity: 0.52, top: "9%", height: 30, x: -9}, 89.91);
+tl.set("#gl2", {top: "70%", height: 35, x: -5}, 89.977);
+tl.set("#gl2", {opacity: 0, x: 0}, 90.077);
+tl.set("#gl3", {opacity: 0.52, top: "58%", height: 45, x: 5}, 89.91);
+tl.set("#gl3", {top: "81%", height: 43, x: -26}, 89.977);
+tl.set("#gl3", {opacity: 0, x: 0}, 90.077);
+tl.set("#flash", {opacity: 0.59}, 89.91);
+tl.set("#flash", {opacity: 0.17}, 89.977);
+tl.set("#flash", {opacity: 0}, 90.043);
+tl.set("#stage", {x: -9}, 89.91);
+tl.set("#stage", {x: 9}, 89.977);
+tl.set("#stage", {x: 0}, 90.043);
+tl.fromTo("#s_d11kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 95.89);
+tl.fromTo("#c11acap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 102.06);
+tl.set("#gl1", {opacity: 0.52, top: "13%", height: 28, x: 52}, 101.83);
+tl.set("#gl1", {top: "21%", height: 14, x: 1}, 101.897);
+tl.set("#gl1", {opacity: 0, x: 0}, 101.997);
+tl.set("#gl2", {opacity: 0.52, top: "32%", height: 15, x: -53}, 101.83);
+tl.set("#gl2", {top: "31%", height: 27, x: 35}, 101.897);
+tl.set("#gl2", {opacity: 0, x: 0}, 101.997);
+tl.set("#gl3", {opacity: 0.52, top: "62%", height: 17, x: -59}, 101.83);
+tl.set("#gl3", {top: "36%", height: 21, x: 2}, 101.897);
+tl.set("#gl3", {opacity: 0, x: 0}, 101.997);
+tl.set("#flash", {opacity: 0.59}, 101.83);
+tl.set("#flash", {opacity: 0.17}, 101.897);
+tl.set("#flash", {opacity: 0}, 101.963);
+tl.set("#stage", {x: -9}, 101.83);
+tl.set("#stage", {x: 9}, 101.897);
+tl.set("#stage", {x: 0}, 101.963);
+tl.fromTo("#c11bcap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 105.22);
+tl.set("#gl1", {opacity: 0.52, top: "52%", height: 50, x: -37}, 105.09);
+tl.set("#gl1", {top: "72%", height: 15, x: 22}, 105.157);
+tl.set("#gl1", {opacity: 0, x: 0}, 105.257);
+tl.set("#gl2", {opacity: 0.52, top: "22%", height: 35, x: 63}, 105.09);
+tl.set("#gl2", {top: "62%", height: 18, x: -62}, 105.157);
+tl.set("#gl2", {opacity: 0, x: 0}, 105.257);
+tl.set("#gl3", {opacity: 0.52, top: "7%", height: 36, x: 9}, 105.09);
+tl.set("#gl3", {top: "65%", height: 12, x: -65}, 105.157);
+tl.set("#gl3", {opacity: 0, x: 0}, 105.257);
+tl.set("#flash", {opacity: 0.59}, 105.09);
+tl.set("#flash", {opacity: 0.17}, 105.157);
+tl.set("#flash", {opacity: 0}, 105.223);
+tl.set("#stage", {x: -9}, 105.09);
+tl.set("#stage", {x: 9}, 105.157);
+tl.set("#stage", {x: 0}, 105.223);
+tl.fromTo("#s_m06k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 108.46);
+tl.fromTo("#s_m06kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 108.51);
+tl.fromTo("#c7qcap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 113.82);
+tl.set("#c7qcap0", {opacity: 0}, 117.0);
+tl.fromTo("#c7qcap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 117.13);
+tl.set("#gl1", {opacity: 0.52, top: "81%", height: 44, x: -53}, 113.59);
+tl.set("#gl1", {top: "14%", height: 29, x: 11}, 113.657);
+tl.set("#gl1", {opacity: 0, x: 0}, 113.757);
+tl.set("#gl2", {opacity: 0.52, top: "22%", height: 18, x: 45}, 113.59);
+tl.set("#gl2", {top: "14%", height: 44, x: 24}, 113.657);
+tl.set("#gl2", {opacity: 0, x: 0}, 113.757);
+tl.set("#gl3", {opacity: 0.52, top: "10%", height: 35, x: 20}, 113.59);
+tl.set("#gl3", {top: "21%", height: 15, x: 51}, 113.657);
+tl.set("#gl3", {opacity: 0, x: 0}, 113.757);
+tl.set("#flash", {opacity: 0.59}, 113.59);
+tl.set("#flash", {opacity: 0.17}, 113.657);
+tl.set("#flash", {opacity: 0}, 113.723);
+tl.set("#stage", {x: -9}, 113.59);
+tl.set("#stage", {x: 9}, 113.657);
+tl.set("#stage", {x: 0}, 113.723);
+tl.fromTo("#s_m06bkl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 119.54);
+tl.fromTo("#s_m07k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 126.72);
+tl.fromTo("#s_m07kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 126.77);
+tl.fromTo("#c8qcap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 134.29);
+tl.set("#c8qcap0", {opacity: 0}, 137.06);
+tl.fromTo("#c8qcap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 137.19);
+tl.fromTo("#c8qv", {filter: "saturate(1) sepia(0) contrast(1) brightness(1)"}, {filter: "saturate(1.15) sepia(0.18) contrast(1.02) brightness(1.04)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 134.46);
+tl.set("#gl1", {opacity: 0.52, top: "14%", height: 15, x: 57}, 134.06);
+tl.set("#gl1", {top: "58%", height: 10, x: 27}, 134.127);
+tl.set("#gl1", {opacity: 0, x: 0}, 134.227);
+tl.set("#gl2", {opacity: 0.52, top: "53%", height: 14, x: -52}, 134.06);
+tl.set("#gl2", {top: "79%", height: 15, x: -47}, 134.127);
+tl.set("#gl2", {opacity: 0, x: 0}, 134.227);
+tl.set("#gl3", {opacity: 0.52, top: "19%", height: 40, x: 14}, 134.06);
+tl.set("#gl3", {top: "37%", height: 34, x: 47}, 134.127);
+tl.set("#gl3", {opacity: 0, x: 0}, 134.227);
+tl.set("#flash", {opacity: 0.59}, 134.06);
+tl.set("#flash", {opacity: 0.17}, 134.127);
+tl.set("#flash", {opacity: 0}, 134.193);
+tl.set("#stage", {x: -9}, 134.06);
+tl.set("#stage", {x: 9}, 134.127);
+tl.set("#stage", {x: 0}, 134.193);
+tl.fromTo("#s_m08k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 143.9);
+tl.fromTo("#s_m08kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 143.95);
+tl.fromTo("#c9qcap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 153.19);
+tl.set("#c9qcap0", {opacity: 0}, 155.69);
+tl.fromTo("#c9qcap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 155.82);
+tl.set("#gl1", {opacity: 0.52, top: "61%", height: 48, x: -49}, 152.96);
+tl.set("#gl1", {top: "64%", height: 43, x: 61}, 153.027);
+tl.set("#gl1", {opacity: 0, x: 0}, 153.127);
+tl.set("#gl2", {opacity: 0.52, top: "8%", height: 52, x: -48}, 152.96);
+tl.set("#gl2", {top: "44%", height: 40, x: -65}, 153.027);
+tl.set("#gl2", {opacity: 0, x: 0}, 153.127);
+tl.set("#gl3", {opacity: 0.52, top: "34%", height: 45, x: 54}, 152.96);
+tl.set("#gl3", {top: "19%", height: 26, x: -68}, 153.027);
+tl.set("#gl3", {opacity: 0, x: 0}, 153.127);
+tl.set("#flash", {opacity: 0.59}, 152.96);
+tl.set("#flash", {opacity: 0.17}, 153.027);
+tl.set("#flash", {opacity: 0}, 153.093);
+tl.set("#stage", {x: -9}, 152.96);
+tl.set("#stage", {x: 9}, 153.027);
+tl.set("#stage", {x: 0}, 153.093);
+tl.fromTo("#c12cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 158.6);
+tl.set("#c12cap0", {opacity: 0}, 160.53);
+tl.fromTo("#c12cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 160.66);
+tl.set("#gl1", {opacity: 0.52, top: "52%", height: 23, x: -19}, 158.42);
+tl.set("#gl1", {top: "43%", height: 43, x: -27}, 158.487);
+tl.set("#gl1", {opacity: 0, x: 0}, 158.587);
+tl.set("#gl2", {opacity: 0.52, top: "48%", height: 45, x: -9}, 158.42);
+tl.set("#gl2", {top: "61%", height: 30, x: 33}, 158.487);
+tl.set("#gl2", {opacity: 0, x: 0}, 158.587);
+tl.set("#gl3", {opacity: 0.52, top: "37%", height: 54, x: 40}, 158.42);
+tl.set("#gl3", {top: "30%", height: 22, x: -16}, 158.487);
+tl.set("#gl3", {opacity: 0, x: 0}, 158.587);
+tl.set("#flash", {opacity: 0.59}, 158.42);
+tl.set("#flash", {opacity: 0.17}, 158.487);
+tl.set("#flash", {opacity: 0}, 158.553);
+tl.set("#stage", {x: -9}, 158.42);
+tl.set("#stage", {x: 9}, 158.487);
+tl.set("#stage", {x: 0}, 158.553);
+tl.fromTo("#s_msgt", {scale: 1.25, opacity: 0}, {scale: 1, opacity: 1, duration: 0.45, ease: "expo.out", immediateRender: false}, 165.66);
+tl.fromTo("#s_msgg", {opacity: 0}, {opacity: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 165.86);
+tl.fromTo("#s_msgb", {opacity: 0}, {opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 166.56);
+tl.set("#gl1", {opacity: 0.60, top: "54%", height: 51, x: 11}, 165.36);
+tl.set("#gl1", {top: "33%", height: 23, x: -36}, 165.427);
+tl.set("#gl1", {opacity: 0, x: 0}, 165.527);
+tl.set("#gl2", {opacity: 0.60, top: "22%", height: 36, x: -60}, 165.36);
+tl.set("#gl2", {top: "68%", height: 14, x: 0}, 165.427);
+tl.set("#gl2", {opacity: 0, x: 0}, 165.527);
+tl.set("#gl3", {opacity: 0.60, top: "26%", height: 42, x: 50}, 165.36);
+tl.set("#gl3", {top: "19%", height: 27, x: -16}, 165.427);
+tl.set("#gl3", {opacity: 0, x: 0}, 165.527);
+tl.set("#flash", {opacity: 0.68}, 165.36);
+tl.set("#flash", {opacity: 0.20}, 165.427);
+tl.set("#flash", {opacity: 0}, 165.493);
+tl.set("#stage", {x: -11}, 165.36);
+tl.set("#stage", {x: 11}, 165.427);
+tl.set("#stage", {x: 0}, 165.493);
+tl.set("#gl1", {opacity: 0.75, top: "57%", height: 54, x: 63}, 170.98);
+tl.set("#gl1", {top: "53%", height: 41, x: 10}, 171.047);
+tl.set("#gl1", {opacity: 0, x: 0}, 171.147);
+tl.set("#gl2", {opacity: 0.75, top: "84%", height: 34, x: -51}, 170.98);
+tl.set("#gl2", {top: "62%", height: 12, x: 1}, 171.047);
+tl.set("#gl2", {opacity: 0, x: 0}, 171.147);
+tl.set("#gl3", {opacity: 0.75, top: "82%", height: 57, x: 1}, 170.98);
+tl.set("#gl3", {top: "10%", height: 32, x: 9}, 171.047);
+tl.set("#gl3", {opacity: 0, x: 0}, 171.147);
+tl.set("#flash", {opacity: 0.85}, 170.98);
+tl.set("#flash", {opacity: 0.25}, 171.047);
+tl.set("#flash", {opacity: 0}, 171.113);
+tl.set("#stage", {x: -14}, 170.98);
+tl.set("#stage", {x: 14}, 171.047);
+tl.set("#stage", {x: 0}, 171.113);
+tl.fromTo("#s_card4n", {x: -40, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 171.23);
+tl.fromTo("#s_card4t", {scale: 1.3, opacity: 0}, {scale: 1, opacity: 1, duration: 0.45, ease: "expo.out", immediateRender: false}, 171.48);
+tl.fromTo("#s_card4s", {opacity: 0}, {opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 172.18);
+tl.fromTo("#stage", {opacity: 0}, {opacity: 1, duration: 0.8, ease: "power2.out", immediateRender: false}, 0.05);
+tl.to("#stage", {opacity: 0, duration: 0.95, ease: "power1.in"}, 180.31);
+const root = gsap.timeline({ paused: true });
+tl.time(0.0);
+root.fromTo(tl, { time: 0.0 }, { time: 181.46, duration: 181.46, ease: "none" }, 0);
+window.__timelines["root"] = root;
+</script>
+</div>
+</body>
+</html>

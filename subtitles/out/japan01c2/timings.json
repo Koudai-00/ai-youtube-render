@@ -1,5 +1,5 @@
 {
- "total": 224.43,
+ "total": 191.69,
  "beats": [
   {
    "id": "s_intro",
@@ -9,102 +9,107 @@
   {
    "id": "s_b1",
    "start": 8.56,
-   "end": 22.4
+   "end": 16.62
   },
   {
    "id": "s_counter",
-   "start": 22.4,
-   "end": 34.3
+   "start": 16.62,
+   "end": 35.85
   },
   {
    "id": "s_b2",
-   "start": 34.3,
-   "end": 46.38
+   "start": 35.85,
+   "end": 42.16
   },
   {
    "id": "s_w03",
-   "start": 46.38,
-   "end": 53.46
+   "start": 42.16,
+   "end": 46.73
   },
   {
    "id": "s_b8",
-   "start": 53.46,
-   "end": 69.54
+   "start": 46.73,
+   "end": 54.16
   },
   {
    "id": "s_dance",
-   "start": 69.54,
-   "end": 75.95
+   "start": 54.16,
+   "end": 60.57
   },
   {
    "id": "s_b3",
-   "start": 75.95,
-   "end": 90.85
+   "start": 60.57,
+   "end": 70.3
   },
   {
    "id": "s_news",
-   "start": 90.85,
-   "end": 94.16
+   "start": 70.3,
+   "end": 73.6
   },
   {
    "id": "s_b4",
-   "start": 94.16,
-   "end": 109.12
+   "start": 73.6,
+   "end": 81.56
   },
   {
    "id": "s_w11",
-   "start": 109.12,
-   "end": 113.47
+   "start": 81.56,
+   "end": 85.92
   },
   {
    "id": "s_b9",
-   "start": 113.47,
-   "end": 125.95
+   "start": 85.92,
+   "end": 93.8
+  },
+  {
+   "id": "s_w12",
+   "start": 93.8,
+   "end": 103.18
   },
   {
    "id": "s_m05",
-   "start": 125.95,
-   "end": 130.73
+   "start": 103.18,
+   "end": 107.95
   },
   {
    "id": "s_b5",
-   "start": 130.73,
-   "end": 147.55
+   "start": 107.95,
+   "end": 118.53
   },
   {
    "id": "s_m06",
-   "start": 147.55,
-   "end": 152.6
+   "start": 118.53,
+   "end": 123.59
   },
   {
    "id": "s_b10",
-   "start": 152.6,
-   "end": 164.12
+   "start": 123.59,
+   "end": 130.32
   },
   {
    "id": "s_b6",
-   "start": 164.12,
-   "end": 180.59
+   "start": 130.32,
+   "end": 138.37
   },
   {
    "id": "s_m07",
-   "start": 180.59,
-   "end": 187.19
+   "start": 138.37,
+   "end": 154.45
   },
   {
    "id": "s_b7",
-   "start": 187.19,
-   "end": 206.41
+   "start": 154.45,
+   "end": 173.67
   },
   {
    "id": "s_msg",
-   "start": 206.41,
-   "end": 215.11
+   "start": 173.67,
+   "end": 182.37
   },
   {
    "id": "s_card3",
-   "start": 215.11,
-   "end": 223.43
+   "start": 182.37,
+   "end": 190.69
   }
  ],
  "narr": {
@@ -112,243 +117,138 @@
    "start": 0.8,
    "dur": 7.26
   },
+  "nb1a": {
+   "start": 8.91,
+   "dur": 3.07
+  },
+  "nb1b": {
+   "start": 12.29,
+   "dur": 3.94
+  },
   "w02": {
-   "start": 22.9,
+   "start": 17.12,
    "dur": 10.79
   },
+  "w02b": {
+   "start": 28.32,
+   "dur": 6.93
+  },
+  "nb2a": {
+   "start": 36.2,
+   "dur": 2.41
+  },
+  "nb2b": {
+   "start": 38.91,
+   "dur": 2.85
+  },
   "w03": {
-   "start": 46.78,
-   "dur": 6.49
+   "start": 42.56,
+   "dur": 3.97
+  },
+  "nb8a": {
+   "start": 47.08,
+   "dur": 3.64
+  },
+  "nb8b": {
+   "start": 51.01,
+   "dur": 2.74
   },
   "w10": {
-   "start": 69.94,
+   "start": 54.56,
    "dur": 5.61
   },
+  "nb3a": {
+   "start": 60.92,
+   "dur": 3.27
+  },
+  "nb3b": {
+   "start": 64.49,
+   "dur": 5.35
+  },
   "w04": {
-   "start": 91.35,
+   "start": 70.8,
    "dur": 2.3
   },
+  "nb4a": {
+   "start": 73.95,
+   "dur": 3.29
+  },
+  "nb4b": {
+   "start": 77.53,
+   "dur": 3.63
+  },
   "w11": {
-   "start": 109.52,
+   "start": 81.96,
    "dur": 3.75
   },
+  "nb9a": {
+   "start": 86.27,
+   "dur": 2.69
+  },
+  "nb9b": {
+   "start": 89.25,
+   "dur": 4.15
+  },
+  "w12": {
+   "start": 94.2,
+   "dur": 8.67
+  },
   "w05": {
-   "start": 126.35,
+   "start": 103.58,
    "dur": 4.07
   },
+  "nb5a": {
+   "start": 108.3,
+   "dur": 2.49
+  },
+  "nb5b": {
+   "start": 111.09,
+   "dur": 2.95
+  },
+  "nb5c": {
+   "start": 114.34,
+   "dur": 3.74
+  },
   "w06": {
-   "start": 147.95,
+   "start": 118.93,
    "dur": 4.35
   },
+  "nb10a": {
+   "start": 123.94,
+   "dur": 2.54
+  },
+  "nb10b": {
+   "start": 126.77,
+   "dur": 3.15
+  },
+  "nb6a": {
+   "start": 130.67,
+   "dur": 3.36
+  },
+  "nb6b": {
+   "start": 134.33,
+   "dur": 3.58
+  },
   "w07": {
-   "start": 180.99,
+   "start": 138.77,
    "dur": 5.9
   },
+  "w07b": {
+   "start": 144.96,
+   "dur": 9.18
+  },
   "w08": {
-   "start": 207.01,
+   "start": 174.27,
    "dur": 7.4
   },
   "w09": {
-   "start": 215.61,
+   "start": 182.87,
    "dur": 5.22
   }
  },
  "quotes": {
-  "b1": {
-   "beat_start": 8.66,
-   "lead": 0.4,
-   "adur": 12.64,
-   "media_start": 0.6,
-   "dur": 13.54,
-   "clip": "b1.mp4",
-   "sample": 17,
-   "grade": null,
-   "credit": "引用: Chopsticks and Trains",
-   "caps": [
-    [
-     0.0,
-     "コロナ後 訪日客が急増し"
-    ],
-    [
-     6.3,
-     "外国人の<em>迷惑行為</em>が後を絶たない"
-    ]
-   ]
-  },
-  "b2": {
-   "beat_start": 34.4,
-   "lead": 0.4,
-   "adur": 10.88,
-   "media_start": 0.6,
-   "dur": 11.78,
-   "clip": "b2.mp4",
-   "sample": 17,
-   "grade": null,
-   "credit": "引用: Chopsticks and Trains",
-   "caps": [
-    [
-     0.0,
-     "鳥居で<em>懸垂</em>をする動画が"
-    ],
-    [
-     5.6,
-     "最悪の形で拡散された"
-    ]
-   ]
-  },
-  "b8": {
-   "beat_start": 53.56,
-   "lead": 0.4,
-   "adur": 14.88,
-   "media_start": 0.6,
-   "dur": 15.78,
-   "clip": "b8.mp4",
-   "sample": 17,
-   "grade": null,
-   "credit": "引用: Chopsticks and Trains",
-   "caps": [
-    [
-     0.0,
-     "最新の問題は あるダンス集団だ"
-    ],
-    [
-     7.5,
-     "米国拠点の ブレイクダンサーたち"
-    ]
-   ]
-  },
-  "b3": {
-   "beat_start": 76.05,
-   "lead": 0.4,
-   "adur": 13.6,
-   "media_start": 0.6,
-   "dur": 14.5,
-   "clip": "b3.mp4",
-   "sample": 17,
-   "grade": null,
-   "credit": "引用: Chopsticks and Trains",
-   "caps": [
-    [
-     0.0,
-     "技術の問題じゃない <em>場所とやり方</em>だ"
-    ],
-    [
-     6.8,
-     "無神経で 迷惑で 危険で 不快"
-    ]
-   ]
-  },
-  "b4": {
-   "beat_start": 94.26,
-   "lead": 0.4,
-   "adur": 13.76,
-   "media_start": 0.6,
-   "dur": 14.66,
-   "clip": "b4.mp4",
-   "sample": 17,
-   "grade": null,
-   "credit": "引用: Chopsticks and Trains",
-   "caps": [
-    [
-     0.0,
-     "車内には 警告の貼り紙まで"
-    ],
-    [
-     6.4,
-     "鉄道会社は激怒し <em>法的措置</em>を検討"
-    ]
-   ]
-  },
-  "b9": {
-   "beat_start": 113.57,
-   "lead": 0.4,
-   "adur": 11.28,
-   "media_start": 0.6,
-   "dur": 12.18,
-   "clip": "b9.mp4",
-   "sample": 17,
-   "grade": null,
-   "credit": "引用: Chopsticks and Trains",
-   "caps": [
-    [
-     0.0,
-     "正直 もう他に手はない"
-    ],
-    [
-     5.6,
-     "<em>罰がなければ 繰り返すだけ</em>だ"
-    ]
-   ]
-  },
-  "b5": {
-   "beat_start": 130.83,
-   "lead": 0.4,
-   "adur": 15.52,
-   "media_start": 0.6,
-   "dur": 16.42,
-   "clip": "b5.mp4",
-   "sample": 17,
-   "grade": null,
-   "credit": "引用: Chopsticks and Trains",
-   "caps": [
-    [
-     0.0,
-     "人混みでのスタントは<em>危険</em>だ"
-    ],
-    [
-     5.2,
-     "一歩間違えば 誰かが大怪我をする"
-    ],
-    [
-     12.4,
-     "<em>最悪の事態</em>になるぞ"
-    ]
-   ]
-  },
-  "b10": {
-   "beat_start": 152.7,
-   "lead": 0.4,
-   "adur": 10.32,
-   "media_start": 0.6,
-   "dur": 11.22,
-   "clip": "b10.mp4",
-   "sample": 17,
-   "grade": null,
-   "credit": "引用: Chopsticks and Trains",
-   "caps": [
-    [
-     0.0,
-     "君たちはこの国の<em>\"客\"</em>なんだ"
-    ],
-    [
-     4.8,
-     "日本の習慣とルールに従え"
-    ]
-   ]
-  },
-  "b6": {
-   "beat_start": 164.27,
-   "lead": 0.4,
-   "adur": 15.12,
-   "media_start": 0.6,
-   "dur": 16.02,
-   "clip": "b6.mp4",
-   "sample": 17,
-   "grade": "cold",
-   "credit": "引用: Chopsticks and Trains",
-   "caps": [
-    [
-     0.0,
-     "君らのせいで<em>全ての観光客</em>が迷惑する"
-    ],
-    [
-     7.8,
-     "外国人全体の印象が 悪くなるんだ"
-    ]
-   ]
-  },
   "b7": {
-   "beat_start": 187.29,
+   "beat_start": 154.55,
    "lead": 0.4,
    "adur": 17.92,
    "media_start": 0.6,
@@ -375,6 +275,9 @@
    "kind": "broll",
    "start": 0.6,
    "end": 8.56,
+   "nids": [
+    "w01"
+   ],
    "bg": "cat17",
    "lt": [
     "在日系YouTuber",
@@ -383,132 +286,221 @@
   },
   {
    "id": "s_b1",
-   "kind": "q",
+   "kind": "nv",
    "start": 8.56,
-   "end": 22.4
+   "end": 16.62,
+   "nids": [
+    "nb1a",
+    "nb1b"
+   ],
+   "q": "b1"
   },
   {
    "id": "s_counter",
    "kind": "counter",
-   "start": 22.4,
-   "end": 34.3
+   "start": 16.62,
+   "end": 35.85,
+   "nids": [
+    "w02",
+    "w02b"
+   ]
   },
   {
    "id": "s_b2",
-   "kind": "q",
-   "start": 34.3,
-   "end": 46.38
+   "kind": "nv",
+   "start": 35.85,
+   "end": 42.16,
+   "nids": [
+    "nb2a",
+    "nb2b"
+   ],
+   "q": "b2"
   },
   {
    "id": "s_w03",
    "kind": "kick",
-   "start": 46.38,
-   "end": 53.46,
+   "start": 42.16,
+   "end": 46.73,
+   "nids": [
+    "w03"
+   ],
    "kicker": "決定打は、\"迷惑ダンス\""
   },
   {
    "id": "s_b8",
-   "kind": "q",
-   "start": 53.46,
-   "end": 69.54
+   "kind": "nv",
+   "start": 46.73,
+   "end": 54.16,
+   "nids": [
+    "nb8a",
+    "nb8b"
+   ],
+   "q": "b8"
   },
   {
    "id": "s_dance",
    "kind": "broll",
-   "start": 69.54,
-   "end": 75.95,
+   "start": 54.16,
+   "end": 60.57,
+   "nids": [
+    "w10"
+   ],
    "bg": "dance17",
    "label": "“迷惑ダンス”"
   },
   {
    "id": "s_b3",
-   "kind": "q",
-   "start": 75.95,
-   "end": 90.85
+   "kind": "nv",
+   "start": 60.57,
+   "end": 70.3,
+   "nids": [
+    "nb3a",
+    "nb3b"
+   ],
+   "q": "b3"
   },
   {
    "id": "s_news",
    "kind": "news",
-   "start": 90.85,
-   "end": 94.16
+   "start": 70.3,
+   "end": 73.6,
+   "nids": [
+    "w04"
+   ]
   },
   {
    "id": "s_b4",
-   "kind": "q",
-   "start": 94.16,
-   "end": 109.12
+   "kind": "nv",
+   "start": 73.6,
+   "end": 81.56,
+   "nids": [
+    "nb4a",
+    "nb4b"
+   ],
+   "q": "b4"
   },
   {
    "id": "s_w11",
    "kind": "kick",
-   "start": 109.12,
-   "end": 113.47,
+   "start": 81.56,
+   "end": 85.92,
+   "nids": [
+    "w11"
+   ],
    "kicker": null
   },
   {
    "id": "s_b9",
-   "kind": "q",
-   "start": 113.47,
-   "end": 125.95
+   "kind": "nv",
+   "start": 85.92,
+   "end": 93.8,
+   "nids": [
+    "nb9a",
+    "nb9b"
+   ],
+   "q": "b9"
+  },
+  {
+   "id": "s_w12",
+   "kind": "kick",
+   "start": 93.8,
+   "end": 103.18,
+   "nids": [
+    "w12"
+   ],
+   "kicker": "なぜ、同胞に厳しいのか"
   },
   {
    "id": "s_m05",
    "kind": "kick",
-   "start": 125.95,
-   "end": 130.73,
+   "start": 103.18,
+   "end": 107.95,
+   "nids": [
+    "w05"
+   ],
    "kicker": "恐れているのは、人の命"
   },
   {
    "id": "s_b5",
-   "kind": "q",
-   "start": 130.73,
-   "end": 147.55
+   "kind": "nv",
+   "start": 107.95,
+   "end": 118.53,
+   "nids": [
+    "nb5a",
+    "nb5b",
+    "nb5c"
+   ],
+   "q": "b5"
   },
   {
    "id": "s_m06",
    "kind": "kick",
-   "start": 147.55,
-   "end": 152.6,
+   "start": 118.53,
+   "end": 123.59,
+   "nids": [
+    "w06"
+   ],
    "kicker": "警告は、全員へ"
   },
   {
    "id": "s_b10",
-   "kind": "q",
-   "start": 152.6,
-   "end": 164.12
+   "kind": "nv",
+   "start": 123.59,
+   "end": 130.32,
+   "nids": [
+    "nb10a",
+    "nb10b"
+   ],
+   "q": "b10"
   },
   {
    "id": "s_b6",
-   "kind": "q",
-   "start": 164.12,
-   "end": 180.59
+   "kind": "nv",
+   "start": 130.32,
+   "end": 138.37,
+   "nids": [
+    "nb6a",
+    "nb6b"
+   ],
+   "q": "b6"
   },
   {
    "id": "s_m07",
    "kind": "kick",
-   "start": 180.59,
-   "end": 187.19,
+   "start": 138.37,
+   "end": 154.45,
+   "nids": [
+    "w07",
+    "w07b"
+   ],
    "kicker": "そして、謝罪へ"
   },
   {
    "id": "s_b7",
    "kind": "q",
-   "start": 187.19,
-   "end": 206.41
+   "start": 154.45,
+   "end": 173.67,
+   "nids": []
   },
   {
    "id": "s_msg",
    "kind": "msg",
-   "start": 206.41,
-   "end": 215.11,
+   "start": 173.67,
+   "end": 182.37,
+   "nids": [
+    "w08"
+   ],
    "text": "99%は、<br>日本の味方だ。",
    "by": "— Chopsticks and Trains"
   },
   {
    "id": "s_card3",
    "kind": "card",
-   "start": 215.11,
-   "end": 223.43,
+   "start": 182.37,
+   "end": 190.69,
+   "nids": [
+    "w09"
+   ],
    "no": "第 3 章",
    "title": "差別された日",
    "sub": "— 善良な外国人が、代償を払う番だった",

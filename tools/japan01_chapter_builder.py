@@ -11,7 +11,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from japan01_chapters import BROLL, CREDIT  # noqa: E402
+from japan01_chapters import BROLL, CREDIT, Q as QSPEC  # noqa: E402
+
+NV_PRE = 0.6  # extract_quotes.NV_PRE と一致
 
 EP = os.environ.get("EP_CH") or "japan01c1"
 TPL = ROOT / "hyperframes" / "templates" / EP
@@ -143,6 +145,34 @@ def quote_block(qid, sc_start):
     glitch(t0, 0.9 if abs(t0 - sc_start) < 0.2 else 0.6)
 
 
+def sc_nv(s):
+    """ナレ引用: 映像ミュート+引用風字幕(ナレ行開始に同期)+ナレが内容を語る"""
+    t0, t1 = s["start"], s["end"]
+    qid = s["q"]
+    qs = QSPEC[qid]
+    nids = s["nids"]
+    caps = qs["caps"]
+    assert len(caps) == len(nids), f"{EP}:{qid} caps{len(caps)} != nids{len(nids)}"
+    el_video(f"{qid}v", t0, t1, f"{qid}.mp4", NV_PRE)
+    cdivs = "".join(f'<div class="qcap" id="{qid}cap{i}">{h}</div>' for i, (_dt, h) in enumerate(caps))
+    el_div(f"{qid}o", t0, t1, "qov", (
+        '<div class="qscrim"></div>'
+        f'<div class="credit">{CREDIT[qs["s"]]}</div>' + cdivs))
+    times = [N[nid]["start"] for nid in nids]
+    for i, st in enumerate(times):
+        tin = max(t0 + 0.05, st - 0.12)
+        fromto(tin, f"#{qid}cap{i}", "y: 26, opacity: 0", "y: 0, opacity: 1", 0.3, "power3.out")
+        cue("pop", tin, 0.6)
+        if i + 1 < len(times):
+            setv(times[i + 1] - 0.25, f"#{qid}cap{i}", "opacity: 0")
+    g = qs.get("grade")
+    if g:
+        fromto(t0 + 0.4, f"#{qid}v", f'filter: "{GRADE0[g]}"', f'filter: "{GRADE1[g]}"', 0.9, "power2.inOut")
+        if g == "gray":
+            cue("heart", t0 + 0.6, 1.0, min(6.0, max(1.5, t1 - t0 - 1.0)))
+    glitch(t0, 0.7)
+
+
 def lower_third(pref, t0, t1, name, role, delay=0.5):
     el_div(f"{pref}lt", t0, t1, "qov", (
         f'<div class="lt" id="{pref}lt1"><div class="ltbar"></div>'
@@ -189,13 +219,18 @@ def sc_q(s):
             quote_block(qid, s["start"])
 
 
+ARR_SVG = ('<svg class="marrs" id="%s" style="left:%s" viewBox="0 0 96 36" fill="none">'
+           '<line x1="0" y1="18" x2="66" y2="18" stroke="#e8322e" stroke-width="9"/>'
+           '<polygon points="64,3 64,33 94,18" fill="#e8322e"/></svg>')
+
+
 def sc_diagram(s):  # c1: 連帯責任メカニズム
     t0, t1 = s["start"], s["end"]
     steps = [("st1", "1人の<br>迷惑行為"), ("st2", '主語が<br>"あの人たち"に'), ("st3", "全員に<br>レッテル")]
+    # 箱: left 8/39/70% 幅26% 高さ固定270px → 矢印は箱間ギャップ(34-39%, 65-70%)を箱の垂直中心で結ぶ
     sh = "".join(
-        f'<div class="mstep" id="{sid}" style="left:{8+i*31}%"><div class="mnum">{i+1}</div>{tx}</div>'
-        f'<div class="marr" id="{sid}a" style="left:{31+i*31}%"></div>' if i < 2 else
-        f'<div class="mstep" id="{sid}" style="left:{8+i*31}%"><div class="mnum">{i+1}</div>{tx}</div>'
+        f'<div class="mstep" id="{sid}" style="left:{8+i*31}%"><div class="mnum">{i+1}</div><div class="mtx">{tx}</div></div>'
+        + (ARR_SVG % (f"{sid}a", f"{34+i*31}%") if i < 2 else "")
         for i, (sid, tx) in enumerate(steps))
     el_div("mech", t0, t1, "panel", (
         '<div class="dhead" id="mh">レッテルが生まれる<em>仕組み</em></div>' + sh +
@@ -267,9 +302,12 @@ def sc_journey(s):  # c3: 浅草→自由が丘
         f'<div class="jmark {"jx" if m=="✕" else "jo"}">{m}</div>'
         f'<div class="jname">{nm}</div><div class="jdesc">{ds}</div></div>'
         for i, (jid, nm, ds, m) in enumerate(stops))
+    # ◯✕マーク(中心y=34%+60px)同士を結ぶ矢印: 円の縁から円の縁まで
+    jarr = ('<svg class="jarr" id="jl" viewBox="0 0 744 28" fill="none">'
+            '<line x1="0" y1="14" x2="706" y2="14" stroke="#8a93a0" stroke-width="8"/>'
+            '<polygon points="704,1 704,27 742,14" fill="#46e0a0"/></svg>')
     el_div("jour", t0, t1, "panel", (
-        '<div class="dhead" id="jh">"本物の下駄" を探して</div>'
-        '<div class="jline" id="jl"></div>' + sh))
+        '<div class="dhead" id="jh">"本物の下駄" を探して</div>' + jarr + sh))
     fromto(t0 + 0.3, "#jh", "y: -26, opacity: 0", "y: 0, opacity: 1", 0.4, "power3.out")
     fromto(t0 + 1.0, "#j1", "y: 40, opacity: 0", "y: 0, opacity: 1", 0.45, "power3.out")
     cue("pop", t0 + 1.0, 0.8)
@@ -398,7 +436,7 @@ def sc_end(s):
     cue("pop", t0 + 1.2, 0.5)
 
 
-KIND = {"broll": sc_broll, "kick": sc_kick, "q": sc_q, "diagram": sc_diagram,
+KIND = {"broll": sc_broll, "kick": sc_kick, "q": sc_q, "nv": sc_nv, "diagram": sc_diagram,
         "counter": sc_counter, "news": sc_news, "journey": sc_journey, "gion": sc_gion,
         "msg": sc_msg, "card": sc_card, "recap4": sc_recap4, "recap4b": sc_recap4b,
         "ask": sc_ask, "end": sc_end}
@@ -456,12 +494,14 @@ em { font-style:normal; color:#e8322e; }
 .dnote { position:absolute; left:0; right:0; bottom:64px; text-align:center; font-family:'NotoBd';
   font-size:32px; color:#8a93a0; opacity:0; }
 /* mech */
-.mstep { position:absolute; top:40%; width:26%; padding:46px 30px 42px; text-align:center;
-  font-size:46px; line-height:1.3; background:#121825; border:3px solid #232c3d; border-radius:18px; opacity:0; }
+.mstep { position:absolute; top:40%; width:26%; height:270px; display:flex; align-items:center;
+  justify-content:center; text-align:center; font-size:46px; line-height:1.3;
+  background:#121825; border:3px solid #232c3d; border-radius:18px; opacity:0; }
 .mnum { position:absolute; left:50%; top:-34px; width:68px; height:68px; margin-left:-34px; line-height:62px;
   background:#e8322e; border-radius:50%; font-size:38px; }
-.marr { position:absolute; top:48%; width:5%; height:10px;
-  background:linear-gradient(90deg, rgba(138,147,160,.1), #e8322e); opacity:0; transform-origin:left; }
+.mtx { padding:0 24px; }
+/* 箱(高さ270px)の垂直中心 = 40%+135px に矢印(高さ36px)の中心を合わせる */
+.marrs { position:absolute; top:calc(40% + 117px); width:5%; height:36px; opacity:0; transform-origin:left; }
 .stamp { position:absolute; left:50%; top:66%; transform:translateX(-50%) rotate(-8deg);
   font-size:110px; color:#e8322e; border:10px solid #e8322e; padding:6px 46px; border-radius:10px;
   background:rgba(232,50,46,.08); opacity:0; }
@@ -484,8 +524,8 @@ em { font-style:normal; color:#e8322e; }
 .ntag { background:#07080b; color:#e8322e; padding:4px 18px; margin-right:26px; letter-spacing:.3em; }
 .nhead { position:absolute; left:120px; top:330px; font-size:128px; line-height:1.22; opacity:0; }
 .nsub { position:absolute; left:124px; top:700px; font-family:'NotoBd'; font-size:34px; color:#8a93a0; opacity:0; }
-/* journey */
-.jline { position:absolute; left:22%; right:22%; top:56%; height:8px; background:#2a3140;
+/* journey: ◯✕マーク(直径120px, 中心y=34%+60px, 中心x=27%/73%)を縁から縁まで結ぶ */
+.jarr { position:absolute; left:calc(27% + 70px); top:calc(34% + 46px); width:744px; height:28px;
   transform-origin:left; transform:scaleX(0); }
 .jstop { position:absolute; top:34%; width:26%; text-align:center; opacity:0; }
 .jmark { width:120px; height:120px; margin:0 auto 26px; border-radius:50%; font-size:60px; line-height:112px; }

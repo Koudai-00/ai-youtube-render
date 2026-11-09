@@ -1,0 +1,513 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family:'NotoB'; src:url('assets/fonts/NotoSansJP-Black.otf') format('opentype'); }
+@font-face { font-family:'NotoBd'; src:url('assets/fonts/NotoSansJP-Bold.otf') format('opentype'); }
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#000; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden;
+  background:#07080b; font-family:'NotoB','NotoBd',sans-serif; color:#f2f1ec; }
+#stage { position:absolute; inset:0; }
+.clip { position:absolute; inset:0; width:100%; height:100%; }
+video.bgv { object-fit:cover; transform:translateZ(0); backface-visibility:hidden; }
+em { font-style:normal; color:#e8322e; }
+#scan { position:absolute; inset:0; z-index:40; pointer-events:none; opacity:.14;
+  background:repeating-linear-gradient(0deg, rgba(0,0,0,.55) 0 2px, rgba(0,0,0,0) 2px 5px); }
+#vig { position:absolute; inset:0; z-index:41; pointer-events:none;
+  background:radial-gradient(ellipse 115% 105% at 50% 46%, rgba(0,0,0,0) 58%, rgba(0,0,0,.52) 100%); }
+#flash { position:absolute; inset:0; z-index:60; background:#e9e6df; opacity:0; pointer-events:none; }
+.gl { position:absolute; left:-80px; right:-80px; z-index:59; opacity:0; pointer-events:none; }
+#gl1 { background:rgba(232,50,46,.55); } #gl2 { background:rgba(70,224,212,.45); }
+#gl3 { background:rgba(242,241,236,.75); }
+.qov { z-index:10; }
+.qscrim { position:absolute; left:0; right:0; bottom:0; height:430px;
+  background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(2,3,5,.6) 42%, rgba(2,3,5,.85) 100%); }
+.ch1scrim { position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(2,3,5,.35) 0%, rgba(2,3,5,.72) 70%, rgba(2,3,5,.9) 100%); }
+.credit { position:absolute; top:34px; right:44px; font-family:'NotoBd'; font-size:26px;
+  color:rgba(242,241,236,.85); background:rgba(5,6,9,.55); padding:8px 18px; border-left:4px solid #e8322e; }
+.qcap { position:absolute; left:60px; right:60px; bottom:92px; text-align:center; font-size:66px;
+  letter-spacing:.02em; text-shadow:0 4px 26px rgba(0,0,0,.9), 0 0 2px rgba(0,0,0,.9); opacity:0; }
+.biglabel { position:absolute; left:70px; top:120px; font-size:72px; color:#f2f1ec;
+  background:rgba(5,6,9,.66); border-left:10px solid #e8322e; padding:16px 36px; opacity:0; }
+.lt { position:absolute; left:70px; bottom:96px; display:flex; opacity:0; }
+.ltbar { width:12px; background:#e8322e; }
+.ltbody { background:rgba(5,6,9,.78); padding:22px 38px 24px 30px; }
+.ltname { font-size:48px; } .ltrole { font-family:'NotoBd'; font-size:27px; color:#ffb648; margin-top:6px; }
+.panel { z-index:10; background:#0c1016; }
+.tpanel { background:radial-gradient(ellipse 90% 80% at 50% 42%, #10151d 0%, #07080b 70%); }
+.glow { position:absolute; left:50%; top:50%; width:1500px; height:700px; margin:-350px 0 0 -750px;
+  background:radial-gradient(ellipse, rgba(232,50,46,.17), rgba(232,50,46,0) 65%); opacity:0; }
+.kick { position:absolute; left:120px; right:120px; top:44%; transform:translateY(-50%);
+  text-align:center; font-size:84px; letter-spacing:.04em; opacity:0; text-shadow:0 6px 40px rgba(0,0,0,.8); }
+.kline { position:absolute; left:50%; top:62%; width:460px; margin-left:-230px; height:10px;
+  background:#e8322e; transform:scaleX(0); }
+.dhead { position:absolute; left:0; right:0; top:96px; text-align:center; font-size:82px; opacity:0; }
+.dnote { position:absolute; left:0; right:0; bottom:64px; text-align:center; font-family:'NotoBd';
+  font-size:32px; color:#8a93a0; opacity:0; }
+/* mech */
+.mstep { position:absolute; top:40%; width:26%; height:270px; display:flex; align-items:center;
+  justify-content:center; text-align:center; font-size:46px; line-height:1.3;
+  background:#121825; border:3px solid #232c3d; border-radius:18px; opacity:0; }
+.mnum { position:absolute; left:50%; top:-34px; width:68px; height:68px; margin-left:-34px; line-height:62px;
+  background:#e8322e; border-radius:50%; font-size:38px; }
+.mtx { padding:0 24px; }
+/* 箱(高さ270px)の垂直中心 = 40%+135px に矢印(高さ36px)の中心を合わせる */
+.marrs { position:absolute; top:calc(40% + 117px); width:5%; height:36px; opacity:0; transform-origin:left; }
+.stamp { position:absolute; left:50%; top:66%; transform:translateX(-50%) rotate(-8deg);
+  font-size:110px; color:#e8322e; border:10px solid #e8322e; padding:6px 46px; border-radius:10px;
+  background:rgba(232,50,46,.08); opacity:0; }
+/* counter */
+.cntlab { position:absolute; left:0; right:0; top:120px; text-align:center; font-family:'NotoBd';
+  font-size:44px; color:#8a93a0; letter-spacing:.2em; opacity:0; }
+.cntnum { position:absolute; left:0; right:0; top:190px; text-align:center; font-size:200px;
+  font-variant-numeric:tabular-nums; letter-spacing:.02em; }
+.cntnum span { font-size:70px; color:#ffb648; margin-left:12px; }
+.cbars { position:absolute; left:320px; right:320px; top:510px; }
+.cbar { position:relative; height:74px; margin-bottom:38px; opacity:0; }
+.cbv { position:absolute; left:120px; top:12px; height:50px; max-width:72%;
+  background:linear-gradient(90deg, #5a2422, #e8322e); transform-origin:left; border-radius:6px; }
+.cby { position:absolute; left:0; top:10px; font-size:40px; color:#8a93a0; font-family:'NotoBd'; }
+.cbn { position:absolute; right:0; top:10px; font-size:40px; }
+.cntsrc { position:absolute; right:60px; bottom:40px; font-family:'NotoBd'; font-size:24px; color:#5b6472; }
+/* news */
+.nband { position:absolute; left:0; top:200px; font-size:40px; background:#e8322e; color:#fff;
+  padding:14px 60px 14px 40px; font-family:'NotoBd'; }
+.ntag { background:#07080b; color:#e8322e; padding:4px 18px; margin-right:26px; letter-spacing:.3em; }
+.nhead { position:absolute; left:120px; top:330px; font-size:128px; line-height:1.22; opacity:0; }
+.nsub { position:absolute; left:124px; top:700px; font-family:'NotoBd'; font-size:34px; color:#8a93a0; opacity:0; }
+/* journey: ◯✕マーク(直径120px, 中心y=34%+60px, 中心x=27%/73%)を縁から縁まで結ぶ */
+.jarr { position:absolute; left:calc(27% + 70px); top:calc(34% + 46px); width:744px; height:28px;
+  transform-origin:left; transform:scaleX(0); }
+.jstop { position:absolute; top:34%; width:26%; text-align:center; opacity:0; }
+.jmark { width:120px; height:120px; margin:0 auto 26px; border-radius:50%; font-size:60px; line-height:112px; }
+.jx { background:#1c0a0c; border:4px solid #e8322e; color:#e8322e; }
+.jo { background:#0e1f18; border:4px solid #46e0a0; color:#46e0a0; }
+.jname { font-size:56px; } .jdesc { font-family:'NotoBd'; font-size:33px; color:#8a93a0; margin-top:14px; line-height:1.4; }
+/* sign */
+.sign { position:absolute; left:50%; top:46%; transform:translate(-50%,-50%); display:flex; gap:40px;
+  align-items:center; background:#f2f1ec; color:#14161b; padding:52px 70px; border-radius:14px;
+  border:6px solid #b8352f; opacity:0; }
+.signic { width:150px; height:150px; color:#14161b; } .signic svg { width:100%; height:100%; }
+.signtx { font-size:64px; line-height:1.3; }
+.signtx span { color:#b8352f; font-size:54px; }
+/* msg */
+.msgt { position:absolute; left:0; right:0; top:34%; text-align:center; font-size:128px; line-height:1.3; opacity:0; }
+.msgby { position:absolute; left:0; right:0; top:72%; text-align:center; font-family:'NotoBd';
+  font-size:38px; color:#ffb648; opacity:0; }
+/* chapter card */
+.chno { position:absolute; left:150px; top:330px; font-size:56px; color:#e8322e; letter-spacing:.4em; opacity:0; }
+.chttl { position:absolute; left:144px; top:404px; font-size:132px; letter-spacing:.03em;
+  text-shadow:0 8px 50px rgba(0,0,0,.85); opacity:0; }
+.chsub { position:absolute; left:152px; top:608px; font-family:'NotoBd'; font-size:38px;
+  color:#ffb648; text-shadow:0 2px 14px rgba(0,0,0,.95); opacity:0; }
+/* recap cards */
+.chead { position:absolute; left:0; right:0; top:84px; text-align:center; font-family:'NotoBd';
+  font-size:36px; letter-spacing:.5em; color:#8a93a0; opacity:0; }
+.cgrid { position:absolute; left:90px; right:90px; top:190px; bottom:120px; display:flex; gap:34px; }
+.card { position:relative; flex:1; border-radius:14px; overflow:hidden; background:#121825; opacity:0; }
+.card img { position:absolute; width:auto; height:100%; left:50%; transform:translateX(-50%); filter:saturate(.85); }
+.cshade { position:absolute; inset:0; background:linear-gradient(180deg, rgba(2,3,5,.08) 35%, rgba(2,3,5,.88) 88%); }
+.cnum { position:absolute; left:26px; top:18px; font-size:54px; color:#e8322e; }
+.clab { position:absolute; left:0; right:0; bottom:34px; text-align:center; font-size:42px;
+  text-shadow:0 3px 14px rgba(0,0,0,.9); }
+.ckw { position:absolute; left:6%; top:38%; width:88%; text-align:center; font-size:44px; color:#ffb648;
+  border:5px solid #ffb648; border-radius:8px; padding:10px 4px; transform:rotate(-6deg);
+  background:rgba(5,6,9,.55); opacity:0; }
+/* ask / end */
+.askt { position:absolute; left:0; right:0; top:38%; text-align:center; font-size:118px; opacity:0; }
+.asks { position:absolute; left:0; right:0; top:62%; text-align:center; font-family:'NotoBd';
+  font-size:44px; color:#ffb648; opacity:0; }
+.endt { position:absolute; left:0; right:0; top:42%; text-align:center; font-size:92px; opacity:0; }
+.ends { position:absolute; left:0; right:0; top:60%; text-align:center; font-family:'NotoBd';
+  font-size:38px; color:#8a93a0; opacity:0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="root" data-width="1920" data-height="1080" data-start="0" data-duration="191.99">
+<div id="stage">
+<video id="s_introv" class="clip bgv " data-start="0.6" data-duration="7.96" data-media-start="0.0" data-track-index="1" src="assets/bg/cat17.mp4" muted playsinline></video>
+<div id="s_introsc" class="clip qov" data-start="0.6" data-duration="7.96" data-track-index="2" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div></div>
+<div id="s_introlt" class="clip qov" data-start="0.6" data-duration="7.96" data-track-index="3" style=""><div class="lt" id="s_introlt1"><div class="ltbar"></div><div class="ltbody"><div class="ltname">在日系YouTuber</div><div class="ltrole">Chopsticks and Trains — 告白 その2</div></div></div></div>
+<video id="b1v" class="clip bgv " data-start="8.56" data-duration="8.06" data-media-start="0.6" data-track-index="4" src="assets/bg/b1.mp4" muted playsinline></video>
+<div id="b1o" class="clip qov" data-start="8.56" data-duration="8.06" data-track-index="5" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b1cap0">コロナ後 訪日客が急増し</div><div class="qcap" id="b1cap1">外国人の<em>迷惑行為</em>が後を絶たない</div></div>
+<div id="cntp" class="clip panel" data-start="16.62" data-duration="19.23" data-track-index="6" style=""><div class="cntlab" id="cl1">2024年 訪日外国人数</div><div class="cntnum" id="cn0">0<span>万人</span></div><div class="cbars"><div class="cbar" id="cb0"><div class="cbv" id="cbv0" style="width:62%"></div><span class="cby">2019</span><span class="cbn">3188万人</span></div><div class="cbar" id="cb1"><div class="cbv" id="cbv1" style="width:49%"></div><span class="cby">2023</span><span class="cbn">2507万人</span></div><div class="cbar" id="cb2"><div class="cbv" id="cbv2" style="width:72%"></div><span class="cby">2024</span><span class="cbn">3687万人</span></div></div><div class="cntsrc">出典: 日本政府観光局(JNTO) 推計値</div></div>
+<video id="b2v" class="clip bgv " data-start="35.85" data-duration="6.31" data-media-start="0.6" data-track-index="7" src="assets/bg/b2.mp4" muted playsinline></video>
+<div id="b2o" class="clip qov" data-start="35.85" data-duration="6.31" data-track-index="8" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b2cap0">鳥居で<em>懸垂</em>をする動画が</div><div class="qcap" id="b2cap1">最悪の形で拡散された</div></div>
+<div id="s_w03p" class="clip panel" data-start="42.16" data-duration="4.57" data-track-index="9" style=""><div class="kick" id="s_w03k">決定打は、"迷惑ダンス"</div><div class="kline" id="s_w03kl"></div></div>
+<video id="b8v" class="clip bgv " data-start="46.73" data-duration="7.43" data-media-start="0.6" data-track-index="10" src="assets/bg/b8.mp4" muted playsinline></video>
+<div id="b8o" class="clip qov" data-start="46.73" data-duration="7.43" data-track-index="11" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b8cap0">最新の問題は あるダンス集団だ</div><div class="qcap" id="b8cap1">米国拠点の ブレイクダンサーたち</div></div>
+<video id="s_dancev" class="clip bgv " data-start="54.16" data-duration="6.41" data-media-start="0.0" data-track-index="12" src="assets/bg/dance17.mp4" muted playsinline></video>
+<div id="s_dancesc" class="clip qov" data-start="54.16" data-duration="6.41" data-track-index="13" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="biglabel" id="s_dancelab">“迷惑ダンス”</div></div>
+<video id="b3v" class="clip bgv " data-start="60.57" data-duration="9.73" data-media-start="0.6" data-track-index="14" src="assets/bg/b3.mp4" muted playsinline></video>
+<div id="b3o" class="clip qov" data-start="60.57" data-duration="9.73" data-track-index="15" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b3cap0">技術の問題じゃない <em>場所とやり方</em>だ</div><div class="qcap" id="b3cap1">無神経で 迷惑で 危険で 不快</div></div>
+<div id="newsp" class="clip panel" data-start="70.3" data-duration="3.3" data-track-index="16" style=""><div class="nband" id="nb1"><span class="ntag">NEWS</span>鉄道会社が激怒</div><div class="nhead" id="nh1">車内ダンスに<br><em>法的措置</em>を検討</div><div class="nsub" id="ns1">乗客を巻き込む危険行為として警告の掲示も — 引用元動画より</div></div>
+<video id="b4v" class="clip bgv " data-start="73.6" data-duration="7.96" data-media-start="0.6" data-track-index="17" src="assets/bg/b4.mp4" muted playsinline></video>
+<div id="b4o" class="clip qov" data-start="73.6" data-duration="7.96" data-track-index="18" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b4cap0">車内には 警告の貼り紙まで</div><div class="qcap" id="b4cap1">鉄道会社は激怒し <em>法的措置</em>を検討</div></div>
+<div id="s_w11p" class="clip panel" data-start="81.56" data-duration="4.36" data-track-index="19" style=""><div class="kline" id="s_w11kl"></div></div>
+<video id="b9v" class="clip bgv " data-start="85.92" data-duration="7.88" data-media-start="0.6" data-track-index="20" src="assets/bg/b9.mp4" muted playsinline></video>
+<div id="b9o" class="clip qov" data-start="85.92" data-duration="7.88" data-track-index="21" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b9cap0">正直 もう他に手はない</div><div class="qcap" id="b9cap1"><em>罰がなければ 繰り返すだけ</em>だ</div></div>
+<div id="s_w12p" class="clip panel" data-start="93.8" data-duration="9.38" data-track-index="22" style=""><div class="kick" id="s_w12k">なぜ、同胞に厳しいのか</div><div class="kline" id="s_w12kl"></div></div>
+<div id="s_m05p" class="clip panel" data-start="103.18" data-duration="4.77" data-track-index="23" style=""><div class="kick" id="s_m05k">恐れているのは、人の命</div><div class="kline" id="s_m05kl"></div></div>
+<video id="b5v" class="clip bgv " data-start="107.95" data-duration="10.58" data-media-start="0.6" data-track-index="24" src="assets/bg/b5.mp4" muted playsinline></video>
+<div id="b5o" class="clip qov" data-start="107.95" data-duration="10.58" data-track-index="25" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b5cap0">人混みでのスタントは<em>危険</em>だ</div><div class="qcap" id="b5cap1">一歩間違えば 誰かが大怪我をする</div><div class="qcap" id="b5cap2"><em>最悪の事態</em>になるぞ</div></div>
+<div id="s_m06p" class="clip panel" data-start="118.53" data-duration="5.06" data-track-index="26" style=""><div class="kick" id="s_m06k">警告は、全員へ</div><div class="kline" id="s_m06kl"></div></div>
+<video id="b10v" class="clip bgv " data-start="123.59" data-duration="6.73" data-media-start="0.6" data-track-index="27" src="assets/bg/b10.mp4" muted playsinline></video>
+<div id="b10o" class="clip qov" data-start="123.59" data-duration="6.73" data-track-index="28" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b10cap0">君たちはこの国の<em>"客"</em>なんだ</div><div class="qcap" id="b10cap1">日本の習慣とルールに従え</div></div>
+<video id="b6v" class="clip bgv " data-start="130.32" data-duration="8.05" data-media-start="0.6" data-track-index="29" src="assets/bg/b6.mp4" muted playsinline></video>
+<div id="b6o" class="clip qov" data-start="130.32" data-duration="8.05" data-track-index="30" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b6cap0">君らのせいで<em>全ての観光客</em>が迷惑する</div><div class="qcap" id="b6cap1">外国人全体の印象が 悪くなるんだ</div></div>
+<div id="s_m07p" class="clip panel" data-start="138.37" data-duration="16.08" data-track-index="31" style=""><div class="kick" id="s_m07k">そして、謝罪へ</div><div class="kline" id="s_m07kl"></div></div>
+<video id="b7v" class="clip bgv " data-start="154.55" data-duration="18.82" data-media-start="0.6" data-track-index="32" src="assets/bg/b7.mp4" muted playsinline></video>
+<div id="b7o" class="clip qov" data-start="154.55" data-duration="18.82" data-track-index="33" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b7cap0">外国人を代表して 日本に<em>謝りたい</em></div><div class="qcap" id="b7cap1"><em>99%</em>の外国人は 日本の味方だ</div></div>
+<div id="s_msgm" class="clip panel tpanel" data-start="173.67" data-duration="8.7" data-track-index="34" style=""><div class="glow" id="s_msgg"></div><div class="msgt" id="s_msgt">99%は、<br>日本の味方だ。</div><div class="msgby" id="s_msgb">— Chopsticks and Trains</div></div>
+<video id="s_card3v" class="clip bgv " data-start="182.37" data-duration="8.32" data-media-start="0.0" data-track-index="35" src="assets/bg/intro18.mp4" muted playsinline></video>
+<div id="s_card3o" class="clip qov" data-start="182.37" data-duration="8.32" data-track-index="36" style=""><div class="ch1scrim"></div><div class="credit">引用: Japanese Immersion Lab</div><div class="chno" id="s_card3n">第 3 章</div><div class="chttl" id="s_card3t">差別された日</div><div class="chsub" id="s_card3s">— 善良な外国人が、代償を払う番だった</div></div>
+<div id="scan"></div>
+<div id="vig"></div>
+<div id="gl1" class="gl"></div>
+<div id="gl2" class="gl"></div>
+<div id="gl3" class="gl"></div>
+<div id="flash"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#s_introlt1", {x: -70, opacity: 0}, {x: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 1.1);
+tl.set("#gl1", {opacity: 0.60, top: "62%", height: 43, x: 45}, 0.6);
+tl.set("#gl1", {top: "76%", height: 42, x: -22}, 0.667);
+tl.set("#gl1", {opacity: 0, x: 0}, 0.767);
+tl.set("#gl2", {opacity: 0.60, top: "28%", height: 44, x: -23}, 0.6);
+tl.set("#gl2", {top: "70%", height: 16, x: 44}, 0.667);
+tl.set("#gl2", {opacity: 0, x: 0}, 0.767);
+tl.set("#gl3", {opacity: 0.60, top: "43%", height: 19, x: 67}, 0.6);
+tl.set("#gl3", {top: "23%", height: 12, x: 31}, 0.667);
+tl.set("#gl3", {opacity: 0, x: 0}, 0.767);
+tl.set("#flash", {opacity: 0.68}, 0.6);
+tl.set("#flash", {opacity: 0.20}, 0.667);
+tl.set("#flash", {opacity: 0}, 0.733);
+tl.set("#stage", {x: -11}, 0.6);
+tl.set("#stage", {x: 11}, 0.667);
+tl.set("#stage", {x: 0}, 0.733);
+tl.fromTo("#b1cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 8.79);
+tl.set("#b1cap0", {opacity: 0}, 12.04);
+tl.fromTo("#b1cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 12.17);
+tl.set("#gl1", {opacity: 0.52, top: "62%", height: 55, x: -30}, 8.56);
+tl.set("#gl1", {top: "83%", height: 10, x: 65}, 8.627);
+tl.set("#gl1", {opacity: 0, x: 0}, 8.727);
+tl.set("#gl2", {opacity: 0.52, top: "13%", height: 16, x: -22}, 8.56);
+tl.set("#gl2", {top: "12%", height: 25, x: -63}, 8.627);
+tl.set("#gl2", {opacity: 0, x: 0}, 8.727);
+tl.set("#gl3", {opacity: 0.52, top: "64%", height: 42, x: -20}, 8.56);
+tl.set("#gl3", {top: "46%", height: 43, x: -11}, 8.627);
+tl.set("#gl3", {opacity: 0, x: 0}, 8.727);
+tl.set("#flash", {opacity: 0.59}, 8.56);
+tl.set("#flash", {opacity: 0.17}, 8.627);
+tl.set("#flash", {opacity: 0}, 8.693);
+tl.set("#stage", {x: -9}, 8.56);
+tl.set("#stage", {x: 9}, 8.627);
+tl.set("#stage", {x: 0}, 8.693);
+tl.fromTo("#cl1", {y: -20, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 16.92);
+tl.set("#cn0", { innerHTML: "0<span>万人</span>" }, 17.32);
+tl.set("#cn0", { innerHTML: "7<span>万人</span>" }, 17.397);
+tl.set("#cn0", { innerHTML: "30<span>万人</span>" }, 17.475);
+tl.set("#cn0", { innerHTML: "68<span>万人</span>" }, 17.552);
+tl.set("#cn0", { innerHTML: "121<span>万人</span>" }, 17.629);
+tl.set("#cn0", { innerHTML: "190<span>万人</span>" }, 17.706);
+tl.set("#cn0", { innerHTML: "274<span>万人</span>" }, 17.784);
+tl.set("#cn0", { innerHTML: "373<span>万人</span>" }, 17.861);
+tl.set("#cn0", { innerHTML: "487<span>万人</span>" }, 17.938);
+tl.set("#cn0", { innerHTML: "617<span>万人</span>" }, 18.015);
+tl.set("#cn0", { innerHTML: "761<span>万人</span>" }, 18.093);
+tl.set("#cn0", { innerHTML: "921<span>万人</span>" }, 18.17);
+tl.set("#cn0", { innerHTML: "1096<span>万人</span>" }, 18.247);
+tl.set("#cn0", { innerHTML: "1287<span>万人</span>" }, 18.325);
+tl.set("#cn0", { innerHTML: "1493<span>万人</span>" }, 18.402);
+tl.set("#cn0", { innerHTML: "1713<span>万人</span>" }, 18.479);
+tl.set("#cn0", { innerHTML: "1950<span>万人</span>" }, 18.556);
+tl.set("#cn0", { innerHTML: "2201<span>万人</span>" }, 18.634);
+tl.set("#cn0", { innerHTML: "2468<span>万人</span>" }, 18.711);
+tl.set("#cn0", { innerHTML: "2750<span>万人</span>" }, 18.788);
+tl.set("#cn0", { innerHTML: "3047<span>万人</span>" }, 18.865);
+tl.set("#cn0", { innerHTML: "3359<span>万人</span>" }, 18.943);
+tl.set("#cn0", { innerHTML: "3687<span>万人</span>" }, 19.02);
+tl.set("#cn0", {color: "#e8322e"}, 19.02);
+tl.fromTo("#cb0", {x: 60, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 19.52);
+tl.fromTo("#cbv0", {scaleX: 0}, {scaleX: 1, duration: 0.55, ease: "power2.inOut", immediateRender: false}, 19.62);
+tl.fromTo("#cb1", {x: 60, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 20.02);
+tl.fromTo("#cbv1", {scaleX: 0}, {scaleX: 1, duration: 0.55, ease: "power2.inOut", immediateRender: false}, 20.12);
+tl.fromTo("#cb2", {x: 60, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 20.52);
+tl.fromTo("#cbv2", {scaleX: 0}, {scaleX: 1, duration: 0.55, ease: "power2.inOut", immediateRender: false}, 20.62);
+tl.set("#gl1", {opacity: 0.45, top: "42%", height: 14, x: -49}, 16.62);
+tl.set("#gl1", {top: "68%", height: 39, x: 1}, 16.687);
+tl.set("#gl1", {opacity: 0, x: 0}, 16.787);
+tl.set("#gl2", {opacity: 0.45, top: "57%", height: 19, x: -5}, 16.62);
+tl.set("#gl2", {top: "75%", height: 30, x: -12}, 16.687);
+tl.set("#gl2", {opacity: 0, x: 0}, 16.787);
+tl.set("#gl3", {opacity: 0.45, top: "70%", height: 15, x: -53}, 16.62);
+tl.set("#gl3", {top: "41%", height: 16, x: 32}, 16.687);
+tl.set("#gl3", {opacity: 0, x: 0}, 16.787);
+tl.set("#flash", {opacity: 0.51}, 16.62);
+tl.set("#flash", {opacity: 0.15}, 16.687);
+tl.set("#flash", {opacity: 0}, 16.753);
+tl.set("#stage", {x: -8}, 16.62);
+tl.set("#stage", {x: 8}, 16.687);
+tl.set("#stage", {x: 0}, 16.753);
+tl.fromTo("#b2cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 36.08);
+tl.set("#b2cap0", {opacity: 0}, 38.66);
+tl.fromTo("#b2cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 38.79);
+tl.set("#gl1", {opacity: 0.52, top: "18%", height: 38, x: -53}, 35.85);
+tl.set("#gl1", {top: "42%", height: 11, x: -70}, 35.917);
+tl.set("#gl1", {opacity: 0, x: 0}, 36.017);
+tl.set("#gl2", {opacity: 0.52, top: "32%", height: 17, x: 50}, 35.85);
+tl.set("#gl2", {top: "31%", height: 34, x: 31}, 35.917);
+tl.set("#gl2", {opacity: 0, x: 0}, 36.017);
+tl.set("#gl3", {opacity: 0.52, top: "58%", height: 50, x: -20}, 35.85);
+tl.set("#gl3", {top: "14%", height: 27, x: 16}, 35.917);
+tl.set("#gl3", {opacity: 0, x: 0}, 36.017);
+tl.set("#flash", {opacity: 0.59}, 35.85);
+tl.set("#flash", {opacity: 0.17}, 35.917);
+tl.set("#flash", {opacity: 0}, 35.983);
+tl.set("#stage", {x: -9}, 35.85);
+tl.set("#stage", {x: 9}, 35.917);
+tl.set("#stage", {x: 0}, 35.983);
+tl.fromTo("#s_w03k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 42.41);
+tl.fromTo("#s_w03kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 42.46);
+tl.fromTo("#b8cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 46.96);
+tl.set("#b8cap0", {opacity: 0}, 50.76);
+tl.fromTo("#b8cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 50.89);
+tl.set("#gl1", {opacity: 0.52, top: "16%", height: 35, x: -67}, 46.73);
+tl.set("#gl1", {top: "44%", height: 36, x: -40}, 46.797);
+tl.set("#gl1", {opacity: 0, x: 0}, 46.897);
+tl.set("#gl2", {opacity: 0.52, top: "22%", height: 59, x: -45}, 46.73);
+tl.set("#gl2", {top: "36%", height: 10, x: -55}, 46.797);
+tl.set("#gl2", {opacity: 0, x: 0}, 46.897);
+tl.set("#gl3", {opacity: 0.52, top: "64%", height: 25, x: -22}, 46.73);
+tl.set("#gl3", {top: "67%", height: 38, x: 60}, 46.797);
+tl.set("#gl3", {opacity: 0, x: 0}, 46.897);
+tl.set("#flash", {opacity: 0.59}, 46.73);
+tl.set("#flash", {opacity: 0.17}, 46.797);
+tl.set("#flash", {opacity: 0}, 46.863);
+tl.set("#stage", {x: -9}, 46.73);
+tl.set("#stage", {x: 9}, 46.797);
+tl.set("#stage", {x: 0}, 46.863);
+tl.fromTo("#s_dancelab", {scale: 1.3, opacity: 0}, {scale: 1, opacity: 1, duration: 0.35, ease: "expo.out", immediateRender: false}, 54.51);
+tl.set("#gl1", {opacity: 0.60, top: "29%", height: 40, x: 28}, 54.16);
+tl.set("#gl1", {top: "21%", height: 17, x: 31}, 54.227);
+tl.set("#gl1", {opacity: 0, x: 0}, 54.327);
+tl.set("#gl2", {opacity: 0.60, top: "58%", height: 14, x: -1}, 54.16);
+tl.set("#gl2", {top: "32%", height: 29, x: -65}, 54.227);
+tl.set("#gl2", {opacity: 0, x: 0}, 54.327);
+tl.set("#gl3", {opacity: 0.60, top: "31%", height: 39, x: -45}, 54.16);
+tl.set("#gl3", {top: "28%", height: 12, x: -33}, 54.227);
+tl.set("#gl3", {opacity: 0, x: 0}, 54.327);
+tl.set("#flash", {opacity: 0.68}, 54.16);
+tl.set("#flash", {opacity: 0.20}, 54.227);
+tl.set("#flash", {opacity: 0}, 54.293);
+tl.set("#stage", {x: -11}, 54.16);
+tl.set("#stage", {x: 11}, 54.227);
+tl.set("#stage", {x: 0}, 54.293);
+tl.fromTo("#b3cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 60.8);
+tl.set("#b3cap0", {opacity: 0}, 64.24);
+tl.fromTo("#b3cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 64.37);
+tl.set("#gl1", {opacity: 0.52, top: "32%", height: 30, x: -68}, 60.57);
+tl.set("#gl1", {top: "61%", height: 31, x: 5}, 60.637);
+tl.set("#gl1", {opacity: 0, x: 0}, 60.737);
+tl.set("#gl2", {opacity: 0.52, top: "54%", height: 18, x: -47}, 60.57);
+tl.set("#gl2", {top: "14%", height: 23, x: -8}, 60.637);
+tl.set("#gl2", {opacity: 0, x: 0}, 60.737);
+tl.set("#gl3", {opacity: 0.52, top: "6%", height: 37, x: 25}, 60.57);
+tl.set("#gl3", {top: "81%", height: 39, x: -38}, 60.637);
+tl.set("#gl3", {opacity: 0, x: 0}, 60.737);
+tl.set("#flash", {opacity: 0.59}, 60.57);
+tl.set("#flash", {opacity: 0.17}, 60.637);
+tl.set("#flash", {opacity: 0}, 60.703);
+tl.set("#stage", {x: -9}, 60.57);
+tl.set("#stage", {x: 9}, 60.637);
+tl.set("#stage", {x: 0}, 60.703);
+tl.fromTo("#nb1", {x: -900, opacity: 1}, {x: 0, opacity: 1, duration: 0.4, ease: "power4.out", immediateRender: false}, 70.55);
+tl.fromTo("#nh1", {y: 34, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 70.95);
+tl.fromTo("#ns1", {opacity: 0}, {opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 71.6);
+tl.set("#gl1", {opacity: 0.60, top: "80%", height: 50, x: -36}, 70.3);
+tl.set("#gl1", {top: "66%", height: 34, x: -24}, 70.367);
+tl.set("#gl1", {opacity: 0, x: 0}, 70.467);
+tl.set("#gl2", {opacity: 0.60, top: "85%", height: 33, x: -12}, 70.3);
+tl.set("#gl2", {top: "24%", height: 25, x: -22}, 70.367);
+tl.set("#gl2", {opacity: 0, x: 0}, 70.467);
+tl.set("#gl3", {opacity: 0.60, top: "25%", height: 49, x: -20}, 70.3);
+tl.set("#gl3", {top: "85%", height: 34, x: 53}, 70.367);
+tl.set("#gl3", {opacity: 0, x: 0}, 70.467);
+tl.set("#flash", {opacity: 0.68}, 70.3);
+tl.set("#flash", {opacity: 0.20}, 70.367);
+tl.set("#flash", {opacity: 0}, 70.433);
+tl.set("#stage", {x: -11}, 70.3);
+tl.set("#stage", {x: 11}, 70.367);
+tl.set("#stage", {x: 0}, 70.433);
+tl.fromTo("#b4cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 73.83);
+tl.set("#b4cap0", {opacity: 0}, 77.28);
+tl.fromTo("#b4cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 77.41);
+tl.set("#gl1", {opacity: 0.52, top: "82%", height: 40, x: -58}, 73.6);
+tl.set("#gl1", {top: "15%", height: 16, x: -43}, 73.667);
+tl.set("#gl1", {opacity: 0, x: 0}, 73.767);
+tl.set("#gl2", {opacity: 0.52, top: "9%", height: 30, x: -9}, 73.6);
+tl.set("#gl2", {top: "70%", height: 35, x: -5}, 73.667);
+tl.set("#gl2", {opacity: 0, x: 0}, 73.767);
+tl.set("#gl3", {opacity: 0.52, top: "58%", height: 45, x: 5}, 73.6);
+tl.set("#gl3", {top: "81%", height: 43, x: -26}, 73.667);
+tl.set("#gl3", {opacity: 0, x: 0}, 73.767);
+tl.set("#flash", {opacity: 0.59}, 73.6);
+tl.set("#flash", {opacity: 0.17}, 73.667);
+tl.set("#flash", {opacity: 0}, 73.733);
+tl.set("#stage", {x: -9}, 73.6);
+tl.set("#stage", {x: 9}, 73.667);
+tl.set("#stage", {x: 0}, 73.733);
+tl.fromTo("#s_w11kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 81.86);
+tl.fromTo("#b9cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 86.15);
+tl.set("#b9cap0", {opacity: 0}, 89.0);
+tl.fromTo("#b9cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 89.13);
+tl.set("#gl1", {opacity: 0.52, top: "13%", height: 28, x: 52}, 85.92);
+tl.set("#gl1", {top: "21%", height: 14, x: 1}, 85.987);
+tl.set("#gl1", {opacity: 0, x: 0}, 86.087);
+tl.set("#gl2", {opacity: 0.52, top: "32%", height: 15, x: -53}, 85.92);
+tl.set("#gl2", {top: "31%", height: 27, x: 35}, 85.987);
+tl.set("#gl2", {opacity: 0, x: 0}, 86.087);
+tl.set("#gl3", {opacity: 0.52, top: "62%", height: 17, x: -59}, 85.92);
+tl.set("#gl3", {top: "36%", height: 21, x: 2}, 85.987);
+tl.set("#gl3", {opacity: 0, x: 0}, 86.087);
+tl.set("#flash", {opacity: 0.59}, 85.92);
+tl.set("#flash", {opacity: 0.17}, 85.987);
+tl.set("#flash", {opacity: 0}, 86.053);
+tl.set("#stage", {x: -9}, 85.92);
+tl.set("#stage", {x: 9}, 85.987);
+tl.set("#stage", {x: 0}, 86.053);
+tl.fromTo("#s_w12k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 94.05);
+tl.fromTo("#s_w12kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 94.1);
+tl.fromTo("#s_m05k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 103.43);
+tl.fromTo("#s_m05kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 103.48);
+tl.fromTo("#b5cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 108.18);
+tl.set("#b5cap0", {opacity: 0}, 110.84);
+tl.fromTo("#b5cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 110.97);
+tl.set("#b5cap1", {opacity: 0}, 114.09);
+tl.fromTo("#b5cap2", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 114.22);
+tl.set("#gl1", {opacity: 0.52, top: "52%", height: 50, x: -37}, 107.95);
+tl.set("#gl1", {top: "72%", height: 15, x: 22}, 108.017);
+tl.set("#gl1", {opacity: 0, x: 0}, 108.117);
+tl.set("#gl2", {opacity: 0.52, top: "22%", height: 35, x: 63}, 107.95);
+tl.set("#gl2", {top: "62%", height: 18, x: -62}, 108.017);
+tl.set("#gl2", {opacity: 0, x: 0}, 108.117);
+tl.set("#gl3", {opacity: 0.52, top: "7%", height: 36, x: 9}, 107.95);
+tl.set("#gl3", {top: "65%", height: 12, x: -65}, 108.017);
+tl.set("#gl3", {opacity: 0, x: 0}, 108.117);
+tl.set("#flash", {opacity: 0.59}, 107.95);
+tl.set("#flash", {opacity: 0.17}, 108.017);
+tl.set("#flash", {opacity: 0}, 108.083);
+tl.set("#stage", {x: -9}, 107.95);
+tl.set("#stage", {x: 9}, 108.017);
+tl.set("#stage", {x: 0}, 108.083);
+tl.fromTo("#s_m06k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 118.78);
+tl.fromTo("#s_m06kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 118.83);
+tl.fromTo("#b10cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 123.82);
+tl.set("#b10cap0", {opacity: 0}, 126.52);
+tl.fromTo("#b10cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 126.65);
+tl.set("#gl1", {opacity: 0.52, top: "81%", height: 44, x: -53}, 123.59);
+tl.set("#gl1", {top: "14%", height: 29, x: 11}, 123.657);
+tl.set("#gl1", {opacity: 0, x: 0}, 123.757);
+tl.set("#gl2", {opacity: 0.52, top: "22%", height: 18, x: 45}, 123.59);
+tl.set("#gl2", {top: "14%", height: 44, x: 24}, 123.657);
+tl.set("#gl2", {opacity: 0, x: 0}, 123.757);
+tl.set("#gl3", {opacity: 0.52, top: "10%", height: 35, x: 20}, 123.59);
+tl.set("#gl3", {top: "21%", height: 15, x: 51}, 123.657);
+tl.set("#gl3", {opacity: 0, x: 0}, 123.757);
+tl.set("#flash", {opacity: 0.59}, 123.59);
+tl.set("#flash", {opacity: 0.17}, 123.657);
+tl.set("#flash", {opacity: 0}, 123.723);
+tl.set("#stage", {x: -9}, 123.59);
+tl.set("#stage", {x: 9}, 123.657);
+tl.set("#stage", {x: 0}, 123.723);
+tl.fromTo("#b6cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 130.55);
+tl.set("#b6cap0", {opacity: 0}, 134.08);
+tl.fromTo("#b6cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 134.21);
+tl.fromTo("#b6v", {filter: "saturate(1) hue-rotate(0deg) brightness(1) contrast(1)"}, {filter: "saturate(0.62) hue-rotate(-10deg) brightness(0.94) contrast(1.06)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 130.72);
+tl.set("#gl1", {opacity: 0.52, top: "14%", height: 15, x: 57}, 130.32);
+tl.set("#gl1", {top: "58%", height: 10, x: 27}, 130.387);
+tl.set("#gl1", {opacity: 0, x: 0}, 130.487);
+tl.set("#gl2", {opacity: 0.52, top: "53%", height: 14, x: -52}, 130.32);
+tl.set("#gl2", {top: "79%", height: 15, x: -47}, 130.387);
+tl.set("#gl2", {opacity: 0, x: 0}, 130.487);
+tl.set("#gl3", {opacity: 0.52, top: "19%", height: 40, x: 14}, 130.32);
+tl.set("#gl3", {top: "37%", height: 34, x: 47}, 130.387);
+tl.set("#gl3", {opacity: 0, x: 0}, 130.487);
+tl.set("#flash", {opacity: 0.59}, 130.32);
+tl.set("#flash", {opacity: 0.17}, 130.387);
+tl.set("#flash", {opacity: 0}, 130.453);
+tl.set("#stage", {x: -9}, 130.32);
+tl.set("#stage", {x: 9}, 130.387);
+tl.set("#stage", {x: 0}, 130.453);
+tl.fromTo("#s_m07k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 138.62);
+tl.fromTo("#s_m07kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 138.67);
+tl.fromTo("#b7cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 154.95);
+tl.set("#b7cap0", {opacity: 0}, 163.23);
+tl.fromTo("#b7cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 163.35);
+tl.set("#gl1", {opacity: 0.68, top: "61%", height: 48, x: -49}, 154.55);
+tl.set("#gl1", {top: "64%", height: 43, x: 61}, 154.617);
+tl.set("#gl1", {opacity: 0, x: 0}, 154.717);
+tl.set("#gl2", {opacity: 0.68, top: "8%", height: 52, x: -48}, 154.55);
+tl.set("#gl2", {top: "44%", height: 40, x: -65}, 154.617);
+tl.set("#gl2", {opacity: 0, x: 0}, 154.717);
+tl.set("#gl3", {opacity: 0.68, top: "34%", height: 45, x: 54}, 154.55);
+tl.set("#gl3", {top: "19%", height: 26, x: -68}, 154.617);
+tl.set("#gl3", {opacity: 0, x: 0}, 154.717);
+tl.set("#flash", {opacity: 0.77}, 154.55);
+tl.set("#flash", {opacity: 0.23}, 154.617);
+tl.set("#flash", {opacity: 0}, 154.683);
+tl.set("#stage", {x: -12}, 154.55);
+tl.set("#stage", {x: 12}, 154.617);
+tl.set("#stage", {x: 0}, 154.683);
+tl.fromTo("#s_msgt", {scale: 1.25, opacity: 0}, {scale: 1, opacity: 1, duration: 0.45, ease: "expo.out", immediateRender: false}, 173.97);
+tl.fromTo("#s_msgg", {opacity: 0}, {opacity: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 174.17);
+tl.fromTo("#s_msgb", {opacity: 0}, {opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 174.87);
+tl.set("#gl1", {opacity: 0.60, top: "52%", height: 23, x: -19}, 173.67);
+tl.set("#gl1", {top: "43%", height: 43, x: -27}, 173.737);
+tl.set("#gl1", {opacity: 0, x: 0}, 173.837);
+tl.set("#gl2", {opacity: 0.60, top: "48%", height: 45, x: -9}, 173.67);
+tl.set("#gl2", {top: "61%", height: 30, x: 33}, 173.737);
+tl.set("#gl2", {opacity: 0, x: 0}, 173.837);
+tl.set("#gl3", {opacity: 0.60, top: "37%", height: 54, x: 40}, 173.67);
+tl.set("#gl3", {top: "30%", height: 22, x: -16}, 173.737);
+tl.set("#gl3", {opacity: 0, x: 0}, 173.837);
+tl.set("#flash", {opacity: 0.68}, 173.67);
+tl.set("#flash", {opacity: 0.20}, 173.737);
+tl.set("#flash", {opacity: 0}, 173.803);
+tl.set("#stage", {x: -11}, 173.67);
+tl.set("#stage", {x: 11}, 173.737);
+tl.set("#stage", {x: 0}, 173.803);
+tl.set("#gl1", {opacity: 0.75, top: "54%", height: 51, x: 11}, 182.37);
+tl.set("#gl1", {top: "33%", height: 23, x: -36}, 182.437);
+tl.set("#gl1", {opacity: 0, x: 0}, 182.537);
+tl.set("#gl2", {opacity: 0.75, top: "22%", height: 36, x: -60}, 182.37);
+tl.set("#gl2", {top: "68%", height: 14, x: 0}, 182.437);
+tl.set("#gl2", {opacity: 0, x: 0}, 182.537);
+tl.set("#gl3", {opacity: 0.75, top: "26%", height: 42, x: 50}, 182.37);
+tl.set("#gl3", {top: "19%", height: 27, x: -16}, 182.437);
+tl.set("#gl3", {opacity: 0, x: 0}, 182.537);
+tl.set("#flash", {opacity: 0.85}, 182.37);
+tl.set("#flash", {opacity: 0.25}, 182.437);
+tl.set("#flash", {opacity: 0}, 182.503);
+tl.set("#stage", {x: -14}, 182.37);
+tl.set("#stage", {x: 14}, 182.437);
+tl.set("#stage", {x: 0}, 182.503);
+tl.fromTo("#s_card3n", {x: -40, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 182.62);
+tl.fromTo("#s_card3t", {scale: 1.3, opacity: 0}, {scale: 1, opacity: 1, duration: 0.45, ease: "expo.out", immediateRender: false}, 182.87);
+tl.fromTo("#s_card3s", {opacity: 0}, {opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 183.57);
+tl.fromTo("#stage", {opacity: 0}, {opacity: 1, duration: 0.8, ease: "power2.out", immediateRender: false}, 0.05);
+tl.to("#stage", {opacity: 0, duration: 0.95, ease: "power1.in"}, 190.84);
+const root = gsap.timeline({ paused: true });
+tl.time(0.0);
+root.fromTo(tl, { time: 0.0 }, { time: 191.99, duration: 191.99, ease: "none" }, 0);
+window.__timelines["root"] = root;
+</script>
+</div>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
- "total": 369.67,
+ "total": 276.89,
  "beats": [
   {
    "id": "s_intro",
@@ -9,172 +9,177 @@
   {
    "id": "s_e14",
    "start": 8.55,
-   "end": 19.99
+   "end": 14.49
   },
   {
    "id": "s_e1",
-   "start": 19.99,
-   "end": 34.86
+   "start": 14.49,
+   "end": 30.15
   },
   {
    "id": "s_m02",
-   "start": 34.86,
-   "end": 41.17
+   "start": 30.15,
+   "end": 36.46
   },
   {
    "id": "s_e2",
-   "start": 41.17,
-   "end": 59.89
+   "start": 36.46,
+   "end": 45.42
   },
   {
    "id": "s_m03",
-   "start": 59.89,
-   "end": 66.32
+   "start": 45.42,
+   "end": 51.85
   },
   {
    "id": "s_e3",
-   "start": 66.32,
-   "end": 79.92
+   "start": 51.85,
+   "end": 60.3
   },
   {
    "id": "s_gion",
-   "start": 79.92,
-   "end": 90.11
+   "start": 60.3,
+   "end": 66.95
   },
   {
    "id": "s_e4",
-   "start": 90.11,
-   "end": 106.37
+   "start": 66.95,
+   "end": 74.76
+  },
+  {
+   "id": "s_m04b",
+   "start": 74.76,
+   "end": 82.43
   },
   {
    "id": "s_m05",
-   "start": 106.37,
-   "end": 110.38
+   "start": 82.43,
+   "end": 86.44
   },
   {
    "id": "s_e5",
-   "start": 110.38,
-   "end": 134.63
+   "start": 86.44,
+   "end": 93.32
+  },
+  {
+   "id": "s_e6",
+   "start": 93.32,
+   "end": 98.29
   },
   {
    "id": "s_m06",
-   "start": 134.63,
-   "end": 139.34
+   "start": 98.29,
+   "end": 102.99
   },
   {
    "id": "s_e7",
-   "start": 139.34,
-   "end": 151.74
+   "start": 102.99,
+   "end": 109.08
   },
   {
    "id": "s_e8",
-   "start": 151.74,
-   "end": 159.97
+   "start": 109.08,
+   "end": 117.31
   },
   {
    "id": "s_z12",
-   "start": 159.97,
-   "end": 165.26
+   "start": 117.31,
+   "end": 120.72
   },
   {
    "id": "s_e16",
-   "start": 165.26,
-   "end": 186.7
+   "start": 120.72,
+   "end": 128.76
   },
   {
    "id": "s_m07",
-   "start": 186.7,
-   "end": 190.55
+   "start": 128.76,
+   "end": 132.61
   },
   {
    "id": "s_e9",
-   "start": 190.55,
-   "end": 208.07
-  },
-  {
-   "id": "s_m08",
-   "start": 208.07,
-   "end": 211.87
+   "start": 132.61,
+   "end": 139.5
   },
   {
    "id": "s_e10",
-   "start": 211.87,
-   "end": 217.61
+   "start": 139.5,
+   "end": 146.21
   },
   {
    "id": "s_z13",
-   "start": 217.61,
-   "end": 222.62
+   "start": 146.21,
+   "end": 151.22
   },
   {
    "id": "s_e17",
-   "start": 222.62,
-   "end": 236.43
+   "start": 151.22,
+   "end": 159.95
   },
   {
    "id": "s_m09",
-   "start": 236.43,
-   "end": 242.76
+   "start": 159.95,
+   "end": 166.28
   },
   {
    "id": "s_e11",
-   "start": 242.76,
-   "end": 254.62
+   "start": 166.28,
+   "end": 174.49
   },
   {
    "id": "s_m10",
-   "start": 254.62,
-   "end": 259.89
+   "start": 174.49,
+   "end": 179.75
   },
   {
    "id": "s_e18",
-   "start": 259.89,
-   "end": 287.92
+   "start": 179.75,
+   "end": 190.81
   },
   {
    "id": "s_e12",
-   "start": 287.92,
-   "end": 301.15
+   "start": 190.81,
+   "end": 204.04
   },
   {
    "id": "s_e13",
-   "start": 301.15,
-   "end": 313.86
+   "start": 204.04,
+   "end": 214.0
   },
   {
    "id": "s_cardE",
-   "start": 313.86,
-   "end": 323.24
+   "start": 214.0,
+   "end": 223.38
   },
   {
    "id": "s_f1",
-   "start": 323.24,
-   "end": 328.45
+   "start": 223.38,
+   "end": 228.6
   },
   {
    "id": "s_f2",
-   "start": 328.45,
-   "end": 342.28
+   "start": 228.6,
+   "end": 242.43
   },
   {
    "id": "s_f3",
-   "start": 342.28,
-   "end": 347.59
+   "start": 242.43,
+   "end": 254.8
   },
   {
    "id": "s_f6",
-   "start": 347.59,
-   "end": 355.69
+   "start": 254.8,
+   "end": 262.9
   },
   {
    "id": "s_f4",
-   "start": 355.69,
-   "end": 363.11
+   "start": 262.9,
+   "end": 270.33
   },
   {
    "id": "s_f5",
-   "start": 363.11,
-   "end": 368.67
+   "start": 270.33,
+   "end": 275.89
   }
  ],
  "narr": {
@@ -182,250 +187,210 @@
    "start": 0.8,
    "dur": 7.25
   },
+  "nz14a": {
+   "start": 8.9,
+   "dur": 1.82
+  },
+  "nz14b": {
+   "start": 10.98,
+   "dur": 3.21
+  },
+  "nz1a": {
+   "start": 14.84,
+   "dur": 4.29
+  },
+  "nz1b": {
+   "start": 19.43,
+   "dur": 3.31
+  },
+  "nz1c": {
+   "start": 23.03,
+   "dur": 6.61
+  },
   "z02": {
-   "start": 35.26,
+   "start": 30.55,
    "dur": 5.61
   },
+  "nz2a": {
+   "start": 36.81,
+   "dur": 1.87
+  },
+  "nz2b": {
+   "start": 38.97,
+   "dur": 3.31
+  },
+  "nz2c": {
+   "start": 42.58,
+   "dur": 2.44
+  },
   "z03": {
-   "start": 60.29,
+   "start": 45.82,
    "dur": 5.73
   },
-  "z04": {
-   "start": 80.42,
-   "dur": 9.18
+  "nz3a": {
+   "start": 52.2,
+   "dur": 2.38
   },
-  "z05": {
-   "start": 106.77,
+  "nz3b": {
+   "start": 54.88,
+   "dur": 5.02
+  },
+  "z04": {
+   "start": 60.8,
+   "dur": 5.64
+  },
+  "nz4a": {
+   "start": 67.3,
    "dur": 3.41
   },
-  "z06": {
-   "start": 135.03,
-   "dur": 4.11
-  },
-  "z12": {
-   "start": 160.37,
-   "dur": 4.69
-  },
-  "z07": {
-   "start": 187.1,
+  "nz4b": {
+   "start": 71.01,
    "dur": 3.25
   },
-  "z08": {
-   "start": 208.42,
-   "dur": 3.24
+  "z14": {
+   "start": 75.16,
+   "dur": 6.97
+  },
+  "z05": {
+   "start": 82.83,
+   "dur": 3.41
+  },
+  "nz5a": {
+   "start": 86.79,
+   "dur": 3.78
+  },
+  "nz5b": {
+   "start": 90.87,
+   "dur": 2.15
+  },
+  "nz6a": {
+   "start": 93.62,
+   "dur": 4.21
+  },
+  "z06": {
+   "start": 98.69,
+   "dur": 4.11
+  },
+  "nz7a": {
+   "start": 103.34,
+   "dur": 1.27
+  },
+  "nz7b": {
+   "start": 104.91,
+   "dur": 3.77
+  },
+  "z12": {
+   "start": 117.71,
+   "dur": 2.82
+  },
+  "nz16a": {
+   "start": 121.07,
+   "dur": 3.46
+  },
+  "nz16b": {
+   "start": 124.83,
+   "dur": 3.53
+  },
+  "z07": {
+   "start": 129.16,
+   "dur": 3.25
+  },
+  "nz9a": {
+   "start": 132.96,
+   "dur": 2.72
+  },
+  "nz9b": {
+   "start": 135.98,
+   "dur": 3.07
+  },
+  "nz10a": {
+   "start": 139.85,
+   "dur": 5.95
   },
   "z13": {
-   "start": 218.01,
+   "start": 146.61,
    "dur": 4.42
   },
+  "nz17a": {
+   "start": 151.57,
+   "dur": 4.75
+  },
+  "nz17b": {
+   "start": 156.62,
+   "dur": 2.93
+  },
   "z09": {
-   "start": 236.83,
+   "start": 160.35,
    "dur": 5.63
   },
+  "nz11a": {
+   "start": 166.63,
+   "dur": 3.4
+  },
+  "nz11b": {
+   "start": 170.34,
+   "dur": 3.7
+  },
   "z10": {
-   "start": 255.02,
+   "start": 174.89,
    "dur": 4.57
   },
+  "nz18a": {
+   "start": 180.1,
+   "dur": 2.61
+  },
+  "nz18b": {
+   "start": 183.02,
+   "dur": 3.67
+  },
+  "nz18c": {
+   "start": 186.99,
+   "dur": 3.52
+  },
+  "nz13a": {
+   "start": 204.39,
+   "dur": 4.0
+  },
+  "nz13b": {
+   "start": 208.69,
+   "dur": 4.92
+  },
   "z11": {
-   "start": 314.46,
+   "start": 214.6,
    "dur": 6.38
   },
   "f01": {
-   "start": 323.84,
+   "start": 223.98,
    "dur": 4.12
   },
   "f02": {
-   "start": 328.95,
+   "start": 229.1,
    "dur": 12.73
   },
   "f03": {
-   "start": 342.78,
+   "start": 242.93,
    "dur": 4.41
   },
+  "f03b": {
+   "start": 247.73,
+   "dur": 6.67
+  },
   "f06": {
-   "start": 347.99,
+   "start": 255.2,
    "dur": 7.31
   },
   "f04": {
-   "start": 356.19,
+   "start": 263.4,
    "dur": 6.12
   },
   "f05": {
-   "start": 363.81,
+   "start": 271.03,
    "dur": 2.06
   }
  },
  "quotes": {
-  "e14": {
-   "beat_start": 8.65,
-   "lead": 0.4,
-   "adur": 10.24,
-   "media_start": 0.6,
-   "dur": 11.14,
-   "clip": "e14.mp4",
-   "sample": 19,
-   "grade": "dream",
-   "credit": "引用: Addy",
-   "caps": [
-    [
-     0.0,
-     "ブームのずっと前から"
-    ],
-    [
-     5.0,
-     "この文化を<em>愛してきた</em>"
-    ]
-   ]
-  },
-  "e1": {
-   "beat_start": 20.14,
-   "lead": 0.4,
-   "adur": 13.52,
-   "media_start": 0.6,
-   "dur": 14.42,
-   "clip": "e1.mp4",
-   "sample": 19,
-   "grade": "dream",
-   "credit": "引用: Addy",
-   "caps": [
-    [
-     0.0,
-     "初めて日本へ飛んだ日"
-    ],
-    [
-     6.6,
-     "夢だった<em>原宿</em>に 胸が躍った"
-    ]
-   ]
-  },
-  "e2": {
-   "beat_start": 41.27,
-   "lead": 0.4,
-   "adur": 17.52,
-   "media_start": 0.6,
-   "dur": 18.42,
-   "clip": "e2.mp4",
-   "sample": 19,
-   "grade": null,
-   "credit": "引用: Addy",
-   "caps": [
-    [
-     0.0,
-     "京都で撮られた あの動画"
-    ],
-    [
-     6.0,
-     "スマホを掲げ<em>芸者を追い回す</em>女"
-    ],
-    [
-     12.4,
-     "芸者は 必死に避けていた"
-    ]
-   ]
-  },
-  "e3": {
-   "beat_start": 66.42,
-   "lead": 0.4,
-   "adur": 12.4,
-   "media_start": 0.6,
-   "dur": 13.3,
-   "clip": "e3.mp4",
-   "sample": 19,
-   "grade": null,
-   "credit": "引用: Addy",
-   "caps": [
-    [
-     0.0,
-     "芸者は<em>敬われるべき存在</em>"
-    ],
-    [
-     6.3,
-     "それをスマホの\"背景\"扱いなんて"
-    ]
-   ]
-  },
-  "e4": {
-   "beat_start": 90.21,
-   "lead": 0.4,
-   "adur": 14.96,
-   "media_start": 0.6,
-   "dur": 15.86,
-   "clip": "e4.mp4",
-   "sample": 19,
-   "grade": null,
-   "credit": "引用: Addy",
-   "caps": [
-    [
-     0.0,
-     "礼儀ある旅行者まで<em>締め出された</em>"
-    ],
-    [
-     8.3,
-     "一部の人が 守れないせいで"
-    ]
-   ]
-  },
-  "e5": {
-   "beat_start": 110.48,
-   "lead": 0.4,
-   "adur": 14.32,
-   "media_start": 0.6,
-   "dur": 15.22,
-   "clip": "e5.mp4",
-   "sample": 19,
-   "grade": null,
-   "credit": "引用: Addy",
-   "caps": [
-    [
-     0.0,
-     "鳥居に世界中の<em>小銭</em>をねじ込み"
-    ],
-    [
-     7.0,
-     "<em>世界遺産</em>を傷つけていく"
-    ]
-   ]
-  },
-  "e6": {
-   "beat_start": 125.85,
-   "lead": 0.3,
-   "adur": 7.68,
-   "media_start": 0.7,
-   "dur": 8.48,
-   "clip": "e6.mp4",
-   "sample": 19,
-   "grade": null,
-   "credit": "引用: Addy",
-   "caps": [
-    [
-     0.0,
-     "そこは信仰の場所 <em>正気じゃない</em>"
-    ]
-   ]
-  },
-  "e7": {
-   "beat_start": 139.44,
-   "lead": 0.4,
-   "adur": 11.2,
-   "media_start": 0.6,
-   "dur": 12.1,
-   "clip": "e7.mp4",
-   "sample": 19,
-   "grade": "gray",
-   "credit": "引用: Addy",
-   "caps": [
-    [
-     0.0,
-     "愛する原宿でさえ"
-    ],
-    [
-     4.4,
-     "もう <em>うんざり</em>している"
-    ]
-   ]
-  },
   "e8": {
-   "beat_start": 151.89,
+   "beat_start": 109.23,
    "lead": 0.4,
    "adur": 6.88,
    "media_start": 0.6,
@@ -445,134 +410,8 @@
     ]
    ]
   },
-  "e16": {
-   "beat_start": 165.36,
-   "lead": 0.4,
-   "adur": 20.24,
-   "media_start": 0.6,
-   "dur": 21.14,
-   "clip": "e16.mp4",
-   "sample": 19,
-   "grade": null,
-   "credit": "引用: Addy",
-   "caps": [
-    [
-     0.0,
-     "観光客は原宿を<em>動物園</em>のように扱う"
-    ],
-    [
-     10.2,
-     "店員まで \"見世物\" にする"
-    ]
-   ]
-  },
-  "e9": {
-   "beat_start": 190.65,
-   "lead": 0.4,
-   "adur": 16.22,
-   "media_start": 0.6,
-   "dur": 17.12,
-   "clip": "e9.mp4",
-   "sample": 19,
-   "grade": "gray",
-   "credit": "引用: Addy",
-   "caps": [
-    [
-     0.0,
-     "無言でカメラを<em>顔に突きつける</em>"
-    ],
-    [
-     8.6,
-     "何度も そんな目に遭った"
-    ]
-   ]
-  },
-  "e10": {
-   "beat_start": 211.97,
-   "lead": 0.3,
-   "adur": 4.64,
-   "media_start": 0.7,
-   "dur": 5.44,
-   "clip": "e10.mp4",
-   "sample": 19,
-   "grade": null,
-   "credit": "引用: Addy",
-   "caps": [
-    [
-     0.0,
-     "私も観光客の1人 <em>矛盾</em>はわかってる"
-    ]
-   ]
-  },
-  "e17": {
-   "beat_start": 222.72,
-   "lead": 0.4,
-   "adur": 12.61,
-   "media_start": 0.6,
-   "dur": 13.51,
-   "clip": "e17.mp4",
-   "sample": 19,
-   "grade": null,
-   "credit": "引用: Addy",
-   "caps": [
-    [
-     0.0,
-     "\"自分は良い外国人\" は通用しない"
-    ],
-    [
-     6.6,
-     "<em>名誉市民</em>にはなれない"
-    ]
-   ]
-  },
-  "e11": {
-   "beat_start": 242.86,
-   "lead": 0.4,
-   "adur": 10.56,
-   "media_start": 0.6,
-   "dur": 11.46,
-   "clip": "e11.mp4",
-   "sample": 19,
-   "grade": "cold",
-   "credit": "引用: Addy",
-   "caps": [
-    [
-     0.0,
-     "<em>排外的な空気</em>が広がっている"
-    ],
-    [
-     5.4,
-     "怒りの火に 油を注ぐだけ"
-    ]
-   ]
-  },
-  "e18": {
-   "beat_start": 259.99,
-   "lead": 0.4,
-   "adur": 26.83,
-   "media_start": 0.6,
-   "dur": 27.73,
-   "clip": "e18.mp4",
-   "sample": 19,
-   "grade": "warm",
-   "credit": "引用: Addy",
-   "caps": [
-    [
-     0.0,
-     "電車に指輪を落とした日"
-    ],
-    [
-     9.5,
-     "スーツ姿の男性が<em>床に膝をつき</em>"
-    ],
-    [
-     18.8,
-     "ただ 親切のために 探してくれた"
-    ]
-   ]
-  },
   "e12": {
-   "beat_start": 288.07,
+   "beat_start": 190.96,
    "lead": 0.4,
    "adur": 11.98,
    "media_start": 0.6,
@@ -591,27 +430,6 @@
      "<em>優しさ</em>を この国にもらった"
     ]
    ]
-  },
-  "e13": {
-   "beat_start": 301.3,
-   "lead": 0.4,
-   "adur": 11.36,
-   "media_start": 0.6,
-   "dur": 12.26,
-   "clip": "e13.mp4",
-   "sample": 19,
-   "grade": null,
-   "credit": "引用: Addy",
-   "caps": [
-    [
-     0.0,
-     "日本はきっと あなたを迎えてくれる"
-    ],
-    [
-     5.8,
-     "だからこそ <em>礼儀と思いやり</em>を"
-    ]
-   ]
   }
  },
  "scenes": [
@@ -620,6 +438,9 @@
    "kind": "broll",
    "start": 0.6,
    "end": 8.55,
+   "nids": [
+    "z01"
+   ],
    "bg": "addy",
    "lt": [
     "日本文化を愛する英国人女性",
@@ -628,181 +449,301 @@
   },
   {
    "id": "s_e14",
-   "kind": "q",
+   "kind": "nv",
    "start": 8.55,
-   "end": 19.99
+   "end": 14.49,
+   "nids": [
+    "nz14a",
+    "nz14b"
+   ],
+   "q": "e14"
   },
   {
    "id": "s_e1",
-   "kind": "q",
-   "start": 19.99,
-   "end": 34.86
+   "kind": "nv",
+   "start": 14.49,
+   "end": 30.15,
+   "nids": [
+    "nz1a",
+    "nz1b",
+    "nz1c"
+   ],
+   "q": "e1"
   },
   {
    "id": "s_m02",
    "kind": "kick",
-   "start": 34.86,
-   "end": 41.17,
+   "start": 30.15,
+   "end": 36.46,
+   "nids": [
+    "z02"
+   ],
    "kicker": "京都・祇園"
   },
   {
    "id": "s_e2",
-   "kind": "q",
-   "start": 41.17,
-   "end": 59.89
+   "kind": "nv",
+   "start": 36.46,
+   "end": 45.42,
+   "nids": [
+    "nz2a",
+    "nz2b",
+    "nz2c"
+   ],
+   "q": "e2"
   },
   {
    "id": "s_m03",
    "kind": "kick",
-   "start": 59.89,
-   "end": 66.32,
+   "start": 45.42,
+   "end": 51.85,
+   "nids": [
+    "z03"
+   ],
    "kicker": "芸者は、\"小道具\"じゃない"
   },
   {
    "id": "s_e3",
-   "kind": "q",
-   "start": 66.32,
-   "end": 79.92
+   "kind": "nv",
+   "start": 51.85,
+   "end": 60.3,
+   "nids": [
+    "nz3a",
+    "nz3b"
+   ],
+   "q": "e3"
   },
   {
    "id": "s_gion",
    "kind": "gion",
-   "start": 79.92,
-   "end": 90.11
+   "start": 60.3,
+   "end": 66.95,
+   "nids": [
+    "z04"
+   ]
   },
   {
    "id": "s_e4",
-   "kind": "q",
-   "start": 90.11,
-   "end": 106.37
+   "kind": "nv",
+   "start": 66.95,
+   "end": 74.76,
+   "nids": [
+    "nz4a",
+    "nz4b"
+   ],
+   "q": "e4"
+  },
+  {
+   "id": "s_m04b",
+   "kind": "kick",
+   "start": 74.76,
+   "end": 82.43,
+   "nids": [
+    "z14"
+   ],
+   "kicker": "文化を壊すのは、誰か"
   },
   {
    "id": "s_m05",
    "kind": "kick",
-   "start": 106.37,
-   "end": 110.38,
+   "start": 82.43,
+   "end": 86.44,
+   "nids": [
+    "z05"
+   ],
    "kicker": "絶望は、続く"
   },
   {
    "id": "s_e5",
-   "kind": "q",
-   "start": 110.38,
-   "end": 134.63
+   "kind": "nv",
+   "start": 86.44,
+   "end": 93.32,
+   "nids": [
+    "nz5a",
+    "nz5b"
+   ],
+   "q": "e5"
+  },
+  {
+   "id": "s_e6",
+   "kind": "nv",
+   "start": 93.32,
+   "end": 98.29,
+   "nids": [
+    "nz6a"
+   ],
+   "q": "e6"
   },
   {
    "id": "s_m06",
    "kind": "kick",
-   "start": 134.63,
-   "end": 139.34,
+   "start": 98.29,
+   "end": 102.99,
+   "nids": [
+    "z06"
+   ],
    "kicker": "聖地・原宿にも"
   },
   {
    "id": "s_e7",
-   "kind": "q",
-   "start": 139.34,
-   "end": 151.74
+   "kind": "nv",
+   "start": 102.99,
+   "end": 109.08,
+   "nids": [
+    "nz7a",
+    "nz7b"
+   ],
+   "q": "e7"
   },
   {
    "id": "s_e8",
    "kind": "q",
-   "start": 151.74,
-   "end": 159.97
+   "start": 109.08,
+   "end": 117.31,
+   "nids": []
   },
   {
    "id": "s_z12",
    "kind": "kick",
-   "start": 159.97,
-   "end": 165.26,
+   "start": 117.31,
+   "end": 120.72,
+   "nids": [
+    "z12"
+   ],
    "kicker": null
   },
   {
    "id": "s_e16",
-   "kind": "q",
-   "start": 165.26,
-   "end": 186.7
+   "kind": "nv",
+   "start": 120.72,
+   "end": 128.76,
+   "nids": [
+    "nz16a",
+    "nz16b"
+   ],
+   "q": "e16"
   },
   {
    "id": "s_m07",
    "kind": "kick",
-   "start": 186.7,
-   "end": 190.55,
+   "start": 128.76,
+   "end": 132.61,
+   "nids": [
+    "z07"
+   ],
    "kicker": "彼女自身も、被害者だった"
   },
   {
    "id": "s_e9",
-   "kind": "q",
-   "start": 190.55,
-   "end": 208.07
-  },
-  {
-   "id": "s_m08",
-   "kind": "kick",
-   "start": 208.07,
-   "end": 211.87,
-   "kicker": null
+   "kind": "nv",
+   "start": 132.61,
+   "end": 139.5,
+   "nids": [
+    "nz9a",
+    "nz9b"
+   ],
+   "q": "e9"
   },
   {
    "id": "s_e10",
-   "kind": "q",
-   "start": 211.87,
-   "end": 217.61
+   "kind": "nv",
+   "start": 139.5,
+   "end": 146.21,
+   "nids": [
+    "nz10a"
+   ],
+   "q": "e10"
   },
   {
    "id": "s_z13",
    "kind": "kick",
-   "start": 217.61,
-   "end": 222.62,
+   "start": 146.21,
+   "end": 151.22,
+   "nids": [
+    "z13"
+   ],
    "kicker": null
   },
   {
    "id": "s_e17",
-   "kind": "q",
-   "start": 222.62,
-   "end": 236.43
+   "kind": "nv",
+   "start": 151.22,
+   "end": 159.95,
+   "nids": [
+    "nz17a",
+    "nz17b"
+   ],
+   "q": "e17"
   },
   {
    "id": "s_m09",
    "kind": "kick",
-   "start": 236.43,
-   "end": 242.76,
+   "start": 159.95,
+   "end": 166.28,
+   "nids": [
+    "z09"
+   ],
    "kicker": "限界は、近い"
   },
   {
    "id": "s_e11",
-   "kind": "q",
-   "start": 242.76,
-   "end": 254.62
+   "kind": "nv",
+   "start": 166.28,
+   "end": 174.49,
+   "nids": [
+    "nz11a",
+    "nz11b"
+   ],
+   "q": "e11"
   },
   {
    "id": "s_m10",
    "kind": "kick",
-   "start": 254.62,
-   "end": 259.89,
+   "start": 174.49,
+   "end": 179.75,
+   "nids": [
+    "z10"
+   ],
    "kicker": "それでも——"
   },
   {
    "id": "s_e18",
-   "kind": "q",
-   "start": 259.89,
-   "end": 287.92
+   "kind": "nv",
+   "start": 179.75,
+   "end": 190.81,
+   "nids": [
+    "nz18a",
+    "nz18b",
+    "nz18c"
+   ],
+   "q": "e18"
   },
   {
    "id": "s_e12",
    "kind": "q",
-   "start": 287.92,
-   "end": 301.15
+   "start": 190.81,
+   "end": 204.04,
+   "nids": []
   },
   {
    "id": "s_e13",
-   "kind": "q",
-   "start": 301.15,
-   "end": 313.86
+   "kind": "nv",
+   "start": 204.04,
+   "end": 214.0,
+   "nids": [
+    "nz13a",
+    "nz13b"
+   ],
+   "q": "e13"
   },
   {
    "id": "s_cardE",
    "kind": "card",
-   "start": 313.86,
-   "end": 323.24,
+   "start": 214.0,
+   "end": 223.38,
+   "nids": [
+    "z11"
+   ],
    "no": "終 章",
    "title": "それでも、日本を愛している",
    "sub": null,
@@ -811,40 +752,59 @@
   {
    "id": "s_f1",
    "kind": "recap4",
-   "start": 323.24,
-   "end": 328.45
+   "start": 223.38,
+   "end": 228.6,
+   "nids": [
+    "f01"
+   ]
   },
   {
    "id": "s_f2",
    "kind": "recap4b",
-   "start": 328.45,
-   "end": 342.28
+   "start": 228.6,
+   "end": 242.43,
+   "nids": [
+    "f02"
+   ]
   },
   {
    "id": "s_f3",
    "kind": "kick",
-   "start": 342.28,
-   "end": 347.59,
+   "start": 242.43,
+   "end": 254.8,
+   "nids": [
+    "f03",
+    "f03b"
+   ],
    "kicker": "怒っているのは、日本人だけじゃない"
   },
   {
    "id": "s_f6",
    "kind": "kick",
-   "start": 347.59,
-   "end": 355.69,
+   "start": 254.8,
+   "end": 262.9,
+   "nids": [
+    "f06"
+   ],
    "kicker": "答えは、あなたの中に"
   },
   {
    "id": "s_f4",
    "kind": "ask",
-   "start": 355.69,
-   "end": 363.11
+   "start": 262.9,
+   "end": 270.33,
+   "nids": [
+    "f04"
+   ]
   },
   {
    "id": "s_f5",
    "kind": "end",
-   "start": 363.11,
-   "end": 368.67
+   "start": 270.33,
+   "end": 275.89,
+   "nids": [
+    "f05"
+   ]
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
- "total": 216.95,
+ "total": 181.16,
  "beats": [
   {
    "id": "s_intro",
@@ -9,107 +9,122 @@
   {
    "id": "s_c1",
    "start": 7.41,
-   "end": 17.25
+   "end": 22.62
   },
   {
    "id": "s_journey",
-   "start": 17.25,
-   "end": 28.98
-  },
-  {
-   "id": "s_c10",
-   "start": 28.98,
-   "end": 39.3
+   "start": 22.62,
+   "end": 34.67
   },
   {
    "id": "s_c2",
-   "start": 39.3,
-   "end": 49.75
+   "start": 34.67,
+   "end": 44.19
   },
   {
    "id": "s_m03",
-   "start": 49.75,
-   "end": 55.2
+   "start": 44.19,
+   "end": 49.63
   },
   {
    "id": "s_c3",
-   "start": 55.2,
-   "end": 67.58
+   "start": 49.63,
+   "end": 53.68
   },
   {
    "id": "s_m04",
-   "start": 67.58,
-   "end": 71.28
+   "start": 53.68,
+   "end": 59.82
   },
   {
    "id": "s_c4",
-   "start": 71.28,
-   "end": 83.28
+   "start": 59.82,
+   "end": 64.96
   },
   {
    "id": "s_c5",
-   "start": 83.28,
-   "end": 98.02
+   "start": 64.96,
+   "end": 76.82
   },
   {
    "id": "s_m05",
-   "start": 98.02,
-   "end": 106.19
+   "start": 76.82,
+   "end": 84.98
   },
   {
    "id": "s_c6",
-   "start": 106.19,
-   "end": 119.7
+   "start": 84.98,
+   "end": 89.91
+  },
+  {
+   "id": "s_c6r",
+   "start": 89.91,
+   "end": 95.59
   },
   {
    "id": "s_d11",
-   "start": 119.7,
-   "end": 125.63
+   "start": 95.59,
+   "end": 101.83
   },
   {
    "id": "s_c11",
-   "start": 125.63,
-   "end": 138.64
+   "start": 101.83,
+   "end": 105.09
+  },
+  {
+   "id": "s_c11b",
+   "start": 105.09,
+   "end": 108.21
   },
   {
    "id": "s_m06",
-   "start": 138.64,
-   "end": 143.8
+   "start": 108.21,
+   "end": 113.59
   },
   {
    "id": "s_c7",
-   "start": 143.8,
-   "end": 154.01
+   "start": 113.59,
+   "end": 119.24
+  },
+  {
+   "id": "s_m06b",
+   "start": 119.24,
+   "end": 126.47
   },
   {
    "id": "s_m07",
-   "start": 154.01,
-   "end": 161.61
+   "start": 126.47,
+   "end": 134.06
   },
   {
    "id": "s_c8",
-   "start": 161.61,
-   "end": 177.52
+   "start": 134.06,
+   "end": 143.65
   },
   {
    "id": "s_m08",
-   "start": 177.52,
-   "end": 181.82
+   "start": 143.65,
+   "end": 152.96
   },
   {
    "id": "s_c9",
-   "start": 181.82,
-   "end": 201.15
+   "start": 152.96,
+   "end": 158.42
+  },
+  {
+   "id": "s_c12",
+   "start": 158.42,
+   "end": 165.36
   },
   {
    "id": "s_msg",
-   "start": 201.15,
-   "end": 206.77
+   "start": 165.36,
+   "end": 170.98
   },
   {
    "id": "s_card4",
-   "start": 206.77,
-   "end": 215.95
+   "start": 170.98,
+   "end": 180.16
   }
  ],
  "narr": {
@@ -117,130 +132,142 @@
    "start": 0.8,
    "dur": 6.11
   },
+  "nc1a": {
+   "start": 7.76,
+   "dur": 4.48
+  },
+  "nc1b": {
+   "start": 12.54,
+   "dur": 3.37
+  },
+  "nc1c": {
+   "start": 16.21,
+   "dur": 6.01
+  },
   "d02": {
-   "start": 17.75,
-   "dur": 10.73
+   "start": 23.12,
+   "dur": 11.05
+  },
+  "nc2a": {
+   "start": 35.02,
+   "dur": 3.65
+  },
+  "nc2b": {
+   "start": 38.97,
+   "dur": 4.82
   },
   "d03": {
-   "start": 50.15,
+   "start": 44.59,
    "dur": 4.84
   },
   "d04": {
-   "start": 67.98,
-   "dur": 3.1
+   "start": 54.08,
+   "dur": 5.54
+  },
+  "nc4a": {
+   "start": 60.17,
+   "dur": 1.65
+  },
+  "nc4b": {
+   "start": 62.17,
+   "dur": 2.49
+  },
+  "nc5a": {
+   "start": 65.31,
+   "dur": 5.86
+  },
+  "nc5b": {
+   "start": 71.46,
+   "dur": 4.91
   },
   "d05": {
-   "start": 98.42,
+   "start": 77.22,
    "dur": 7.47
   },
+  "nc6a": {
+   "start": 85.33,
+   "dur": 4.37
+  },
+  "nc6b": {
+   "start": 90.21,
+   "dur": 4.98
+  },
   "d11": {
-   "start": 120.1,
-   "dur": 5.33
+   "start": 95.99,
+   "dur": 5.64
+  },
+  "nc11a": {
+   "start": 102.18,
+   "dur": 2.76
+  },
+  "nc11b": {
+   "start": 105.34,
+   "dur": 2.46
   },
   "d06": {
-   "start": 139.04,
-   "dur": 4.57
+   "start": 108.61,
+   "dur": 4.78
+  },
+  "nc7a": {
+   "start": 113.94,
+   "dur": 3.01
+  },
+  "nc7b": {
+   "start": 117.25,
+   "dur": 1.55
+  },
+  "d12": {
+   "start": 119.64,
+   "dur": 6.53
   },
   "d07": {
-   "start": 154.41,
+   "start": 126.87,
    "dur": 6.89
   },
+  "nc8a": {
+   "start": 134.41,
+   "dur": 2.6
+  },
+  "nc8b": {
+   "start": 137.31,
+   "dur": 5.89
+  },
   "d08": {
-   "start": 177.92,
+   "start": 144.05,
    "dur": 3.7
   },
+  "d08b": {
+   "start": 148.05,
+   "dur": 4.7
+  },
+  "nc9a": {
+   "start": 153.31,
+   "dur": 2.34
+  },
+  "nc9b": {
+   "start": 155.94,
+   "dur": 2.18
+  },
+  "nc12a": {
+   "start": 158.72,
+   "dur": 1.76
+  },
+  "nc12b": {
+   "start": 160.78,
+   "dur": 4.13
+  },
   "d09": {
-   "start": 201.75,
+   "start": 165.96,
    "dur": 4.32
   },
   "d10": {
-   "start": 207.27,
+   "start": 171.48,
    "dur": 6.08
   }
  },
  "quotes": {
-  "c1q": {
-   "beat_start": 7.51,
-   "lead": 0.4,
-   "adur": 8.64,
-   "media_start": 0.6,
-   "dur": 9.54,
-   "clip": "c1q.mp4",
-   "sample": 18,
-   "grade": null,
-   "credit": "引用: Japanese Immersion Lab",
-   "caps": [
-    [
-     0.0,
-     "今じゃ日本で<em>差別</em>される側だ"
-    ],
-    [
-     4.6,
-     "日本語は ほぼネイティブなのに"
-    ]
-   ]
-  },
-  "c10": {
-   "beat_start": 29.08,
-   "lead": 0.4,
-   "adur": 9.12,
-   "media_start": 0.6,
-   "dur": 10.02,
-   "clip": "c10.mp4",
-   "sample": 18,
-   "grade": null,
-   "credit": "引用: Japanese Immersion Lab",
-   "caps": [
-    [
-     0.0,
-     "浅草で下駄を買ったら"
-    ],
-    [
-     4.6,
-     "裏には<em>\"中国製\"</em> …本物じゃない"
-    ]
-   ]
-  },
-  "c2q": {
-   "beat_start": 39.45,
-   "lead": 0.4,
-   "adur": 9.2,
-   "media_start": 0.6,
-   "dur": 10.1,
-   "clip": "c2q.mp4",
-   "sample": 18,
-   "grade": "warm",
-   "credit": "引用: Japanese Immersion Lab",
-   "caps": [
-    [
-     0.0,
-     "自由が丘で 見つけたんだ"
-    ],
-    [
-     4.2,
-     "おじいさんが営む<em>老舗の下駄屋</em>"
-    ]
-   ]
-  },
-  "c3q": {
-   "beat_start": 55.3,
-   "lead": 0.4,
-   "adur": 7.33,
-   "media_start": 0.6,
-   "dur": 8.23,
-   "clip": "c3q.mp4",
-   "sample": 18,
-   "grade": null,
-   "credit": "引用: Japanese Immersion Lab",
-   "caps": [
-    [
-     0.0,
-     "店に入った瞬間 店主が現れ——"
-    ]
-   ]
-  },
   "c3r": {
-   "beat_start": 63.68,
+   "beat_start": 49.78,
    "lead": 0.3,
    "adur": 2.9,
    "media_start": 0.7,
@@ -255,204 +282,6 @@
      "「<em>出て行け 国へ帰れ</em>」"
     ]
    ]
-  },
-  "c4q": {
-   "beat_start": 71.38,
-   "lead": 0.4,
-   "adur": 10.8,
-   "media_start": 0.6,
-   "dur": 11.7,
-   "clip": "c4q.mp4",
-   "sample": 18,
-   "grade": "gray",
-   "credit": "引用: Japanese Immersion Lab",
-   "caps": [
-    [
-     0.0,
-     "日本語で返した それでも——"
-    ],
-    [
-     3.4,
-     "「<em>さっさと出て行け</em>」"
-    ],
-    [
-     7.0,
-     "「どうせ何も買わないだろ」"
-    ]
-   ]
-  },
-  "c5q": {
-   "beat_start": 83.43,
-   "lead": 0.4,
-   "adur": 13.39,
-   "media_start": 0.6,
-   "dur": 14.29,
-   "clip": "c5q.mp4",
-   "sample": 18,
-   "grade": null,
-   "credit": "引用: Japanese Immersion Lab",
-   "caps": [
-    [
-     0.0,
-     "\"すみません 邪魔するつもりは…\""
-    ],
-    [
-     6.4,
-     "悲しいよ でも<em>ただの差別じゃない</em>んだ"
-    ]
-   ]
-  },
-  "c6q": {
-   "beat_start": 106.29,
-   "lead": 0.4,
-   "adur": 5.76,
-   "media_start": 0.6,
-   "dur": 6.66,
-   "clip": "c6q.mp4",
-   "sample": 18,
-   "grade": null,
-   "credit": "引用: Japanese Immersion Lab",
-   "caps": [
-    [
-     0.0,
-     "街は<em>路上で酒を飲み騒ぐ外国人</em>だらけ"
-    ]
-   ]
-  },
-  "c6r": {
-   "beat_start": 113.1,
-   "lead": 0.3,
-   "adur": 5.6,
-   "media_start": 0.7,
-   "dur": 6.4,
-   "clip": "c6r.mp4",
-   "sample": 18,
-   "grade": null,
-   "credit": "引用: Japanese Immersion Lab",
-   "caps": [
-    [
-     0.0,
-     "今じゃ<em>日本中が外国人嫌い</em>だ"
-    ]
-   ]
-  },
-  "c11a": {
-   "beat_start": 125.73,
-   "lead": 0.3,
-   "adur": 5.44,
-   "media_start": 0.7,
-   "dur": 6.24,
-   "clip": "c11a.mp4",
-   "sample": 18,
-   "grade": null,
-   "credit": "引用: Japanese Immersion Lab",
-   "caps": [
-    [
-     0.0,
-     "12時間働いて 疲れた会社員が"
-    ]
-   ]
-  },
-  "c11b": {
-   "beat_start": 132.12,
-   "lead": 0.3,
-   "adur": 5.52,
-   "media_start": 0.7,
-   "dur": 6.32,
-   "clip": "c11b.mp4",
-   "sample": 18,
-   "grade": null,
-   "credit": "引用: Japanese Immersion Lab",
-   "caps": [
-    [
-     0.0,
-     "路上で<em>\"晒し者\"</em>にされていく"
-    ]
-   ]
-  },
-  "c7q": {
-   "beat_start": 143.9,
-   "lead": 0.4,
-   "adur": 9.01,
-   "media_start": 0.6,
-   "dur": 9.91,
-   "clip": "c7q.mp4",
-   "sample": 18,
-   "grade": null,
-   "credit": "引用: Japanese Immersion Lab",
-   "caps": [
-    [
-     0.0,
-     "逆の立場なら 俺も言うさ"
-    ],
-    [
-     4.6,
-     "「<em>国に帰れ</em>」ってね"
-    ]
-   ]
-  },
-  "c8q": {
-   "beat_start": 161.71,
-   "lead": 0.4,
-   "adur": 14.71,
-   "media_start": 0.6,
-   "dur": 15.61,
-   "clip": "c8q.mp4",
-   "sample": 18,
-   "grade": "warm",
-   "credit": "引用: Japanese Immersion Lab",
-   "caps": [
-    [
-     0.0,
-     "日本人は 外国人が嫌いなんじゃない"
-    ],
-    [
-     7.6,
-     "\"<em>あなたみたいな人なら大歓迎</em>\"って"
-    ]
-   ]
-  },
-  "c9q": {
-   "beat_start": 181.92,
-   "lead": 0.4,
-   "adur": 9.92,
-   "media_start": 0.6,
-   "dur": 10.82,
-   "clip": "c9q.mp4",
-   "sample": 18,
-   "grade": null,
-   "credit": "引用: Japanese Immersion Lab",
-   "caps": [
-    [
-     0.0,
-     "日本を<em>特別扱いしなくていい</em>"
-    ],
-    [
-     5.4,
-     "ただ \"<em>普通の人</em>\" でいてくれ"
-    ]
-   ]
-  },
-  "c12": {
-   "beat_start": 192.94,
-   "lead": 0.4,
-   "adur": 7.01,
-   "media_start": 0.6,
-   "dur": 7.91,
-   "clip": "c12.mp4",
-   "sample": 18,
-   "grade": null,
-   "credit": "引用: Japanese Immersion Lab",
-   "caps": [
-    [
-     0.0,
-     "肩の力を抜けばいい"
-    ],
-    [
-     3.6,
-     "日本は<em>遊び場</em>じゃない それだけさ"
-    ]
-   ]
   }
  },
  "scenes": [
@@ -461,6 +290,9 @@
    "kind": "broll",
    "start": 0.6,
    "end": 7.41,
+   "nids": [
+    "d01"
+   ],
    "bg": "jil",
    "lt": [
     "日本語ほぼネイティブの豪州人",
@@ -469,138 +301,249 @@
   },
   {
    "id": "s_c1",
-   "kind": "q",
+   "kind": "nv",
    "start": 7.41,
-   "end": 17.25
+   "end": 22.62,
+   "nids": [
+    "nc1a",
+    "nc1b",
+    "nc1c"
+   ],
+   "q": "c1q"
   },
   {
    "id": "s_journey",
    "kind": "journey",
-   "start": 17.25,
-   "end": 28.98
-  },
-  {
-   "id": "s_c10",
-   "kind": "q",
-   "start": 28.98,
-   "end": 39.3
+   "start": 22.62,
+   "end": 34.67,
+   "nids": [
+    "d02"
+   ]
   },
   {
    "id": "s_c2",
-   "kind": "q",
-   "start": 39.3,
-   "end": 49.75
+   "kind": "nv",
+   "start": 34.67,
+   "end": 44.19,
+   "nids": [
+    "nc2a",
+    "nc2b"
+   ],
+   "q": "c2q"
   },
   {
    "id": "s_m03",
    "kind": "kick",
-   "start": 49.75,
-   "end": 55.2,
+   "start": 44.19,
+   "end": 49.63,
+   "nids": [
+    "d03"
+   ],
    "kicker": "その瞬間——"
   },
   {
    "id": "s_c3",
    "kind": "q",
-   "start": 55.2,
-   "end": 67.58
+   "start": 49.63,
+   "end": 53.68,
+   "nids": []
   },
   {
    "id": "s_m04",
    "kind": "kick",
-   "start": 67.58,
-   "end": 71.28,
+   "start": 53.68,
+   "end": 59.82,
+   "nids": [
+    "d04"
+   ],
    "kicker": "日本語で返しても"
   },
   {
    "id": "s_c4",
-   "kind": "q",
-   "start": 71.28,
-   "end": 83.28
+   "kind": "nv",
+   "start": 59.82,
+   "end": 64.96,
+   "nids": [
+    "nc4a",
+    "nc4b"
+   ],
+   "q": "c4q"
   },
   {
    "id": "s_c5",
-   "kind": "q",
-   "start": 83.28,
-   "end": 98.02
+   "kind": "nv",
+   "start": 64.96,
+   "end": 76.82,
+   "nids": [
+    "nc5a",
+    "nc5b"
+   ],
+   "q": "c5q"
   },
   {
    "id": "s_m05",
    "kind": "kick",
-   "start": 98.02,
-   "end": 106.19,
+   "start": 76.82,
+   "end": 84.98,
+   "nids": [
+    "d05"
+   ],
    "kicker": "なぜ、店主を責めないのか"
   },
   {
    "id": "s_c6",
-   "kind": "q",
-   "start": 106.19,
-   "end": 119.7
+   "kind": "nv",
+   "start": 84.98,
+   "end": 89.91,
+   "nids": [
+    "nc6a"
+   ],
+   "q": "c6q"
+  },
+  {
+   "id": "s_c6r",
+   "kind": "nv",
+   "start": 89.91,
+   "end": 95.59,
+   "nids": [
+    "nc6b"
+   ],
+   "q": "c6r"
   },
   {
    "id": "s_d11",
    "kind": "kick",
-   "start": 119.7,
-   "end": 125.63,
+   "start": 95.59,
+   "end": 101.83,
+   "nids": [
+    "d11"
+   ],
    "kicker": null
   },
   {
    "id": "s_c11",
-   "kind": "q",
-   "start": 125.63,
-   "end": 138.64
+   "kind": "nv",
+   "start": 101.83,
+   "end": 105.09,
+   "nids": [
+    "nc11a"
+   ],
+   "q": "c11a"
+  },
+  {
+   "id": "s_c11b",
+   "kind": "nv",
+   "start": 105.09,
+   "end": 108.21,
+   "nids": [
+    "nc11b"
+   ],
+   "q": "c11b"
   },
   {
    "id": "s_m06",
    "kind": "kick",
-   "start": 138.64,
-   "end": 143.8,
+   "start": 108.21,
+   "end": 113.59,
+   "nids": [
+    "d06"
+   ],
    "kicker": "立場が逆なら——"
   },
   {
    "id": "s_c7",
-   "kind": "q",
-   "start": 143.8,
-   "end": 154.01
+   "kind": "nv",
+   "start": 113.59,
+   "end": 119.24,
+   "nids": [
+    "nc7a",
+    "nc7b"
+   ],
+   "q": "c7q"
+  },
+  {
+   "id": "s_m06b",
+   "kind": "kick",
+   "start": 119.24,
+   "end": 126.47,
+   "nids": [
+    "d12"
+   ],
+   "kicker": null
   },
   {
    "id": "s_m07",
    "kind": "kick",
-   "start": 154.01,
-   "end": 161.61,
+   "start": 126.47,
+   "end": 134.06,
+   "nids": [
+    "d07"
+   ],
    "kicker": "それでも、恨まない"
   },
   {
    "id": "s_c8",
-   "kind": "q",
-   "start": 161.61,
-   "end": 177.52
+   "kind": "nv",
+   "start": 134.06,
+   "end": 143.65,
+   "nids": [
+    "nc8a",
+    "nc8b"
+   ],
+   "q": "c8q"
   },
   {
    "id": "s_m08",
    "kind": "kick",
-   "start": 177.52,
-   "end": 181.82,
+   "start": 143.65,
+   "end": 152.96,
+   "nids": [
+    "d08",
+    "d08b"
+   ],
    "kicker": "最後のメッセージ"
   },
   {
    "id": "s_c9",
-   "kind": "q",
-   "start": 181.82,
-   "end": 201.15
+   "kind": "nv",
+   "start": 152.96,
+   "end": 158.42,
+   "nids": [
+    "nc9a",
+    "nc9b"
+   ],
+   "q": "c9q"
+  },
+  {
+   "id": "s_c12",
+   "kind": "nv",
+   "start": 158.42,
+   "end": 165.36,
+   "nids": [
+    "nc12a",
+    "nc12b"
+   ],
+   "q": "c12"
   },
   {
    "id": "s_msg",
    "kind": "msg",
-   "start": 201.15,
-   "end": 206.77,
+   "start": 165.36,
+   "end": 170.98,
+   "nids": [
+    "d09"
+   ],
    "text": "普通の人で、<br>いてくれ。",
    "by": "— Japanese Immersion Lab"
   },
   {
    "id": "s_card4",
    "kind": "card",
-   "start": 206.77,
-   "end": 215.95,
+   "start": 170.98,
+   "end": 180.16,
+   "nids": [
+    "d10"
+   ],
    "no": "第 4 章",
    "title": "愛するがゆえの絶望",
    "sub": "— 日本を愛しすぎた彼女の、最後の願い",
