@@ -278,13 +278,13 @@ for cid, dt in [("c1", 0.05), ("c2", 1.5), ("c3", 2.9), ("c4", 4.35)]:
 
 # ============================================================ chapter 1
 t0, t1 = B["ch1"]
-el_video("ch1v", t0, t1, "intro15.mp4", 0.5)
+el_video("ch1v", t0, t1, "dance.mp4", 0.0)
 el_div("ch1o", t0, t1, "qov", (
     '<div class="ch1scrim"></div>'
-    '<div class="credit">引用: Axel in Japan</div>'
+    '<div class="credit">引用: Chopsticks and Trains</div>'
     '<div class="chno" id="chno">第 1 章</div>'
-    '<div class="chttl" id="chttl">俺たちは、残る</div>'
-    '<div class="chsub" id="chsub">— 在住8年、2児の父の告白</div>'))
+    '<div class="chttl" id="chttl">ブームの光と影</div>'
+    '<div class="chsub" id="chsub">— 空前の訪日ブームは、何を連れてきたのか</div>'))
 glitch(t0, 1.0)
 fromto(t0 + 0.25, "#chno", "x: -40, opacity: 0", "x: 0, opacity: 1", 0.4, "power3.out")
 fromto(t0 + 0.5, "#chttl", "scale: 1.3, opacity: 0", "scale: 1, opacity: 1", 0.45, "expo.out")
