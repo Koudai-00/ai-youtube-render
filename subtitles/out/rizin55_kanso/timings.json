@@ -1,0 +1,936 @@
+{
+"beats": [
+{
+"id": "o1",
+"kind": "r",
+"start": 0.25,
+"end": 5.85,
+"dur": 5.6
+},
+{
+"id": "o2",
+"kind": "n",
+"start": 6.03,
+"end": 14.018,
+"dur": 7.988,
+"wav": "subtitles/out/rizin55_kanso/wavs/o2_d428737b83.wav",
+"read": "じゅういちがつようか、ライジンごじゅうご。試合前に多くの格闘家が勝つと見ていた選手が、次々と敗れた。"
+},
+{
+"id": "o3a",
+"kind": "n",
+"start": 14.238,
+"end": 15.863,
+"dur": 1.625,
+"wav": "subtitles/out/rizin55_kanso/wavs/o3a_3858ed1dfa.wav",
+"read": "おうじゃのしんりゅうまこと。"
+},
+{
+"id": "o3b",
+"kind": "n",
+"start": 16.083,
+"end": 17.894,
+"dur": 1.811,
+"wav": "subtitles/out/rizin55_kanso/wavs/o3b_a466584cae.wav",
+"read": "もとおうじゃのいのうえなおき。"
+},
+{
+"id": "o3c",
+"kind": "n",
+"start": 18.114,
+"end": 20.39,
+"dur": 2.276,
+"wav": "subtitles/out/rizin55_kanso/wavs/o3c_aa626d34ea.wav",
+"read": "ごりんぎんメダリストのおおたしのぶ。"
+},
+{
+"id": "o4",
+"kind": "n",
+"start": 20.61,
+"end": 27.111,
+"dur": 6.502,
+"wav": "subtitles/out/rizin55_kanso/wavs/o4_417b27d82f.wav",
+"read": "ほんめいがさんにんそろってしずんだ夜。リングを知る格闘家たちは、この結果をどう見たのか。"
+},
+{
+"id": "o5",
+"kind": "n",
+"start": 27.331,
+"end": 35.226,
+"dur": 7.895,
+"wav": "subtitles/out/rizin55_kanso/wavs/o5_5b789eea85.wav",
+"read": "そして大会の途中、ひとりの男がリングに上がった。にじゅうねんの格闘家人生に、終わりを告げるためだ。"
+},
+{
+"id": "o6",
+"kind": "r",
+"start": 35.446,
+"end": 41.646,
+"dur": 6.2
+},
+{
+"id": "a1_chap",
+"kind": "c",
+"start": 41.826,
+"end": 45.026,
+"dur": 3.2
+},
+{
+"id": "a1",
+"kind": "n",
+"start": 45.026,
+"end": 53.292,
+"dur": 8.266,
+"wav": "subtitles/out/rizin55_kanso/wavs/a1_0bb41e3b4c.wav",
+"read": "メインイベントはふらいきゅうタイトルマッチ。ろくがつにおうぎくぼひろまさからベルトを奪った、しんりゅうまことのはつぼうえいせんだった。"
+},
+{
+"id": "a2",
+"kind": "n",
+"start": 53.512,
+"end": 63.218,
+"dur": 9.706,
+"wav": "subtitles/out/rizin55_kanso/wavs/a2_05c2b0c129.wav",
+"read": "いちラウンド、しんりゅうのカウンターがララミーを倒す。だがララミーはすぐにくみついた。ていくだうんからバックを奪い、首を狙い続けた。"
+},
+{
+"id": "a3",
+"kind": "n",
+"start": 63.438,
+"end": 72.959,
+"dur": 9.52,
+"wav": "subtitles/out/rizin55_kanso/wavs/a3_ec6f1b8fdb.wav",
+"read": "さんラウンドにはしんりゅうのひじでララミーのひたいがさけ、ドクターチェックが入る。それでもララミーは止まらず、最後までうえをとり続けた。"
+},
+{
+"id": "a4",
+"kind": "n",
+"start": 73.179,
+"end": 79.402,
+"dur": 6.223,
+"wav": "subtitles/out/rizin55_kanso/wavs/a4_079915eb4a.wav",
+"read": "はんていはにたいいち。ララミーがライジンしじょうはつの、がいこくじんふらいきゅうおうじゃになった。"
+},
+{
+"id": "a5",
+"kind": "n",
+"start": 79.622,
+"end": 83.29,
+"dur": 3.669,
+"wav": "subtitles/out/rizin55_kanso/wavs/a5_24c0869801.wav",
+"read": "じょびんが一番驚いたのは、ララミーのねわざだった。"
+},
+{
+"id": "a6",
+"kind": "r",
+"start": 83.51,
+"end": 94.71,
+"dur": 11.2
+},
+{
+"id": "a7",
+"kind": "n",
+"start": 94.89,
+"end": 104.039,
+"dur": 9.149,
+"wav": "subtitles/out/rizin55_kanso/wavs/a7_b9d7a4e241.wav",
+"read": "じょびん自身のさいてんはしんりゅうだった。それでもはんていに不満はないと言い切る。勝負を分けたのはフィジカルだとけつろんづけた。"
+},
+{
+"id": "a8",
+"kind": "n",
+"start": 104.259,
+"end": 113.408,
+"dur": 9.149,
+"wav": "subtitles/out/rizin55_kanso/wavs/a8_59d7218b8d.wav",
+"read": "さいとうゆたかも、せんぜんのみたてが外れたと話す。だげきで来ると思っていたララミーが、自分から組んでていくだうんを取りにいった。"
+},
+{
+"id": "a9",
+"kind": "n",
+"start": 113.628,
+"end": 117.621,
+"dur": 3.994,
+"wav": "subtitles/out/rizin55_kanso/wavs/a9_29c9bfc726.wav",
+"read": "実はかなりかんせいどが高い選手だと、評価を改めた。"
+},
+{
+"id": "a10",
+"kind": "n",
+"start": 117.841,
+"end": 125.225,
+"dur": 7.384,
+"wav": "subtitles/out/rizin55_kanso/wavs/a10_aeefbdf804.wav",
+"read": "その組みを技術で解説したのがストラッサーきいちだ。ララミーはロープの反動を使ってしんりゅうを倒した。"
+},
+{
+"id": "a11",
+"kind": "n",
+"start": 125.445,
+"end": 134.919,
+"dur": 9.474,
+"wav": "subtitles/out/rizin55_kanso/wavs/a11_7f60e9f78c.wav",
+"read": "しんりゅうが立とうとするたびに頭の位置を押さえ、こしのしたにクラッチを滑らせてもういちどねかせる。ストラッサーはこれを、はめ技と呼んだ。"
+},
+{
+"id": "a11b",
+"kind": "n",
+"start": 135.139,
+"end": 144.381,
+"dur": 9.242,
+"wav": "subtitles/out/rizin55_kanso/wavs/a11b_712ced0af5.wav",
+"read": "しんりゅうと同じえーてぃーてぃーで練習するほりぐちきょうじは、しんりゅうがごてに回りすぎたと見る。いいひじを入れても、たんぱつで終わってしまったという。"
+},
+{
+"id": "a11c",
+"kind": "r",
+"start": 144.601,
+"end": 151.501,
+"dur": 6.9
+},
+{
+"id": "a12",
+"kind": "n",
+"start": 151.681,
+"end": 162.362,
+"dur": 10.681,
+"wav": "subtitles/out/rizin55_kanso/wavs/a12_5726c139c9.wav",
+"read": "はんていについては見方が割れた。あおきしんやは、にじゅうきゅうたいにじゅうはちでララミーとしたジャッジが正しいと話す。割れたのはにラウンドのかいしゃくの違いだという。"
+},
+{
+"id": "a13",
+"kind": "n",
+"start": 162.582,
+"end": 170.616,
+"dur": 8.034,
+"wav": "subtitles/out/rizin55_kanso/wavs/a13_0d68297c78.wav",
+"read": "おうぎくぼひろまさは、どちらについてもおかしくない試合だったと振り返る。終わった直後は、正直わからなかったという。"
+},
+{
+"id": "a14",
+"kind": "n",
+"start": 170.836,
+"end": 180.124,
+"dur": 9.288,
+"wav": "subtitles/out/rizin55_kanso/wavs/a14_de36bf5001.wav",
+"read": "おうぎくぼは、おうざを取ってわずかごかげつで失ったしんりゅうの気持ちがよくわかると言う。おうぎくぼ自身も、同じ思いを味わっているからだ。"
+},
+{
+"id": "a15",
+"kind": "n",
+"start": 180.344,
+"end": 189.678,
+"dur": 9.334,
+"wav": "subtitles/out/rizin55_kanso/wavs/a15_611c723fe0.wav",
+"read": "さいとうゆたかももとおうじゃとしてしんりゅうによりそった。チャンピオンはいっぽんやケーオーを求められる。そのこだわりは痛いほどわかると話した。"
+},
+{
+"id": "a16",
+"kind": "n",
+"start": 189.898,
+"end": 194.124,
+"dur": 4.226,
+"wav": "subtitles/out/rizin55_kanso/wavs/a16_efb7b58ae8.wav",
+"read": "試合後、しんりゅうは長い沈黙のあとで口を開いた。"
+},
+{
+"id": "a17",
+"kind": "r",
+"start": 194.344,
+"end": 198.944,
+"dur": 4.6
+},
+{
+"id": "a18",
+"kind": "n",
+"start": 199.124,
+"end": 204.186,
+"dur": 5.062,
+"wav": "subtitles/out/rizin55_kanso/wavs/a18_bd38193e71.wav",
+"read": "それでもしんりゅうは言った。必ず来年、チャンピオンにかえりざくと。"
+},
+{
+"id": "a19",
+"kind": "n",
+"start": 204.406,
+"end": 217.595,
+"dur": 13.189,
+"wav": "subtitles/out/rizin55_kanso/wavs/a19_ff483ab827.wav",
+"read": "しんおうじゃの前には、すぐに次の相手が現れた。過去にララミーを破っているいとうゆうきだ。伊藤はしんりゅうの勝ちを予想して書いたてがみをやぶりすて、おおみそかでの対戦を求めた。"
+},
+{
+"id": "a20",
+"kind": "n",
+"start": 217.815,
+"end": 223.342,
+"dur": 5.526,
+"wav": "subtitles/out/rizin55_kanso/wavs/a20_d431bc483b.wav",
+"read": "ストラッサーは、傷を考えればララミーが無理をしておおみそかに出る必要はないと見る。"
+},
+{
+"id": "a21",
+"kind": "n",
+"start": 223.562,
+"end": 228.577,
+"dur": 5.016,
+"wav": "subtitles/out/rizin55_kanso/wavs/a21_a64ff2ced6.wav",
+"read": "青木も、にかげつたらずでしんおうじゃに防衛戦をさせるのはこくだと話した。"
+},
+{
+"id": "a21b",
+"kind": "n",
+"start": 228.797,
+"end": 238.178,
+"dur": 9.381,
+"wav": "subtitles/out/rizin55_kanso/wavs/a21b_493a1e32f6.wav",
+"read": "ほりぐちは、おおみそかにいとうゆうきとやれば前回と同じく伊藤が勝つと見る。ララミーは、あのくらいリーチのある相手とはやりづらいという。"
+},
+{
+"id": "b1_chap",
+"kind": "c",
+"start": 238.398,
+"end": 241.598,
+"dur": 3.2
+},
+{
+"id": "b1",
+"kind": "n",
+"start": 241.598,
+"end": 252.14,
+"dur": 10.542,
+"wav": "subtitles/out/rizin55_kanso/wavs/b1_289e2c46fb.wav",
+"read": "セミファイナルは、ばんたむきゅうのおうざちょうせんけんをかけたいっせん。サバテロにベルトを奪われたいのうえなおきが、にじゅうにさいのイリスベクティレノフを迎えた。"
+},
+{
+"id": "b2",
+"kind": "n",
+"start": 252.36,
+"end": 256.818,
+"dur": 4.458,
+"wav": "subtitles/out/rizin55_kanso/wavs/b2_2390ec60e0.wav",
+"read": "ティレノフはいちラウンドから何度も井上を持ち上げ、バックにしがみついた。"
+},
+{
+"id": "b3",
+"kind": "r",
+"start": 257.038,
+"end": 260.838,
+"dur": 3.8
+},
+{
+"id": "b4",
+"kind": "n",
+"start": 261.018,
+"end": 267.984,
+"dur": 6.966,
+"wav": "subtitles/out/rizin55_kanso/wavs/b4_c7cc7c8913.wav",
+"read": "おうぎくぼが驚いたのは、そのスタミナだ。井上が切り返しても、ティレノフは何度でも組みにいった。"
+},
+{
+"id": "b5",
+"kind": "n",
+"start": 268.204,
+"end": 274.706,
+"dur": 6.502,
+"wav": "subtitles/out/rizin55_kanso/wavs/b5_bd3d17ffb3.wav",
+"read": "生配信で試合を見ていたかわじりたつやは、スタンドで井上が負けるとは思えないと話していた。"
+},
+{
+"id": "b6",
+"kind": "n",
+"start": 274.926,
+"end": 279.198,
+"dur": 4.272,
+"wav": "subtitles/out/rizin55_kanso/wavs/b6_840f3c2ec6.wav",
+"read": "だがにラウンドに井上がダウンを奪っても、ティレノフは崩れなかった。"
+},
+{
+"id": "b7",
+"kind": "n",
+"start": 279.418,
+"end": 284.109,
+"dur": 4.69,
+"wav": "subtitles/out/rizin55_kanso/wavs/b7_a60a0dab1c.wav",
+"read": "青木は、井上はそのチャンスでしとめなければならなかったと指摘する。"
+},
+{
+"id": "b8",
+"kind": "n",
+"start": 284.329,
+"end": 292.641,
+"dur": 8.313,
+"wav": "subtitles/out/rizin55_kanso/wavs/b8_66faaeea3f.wav",
+"read": "ストラッサーが勝負の分かれ目にあげたのも、同じにラウンドだった。そとがけで倒せそうな場面を、とりきれなかったという。"
+},
+{
+"id": "b8b",
+"kind": "n",
+"start": 292.861,
+"end": 303.217,
+"dur": 10.356,
+"wav": "subtitles/out/rizin55_kanso/wavs/b8b_c7658e3021.wav",
+"read": "ほりぐちは、ティレノフはだげきと組みを混ぜてエムエムエーをしていたと話す。一方の井上は、相手が仕掛けてから動くごての展開が続いているという。"
+},
+{
+"id": "b9",
+"kind": "n",
+"start": 303.437,
+"end": 308.221,
+"dur": 4.783,
+"wav": "subtitles/out/rizin55_kanso/wavs/b9_b637ebe903.wav",
+"read": "じょびんは、井上のだげきが当たらない試合を初めて見た気がすると話す。"
+},
+{
+"id": "b10",
+"kind": "n",
+"start": 308.441,
+"end": 312.435,
+"dur": 3.994,
+"wav": "subtitles/out/rizin55_kanso/wavs/b10_0317fc4ae0.wav",
+"read": "そしてティレノフなら、おうじゃサバテロにも勝てるのではないかと見る。"
+},
+{
+"id": "b11",
+"kind": "n",
+"start": 312.655,
+"end": 324.961,
+"dur": 12.307,
+"wav": "subtitles/out/rizin55_kanso/wavs/b11_ab9dc519b4.wav",
+"read": "さいとうゆたかは、海外の強い選手に共通する姿勢を見ていた。疲れても先に攻め続ける。だげきが多少荒くても振ってくる。その圧力に、井上が受けに回ってしまったという。"
+},
+{
+"id": "b12",
+"kind": "n",
+"start": 325.181,
+"end": 331.218,
+"dur": 6.037,
+"wav": "subtitles/out/rizin55_kanso/wavs/b12_86ca14c4f6.wav",
+"read": "試合後、井上はティレノフに声をかけた。若いのにすごい、尊敬していると。"
+},
+{
+"id": "b13",
+"kind": "n",
+"start": 331.438,
+"end": 338.915,
+"dur": 7.477,
+"wav": "subtitles/out/rizin55_kanso/wavs/b13_cec92f4cce.wav",
+"read": "リングにはサバテロが上がり、ティレノフをちょうはつした。おおみそかのタイトルマッチに向けて、話が進んでいる。"
+},
+{
+"id": "c1_chap",
+"kind": "c",
+"start": 339.135,
+"end": 342.335,
+"dur": 3.2
+},
+{
+"id": "c1",
+"kind": "n",
+"start": 342.335,
+"end": 351.53,
+"dur": 9.195,
+"wav": "subtitles/out/rizin55_kanso/wavs/c1_d678dc849b.wav",
+"read": "せんぜんからいいあいを続けてきたかしむらじんのすけとおおたしのぶ。じゅうじゅつのかしむらに、レスリングごりんぎんメダリストのおおたが挑むいっせんだった。"
+},
+{
+"id": "c2",
+"kind": "n",
+"start": 351.75,
+"end": 355.605,
+"dur": 3.855,
+"wav": "subtitles/out/rizin55_kanso/wavs/c2_843d24a2ca.wav",
+"read": "ところが試合は、グラップラー同士のだげき戦になった。"
+},
+{
+"id": "c3",
+"kind": "n",
+"start": 355.825,
+"end": 363.394,
+"dur": 7.57,
+"wav": "subtitles/out/rizin55_kanso/wavs/c3_33840a0343.wav",
+"read": "さいとうゆたかが驚いたのはかしむらのだげきだ。ひきこんでねわざで作ると思っていたが、だげきで試合をくみたてた。"
+},
+{
+"id": "c4",
+"kind": "n",
+"start": 363.614,
+"end": 368.676,
+"dur": 5.062,
+"wav": "subtitles/out/rizin55_kanso/wavs/c4_7a27436243.wav",
+"read": "サバテロ戦からよんかげつで、ここまでじょうたつしていたとは思わなかったという。"
+},
+{
+"id": "c5",
+"kind": "n",
+"start": 368.896,
+"end": 376.002,
+"dur": 7.105,
+"wav": "subtitles/out/rizin55_kanso/wavs/c5_d5cb8b472f.wav",
+"read": "おうぎくぼも、かしむらのボクシングの技術がかなり上がっていたと見る。距離は最初からかしむらのものだった。"
+},
+{
+"id": "c6",
+"kind": "n",
+"start": 376.222,
+"end": 382.398,
+"dur": 6.177,
+"wav": "subtitles/out/rizin55_kanso/wavs/c6_1cd89df1ca.wav",
+"read": "そしてさんラウンド。かしむらは下から、エゼキエルチョークでおおたをしめおとした。"
+},
+{
+"id": "c7",
+"kind": "r",
+"start": 382.618,
+"end": 394.918,
+"dur": 12.3
+},
+{
+"id": "c8",
+"kind": "n",
+"start": 395.098,
+"end": 400.81,
+"dur": 5.712,
+"wav": "subtitles/out/rizin55_kanso/wavs/c8_3eb42a10e0.wav",
+"read": "グローブをつけたエムエムエーで、しかも下から決めるのは衝撃だと川尻は続けた。"
+},
+{
+"id": "c9",
+"kind": "n",
+"start": 401.03,
+"end": 407.811,
+"dur": 6.78,
+"wav": "subtitles/out/rizin55_kanso/wavs/c9_8e0e6df568.wav",
+"read": "じょびんは、大会のエムブイピーにかしむらをあげた。とんでもないファイターが完成してしまったと。"
+},
+{
+"id": "c10",
+"kind": "n",
+"start": 408.031,
+"end": 413.418,
+"dur": 5.387,
+"wav": "subtitles/out/rizin55_kanso/wavs/c10_7309dcb051.wav",
+"read": "おおたの敗因について、ストラッサーは思った以上に組みにいかなかったことをあげる。"
+},
+{
+"id": "c11",
+"kind": "n",
+"start": 413.638,
+"end": 420.278,
+"dur": 6.641,
+"wav": "subtitles/out/rizin55_kanso/wavs/c11_b7a1bf5a43.wav",
+"read": "おうぎくぼは、パンチで入り込みすぎたと見た。おうぎくぼはおおたと同じジムで練習する仲間だ。"
+},
+{
+"id": "c12",
+"kind": "n",
+"start": 420.498,
+"end": 430.576,
+"dur": 10.077,
+"wav": "subtitles/out/rizin55_kanso/wavs/c12_f7132ed77d.wav",
+"read": "セコンドについていた青木は、エゼキエルチョークは知らないときまってしまう技だと話す。青木自身も、練習でかしむらにいちど取られたことがあるという。"
+},
+{
+"id": "c13",
+"kind": "n",
+"start": 430.796,
+"end": 438.319,
+"dur": 7.523,
+"wav": "subtitles/out/rizin55_kanso/wavs/c13_77d27e5af4.wav",
+"read": "かしむらはマイクでひとことだけ言った。ありがとう。この言葉は、かつて青木がリングで使ったものだ。"
+},
+{
+"id": "c14",
+"kind": "n",
+"start": 438.539,
+"end": 442.858,
+"dur": 4.319,
+"wav": "subtitles/out/rizin55_kanso/wavs/c14_81661e250f.wav",
+"read": "青木は、それをうけついでくれたことが本当にうれしかったと話した。"
+},
+{
+"id": "d1_chap",
+"kind": "c",
+"start": 443.078,
+"end": 446.278,
+"dur": 3.2
+},
+{
+"id": "d1",
+"kind": "n",
+"start": 446.278,
+"end": 460.924,
+"dur": 14.646,
+"wav": "subtitles/out/rizin55_kanso/wavs/d1_734d134507.wav",
+"read": "じゅっせんむはいのあいもとかずきが、ライジンに初めて上がった。相手のメヘウラは、前日のけいりょうでよんひゃくごじゅうグラムをオーバーした。前回のはぎわらきょうへい戦に続く、にしあい連続のたいじゅうちょうかだった。"
+},
+{
+"id": "d2",
+"kind": "n",
+"start": 461.144,
+"end": 468.574,
+"dur": 7.43,
+"wav": "subtitles/out/rizin55_kanso/wavs/d2_3ab2712f3d.wav",
+"read": "ストラッサーは強い言葉で批判した。にかい連続のけいりょうオーバーはありえない。なめているとしか言いようがないと。"
+},
+{
+"id": "d3",
+"kind": "n",
+"start": 468.794,
+"end": 480.497,
+"dur": 11.703,
+"wav": "subtitles/out/rizin55_kanso/wavs/d3_454e9801d9.wav",
+"read": "試合はメヘウラがゆういに進めた。にラウンドの終わり、パウンドであいもとを止める。ただしあいもとが勝った時だけ記録が残る条件のため、結果はのーこんてすとになった。"
+},
+{
+"id": "d4",
+"kind": "n",
+"start": 480.717,
+"end": 488.658,
+"dur": 7.941,
+"wav": "subtitles/out/rizin55_kanso/wavs/d4_8e763fef2c.wav",
+"read": "川尻は、メヘウラの強さに驚いていた。なぜにかい連続でけいりょうを落としているのに、こんなに強いのかと。"
+},
+{
+"id": "d5",
+"kind": "n",
+"start": 488.878,
+"end": 501.463,
+"dur": 12.585,
+"wav": "subtitles/out/rizin55_kanso/wavs/d5_476bd0d36c.wav",
+"read": "あいもとの戦い方には、多くの格闘家がくびをかしげた。川尻はあしかんせつを狙いにいったことをあげる。あしかんせつはいっかいめは驚かせてきまるが、にかいさんかいとやればきまらないという。"
+},
+{
+"id": "d6",
+"kind": "n",
+"start": 501.683,
+"end": 511.389,
+"dur": 9.706,
+"wav": "subtitles/out/rizin55_kanso/wavs/d6_baedc937e9.wav",
+"read": "青木は、あいもとがこれまで日本人相手には体力で勝ってきたと話す。初めてのこくさいせんで体力勝ちできなかったことは、とても大きいと見る。"
+},
+{
+"id": "d7",
+"kind": "n",
+"start": 511.609,
+"end": 521.455,
+"dur": 9.845,
+"wav": "subtitles/out/rizin55_kanso/wavs/d7_3f7fd83bfa.wav",
+"read": "じょびんは、メヘウラはベストコンディションに見えたと話した。それでも、もういちどだけ見たいという。次にオーバーしたらついほうと決めたうえでだ。"
+},
+{
+"id": "e1_chap",
+"kind": "c",
+"start": 521.675,
+"end": 524.875,
+"dur": 3.2
+},
+{
+"id": "e1",
+"kind": "n",
+"start": 524.875,
+"end": 529.658,
+"dur": 4.783,
+"wav": "subtitles/out/rizin55_kanso/wavs/e1_e3cd98ec0b.wav",
+"read": "ライジンはつさんせんのちはるは、かいぶつくんことすずきひろあきと戦った。"
+},
+{
+"id": "e2",
+"kind": "n",
+"start": 529.878,
+"end": 536.612,
+"dur": 6.734,
+"wav": "subtitles/out/rizin55_kanso/wavs/e2_661257b250.wav",
+"read": "いちラウンドに右ストレートでダウンを奪う。にラウンド、グラウンドでのひじでティーケーオー勝ちを収めた。"
+},
+{
+"id": "e3",
+"kind": "n",
+"start": 536.832,
+"end": 543.891,
+"dur": 7.059,
+"wav": "subtitles/out/rizin55_kanso/wavs/e3_62a520e4dc.wav",
+"read": "川尻は、長いリーチをいかしたちはるの動きをアンデウソンシウバに重ねた。まさにスパイダーだと。"
+},
+{
+"id": "e4",
+"kind": "n",
+"start": 544.111,
+"end": 550.937,
+"dur": 6.827,
+"wav": "subtitles/out/rizin55_kanso/wavs/e4_d479dc0c41.wav",
+"read": "おうぎくぼは、ジャブとストレートの伸びを評価した。フェザーきゅうに、またいい選手が出てきたという。"
+},
+{
+"id": "e5",
+"kind": "n",
+"start": 551.157,
+"end": 559.238,
+"dur": 8.081,
+"wav": "subtitles/out/rizin55_kanso/wavs/e5_6ff1c1b40e.wav",
+"read": "じょびんは、ちはるはスターになりそうだと話す。次の相手には、はぎわらきょうへいが一番えになるとおした。"
+},
+{
+"id": "e6",
+"kind": "r",
+"start": 559.458,
+"end": 571.858,
+"dur": 12.4
+},
+{
+"id": "g1_chap",
+"kind": "c",
+"start": 572.038,
+"end": 575.238,
+"dur": 3.2
+},
+{
+"id": "g1",
+"kind": "n",
+"start": 575.238,
+"end": 589.031,
+"dur": 13.793,
+"wav": "subtitles/out/rizin55_kanso/wavs/g1_5864b0937f.wav",
+"read": "しんりゅうの敗戦で、ライジンのげんえきおうじゃは、よにん全員ががいこくじんになった。らいときゅうのグスタボ、フェザーきゅうのしぇいどらえふ、ばんたむきゅうのサバテロ、そしてふらいきゅうのララミーだ。"
+},
+{
+"id": "g2",
+"kind": "n",
+"start": 589.251,
+"end": 599.096,
+"dur": 9.845,
+"wav": "subtitles/out/rizin55_kanso/wavs/g2_ed8caa4621.wav",
+"read": "さかきばらのぶゆきシーイーオーは大会後の総括で、少し寂しいとほんねをこぼした。日本人選手に各階級でふんきしてほしいという。"
+},
+{
+"id": "g2b",
+"kind": "n",
+"start": 599.316,
+"end": 606.421,
+"dur": 7.105,
+"wav": "subtitles/out/rizin55_kanso/wavs/g2b_b123cc0cd4.wav",
+"read": "ほりぐちは、おうじゃがころころ変わって面白いと話す。日本人がベルトを取りにいく物語ができたという。"
+},
+{
+"id": "g3",
+"kind": "n",
+"start": 606.641,
+"end": 620.062,
+"dur": 13.421,
+"wav": "subtitles/out/rizin55_kanso/wavs/g3_5f6dd4c283.wav",
+"read": "さいとうゆたかは、この流れをはだで感じている。ティレノフといい、メヘウラといい、海外勢の強さがどの大会でもはっきり出ている。中途半端な実力では、もう勝てなくなってきたという。"
+},
+{
+"id": "g4",
+"kind": "n",
+"start": 620.282,
+"end": 630.453,
+"dur": 10.17,
+"wav": "subtitles/out/rizin55_kanso/wavs/g4_3dbe782f11.wav",
+"read": "川尻はメヘウラ戦のあと、日本人ががいこくじんの壁に苦しむ姿をずっと見てきたと話した。そこを乗り越えたのは、青木と自分くらいしかいないと。"
+},
+{
+"id": "g5",
+"kind": "n",
+"start": 630.673,
+"end": 633.97,
+"dur": 3.297,
+"wav": "subtitles/out/rizin55_kanso/wavs/g5_fd420f4ebd.wav",
+"read": "その青木が、この夜、引退を発表した。"
+},
+{
+"id": "h1_chap",
+"kind": "c",
+"start": 634.19,
+"end": 637.39,
+"dur": 3.2
+},
+{
+"id": "h1",
+"kind": "n",
+"start": 637.39,
+"end": 643.241,
+"dur": 5.851,
+"wav": "subtitles/out/rizin55_kanso/wavs/h1_197211755a.wav",
+"read": "だいはちしあいのあと、さかきばらしーいーおーのよびこみであおきしんやがリングに上がった。"
+},
+{
+"id": "h2",
+"kind": "n",
+"start": 643.461,
+"end": 654.746,
+"dur": 11.285,
+"wav": "subtitles/out/rizin55_kanso/wavs/h2_5c5b7190dd.wav",
+"read": "あおきしんやは、今年のおおみそかをもってエムエムエーを引退する。最後の試合はおおみそかのなごや大会。相手はさくらばかずしのむすこ、さくらばたいせいだ。"
+},
+{
+"id": "h3",
+"kind": "n",
+"start": 654.966,
+"end": 665.136,
+"dur": 10.17,
+"wav": "subtitles/out/rizin55_kanso/wavs/h3_b80fdbcffd.wav",
+"read": "この組み合わせには理由がある。にせんじゅうごねんの年末、ライジンのはたあげ大会。青木は、よんじゅうろくさいのさくらばかずしとメインで戦った。"
+},
+{
+"id": "h4",
+"kind": "n",
+"start": 665.356,
+"end": 673.53,
+"dur": 8.173,
+"wav": "subtitles/out/rizin55_kanso/wavs/h4_5108c5e2cd.wav",
+"read": "青木はバックからパウンドを打ち続けた。顔をはらしたさくらばはタップをしなかった。最後はセコンドがタオルを投げた。"
+},
+{
+"id": "h5",
+"kind": "n",
+"start": 673.75,
+"end": 681.227,
+"dur": 7.477,
+"wav": "subtitles/out/rizin55_kanso/wavs/h5_5a617f153e.wav",
+"read": "それがさくらばかずしにとって、エムエムエー最後の試合になった。試合後、青木はリングで泣いた。"
+},
+{
+"id": "h6",
+"kind": "n",
+"start": 681.447,
+"end": 686.648,
+"dur": 5.201,
+"wav": "subtitles/out/rizin55_kanso/wavs/h6_d6b3145e8b.wav",
+"read": "あれからじゅうねん。今度はそのむすこが、青木の最後の相手になる。"
+},
+{
+"id": "h7",
+"kind": "n",
+"start": 686.868,
+"end": 697.131,
+"dur": 10.263,
+"wav": "subtitles/out/rizin55_kanso/wavs/h7_1c7954cc16.wav",
+"read": "青木は引退を発表する前、自分のチャンネルで理由を語っていた。やめてもいいと最初に思ったのは、さくらばかずしと戦った時だったという。"
+},
+{
+"id": "h8",
+"kind": "n",
+"start": 697.351,
+"end": 701.577,
+"dur": 4.226,
+"wav": "subtitles/out/rizin55_kanso/wavs/h8_f4d364a605.wav",
+"read": "だから最後の相手は、さくらばたいせいしかないと考えた。"
+},
+{
+"id": "h9",
+"kind": "n",
+"start": 701.797,
+"end": 710.342,
+"dur": 8.545,
+"wav": "subtitles/out/rizin55_kanso/wavs/h9_05781f0702.wav",
+"read": "くがつのあさくらみくる戦でやめなかった理由も明かしている。見てきた人が、これで終わりなんだと思える場所がないまま去るのはつらい。"
+},
+{
+"id": "h10",
+"kind": "n",
+"start": 710.562,
+"end": 714.742,
+"dur": 4.18,
+"wav": "subtitles/out/rizin55_kanso/wavs/h10_7ef1076782.wav",
+"read": "にじゅうねん見てきた人たちに、すじをとおして終わりたいという。"
+},
+{
+"id": "h11",
+"kind": "n",
+"start": 714.962,
+"end": 726.293,
+"dur": 11.331,
+"wav": "subtitles/out/rizin55_kanso/wavs/h11_df8c79c18e.wav",
+"read": "検査ではのうにも首にもいじょうはなかった。それでも家族はずっと、やめてほしいと願っていた。できなくなってからやめるのは嫌だった。青木はそう話している。"
+},
+{
+"id": "h12",
+"kind": "n",
+"start": 726.513,
+"end": 739.563,
+"dur": 13.05,
+"wav": "subtitles/out/rizin55_kanso/wavs/h12_21250351c2.wav",
+"read": "リングでは、さくらばたいせいがこう答えた。あごを骨折して、くがつの大会に出られなかった。だからおおみそかは、ひとりでふっかつまつりをする。青木を、愛を持ってかいしゃくすると。"
+},
+{
+"id": "h13",
+"kind": "n",
+"start": 739.783,
+"end": 742.058,
+"dur": 2.276,
+"wav": "subtitles/out/rizin55_kanso/wavs/h13_596e9d8084.wav",
+"read": "格闘家たちの反応は早かった。"
+},
+{
+"id": "h14",
+"kind": "r",
+"start": 742.278,
+"end": 750.978,
+"dur": 8.7
+},
+{
+"id": "h15",
+"kind": "n",
+"start": 751.158,
+"end": 761.329,
+"dur": 10.17,
+"wav": "subtitles/out/rizin55_kanso/wavs/h15_2a63865dd3.wav",
+"read": "ストラッサーは、過去に青木と言い合ったこともあると明かした。それでも技術は日本のトップクラスだと言い切り、引退試合を全力で応援すると話した。"
+},
+{
+"id": "h16",
+"kind": "n",
+"start": 761.549,
+"end": 765.403,
+"dur": 3.855,
+"wav": "subtitles/out/rizin55_kanso/wavs/h16_6f04c221ee.wav",
+"read": "ただし勝敗の予想は、さくらばたいせいの勝ちだという。"
+},
+{
+"id": "h17",
+"kind": "n",
+"start": 765.623,
+"end": 775.515,
+"dur": 9.892,
+"wav": "subtitles/out/rizin55_kanso/wavs/h17_f511a5900c.wav",
+"read": "かわじりたつやは、この決断を素晴らしい選択だと話す。プロレスもユーチューブもある。引退後のセカンドキャリアは、もうできているという。"
+},
+{
+"id": "h18",
+"kind": "n",
+"start": 775.735,
+"end": 786.509,
+"dur": 10.774,
+"wav": "subtitles/out/rizin55_kanso/wavs/h18_b4cd5bf860.wav",
+"read": "かしむらは今年すでによんしあいを戦い、おおみそかには出ないという。青木は、自分の最後の試合でかしむらはそばにいたいのではないかと話した。"
+},
+{
+"id": "z1",
+"kind": "n",
+"start": 786.729,
+"end": 795.878,
+"dur": 9.149,
+"wav": "subtitles/out/rizin55_kanso/wavs/z1_020a2115e4.wav",
+"read": "ほんめいがさんにん倒れ、ベルトはすべて海外へ渡った。そして日本のエムエムエーを支えてきた男が、最後の試合を決めた。"
+},
+{
+"id": "z2",
+"kind": "n",
+"start": 796.098,
+"end": 804.457,
+"dur": 8.359,
+"wav": "subtitles/out/rizin55_kanso/wavs/z2_d51ad8779f.wav",
+"read": "おおみそかのなごやでは、ララミーといとうゆうき、サバテロとティレノフ、そしてあおきしんやとさくらばたいせいの戦いが待っている。"
+},
+{
+"id": "z3",
+"kind": "n",
+"start": 804.677,
+"end": 808.531,
+"dur": 3.855,
+"wav": "subtitles/out/rizin55_kanso/wavs/z3_7b80e132da.wav",
+"read": "ライジンごじゅうごは、次の物語の始まりになった。"
+}
+],
+"total": 809.751
+}
