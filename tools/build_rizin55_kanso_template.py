@@ -20,6 +20,7 @@ def cfg(c):
     d = CFG.get(c, {}); return d.get("z", 1.0), d.get("fx", .5), d.get("fy", .5)
 def segname(src, ms): return f"{src}_{int(round(ms * 10))}"
 def video(src, s, e, ms=0, push=.04, side=None):
+    if s < .3 and ms >= s: ms -= s; s = 0  # 冒頭0.25秒の黒を出さない（映像だけ先に始める）
     USE.append((src, round(ms, 2), round(ms + e - s, 2)))
     if src in CLEN and ms + (e - s) > CLEN[src] + .05: raise SystemExit(f"clip overrun {src} {ms:.1f}+{e - s:.1f} > {CLEN[src]}")
     if not OV(s, e) or min(e, W1) - max(s, W0) <= .02: return
@@ -36,6 +37,8 @@ def timed(cls, s, e, inner, idv=None, z=None):
     if OV(s, e) and min(e, W1) - max(s, W0) > .02:
         st, du = attr(s, e); zs = f"z-index:{z};" if z else ""
         ov.append(f'<div id="{i}" class="clip {cls}" data-start="{st}" data-duration="{du}" data-track-index="{tk[0]}" style="{zs}">{inner}</div>')
+        # 表示/非表示をGSAPでも明示する（層合成モードのピースでは clip の自動切替が効かず前のテロップが残るため。2026-11-09）
+        js.append(f'tl.set("#{i}",{{visibility:"hidden"}},{W0:.3f});tl.set("#{i}",{{visibility:"visible"}},{max(s, W0):.3f});tl.set("#{i}",{{visibility:"hidden"}},{e:.3f});')
     return i
 def flash(t, c="#fff", a=.9, d=.22):
     J(t, t + d, f'tl.set("#fl",{{background:"{c}"}},{t:.3f});tl.fromTo("#fl",{{opacity:{a}}},{{opacity:0,duration:{d},ease:"power2.out"}},{t:.3f});')
