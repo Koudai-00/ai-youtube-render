@@ -203,14 +203,51 @@ def sc_broll(s):
 def sc_kick(s):
     t0, t1 = s["start"], s["end"]
     k = s.get("kicker")
-    inner = '<div class="kline" id="%skl"></div>' % s["id"]
-    if k:
-        inner = f'<div class="kick" id="{s["id"]}k">{k}</div>' + inner
-    el_div(f'{s["id"]}p', t0, t1, "panel", inner)
-    if k:
-        fromto(t0 + 0.25, f'#{s["id"]}k', "y: 20, opacity: 0", "y: 0, opacity: 1", 0.45, "power3.out")
-        cue("whoosh", t0 + 0.25, 0.8)
+    if not k:
+        raise SystemExit(f"{EP}:{s['id']}: kick には必ず kicker テキストを付ける(赤線だけの画面を禁止)")
+    # flex縦積みでテキスト直下に赤線を密着させる(距離ズレ対策)
+    el_div(f'{s["id"]}p', t0, t1, "panel", (
+        f'<div class="kstack"><div class="kick" id="{s["id"]}k">{k}</div>'
+        f'<div class="kline" id="{s["id"]}kl"></div></div>'))
+    fromto(t0 + 0.25, f'#{s["id"]}k', "y: 20, opacity: 0", "y: 0, opacity: 1", 0.45, "power3.out")
+    cue("whoosh", t0 + 0.25, 0.8)
     fromto(t0 + 0.3, f'#{s["id"]}kl', "scaleX: 0", "scaleX: 1", 0.5, "power2.inOut")
+
+
+def sc_cases(s):  # 事例リストパネル (行はナレ尺に均等同期)
+    t0, t1 = s["start"], s["end"]
+    eid = s["id"]
+    rows = s["rows"]
+    rh = "".join(
+        f'<div class="crow" id="{eid}r{i}"><span class="ctag">{tag}</span><span class="ctx">{tx}</span></div>'
+        for i, (tag, tx) in enumerate(rows))
+    el_div(f"{eid}p", t0, t1, "panel", (
+        f'<div class="dhead" id="{eid}h">{s["head"]}</div><div class="crows">{rh}</div>'))
+    fromto(t0 + 0.3, f"#{eid}h", "y: -26, opacity: 0", "y: 0, opacity: 1", 0.4, "power3.out")
+    n = N[s["nids"][0]]
+    for i in range(len(rows)):
+        tt = n["start"] + i * (n["dur"] / len(rows)) + 0.1
+        fromto(tt, f"#{eid}r{i}", "x: -70, opacity: 0", "x: 0, opacity: 1", 0.4, "power3.out")
+        cue("tick", tt, 0.8)
+    glitch(t0, 0.6)
+
+
+def sc_pct(s):  # 99% / 1% パネル
+    t0, t1 = s["start"], s["end"]
+    el_div("pctp", t0, t1, "panel", (
+        '<div class="dhead" id="ph">迷惑をかけるのは <em>1%</em></div>'
+        '<div class="pbar" id="pb"><div class="p99" id="p99"><span>99%</span>は 日本の味方</div>'
+        '<div class="p1" id="p1"></div></div>'
+        '<div class="p1lab" id="p1l">しかし拡散されるのは<br>この<em>1%</em>だけ</div>'
+        '<div class="cntsrc">出典: 引用元動画(Chopsticks and Trains)の主張</div>'))
+    fromto(t0 + 0.3, "#ph", "y: -26, opacity: 0", "y: 0, opacity: 1", 0.4, "power3.out")
+    fromto(t0 + 1.0, "#p99", "scaleX: 0", "scaleX: 1", 1.0, "power2.inOut")
+    cue("count", t0 + 1.0, 0.7, 1.0)
+    fromto(t0 + 2.3, "#p1", "scaleX: 0", "scaleX: 1", 0.3, "power4.out")
+    cue("slam", t0 + 2.45, 0.9)
+    fromto(t0 + 2.7, "#p1l", "y: 24, opacity: 0", "y: 0, opacity: 1", 0.45, "power3.out")
+    cue("pop", t0 + 2.7, 0.6)
+    glitch(t0, 0.6)
 
 
 def sc_q(s):
@@ -337,14 +374,16 @@ def sc_gion(s):  # c4: 祇園 看板
 
 def sc_msg(s):
     t0, t1 = s["start"], s["end"]
+    by = s.get("by")
+    byh = f'<div class="msgby" id="{s["id"]}b">{by}</div>' if by else ""
     el_div(f'{s["id"]}m', t0, t1, "panel tpanel", (
         '<div class="glow" id="%sg"></div>' % s["id"] +
-        f'<div class="msgt" id="{s["id"]}t">{s["text"]}</div>'
-        f'<div class="msgby" id="{s["id"]}b">{s["by"]}</div>'))
+        f'<div class="msgt" id="{s["id"]}t">{s["text"]}</div>' + byh))
     fromto(t0 + 0.3, f'#{s["id"]}t', "scale: 1.25, opacity: 0", "scale: 1, opacity: 1", 0.45, "expo.out")
     cue("slam", t0 + 0.45, 1.0)
     fromto(t0 + 0.5, f'#{s["id"]}g', "opacity: 0", "opacity: 1", 1.2, "power2.out")
-    fromto(t0 + 1.2, f'#{s["id"]}b', "opacity: 0", "opacity: 1", 0.45, "power2.out")
+    if by:
+        fromto(t0 + 1.2, f'#{s["id"]}b', "opacity: 0", "opacity: 1", 0.45, "power2.out")
     glitch(t0, 0.8)
 
 
@@ -390,7 +429,8 @@ def _recap_grid(pref, kw):
 
 def sc_recap4(s):
     t0, t1 = s["start"], s["end"]
-    el_div("rec1", t0, t1, "panel", '<div class="chead" id="rh1">4人の告白</div>' + _recap_grid("r1", False))
+    el_div("rec1", t0, t1, "panel",
+           f'<div class="chead" id="rh1">{s.get("head", "4人の告白")}</div>' + _recap_grid("r1", False))
     fromto(t0 + 0.2, "#rh1", "opacity: 0", "opacity: 1", 0.4, "power2.out")
     for i, dt in enumerate([0.5, 0.75, 1.0, 1.25]):
         fromto(t0 + dt, f"#r1c{i}", "y: 70, opacity: 0", "y: 0, opacity: 1", 0.45, "power3.out")
@@ -399,17 +439,20 @@ def sc_recap4(s):
 
 
 def sc_recap4b(s):
+    # items = [導入ナレ, 要求1, 要求2, 要求3, 要求4] — スタンプは各行の発話中盤に同期
     t0, t1 = s["start"], s["end"]
-    el_div("rec2", t0, t1, "panel", '<div class="chead" id="rh2">4人の告白</div>' + _recap_grid("r2", True))
+    el_div("rec2", t0, t1, "panel",
+           f'<div class="chead" id="rh2">{s.get("head", "4人の告白")}</div>' + _recap_grid("r2", True))
     setv(t0 + 0.01, "#rh2", "opacity: 1")
     for i in range(4):
         setv(t0 + 0.01, f"#r2c{i}", "opacity: 1")
-    nid = [i for t, i in [(0, "f02")]][0]
-    f2 = N[nid]["start"]
-    for i, dt in enumerate([1.3, 4.6, 7.6, 11.2]):
-        fromto(f2 + dt, f"#r2kw{i}", "scale: 1.8, opacity: 0, rotation: -6",
+    kw_nids = s["nids"][1:5]
+    assert len(kw_nids) == 4, f"{EP}: recap4b はナレ5行(導入+4)が必要"
+    for i, nid in enumerate(kw_nids):
+        st = N[nid]["start"] + 0.55 * N[nid]["dur"]
+        fromto(st, f"#r2kw{i}", "scale: 1.8, opacity: 0, rotation: -6",
                "scale: 1, opacity: 1, rotation: -6", 0.26, "power4.in")
-        cue("slam", f2 + dt + 0.26, 0.8)
+        cue("slam", st + 0.26, 0.8)
 
 
 def sc_ask(s):
@@ -437,6 +480,7 @@ def sc_end(s):
 
 
 KIND = {"broll": sc_broll, "kick": sc_kick, "q": sc_q, "nv": sc_nv, "diagram": sc_diagram,
+        "cases": sc_cases, "pct": sc_pct,
         "counter": sc_counter, "news": sc_news, "journey": sc_journey, "gion": sc_gion,
         "msg": sc_msg, "card": sc_card, "recap4": sc_recap4, "recap4b": sc_recap4b,
         "ask": sc_ask, "end": sc_end}
@@ -486,10 +530,25 @@ em { font-style:normal; color:#e8322e; }
 .tpanel { background:radial-gradient(ellipse 90% 80% at 50% 42%, #10151d 0%, #07080b 70%); }
 .glow { position:absolute; left:50%; top:50%; width:1500px; height:700px; margin:-350px 0 0 -750px;
   background:radial-gradient(ellipse, rgba(232,50,46,.17), rgba(232,50,46,0) 65%); opacity:0; }
-.kick { position:absolute; left:120px; right:120px; top:44%; transform:translateY(-50%);
-  text-align:center; font-size:84px; letter-spacing:.04em; opacity:0; text-shadow:0 6px 40px rgba(0,0,0,.8); }
-.kline { position:absolute; left:50%; top:62%; width:460px; margin-left:-230px; height:10px;
-  background:#e8322e; transform:scaleX(0); }
+.kstack { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center;
+  justify-content:center; gap:36px; padding:0 120px; }
+.kick { text-align:center; font-size:84px; line-height:1.35; letter-spacing:.04em; opacity:0;
+  text-shadow:0 6px 40px rgba(0,0,0,.8); }
+.kline { width:460px; height:10px; background:#e8322e; transform:scaleX(0); }
+/* cases */
+.crows { position:absolute; left:320px; right:280px; top:290px; }
+.crow { display:flex; align-items:center; gap:36px; margin-bottom:46px; opacity:0; }
+.ctag { background:#e8322e; color:#fff; font-family:'NotoBd'; font-size:34px; padding:10px 28px;
+  border-radius:8px; white-space:nowrap; min-width:170px; text-align:center; }
+.ctx { font-size:52px; }
+/* pct */
+.pbar { position:absolute; left:240px; right:240px; top:44%; height:130px; display:flex; }
+.p99 { width:99%; background:#15202e; border:3px solid #2a3140; display:flex; align-items:center;
+  justify-content:center; gap:22px; font-size:42px; color:#c9d2dc; transform-origin:left; }
+.p99 span { font-size:64px; color:#46e0a0; }
+.p1 { width:1%; background:#e8322e; box-shadow:0 0 36px rgba(232,50,46,.85); transform-origin:right; }
+.p1lab { position:absolute; right:240px; top:calc(44% + 165px); text-align:right; font-size:42px;
+  line-height:1.45; opacity:0; }
 .dhead { position:absolute; left:0; right:0; top:96px; text-align:center; font-size:82px; opacity:0; }
 .dnote { position:absolute; left:0; right:0; bottom:64px; text-align:center; font-family:'NotoBd';
   font-size:32px; color:#8a93a0; opacity:0; }
