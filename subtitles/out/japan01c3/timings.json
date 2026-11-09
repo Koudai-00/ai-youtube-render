@@ -1,0 +1,610 @@
+{
+ "total": 216.95,
+ "beats": [
+  {
+   "id": "s_intro",
+   "start": 0.6,
+   "end": 7.41
+  },
+  {
+   "id": "s_c1",
+   "start": 7.41,
+   "end": 17.25
+  },
+  {
+   "id": "s_journey",
+   "start": 17.25,
+   "end": 28.98
+  },
+  {
+   "id": "s_c10",
+   "start": 28.98,
+   "end": 39.3
+  },
+  {
+   "id": "s_c2",
+   "start": 39.3,
+   "end": 49.75
+  },
+  {
+   "id": "s_m03",
+   "start": 49.75,
+   "end": 55.2
+  },
+  {
+   "id": "s_c3",
+   "start": 55.2,
+   "end": 67.58
+  },
+  {
+   "id": "s_m04",
+   "start": 67.58,
+   "end": 71.28
+  },
+  {
+   "id": "s_c4",
+   "start": 71.28,
+   "end": 83.28
+  },
+  {
+   "id": "s_c5",
+   "start": 83.28,
+   "end": 98.02
+  },
+  {
+   "id": "s_m05",
+   "start": 98.02,
+   "end": 106.19
+  },
+  {
+   "id": "s_c6",
+   "start": 106.19,
+   "end": 119.7
+  },
+  {
+   "id": "s_d11",
+   "start": 119.7,
+   "end": 125.63
+  },
+  {
+   "id": "s_c11",
+   "start": 125.63,
+   "end": 138.64
+  },
+  {
+   "id": "s_m06",
+   "start": 138.64,
+   "end": 143.8
+  },
+  {
+   "id": "s_c7",
+   "start": 143.8,
+   "end": 154.01
+  },
+  {
+   "id": "s_m07",
+   "start": 154.01,
+   "end": 161.61
+  },
+  {
+   "id": "s_c8",
+   "start": 161.61,
+   "end": 177.52
+  },
+  {
+   "id": "s_m08",
+   "start": 177.52,
+   "end": 181.82
+  },
+  {
+   "id": "s_c9",
+   "start": 181.82,
+   "end": 201.15
+  },
+  {
+   "id": "s_msg",
+   "start": 201.15,
+   "end": 206.77
+  },
+  {
+   "id": "s_card4",
+   "start": 206.77,
+   "end": 215.95
+  }
+ ],
+ "narr": {
+  "d01": {
+   "start": 0.8,
+   "dur": 6.11
+  },
+  "d02": {
+   "start": 17.75,
+   "dur": 10.73
+  },
+  "d03": {
+   "start": 50.15,
+   "dur": 4.84
+  },
+  "d04": {
+   "start": 67.98,
+   "dur": 3.1
+  },
+  "d05": {
+   "start": 98.42,
+   "dur": 7.47
+  },
+  "d11": {
+   "start": 120.1,
+   "dur": 5.33
+  },
+  "d06": {
+   "start": 139.04,
+   "dur": 4.57
+  },
+  "d07": {
+   "start": 154.41,
+   "dur": 6.89
+  },
+  "d08": {
+   "start": 177.92,
+   "dur": 3.7
+  },
+  "d09": {
+   "start": 201.75,
+   "dur": 4.32
+  },
+  "d10": {
+   "start": 207.27,
+   "dur": 6.08
+  }
+ },
+ "quotes": {
+  "c1q": {
+   "beat_start": 7.51,
+   "lead": 0.4,
+   "adur": 8.64,
+   "media_start": 0.6,
+   "dur": 9.54,
+   "clip": "c1q.mp4",
+   "sample": 18,
+   "grade": null,
+   "credit": "引用: Japanese Immersion Lab",
+   "caps": [
+    [
+     0.0,
+     "今じゃ日本で<em>差別</em>される側だ"
+    ],
+    [
+     4.6,
+     "日本語は ほぼネイティブなのに"
+    ]
+   ]
+  },
+  "c10": {
+   "beat_start": 29.08,
+   "lead": 0.4,
+   "adur": 9.12,
+   "media_start": 0.6,
+   "dur": 10.02,
+   "clip": "c10.mp4",
+   "sample": 18,
+   "grade": null,
+   "credit": "引用: Japanese Immersion Lab",
+   "caps": [
+    [
+     0.0,
+     "浅草で下駄を買ったら"
+    ],
+    [
+     4.6,
+     "裏には<em>\"中国製\"</em> …本物じゃない"
+    ]
+   ]
+  },
+  "c2q": {
+   "beat_start": 39.45,
+   "lead": 0.4,
+   "adur": 9.2,
+   "media_start": 0.6,
+   "dur": 10.1,
+   "clip": "c2q.mp4",
+   "sample": 18,
+   "grade": "warm",
+   "credit": "引用: Japanese Immersion Lab",
+   "caps": [
+    [
+     0.0,
+     "自由が丘で 見つけたんだ"
+    ],
+    [
+     4.2,
+     "おじいさんが営む<em>老舗の下駄屋</em>"
+    ]
+   ]
+  },
+  "c3q": {
+   "beat_start": 55.3,
+   "lead": 0.4,
+   "adur": 7.33,
+   "media_start": 0.6,
+   "dur": 8.23,
+   "clip": "c3q.mp4",
+   "sample": 18,
+   "grade": null,
+   "credit": "引用: Japanese Immersion Lab",
+   "caps": [
+    [
+     0.0,
+     "店に入った瞬間 店主が現れ——"
+    ]
+   ]
+  },
+  "c3r": {
+   "beat_start": 63.68,
+   "lead": 0.3,
+   "adur": 2.9,
+   "media_start": 0.7,
+   "dur": 3.6,
+   "clip": "c3r.mp4",
+   "sample": 18,
+   "grade": "gray",
+   "credit": "引用: Japanese Immersion Lab",
+   "caps": [
+    [
+     0.0,
+     "「<em>出て行け 国へ帰れ</em>」"
+    ]
+   ]
+  },
+  "c4q": {
+   "beat_start": 71.38,
+   "lead": 0.4,
+   "adur": 10.8,
+   "media_start": 0.6,
+   "dur": 11.7,
+   "clip": "c4q.mp4",
+   "sample": 18,
+   "grade": "gray",
+   "credit": "引用: Japanese Immersion Lab",
+   "caps": [
+    [
+     0.0,
+     "日本語で返した それでも——"
+    ],
+    [
+     3.4,
+     "「<em>さっさと出て行け</em>」"
+    ],
+    [
+     7.0,
+     "「どうせ何も買わないだろ」"
+    ]
+   ]
+  },
+  "c5q": {
+   "beat_start": 83.43,
+   "lead": 0.4,
+   "adur": 13.39,
+   "media_start": 0.6,
+   "dur": 14.29,
+   "clip": "c5q.mp4",
+   "sample": 18,
+   "grade": null,
+   "credit": "引用: Japanese Immersion Lab",
+   "caps": [
+    [
+     0.0,
+     "\"すみません 邪魔するつもりは…\""
+    ],
+    [
+     6.4,
+     "悲しいよ でも<em>ただの差別じゃない</em>んだ"
+    ]
+   ]
+  },
+  "c6q": {
+   "beat_start": 106.29,
+   "lead": 0.4,
+   "adur": 5.76,
+   "media_start": 0.6,
+   "dur": 6.66,
+   "clip": "c6q.mp4",
+   "sample": 18,
+   "grade": null,
+   "credit": "引用: Japanese Immersion Lab",
+   "caps": [
+    [
+     0.0,
+     "街は<em>路上で酒を飲み騒ぐ外国人</em>だらけ"
+    ]
+   ]
+  },
+  "c6r": {
+   "beat_start": 113.1,
+   "lead": 0.3,
+   "adur": 5.6,
+   "media_start": 0.7,
+   "dur": 6.4,
+   "clip": "c6r.mp4",
+   "sample": 18,
+   "grade": null,
+   "credit": "引用: Japanese Immersion Lab",
+   "caps": [
+    [
+     0.0,
+     "今じゃ<em>日本中が外国人嫌い</em>だ"
+    ]
+   ]
+  },
+  "c11a": {
+   "beat_start": 125.73,
+   "lead": 0.3,
+   "adur": 5.44,
+   "media_start": 0.7,
+   "dur": 6.24,
+   "clip": "c11a.mp4",
+   "sample": 18,
+   "grade": null,
+   "credit": "引用: Japanese Immersion Lab",
+   "caps": [
+    [
+     0.0,
+     "12時間働いて 疲れた会社員が"
+    ]
+   ]
+  },
+  "c11b": {
+   "beat_start": 132.12,
+   "lead": 0.3,
+   "adur": 5.52,
+   "media_start": 0.7,
+   "dur": 6.32,
+   "clip": "c11b.mp4",
+   "sample": 18,
+   "grade": null,
+   "credit": "引用: Japanese Immersion Lab",
+   "caps": [
+    [
+     0.0,
+     "路上で<em>\"晒し者\"</em>にされていく"
+    ]
+   ]
+  },
+  "c7q": {
+   "beat_start": 143.9,
+   "lead": 0.4,
+   "adur": 9.01,
+   "media_start": 0.6,
+   "dur": 9.91,
+   "clip": "c7q.mp4",
+   "sample": 18,
+   "grade": null,
+   "credit": "引用: Japanese Immersion Lab",
+   "caps": [
+    [
+     0.0,
+     "逆の立場なら 俺も言うさ"
+    ],
+    [
+     4.6,
+     "「<em>国に帰れ</em>」ってね"
+    ]
+   ]
+  },
+  "c8q": {
+   "beat_start": 161.71,
+   "lead": 0.4,
+   "adur": 14.71,
+   "media_start": 0.6,
+   "dur": 15.61,
+   "clip": "c8q.mp4",
+   "sample": 18,
+   "grade": "warm",
+   "credit": "引用: Japanese Immersion Lab",
+   "caps": [
+    [
+     0.0,
+     "日本人は 外国人が嫌いなんじゃない"
+    ],
+    [
+     7.6,
+     "\"<em>あなたみたいな人なら大歓迎</em>\"って"
+    ]
+   ]
+  },
+  "c9q": {
+   "beat_start": 181.92,
+   "lead": 0.4,
+   "adur": 9.92,
+   "media_start": 0.6,
+   "dur": 10.82,
+   "clip": "c9q.mp4",
+   "sample": 18,
+   "grade": null,
+   "credit": "引用: Japanese Immersion Lab",
+   "caps": [
+    [
+     0.0,
+     "日本を<em>特別扱いしなくていい</em>"
+    ],
+    [
+     5.4,
+     "ただ \"<em>普通の人</em>\" でいてくれ"
+    ]
+   ]
+  },
+  "c12": {
+   "beat_start": 192.94,
+   "lead": 0.4,
+   "adur": 7.01,
+   "media_start": 0.6,
+   "dur": 7.91,
+   "clip": "c12.mp4",
+   "sample": 18,
+   "grade": null,
+   "credit": "引用: Japanese Immersion Lab",
+   "caps": [
+    [
+     0.0,
+     "肩の力を抜けばいい"
+    ],
+    [
+     3.6,
+     "日本は<em>遊び場</em>じゃない それだけさ"
+    ]
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "s_intro",
+   "kind": "broll",
+   "start": 0.6,
+   "end": 7.41,
+   "bg": "jil",
+   "lt": [
+    "日本語ほぼネイティブの豪州人",
+    "Japanese Immersion Lab — 告白 その3"
+   ]
+  },
+  {
+   "id": "s_c1",
+   "kind": "q",
+   "start": 7.41,
+   "end": 17.25
+  },
+  {
+   "id": "s_journey",
+   "kind": "journey",
+   "start": 17.25,
+   "end": 28.98
+  },
+  {
+   "id": "s_c10",
+   "kind": "q",
+   "start": 28.98,
+   "end": 39.3
+  },
+  {
+   "id": "s_c2",
+   "kind": "q",
+   "start": 39.3,
+   "end": 49.75
+  },
+  {
+   "id": "s_m03",
+   "kind": "kick",
+   "start": 49.75,
+   "end": 55.2,
+   "kicker": "その瞬間——"
+  },
+  {
+   "id": "s_c3",
+   "kind": "q",
+   "start": 55.2,
+   "end": 67.58
+  },
+  {
+   "id": "s_m04",
+   "kind": "kick",
+   "start": 67.58,
+   "end": 71.28,
+   "kicker": "日本語で返しても"
+  },
+  {
+   "id": "s_c4",
+   "kind": "q",
+   "start": 71.28,
+   "end": 83.28
+  },
+  {
+   "id": "s_c5",
+   "kind": "q",
+   "start": 83.28,
+   "end": 98.02
+  },
+  {
+   "id": "s_m05",
+   "kind": "kick",
+   "start": 98.02,
+   "end": 106.19,
+   "kicker": "なぜ、店主を責めないのか"
+  },
+  {
+   "id": "s_c6",
+   "kind": "q",
+   "start": 106.19,
+   "end": 119.7
+  },
+  {
+   "id": "s_d11",
+   "kind": "kick",
+   "start": 119.7,
+   "end": 125.63,
+   "kicker": null
+  },
+  {
+   "id": "s_c11",
+   "kind": "q",
+   "start": 125.63,
+   "end": 138.64
+  },
+  {
+   "id": "s_m06",
+   "kind": "kick",
+   "start": 138.64,
+   "end": 143.8,
+   "kicker": "立場が逆なら——"
+  },
+  {
+   "id": "s_c7",
+   "kind": "q",
+   "start": 143.8,
+   "end": 154.01
+  },
+  {
+   "id": "s_m07",
+   "kind": "kick",
+   "start": 154.01,
+   "end": 161.61,
+   "kicker": "それでも、恨まない"
+  },
+  {
+   "id": "s_c8",
+   "kind": "q",
+   "start": 161.61,
+   "end": 177.52
+  },
+  {
+   "id": "s_m08",
+   "kind": "kick",
+   "start": 177.52,
+   "end": 181.82,
+   "kicker": "最後のメッセージ"
+  },
+  {
+   "id": "s_c9",
+   "kind": "q",
+   "start": 181.82,
+   "end": 201.15
+  },
+  {
+   "id": "s_msg",
+   "kind": "msg",
+   "start": 201.15,
+   "end": 206.77,
+   "text": "普通の人で、<br>いてくれ。",
+   "by": "— Japanese Immersion Lab"
+  },
+  {
+   "id": "s_card4",
+   "kind": "card",
+   "start": 206.77,
+   "end": 215.95,
+   "no": "第 4 章",
+   "title": "愛するがゆえの絶望",
+   "sub": "— 日本を愛しすぎた彼女の、最後の願い",
+   "bg": "intro19"
+  }
+ ]
+}

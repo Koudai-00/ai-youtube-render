@@ -1,0 +1,611 @@
+{
+ "total": 231.69,
+ "beats": [
+  {
+   "id": "s_intro",
+   "start": 0.6,
+   "end": 6.24
+  },
+  {
+   "id": "s_a1",
+   "start": 6.24,
+   "end": 19.68
+  },
+  {
+   "id": "s_a11",
+   "start": 19.68,
+   "end": 32.77
+  },
+  {
+   "id": "s_m02",
+   "start": 32.77,
+   "end": 44.73
+  },
+  {
+   "id": "s_a2",
+   "start": 44.73,
+   "end": 64.06
+  },
+  {
+   "id": "s_mech",
+   "start": 64.06,
+   "end": 77.4
+  },
+  {
+   "id": "s_a3",
+   "start": 77.4,
+   "end": 92.18
+  },
+  {
+   "id": "s_a4",
+   "start": 92.18,
+   "end": 102.15
+  },
+  {
+   "id": "s_m06",
+   "start": 102.15,
+   "end": 106.09
+  },
+  {
+   "id": "s_a5",
+   "start": 106.09,
+   "end": 116.49
+  },
+  {
+   "id": "s_m07",
+   "start": 116.49,
+   "end": 121.6
+  },
+  {
+   "id": "s_a6",
+   "start": 121.6,
+   "end": 133.3
+  },
+  {
+   "id": "s_m08",
+   "start": 133.3,
+   "end": 138.96
+  },
+  {
+   "id": "s_a12",
+   "start": 138.96,
+   "end": 150.16
+  },
+  {
+   "id": "s_a7",
+   "start": 150.16,
+   "end": 161.49
+  },
+  {
+   "id": "s_m09",
+   "start": 161.49,
+   "end": 166.48
+  },
+  {
+   "id": "s_a8",
+   "start": 166.48,
+   "end": 178.48
+  },
+  {
+   "id": "s_m10",
+   "start": 178.48,
+   "end": 186.78
+  },
+  {
+   "id": "s_a9",
+   "start": 186.78,
+   "end": 198.21
+  },
+  {
+   "id": "s_m13",
+   "start": 198.21,
+   "end": 202.89
+  },
+  {
+   "id": "s_a13",
+   "start": 202.89,
+   "end": 218.11
+  },
+  {
+   "id": "s_msg",
+   "start": 218.11,
+   "end": 224.6
+  },
+  {
+   "id": "s_card2",
+   "start": 224.6,
+   "end": 230.69
+  }
+ ],
+ "narr": {
+  "m01": {
+   "start": 0.8,
+   "dur": 4.94
+  },
+  "m02": {
+   "start": 33.17,
+   "dur": 6.98
+  },
+  "m03": {
+   "start": 40.54,
+   "dur": 3.79
+  },
+  "m04": {
+   "start": 64.56,
+   "dur": 8.32
+  },
+  "m05": {
+   "start": 73.38,
+   "dur": 3.52
+  },
+  "m06": {
+   "start": 102.55,
+   "dur": 3.24
+  },
+  "m07": {
+   "start": 116.89,
+   "dur": 4.41
+  },
+  "m08": {
+   "start": 133.7,
+   "dur": 4.96
+  },
+  "m09": {
+   "start": 161.89,
+   "dur": 4.29
+  },
+  "m10": {
+   "start": 178.88,
+   "dur": 7.61
+  },
+  "m13": {
+   "start": 198.61,
+   "dur": 4.07
+  },
+  "m11": {
+   "start": 218.71,
+   "dur": 5.19
+  },
+  "m12": {
+   "start": 225.1,
+   "dur": 2.99
+  }
+ },
+ "quotes": {
+  "a1": {
+   "beat_start": 6.34,
+   "lead": 0.4,
+   "adur": 12.24,
+   "media_start": 0.6,
+   "dur": 13.14,
+   "clip": "a1.mp4",
+   "sample": 15,
+   "grade": null,
+   "credit": "引用: Axel in Japan",
+   "caps": [
+    [
+     0.0,
+     "結婚7年 子供は2人 <em>会社を2つ</em>経営"
+    ],
+    [
+     6.1,
+     "電車では静かに <em>税金</em>も納めている"
+    ]
+   ]
+  },
+  "a11": {
+   "beat_start": 19.83,
+   "lead": 0.4,
+   "adur": 11.84,
+   "media_start": 0.6,
+   "dur": 12.74,
+   "clip": "a11.mp4",
+   "sample": 15,
+   "grade": null,
+   "credit": "引用: Axel in Japan",
+   "caps": [
+    [
+     0.0,
+     "ここは俺の<em>\"家\"</em>なんだ"
+    ],
+    [
+     6.2,
+     "俺たちはここで 家族を育てている"
+    ]
+   ]
+  },
+  "a2": {
+   "beat_start": 44.83,
+   "lead": 0.4,
+   "adur": 7.16,
+   "media_start": 0.6,
+   "dur": 8.06,
+   "clip": "a2.mp4",
+   "sample": 15,
+   "grade": null,
+   "credit": "引用: Axel in Japan",
+   "caps": [
+    [
+     0.0,
+     "電車で<em>迷惑</em>をかける者"
+    ],
+    [
+     3.2,
+     "大切な場所を<em>汚す</em>者"
+    ]
+   ]
+  },
+  "a10": {
+   "beat_start": 53.04,
+   "lead": 0.4,
+   "adur": 9.92,
+   "media_start": 0.6,
+   "dur": 10.82,
+   "clip": "a10.mp4",
+   "sample": 15,
+   "grade": null,
+   "credit": "引用: Axel in Japan",
+   "caps": [
+    [
+     0.0,
+     "バズるのは<em>鳥居で懸垂する男</em>"
+    ],
+    [
+     4.6,
+     "最悪な行為ほど 拡散される"
+    ]
+   ]
+  },
+  "a3": {
+   "beat_start": 77.5,
+   "lead": 0.4,
+   "adur": 13.58,
+   "media_start": 0.6,
+   "dur": 14.48,
+   "clip": "a3.mp4",
+   "sample": 15,
+   "grade": null,
+   "credit": "引用: Axel in Japan",
+   "caps": [
+    [
+     0.0,
+     "1人が \"<em>あの人たち</em>\" になる"
+    ],
+    [
+     6.0,
+     "身に覚えのない<em>レッテル</em>"
+    ],
+    [
+     11.5,
+     "<em>連帯責任</em>だ"
+    ]
+   ]
+  },
+  "a4": {
+   "beat_start": 92.28,
+   "lead": 0.4,
+   "adur": 8.77,
+   "media_start": 0.6,
+   "dur": 9.67,
+   "clip": "a4.mp4",
+   "sample": 15,
+   "grade": null,
+   "credit": "引用: Axel in Japan",
+   "caps": [
+    [
+     0.0,
+     "日本人の信号無視は \"1人の男\""
+    ],
+    [
+     4.3,
+     "外国人なら <em>\"あいつら\"</em>になる"
+    ]
+   ]
+  },
+  "a5": {
+   "beat_start": 106.19,
+   "lead": 0.4,
+   "adur": 9.2,
+   "media_start": 0.6,
+   "dur": 10.1,
+   "clip": "a5.mp4",
+   "sample": 15,
+   "grade": null,
+   "credit": "引用: Axel in Japan",
+   "caps": [
+    [
+     0.0,
+     "うんざりする気持ちは 分かる"
+    ],
+    [
+     5.2,
+     "<em>俺だって腹が立つ</em>"
+    ]
+   ]
+  },
+  "a6": {
+   "beat_start": 121.7,
+   "lead": 0.4,
+   "adur": 10.4,
+   "media_start": 0.6,
+   "dur": 11.3,
+   "clip": "a6.mp4",
+   "sample": 15,
+   "grade": "gray",
+   "credit": "引用: Axel in Japan",
+   "caps": [
+    [
+     0.0,
+     "日本にいる自分の方が 好きだ"
+    ],
+    [
+     5.4,
+     "それでも俺は <em>\"あの人たち\"の1人</em>"
+    ]
+   ]
+  },
+  "a12": {
+   "beat_start": 139.06,
+   "lead": 0.4,
+   "adur": 10.0,
+   "media_start": 0.6,
+   "dur": 10.9,
+   "clip": "a12.mp4",
+   "sample": 15,
+   "grade": null,
+   "credit": "引用: Axel in Japan",
+   "caps": [
+    [
+     0.0,
+     "正直に言うよ"
+    ],
+    [
+     4.6,
+     "\"これでもダメなら <em>もう知るか</em>\""
+    ]
+   ]
+  },
+  "a7": {
+   "beat_start": 150.31,
+   "lead": 0.4,
+   "adur": 10.08,
+   "media_start": 0.6,
+   "dur": 10.98,
+   "clip": "a7.mp4",
+   "sample": 15,
+   "grade": null,
+   "credit": "引用: Axel in Japan",
+   "caps": [
+    [
+     0.0,
+     "気づけば 自分の基準を下げていた"
+    ],
+    [
+     5.3,
+     "それじゃ<em>\"非難される姿\"そのもの</em>だ"
+    ]
+   ]
+  },
+  "a8": {
+   "beat_start": 166.58,
+   "lead": 0.4,
+   "adur": 10.8,
+   "media_start": 0.6,
+   "dur": 11.7,
+   "clip": "a8.mp4",
+   "sample": 15,
+   "grade": null,
+   "credit": "引用: Axel in Japan",
+   "caps": [
+    [
+     0.0,
+     "何年もかけて 生活を築いた"
+    ],
+    [
+     4.8,
+     "<em>帰る</em>という選択肢は ない"
+    ]
+   ]
+  },
+  "a9": {
+   "beat_start": 186.88,
+   "lead": 0.4,
+   "adur": 10.13,
+   "media_start": 0.6,
+   "dur": 11.03,
+   "clip": "a9.mp4",
+   "sample": 15,
+   "grade": "warm",
+   "credit": "引用: Axel in Japan",
+   "caps": [
+    [
+     0.0,
+     "ここで子供を育て ここで老いたい"
+    ],
+    [
+     5.6,
+     "この国の未来のために<em>闘う</em>"
+    ]
+   ]
+  },
+  "a13": {
+   "beat_start": 202.99,
+   "lead": 0.4,
+   "adur": 13.92,
+   "media_start": 0.6,
+   "dur": 14.82,
+   "clip": "a13.mp4",
+   "sample": 15,
+   "grade": null,
+   "credit": "引用: Axel in Japan",
+   "caps": [
+    [
+     0.0,
+     "それは\"1人\"であって <em>\"あの人たち\"</em>じゃない"
+    ],
+    [
+     7.8,
+     "仲間たちへ—— <em>基準を下げるな</em>"
+    ]
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "s_intro",
+   "kind": "broll",
+   "start": 0.6,
+   "end": 6.24,
+   "bg": "axelb",
+   "lt": [
+    "日本在住8年の外国人男性",
+    "Axel in Japan — 告白 その1"
+   ]
+  },
+  {
+   "id": "s_a1",
+   "kind": "q",
+   "start": 6.24,
+   "end": 19.68
+  },
+  {
+   "id": "s_a11",
+   "kind": "q",
+   "start": 19.68,
+   "end": 32.77
+  },
+  {
+   "id": "s_m02",
+   "kind": "kick",
+   "start": 32.77,
+   "end": 44.73,
+   "kicker": "模範的な住人"
+  },
+  {
+   "id": "s_a2",
+   "kind": "q",
+   "start": 44.73,
+   "end": 64.06
+  },
+  {
+   "id": "s_mech",
+   "kind": "diagram",
+   "start": 64.06,
+   "end": 77.4
+  },
+  {
+   "id": "s_a3",
+   "kind": "q",
+   "start": 77.4,
+   "end": 92.18
+  },
+  {
+   "id": "s_a4",
+   "kind": "q",
+   "start": 92.18,
+   "end": 102.15
+  },
+  {
+   "id": "s_m06",
+   "kind": "kick",
+   "start": 102.15,
+   "end": 106.09,
+   "kicker": "それでも——"
+  },
+  {
+   "id": "s_a5",
+   "kind": "q",
+   "start": 106.09,
+   "end": 116.49
+  },
+  {
+   "id": "s_m07",
+   "kind": "kick",
+   "start": 116.49,
+   "end": 121.6,
+   "kicker": "現実は、変わらなかった"
+  },
+  {
+   "id": "s_a6",
+   "kind": "q",
+   "start": 121.6,
+   "end": 133.3
+  },
+  {
+   "id": "s_m08",
+   "kind": "kick",
+   "start": 133.3,
+   "end": 138.96,
+   "kicker": "告白は、続く"
+  },
+  {
+   "id": "s_a12",
+   "kind": "q",
+   "start": 138.96,
+   "end": 150.16
+  },
+  {
+   "id": "s_a7",
+   "kind": "q",
+   "start": 150.16,
+   "end": 161.49
+  },
+  {
+   "id": "s_m09",
+   "kind": "kick",
+   "start": 161.49,
+   "end": 166.48,
+   "kicker": "\"帰ればいい\" ?"
+  },
+  {
+   "id": "s_a8",
+   "kind": "q",
+   "start": 166.48,
+   "end": 178.48
+  },
+  {
+   "id": "s_m10",
+   "kind": "kick",
+   "start": 178.48,
+   "end": 186.78,
+   "kicker": "旅行者は、2週間で帰る"
+  },
+  {
+   "id": "s_a9",
+   "kind": "q",
+   "start": 186.78,
+   "end": 198.21
+  },
+  {
+   "id": "s_m13",
+   "kind": "kick",
+   "start": 198.21,
+   "end": 202.89,
+   "kicker": null
+  },
+  {
+   "id": "s_a13",
+   "kind": "q",
+   "start": 202.89,
+   "end": 218.11
+  },
+  {
+   "id": "s_msg",
+   "kind": "msg",
+   "start": 218.11,
+   "end": 224.6,
+   "text": "基準を下げるな。<br>つらくても。",
+   "by": "— Axel in Japan"
+  },
+  {
+   "id": "s_card2",
+   "kind": "card",
+   "start": 224.6,
+   "end": 230.69,
+   "no": "第 2 章",
+   "title": "警告する者",
+   "sub": "— 彼は、最悪の未来を予言していた",
+   "bg": "intro17"
+  }
+ ]
+}

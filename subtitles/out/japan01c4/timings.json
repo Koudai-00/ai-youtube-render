@@ -1,0 +1,850 @@
+{
+ "total": 369.67,
+ "beats": [
+  {
+   "id": "s_intro",
+   "start": 0.6,
+   "end": 8.55
+  },
+  {
+   "id": "s_e14",
+   "start": 8.55,
+   "end": 19.99
+  },
+  {
+   "id": "s_e1",
+   "start": 19.99,
+   "end": 34.86
+  },
+  {
+   "id": "s_m02",
+   "start": 34.86,
+   "end": 41.17
+  },
+  {
+   "id": "s_e2",
+   "start": 41.17,
+   "end": 59.89
+  },
+  {
+   "id": "s_m03",
+   "start": 59.89,
+   "end": 66.32
+  },
+  {
+   "id": "s_e3",
+   "start": 66.32,
+   "end": 79.92
+  },
+  {
+   "id": "s_gion",
+   "start": 79.92,
+   "end": 90.11
+  },
+  {
+   "id": "s_e4",
+   "start": 90.11,
+   "end": 106.37
+  },
+  {
+   "id": "s_m05",
+   "start": 106.37,
+   "end": 110.38
+  },
+  {
+   "id": "s_e5",
+   "start": 110.38,
+   "end": 134.63
+  },
+  {
+   "id": "s_m06",
+   "start": 134.63,
+   "end": 139.34
+  },
+  {
+   "id": "s_e7",
+   "start": 139.34,
+   "end": 151.74
+  },
+  {
+   "id": "s_e8",
+   "start": 151.74,
+   "end": 159.97
+  },
+  {
+   "id": "s_z12",
+   "start": 159.97,
+   "end": 165.26
+  },
+  {
+   "id": "s_e16",
+   "start": 165.26,
+   "end": 186.7
+  },
+  {
+   "id": "s_m07",
+   "start": 186.7,
+   "end": 190.55
+  },
+  {
+   "id": "s_e9",
+   "start": 190.55,
+   "end": 208.07
+  },
+  {
+   "id": "s_m08",
+   "start": 208.07,
+   "end": 211.87
+  },
+  {
+   "id": "s_e10",
+   "start": 211.87,
+   "end": 217.61
+  },
+  {
+   "id": "s_z13",
+   "start": 217.61,
+   "end": 222.62
+  },
+  {
+   "id": "s_e17",
+   "start": 222.62,
+   "end": 236.43
+  },
+  {
+   "id": "s_m09",
+   "start": 236.43,
+   "end": 242.76
+  },
+  {
+   "id": "s_e11",
+   "start": 242.76,
+   "end": 254.62
+  },
+  {
+   "id": "s_m10",
+   "start": 254.62,
+   "end": 259.89
+  },
+  {
+   "id": "s_e18",
+   "start": 259.89,
+   "end": 287.92
+  },
+  {
+   "id": "s_e12",
+   "start": 287.92,
+   "end": 301.15
+  },
+  {
+   "id": "s_e13",
+   "start": 301.15,
+   "end": 313.86
+  },
+  {
+   "id": "s_cardE",
+   "start": 313.86,
+   "end": 323.24
+  },
+  {
+   "id": "s_f1",
+   "start": 323.24,
+   "end": 328.45
+  },
+  {
+   "id": "s_f2",
+   "start": 328.45,
+   "end": 342.28
+  },
+  {
+   "id": "s_f3",
+   "start": 342.28,
+   "end": 347.59
+  },
+  {
+   "id": "s_f6",
+   "start": 347.59,
+   "end": 355.69
+  },
+  {
+   "id": "s_f4",
+   "start": 355.69,
+   "end": 363.11
+  },
+  {
+   "id": "s_f5",
+   "start": 363.11,
+   "end": 368.67
+  }
+ ],
+ "narr": {
+  "z01": {
+   "start": 0.8,
+   "dur": 7.25
+  },
+  "z02": {
+   "start": 35.26,
+   "dur": 5.61
+  },
+  "z03": {
+   "start": 60.29,
+   "dur": 5.73
+  },
+  "z04": {
+   "start": 80.42,
+   "dur": 9.18
+  },
+  "z05": {
+   "start": 106.77,
+   "dur": 3.41
+  },
+  "z06": {
+   "start": 135.03,
+   "dur": 4.11
+  },
+  "z12": {
+   "start": 160.37,
+   "dur": 4.69
+  },
+  "z07": {
+   "start": 187.1,
+   "dur": 3.25
+  },
+  "z08": {
+   "start": 208.42,
+   "dur": 3.24
+  },
+  "z13": {
+   "start": 218.01,
+   "dur": 4.42
+  },
+  "z09": {
+   "start": 236.83,
+   "dur": 5.63
+  },
+  "z10": {
+   "start": 255.02,
+   "dur": 4.57
+  },
+  "z11": {
+   "start": 314.46,
+   "dur": 6.38
+  },
+  "f01": {
+   "start": 323.84,
+   "dur": 4.12
+  },
+  "f02": {
+   "start": 328.95,
+   "dur": 12.73
+  },
+  "f03": {
+   "start": 342.78,
+   "dur": 4.41
+  },
+  "f06": {
+   "start": 347.99,
+   "dur": 7.31
+  },
+  "f04": {
+   "start": 356.19,
+   "dur": 6.12
+  },
+  "f05": {
+   "start": 363.81,
+   "dur": 2.06
+  }
+ },
+ "quotes": {
+  "e14": {
+   "beat_start": 8.65,
+   "lead": 0.4,
+   "adur": 10.24,
+   "media_start": 0.6,
+   "dur": 11.14,
+   "clip": "e14.mp4",
+   "sample": 19,
+   "grade": "dream",
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "ブームのずっと前から"
+    ],
+    [
+     5.0,
+     "この文化を<em>愛してきた</em>"
+    ]
+   ]
+  },
+  "e1": {
+   "beat_start": 20.14,
+   "lead": 0.4,
+   "adur": 13.52,
+   "media_start": 0.6,
+   "dur": 14.42,
+   "clip": "e1.mp4",
+   "sample": 19,
+   "grade": "dream",
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "初めて日本へ飛んだ日"
+    ],
+    [
+     6.6,
+     "夢だった<em>原宿</em>に 胸が躍った"
+    ]
+   ]
+  },
+  "e2": {
+   "beat_start": 41.27,
+   "lead": 0.4,
+   "adur": 17.52,
+   "media_start": 0.6,
+   "dur": 18.42,
+   "clip": "e2.mp4",
+   "sample": 19,
+   "grade": null,
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "京都で撮られた あの動画"
+    ],
+    [
+     6.0,
+     "スマホを掲げ<em>芸者を追い回す</em>女"
+    ],
+    [
+     12.4,
+     "芸者は 必死に避けていた"
+    ]
+   ]
+  },
+  "e3": {
+   "beat_start": 66.42,
+   "lead": 0.4,
+   "adur": 12.4,
+   "media_start": 0.6,
+   "dur": 13.3,
+   "clip": "e3.mp4",
+   "sample": 19,
+   "grade": null,
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "芸者は<em>敬われるべき存在</em>"
+    ],
+    [
+     6.3,
+     "それをスマホの\"背景\"扱いなんて"
+    ]
+   ]
+  },
+  "e4": {
+   "beat_start": 90.21,
+   "lead": 0.4,
+   "adur": 14.96,
+   "media_start": 0.6,
+   "dur": 15.86,
+   "clip": "e4.mp4",
+   "sample": 19,
+   "grade": null,
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "礼儀ある旅行者まで<em>締め出された</em>"
+    ],
+    [
+     8.3,
+     "一部の人が 守れないせいで"
+    ]
+   ]
+  },
+  "e5": {
+   "beat_start": 110.48,
+   "lead": 0.4,
+   "adur": 14.32,
+   "media_start": 0.6,
+   "dur": 15.22,
+   "clip": "e5.mp4",
+   "sample": 19,
+   "grade": null,
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "鳥居に世界中の<em>小銭</em>をねじ込み"
+    ],
+    [
+     7.0,
+     "<em>世界遺産</em>を傷つけていく"
+    ]
+   ]
+  },
+  "e6": {
+   "beat_start": 125.85,
+   "lead": 0.3,
+   "adur": 7.68,
+   "media_start": 0.7,
+   "dur": 8.48,
+   "clip": "e6.mp4",
+   "sample": 19,
+   "grade": null,
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "そこは信仰の場所 <em>正気じゃない</em>"
+    ]
+   ]
+  },
+  "e7": {
+   "beat_start": 139.44,
+   "lead": 0.4,
+   "adur": 11.2,
+   "media_start": 0.6,
+   "dur": 12.1,
+   "clip": "e7.mp4",
+   "sample": 19,
+   "grade": "gray",
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "愛する原宿でさえ"
+    ],
+    [
+     4.4,
+     "もう <em>うんざり</em>している"
+    ]
+   ]
+  },
+  "e8": {
+   "beat_start": 151.89,
+   "lead": 0.4,
+   "adur": 6.88,
+   "media_start": 0.6,
+   "dur": 7.78,
+   "clip": "e8.mp4",
+   "sample": 19,
+   "grade": null,
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "原宿に巨大SHEINができた日"
+    ],
+    [
+     3.5,
+     "<em>胸が張り裂けた</em>"
+    ]
+   ]
+  },
+  "e16": {
+   "beat_start": 165.36,
+   "lead": 0.4,
+   "adur": 20.24,
+   "media_start": 0.6,
+   "dur": 21.14,
+   "clip": "e16.mp4",
+   "sample": 19,
+   "grade": null,
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "観光客は原宿を<em>動物園</em>のように扱う"
+    ],
+    [
+     10.2,
+     "店員まで \"見世物\" にする"
+    ]
+   ]
+  },
+  "e9": {
+   "beat_start": 190.65,
+   "lead": 0.4,
+   "adur": 16.22,
+   "media_start": 0.6,
+   "dur": 17.12,
+   "clip": "e9.mp4",
+   "sample": 19,
+   "grade": "gray",
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "無言でカメラを<em>顔に突きつける</em>"
+    ],
+    [
+     8.6,
+     "何度も そんな目に遭った"
+    ]
+   ]
+  },
+  "e10": {
+   "beat_start": 211.97,
+   "lead": 0.3,
+   "adur": 4.64,
+   "media_start": 0.7,
+   "dur": 5.44,
+   "clip": "e10.mp4",
+   "sample": 19,
+   "grade": null,
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "私も観光客の1人 <em>矛盾</em>はわかってる"
+    ]
+   ]
+  },
+  "e17": {
+   "beat_start": 222.72,
+   "lead": 0.4,
+   "adur": 12.61,
+   "media_start": 0.6,
+   "dur": 13.51,
+   "clip": "e17.mp4",
+   "sample": 19,
+   "grade": null,
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "\"自分は良い外国人\" は通用しない"
+    ],
+    [
+     6.6,
+     "<em>名誉市民</em>にはなれない"
+    ]
+   ]
+  },
+  "e11": {
+   "beat_start": 242.86,
+   "lead": 0.4,
+   "adur": 10.56,
+   "media_start": 0.6,
+   "dur": 11.46,
+   "clip": "e11.mp4",
+   "sample": 19,
+   "grade": "cold",
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "<em>排外的な空気</em>が広がっている"
+    ],
+    [
+     5.4,
+     "怒りの火に 油を注ぐだけ"
+    ]
+   ]
+  },
+  "e18": {
+   "beat_start": 259.99,
+   "lead": 0.4,
+   "adur": 26.83,
+   "media_start": 0.6,
+   "dur": 27.73,
+   "clip": "e18.mp4",
+   "sample": 19,
+   "grade": "warm",
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "電車に指輪を落とした日"
+    ],
+    [
+     9.5,
+     "スーツ姿の男性が<em>床に膝をつき</em>"
+    ],
+    [
+     18.8,
+     "ただ 親切のために 探してくれた"
+    ]
+   ]
+  },
+  "e12": {
+   "beat_start": 288.07,
+   "lead": 0.4,
+   "adur": 11.98,
+   "media_start": 0.6,
+   "dur": 12.88,
+   "clip": "e12.mp4",
+   "sample": 19,
+   "grade": "warm",
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "嫌な思い出より ずっと多くの"
+    ],
+    [
+     5.9,
+     "<em>優しさ</em>を この国にもらった"
+    ]
+   ]
+  },
+  "e13": {
+   "beat_start": 301.3,
+   "lead": 0.4,
+   "adur": 11.36,
+   "media_start": 0.6,
+   "dur": 12.26,
+   "clip": "e13.mp4",
+   "sample": 19,
+   "grade": null,
+   "credit": "引用: Addy",
+   "caps": [
+    [
+     0.0,
+     "日本はきっと あなたを迎えてくれる"
+    ],
+    [
+     5.8,
+     "だからこそ <em>礼儀と思いやり</em>を"
+    ]
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "s_intro",
+   "kind": "broll",
+   "start": 0.6,
+   "end": 8.55,
+   "bg": "addy",
+   "lt": [
+    "日本文化を愛する英国人女性",
+    "Addy — 告白 その4"
+   ]
+  },
+  {
+   "id": "s_e14",
+   "kind": "q",
+   "start": 8.55,
+   "end": 19.99
+  },
+  {
+   "id": "s_e1",
+   "kind": "q",
+   "start": 19.99,
+   "end": 34.86
+  },
+  {
+   "id": "s_m02",
+   "kind": "kick",
+   "start": 34.86,
+   "end": 41.17,
+   "kicker": "京都・祇園"
+  },
+  {
+   "id": "s_e2",
+   "kind": "q",
+   "start": 41.17,
+   "end": 59.89
+  },
+  {
+   "id": "s_m03",
+   "kind": "kick",
+   "start": 59.89,
+   "end": 66.32,
+   "kicker": "芸者は、\"小道具\"じゃない"
+  },
+  {
+   "id": "s_e3",
+   "kind": "q",
+   "start": 66.32,
+   "end": 79.92
+  },
+  {
+   "id": "s_gion",
+   "kind": "gion",
+   "start": 79.92,
+   "end": 90.11
+  },
+  {
+   "id": "s_e4",
+   "kind": "q",
+   "start": 90.11,
+   "end": 106.37
+  },
+  {
+   "id": "s_m05",
+   "kind": "kick",
+   "start": 106.37,
+   "end": 110.38,
+   "kicker": "絶望は、続く"
+  },
+  {
+   "id": "s_e5",
+   "kind": "q",
+   "start": 110.38,
+   "end": 134.63
+  },
+  {
+   "id": "s_m06",
+   "kind": "kick",
+   "start": 134.63,
+   "end": 139.34,
+   "kicker": "聖地・原宿にも"
+  },
+  {
+   "id": "s_e7",
+   "kind": "q",
+   "start": 139.34,
+   "end": 151.74
+  },
+  {
+   "id": "s_e8",
+   "kind": "q",
+   "start": 151.74,
+   "end": 159.97
+  },
+  {
+   "id": "s_z12",
+   "kind": "kick",
+   "start": 159.97,
+   "end": 165.26,
+   "kicker": null
+  },
+  {
+   "id": "s_e16",
+   "kind": "q",
+   "start": 165.26,
+   "end": 186.7
+  },
+  {
+   "id": "s_m07",
+   "kind": "kick",
+   "start": 186.7,
+   "end": 190.55,
+   "kicker": "彼女自身も、被害者だった"
+  },
+  {
+   "id": "s_e9",
+   "kind": "q",
+   "start": 190.55,
+   "end": 208.07
+  },
+  {
+   "id": "s_m08",
+   "kind": "kick",
+   "start": 208.07,
+   "end": 211.87,
+   "kicker": null
+  },
+  {
+   "id": "s_e10",
+   "kind": "q",
+   "start": 211.87,
+   "end": 217.61
+  },
+  {
+   "id": "s_z13",
+   "kind": "kick",
+   "start": 217.61,
+   "end": 222.62,
+   "kicker": null
+  },
+  {
+   "id": "s_e17",
+   "kind": "q",
+   "start": 222.62,
+   "end": 236.43
+  },
+  {
+   "id": "s_m09",
+   "kind": "kick",
+   "start": 236.43,
+   "end": 242.76,
+   "kicker": "限界は、近い"
+  },
+  {
+   "id": "s_e11",
+   "kind": "q",
+   "start": 242.76,
+   "end": 254.62
+  },
+  {
+   "id": "s_m10",
+   "kind": "kick",
+   "start": 254.62,
+   "end": 259.89,
+   "kicker": "それでも——"
+  },
+  {
+   "id": "s_e18",
+   "kind": "q",
+   "start": 259.89,
+   "end": 287.92
+  },
+  {
+   "id": "s_e12",
+   "kind": "q",
+   "start": 287.92,
+   "end": 301.15
+  },
+  {
+   "id": "s_e13",
+   "kind": "q",
+   "start": 301.15,
+   "end": 313.86
+  },
+  {
+   "id": "s_cardE",
+   "kind": "card",
+   "start": 313.86,
+   "end": 323.24,
+   "no": "終 章",
+   "title": "それでも、日本を愛している",
+   "sub": null,
+   "bg": null
+  },
+  {
+   "id": "s_f1",
+   "kind": "recap4",
+   "start": 323.24,
+   "end": 328.45
+  },
+  {
+   "id": "s_f2",
+   "kind": "recap4b",
+   "start": 328.45,
+   "end": 342.28
+  },
+  {
+   "id": "s_f3",
+   "kind": "kick",
+   "start": 342.28,
+   "end": 347.59,
+   "kicker": "怒っているのは、日本人だけじゃない"
+  },
+  {
+   "id": "s_f6",
+   "kind": "kick",
+   "start": 347.59,
+   "end": 355.69,
+   "kicker": "答えは、あなたの中に"
+  },
+  {
+   "id": "s_f4",
+   "kind": "ask",
+   "start": 355.69,
+   "end": 363.11
+  },
+  {
+   "id": "s_f5",
+   "kind": "end",
+   "start": 363.11,
+   "end": 368.67
+  }
+ ]
+}
