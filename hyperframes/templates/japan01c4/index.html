@@ -38,6 +38,15 @@ em { font-style:normal; color:#e8322e; }
 .ltname { font-size:48px; } .ltrole { font-family:'NotoBd'; font-size:27px; color:#ffb648; margin-top:6px; }
 .panel { z-index:10; background:#0c1016; }
 .tpanel { background:radial-gradient(ellipse 90% 80% at 50% 42%, #10151d 0%, #07080b 70%); }
+.panel.clear { background:linear-gradient(180deg, rgba(7,9,13,.78) 0%, rgba(7,9,13,.48) 45%, rgba(7,9,13,.78) 100%); }
+.ilov { z-index:12; }
+.illus { position:absolute; opacity:0; filter:drop-shadow(0 10px 28px rgba(0,0,0,.65)); }
+.cicon { width:92px; height:92px; object-fit:contain; flex:none;
+  filter:drop-shadow(0 4px 14px rgba(0,0,0,.5)); }
+#tbk { position:absolute; inset:0; z-index:56; background:#000; opacity:0; pointer-events:none; }
+#twipe { position:absolute; left:0; top:-2px; width:1930px; height:1084px; z-index:57; opacity:0;
+  background:linear-gradient(90deg, #0a0d12 0%, #131a24 85%, #e8322e 99%, #e8322e 100%);
+  transform:translateX(-1990px); pointer-events:none; }
 .glow { position:absolute; left:50%; top:50%; width:1500px; height:700px; margin:-350px 0 0 -750px;
   background:radial-gradient(ellipse, rgba(232,50,46,.17), rgba(232,50,46,0) 65%); opacity:0; }
 .kstack { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center;
@@ -143,37 +152,51 @@ em { font-style:normal; color:#e8322e; }
 <body>
 <div id="root" data-composition-id="root" data-width="1920" data-height="1080" data-start="0" data-duration="201.29">
 <div id="stage">
-<div id="s_th4m" class="clip panel tpanel" data-start="0.6" data-duration="7.23" data-track-index="1" style=""><div class="glow" id="s_th4g"></div><div class="msgt" id="s_th4t">それは <em>当事者</em>の<br>いかり</div></div>
-<div id="s_k41p" class="clip panel" data-start="7.83" data-duration="4.07" data-track-index="2" style=""><div class="kstack"><div class="kick" id="s_k41k">ここは、俺の家だ</div><div class="kline" id="s_k41kl"></div></div></div>
-<video id="a11v" class="clip bgv " data-start="11.9" data-duration="6.23" data-media-start="0.6" data-track-index="3" src="assets/bg/a11.mp4" muted playsinline></video>
-<div id="a11o" class="clip qov" data-start="11.9" data-duration="6.23" data-track-index="4" style=""><div class="qscrim"></div><div class="credit">引用: Axel in Japan</div><div class="qcap" id="a11cap0">ここは俺の<em>"家"</em>なんだ</div><div class="qcap" id="a11cap1">俺たちはここで 家族を育てている</div></div>
-<video id="a9v" class="clip bgv " data-start="18.13" data-duration="8.85" data-media-start="0.6" data-track-index="5" src="assets/bg/a9.mp4" muted playsinline></video>
-<div id="a9o" class="clip qov" data-start="18.13" data-duration="8.85" data-track-index="6" style=""><div class="qscrim"></div><div class="credit">引用: Axel in Japan</div><div class="qcap" id="a9cap0">ここで子供を育て ここで老いたい</div><div class="qcap" id="a9cap1">この国の未来のために<em>闘う</em></div></div>
-<video id="a13v" class="clip bgv " data-start="26.98" data-duration="10.22" data-media-start="0.6" data-track-index="7" src="assets/bg/a13.mp4" muted playsinline></video>
-<div id="a13o" class="clip qov" data-start="26.98" data-duration="10.22" data-track-index="8" style=""><div class="qscrim"></div><div class="credit">引用: Axel in Japan</div><div class="qcap" id="a13cap0">それは"1人"であって <em>"あの人たち"</em>じゃない</div><div class="qcap" id="a13cap1">仲間たちへ—— <em>基準を下げるな</em></div></div>
-<div id="s_k42p" class="clip panel" data-start="37.2" data-duration="4.84" data-track-index="9" style=""><div class="kstack"><div class="kick" id="s_k42k">彼女の、原点</div><div class="kline" id="s_k42kl"></div></div></div>
-<video id="e14v" class="clip bgv " data-start="42.04" data-duration="5.93" data-media-start="0.6" data-track-index="10" src="assets/bg/e14.mp4" muted playsinline></video>
-<div id="e14o" class="clip qov" data-start="42.04" data-duration="5.93" data-track-index="11" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="e14cap0">ブームのずっと前から</div><div class="qcap" id="e14cap1">この文化を<em>愛してきた</em></div></div>
-<video id="e1v" class="clip bgv " data-start="47.97" data-duration="15.66" data-media-start="0.6" data-track-index="12" src="assets/bg/e1.mp4" muted playsinline></video>
-<div id="e1o" class="clip qov" data-start="47.97" data-duration="15.66" data-track-index="13" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="e1cap0">初めて日本へ飛んだ日</div><div class="qcap" id="e1cap1">夢だった<em>原宿</em>に 胸が躍った</div><div class="qcap" id="e1cap2">人生は いつも<em>日本文化</em>とともに</div></div>
-<div id="s_k43p" class="clip panel" data-start="63.63" data-duration="7.09" data-track-index="14" style=""><div class="kstack"><div class="kick" id="s_k43k">もらったものが、多すぎる</div><div class="kline" id="s_k43kl"></div></div></div>
-<video id="e12v" class="clip bgv " data-start="70.87" data-duration="12.88" data-media-start="0.6" data-track-index="15" src="assets/bg/e12.mp4" muted playsinline></video>
-<div id="e12o" class="clip qov" data-start="70.87" data-duration="12.88" data-track-index="16" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="e12cap0">嫌な思い出より ずっと多くの</div><div class="qcap" id="e12cap1"><em>優しさ</em>を この国にもらった</div></div>
-<div id="s_k44p" class="clip panel" data-start="84.05" data-duration="10.86" data-track-index="17" style=""><div class="kstack"><div class="kick" id="s_k44k">いかりは、誠意の形</div><div class="kline" id="s_k44kl"></div></div></div>
-<video id="b7v" class="clip bgv " data-start="95.01" data-duration="18.82" data-media-start="0.6" data-track-index="18" src="assets/bg/b7.mp4" muted playsinline></video>
-<div id="b7o" class="clip qov" data-start="95.01" data-duration="18.82" data-track-index="19" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b7cap0">外国人を代表して 日本に<em>謝りたい</em></div><div class="qcap" id="b7cap1"><em>99%</em>の外国人は 日本の味方だ</div></div>
-<div id="s_msg99m" class="clip panel tpanel" data-start="114.13" data-duration="8.52" data-track-index="20" style=""><div class="glow" id="s_msg99g"></div><div class="msgt" id="s_msg99t">99%は、<br>日本の味方だ。</div><div class="msgby" id="s_msg99b">— Chopsticks and Trains</div></div>
-<div id="s_k45p" class="clip panel" data-start="122.65" data-duration="7.73" data-track-index="21" style=""><div class="kstack"><div class="kick" id="s_k45k">奇妙な、一致</div><div class="kline" id="s_k45kl"></div></div></div>
-<div id="rec2" class="clip panel" data-start="130.38" data-duration="18.54" data-track-index="22" style=""><div class="chead" id="rh2">4人の告白</div><div class="cgrid cgrid2"><div class="card" id="r2c0"><img src="assets/img/card15.jpg" alt=""><div class="cshade"></div><div class="cnum">01</div><div class="clab">汚名を背負う者</div><div class="ckw" id="r2kw0">基準を下げるな</div></div><div class="card" id="r2c1"><img src="assets/img/card17.jpg" alt=""><div class="cshade"></div><div class="cnum">02</div><div class="clab">警告する者</div><div class="ckw" id="r2kw1">場所を選べ</div></div><div class="card" id="r2c2"><img src="assets/img/card18.jpg" alt=""><div class="cshade"></div><div class="cnum">03</div><div class="clab">差別された者</div><div class="ckw" id="r2kw2">普通でいてくれ</div></div><div class="card" id="r2c3"><img src="assets/img/card19.jpg" alt=""><div class="cshade"></div><div class="cnum">04</div><div class="clab">絶望する者</div><div class="ckw" id="r2kw3">礼儀と思いやりを</div></div></div></div>
-<div id="s_cardEo" class="clip qov" data-start="148.92" data-duration="7.12" data-track-index="23" style=""><div class="ch1scrim"></div><div class="chno" id="s_cardEn">終 章</div><div class="chttl" id="s_cardEt">それでも、日本を愛している</div></div>
-<div id="s_f3p" class="clip panel" data-start="156.04" data-duration="12.37" data-track-index="24" style=""><div class="kstack"><div class="kick" id="s_f3k">怒っているのは、日本人だけじゃない</div><div class="kline" id="s_f3kl"></div></div></div>
-<video id="e13v" class="clip bgv " data-start="168.41" data-duration="10.49" data-media-start="0.6" data-track-index="25" src="assets/bg/e13.mp4" muted playsinline></video>
-<div id="e13o" class="clip qov" data-start="168.41" data-duration="10.49" data-track-index="26" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="e13cap0">日本はきっと あなたを迎えてくれる</div><div class="qcap" id="e13cap1">だからこそ <em>礼儀と思いやり</em>を</div></div>
-<div id="s_f6p" class="clip panel" data-start="178.9" data-duration="8.11" data-track-index="27" style=""><div class="kstack"><div class="kick" id="s_f6k">答えは、あなたの中に</div><div class="kline" id="s_f6kl"></div></div></div>
-<div id="askp" class="clip panel tpanel" data-start="187.01" data-duration="7.42" data-track-index="28" style=""><div class="glow" id="askg"></div><div class="askt" id="ask1">あなたは、どう思いますか？</div><div class="asks" id="ask2">▼ コメントで、あなたの意見を聞かせてください</div></div>
-<div id="endp" class="clip panel" data-start="194.43" data-duration="5.56" data-track-index="29" style=""><div class="endt" id="end1">ご視聴 ありがとうございました</div><div class="ends" id="end2">チャンネル登録で、次の「告白」をお見逃しなく</div></div>
+<video id="s_th4bgx" class="clip bgv " data-start="0.6" data-duration="7.23" data-media-start="0.0" data-track-index="1" src="assets/bg/bgx_s_th4.mp4" muted playsinline></video>
+<div id="s_th4m" class="clip panel tpanel clear" data-start="0.6" data-duration="7.23" data-track-index="2" style=""><div class="glow" id="s_th4g"></div><div class="msgt" id="s_th4t">それは <em>当事者</em>の<br>いかり</div></div>
+<video id="s_k41bgx" class="clip bgv " data-start="7.83" data-duration="4.07" data-media-start="0.0" data-track-index="3" src="assets/bg/bgx_s_k41.mp4" muted playsinline></video>
+<div id="s_k41p" class="clip panel clear" data-start="7.83" data-duration="4.07" data-track-index="4" style=""><div class="kstack"><div class="kick" id="s_k41k">ここは、俺の家だ</div><div class="kline" id="s_k41kl"></div></div></div>
+<video id="a11v" class="clip bgv " data-start="11.9" data-duration="6.23" data-media-start="0.6" data-track-index="5" src="assets/bg/a11.mp4" muted playsinline></video>
+<div id="a11o" class="clip qov" data-start="11.9" data-duration="6.23" data-track-index="6" style=""><div class="qscrim"></div><div class="credit">引用: Axel in Japan</div><div class="qcap" id="a11cap0">ここは俺の<em>"家"</em>なんだ</div><div class="qcap" id="a11cap1">俺たちはここで 家族を育てている</div></div>
+<video id="a9v" class="clip bgv " data-start="18.13" data-duration="8.85" data-media-start="0.6" data-track-index="7" src="assets/bg/a9.mp4" muted playsinline></video>
+<div id="a9o" class="clip qov" data-start="18.13" data-duration="8.85" data-track-index="8" style=""><div class="qscrim"></div><div class="credit">引用: Axel in Japan</div><div class="qcap" id="a9cap0">ここで子供を育て ここで老いたい</div><div class="qcap" id="a9cap1">この国の未来のために<em>闘う</em></div></div>
+<video id="a13v" class="clip bgv " data-start="26.98" data-duration="10.22" data-media-start="0.6" data-track-index="9" src="assets/bg/a13.mp4" muted playsinline></video>
+<div id="a13o" class="clip qov" data-start="26.98" data-duration="10.22" data-track-index="10" style=""><div class="qscrim"></div><div class="credit">引用: Axel in Japan</div><div class="qcap" id="a13cap0">それは"1人"であって <em>"あの人たち"</em>じゃない</div><div class="qcap" id="a13cap1">仲間たちへ—— <em>基準を下げるな</em></div></div>
+<video id="s_k42bgx" class="clip bgv " data-start="37.2" data-duration="4.84" data-media-start="0.0" data-track-index="11" src="assets/bg/bgx_s_k42.mp4" muted playsinline></video>
+<div id="s_k42p" class="clip panel clear" data-start="37.2" data-duration="4.84" data-track-index="12" style=""><div class="kstack"><div class="kick" id="s_k42k">彼女の、原点</div><div class="kline" id="s_k42kl"></div></div></div>
+<video id="e14v" class="clip bgv " data-start="42.04" data-duration="5.93" data-media-start="0.6" data-track-index="13" src="assets/bg/e14.mp4" muted playsinline></video>
+<div id="e14o" class="clip qov" data-start="42.04" data-duration="5.93" data-track-index="14" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="e14cap0">ブームのずっと前から</div><div class="qcap" id="e14cap1">この文化を<em>愛してきた</em></div></div>
+<video id="e1v" class="clip bgv " data-start="47.97" data-duration="15.66" data-media-start="0.6" data-track-index="15" src="assets/bg/e1.mp4" muted playsinline></video>
+<div id="e1o" class="clip qov" data-start="47.97" data-duration="15.66" data-track-index="16" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="e1cap0">初めて日本へ飛んだ日</div><div class="qcap" id="e1cap1">夢だった<em>原宿</em>に 胸が躍った</div><div class="qcap" id="e1cap2">人生は いつも<em>日本文化</em>とともに</div></div>
+<video id="s_k43bgx" class="clip bgv " data-start="63.63" data-duration="7.09" data-media-start="0.0" data-track-index="17" src="assets/bg/bgx_s_k43.mp4" muted playsinline></video>
+<div id="s_k43p" class="clip panel clear" data-start="63.63" data-duration="7.09" data-track-index="18" style=""><div class="kstack"><div class="kick" id="s_k43k">もらったものが、多すぎる</div><div class="kline" id="s_k43kl"></div></div></div>
+<video id="e12v" class="clip bgv " data-start="70.87" data-duration="12.88" data-media-start="0.6" data-track-index="19" src="assets/bg/e12.mp4" muted playsinline></video>
+<div id="e12o" class="clip qov" data-start="70.87" data-duration="12.88" data-track-index="20" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="e12cap0">嫌な思い出より ずっと多くの</div><div class="qcap" id="e12cap1"><em>優しさ</em>を この国にもらった</div></div>
+<video id="s_k44bgx" class="clip bgv " data-start="84.05" data-duration="10.86" data-media-start="0.0" data-track-index="21" src="assets/bg/bgx_s_k44.mp4" muted playsinline></video>
+<div id="s_k44p" class="clip panel clear" data-start="84.05" data-duration="10.86" data-track-index="22" style=""><div class="kstack"><div class="kick" id="s_k44k">いかりは、誠意の形</div><div class="kline" id="s_k44kl"></div></div></div>
+<video id="b7v" class="clip bgv " data-start="95.01" data-duration="18.82" data-media-start="0.6" data-track-index="23" src="assets/bg/b7.mp4" muted playsinline></video>
+<div id="b7o" class="clip qov" data-start="95.01" data-duration="18.82" data-track-index="24" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b7cap0">外国人を代表して 日本に<em>謝りたい</em></div><div class="qcap" id="b7cap1"><em>99%</em>の外国人は 日本の味方だ</div></div>
+<video id="s_msg99bgx" class="clip bgv " data-start="114.13" data-duration="8.52" data-media-start="0.0" data-track-index="25" src="assets/bg/bgx_s_msg99.mp4" muted playsinline></video>
+<div id="s_msg99m" class="clip panel tpanel clear" data-start="114.13" data-duration="8.52" data-track-index="26" style=""><div class="glow" id="s_msg99g"></div><div class="msgt" id="s_msg99t">99%は、<br>日本の味方だ。</div><div class="msgby" id="s_msg99b">— Chopsticks and Trains</div></div>
+<video id="s_k45bgx" class="clip bgv " data-start="122.65" data-duration="7.73" data-media-start="0.0" data-track-index="27" src="assets/bg/bgx_s_k45.mp4" muted playsinline></video>
+<div id="s_k45p" class="clip panel clear" data-start="122.65" data-duration="7.73" data-track-index="28" style=""><div class="kstack"><div class="kick" id="s_k45k">奇妙な、一致</div><div class="kline" id="s_k45kl"></div></div></div>
+<div id="rec2" class="clip panel" data-start="130.38" data-duration="18.54" data-track-index="29" style=""><div class="chead" id="rh2">4人の告白</div><div class="cgrid cgrid2"><div class="card" id="r2c0"><img src="assets/img/card15.jpg" alt=""><div class="cshade"></div><div class="cnum">01</div><div class="clab">汚名を背負う者</div><div class="ckw" id="r2kw0">基準を下げるな</div></div><div class="card" id="r2c1"><img src="assets/img/card17.jpg" alt=""><div class="cshade"></div><div class="cnum">02</div><div class="clab">警告する者</div><div class="ckw" id="r2kw1">場所を選べ</div></div><div class="card" id="r2c2"><img src="assets/img/card18.jpg" alt=""><div class="cshade"></div><div class="cnum">03</div><div class="clab">差別された者</div><div class="ckw" id="r2kw2">普通でいてくれ</div></div><div class="card" id="r2c3"><img src="assets/img/card19.jpg" alt=""><div class="cshade"></div><div class="cnum">04</div><div class="clab">絶望する者</div><div class="ckw" id="r2kw3">礼儀と思いやりを</div></div></div></div>
+<video id="s_cardEbgx" class="clip bgv " data-start="148.92" data-duration="7.12" data-media-start="0.0" data-track-index="30" src="assets/bg/bgx_s_cardE.mp4" muted playsinline></video>
+<div id="s_cardEo" class="clip qov" data-start="148.92" data-duration="7.12" data-track-index="31" style=""><div class="ch1scrim"></div><div class="chno" id="s_cardEn">終 章</div><div class="chttl" id="s_cardEt">それでも、日本を愛している</div></div>
+<video id="s_f3bgx" class="clip bgv " data-start="156.04" data-duration="12.37" data-media-start="0.0" data-track-index="32" src="assets/bg/bgx_s_f3.mp4" muted playsinline></video>
+<div id="s_f3p" class="clip panel clear" data-start="156.04" data-duration="12.37" data-track-index="33" style=""><div class="kstack"><div class="kick" id="s_f3k">怒っているのは、日本人だけじゃない</div><div class="kline" id="s_f3kl"></div></div></div>
+<video id="e13v" class="clip bgv " data-start="168.41" data-duration="10.49" data-media-start="0.6" data-track-index="34" src="assets/bg/e13.mp4" muted playsinline></video>
+<div id="e13o" class="clip qov" data-start="168.41" data-duration="10.49" data-track-index="35" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="e13cap0">日本はきっと あなたを迎えてくれる</div><div class="qcap" id="e13cap1">だからこそ <em>礼儀と思いやり</em>を</div></div>
+<video id="s_f6bgx" class="clip bgv " data-start="178.9" data-duration="8.11" data-media-start="0.0" data-track-index="36" src="assets/bg/bgx_s_f6.mp4" muted playsinline></video>
+<div id="s_f6p" class="clip panel clear" data-start="178.9" data-duration="8.11" data-track-index="37" style=""><div class="kstack"><div class="kick" id="s_f6k">答えは、あなたの中に</div><div class="kline" id="s_f6kl"></div></div></div>
+<video id="s_f4bgx" class="clip bgv " data-start="187.01" data-duration="7.42" data-media-start="0.0" data-track-index="38" src="assets/bg/bgx_s_f4.mp4" muted playsinline></video>
+<div id="askp" class="clip panel tpanel clear" data-start="187.01" data-duration="7.42" data-track-index="39" style=""><div class="glow" id="askg"></div><div class="askt" id="ask1">あなたは、どう思いますか？</div><div class="asks" id="ask2">▼ コメントで、あなたの意見を聞かせてください</div></div>
+<video id="s_f5bgx" class="clip bgv " data-start="194.43" data-duration="5.56" data-media-start="0.0" data-track-index="40" src="assets/bg/bgx_s_f5.mp4" muted playsinline></video>
+<div id="endp" class="clip panel clear" data-start="194.43" data-duration="5.56" data-track-index="41" style=""><div class="endt" id="end1">ご視聴 ありがとうございました</div><div class="ends" id="end2">チャンネル登録で、次の「告白」をお見逃しなく</div></div>
 <div id="scan"></div>
 <div id="vig"></div>
+<div id="tbk"></div>
+<div id="twipe"></div>
 <div id="gl1" class="gl"></div>
 <div id="gl2" class="gl"></div>
 <div id="gl3" class="gl"></div>
@@ -185,34 +208,25 @@ window.__timelines = window.__timelines || {};
 const tl = gsap.timeline({ paused: true });
 tl.fromTo("#s_th4t", {scale: 1.25, opacity: 0}, {scale: 1, opacity: 1, duration: 0.45, ease: "expo.out", immediateRender: false}, 0.9);
 tl.fromTo("#s_th4g", {opacity: 0}, {opacity: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 1.1);
-tl.set("#gl1", {opacity: 0.60, top: "62%", height: 43, x: 45}, 0.6);
-tl.set("#gl1", {top: "76%", height: 42, x: -22}, 0.667);
-tl.set("#gl1", {opacity: 0, x: 0}, 0.767);
-tl.set("#gl2", {opacity: 0.60, top: "28%", height: 44, x: -23}, 0.6);
-tl.set("#gl2", {top: "70%", height: 16, x: 44}, 0.667);
-tl.set("#gl2", {opacity: 0, x: 0}, 0.767);
-tl.set("#gl3", {opacity: 0.60, top: "43%", height: 19, x: 67}, 0.6);
-tl.set("#gl3", {top: "23%", height: 12, x: 31}, 0.667);
-tl.set("#gl3", {opacity: 0, x: 0}, 0.767);
-tl.set("#flash", {opacity: 0.68}, 0.6);
-tl.set("#flash", {opacity: 0.20}, 0.667);
-tl.set("#flash", {opacity: 0}, 0.733);
-tl.set("#stage", {x: -11}, 0.6);
-tl.set("#stage", {x: 11}, 0.667);
-tl.set("#stage", {x: 0}, 0.733);
+tl.set("#tbk", {opacity: 1}, 0.59);
+tl.to("#tbk", {opacity: 0, duration: 0.55, ease: "power1.out"}, 0.62);
+tl.fromTo("#s_th4bgx", {scale: 1.1}, {scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 0.6);
+tl.fromTo("#s_th4m", {scale: 1.1}, {scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 0.6);
 tl.fromTo("#s_k41k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 8.08);
 tl.fromTo("#s_k41kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 8.13);
+tl.set("#flash", {opacity: 0.8}, 7.83);
+tl.to("#flash", {opacity: 0, duration: 0.32, ease: "power2.out"}, 7.87);
 tl.fromTo("#a11cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 12.13);
 tl.set("#a11cap0", {opacity: 0}, 14.47);
 tl.fromTo("#a11cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 14.6);
-tl.set("#gl1", {opacity: 0.52, top: "62%", height: 55, x: -30}, 11.9);
-tl.set("#gl1", {top: "83%", height: 10, x: 65}, 11.967);
+tl.set("#gl1", {opacity: 0.52, top: "62%", height: 43, x: 45}, 11.9);
+tl.set("#gl1", {top: "76%", height: 42, x: -22}, 11.967);
 tl.set("#gl1", {opacity: 0, x: 0}, 12.067);
-tl.set("#gl2", {opacity: 0.52, top: "13%", height: 16, x: -22}, 11.9);
-tl.set("#gl2", {top: "12%", height: 25, x: -63}, 11.967);
+tl.set("#gl2", {opacity: 0.52, top: "28%", height: 44, x: -23}, 11.9);
+tl.set("#gl2", {top: "70%", height: 16, x: 44}, 11.967);
 tl.set("#gl2", {opacity: 0, x: 0}, 12.067);
-tl.set("#gl3", {opacity: 0.52, top: "64%", height: 42, x: -20}, 11.9);
-tl.set("#gl3", {top: "46%", height: 43, x: -11}, 11.967);
+tl.set("#gl3", {opacity: 0.52, top: "43%", height: 19, x: 67}, 11.9);
+tl.set("#gl3", {top: "23%", height: 12, x: 31}, 11.967);
 tl.set("#gl3", {opacity: 0, x: 0}, 12.067);
 tl.set("#flash", {opacity: 0.59}, 11.9);
 tl.set("#flash", {opacity: 0.17}, 11.967);
@@ -224,14 +238,14 @@ tl.fromTo("#a9cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease
 tl.set("#a9cap0", {opacity: 0}, 21.36);
 tl.fromTo("#a9cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 21.49);
 tl.fromTo("#a9v", {filter: "saturate(1) sepia(0) contrast(1) brightness(1)"}, {filter: "saturate(1.15) sepia(0.18) contrast(1.02) brightness(1.04)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 18.53);
-tl.set("#gl1", {opacity: 0.52, top: "42%", height: 14, x: -49}, 18.13);
-tl.set("#gl1", {top: "68%", height: 39, x: 1}, 18.197);
+tl.set("#gl1", {opacity: 0.52, top: "62%", height: 55, x: -30}, 18.13);
+tl.set("#gl1", {top: "83%", height: 10, x: 65}, 18.197);
 tl.set("#gl1", {opacity: 0, x: 0}, 18.297);
-tl.set("#gl2", {opacity: 0.52, top: "57%", height: 19, x: -5}, 18.13);
-tl.set("#gl2", {top: "75%", height: 30, x: -12}, 18.197);
+tl.set("#gl2", {opacity: 0.52, top: "13%", height: 16, x: -22}, 18.13);
+tl.set("#gl2", {top: "12%", height: 25, x: -63}, 18.197);
 tl.set("#gl2", {opacity: 0, x: 0}, 18.297);
-tl.set("#gl3", {opacity: 0.52, top: "70%", height: 15, x: -53}, 18.13);
-tl.set("#gl3", {top: "41%", height: 16, x: 32}, 18.197);
+tl.set("#gl3", {opacity: 0.52, top: "64%", height: 42, x: -20}, 18.13);
+tl.set("#gl3", {top: "46%", height: 43, x: -11}, 18.197);
 tl.set("#gl3", {opacity: 0, x: 0}, 18.297);
 tl.set("#flash", {opacity: 0.59}, 18.13);
 tl.set("#flash", {opacity: 0.17}, 18.197);
@@ -242,14 +256,14 @@ tl.set("#stage", {x: 0}, 18.263);
 tl.fromTo("#a13cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 27.21);
 tl.set("#a13cap0", {opacity: 0}, 33.39);
 tl.fromTo("#a13cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 33.52);
-tl.set("#gl1", {opacity: 0.52, top: "18%", height: 38, x: -53}, 26.98);
-tl.set("#gl1", {top: "42%", height: 11, x: -70}, 27.047);
+tl.set("#gl1", {opacity: 0.52, top: "42%", height: 14, x: -49}, 26.98);
+tl.set("#gl1", {top: "68%", height: 39, x: 1}, 27.047);
 tl.set("#gl1", {opacity: 0, x: 0}, 27.147);
-tl.set("#gl2", {opacity: 0.52, top: "32%", height: 17, x: 50}, 26.98);
-tl.set("#gl2", {top: "31%", height: 34, x: 31}, 27.047);
+tl.set("#gl2", {opacity: 0.52, top: "57%", height: 19, x: -5}, 26.98);
+tl.set("#gl2", {top: "75%", height: 30, x: -12}, 27.047);
 tl.set("#gl2", {opacity: 0, x: 0}, 27.147);
-tl.set("#gl3", {opacity: 0.52, top: "58%", height: 50, x: -20}, 26.98);
-tl.set("#gl3", {top: "14%", height: 27, x: 16}, 27.047);
+tl.set("#gl3", {opacity: 0.52, top: "70%", height: 15, x: -53}, 26.98);
+tl.set("#gl3", {top: "41%", height: 16, x: 32}, 27.047);
 tl.set("#gl3", {opacity: 0, x: 0}, 27.147);
 tl.set("#flash", {opacity: 0.59}, 26.98);
 tl.set("#flash", {opacity: 0.17}, 27.047);
@@ -259,18 +273,22 @@ tl.set("#stage", {x: 9}, 27.047);
 tl.set("#stage", {x: 0}, 27.113);
 tl.fromTo("#s_k42k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 37.45);
 tl.fromTo("#s_k42kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 37.5);
+tl.set("#twipe", {opacity: 1}, 36.97);
+tl.fromTo("#twipe", {x: -1990}, {x: 0, duration: 0.23, ease: "power1.in", immediateRender: false}, 36.97);
+tl.fromTo("#twipe", {x: 0}, {x: 1990, duration: 0.3, ease: "power2.in", immediateRender: false}, 37.22);
+tl.set("#twipe", {opacity: 0, x: -1990}, 37.55);
 tl.fromTo("#e14cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 42.27);
 tl.set("#e14cap0", {opacity: 0}, 44.21);
 tl.fromTo("#e14cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 44.34);
 tl.fromTo("#e14v", {filter: "saturate(1) sepia(0) contrast(1) brightness(1)"}, {filter: "saturate(1.22) sepia(0.24) contrast(0.98) brightness(1.07)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 42.44);
-tl.set("#gl1", {opacity: 0.52, top: "16%", height: 35, x: -67}, 42.04);
-tl.set("#gl1", {top: "44%", height: 36, x: -40}, 42.107);
+tl.set("#gl1", {opacity: 0.52, top: "18%", height: 38, x: -53}, 42.04);
+tl.set("#gl1", {top: "42%", height: 11, x: -70}, 42.107);
 tl.set("#gl1", {opacity: 0, x: 0}, 42.207);
-tl.set("#gl2", {opacity: 0.52, top: "22%", height: 59, x: -45}, 42.04);
-tl.set("#gl2", {top: "36%", height: 10, x: -55}, 42.107);
+tl.set("#gl2", {opacity: 0.52, top: "32%", height: 17, x: 50}, 42.04);
+tl.set("#gl2", {top: "31%", height: 34, x: 31}, 42.107);
 tl.set("#gl2", {opacity: 0, x: 0}, 42.207);
-tl.set("#gl3", {opacity: 0.52, top: "64%", height: 25, x: -22}, 42.04);
-tl.set("#gl3", {top: "67%", height: 38, x: 60}, 42.107);
+tl.set("#gl3", {opacity: 0.52, top: "58%", height: 50, x: -20}, 42.04);
+tl.set("#gl3", {top: "14%", height: 27, x: 16}, 42.107);
 tl.set("#gl3", {opacity: 0, x: 0}, 42.207);
 tl.set("#flash", {opacity: 0.59}, 42.04);
 tl.set("#flash", {opacity: 0.17}, 42.107);
@@ -284,14 +302,14 @@ tl.fromTo("#e1cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease
 tl.set("#e1cap1", {opacity: 0}, 56.27);
 tl.fromTo("#e1cap2", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 56.4);
 tl.fromTo("#e1v", {filter: "saturate(1) sepia(0) contrast(1) brightness(1)"}, {filter: "saturate(1.22) sepia(0.24) contrast(0.98) brightness(1.07)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 48.37);
-tl.set("#gl1", {opacity: 0.52, top: "29%", height: 40, x: 28}, 47.97);
-tl.set("#gl1", {top: "21%", height: 17, x: 31}, 48.037);
+tl.set("#gl1", {opacity: 0.52, top: "16%", height: 35, x: -67}, 47.97);
+tl.set("#gl1", {top: "44%", height: 36, x: -40}, 48.037);
 tl.set("#gl1", {opacity: 0, x: 0}, 48.137);
-tl.set("#gl2", {opacity: 0.52, top: "58%", height: 14, x: -1}, 47.97);
-tl.set("#gl2", {top: "32%", height: 29, x: -65}, 48.037);
+tl.set("#gl2", {opacity: 0.52, top: "22%", height: 59, x: -45}, 47.97);
+tl.set("#gl2", {top: "36%", height: 10, x: -55}, 48.037);
 tl.set("#gl2", {opacity: 0, x: 0}, 48.137);
-tl.set("#gl3", {opacity: 0.52, top: "31%", height: 39, x: -45}, 47.97);
-tl.set("#gl3", {top: "28%", height: 12, x: -33}, 48.037);
+tl.set("#gl3", {opacity: 0.52, top: "64%", height: 25, x: -22}, 47.97);
+tl.set("#gl3", {top: "67%", height: 38, x: 60}, 48.037);
 tl.set("#gl3", {opacity: 0, x: 0}, 48.137);
 tl.set("#flash", {opacity: 0.59}, 47.97);
 tl.set("#flash", {opacity: 0.17}, 48.037);
@@ -301,18 +319,19 @@ tl.set("#stage", {x: 9}, 48.037);
 tl.set("#stage", {x: 0}, 48.103);
 tl.fromTo("#s_k43k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 63.88);
 tl.fromTo("#s_k43kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 63.93);
+tl.fromTo("#s_k43p", {x: 150}, {x: 0, duration: 0.55, ease: "power3.out", immediateRender: false}, 63.63);
 tl.fromTo("#e12cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 71.27);
 tl.set("#e12cap0", {opacity: 0}, 77.05);
 tl.fromTo("#e12cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 77.17);
 tl.fromTo("#e12v", {filter: "saturate(1) sepia(0) contrast(1) brightness(1)"}, {filter: "saturate(1.15) sepia(0.18) contrast(1.02) brightness(1.04)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 71.57);
-tl.set("#gl1", {opacity: 0.68, top: "32%", height: 30, x: -68}, 70.87);
-tl.set("#gl1", {top: "61%", height: 31, x: 5}, 70.937);
+tl.set("#gl1", {opacity: 0.68, top: "29%", height: 40, x: 28}, 70.87);
+tl.set("#gl1", {top: "21%", height: 17, x: 31}, 70.937);
 tl.set("#gl1", {opacity: 0, x: 0}, 71.037);
-tl.set("#gl2", {opacity: 0.68, top: "54%", height: 18, x: -47}, 70.87);
-tl.set("#gl2", {top: "14%", height: 23, x: -8}, 70.937);
+tl.set("#gl2", {opacity: 0.68, top: "58%", height: 14, x: -1}, 70.87);
+tl.set("#gl2", {top: "32%", height: 29, x: -65}, 70.937);
 tl.set("#gl2", {opacity: 0, x: 0}, 71.037);
-tl.set("#gl3", {opacity: 0.68, top: "6%", height: 37, x: 25}, 70.87);
-tl.set("#gl3", {top: "81%", height: 39, x: -38}, 70.937);
+tl.set("#gl3", {opacity: 0.68, top: "31%", height: 39, x: -45}, 70.87);
+tl.set("#gl3", {top: "28%", height: 12, x: -33}, 70.937);
 tl.set("#gl3", {opacity: 0, x: 0}, 71.037);
 tl.set("#flash", {opacity: 0.77}, 70.87);
 tl.set("#flash", {opacity: 0.23}, 70.937);
@@ -322,17 +341,19 @@ tl.set("#stage", {x: 12}, 70.937);
 tl.set("#stage", {x: 0}, 71.003);
 tl.fromTo("#s_k44k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 84.3);
 tl.fromTo("#s_k44kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 84.35);
+tl.set("#flash", {opacity: 0.8}, 84.05);
+tl.to("#flash", {opacity: 0, duration: 0.32, ease: "power2.out"}, 84.09);
 tl.fromTo("#b7cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 95.41);
 tl.set("#b7cap0", {opacity: 0}, 103.69);
 tl.fromTo("#b7cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 103.81);
-tl.set("#gl1", {opacity: 0.68, top: "80%", height: 50, x: -36}, 95.01);
-tl.set("#gl1", {top: "66%", height: 34, x: -24}, 95.077);
+tl.set("#gl1", {opacity: 0.68, top: "32%", height: 30, x: -68}, 95.01);
+tl.set("#gl1", {top: "61%", height: 31, x: 5}, 95.077);
 tl.set("#gl1", {opacity: 0, x: 0}, 95.177);
-tl.set("#gl2", {opacity: 0.68, top: "85%", height: 33, x: -12}, 95.01);
-tl.set("#gl2", {top: "24%", height: 25, x: -22}, 95.077);
+tl.set("#gl2", {opacity: 0.68, top: "54%", height: 18, x: -47}, 95.01);
+tl.set("#gl2", {top: "14%", height: 23, x: -8}, 95.077);
 tl.set("#gl2", {opacity: 0, x: 0}, 95.177);
-tl.set("#gl3", {opacity: 0.68, top: "25%", height: 49, x: -20}, 95.01);
-tl.set("#gl3", {top: "85%", height: 34, x: 53}, 95.077);
+tl.set("#gl3", {opacity: 0.68, top: "6%", height: 37, x: 25}, 95.01);
+tl.set("#gl3", {top: "81%", height: 39, x: -38}, 95.077);
 tl.set("#gl3", {opacity: 0, x: 0}, 95.177);
 tl.set("#flash", {opacity: 0.77}, 95.01);
 tl.set("#flash", {opacity: 0.23}, 95.077);
@@ -343,23 +364,16 @@ tl.set("#stage", {x: 0}, 95.143);
 tl.fromTo("#s_msg99t", {scale: 1.25, opacity: 0}, {scale: 1, opacity: 1, duration: 0.45, ease: "expo.out", immediateRender: false}, 114.43);
 tl.fromTo("#s_msg99g", {opacity: 0}, {opacity: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 114.63);
 tl.fromTo("#s_msg99b", {opacity: 0}, {opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 115.33);
-tl.set("#gl1", {opacity: 0.60, top: "82%", height: 40, x: -58}, 114.13);
-tl.set("#gl1", {top: "15%", height: 16, x: -43}, 114.197);
-tl.set("#gl1", {opacity: 0, x: 0}, 114.297);
-tl.set("#gl2", {opacity: 0.60, top: "9%", height: 30, x: -9}, 114.13);
-tl.set("#gl2", {top: "70%", height: 35, x: -5}, 114.197);
-tl.set("#gl2", {opacity: 0, x: 0}, 114.297);
-tl.set("#gl3", {opacity: 0.60, top: "58%", height: 45, x: 5}, 114.13);
-tl.set("#gl3", {top: "81%", height: 43, x: -26}, 114.197);
-tl.set("#gl3", {opacity: 0, x: 0}, 114.297);
-tl.set("#flash", {opacity: 0.68}, 114.13);
-tl.set("#flash", {opacity: 0.20}, 114.197);
-tl.set("#flash", {opacity: 0}, 114.263);
-tl.set("#stage", {x: -11}, 114.13);
-tl.set("#stage", {x: 11}, 114.197);
-tl.set("#stage", {x: 0}, 114.263);
+tl.set("#tbk", {opacity: 1}, 114.12);
+tl.to("#tbk", {opacity: 0, duration: 0.55, ease: "power1.out"}, 114.15);
+tl.fromTo("#s_msg99bgx", {scale: 1.1}, {scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 114.13);
+tl.fromTo("#s_msg99m", {scale: 1.1}, {scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 114.13);
 tl.fromTo("#s_k45k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 122.9);
 tl.fromTo("#s_k45kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 122.95);
+tl.set("#twipe", {opacity: 1}, 122.42);
+tl.fromTo("#twipe", {x: -1990}, {x: 0, duration: 0.23, ease: "power1.in", immediateRender: false}, 122.42);
+tl.fromTo("#twipe", {x: 0}, {x: 1990, duration: 0.3, ease: "power2.in", immediateRender: false}, 122.67);
+tl.set("#twipe", {opacity: 0, x: -1990}, 123.0);
 tl.set("#rh2", {opacity: 1}, 130.39);
 tl.set("#r2c0", {opacity: 1}, 130.39);
 tl.set("#r2c1", {opacity: 1}, 130.39);
@@ -369,14 +383,14 @@ tl.fromTo("#r2kw0", {scale: 1.8, opacity: 0, rotation: -6}, {scale: 1, opacity: 
 tl.fromTo("#r2kw1", {scale: 1.8, opacity: 0, rotation: -6}, {scale: 1, opacity: 1, rotation: -6, duration: 0.26, ease: "power4.in", immediateRender: false}, 139.109);
 tl.fromTo("#r2kw2", {scale: 1.8, opacity: 0, rotation: -6}, {scale: 1, opacity: 1, rotation: -6, duration: 0.26, ease: "power4.in", immediateRender: false}, 142.321);
 tl.fromTo("#r2kw3", {scale: 1.8, opacity: 0, rotation: -6}, {scale: 1, opacity: 1, rotation: -6, duration: 0.26, ease: "power4.in", immediateRender: false}, 146.345);
-tl.set("#gl1", {opacity: 0.75, top: "13%", height: 28, x: 52}, 148.92);
-tl.set("#gl1", {top: "21%", height: 14, x: 1}, 148.987);
+tl.set("#gl1", {opacity: 0.75, top: "80%", height: 50, x: -36}, 148.92);
+tl.set("#gl1", {top: "66%", height: 34, x: -24}, 148.987);
 tl.set("#gl1", {opacity: 0, x: 0}, 149.087);
-tl.set("#gl2", {opacity: 0.75, top: "32%", height: 15, x: -53}, 148.92);
-tl.set("#gl2", {top: "31%", height: 27, x: 35}, 148.987);
+tl.set("#gl2", {opacity: 0.75, top: "85%", height: 33, x: -12}, 148.92);
+tl.set("#gl2", {top: "24%", height: 25, x: -22}, 148.987);
 tl.set("#gl2", {opacity: 0, x: 0}, 149.087);
-tl.set("#gl3", {opacity: 0.75, top: "62%", height: 17, x: -59}, 148.92);
-tl.set("#gl3", {top: "36%", height: 21, x: 2}, 148.987);
+tl.set("#gl3", {opacity: 0.75, top: "25%", height: 49, x: -20}, 148.92);
+tl.set("#gl3", {top: "85%", height: 34, x: 53}, 148.987);
 tl.set("#gl3", {opacity: 0, x: 0}, 149.087);
 tl.set("#flash", {opacity: 0.85}, 148.92);
 tl.set("#flash", {opacity: 0.25}, 148.987);
@@ -388,17 +402,18 @@ tl.fromTo("#s_cardEn", {x: -40, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, e
 tl.fromTo("#s_cardEt", {scale: 1.3, opacity: 0}, {scale: 1, opacity: 1, duration: 0.45, ease: "expo.out", immediateRender: false}, 149.42);
 tl.fromTo("#s_f3k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 156.29);
 tl.fromTo("#s_f3kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 156.34);
+tl.fromTo("#s_f3p", {x: 150}, {x: 0, duration: 0.55, ease: "power3.out", immediateRender: false}, 156.04);
 tl.fromTo("#e13cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 168.64);
 tl.set("#e13cap0", {opacity: 0}, 172.81);
 tl.fromTo("#e13cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 172.94);
-tl.set("#gl1", {opacity: 0.52, top: "52%", height: 50, x: -37}, 168.41);
-tl.set("#gl1", {top: "72%", height: 15, x: 22}, 168.477);
+tl.set("#gl1", {opacity: 0.52, top: "82%", height: 40, x: -58}, 168.41);
+tl.set("#gl1", {top: "15%", height: 16, x: -43}, 168.477);
 tl.set("#gl1", {opacity: 0, x: 0}, 168.577);
-tl.set("#gl2", {opacity: 0.52, top: "22%", height: 35, x: 63}, 168.41);
-tl.set("#gl2", {top: "62%", height: 18, x: -62}, 168.477);
+tl.set("#gl2", {opacity: 0.52, top: "9%", height: 30, x: -9}, 168.41);
+tl.set("#gl2", {top: "70%", height: 35, x: -5}, 168.477);
 tl.set("#gl2", {opacity: 0, x: 0}, 168.577);
-tl.set("#gl3", {opacity: 0.52, top: "7%", height: 36, x: 9}, 168.41);
-tl.set("#gl3", {top: "65%", height: 12, x: -65}, 168.477);
+tl.set("#gl3", {opacity: 0.52, top: "58%", height: 45, x: 5}, 168.41);
+tl.set("#gl3", {top: "81%", height: 43, x: -26}, 168.477);
 tl.set("#gl3", {opacity: 0, x: 0}, 168.577);
 tl.set("#flash", {opacity: 0.59}, 168.41);
 tl.set("#flash", {opacity: 0.17}, 168.477);
@@ -408,12 +423,18 @@ tl.set("#stage", {x: 9}, 168.477);
 tl.set("#stage", {x: 0}, 168.543);
 tl.fromTo("#s_f6k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 179.15);
 tl.fromTo("#s_f6kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 179.2);
+tl.set("#flash", {opacity: 0.8}, 178.9);
+tl.to("#flash", {opacity: 0, duration: 0.32, ease: "power2.out"}, 178.94);
 tl.fromTo("#ask1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.5, ease: "power3.out", immediateRender: false}, 187.31);
 tl.fromTo("#askg", {opacity: 0}, {opacity: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 187.41);
 tl.fromTo("#ask2", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 188.41);
 tl.to("#ask2", {y: 8, duration: 0.5, ease: "sine.inOut", repeat: 5, yoyo: true}, 189.01);
+tl.set("#tbk", {opacity: 1}, 187.0);
+tl.to("#tbk", {opacity: 0, duration: 0.7, ease: "power2.out"}, 187.03);
 tl.fromTo("#end1", {opacity: 0}, {opacity: 1, duration: 0.7, ease: "power2.out", immediateRender: false}, 194.73);
 tl.fromTo("#end2", {opacity: 0}, {opacity: 1, duration: 0.5, ease: "power2.out", immediateRender: false}, 195.63);
+tl.set("#tbk", {opacity: 1}, 194.42);
+tl.to("#tbk", {opacity: 0, duration: 0.7, ease: "power2.out"}, 194.45);
 tl.fromTo("#stage", {opacity: 0}, {opacity: 1, duration: 0.8, ease: "power2.out", immediateRender: false}, 0.05);
 tl.to("#stage", {opacity: 0, duration: 0.95, ease: "power1.in"}, 200.14);
 const root = gsap.timeline({ paused: true });

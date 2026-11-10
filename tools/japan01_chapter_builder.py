@@ -6,6 +6,7 @@
 import json
 import os
 import random
+import re
 import sys
 from pathlib import Path
 
@@ -53,9 +54,14 @@ def track():
     return _track[0]
 
 
+CUR_BGX = [None]  # 現シーンに背景映像があるとき panel を半透明化
+
+
 def el_div(eid, t0, t1, cls, inner, style=""):
     if not OV(t0, t1):
         return
+    if CUR_BGX[0] and "panel" in cls:
+        cls += " clear"
     s = max(t0, W0)
     d = round(min(t1, COMP) - s, 3)
     ELS.append(
@@ -218,8 +224,13 @@ def sc_cases(s):  # 事例リストパネル (行はナレ尺に均等同期)
     t0, t1 = s["start"], s["end"]
     eid = s["id"]
     rows = s["rows"]
+    icons = s.get("illus_rows")
+    if icons:
+        assert len(icons) == len(rows), f"{EP}:{eid} illus_rows{len(icons)} != rows{len(rows)}"
     rh = "".join(
-        f'<div class="crow" id="{eid}r{i}"><span class="ctag">{tag}</span><span class="ctx">{tx}</span></div>'
+        f'<div class="crow" id="{eid}r{i}">'
+        + (f'<img class="cicon" src="assets/img/{icons[i]}.png" alt="">' if icons else "")
+        + f'<span class="ctag">{tag}</span><span class="ctx">{tx}</span></div>'
         for i, (tag, tx) in enumerate(rows))
     el_div(f"{eid}p", t0, t1, "panel", (
         f'<div class="dhead" id="{eid}h">{s["head"]}</div><div class="crows">{rh}</div>'))
@@ -229,7 +240,6 @@ def sc_cases(s):  # 事例リストパネル (行はナレ尺に均等同期)
         tt = n["start"] + i * (n["dur"] / len(rows)) + 0.1
         fromto(tt, f"#{eid}r{i}", "x: -70, opacity: 0", "x: 0, opacity: 1", 0.4, "power3.out")
         cue("tick", tt, 0.8)
-    glitch(t0, 0.6)
 
 
 def sc_pct(s):  # 99% / 1% パネル
@@ -247,7 +257,6 @@ def sc_pct(s):  # 99% / 1% パネル
     cue("slam", t0 + 2.45, 0.9)
     fromto(t0 + 2.7, "#p1l", "y: 24, opacity: 0", "y: 0, opacity: 1", 0.45, "power3.out")
     cue("pop", t0 + 2.7, 0.6)
-    glitch(t0, 0.6)
 
 
 def sc_q(s):
@@ -282,7 +291,6 @@ def sc_diagram(s):  # c1: 連帯責任メカニズム
     ts = t0 + 4.6
     fromto(ts, "#mstamp", "scale: 2.2, opacity: 0, rotation: -8", "scale: 1, opacity: 1, rotation: -8", 0.28, "power4.in")
     cue("slam", ts + 0.28, 1.0)
-    glitch(t0, 0.6)
 
 
 def sc_counter(s):  # c2: 訪日客数
@@ -311,7 +319,6 @@ def sc_counter(s):  # c2: 訪日客数
         fromto(t0 + dt, f"#cb{i}", "x: 60, opacity: 0", "x: 0, opacity: 1", 0.4, "power3.out")
         fromto(t0 + dt + 0.1, f"#cbv{i}", "scaleX: 0", "scaleX: 1", 0.55, "power2.inOut")
         cue("tick", t0 + dt, 0.6)
-    glitch(t0, 0.6)
 
 
 def sc_news(s):  # c2: 速報パネル
@@ -325,7 +332,6 @@ def sc_news(s):  # c2: 速報パネル
     fromto(t0 + 0.65, "#nh1", "y: 34, opacity: 0", "y: 0, opacity: 1", 0.45, "power3.out")
     cue("slam", t0 + 0.75, 0.9)
     fromto(t0 + 1.3, "#ns1", "opacity: 0", "opacity: 1", 0.4, "power2.out")
-    glitch(t0, 0.8)
 
 
 def sc_journey(s):  # c3: 浅草→自由が丘
@@ -352,7 +358,6 @@ def sc_journey(s):  # c3: 浅草→自由が丘
     cue("tick", t0 + 2.2, 0.5)
     fromto(t0 + 3.6, "#j2", "y: 40, opacity: 0", "y: 0, opacity: 1", 0.45, "power3.out")
     cue("pop", t0 + 3.6, 0.9)
-    glitch(t0, 0.6)
 
 
 def sc_gion(s):  # c4: 祇園 看板
@@ -369,7 +374,6 @@ def sc_gion(s):  # c4: 祇園 看板
     fromto(t0 + 1.0, "#gs", "scale: 1.5, opacity: 0, rotation: 2", "scale: 1, opacity: 1, rotation: 0", 0.35, "power4.in")
     cue("slam", t0 + 1.35, 1.0)
     fromto(t0 + 2.2, "#gn", "opacity: 0", "opacity: 1", 0.4, "power2.out")
-    glitch(t0, 0.7)
 
 
 def sc_msg(s):
@@ -384,7 +388,6 @@ def sc_msg(s):
     fromto(t0 + 0.5, f'#{s["id"]}g', "opacity: 0", "opacity: 1", 1.2, "power2.out")
     if by:
         fromto(t0 + 1.2, f'#{s["id"]}b', "opacity: 0", "opacity: 1", 0.45, "power2.out")
-    glitch(t0, 0.8)
 
 
 def sc_card(s):
@@ -435,7 +438,6 @@ def sc_recap4(s):
     for i, dt in enumerate([0.5, 0.75, 1.0, 1.25]):
         fromto(t0 + dt, f"#r1c{i}", "y: 70, opacity: 0", "y: 0, opacity: 1", 0.45, "power3.out")
         cue("pop", t0 + dt, 0.6)
-    glitch(t0, 0.6)
 
 
 def sc_recap4b(s):
@@ -485,8 +487,86 @@ KIND = {"broll": sc_broll, "kick": sc_kick, "q": sc_q, "nv": sc_nv, "diagram": s
         "msg": sc_msg, "card": sc_card, "recap4": sc_recap4, "recap4b": sc_recap4b,
         "ask": sc_ask, "end": sc_end}
 
+
+# ============================================================ v4: イラスト / トランジション
+def illus_block(s):
+    il = s.get("illus")
+    if not il:
+        return
+    t0, t1 = s["start"], s["end"]
+    pid = s["id"]
+    inner = "".join(
+        f'<img class="illus" id="{pid}il{i}" src="assets/img/{n}.png" style="{st}" alt="">'
+        for i, (n, st, _dt) in enumerate(il))
+    el_div(f"{pid}ilw", t0, t1, "ilov", inner)
+    for i, (_n, _st, dt) in enumerate(il):
+        fromto(t0 + dt, f"#{pid}il{i}", "scale: 0.55, opacity: 0, rotation: -5",
+               "scale: 1, opacity: 1, rotation: 0", 0.45, "back.out(1.7)")
+        cue("pop", t0 + dt, 0.7)
+        fl0 = t0 + dt + 0.55
+        n_rep = int((t1 - fl0) / 1.8) - 1
+        if n_rep >= 1:
+            tw(fl0, f'tl.to("#{pid}il{i}", {{y: -14, duration: 1.8, ease: "sine.inOut", '
+                    f'repeat: {n_rep}, yoyo: true}}, %T%);')
+
+
+TR_DEF = {"msg": "zoom", "kick": "flash", "cases": "wipe", "pct": "wipe", "counter": "zoom",
+          "diagram": "fade", "news": "slide", "journey": "fade", "gion": "fade",
+          "recap4": "wipe", "recap4b": "none", "ask": "fade", "end": "fade",
+          "q": "none", "nv": "none", "broll": "none", "card": "none"}
+KICK_TR = ["flash", "wipe", "slide"]  # kick は輪番で変化をつける
+
+
+def apply_tr(tr, s, ids):
+    t0 = s["start"]
+    main_ids = [i for i in ids if not i.endswith("bgx")]
+    if tr == "none" or t0 < 0.4:
+        return
+    if tr == "fade":  # 黒からディップ
+        setv(t0 - 0.01, "#tbk", "opacity: 1")
+        tw(t0 + 0.02, 'tl.to("#tbk", {opacity: 0, duration: 0.7, ease: "power2.out"}, %T%);')
+    elif tr == "flash":  # 白フラッシュ
+        setv(t0, "#flash", "opacity: 0.8")
+        tw(t0 + 0.04, 'tl.to("#flash", {opacity: 0, duration: 0.32, ease: "power2.out"}, %T%);')
+        cue("pop", t0, 0.7)
+    elif tr == "wipe":  # 赤エッジの横ワイプ
+        setv(t0 - 0.23, "#twipe", "opacity: 1")
+        fromto(t0 - 0.23, "#twipe", "x: -1990", "x: 0", 0.23, "power1.in")
+        fromto(t0 + 0.02, "#twipe", "x: 0", "x: 1990", 0.3, "power2.in")
+        setv(t0 + 0.35, "#twipe", "opacity: 0, x: -1990")
+        cue("whoosh", t0 - 0.2, 0.9)
+    elif tr == "slide":  # 横スライドイン
+        for eid in main_ids:
+            fromto(t0, f"#{eid}", "x: 150", "x: 0", 0.55, "power3.out")
+        cue("whoosh", t0, 0.8)
+    elif tr == "zoom":  # 黒ディップ + ズーム収束
+        setv(t0 - 0.01, "#tbk", "opacity: 1")
+        tw(t0 + 0.02, 'tl.to("#tbk", {opacity: 0, duration: 0.55, ease: "power1.out"}, %T%);')
+        for eid in ids:
+            fromto(t0, f"#{eid}", "scale: 1.1", "scale: 1", 1.2, "power2.out")
+        cue("sub", t0, 0.7)
+
+
+_id_re = re.compile(r'id="([^"]+)"')
+_kick_i = 0
 for s in SC:
+    pre = len(ELS)
+    has_bgx = s.get("bgx") and s["kind"] not in ("q", "nv", "broll")
+    CUR_BGX[0] = s.get("bgx") if has_bgx else None
+    if has_bgx:
+        el_video(f'{s["id"]}bgx', s["start"], s["end"], f'bgx_{s["id"]}.mp4', 0.0)
     KIND[s["kind"]](s)
+    illus_block(s)
+    CUR_BGX[0] = None
+    tr = s.get("tr")
+    if not tr:
+        if s["kind"] == "kick":
+            tr = KICK_TR[_kick_i % len(KICK_TR)]
+            _kick_i += 1
+        else:
+            tr = TR_DEF[s["kind"]]
+    ids = [_id_re.search(e).group(1) for e in ELS[pre:]]
+    apply_tr(tr, s, ids)
 
 # ep-level fades
 fromto(0.05, "#stage", "opacity: 0", "opacity: 1", 0.8, "power2.out")
@@ -528,6 +608,15 @@ em { font-style:normal; color:#e8322e; }
 .ltname { font-size:48px; } .ltrole { font-family:'NotoBd'; font-size:27px; color:#ffb648; margin-top:6px; }
 .panel { z-index:10; background:#0c1016; }
 .tpanel { background:radial-gradient(ellipse 90% 80% at 50% 42%, #10151d 0%, #07080b 70%); }
+.panel.clear { background:linear-gradient(180deg, rgba(7,9,13,.78) 0%, rgba(7,9,13,.48) 45%, rgba(7,9,13,.78) 100%); }
+.ilov { z-index:12; }
+.illus { position:absolute; opacity:0; filter:drop-shadow(0 10px 28px rgba(0,0,0,.65)); }
+.cicon { width:92px; height:92px; object-fit:contain; flex:none;
+  filter:drop-shadow(0 4px 14px rgba(0,0,0,.5)); }
+#tbk { position:absolute; inset:0; z-index:56; background:#000; opacity:0; pointer-events:none; }
+#twipe { position:absolute; left:0; top:-2px; width:1930px; height:1084px; z-index:57; opacity:0;
+  background:linear-gradient(90deg, #0a0d12 0%, #131a24 85%, #e8322e 99%, #e8322e 100%);
+  transform:translateX(-1990px); pointer-events:none; }
 .glow { position:absolute; left:50%; top:50%; width:1500px; height:700px; margin:-350px 0 0 -750px;
   background:radial-gradient(ellipse, rgba(232,50,46,.17), rgba(232,50,46,0) 65%); opacity:0; }
 .kstack { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center;
@@ -642,6 +731,8 @@ html = f"""<!doctype html>
 {chr(10).join(ELS)}
 <div id="scan"></div>
 <div id="vig"></div>
+<div id="tbk"></div>
+<div id="twipe"></div>
 <div id="gl1" class="gl"></div>
 <div id="gl2" class="gl"></div>
 <div id="gl3" class="gl"></div>

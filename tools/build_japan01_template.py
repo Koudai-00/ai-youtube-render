@@ -173,8 +173,22 @@ fromto(t0 + 0.4, "#lt1", "x: -70, opacity: 0", "x: 0, opacity: 1", 0.45, "power3
 for i, dt in enumerate([1.9, 2.7, 3.5], 1):
     fromto(t0 + dt, f"#chip{i}", "y: 18, opacity: 0, scale: 0.9", "y: 0, opacity: 1, scale: 1", 0.3, "back.out(2)")
 
+# ============================================================ v4: トランジション補助
+def tr_wipe(t0):
+    setv(t0 - 0.23, "#twipe", "opacity: 1")
+    fromto(t0 - 0.23, "#twipe", "x: -1990", "x: 0", 0.23, "power1.in")
+    fromto(t0 + 0.02, "#twipe", "x: 0", "x: 1990", 0.3, "power2.in")
+    setv(t0 + 0.35, "#twipe", "opacity: 0, x: -1990")
+
+
+def tr_fade(t0):
+    setv(t0 - 0.01, "#tbk", "opacity: 1")
+    tw(t0 + 0.02, 'tl.to("#tbk", {opacity: 0, duration: 0.7, ease: "power2.out"}, %T%);')
+
+
 # ============================================================ info panel
 t0, t1 = B["info"]
+el_video("infobgx", t0, t1, "bgx_info.mp4", 0.0)
 icon_cam = ('<svg viewBox="0 0 48 48"><path d="M8 14h8l4-5h8l4 5h8a3 3 0 0 1 3 3v20a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V17a3 3 0 0 1 3-3z" '
             'fill="none" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="27" r="7" fill="none" stroke="currentColor" stroke-width="3"/>'
             '<line x1="6" y1="42" x2="42" y2="6" stroke="#e8322e" stroke-width="4"/></svg>')
@@ -194,7 +208,7 @@ rows = "".join(
     f'<div class="irow" id="{iid}"><div class="iic">{ic}</div>'
     f'<div class="itx"><div class="iplace">{pl}</div><div class="idesc">{ds}</div></div></div>'
     for iid, ic, pl, ds in items)
-el_div("infop", t0, t1, "panel", (
+el_div("infop", t0, t1, "panel clear", (
     '<div class="phead" id="ph1">怒るのは、<br>日本人だけじゃない<div class="phline" id="phl"></div></div>'
     f'<div class="irows">{rows}<div class="tline" id="tl1"></div></div>'))
 fromto(t0 + 0.35, "#ph1", "x: -50, opacity: 0", "x: 0, opacity: 1", 0.5, "power3.out")
@@ -203,10 +217,12 @@ fromto(t0 + 0.6, "#tl1", "scaleY: 0", "scaleY: 1", 8.0, "none")
 n4 = N["n04"]["start"]
 for iid, dt in [("i1", 0.15), ("i2", 1.75), ("i3", 3.5)]:
     fromto(n4 + dt, f"#{iid}", "x: 70, opacity: 0", "x: 0, opacity: 1", 0.45, "power3.out")
-glitch(t0, 0.6)
+tr_wipe(t0)
 
 # ============================================================ diagram
 t0, t1 = B["diagram"]
+el_video("diagbgx", t0, t1, "bgx_diagram.mp4", 0.0)
+tr_fade(t0)
 outer = ""
 pos = [(13, 22), (78, 16), (12, 68), (76, 72)]
 for i, (x, y) in enumerate(pos, 1):
@@ -216,7 +232,7 @@ for i, (x, y) in enumerate(pos, 1):
 arrows = "".join(
     f'<div class="arrow" id="ar{i}" style="left:{ax}%;top:{ay}%;transform:rotate({deg}deg)"></div>'
     for i, (ax, ay, deg) in enumerate([(27, 33, 35), (63, 29, 145), (27, 63, -35), (62, 66, -145)], 1))
-el_div("diag", t0, t1, "panel", (
+el_div("diag", t0, t1, "panel clear", (
     '<div class="dhead" id="dh1">怒りの矛先は <em>"同胞"</em>へ</div>'
     f'{outer}{arrows}'
     '<div class="cnode" id="cn1"><span>迷惑<br>外国人</span></div>'
@@ -232,7 +248,8 @@ tw(t0 + 2.1, 'tl.to("#cn1", {scale: 1.07, duration: 0.38, ease: "sine.inOut", re
 
 # ============================================================ title
 t0, t1 = B["title"]
-el_div("titlebeat", t0, t1, "panel tpanel", (
+el_video("titlebgx", t0, t1, "bgx_title.mp4", 0.0)
+el_div("titlebeat", t0, t1, "panel tpanel clear", (
     '<div class="glow" id="tglow"></div>'
     '<div class="ttl-wrap">'
     '<div class="ttl-top" id="tt1">なぜ、日本を愛する外国人は</div>'
@@ -270,7 +287,7 @@ chtml = "".join(
     f'<div class="cshade"></div><div class="cnum">{num}</div><div class="clab">{lab}</div></div>'
     for cid, img, num, lab in cards)
 el_div("cardbeat", t0, t1, "panel", f'<div class="chead" id="chd">4人の告白</div><div class="cgrid">{chtml}</div>')
-glitch(t0, 0.7)
+tr_wipe(t0)
 fromto(t0 + 0.2, "#chd", "opacity: 0", "opacity: 1", 0.4, "power2.out")
 n7 = N["n07"]["start"]
 for cid, dt in [("c1", 0.05), ("c2", 1.5), ("c3", 2.9), ("c4", 4.35)]:
@@ -342,6 +359,11 @@ em { font-style:normal; color:#e8322e; }
   padding:12px 26px; border-radius:999px; opacity:0; }
 /* panels */
 .panel { z-index:10; background:#0c1016; }
+.panel.clear { background:linear-gradient(180deg, rgba(7,9,13,.78) 0%, rgba(7,9,13,.48) 45%, rgba(7,9,13,.78) 100%); }
+#tbk { position:absolute; inset:0; z-index:56; background:#000; opacity:0; pointer-events:none; }
+#twipe { position:absolute; left:0; top:-2px; width:1930px; height:1084px; z-index:57; opacity:0;
+  background:linear-gradient(90deg, #0a0d12 0%, #131a24 85%, #e8322e 99%, #e8322e 100%);
+  transform:translateX(-1990px); pointer-events:none; }
 .phead { position:absolute; left:110px; top:50%; transform:translateY(-50%); width:720px;
   font-size:80px; line-height:1.26; opacity:0; }
 .phline { width:230px; height:12px; background:#e8322e; margin-top:30px; transform-origin:left; transform:scaleX(0); }
@@ -415,6 +437,8 @@ html = f"""<!doctype html>
 {chr(10).join(ELS)}
 <div id="scan"></div>
 <div id="vig"></div>
+<div id="tbk"></div>
+<div id="twipe"></div>
 <div id="gl1" class="gl"></div>
 <div id="gl2" class="gl"></div>
 <div id="gl3" class="gl"></div>

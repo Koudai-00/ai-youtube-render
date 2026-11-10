@@ -293,7 +293,8 @@
    "nids": [
     "g301"
    ],
-   "text": "代償は <em>善良な側</em>に<br>請求される"
+   "text": "代償は <em>善良な側</em>に<br>請求される",
+   "bgx": "ink0"
   },
   {
    "id": "s_k31",
@@ -303,7 +304,8 @@
    "nids": [
     "g302"
    ],
-   "kicker": "代償① 向けられる差別"
+   "kicker": "代償① 向けられる差別",
+   "bgx": "ink0"
   },
   {
    "id": "s_c1",
@@ -324,7 +326,9 @@
    "end": 37.1,
    "nids": [
     "g306"
-   ]
+   ],
+   "bgx": "train2",
+   "tr": "fade"
   },
   {
    "id": "s_k32",
@@ -334,7 +338,8 @@
    "nids": [
     "g307"
    ],
-   "kicker": "その瞬間——"
+   "kicker": "その瞬間——",
+   "bgx": "ink1"
   },
   {
    "id": "s_c3",
@@ -351,7 +356,8 @@
    "nids": [
     "g308"
    ],
-   "kicker": "日本語で返しても"
+   "kicker": "日本語で返しても",
+   "bgx": "ink0"
   },
   {
    "id": "s_c4",
@@ -383,7 +389,8 @@
    "nids": [
     "g313"
    ],
-   "kicker": "彼は、店主を責めない"
+   "kicker": "彼は、店主を責めない",
+   "bgx": "alley0"
   },
   {
    "id": "s_c7",
@@ -404,7 +411,8 @@
    "nids": [
     "g316"
    ],
-   "kicker": "代償② 消えていく自由"
+   "kicker": "代償② 消えていく自由",
+   "bgx": "torii2"
   },
   {
    "id": "s_gion",
@@ -413,6 +421,19 @@
    "end": 97.11,
    "nids": [
     "g317"
+   ],
+   "bgx": "temple1",
+   "illus": [
+    [
+     "maiko",
+     "left:120px;bottom:100px;width:300px",
+     1.4
+    ],
+    [
+     "tachiiri_kinshi",
+     "right:120px;bottom:100px;width:330px",
+     2.6
+    ]
    ]
   },
   {
@@ -445,7 +466,15 @@
    "nids": [
     "g322"
    ],
-   "kicker": "代償③ 晒される日常"
+   "kicker": "代償③ 晒される日常",
+   "bgx": "phone1",
+   "illus": [
+    [
+     "photo_sumaho",
+     "right:140px;bottom:130px;width:320px",
+     1.0
+    ]
+   ]
   },
   {
    "id": "s_c11",
@@ -497,7 +526,8 @@
    "nids": [
     "g327"
    ],
-   "kicker": "そして、空気が変わる"
+   "kicker": "そして、空気が変わる",
+   "bgx": "rain1"
   },
   {
    "id": "s_e11",
@@ -528,7 +558,8 @@
    "nids": [
     "g334"
    ],
-   "kicker": "負の、連鎖"
+   "kicker": "負の、連鎖",
+   "bgx": "ink0"
   },
   {
    "id": "s_card4",

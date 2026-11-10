@@ -190,7 +190,8 @@
    "nids": [
     "g101"
    ],
-   "text": "なぜ 外国人が<br>外国人に<em>怒る</em>のか"
+   "text": "なぜ 外国人が<br>外国人に<em>怒る</em>のか",
+   "bgx": "ink0"
   },
   {
    "id": "s_road",
@@ -218,7 +219,9 @@
      "終 章",
      "いかりの正体は、何か"
     ]
-   ]
+   ],
+   "bgx": "ink1",
+   "tr": "wipe"
   },
   {
    "id": "s_counter",
@@ -229,6 +232,14 @@
     "g102",
     "g103",
     "g104"
+   ],
+   "bgx": "crowd0",
+   "illus": [
+    [
+     "tourist_family",
+     "left:110px;bottom:110px;width:300px",
+     2.6
+    ]
    ]
   },
   {
@@ -239,7 +250,8 @@
    "nids": [
     "g105"
    ],
-   "kicker": "しかし——"
+   "kicker": "しかし——",
+   "bgx": "tnight1"
   },
   {
    "id": "s_cases",
@@ -267,6 +279,13 @@
      "世界遺産",
      "鳥居の隙間に硬貨をねじ込む"
     ]
+   ],
+   "bgx": "crowd1",
+   "illus_rows": [
+    "youtuber",
+    "noise_ear",
+    "maiko",
+    "poisute"
    ]
   },
   {
@@ -277,7 +296,8 @@
    "nids": [
     "g107"
    ],
-   "kicker": "例えば——"
+   "kicker": "例えば——",
+   "bgx": "ink0"
   },
   {
    "id": "s_b8",
@@ -331,6 +351,14 @@
    "end": 106.42,
    "nids": [
     "g116"
+   ],
+   "bgx": "tnight2",
+   "illus": [
+    [
+     "saiban",
+     "right:110px;bottom:80px;width:380px",
+     1.6
+    ]
    ]
   },
   {
@@ -352,7 +380,9 @@
    "nids": [
     "g124"
    ],
-   "kicker": "隠された、富士山"
+   "kicker": "隠された、富士山",
+   "bgx": "fuji0",
+   "tr": "fade"
   },
   {
    "id": "s_k13",
@@ -362,7 +392,8 @@
    "nids": [
     "g119"
    ],
-   "kicker": "最も敏感に反応したのは"
+   "kicker": "最も敏感に反応したのは",
+   "bgx": "walk2"
   },
   {
    "id": "s_wit",

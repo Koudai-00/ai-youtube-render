@@ -396,3 +396,64 @@ SCENES = {
  ("s_f5","end",[("n","g428",0.7)],2.8, {}),
 ],
 }
+
+# ============================================================ v4 リッチ化 (背景映像/イラスト/トランジション)
+# bgx: stock_src/<key>.mp4 をシーン長でループ焼き(extract_quotes)。Pexels素材(商用可・帰属不要)
+# illus: illus_src/<name>.png (いらすとや, 商用20点まで) を (name, css, 表示遅延s) で配置
+# illus_rows: cases の各行の左に付くアイコン (rows と同数)
+# tr: トランジション上書き (fade|wipe|zoom|slide|flash|none)。省略時は kind 既定+kick輪番
+SCENE_FX = {
+ # ---- c1
+ "s_th1":    dict(bgx="ink0"),
+ "s_road":   dict(bgx="ink1", tr="wipe"),
+ "s_counter": dict(bgx="crowd0", illus=[("tourist_family", "left:110px;bottom:110px;width:300px", 2.6)]),
+ "s_k11":    dict(bgx="tnight1"),
+ "s_cases":  dict(bgx="crowd1", illus_rows=["youtuber", "noise_ear", "maiko", "poisute"]),
+ "s_k12":    dict(bgx="ink0"),
+ "s_news":   dict(bgx="tnight2", illus=[("saiban", "right:110px;bottom:80px;width:380px", 1.6)]),
+ "s_k14":    dict(bgx="fuji0", tr="fade"),
+ "s_k13":    dict(bgx="walk2"),
+ # ---- c2
+ "s_th2":    dict(bgx="ink0"),
+ "s_mech":   dict(bgx="ink1", illus=[("iromegane", "right:90px;top:90px;width:270px", 4.9)]),
+ "s_k21":    dict(bgx="alley0", illus=[("shingou_mushi", "right:140px;bottom:130px;width:320px", 1.0)]),
+ "s_pct":    dict(bgx="walk2", tr="wipe"),
+ "s_k27":    dict(bgx="ink0"),
+ "s_k22":    dict(bgx="phone1", illus=[("sns_enjou", "right:160px;bottom:140px;width:300px", 1.0)]),
+ "s_k23":    dict(bgx="ink0"),
+ "s_k24":    dict(bgx="ink1"),
+ "s_k25":    dict(bgx="tnight1"),
+ "s_k26":    dict(bgx="ink0", illus=[("enjou_man", "right:140px;bottom:130px;width:330px", 1.0)]),
+ "s_k28":    dict(bgx="rain1"),
+ # ---- c3
+ "s_th3":    dict(bgx="ink0"),
+ "s_k31":    dict(bgx="ink0"),
+ "s_journey": dict(bgx="train2", tr="fade"),
+ "s_k32":    dict(bgx="ink1"),
+ "s_k33":    dict(bgx="ink0"),
+ "s_k34":    dict(bgx="alley0"),
+ "s_k35":    dict(bgx="torii2"),
+ "s_gion":   dict(bgx="temple1", illus=[("maiko", "left:120px;bottom:100px;width:300px", 1.4),
+                                        ("tachiiri_kinshi", "right:120px;bottom:100px;width:330px", 2.6)]),
+ "s_k36":    dict(bgx="phone1", illus=[("photo_sumaho", "right:140px;bottom:130px;width:320px", 1.0)]),
+ "s_k37":    dict(bgx="rain1"),
+ "s_k38":    dict(bgx="ink0"),
+ "s_card4":  dict(),
+ # ---- c4
+ "s_th4":    dict(bgx="ink0"),
+ "s_k41":    dict(bgx="ink1"),
+ "s_k42":    dict(bgx="ink0"),
+ "s_k43":    dict(bgx="ink1"),
+ "s_msg99":  dict(bgx="crowd1"),
+ "s_k44":    dict(bgx="ink0"),
+ "s_k45":    dict(bgx="ink1"),
+ "s_cardE":  dict(bgx="fuji0"),
+ "s_f3":     dict(bgx="walk0"),
+ "s_f6":     dict(bgx="ink1"),
+ "s_f4":     dict(bgx="tnight2"),
+ "s_f5":     dict(bgx="torii2"),
+}
+for _scs in SCENES.values():
+    for _sid, _kind, _items, _post, _extra in _scs:
+        if _sid in SCENE_FX:
+            _extra.update(SCENE_FX[_sid])

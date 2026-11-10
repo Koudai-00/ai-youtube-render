@@ -256,7 +256,8 @@
    "nids": [
     "g200"
    ],
-   "text": "なぜ <em>1人の悪行</em>が<br>全員の罪になるのか"
+   "text": "なぜ <em>1人の悪行</em>が<br>全員の罪になるのか",
+   "bgx": "ink0"
   },
   {
    "id": "s_mech",
@@ -266,6 +267,14 @@
    "nids": [
     "g201",
     "g202"
+   ],
+   "bgx": "ink1",
+   "illus": [
+    [
+     "iromegane",
+     "right:90px;top:90px;width:270px",
+     4.9
+    ]
    ]
   },
   {
@@ -276,7 +285,15 @@
    "nids": [
     "g203"
    ],
-   "kicker": "当事者の、例え話"
+   "kicker": "当事者の、例え話",
+   "bgx": "alley0",
+   "illus": [
+    [
+     "shingou_mushi",
+     "right:140px;bottom:130px;width:320px",
+     1.0
+    ]
+   ]
   },
   {
    "id": "s_a4",
@@ -297,7 +314,9 @@
    "nids": [
     "g206",
     "g207"
-   ]
+   ],
+   "bgx": "walk2",
+   "tr": "wipe"
   },
   {
    "id": "s_k27",
@@ -307,7 +326,8 @@
    "nids": [
     "g230"
    ],
-   "kicker": "想像して、ください"
+   "kicker": "想像して、ください",
+   "bgx": "ink0"
   },
   {
    "id": "s_k22",
@@ -317,7 +337,15 @@
    "nids": [
     "g211"
    ],
-   "kicker": "そして、拡散装置"
+   "kicker": "そして、拡散装置",
+   "bgx": "phone1",
+   "illus": [
+    [
+     "sns_enjou",
+     "right:160px;bottom:140px;width:300px",
+     1.0
+    ]
+   ]
   },
   {
    "id": "s_a10",
@@ -339,7 +367,8 @@
    "nids": [
     "g212"
    ],
-   "kicker": "レッテルの、着弾点"
+   "kicker": "レッテルの、着弾点",
+   "bgx": "ink0"
   },
   {
    "id": "s_a1",
@@ -372,7 +401,8 @@
     "g217",
     "g218"
    ],
-   "kicker": "それでも、俺は——"
+   "kicker": "それでも、俺は——",
+   "bgx": "ink1"
   },
   {
    "id": "s_a6",
@@ -389,7 +419,8 @@
    "nids": [
     "g219"
    ],
-   "kicker": "注目すべき、事実"
+   "kicker": "注目すべき、事実",
+   "bgx": "tnight1"
   },
   {
    "id": "s_a5",
@@ -410,7 +441,15 @@
    "nids": [
     "g222"
    ],
-   "kicker": "レッテルの、副作用"
+   "kicker": "レッテルの、副作用",
+   "bgx": "ink0",
+   "illus": [
+    [
+     "enjou_man",
+     "right:140px;bottom:130px;width:330px",
+     1.0
+    ]
+   ]
   },
   {
    "id": "s_a12",
@@ -442,7 +481,8 @@
    "nids": [
     "g231"
    ],
-   "kicker": "レッテルの、本当の怖さ"
+   "kicker": "レッテルの、本当の怖さ",
+   "bgx": "rain1"
   },
   {
    "id": "s_card3",

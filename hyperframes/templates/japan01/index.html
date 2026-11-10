@@ -52,6 +52,11 @@ em { font-style:normal; color:#e8322e; }
   padding:12px 26px; border-radius:999px; opacity:0; }
 /* panels */
 .panel { z-index:10; background:#0c1016; }
+.panel.clear { background:linear-gradient(180deg, rgba(7,9,13,.78) 0%, rgba(7,9,13,.48) 45%, rgba(7,9,13,.78) 100%); }
+#tbk { position:absolute; inset:0; z-index:56; background:#000; opacity:0; pointer-events:none; }
+#twipe { position:absolute; left:0; top:-2px; width:1930px; height:1084px; z-index:57; opacity:0;
+  background:linear-gradient(90deg, #0a0d12 0%, #131a24 85%, #e8322e 99%, #e8322e 100%);
+  transform:translateX(-1990px); pointer-events:none; }
 .phead { position:absolute; left:110px; top:50%; transform:translateY(-50%); width:720px;
   font-size:80px; line-height:1.26; opacity:0; }
 .phline { width:230px; height:12px; background:#e8322e; margin-top:30px; transform-origin:left; transform:scaleX(0); }
@@ -128,14 +133,19 @@ em { font-style:normal; color:#e8322e; }
 <div id="n01o" class="clip qov" data-start="13.1" data-duration="5.9" data-track-index="10" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="stm" id="stm1">日本を愛する外国人が</div><div class="stm stm2" id="stm2"><em>"同じ外国人"</em>に怒っている<div class="uline" id="ul1"></div></div></div>
 <video id="n02v" class="clip bgv " data-start="25.4" data-duration="6.28" data-media-start="0.0" data-track-index="11" src="assets/bg/axel.mp4" muted playsinline></video>
 <div id="n02o" class="clip qov" data-start="25.4" data-duration="6.28" data-track-index="12" style=""><div class="qscrim"></div><div class="credit">引用: Axel in Japan</div><div class="lt" id="lt1"><div class="ltbar"></div><div class="ltbody"><div class="ltname">日本在住8年の外国人男性</div><div class="ltrole">Axel in Japan — 怒りの告白</div></div></div><div class="chips"><div class="chip" id="chip1">在住 8年</div><div class="chip" id="chip2">2児の父</div><div class="chip" id="chip3">会社経営</div></div></div>
-<div id="infop" class="clip panel" data-start="31.68" data-duration="11.33" data-track-index="13" style=""><div class="phead" id="ph1">怒るのは、<br>日本人だけじゃない<div class="phline" id="phl"></div></div><div class="irows"><div class="irow" id="i1"><div class="iic"><svg viewBox="0 0 48 48"><path d="M8 14h8l4-5h8l4 5h8a3 3 0 0 1 3 3v20a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V17a3 3 0 0 1 3-3z" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="27" r="7" fill="none" stroke="currentColor" stroke-width="3"/><line x1="6" y1="42" x2="42" y2="6" stroke="#e8322e" stroke-width="4"/></svg></div><div class="itx"><div class="iplace">祇園</div><div class="idesc">私道での撮影・立ち入りが禁止に</div></div></div><div class="irow" id="i2"><div class="iic"><svg viewBox="0 0 48 48"><path d="M4 40 L20 12 L24 18 L28 10 L44 40 Z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M18 16 L21 20 L25 14 L29 19" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></div><div class="itx"><div class="iplace">富士山</div><div class="idesc">ローソン前に「目隠し幕」設置</div></div></div><div class="irow" id="i3"><div class="iic"><svg viewBox="0 0 48 48"><rect x="10" y="6" width="28" height="30" rx="5" fill="none" stroke="currentColor" stroke-width="3"/><line x1="10" y1="22" x2="38" y2="22" stroke="currentColor" stroke-width="3"/><circle cx="17" cy="29" r="2.6" fill="currentColor"/><circle cx="31" cy="29" r="2.6" fill="currentColor"/><line x1="16" y1="42" x2="12" y2="36" stroke="currentColor" stroke-width="3"/><line x1="32" y1="42" x2="36" y2="36" stroke="currentColor" stroke-width="3"/></svg></div><div class="itx"><div class="iplace">鉄道会社</div><div class="idesc">車内ダンスに法的措置を検討へ</div></div></div><div class="tline" id="tl1"></div></div></div>
-<div id="diag" class="clip panel" data-start="43.01" data-duration="5.51" data-track-index="14" style=""><div class="dhead" id="dh1">怒りの矛先は <em>"同胞"</em>へ</div><div class="onode" id="on1" style="left:13%;top:22%"><svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="6.5" fill="currentColor"/><path d="M5 33 a13 11 0 0 1 26 0z" fill="currentColor"/></svg></div><div class="onode" id="on2" style="left:78%;top:16%"><svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="6.5" fill="currentColor"/><path d="M5 33 a13 11 0 0 1 26 0z" fill="currentColor"/></svg></div><div class="onode" id="on3" style="left:12%;top:68%"><svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="6.5" fill="currentColor"/><path d="M5 33 a13 11 0 0 1 26 0z" fill="currentColor"/></svg></div><div class="onode" id="on4" style="left:76%;top:72%"><svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="6.5" fill="currentColor"/><path d="M5 33 a13 11 0 0 1 26 0z" fill="currentColor"/></svg></div><div class="arrow" id="ar1" style="left:27%;top:33%;transform:rotate(35deg)"></div><div class="arrow" id="ar2" style="left:63%;top:29%;transform:rotate(145deg)"></div><div class="arrow" id="ar3" style="left:27%;top:63%;transform:rotate(-35deg)"></div><div class="arrow" id="ar4" style="left:62%;top:66%;transform:rotate(-145deg)"></div><div class="cnode" id="cn1"><span>迷惑<br>外国人</span></div><div class="dnote" id="dn1">日本を愛する外国人たち</div></div>
-<div id="titlebeat" class="clip panel tpanel" data-start="48.52" data-duration="7.19" data-track-index="15" style=""><div class="glow" id="tglow"></div><div class="ttl-wrap"><div class="ttl-top" id="tt1">なぜ、日本を愛する外国人は</div><div class="ttl-ghost ttl-r" id="ttr"><em>"同胞"</em>に怒るのか</div><div class="ttl-ghost ttl-b" id="ttb"><em>"同胞"</em>に怒るのか</div><div class="ttl-main" id="ttm"><em>"同胞"</em>に怒るのか</div><div class="ttl-sub" id="tts">4人の外国人の告白から 徹底深掘り</div></div></div>
-<div id="cardbeat" class="clip panel" data-start="55.71" data-duration="7.14" data-track-index="16" style=""><div class="chead" id="chd">4人の告白</div><div class="cgrid"><div class="card" id="c1"><img src="assets/img/card15.jpg" alt=""><div class="cshade"></div><div class="cnum">01</div><div class="clab">汚名を背負う者</div></div><div class="card" id="c2"><img src="assets/img/card17.jpg" alt=""><div class="cshade"></div><div class="cnum">02</div><div class="clab">警告する者</div></div><div class="card" id="c3"><img src="assets/img/card18.jpg" alt=""><div class="cshade"></div><div class="cnum">03</div><div class="clab">差別された者</div></div><div class="card" id="c4"><img src="assets/img/card19.jpg" alt=""><div class="cshade"></div><div class="cnum">04</div><div class="clab">絶望する者</div></div></div></div>
-<video id="ch1v" class="clip bgv " data-start="62.85" data-duration="7.29" data-media-start="0.0" data-track-index="17" src="assets/bg/dance.mp4" muted playsinline></video>
-<div id="ch1o" class="clip qov" data-start="62.85" data-duration="7.29" data-track-index="18" style=""><div class="ch1scrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="chno" id="chno">第 1 章</div><div class="chttl" id="chttl">ブームの光と影</div><div class="chsub" id="chsub">— 空前の訪日ブームは、何を連れてきたのか</div></div>
+<video id="infobgx" class="clip bgv " data-start="31.68" data-duration="11.33" data-media-start="0.0" data-track-index="13" src="assets/bg/bgx_info.mp4" muted playsinline></video>
+<div id="infop" class="clip panel clear" data-start="31.68" data-duration="11.33" data-track-index="14" style=""><div class="phead" id="ph1">怒るのは、<br>日本人だけじゃない<div class="phline" id="phl"></div></div><div class="irows"><div class="irow" id="i1"><div class="iic"><svg viewBox="0 0 48 48"><path d="M8 14h8l4-5h8l4 5h8a3 3 0 0 1 3 3v20a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V17a3 3 0 0 1 3-3z" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="27" r="7" fill="none" stroke="currentColor" stroke-width="3"/><line x1="6" y1="42" x2="42" y2="6" stroke="#e8322e" stroke-width="4"/></svg></div><div class="itx"><div class="iplace">祇園</div><div class="idesc">私道での撮影・立ち入りが禁止に</div></div></div><div class="irow" id="i2"><div class="iic"><svg viewBox="0 0 48 48"><path d="M4 40 L20 12 L24 18 L28 10 L44 40 Z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M18 16 L21 20 L25 14 L29 19" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></div><div class="itx"><div class="iplace">富士山</div><div class="idesc">ローソン前に「目隠し幕」設置</div></div></div><div class="irow" id="i3"><div class="iic"><svg viewBox="0 0 48 48"><rect x="10" y="6" width="28" height="30" rx="5" fill="none" stroke="currentColor" stroke-width="3"/><line x1="10" y1="22" x2="38" y2="22" stroke="currentColor" stroke-width="3"/><circle cx="17" cy="29" r="2.6" fill="currentColor"/><circle cx="31" cy="29" r="2.6" fill="currentColor"/><line x1="16" y1="42" x2="12" y2="36" stroke="currentColor" stroke-width="3"/><line x1="32" y1="42" x2="36" y2="36" stroke="currentColor" stroke-width="3"/></svg></div><div class="itx"><div class="iplace">鉄道会社</div><div class="idesc">車内ダンスに法的措置を検討へ</div></div></div><div class="tline" id="tl1"></div></div></div>
+<video id="diagbgx" class="clip bgv " data-start="43.01" data-duration="5.51" data-media-start="0.0" data-track-index="15" src="assets/bg/bgx_diagram.mp4" muted playsinline></video>
+<div id="diag" class="clip panel clear" data-start="43.01" data-duration="5.51" data-track-index="16" style=""><div class="dhead" id="dh1">怒りの矛先は <em>"同胞"</em>へ</div><div class="onode" id="on1" style="left:13%;top:22%"><svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="6.5" fill="currentColor"/><path d="M5 33 a13 11 0 0 1 26 0z" fill="currentColor"/></svg></div><div class="onode" id="on2" style="left:78%;top:16%"><svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="6.5" fill="currentColor"/><path d="M5 33 a13 11 0 0 1 26 0z" fill="currentColor"/></svg></div><div class="onode" id="on3" style="left:12%;top:68%"><svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="6.5" fill="currentColor"/><path d="M5 33 a13 11 0 0 1 26 0z" fill="currentColor"/></svg></div><div class="onode" id="on4" style="left:76%;top:72%"><svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="6.5" fill="currentColor"/><path d="M5 33 a13 11 0 0 1 26 0z" fill="currentColor"/></svg></div><div class="arrow" id="ar1" style="left:27%;top:33%;transform:rotate(35deg)"></div><div class="arrow" id="ar2" style="left:63%;top:29%;transform:rotate(145deg)"></div><div class="arrow" id="ar3" style="left:27%;top:63%;transform:rotate(-35deg)"></div><div class="arrow" id="ar4" style="left:62%;top:66%;transform:rotate(-145deg)"></div><div class="cnode" id="cn1"><span>迷惑<br>外国人</span></div><div class="dnote" id="dn1">日本を愛する外国人たち</div></div>
+<video id="titlebgx" class="clip bgv " data-start="48.52" data-duration="7.19" data-media-start="0.0" data-track-index="17" src="assets/bg/bgx_title.mp4" muted playsinline></video>
+<div id="titlebeat" class="clip panel tpanel clear" data-start="48.52" data-duration="7.19" data-track-index="18" style=""><div class="glow" id="tglow"></div><div class="ttl-wrap"><div class="ttl-top" id="tt1">なぜ、日本を愛する外国人は</div><div class="ttl-ghost ttl-r" id="ttr"><em>"同胞"</em>に怒るのか</div><div class="ttl-ghost ttl-b" id="ttb"><em>"同胞"</em>に怒るのか</div><div class="ttl-main" id="ttm"><em>"同胞"</em>に怒るのか</div><div class="ttl-sub" id="tts">4人の外国人の告白から 徹底深掘り</div></div></div>
+<div id="cardbeat" class="clip panel" data-start="55.71" data-duration="7.14" data-track-index="19" style=""><div class="chead" id="chd">4人の告白</div><div class="cgrid"><div class="card" id="c1"><img src="assets/img/card15.jpg" alt=""><div class="cshade"></div><div class="cnum">01</div><div class="clab">汚名を背負う者</div></div><div class="card" id="c2"><img src="assets/img/card17.jpg" alt=""><div class="cshade"></div><div class="cnum">02</div><div class="clab">警告する者</div></div><div class="card" id="c3"><img src="assets/img/card18.jpg" alt=""><div class="cshade"></div><div class="cnum">03</div><div class="clab">差別された者</div></div><div class="card" id="c4"><img src="assets/img/card19.jpg" alt=""><div class="cshade"></div><div class="cnum">04</div><div class="clab">絶望する者</div></div></div></div>
+<video id="ch1v" class="clip bgv " data-start="62.85" data-duration="7.29" data-media-start="0.0" data-track-index="20" src="assets/bg/dance.mp4" muted playsinline></video>
+<div id="ch1o" class="clip qov" data-start="62.85" data-duration="7.29" data-track-index="21" style=""><div class="ch1scrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="chno" id="chno">第 1 章</div><div class="chttl" id="chttl">ブームの光と影</div><div class="chsub" id="chsub">— 空前の訪日ブームは、何を連れてきたのか</div></div>
 <div id="scan"></div>
 <div id="vig"></div>
+<div id="tbk"></div>
+<div id="twipe"></div>
 <div id="gl1" class="gl"></div>
 <div id="gl2" class="gl"></div>
 <div id="gl3" class="gl"></div>
@@ -254,21 +264,12 @@ tl.fromTo("#tl1", {scaleY: 0}, {scaleY: 1, duration: 8.0, ease: "none", immediat
 tl.fromTo("#i1", {x: 70, opacity: 0}, {x: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 36.47);
 tl.fromTo("#i2", {x: 70, opacity: 0}, {x: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 38.07);
 tl.fromTo("#i3", {x: 70, opacity: 0}, {x: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 39.82);
-tl.set("#gl1", {opacity: 0.45, top: "32%", height: 22, x: -7}, 31.68);
-tl.set("#gl1", {top: "41%", height: 35, x: 31}, 31.747);
-tl.set("#gl1", {opacity: 0, x: 0}, 31.847);
-tl.set("#gl2", {opacity: 0.45, top: "68%", height: 24, x: 44}, 31.68);
-tl.set("#gl2", {top: "15%", height: 27, x: 32}, 31.747);
-tl.set("#gl2", {opacity: 0, x: 0}, 31.847);
-tl.set("#gl3", {opacity: 0.45, top: "22%", height: 49, x: 1}, 31.68);
-tl.set("#gl3", {top: "60%", height: 32, x: 36}, 31.747);
-tl.set("#gl3", {opacity: 0, x: 0}, 31.847);
-tl.set("#flash", {opacity: 0.51}, 31.68);
-tl.set("#flash", {opacity: 0.15}, 31.747);
-tl.set("#flash", {opacity: 0}, 31.813);
-tl.set("#stage", {x: -8}, 31.68);
-tl.set("#stage", {x: 8}, 31.747);
-tl.set("#stage", {x: 0}, 31.813);
+tl.set("#twipe", {opacity: 1}, 31.45);
+tl.fromTo("#twipe", {x: -1990}, {x: 0, duration: 0.23, ease: "power1.in", immediateRender: false}, 31.45);
+tl.fromTo("#twipe", {x: 0}, {x: 1990, duration: 0.3, ease: "power2.in", immediateRender: false}, 31.7);
+tl.set("#twipe", {opacity: 0, x: -1990}, 32.03);
+tl.set("#tbk", {opacity: 1}, 43.0);
+tl.to("#tbk", {opacity: 0, duration: 0.7, ease: "power2.out"}, 43.03);
 tl.fromTo("#dh1", {y: -30, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 43.26);
 tl.fromTo("#cn1", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.6)", immediateRender: false}, 43.56);
 tl.fromTo("#on1", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)", immediateRender: false}, 43.96);
@@ -281,14 +282,14 @@ tl.fromTo("#ar3", {opacity: 0}, {opacity: 1, duration: 0.25, ease: "power2.out",
 tl.fromTo("#ar4", {opacity: 0}, {opacity: 1, duration: 0.25, ease: "power2.out", immediateRender: false}, 44.86);
 tl.fromTo("#dn1", {opacity: 0}, {opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 44.01);
 tl.to("#cn1", {scale: 1.07, duration: 0.38, ease: "sine.inOut", repeat: 5, yoyo: true}, 45.11);
-tl.set("#gl1", {opacity: 0.75, top: "53%", height: 23, x: -49}, 48.52);
-tl.set("#gl1", {top: "34%", height: 19, x: -25}, 48.587);
+tl.set("#gl1", {opacity: 0.75, top: "32%", height: 22, x: -7}, 48.52);
+tl.set("#gl1", {top: "41%", height: 35, x: 31}, 48.587);
 tl.set("#gl1", {opacity: 0, x: 0}, 48.687);
-tl.set("#gl2", {opacity: 0.75, top: "34%", height: 14, x: 54}, 48.52);
-tl.set("#gl2", {top: "34%", height: 26, x: -24}, 48.587);
+tl.set("#gl2", {opacity: 0.75, top: "68%", height: 24, x: 44}, 48.52);
+tl.set("#gl2", {top: "15%", height: 27, x: 32}, 48.587);
 tl.set("#gl2", {opacity: 0, x: 0}, 48.687);
-tl.set("#gl3", {opacity: 0.75, top: "41%", height: 23, x: 37}, 48.52);
-tl.set("#gl3", {top: "5%", height: 33, x: 66}, 48.587);
+tl.set("#gl3", {opacity: 0.75, top: "22%", height: 49, x: 1}, 48.52);
+tl.set("#gl3", {top: "60%", height: 32, x: 36}, 48.587);
 tl.set("#gl3", {opacity: 0, x: 0}, 48.687);
 tl.set("#flash", {opacity: 0.85}, 48.52);
 tl.set("#flash", {opacity: 0.25}, 48.587);
@@ -308,14 +309,14 @@ tl.set("#ttr", {opacity: 0.45, x: -10}, 52.32);
 tl.set("#ttb", {opacity: 0.45, x: 10}, 52.32);
 tl.set("#ttr", {opacity: 0, x: -6}, 52.45);
 tl.set("#ttb", {opacity: 0, x: 6}, 52.45);
-tl.set("#gl1", {opacity: 0.38, top: "83%", height: 34, x: -38}, 52.32);
-tl.set("#gl1", {top: "77%", height: 13, x: 61}, 52.387);
+tl.set("#gl1", {opacity: 0.38, top: "53%", height: 23, x: -49}, 52.32);
+tl.set("#gl1", {top: "34%", height: 19, x: -25}, 52.387);
 tl.set("#gl1", {opacity: 0, x: 0}, 52.487);
-tl.set("#gl2", {opacity: 0.38, top: "63%", height: 39, x: 31}, 52.32);
-tl.set("#gl2", {top: "76%", height: 35, x: 32}, 52.387);
+tl.set("#gl2", {opacity: 0.38, top: "34%", height: 14, x: 54}, 52.32);
+tl.set("#gl2", {top: "34%", height: 26, x: -24}, 52.387);
 tl.set("#gl2", {opacity: 0, x: 0}, 52.487);
-tl.set("#gl3", {opacity: 0.38, top: "18%", height: 54, x: 32}, 52.32);
-tl.set("#gl3", {top: "66%", height: 22, x: -55}, 52.387);
+tl.set("#gl3", {opacity: 0.38, top: "41%", height: 23, x: 37}, 52.32);
+tl.set("#gl3", {top: "5%", height: 33, x: 66}, 52.387);
 tl.set("#gl3", {opacity: 0, x: 0}, 52.487);
 tl.set("#flash", {opacity: 0.42}, 52.32);
 tl.set("#flash", {opacity: 0.12}, 52.387);
@@ -323,34 +324,23 @@ tl.set("#flash", {opacity: 0}, 52.453);
 tl.set("#stage", {x: -7}, 52.32);
 tl.set("#stage", {x: 7}, 52.387);
 tl.set("#stage", {x: 0}, 52.453);
-tl.set("#gl1", {opacity: 0.52, top: "13%", height: 42, x: -29}, 55.71);
-tl.set("#gl1", {top: "31%", height: 31, x: -42}, 55.777);
-tl.set("#gl1", {opacity: 0, x: 0}, 55.877);
-tl.set("#gl2", {opacity: 0.52, top: "81%", height: 20, x: -70}, 55.71);
-tl.set("#gl2", {top: "11%", height: 44, x: -32}, 55.777);
-tl.set("#gl2", {opacity: 0, x: 0}, 55.877);
-tl.set("#gl3", {opacity: 0.52, top: "17%", height: 53, x: -64}, 55.71);
-tl.set("#gl3", {top: "51%", height: 23, x: -52}, 55.777);
-tl.set("#gl3", {opacity: 0, x: 0}, 55.877);
-tl.set("#flash", {opacity: 0.59}, 55.71);
-tl.set("#flash", {opacity: 0.17}, 55.777);
-tl.set("#flash", {opacity: 0}, 55.843);
-tl.set("#stage", {x: -9}, 55.71);
-tl.set("#stage", {x: 9}, 55.777);
-tl.set("#stage", {x: 0}, 55.843);
+tl.set("#twipe", {opacity: 1}, 55.48);
+tl.fromTo("#twipe", {x: -1990}, {x: 0, duration: 0.23, ease: "power1.in", immediateRender: false}, 55.48);
+tl.fromTo("#twipe", {x: 0}, {x: 1990, duration: 0.3, ease: "power2.in", immediateRender: false}, 55.73);
+tl.set("#twipe", {opacity: 0, x: -1990}, 56.06);
 tl.fromTo("#chd", {opacity: 0}, {opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 55.91);
 tl.fromTo("#c1", {y: 90, opacity: 0, rotation: 1.5}, {y: 0, opacity: 1, rotation: 0, duration: 0.5, ease: "power3.out", immediateRender: false}, 56.16);
 tl.fromTo("#c2", {y: 90, opacity: 0, rotation: 1.5}, {y: 0, opacity: 1, rotation: 0, duration: 0.5, ease: "power3.out", immediateRender: false}, 57.61);
 tl.fromTo("#c3", {y: 90, opacity: 0, rotation: 1.5}, {y: 0, opacity: 1, rotation: 0, duration: 0.5, ease: "power3.out", immediateRender: false}, 59.01);
 tl.fromTo("#c4", {y: 90, opacity: 0, rotation: 1.5}, {y: 0, opacity: 1, rotation: 0, duration: 0.5, ease: "power3.out", immediateRender: false}, 60.46);
-tl.set("#gl1", {opacity: 0.75, top: "83%", height: 23, x: -6}, 62.85);
-tl.set("#gl1", {top: "53%", height: 33, x: 18}, 62.917);
+tl.set("#gl1", {opacity: 0.75, top: "83%", height: 34, x: -38}, 62.85);
+tl.set("#gl1", {top: "77%", height: 13, x: 61}, 62.917);
 tl.set("#gl1", {opacity: 0, x: 0}, 63.017);
-tl.set("#gl2", {opacity: 0.75, top: "65%", height: 21, x: 54}, 62.85);
-tl.set("#gl2", {top: "20%", height: 40, x: 49}, 62.917);
+tl.set("#gl2", {opacity: 0.75, top: "63%", height: 39, x: 31}, 62.85);
+tl.set("#gl2", {top: "76%", height: 35, x: 32}, 62.917);
 tl.set("#gl2", {opacity: 0, x: 0}, 63.017);
-tl.set("#gl3", {opacity: 0.75, top: "66%", height: 19, x: -34}, 62.85);
-tl.set("#gl3", {top: "44%", height: 31, x: -44}, 62.917);
+tl.set("#gl3", {opacity: 0.75, top: "18%", height: 54, x: 32}, 62.85);
+tl.set("#gl3", {top: "66%", height: 22, x: -55}, 62.917);
 tl.set("#gl3", {opacity: 0, x: 0}, 63.017);
 tl.set("#flash", {opacity: 0.85}, 62.85);
 tl.set("#flash", {opacity: 0.25}, 62.917);
