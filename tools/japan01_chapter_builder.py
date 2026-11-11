@@ -112,6 +112,26 @@ def glitch(t, strength=1.0):
     cue("glitch", t, strength)
 
 
+# モノクロ線画SVGアイコン (いらすとや禁止の代替。op の .iic と同トーン)
+ICONS = {
+    "torii": ('<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3">'
+              '<path d="M5 13 Q24 7 43 13"/><line x1="11" y1="11" x2="11" y2="42"/>'
+              '<line x1="37" y1="11" x2="37" y2="42"/><line x1="8" y1="21" x2="40" y2="21"/>'
+              '<line x1="24" y1="13" x2="24" y2="21"/></svg>'),
+    "train": ('<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3">'
+              '<rect x="10" y="6" width="28" height="30" rx="5"/>'
+              '<line x1="10" y1="22" x2="38" y2="22"/>'
+              '<circle cx="17" cy="29" r="2.6" fill="currentColor"/><circle cx="31" cy="29" r="2.6" fill="currentColor"/>'
+              '<line x1="16" y1="42" x2="12" y2="36"/><line x1="32" y1="42" x2="36" y2="36"/></svg>'),
+    "camera": ('<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3">'
+               '<path d="M8 14h8l4-5h8l4 5h8a3 3 0 0 1 3 3v20a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V17a3 3 0 0 1 3-3z"/>'
+               '<circle cx="24" cy="27" r="7"/></svg>'),
+    "coin": ('<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3">'
+             '<circle cx="24" cy="24" r="17"/><path d="M17 14 L24 24 L31 14"/>'
+             '<line x1="24" y1="24" x2="24" y2="35"/><line x1="18" y1="27" x2="30" y2="27"/>'
+             '<line x1="18" y1="32" x2="30" y2="32"/></svg>'),
+}
+
 GRADE0 = {
     "gray": "grayscale(0) saturate(1) contrast(1) brightness(1)",
     "warm": "saturate(1) sepia(0) contrast(1) brightness(1)",
@@ -206,30 +226,96 @@ def sc_broll(s):
     glitch(t0, 0.8)
 
 
+# kick テキストアニメ輪番 (v5: 「中央テキスト+赤下線」の多用をやめ、参考動画の表現を移植)
+# band=赤帯白抜きスイープ / serif=明朝+巨大漢字ゴースト+ブラーイン / typeline=タイプライター
+# stamp=判子パンチ / barleft=左赤バー+マスクせり上がり / under=従来の赤下線(文字ステガー化)
+KICK_STYLES = ["band", "serif", "typeline", "stamp", "barleft", "under"]
+_ks_i = [0]
+
+
+def _chars(txt):
+    return None if "<" in txt else list(txt)
+
+
 def sc_kick(s):
     t0, t1 = s["start"], s["end"]
     k = s.get("kicker")
     if not k:
         raise SystemExit(f"{EP}:{s['id']}: kick には必ず kicker テキストを付ける(赤線だけの画面を禁止)")
-    # flex縦積みでテキスト直下に赤線を密着させる(距離ズレ対策)
-    el_div(f'{s["id"]}p', t0, t1, "panel", (
-        f'<div class="kstack"><div class="kick" id="{s["id"]}k">{k}</div>'
-        f'<div class="kline" id="{s["id"]}kl"></div></div>'))
-    fromto(t0 + 0.25, f'#{s["id"]}k', "y: 20, opacity: 0", "y: 0, opacity: 1", 0.45, "power3.out")
-    cue("whoosh", t0 + 0.25, 0.8)
-    fromto(t0 + 0.3, f'#{s["id"]}kl', "scaleX: 0", "scaleX: 1", 0.5, "power2.inOut")
+    eid = s["id"]
+    style = s.get("kstyle") or KICK_STYLES[_ks_i[0] % len(KICK_STYLES)]
+    _ks_i[0] += 1
+    if style == "band":  # 参考A: キーワードを色ベタ帯に白抜き
+        el_div(f"{eid}p", t0, t1, "panel",
+               f'<div class="kband" id="{eid}b"><span id="{eid}k">{k}</span></div>')
+        fromto(t0 + 0.25, f"#{eid}b", "scaleX: 0", "scaleX: 1", 0.4, "power3.inOut")
+        fromto(t0 + 0.55, f"#{eid}k", "opacity: 0", "opacity: 1", 0.25, "power2.out")
+        cue("whoosh", t0 + 0.25, 0.8)
+        cue("slam", t0 + 0.62, 0.6)
+    elif style == "serif":  # 参考A: 極太明朝+巨大漢字ゴースト
+        g = next((c for c in k if "一" <= c <= "鿿"), None)
+        ghost = f'<div class="kghost" id="{eid}g">{g}</div>' if g else ""
+        el_div(f"{eid}p", t0, t1, "panel", ghost + f'<div class="kserif" id="{eid}k">{k}</div>')
+        if g:
+            fromto(t0 + 0.2, f"#{eid}g", "scale: 1.6, opacity: 0", "scale: 1, opacity: 0.13", 1.0, "power2.out")
+        fromto(t0 + 0.3, f"#{eid}k",
+               'opacity: 0, letterSpacing: "0.5em", filter: "blur(14px)"',
+               'opacity: 1, letterSpacing: "0.1em", filter: "blur(0px)"', 0.8, "power2.out")
+        cue("sub", t0 + 0.3, 0.8)
+    elif style == "typeline" and _chars(k):  # タイプライター+赤カーソル
+        chars = _chars(k)
+        spans = "".join(f'<span class="kch" id="{eid}c{i}">{c}</span>' for i, c in enumerate(chars))
+        el_div(f"{eid}p", t0, t1, "panel",
+               f'<div class="ktype" id="{eid}k">{spans}<span class="kcaret" id="{eid}cr"></span></div>')
+        n = len(chars)
+        step = min(0.07, 1.1 / max(n, 1))
+        for i in range(n):
+            setv(t0 + 0.35 + i * step, f"#{eid}c{i}", "opacity: 1")
+            if i % 3 == 0:
+                cue("tick", t0 + 0.35 + i * step, 0.35)
+        for j in range(6):  # カーソル点滅(有限)
+            setv(t0 + 0.4 + n * step + j * 0.4, f"#{eid}cr", f"opacity: {1 if j % 2 == 0 else 0}")
+    elif style == "stamp":  # 判子パンチ
+        el_div(f"{eid}p", t0, t1, "panel", f'<div class="kstamp" id="{eid}k">{k}</div>')
+        fromto(t0 + 0.3, f"#{eid}k", "scale: 2.0, opacity: 0, rotation: -3",
+               "scale: 1, opacity: 1, rotation: -3", 0.26, "power4.in")
+        cue("slam", t0 + 0.56, 1.0)
+    elif style == "barleft":  # 左赤バー+マスクせり上がり
+        el_div(f"{eid}p", t0, t1, "panel", (
+            f'<div class="kbar" id="{eid}bb"></div>'
+            f'<div class="kmask"><div class="kleft" id="{eid}k">{k}</div></div>'))
+        fromto(t0 + 0.2, f"#{eid}bb", "scaleY: 0", "scaleY: 1", 0.35, "power3.out")
+        setv(t0 + 0.01, f"#{eid}k", "y: 260")  # マスク外へ(CSS transformとの合成を避けGSAPのみで制御)
+        tw(t0 + 0.35, f'tl.to("#{eid}k", {{y: 0, duration: 0.5, ease: "power3.out"}}, %T%);')
+        cue("whoosh", t0 + 0.3, 0.7)
+    else:  # under: 従来の赤下線(文字ステガー)
+        chars = _chars(k)
+        inner_k = "".join(f'<span class="kch2" id="{eid}c{i}">{c}</span>'
+                          for i, c in enumerate(chars)) if chars else k
+        el_div(f"{eid}p", t0, t1, "panel", (
+            f'<div class="kstack"><div class="kick" id="{eid}k">{inner_k}</div>'
+            f'<div class="kline" id="{eid}kl"></div></div>'))
+        if chars:
+            setv(t0 + 0.01, f"#{eid}k", "opacity: 1")
+            step = min(0.055, 0.9 / max(len(chars), 1))
+            for i in range(len(chars)):
+                fromto(t0 + 0.25 + i * step, f"#{eid}c{i}", "y: 22, opacity: 0", "y: 0, opacity: 1", 0.3, "power3.out")
+        else:
+            fromto(t0 + 0.25, f"#{eid}k", "y: 20, opacity: 0", "y: 0, opacity: 1", 0.45, "power3.out")
+        cue("whoosh", t0 + 0.25, 0.8)
+        fromto(t0 + 0.3, f"#{eid}kl", "scaleX: 0", "scaleX: 1", 0.5, "power2.inOut")
 
 
 def sc_cases(s):  # 事例リストパネル (行はナレ尺に均等同期)
     t0, t1 = s["start"], s["end"]
     eid = s["id"]
     rows = s["rows"]
-    icons = s.get("illus_rows")
+    icons = s.get("icon_rows")
     if icons:
-        assert len(icons) == len(rows), f"{EP}:{eid} illus_rows{len(icons)} != rows{len(rows)}"
+        assert len(icons) == len(rows), f"{EP}:{eid} icon_rows{len(icons)} != rows{len(rows)}"
     rh = "".join(
         f'<div class="crow" id="{eid}r{i}">'
-        + (f'<img class="cicon" src="assets/img/{icons[i]}.png" alt="">' if icons else "")
+        + (f'<div class="cic">{ICONS[icons[i]]}</div>' if icons else "")
         + f'<span class="ctag">{tag}</span><span class="ctx">{tx}</span></div>'
         for i, (tag, tx) in enumerate(rows))
     el_div(f"{eid}p", t0, t1, "panel", (
@@ -488,28 +574,7 @@ KIND = {"broll": sc_broll, "kick": sc_kick, "q": sc_q, "nv": sc_nv, "diagram": s
         "ask": sc_ask, "end": sc_end}
 
 
-# ============================================================ v4: イラスト / トランジション
-def illus_block(s):
-    il = s.get("illus")
-    if not il:
-        return
-    t0, t1 = s["start"], s["end"]
-    pid = s["id"]
-    inner = "".join(
-        f'<img class="illus" id="{pid}il{i}" src="assets/img/{n}.png" style="{st}" alt="">'
-        for i, (n, st, _dt) in enumerate(il))
-    el_div(f"{pid}ilw", t0, t1, "ilov", inner)
-    for i, (_n, _st, dt) in enumerate(il):
-        fromto(t0 + dt, f"#{pid}il{i}", "scale: 0.55, opacity: 0, rotation: -5",
-               "scale: 1, opacity: 1, rotation: 0", 0.45, "back.out(1.7)")
-        cue("pop", t0 + dt, 0.7)
-        fl0 = t0 + dt + 0.55
-        n_rep = int((t1 - fl0) / 1.8) - 1
-        if n_rep >= 1:
-            tw(fl0, f'tl.to("#{pid}il{i}", {{y: -14, duration: 1.8, ease: "sine.inOut", '
-                    f'repeat: {n_rep}, yoyo: true}}, %T%);')
-
-
+# ============================================================ v4: トランジション
 TR_DEF = {"msg": "zoom", "kick": "flash", "cases": "wipe", "pct": "wipe", "counter": "zoom",
           "diagram": "fade", "news": "slide", "journey": "fade", "gion": "fade",
           "recap4": "wipe", "recap4b": "none", "ask": "fade", "end": "fade",
@@ -556,7 +621,6 @@ for s in SC:
     if has_bgx:
         el_video(f'{s["id"]}bgx', s["start"], s["end"], f'bgx_{s["id"]}.mp4', 0.0)
     KIND[s["kind"]](s)
-    illus_block(s)
     CUR_BGX[0] = None
     tr = s.get("tr")
     if not tr:
@@ -575,6 +639,8 @@ tw(COMP - 1.15, 'tl.to("#stage", {opacity: 0, duration: 0.95, ease: "power1.in"}
 CSS = """
 @font-face { font-family:'NotoB'; src:url('assets/fonts/NotoSansJP-Black.otf') format('opentype'); }
 @font-face { font-family:'NotoBd'; src:url('assets/fonts/NotoSansJP-Bold.otf') format('opentype'); }
+@font-face { font-family:'SerifJP'; src:url('assets/fonts/NotoSerifJP.ttf') format('truetype');
+  font-weight:100 900; }
 * { margin:0; padding:0; box-sizing:border-box; }
 html,body { background:#000; }
 #root { position:relative; width:1920px; height:1080px; overflow:hidden;
@@ -609,10 +675,9 @@ em { font-style:normal; color:#e8322e; }
 .panel { z-index:10; background:#0c1016; }
 .tpanel { background:radial-gradient(ellipse 90% 80% at 50% 42%, #10151d 0%, #07080b 70%); }
 .panel.clear { background:linear-gradient(180deg, rgba(7,9,13,.78) 0%, rgba(7,9,13,.48) 45%, rgba(7,9,13,.78) 100%); }
-.ilov { z-index:12; }
-.illus { position:absolute; opacity:0; filter:drop-shadow(0 10px 28px rgba(0,0,0,.65)); }
-.cicon { width:92px; height:92px; object-fit:contain; flex:none;
-  filter:drop-shadow(0 4px 14px rgba(0,0,0,.5)); }
+.cic { width:96px; height:96px; flex:none; color:#ffb648; background:rgba(18,24,37,.85);
+  border:3px solid #232c3d; border-radius:16px; display:flex; align-items:center; justify-content:center; }
+.cic svg { width:56px; height:56px; }
 #tbk { position:absolute; inset:0; z-index:56; background:#000; opacity:0; pointer-events:none; }
 #twipe { position:absolute; left:0; top:-2px; width:1930px; height:1084px; z-index:57; opacity:0;
   background:linear-gradient(90deg, #0a0d12 0%, #131a24 85%, #e8322e 99%, #e8322e 100%);
@@ -624,6 +689,28 @@ em { font-style:normal; color:#e8322e; }
 .kick { text-align:center; font-size:84px; line-height:1.35; letter-spacing:.04em; opacity:0;
   text-shadow:0 6px 40px rgba(0,0,0,.8); }
 .kline { width:460px; height:10px; background:#e8322e; transform:scaleX(0); }
+.kch2 { display:inline-block; opacity:0; }
+/* kick 輪番スタイル (v5) */
+.kband { position:absolute; left:0; bottom:38%; background:#e8322e; padding:26px 96px 30px 74px;
+  transform-origin:left; transform:scaleX(0); box-shadow:0 10px 50px rgba(0,0,0,.55); }
+.kband span { font-size:74px; color:#fff; opacity:0; letter-spacing:.06em; white-space:nowrap; }
+.kghost { position:absolute; left:50%; top:50%; transform:translate(-50%,-54%);
+  font-family:'SerifJP'; font-weight:900; font-size:560px; color:#e8322e; opacity:0; }
+.kserif { position:absolute; left:0; right:0; top:42%; text-align:center; font-family:'SerifJP';
+  font-weight:900; font-size:92px; letter-spacing:.1em; opacity:0;
+  text-shadow:0 6px 40px rgba(0,0,0,.85); }
+.ktype { position:absolute; left:0; right:0; top:44%; text-align:center; font-size:80px;
+  letter-spacing:.06em; white-space:nowrap; }
+.kch { opacity:0; }
+.kcaret { display:inline-block; width:8px; height:74px; background:#e8322e; margin-left:14px;
+  vertical-align:-6px; }
+.kstamp { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) rotate(-3deg);
+  font-size:90px; color:#f2f1ec; border:8px solid #e8322e; padding:22px 58px; border-radius:8px;
+  background:rgba(232,50,46,.10); opacity:0; white-space:nowrap; }
+.kbar { position:absolute; left:150px; top:37%; width:14px; height:230px; background:#e8322e;
+  transform-origin:top; transform:scaleY(0); }
+.kmask { position:absolute; left:204px; right:100px; top:37%; height:240px; overflow:hidden; }
+.kleft { font-size:78px; line-height:1.32; padding-top:34px; }
 /* cases */
 .crows { position:absolute; left:320px; right:280px; top:290px; }
 .crow { display:flex; align-items:center; gap:36px; margin-bottom:46px; opacity:0; }
@@ -687,14 +774,15 @@ em { font-style:normal; color:#e8322e; }
 .signic { width:150px; height:150px; color:#14161b; } .signic svg { width:100%; height:100%; }
 .signtx { font-size:64px; line-height:1.3; }
 .signtx span { color:#b8352f; font-size:54px; }
-/* msg */
-.msgt { position:absolute; left:0; right:0; top:34%; text-align:center; font-size:128px; line-height:1.3; opacity:0; }
+/* msg (テーゼは極太明朝でドキュメンタリー調) */
+.msgt { position:absolute; left:0; right:0; top:34%; text-align:center; font-size:122px; line-height:1.34;
+  font-family:'SerifJP'; font-weight:900; opacity:0; }
 .msgby { position:absolute; left:0; right:0; top:72%; text-align:center; font-family:'NotoBd';
   font-size:38px; color:#ffb648; opacity:0; }
 /* chapter card */
 .chno { position:absolute; left:150px; top:330px; font-size:56px; color:#e8322e; letter-spacing:.4em; opacity:0; }
 .chttl { position:absolute; left:144px; top:404px; font-size:132px; letter-spacing:.03em;
-  text-shadow:0 8px 50px rgba(0,0,0,.85); opacity:0; }
+  font-family:'SerifJP'; font-weight:900; text-shadow:0 8px 50px rgba(0,0,0,.85); opacity:0; }
 .chsub { position:absolute; left:152px; top:608px; font-family:'NotoBd'; font-size:38px;
   color:#ffb648; text-shadow:0 2px 14px rgba(0,0,0,.95); opacity:0; }
 /* recap cards */

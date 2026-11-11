@@ -5,6 +5,8 @@
 <style>
 @font-face { font-family:'NotoB'; src:url('assets/fonts/NotoSansJP-Black.otf') format('opentype'); }
 @font-face { font-family:'NotoBd'; src:url('assets/fonts/NotoSansJP-Bold.otf') format('opentype'); }
+@font-face { font-family:'SerifJP'; src:url('assets/fonts/NotoSerifJP.ttf') format('truetype');
+  font-weight:100 900; }
 * { margin:0; padding:0; box-sizing:border-box; }
 html,body { background:#000; }
 #root { position:relative; width:1920px; height:1080px; overflow:hidden;
@@ -39,10 +41,9 @@ em { font-style:normal; color:#e8322e; }
 .panel { z-index:10; background:#0c1016; }
 .tpanel { background:radial-gradient(ellipse 90% 80% at 50% 42%, #10151d 0%, #07080b 70%); }
 .panel.clear { background:linear-gradient(180deg, rgba(7,9,13,.78) 0%, rgba(7,9,13,.48) 45%, rgba(7,9,13,.78) 100%); }
-.ilov { z-index:12; }
-.illus { position:absolute; opacity:0; filter:drop-shadow(0 10px 28px rgba(0,0,0,.65)); }
-.cicon { width:92px; height:92px; object-fit:contain; flex:none;
-  filter:drop-shadow(0 4px 14px rgba(0,0,0,.5)); }
+.cic { width:96px; height:96px; flex:none; color:#ffb648; background:rgba(18,24,37,.85);
+  border:3px solid #232c3d; border-radius:16px; display:flex; align-items:center; justify-content:center; }
+.cic svg { width:56px; height:56px; }
 #tbk { position:absolute; inset:0; z-index:56; background:#000; opacity:0; pointer-events:none; }
 #twipe { position:absolute; left:0; top:-2px; width:1930px; height:1084px; z-index:57; opacity:0;
   background:linear-gradient(90deg, #0a0d12 0%, #131a24 85%, #e8322e 99%, #e8322e 100%);
@@ -54,6 +55,28 @@ em { font-style:normal; color:#e8322e; }
 .kick { text-align:center; font-size:84px; line-height:1.35; letter-spacing:.04em; opacity:0;
   text-shadow:0 6px 40px rgba(0,0,0,.8); }
 .kline { width:460px; height:10px; background:#e8322e; transform:scaleX(0); }
+.kch2 { display:inline-block; opacity:0; }
+/* kick 輪番スタイル (v5) */
+.kband { position:absolute; left:0; bottom:38%; background:#e8322e; padding:26px 96px 30px 74px;
+  transform-origin:left; transform:scaleX(0); box-shadow:0 10px 50px rgba(0,0,0,.55); }
+.kband span { font-size:74px; color:#fff; opacity:0; letter-spacing:.06em; white-space:nowrap; }
+.kghost { position:absolute; left:50%; top:50%; transform:translate(-50%,-54%);
+  font-family:'SerifJP'; font-weight:900; font-size:560px; color:#e8322e; opacity:0; }
+.kserif { position:absolute; left:0; right:0; top:42%; text-align:center; font-family:'SerifJP';
+  font-weight:900; font-size:92px; letter-spacing:.1em; opacity:0;
+  text-shadow:0 6px 40px rgba(0,0,0,.85); }
+.ktype { position:absolute; left:0; right:0; top:44%; text-align:center; font-size:80px;
+  letter-spacing:.06em; white-space:nowrap; }
+.kch { opacity:0; }
+.kcaret { display:inline-block; width:8px; height:74px; background:#e8322e; margin-left:14px;
+  vertical-align:-6px; }
+.kstamp { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) rotate(-3deg);
+  font-size:90px; color:#f2f1ec; border:8px solid #e8322e; padding:22px 58px; border-radius:8px;
+  background:rgba(232,50,46,.10); opacity:0; white-space:nowrap; }
+.kbar { position:absolute; left:150px; top:37%; width:14px; height:230px; background:#e8322e;
+  transform-origin:top; transform:scaleY(0); }
+.kmask { position:absolute; left:204px; right:100px; top:37%; height:240px; overflow:hidden; }
+.kleft { font-size:78px; line-height:1.32; padding-top:34px; }
 /* cases */
 .crows { position:absolute; left:320px; right:280px; top:290px; }
 .crow { display:flex; align-items:center; gap:36px; margin-bottom:46px; opacity:0; }
@@ -117,14 +140,15 @@ em { font-style:normal; color:#e8322e; }
 .signic { width:150px; height:150px; color:#14161b; } .signic svg { width:100%; height:100%; }
 .signtx { font-size:64px; line-height:1.3; }
 .signtx span { color:#b8352f; font-size:54px; }
-/* msg */
-.msgt { position:absolute; left:0; right:0; top:34%; text-align:center; font-size:128px; line-height:1.3; opacity:0; }
+/* msg (テーゼは極太明朝でドキュメンタリー調) */
+.msgt { position:absolute; left:0; right:0; top:34%; text-align:center; font-size:122px; line-height:1.34;
+  font-family:'SerifJP'; font-weight:900; opacity:0; }
 .msgby { position:absolute; left:0; right:0; top:72%; text-align:center; font-family:'NotoBd';
   font-size:38px; color:#ffb648; opacity:0; }
 /* chapter card */
 .chno { position:absolute; left:150px; top:330px; font-size:56px; color:#e8322e; letter-spacing:.4em; opacity:0; }
 .chttl { position:absolute; left:144px; top:404px; font-size:132px; letter-spacing:.03em;
-  text-shadow:0 8px 50px rgba(0,0,0,.85); opacity:0; }
+  font-family:'SerifJP'; font-weight:900; text-shadow:0 8px 50px rgba(0,0,0,.85); opacity:0; }
 .chsub { position:absolute; left:152px; top:608px; font-family:'NotoBd'; font-size:38px;
   color:#ffb648; text-shadow:0 2px 14px rgba(0,0,0,.95); opacity:0; }
 /* recap cards */
@@ -153,9 +177,9 @@ em { font-style:normal; color:#e8322e; }
 <div id="root" data-composition-id="root" data-width="1920" data-height="1080" data-start="0" data-duration="201.29">
 <div id="stage">
 <video id="s_th4bgx" class="clip bgv " data-start="0.6" data-duration="7.23" data-media-start="0.0" data-track-index="1" src="assets/bg/bgx_s_th4.mp4" muted playsinline></video>
-<div id="s_th4m" class="clip panel tpanel clear" data-start="0.6" data-duration="7.23" data-track-index="2" style=""><div class="glow" id="s_th4g"></div><div class="msgt" id="s_th4t">それは <em>当事者</em>の<br>いかり</div></div>
+<div id="s_th4m" class="clip panel tpanel clear" data-start="0.6" data-duration="7.23" data-track-index="2" style=""><div class="glow" id="s_th4g"></div><div class="msgt" id="s_th4t">それは <em>当事者</em>の<br>怒り</div></div>
 <video id="s_k41bgx" class="clip bgv " data-start="7.83" data-duration="4.07" data-media-start="0.0" data-track-index="3" src="assets/bg/bgx_s_k41.mp4" muted playsinline></video>
-<div id="s_k41p" class="clip panel clear" data-start="7.83" data-duration="4.07" data-track-index="4" style=""><div class="kstack"><div class="kick" id="s_k41k">ここは、俺の家だ</div><div class="kline" id="s_k41kl"></div></div></div>
+<div id="s_k41p" class="clip panel clear" data-start="7.83" data-duration="4.07" data-track-index="4" style=""><div class="kband" id="s_k41b"><span id="s_k41k">ここは、俺の家だ</span></div></div>
 <video id="a11v" class="clip bgv " data-start="11.9" data-duration="6.23" data-media-start="0.6" data-track-index="5" src="assets/bg/a11.mp4" muted playsinline></video>
 <div id="a11o" class="clip qov" data-start="11.9" data-duration="6.23" data-track-index="6" style=""><div class="qscrim"></div><div class="credit">引用: Axel in Japan</div><div class="qcap" id="a11cap0">ここは俺の<em>"家"</em>なんだ</div><div class="qcap" id="a11cap1">俺たちはここで 家族を育てている</div></div>
 <video id="a9v" class="clip bgv " data-start="18.13" data-duration="8.85" data-media-start="0.6" data-track-index="7" src="assets/bg/a9.mp4" muted playsinline></video>
@@ -163,32 +187,32 @@ em { font-style:normal; color:#e8322e; }
 <video id="a13v" class="clip bgv " data-start="26.98" data-duration="10.22" data-media-start="0.6" data-track-index="9" src="assets/bg/a13.mp4" muted playsinline></video>
 <div id="a13o" class="clip qov" data-start="26.98" data-duration="10.22" data-track-index="10" style=""><div class="qscrim"></div><div class="credit">引用: Axel in Japan</div><div class="qcap" id="a13cap0">それは"1人"であって <em>"あの人たち"</em>じゃない</div><div class="qcap" id="a13cap1">仲間たちへ—— <em>基準を下げるな</em></div></div>
 <video id="s_k42bgx" class="clip bgv " data-start="37.2" data-duration="4.84" data-media-start="0.0" data-track-index="11" src="assets/bg/bgx_s_k42.mp4" muted playsinline></video>
-<div id="s_k42p" class="clip panel clear" data-start="37.2" data-duration="4.84" data-track-index="12" style=""><div class="kstack"><div class="kick" id="s_k42k">彼女の、原点</div><div class="kline" id="s_k42kl"></div></div></div>
+<div id="s_k42p" class="clip panel clear" data-start="37.2" data-duration="4.84" data-track-index="12" style=""><div class="kghost" id="s_k42g">彼</div><div class="kserif" id="s_k42k">彼女の、原点</div></div>
 <video id="e14v" class="clip bgv " data-start="42.04" data-duration="5.93" data-media-start="0.6" data-track-index="13" src="assets/bg/e14.mp4" muted playsinline></video>
 <div id="e14o" class="clip qov" data-start="42.04" data-duration="5.93" data-track-index="14" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="e14cap0">ブームのずっと前から</div><div class="qcap" id="e14cap1">この文化を<em>愛してきた</em></div></div>
 <video id="e1v" class="clip bgv " data-start="47.97" data-duration="15.66" data-media-start="0.6" data-track-index="15" src="assets/bg/e1.mp4" muted playsinline></video>
 <div id="e1o" class="clip qov" data-start="47.97" data-duration="15.66" data-track-index="16" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="e1cap0">初めて日本へ飛んだ日</div><div class="qcap" id="e1cap1">夢だった<em>原宿</em>に 胸が躍った</div><div class="qcap" id="e1cap2">人生は いつも<em>日本文化</em>とともに</div></div>
 <video id="s_k43bgx" class="clip bgv " data-start="63.63" data-duration="7.09" data-media-start="0.0" data-track-index="17" src="assets/bg/bgx_s_k43.mp4" muted playsinline></video>
-<div id="s_k43p" class="clip panel clear" data-start="63.63" data-duration="7.09" data-track-index="18" style=""><div class="kstack"><div class="kick" id="s_k43k">もらったものが、多すぎる</div><div class="kline" id="s_k43kl"></div></div></div>
+<div id="s_k43p" class="clip panel clear" data-start="63.63" data-duration="7.09" data-track-index="18" style=""><div class="ktype" id="s_k43k"><span class="kch" id="s_k43c0">も</span><span class="kch" id="s_k43c1">ら</span><span class="kch" id="s_k43c2">っ</span><span class="kch" id="s_k43c3">た</span><span class="kch" id="s_k43c4">も</span><span class="kch" id="s_k43c5">の</span><span class="kch" id="s_k43c6">が</span><span class="kch" id="s_k43c7">、</span><span class="kch" id="s_k43c8">多</span><span class="kch" id="s_k43c9">す</span><span class="kch" id="s_k43c10">ぎ</span><span class="kch" id="s_k43c11">る</span><span class="kcaret" id="s_k43cr"></span></div></div>
 <video id="e12v" class="clip bgv " data-start="70.87" data-duration="12.88" data-media-start="0.6" data-track-index="19" src="assets/bg/e12.mp4" muted playsinline></video>
 <div id="e12o" class="clip qov" data-start="70.87" data-duration="12.88" data-track-index="20" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="e12cap0">嫌な思い出より ずっと多くの</div><div class="qcap" id="e12cap1"><em>優しさ</em>を この国にもらった</div></div>
 <video id="s_k44bgx" class="clip bgv " data-start="84.05" data-duration="10.86" data-media-start="0.0" data-track-index="21" src="assets/bg/bgx_s_k44.mp4" muted playsinline></video>
-<div id="s_k44p" class="clip panel clear" data-start="84.05" data-duration="10.86" data-track-index="22" style=""><div class="kstack"><div class="kick" id="s_k44k">いかりは、誠意の形</div><div class="kline" id="s_k44kl"></div></div></div>
+<div id="s_k44p" class="clip panel clear" data-start="84.05" data-duration="10.86" data-track-index="22" style=""><div class="kstamp" id="s_k44k">怒りは、誠意の形</div></div>
 <video id="b7v" class="clip bgv " data-start="95.01" data-duration="18.82" data-media-start="0.6" data-track-index="23" src="assets/bg/b7.mp4" muted playsinline></video>
 <div id="b7o" class="clip qov" data-start="95.01" data-duration="18.82" data-track-index="24" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b7cap0">外国人を代表して 日本に<em>謝りたい</em></div><div class="qcap" id="b7cap1"><em>99%</em>の外国人は 日本の味方だ</div></div>
 <video id="s_msg99bgx" class="clip bgv " data-start="114.13" data-duration="8.52" data-media-start="0.0" data-track-index="25" src="assets/bg/bgx_s_msg99.mp4" muted playsinline></video>
 <div id="s_msg99m" class="clip panel tpanel clear" data-start="114.13" data-duration="8.52" data-track-index="26" style=""><div class="glow" id="s_msg99g"></div><div class="msgt" id="s_msg99t">99%は、<br>日本の味方だ。</div><div class="msgby" id="s_msg99b">— Chopsticks and Trains</div></div>
 <video id="s_k45bgx" class="clip bgv " data-start="122.65" data-duration="7.73" data-media-start="0.0" data-track-index="27" src="assets/bg/bgx_s_k45.mp4" muted playsinline></video>
-<div id="s_k45p" class="clip panel clear" data-start="122.65" data-duration="7.73" data-track-index="28" style=""><div class="kstack"><div class="kick" id="s_k45k">奇妙な、一致</div><div class="kline" id="s_k45kl"></div></div></div>
+<div id="s_k45p" class="clip panel clear" data-start="122.65" data-duration="7.73" data-track-index="28" style=""><div class="kbar" id="s_k45bb"></div><div class="kmask"><div class="kleft" id="s_k45k">奇妙な、一致</div></div></div>
 <div id="rec2" class="clip panel" data-start="130.38" data-duration="18.54" data-track-index="29" style=""><div class="chead" id="rh2">4人の告白</div><div class="cgrid cgrid2"><div class="card" id="r2c0"><img src="assets/img/card15.jpg" alt=""><div class="cshade"></div><div class="cnum">01</div><div class="clab">汚名を背負う者</div><div class="ckw" id="r2kw0">基準を下げるな</div></div><div class="card" id="r2c1"><img src="assets/img/card17.jpg" alt=""><div class="cshade"></div><div class="cnum">02</div><div class="clab">警告する者</div><div class="ckw" id="r2kw1">場所を選べ</div></div><div class="card" id="r2c2"><img src="assets/img/card18.jpg" alt=""><div class="cshade"></div><div class="cnum">03</div><div class="clab">差別された者</div><div class="ckw" id="r2kw2">普通でいてくれ</div></div><div class="card" id="r2c3"><img src="assets/img/card19.jpg" alt=""><div class="cshade"></div><div class="cnum">04</div><div class="clab">絶望する者</div><div class="ckw" id="r2kw3">礼儀と思いやりを</div></div></div></div>
 <video id="s_cardEbgx" class="clip bgv " data-start="148.92" data-duration="7.12" data-media-start="0.0" data-track-index="30" src="assets/bg/bgx_s_cardE.mp4" muted playsinline></video>
 <div id="s_cardEo" class="clip qov" data-start="148.92" data-duration="7.12" data-track-index="31" style=""><div class="ch1scrim"></div><div class="chno" id="s_cardEn">終 章</div><div class="chttl" id="s_cardEt">それでも、日本を愛している</div></div>
 <video id="s_f3bgx" class="clip bgv " data-start="156.04" data-duration="12.37" data-media-start="0.0" data-track-index="32" src="assets/bg/bgx_s_f3.mp4" muted playsinline></video>
-<div id="s_f3p" class="clip panel clear" data-start="156.04" data-duration="12.37" data-track-index="33" style=""><div class="kstack"><div class="kick" id="s_f3k">怒っているのは、日本人だけじゃない</div><div class="kline" id="s_f3kl"></div></div></div>
+<div id="s_f3p" class="clip panel clear" data-start="156.04" data-duration="12.37" data-track-index="33" style=""><div class="kstack"><div class="kick" id="s_f3k"><span class="kch2" id="s_f3c0">怒</span><span class="kch2" id="s_f3c1">っ</span><span class="kch2" id="s_f3c2">て</span><span class="kch2" id="s_f3c3">い</span><span class="kch2" id="s_f3c4">る</span><span class="kch2" id="s_f3c5">の</span><span class="kch2" id="s_f3c6">は</span><span class="kch2" id="s_f3c7">、</span><span class="kch2" id="s_f3c8">日</span><span class="kch2" id="s_f3c9">本</span><span class="kch2" id="s_f3c10">人</span><span class="kch2" id="s_f3c11">だ</span><span class="kch2" id="s_f3c12">け</span><span class="kch2" id="s_f3c13">じ</span><span class="kch2" id="s_f3c14">ゃ</span><span class="kch2" id="s_f3c15">な</span><span class="kch2" id="s_f3c16">い</span></div><div class="kline" id="s_f3kl"></div></div></div>
 <video id="e13v" class="clip bgv " data-start="168.41" data-duration="10.49" data-media-start="0.6" data-track-index="34" src="assets/bg/e13.mp4" muted playsinline></video>
 <div id="e13o" class="clip qov" data-start="168.41" data-duration="10.49" data-track-index="35" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="e13cap0">日本はきっと あなたを迎えてくれる</div><div class="qcap" id="e13cap1">だからこそ <em>礼儀と思いやり</em>を</div></div>
 <video id="s_f6bgx" class="clip bgv " data-start="178.9" data-duration="8.11" data-media-start="0.0" data-track-index="36" src="assets/bg/bgx_s_f6.mp4" muted playsinline></video>
-<div id="s_f6p" class="clip panel clear" data-start="178.9" data-duration="8.11" data-track-index="37" style=""><div class="kstack"><div class="kick" id="s_f6k">答えは、あなたの中に</div><div class="kline" id="s_f6kl"></div></div></div>
+<div id="s_f6p" class="clip panel clear" data-start="178.9" data-duration="8.11" data-track-index="37" style=""><div class="kband" id="s_f6b"><span id="s_f6k">答えは、あなたの中に</span></div></div>
 <video id="s_f4bgx" class="clip bgv " data-start="187.01" data-duration="7.42" data-media-start="0.0" data-track-index="38" src="assets/bg/bgx_s_f4.mp4" muted playsinline></video>
 <div id="askp" class="clip panel tpanel clear" data-start="187.01" data-duration="7.42" data-track-index="39" style=""><div class="glow" id="askg"></div><div class="askt" id="ask1">あなたは、どう思いますか？</div><div class="asks" id="ask2">▼ コメントで、あなたの意見を聞かせてください</div></div>
 <video id="s_f5bgx" class="clip bgv " data-start="194.43" data-duration="5.56" data-media-start="0.0" data-track-index="40" src="assets/bg/bgx_s_f5.mp4" muted playsinline></video>
@@ -212,8 +236,8 @@ tl.set("#tbk", {opacity: 1}, 0.59);
 tl.to("#tbk", {opacity: 0, duration: 0.55, ease: "power1.out"}, 0.62);
 tl.fromTo("#s_th4bgx", {scale: 1.1}, {scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 0.6);
 tl.fromTo("#s_th4m", {scale: 1.1}, {scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 0.6);
-tl.fromTo("#s_k41k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 8.08);
-tl.fromTo("#s_k41kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 8.13);
+tl.fromTo("#s_k41b", {scaleX: 0}, {scaleX: 1, duration: 0.4, ease: "power3.inOut", immediateRender: false}, 8.08);
+tl.fromTo("#s_k41k", {opacity: 0}, {opacity: 1, duration: 0.25, ease: "power2.out", immediateRender: false}, 8.38);
 tl.set("#flash", {opacity: 0.8}, 7.83);
 tl.to("#flash", {opacity: 0, duration: 0.32, ease: "power2.out"}, 7.87);
 tl.fromTo("#a11cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 12.13);
@@ -271,8 +295,8 @@ tl.set("#flash", {opacity: 0}, 27.113);
 tl.set("#stage", {x: -9}, 26.98);
 tl.set("#stage", {x: 9}, 27.047);
 tl.set("#stage", {x: 0}, 27.113);
-tl.fromTo("#s_k42k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 37.45);
-tl.fromTo("#s_k42kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 37.5);
+tl.fromTo("#s_k42g", {scale: 1.6, opacity: 0}, {scale: 1, opacity: 0.13, duration: 1.0, ease: "power2.out", immediateRender: false}, 37.4);
+tl.fromTo("#s_k42k", {opacity: 0, letterSpacing: "0.5em", filter: "blur(14px)"}, {opacity: 1, letterSpacing: "0.1em", filter: "blur(0px)", duration: 0.8, ease: "power2.out", immediateRender: false}, 37.5);
 tl.set("#twipe", {opacity: 1}, 36.97);
 tl.fromTo("#twipe", {x: -1990}, {x: 0, duration: 0.23, ease: "power1.in", immediateRender: false}, 36.97);
 tl.fromTo("#twipe", {x: 0}, {x: 1990, duration: 0.3, ease: "power2.in", immediateRender: false}, 37.22);
@@ -317,8 +341,24 @@ tl.set("#flash", {opacity: 0}, 48.103);
 tl.set("#stage", {x: -9}, 47.97);
 tl.set("#stage", {x: 9}, 48.037);
 tl.set("#stage", {x: 0}, 48.103);
-tl.fromTo("#s_k43k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 63.88);
-tl.fromTo("#s_k43kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 63.93);
+tl.set("#s_k43c0", {opacity: 1}, 63.98);
+tl.set("#s_k43c1", {opacity: 1}, 64.05);
+tl.set("#s_k43c2", {opacity: 1}, 64.12);
+tl.set("#s_k43c3", {opacity: 1}, 64.19);
+tl.set("#s_k43c4", {opacity: 1}, 64.26);
+tl.set("#s_k43c5", {opacity: 1}, 64.33);
+tl.set("#s_k43c6", {opacity: 1}, 64.4);
+tl.set("#s_k43c7", {opacity: 1}, 64.47);
+tl.set("#s_k43c8", {opacity: 1}, 64.54);
+tl.set("#s_k43c9", {opacity: 1}, 64.61);
+tl.set("#s_k43c10", {opacity: 1}, 64.68);
+tl.set("#s_k43c11", {opacity: 1}, 64.75);
+tl.set("#s_k43cr", {opacity: 1}, 64.87);
+tl.set("#s_k43cr", {opacity: 0}, 65.27);
+tl.set("#s_k43cr", {opacity: 1}, 65.67);
+tl.set("#s_k43cr", {opacity: 0}, 66.07);
+tl.set("#s_k43cr", {opacity: 1}, 66.47);
+tl.set("#s_k43cr", {opacity: 0}, 66.87);
 tl.fromTo("#s_k43p", {x: 150}, {x: 0, duration: 0.55, ease: "power3.out", immediateRender: false}, 63.63);
 tl.fromTo("#e12cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 71.27);
 tl.set("#e12cap0", {opacity: 0}, 77.05);
@@ -339,8 +379,7 @@ tl.set("#flash", {opacity: 0}, 71.003);
 tl.set("#stage", {x: -12}, 70.87);
 tl.set("#stage", {x: 12}, 70.937);
 tl.set("#stage", {x: 0}, 71.003);
-tl.fromTo("#s_k44k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 84.3);
-tl.fromTo("#s_k44kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 84.35);
+tl.fromTo("#s_k44k", {scale: 2.0, opacity: 0, rotation: -3}, {scale: 1, opacity: 1, rotation: -3, duration: 0.26, ease: "power4.in", immediateRender: false}, 84.35);
 tl.set("#flash", {opacity: 0.8}, 84.05);
 tl.to("#flash", {opacity: 0, duration: 0.32, ease: "power2.out"}, 84.09);
 tl.fromTo("#b7cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 95.41);
@@ -368,8 +407,9 @@ tl.set("#tbk", {opacity: 1}, 114.12);
 tl.to("#tbk", {opacity: 0, duration: 0.55, ease: "power1.out"}, 114.15);
 tl.fromTo("#s_msg99bgx", {scale: 1.1}, {scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 114.13);
 tl.fromTo("#s_msg99m", {scale: 1.1}, {scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 114.13);
-tl.fromTo("#s_k45k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 122.9);
-tl.fromTo("#s_k45kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 122.95);
+tl.fromTo("#s_k45bb", {scaleY: 0}, {scaleY: 1, duration: 0.35, ease: "power3.out", immediateRender: false}, 122.85);
+tl.set("#s_k45k", {y: 260}, 122.66);
+tl.to("#s_k45k", {y: 0, duration: 0.5, ease: "power3.out"}, 123.0);
 tl.set("#twipe", {opacity: 1}, 122.42);
 tl.fromTo("#twipe", {x: -1990}, {x: 0, duration: 0.23, ease: "power1.in", immediateRender: false}, 122.42);
 tl.fromTo("#twipe", {x: 0}, {x: 1990, duration: 0.3, ease: "power2.in", immediateRender: false}, 122.67);
@@ -400,7 +440,24 @@ tl.set("#stage", {x: 14}, 148.987);
 tl.set("#stage", {x: 0}, 149.053);
 tl.fromTo("#s_cardEn", {x: -40, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 149.17);
 tl.fromTo("#s_cardEt", {scale: 1.3, opacity: 0}, {scale: 1, opacity: 1, duration: 0.45, ease: "expo.out", immediateRender: false}, 149.42);
-tl.fromTo("#s_f3k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 156.29);
+tl.set("#s_f3k", {opacity: 1}, 156.05);
+tl.fromTo("#s_f3c0", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 156.29);
+tl.fromTo("#s_f3c1", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 156.343);
+tl.fromTo("#s_f3c2", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 156.396);
+tl.fromTo("#s_f3c3", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 156.449);
+tl.fromTo("#s_f3c4", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 156.502);
+tl.fromTo("#s_f3c5", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 156.555);
+tl.fromTo("#s_f3c6", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 156.608);
+tl.fromTo("#s_f3c7", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 156.661);
+tl.fromTo("#s_f3c8", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 156.714);
+tl.fromTo("#s_f3c9", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 156.766);
+tl.fromTo("#s_f3c10", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 156.819);
+tl.fromTo("#s_f3c11", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 156.872);
+tl.fromTo("#s_f3c12", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 156.925);
+tl.fromTo("#s_f3c13", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 156.978);
+tl.fromTo("#s_f3c14", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 157.031);
+tl.fromTo("#s_f3c15", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 157.084);
+tl.fromTo("#s_f3c16", {y: 22, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 157.137);
 tl.fromTo("#s_f3kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 156.34);
 tl.fromTo("#s_f3p", {x: 150}, {x: 0, duration: 0.55, ease: "power3.out", immediateRender: false}, 156.04);
 tl.fromTo("#e13cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 168.64);
@@ -421,8 +478,8 @@ tl.set("#flash", {opacity: 0}, 168.543);
 tl.set("#stage", {x: -9}, 168.41);
 tl.set("#stage", {x: 9}, 168.477);
 tl.set("#stage", {x: 0}, 168.543);
-tl.fromTo("#s_f6k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 179.15);
-tl.fromTo("#s_f6kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 179.2);
+tl.fromTo("#s_f6b", {scaleX: 0}, {scaleX: 1, duration: 0.4, ease: "power3.inOut", immediateRender: false}, 179.15);
+tl.fromTo("#s_f6k", {opacity: 0}, {opacity: 1, duration: 0.25, ease: "power2.out", immediateRender: false}, 179.45);
 tl.set("#flash", {opacity: 0.8}, 178.9);
 tl.to("#flash", {opacity: 0, duration: 0.32, ease: "power2.out"}, 178.94);
 tl.fromTo("#ask1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.5, ease: "power3.out", immediateRender: false}, 187.31);

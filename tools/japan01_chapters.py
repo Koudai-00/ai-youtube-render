@@ -51,10 +51,10 @@ NARR = {
 ],
 "japan01c2": [
  ("g200", "第2章の問いは、こうです。なぜ、たった1人の悪行が、全員の罪に、なってしまうのか。"),
- ("g230", "想像してみてください。あなたの同僚が、海外で大暴れして、ニュースになる。すると翌日から、なぜかあなたまで、白い目で見られる。彼らに起きているのは、そういうことです。"),
+ ("g230", "想像してみてください。あなたの同僚が、海外でおおあばれして、ニュースになる。すると翌日から、なぜかあなたまで、白い目で見られる。彼らに起きているのは、そういうことです。"),
  ("g231", "レッテルは、貼られた側の誇りを削り、やがて本当に、そういう人間を作ってしまう。それが、レッテルの、本当の怖さです。"),
  ("g201", "1人の迷惑行為が、いつのまにか、あの人たち、という主語に変わる。そして、同じ見た目というだけで、レッテルが貼られていく。"),
- ("g202", "心理学で言う、外集団同質性バイアス。人は、自分と違うグループほど、ひとくくりに見てしまうのです。"),
+ ("g202", "心理学で言う、がいしゅうだんどうしつせいバイアス。人は、自分と違うグループほど、ひとくくりに見てしまうのです。"),
  ("g203", "この仕組みを、日本在住8年の男性が、見事な例えで、説明しています。"),
  ("g204", "日本人が信号無視をしても、それは、1人の男、で終わる。"),
  ("g205", "しかし、外国人なら。あいつらは、と、主語が変わるのです。"),
@@ -96,7 +96,7 @@ NARR = {
  ("g312", "悲しいよ。でもこれは、ただの差別じゃないんだ。彼は、そう続けます。"),
  ("g313", "驚くべきことに、彼は、店主を責めません。それどころか、こう言うのです。"),
  ("g314", "逆の立場なら、俺も、同じことを言うさ。"),
- ("g315", "国に帰れ、ってね。差別された側が、差別した側を、理解しようとしているのです。"),
+ ("g315", "国に帰れ、ってね。差別されたがわが、差別したがわを、理解しようとしているのです。"),
  ("g316", "2つ目の代償は、ルールを守る人々の、自由です。"),
  ("g317", "一部の暴走の結果、祇園の私道は、撮影禁止になりました。罰金は、1万円です。"),
  ("g318", "礼儀ある旅行者まで、あの路地から、締め出されました。"),
@@ -105,7 +105,7 @@ NARR = {
  ("g321", "罰がなければ、繰り返すだけだ。警告を続けてきた男の、結論です。"),
  ("g322", "そして3つ目の代償は、ごく普通の日本人の、日常です。"),
  ("g323", "12時間働いて、疲れ果てた会社員が、"),
- ("g324", "無断で撮影され、路上で、晒し者にされていく。"),
+ ("g324", "無断で撮影され、路上で、さらしものにされていく。"),
  ("g325", "無言で、カメラを、顔に突きつけられる。"),
  ("g326", "日本に住む彼女自身、何度も、そんな目に遭ってきました。"),
  ("g327", "こうして、社会全体の空気が、少しずつ、硬くなっていきます。"),
@@ -296,7 +296,7 @@ SCENES = {
     ("第1章","いま、何が起きているのか"),
     ("第2章","なぜ 全員が悪者になるのか"),
     ("第3章","誰が 代償を払うのか"),
-    ("終 章","いかりの正体は、何か")])),
+    ("終 章","怒りの正体は、何か")])),
  ("s_counter","counter",[("n","g102",0.5),("n","g103",0.4),("n","g104",0.35)],0.6, {}),
  ("s_k11","kick",[("n","g105",0.4)],0.3, dict(kicker="しかし——")),
  ("s_cases","cases",[("n","g106",0.6)],0.6, dict(head="相次ぐ<em>迷惑行為</em>", rows=[
@@ -367,12 +367,12 @@ SCENES = {
  ("s_e11","nv",[("n","g328",0.35),("n","g329",0.3)],0.4, dict(q="e11")),
  ("s_c6r","nv",[("n","g330",0.3)],0.45, dict(q="c6r")),
  ("s_k38","kick",[("n","g334",0.4)],0.3, dict(kicker="負の、連鎖")),
- ("s_card4","card",[("n","g331",0.5)],2.6, dict(no="第 4 章", title="いかりの正体",
+ ("s_card4","card",[("n","g331",0.5)],2.6, dict(no="第 4 章", title="怒りの正体",
    sub="— なぜ、ここまで怒るのか", bg="addy")),
 ],
 # ---------- 第4章 動機「いかりの正体」+ 終章
 "japan01c4": [
- ("s_th4","msg",[("n","g401",0.5)],0.5, dict(text="それは <em>当事者</em>の<br>いかり")),
+ ("s_th4","msg",[("n","g401",0.5)],0.5, dict(text="それは <em>当事者</em>の<br>怒り")),
  ("s_k41","kick",[("n","g402",0.4)],0.2, dict(kicker="ここは、俺の家だ")),
  ("s_a11","nv",[("n","g403",0.35),("n","g404",0.3)],0.4, dict(q="a11")),
  ("s_a9","nv",[("n","g405",0.35),("n","g406",0.3)],0.5, dict(q="a9")),
@@ -382,7 +382,7 @@ SCENES = {
  ("s_e1","nv",[("n","g410",0.35),("n","g411",0.3),("n","g412",0.3)],0.5, dict(q="e1")),
  ("s_k43","kick",[("n","g413",0.4)],0.2, dict(kicker="もらったものが、多すぎる")),
  ("s_e12","q",[("q","e12",0.15)],0.3, {}),
- ("s_k44","kick",[("n","g414",0.4)],0.2, dict(kicker="いかりは、誠意の形")),
+ ("s_k44","kick",[("n","g414",0.4)],0.2, dict(kicker="怒りは、誠意の形")),
  ("s_b7","q",[("q","b7",0.1)],0.3, {}),
  ("s_msg99","msg",[("n","g415",0.6)],0.6, dict(text="99%は、<br>日本の味方だ。", by="— Chopsticks and Trains")),
  ("s_k45","kick",[("n","g431",0.4)],0.2, dict(kicker="奇妙な、一致")),
@@ -399,31 +399,31 @@ SCENES = {
 
 # ============================================================ v4 リッチ化 (背景映像/イラスト/トランジション)
 # bgx: stock_src/<key>.mp4 をシーン長でループ焼き(extract_quotes)。Pexels素材(商用可・帰属不要)
-# illus: illus_src/<name>.png (いらすとや, 商用20点まで) を (name, css, 表示遅延s) で配置
-# illus_rows: cases の各行の左に付くアイコン (rows と同数)
+# いらすとやは雰囲気に合わないため使用禁止(ユーザー指示)。アイコンはモノクロSVG(builder内 ICONS)
+# icon_rows: cases の各行の左に付くSVGアイコン名 (rows と同数)
 # tr: トランジション上書き (fade|wipe|zoom|slide|flash|none)。省略時は kind 既定+kick輪番
 SCENE_FX = {
  # ---- c1
  "s_th1":    dict(bgx="ink0"),
  "s_road":   dict(bgx="ink1", tr="wipe"),
- "s_counter": dict(bgx="crowd0", illus=[("tourist_family", "left:110px;bottom:110px;width:300px", 2.6)]),
+ "s_counter": dict(bgx="crowd0"),
  "s_k11":    dict(bgx="tnight1"),
- "s_cases":  dict(bgx="crowd1", illus_rows=["youtuber", "noise_ear", "maiko", "poisute"]),
+ "s_cases":  dict(bgx="crowd1", icon_rows=["torii", "train", "camera", "coin"]),
  "s_k12":    dict(bgx="ink0"),
- "s_news":   dict(bgx="tnight2", illus=[("saiban", "right:110px;bottom:80px;width:380px", 1.6)]),
+ "s_news":   dict(bgx="tnight2"),
  "s_k14":    dict(bgx="fuji0", tr="fade"),
  "s_k13":    dict(bgx="walk2"),
  # ---- c2
  "s_th2":    dict(bgx="ink0"),
- "s_mech":   dict(bgx="ink1", illus=[("iromegane", "right:90px;top:90px;width:270px", 4.9)]),
- "s_k21":    dict(bgx="alley0", illus=[("shingou_mushi", "right:140px;bottom:130px;width:320px", 1.0)]),
+ "s_mech":   dict(bgx="ink1"),
+ "s_k21":    dict(bgx="alley0"),
  "s_pct":    dict(bgx="walk2", tr="wipe"),
  "s_k27":    dict(bgx="ink0"),
- "s_k22":    dict(bgx="phone1", illus=[("sns_enjou", "right:160px;bottom:140px;width:300px", 1.0)]),
+ "s_k22":    dict(bgx="phone1"),
  "s_k23":    dict(bgx="ink0"),
  "s_k24":    dict(bgx="ink1"),
  "s_k25":    dict(bgx="tnight1"),
- "s_k26":    dict(bgx="ink0", illus=[("enjou_man", "right:140px;bottom:130px;width:330px", 1.0)]),
+ "s_k26":    dict(bgx="ink0"),
  "s_k28":    dict(bgx="rain1"),
  # ---- c3
  "s_th3":    dict(bgx="ink0"),
@@ -433,9 +433,8 @@ SCENE_FX = {
  "s_k33":    dict(bgx="ink0"),
  "s_k34":    dict(bgx="alley0"),
  "s_k35":    dict(bgx="torii2"),
- "s_gion":   dict(bgx="temple1", illus=[("maiko", "left:120px;bottom:100px;width:300px", 1.4),
-                                        ("tachiiri_kinshi", "right:120px;bottom:100px;width:330px", 2.6)]),
- "s_k36":    dict(bgx="phone1", illus=[("photo_sumaho", "right:140px;bottom:130px;width:320px", 1.0)]),
+ "s_gion":   dict(bgx="temple1"),
+ "s_k36":    dict(bgx="phone1"),
  "s_k37":    dict(bgx="rain1"),
  "s_k38":    dict(bgx="ink0"),
  "s_card4":  dict(),

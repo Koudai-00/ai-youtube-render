@@ -217,7 +217,7 @@
     ],
     [
      "終 章",
-     "いかりの正体は、何か"
+     "怒りの正体は、何か"
     ]
    ],
    "bgx": "ink1",
@@ -233,14 +233,7 @@
     "g103",
     "g104"
    ],
-   "bgx": "crowd0",
-   "illus": [
-    [
-     "tourist_family",
-     "left:110px;bottom:110px;width:300px",
-     2.6
-    ]
-   ]
+   "bgx": "crowd0"
   },
   {
    "id": "s_k11",
@@ -281,11 +274,11 @@
     ]
    ],
    "bgx": "crowd1",
-   "illus_rows": [
-    "youtuber",
-    "noise_ear",
-    "maiko",
-    "poisute"
+   "icon_rows": [
+    "torii",
+    "train",
+    "camera",
+    "coin"
    ]
   },
   {
@@ -352,14 +345,7 @@
    "nids": [
     "g116"
    ],
-   "bgx": "tnight2",
-   "illus": [
-    [
-     "saiban",
-     "right:110px;bottom:80px;width:380px",
-     1.6
-    ]
-   ]
+   "bgx": "tnight2"
   },
   {
    "id": "s_b4",

@@ -5,6 +5,8 @@
 <style>
 @font-face { font-family:'NotoB'; src:url('assets/fonts/NotoSansJP-Black.otf') format('opentype'); }
 @font-face { font-family:'NotoBd'; src:url('assets/fonts/NotoSansJP-Bold.otf') format('opentype'); }
+@font-face { font-family:'SerifJP'; src:url('assets/fonts/NotoSerifJP.ttf') format('truetype');
+  font-weight:100 900; }
 * { margin:0; padding:0; box-sizing:border-box; }
 html,body { background:#000; }
 #root { position:relative; width:1920px; height:1080px; overflow:hidden;
@@ -39,10 +41,9 @@ em { font-style:normal; color:#e8322e; }
 .panel { z-index:10; background:#0c1016; }
 .tpanel { background:radial-gradient(ellipse 90% 80% at 50% 42%, #10151d 0%, #07080b 70%); }
 .panel.clear { background:linear-gradient(180deg, rgba(7,9,13,.78) 0%, rgba(7,9,13,.48) 45%, rgba(7,9,13,.78) 100%); }
-.ilov { z-index:12; }
-.illus { position:absolute; opacity:0; filter:drop-shadow(0 10px 28px rgba(0,0,0,.65)); }
-.cicon { width:92px; height:92px; object-fit:contain; flex:none;
-  filter:drop-shadow(0 4px 14px rgba(0,0,0,.5)); }
+.cic { width:96px; height:96px; flex:none; color:#ffb648; background:rgba(18,24,37,.85);
+  border:3px solid #232c3d; border-radius:16px; display:flex; align-items:center; justify-content:center; }
+.cic svg { width:56px; height:56px; }
 #tbk { position:absolute; inset:0; z-index:56; background:#000; opacity:0; pointer-events:none; }
 #twipe { position:absolute; left:0; top:-2px; width:1930px; height:1084px; z-index:57; opacity:0;
   background:linear-gradient(90deg, #0a0d12 0%, #131a24 85%, #e8322e 99%, #e8322e 100%);
@@ -54,6 +55,28 @@ em { font-style:normal; color:#e8322e; }
 .kick { text-align:center; font-size:84px; line-height:1.35; letter-spacing:.04em; opacity:0;
   text-shadow:0 6px 40px rgba(0,0,0,.8); }
 .kline { width:460px; height:10px; background:#e8322e; transform:scaleX(0); }
+.kch2 { display:inline-block; opacity:0; }
+/* kick 輪番スタイル (v5) */
+.kband { position:absolute; left:0; bottom:38%; background:#e8322e; padding:26px 96px 30px 74px;
+  transform-origin:left; transform:scaleX(0); box-shadow:0 10px 50px rgba(0,0,0,.55); }
+.kband span { font-size:74px; color:#fff; opacity:0; letter-spacing:.06em; white-space:nowrap; }
+.kghost { position:absolute; left:50%; top:50%; transform:translate(-50%,-54%);
+  font-family:'SerifJP'; font-weight:900; font-size:560px; color:#e8322e; opacity:0; }
+.kserif { position:absolute; left:0; right:0; top:42%; text-align:center; font-family:'SerifJP';
+  font-weight:900; font-size:92px; letter-spacing:.1em; opacity:0;
+  text-shadow:0 6px 40px rgba(0,0,0,.85); }
+.ktype { position:absolute; left:0; right:0; top:44%; text-align:center; font-size:80px;
+  letter-spacing:.06em; white-space:nowrap; }
+.kch { opacity:0; }
+.kcaret { display:inline-block; width:8px; height:74px; background:#e8322e; margin-left:14px;
+  vertical-align:-6px; }
+.kstamp { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) rotate(-3deg);
+  font-size:90px; color:#f2f1ec; border:8px solid #e8322e; padding:22px 58px; border-radius:8px;
+  background:rgba(232,50,46,.10); opacity:0; white-space:nowrap; }
+.kbar { position:absolute; left:150px; top:37%; width:14px; height:230px; background:#e8322e;
+  transform-origin:top; transform:scaleY(0); }
+.kmask { position:absolute; left:204px; right:100px; top:37%; height:240px; overflow:hidden; }
+.kleft { font-size:78px; line-height:1.32; padding-top:34px; }
 /* cases */
 .crows { position:absolute; left:320px; right:280px; top:290px; }
 .crow { display:flex; align-items:center; gap:36px; margin-bottom:46px; opacity:0; }
@@ -117,14 +140,15 @@ em { font-style:normal; color:#e8322e; }
 .signic { width:150px; height:150px; color:#14161b; } .signic svg { width:100%; height:100%; }
 .signtx { font-size:64px; line-height:1.3; }
 .signtx span { color:#b8352f; font-size:54px; }
-/* msg */
-.msgt { position:absolute; left:0; right:0; top:34%; text-align:center; font-size:128px; line-height:1.3; opacity:0; }
+/* msg (テーゼは極太明朝でドキュメンタリー調) */
+.msgt { position:absolute; left:0; right:0; top:34%; text-align:center; font-size:122px; line-height:1.34;
+  font-family:'SerifJP'; font-weight:900; opacity:0; }
 .msgby { position:absolute; left:0; right:0; top:72%; text-align:center; font-family:'NotoBd';
   font-size:38px; color:#ffb648; opacity:0; }
 /* chapter card */
 .chno { position:absolute; left:150px; top:330px; font-size:56px; color:#e8322e; letter-spacing:.4em; opacity:0; }
 .chttl { position:absolute; left:144px; top:404px; font-size:132px; letter-spacing:.03em;
-  text-shadow:0 8px 50px rgba(0,0,0,.85); opacity:0; }
+  font-family:'SerifJP'; font-weight:900; text-shadow:0 8px 50px rgba(0,0,0,.85); opacity:0; }
 .chsub { position:absolute; left:152px; top:608px; font-family:'NotoBd'; font-size:38px;
   color:#ffb648; text-shadow:0 2px 14px rgba(0,0,0,.95); opacity:0; }
 /* recap cards */
@@ -155,36 +179,34 @@ em { font-style:normal; color:#e8322e; }
 <video id="s_th1bgx" class="clip bgv " data-start="0.6" data-duration="11.41" data-media-start="0.0" data-track-index="1" src="assets/bg/bgx_s_th1.mp4" muted playsinline></video>
 <div id="s_th1m" class="clip panel tpanel clear" data-start="0.6" data-duration="11.41" data-track-index="2" style=""><div class="glow" id="s_th1g"></div><div class="msgt" id="s_th1t">なぜ 外国人が<br>外国人に<em>怒る</em>のか</div></div>
 <video id="s_roadbgx" class="clip bgv " data-start="12.01" data-duration="14.44" data-media-start="0.0" data-track-index="3" src="assets/bg/bgx_s_road.mp4" muted playsinline></video>
-<div id="s_roadp" class="clip panel clear" data-start="12.01" data-duration="14.44" data-track-index="4" style=""><div class="dhead" id="s_roadh">この動画の<em>4つの問い</em></div><div class="crows"><div class="crow" id="s_roadr0"><span class="ctag">第1章</span><span class="ctx">いま、何が起きているのか</span></div><div class="crow" id="s_roadr1"><span class="ctag">第2章</span><span class="ctx">なぜ 全員が悪者になるのか</span></div><div class="crow" id="s_roadr2"><span class="ctag">第3章</span><span class="ctx">誰が 代償を払うのか</span></div><div class="crow" id="s_roadr3"><span class="ctag">終 章</span><span class="ctx">いかりの正体は、何か</span></div></div></div>
+<div id="s_roadp" class="clip panel clear" data-start="12.01" data-duration="14.44" data-track-index="4" style=""><div class="dhead" id="s_roadh">この動画の<em>4つの問い</em></div><div class="crows"><div class="crow" id="s_roadr0"><span class="ctag">第1章</span><span class="ctx">いま、何が起きているのか</span></div><div class="crow" id="s_roadr1"><span class="ctag">第2章</span><span class="ctx">なぜ 全員が悪者になるのか</span></div><div class="crow" id="s_roadr2"><span class="ctag">第3章</span><span class="ctx">誰が 代償を払うのか</span></div><div class="crow" id="s_roadr3"><span class="ctag">終 章</span><span class="ctx">怒りの正体は、何か</span></div></div></div>
 <video id="s_counterbgx" class="clip bgv " data-start="26.45" data-duration="22.46" data-media-start="0.0" data-track-index="5" src="assets/bg/bgx_s_counter.mp4" muted playsinline></video>
 <div id="cntp" class="clip panel clear" data-start="26.45" data-duration="22.46" data-track-index="6" style=""><div class="cntlab" id="cl1">2024年 訪日外国人数</div><div class="cntnum" id="cn0">0<span>万人</span></div><div class="cbars"><div class="cbar" id="cb0"><div class="cbv" id="cbv0" style="width:62%"></div><span class="cby">2019</span><span class="cbn">3188万人</span></div><div class="cbar" id="cb1"><div class="cbv" id="cbv1" style="width:49%"></div><span class="cby">2023</span><span class="cbn">2507万人</span></div><div class="cbar" id="cb2"><div class="cbv" id="cbv2" style="width:72%"></div><span class="cby">2024</span><span class="cbn">3687万人</span></div></div><div class="cntsrc">出典: 日本政府観光局(JNTO) 推計値</div></div>
-<div id="s_counterilw" class="clip ilov" data-start="26.45" data-duration="22.46" data-track-index="7" style=""><img class="illus" id="s_counteril0" src="assets/img/tourist_family.png" style="left:110px;bottom:110px;width:300px" alt=""></div>
-<video id="s_k11bgx" class="clip bgv " data-start="48.91" data-duration="5.59" data-media-start="0.0" data-track-index="8" src="assets/bg/bgx_s_k11.mp4" muted playsinline></video>
-<div id="s_k11p" class="clip panel clear" data-start="48.91" data-duration="5.59" data-track-index="9" style=""><div class="kstack"><div class="kick" id="s_k11k">しかし——</div><div class="kline" id="s_k11kl"></div></div></div>
-<video id="s_casesbgx" class="clip bgv " data-start="54.5" data-duration="11.11" data-media-start="0.0" data-track-index="10" src="assets/bg/bgx_s_cases.mp4" muted playsinline></video>
-<div id="s_casesp" class="clip panel clear" data-start="54.5" data-duration="11.11" data-track-index="11" style=""><div class="dhead" id="s_casesh">相次ぐ<em>迷惑行為</em></div><div class="crows"><div class="crow" id="s_casesr0"><img class="cicon" src="assets/img/youtuber.png" alt=""><span class="ctag">神社</span><span class="ctx">鳥居で懸垂をして撮影</span></div><div class="crow" id="s_casesr1"><img class="cicon" src="assets/img/noise_ear.png" alt=""><span class="ctag">電車</span><span class="ctx">満員の車内で無断ダンス撮影</span></div><div class="crow" id="s_casesr2"><img class="cicon" src="assets/img/maiko.png" alt=""><span class="ctag">祇園</span><span class="ctx">芸者を追い回して撮影</span></div><div class="crow" id="s_casesr3"><img class="cicon" src="assets/img/poisute.png" alt=""><span class="ctag">世界遺産</span><span class="ctx">鳥居の隙間に硬貨をねじ込む</span></div></div></div>
-<video id="s_k12bgx" class="clip bgv " data-start="65.61" data-duration="2.7" data-media-start="0.0" data-track-index="12" src="assets/bg/bgx_s_k12.mp4" muted playsinline></video>
-<div id="s_k12p" class="clip panel clear" data-start="65.61" data-duration="2.7" data-track-index="13" style=""><div class="kstack"><div class="kick" id="s_k12k">例えば——</div><div class="kline" id="s_k12kl"></div></div></div>
-<video id="b8v" class="clip bgv " data-start="68.31" data-duration="8.62" data-media-start="0.6" data-track-index="14" src="assets/bg/b8.mp4" muted playsinline></video>
-<div id="b8o" class="clip qov" data-start="68.31" data-duration="8.62" data-track-index="15" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b8cap0">電車で撮影を続ける<em>ダンス集団</em></div><div class="qcap" id="b8cap1">動画は世界中へ<em>拡散</em>した</div></div>
-<video id="s_dancev" class="clip bgv " data-start="76.93" data-duration="6.41" data-media-start="0.0" data-track-index="16" src="assets/bg/dance17.mp4" muted playsinline></video>
-<div id="s_dancesc" class="clip qov" data-start="76.93" data-duration="6.41" data-track-index="17" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="biglabel" id="s_dancelab">“迷惑ダンス”</div></div>
-<video id="e2v" class="clip bgv " data-start="83.34" data-duration="10.16" data-media-start="0.6" data-track-index="18" src="assets/bg/e2.mp4" muted playsinline></video>
-<div id="e2o" class="clip qov" data-start="83.34" data-duration="10.16" data-track-index="19" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="e2cap0">京都で撮られた あの動画</div><div class="qcap" id="e2cap1">スマホを掲げ<em>芸者を追い回す</em>観光客</div><div class="qcap" id="e2cap2">芸者は 必死に避けていた</div></div>
-<video id="e5v" class="clip bgv " data-start="93.5" data-duration="8.39" data-media-start="0.6" data-track-index="20" src="assets/bg/e5.mp4" muted playsinline></video>
-<div id="e5o" class="clip qov" data-start="93.5" data-duration="8.39" data-track-index="21" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="e5cap0">鳥居に世界中の<em>小銭</em>をねじ込み</div><div class="qcap" id="e5cap1"><em>世界遺産</em>を傷つけていく</div></div>
-<video id="s_newsbgx" class="clip bgv " data-start="101.89" data-duration="4.53" data-media-start="0.0" data-track-index="22" src="assets/bg/bgx_s_news.mp4" muted playsinline></video>
-<div id="newsp" class="clip panel clear" data-start="101.89" data-duration="4.53" data-track-index="23" style=""><div class="nband" id="nb1"><span class="ntag">NEWS</span>鉄道会社が激怒</div><div class="nhead" id="nh1">車内ダンスに<br><em>法的措置</em>を検討</div><div class="nsub" id="ns1">乗客を巻き込む危険行為として警告の掲示も — 引用元動画より</div></div>
-<div id="s_newsilw" class="clip ilov" data-start="101.89" data-duration="4.53" data-track-index="24" style=""><img class="illus" id="s_newsil0" src="assets/img/saiban.png" style="right:110px;bottom:80px;width:380px" alt=""></div>
-<video id="b4v" class="clip bgv " data-start="106.42" data-duration="8.37" data-media-start="0.6" data-track-index="25" src="assets/bg/b4.mp4" muted playsinline></video>
-<div id="b4o" class="clip qov" data-start="106.42" data-duration="8.37" data-track-index="26" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b4cap0">車内には 警告の貼り紙まで</div><div class="qcap" id="b4cap1">鉄道会社は激怒し <em>法的措置</em>を検討</div></div>
-<video id="s_k14bgx" class="clip bgv " data-start="114.79" data-duration="6.72" data-media-start="0.0" data-track-index="27" src="assets/bg/bgx_s_k14.mp4" muted playsinline></video>
-<div id="s_k14p" class="clip panel clear" data-start="114.79" data-duration="6.72" data-track-index="28" style=""><div class="kstack"><div class="kick" id="s_k14k">隠された、富士山</div><div class="kline" id="s_k14kl"></div></div></div>
-<video id="s_k13bgx" class="clip bgv " data-start="121.51" data-duration="6.29" data-media-start="0.0" data-track-index="29" src="assets/bg/bgx_s_k13.mp4" muted playsinline></video>
-<div id="s_k13p" class="clip panel clear" data-start="121.51" data-duration="6.29" data-track-index="30" style=""><div class="kstack"><div class="kick" id="s_k13k">最も敏感に反応したのは</div><div class="kline" id="s_k13kl"></div></div></div>
-<div id="rec1" class="clip panel" data-start="127.8" data-duration="10.1" data-track-index="31" style=""><div class="chead" id="rh1">4人の証言者</div><div class="cgrid cgrid2"><div class="card" id="r1c0"><img src="assets/img/card15.jpg" alt=""><div class="cshade"></div><div class="cnum">01</div><div class="clab">汚名を背負う者</div></div><div class="card" id="r1c1"><img src="assets/img/card17.jpg" alt=""><div class="cshade"></div><div class="cnum">02</div><div class="clab">警告する者</div></div><div class="card" id="r1c2"><img src="assets/img/card18.jpg" alt=""><div class="cshade"></div><div class="cnum">03</div><div class="clab">差別された者</div></div><div class="card" id="r1c3"><img src="assets/img/card19.jpg" alt=""><div class="cshade"></div><div class="cnum">04</div><div class="clab">絶望する者</div></div></div></div>
-<video id="s_card2v" class="clip bgv " data-start="137.9" data-duration="11.04" data-media-start="0.0" data-track-index="32" src="assets/bg/axelb.mp4" muted playsinline></video>
-<div id="s_card2o" class="clip qov" data-start="137.9" data-duration="11.04" data-track-index="33" style=""><div class="ch1scrim"></div><div class="credit">引用: Axel in Japan</div><div class="chno" id="s_card2n">第 2 章</div><div class="chttl" id="s_card2t">"あの人たち"の正体</div><div class="chsub" id="s_card2s">— レッテルは、こうして作られる</div></div>
+<video id="s_k11bgx" class="clip bgv " data-start="48.91" data-duration="5.59" data-media-start="0.0" data-track-index="7" src="assets/bg/bgx_s_k11.mp4" muted playsinline></video>
+<div id="s_k11p" class="clip panel clear" data-start="48.91" data-duration="5.59" data-track-index="8" style=""><div class="kband" id="s_k11b"><span id="s_k11k">しかし——</span></div></div>
+<video id="s_casesbgx" class="clip bgv " data-start="54.5" data-duration="11.11" data-media-start="0.0" data-track-index="9" src="assets/bg/bgx_s_cases.mp4" muted playsinline></video>
+<div id="s_casesp" class="clip panel clear" data-start="54.5" data-duration="11.11" data-track-index="10" style=""><div class="dhead" id="s_casesh">相次ぐ<em>迷惑行為</em></div><div class="crows"><div class="crow" id="s_casesr0"><div class="cic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13 Q24 7 43 13"/><line x1="11" y1="11" x2="11" y2="42"/><line x1="37" y1="11" x2="37" y2="42"/><line x1="8" y1="21" x2="40" y2="21"/><line x1="24" y1="13" x2="24" y2="21"/></svg></div><span class="ctag">神社</span><span class="ctx">鳥居で懸垂をして撮影</span></div><div class="crow" id="s_casesr1"><div class="cic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><rect x="10" y="6" width="28" height="30" rx="5"/><line x1="10" y1="22" x2="38" y2="22"/><circle cx="17" cy="29" r="2.6" fill="currentColor"/><circle cx="31" cy="29" r="2.6" fill="currentColor"/><line x1="16" y1="42" x2="12" y2="36"/><line x1="32" y1="42" x2="36" y2="36"/></svg></div><span class="ctag">電車</span><span class="ctx">満員の車内で無断ダンス撮影</span></div><div class="crow" id="s_casesr2"><div class="cic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M8 14h8l4-5h8l4 5h8a3 3 0 0 1 3 3v20a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V17a3 3 0 0 1 3-3z"/><circle cx="24" cy="27" r="7"/></svg></div><span class="ctag">祇園</span><span class="ctx">芸者を追い回して撮影</span></div><div class="crow" id="s_casesr3"><div class="cic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><circle cx="24" cy="24" r="17"/><path d="M17 14 L24 24 L31 14"/><line x1="24" y1="24" x2="24" y2="35"/><line x1="18" y1="27" x2="30" y2="27"/><line x1="18" y1="32" x2="30" y2="32"/></svg></div><span class="ctag">世界遺産</span><span class="ctx">鳥居の隙間に硬貨をねじ込む</span></div></div></div>
+<video id="s_k12bgx" class="clip bgv " data-start="65.61" data-duration="2.7" data-media-start="0.0" data-track-index="11" src="assets/bg/bgx_s_k12.mp4" muted playsinline></video>
+<div id="s_k12p" class="clip panel clear" data-start="65.61" data-duration="2.7" data-track-index="12" style=""><div class="kghost" id="s_k12g">例</div><div class="kserif" id="s_k12k">例えば——</div></div>
+<video id="b8v" class="clip bgv " data-start="68.31" data-duration="8.62" data-media-start="0.6" data-track-index="13" src="assets/bg/b8.mp4" muted playsinline></video>
+<div id="b8o" class="clip qov" data-start="68.31" data-duration="8.62" data-track-index="14" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b8cap0">電車で撮影を続ける<em>ダンス集団</em></div><div class="qcap" id="b8cap1">動画は世界中へ<em>拡散</em>した</div></div>
+<video id="s_dancev" class="clip bgv " data-start="76.93" data-duration="6.41" data-media-start="0.0" data-track-index="15" src="assets/bg/dance17.mp4" muted playsinline></video>
+<div id="s_dancesc" class="clip qov" data-start="76.93" data-duration="6.41" data-track-index="16" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="biglabel" id="s_dancelab">“迷惑ダンス”</div></div>
+<video id="e2v" class="clip bgv " data-start="83.34" data-duration="10.16" data-media-start="0.6" data-track-index="17" src="assets/bg/e2.mp4" muted playsinline></video>
+<div id="e2o" class="clip qov" data-start="83.34" data-duration="10.16" data-track-index="18" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="e2cap0">京都で撮られた あの動画</div><div class="qcap" id="e2cap1">スマホを掲げ<em>芸者を追い回す</em>観光客</div><div class="qcap" id="e2cap2">芸者は 必死に避けていた</div></div>
+<video id="e5v" class="clip bgv " data-start="93.5" data-duration="8.39" data-media-start="0.6" data-track-index="19" src="assets/bg/e5.mp4" muted playsinline></video>
+<div id="e5o" class="clip qov" data-start="93.5" data-duration="8.39" data-track-index="20" style=""><div class="qscrim"></div><div class="credit">引用: Addy</div><div class="qcap" id="e5cap0">鳥居に世界中の<em>小銭</em>をねじ込み</div><div class="qcap" id="e5cap1"><em>世界遺産</em>を傷つけていく</div></div>
+<video id="s_newsbgx" class="clip bgv " data-start="101.89" data-duration="4.53" data-media-start="0.0" data-track-index="21" src="assets/bg/bgx_s_news.mp4" muted playsinline></video>
+<div id="newsp" class="clip panel clear" data-start="101.89" data-duration="4.53" data-track-index="22" style=""><div class="nband" id="nb1"><span class="ntag">NEWS</span>鉄道会社が激怒</div><div class="nhead" id="nh1">車内ダンスに<br><em>法的措置</em>を検討</div><div class="nsub" id="ns1">乗客を巻き込む危険行為として警告の掲示も — 引用元動画より</div></div>
+<video id="b4v" class="clip bgv " data-start="106.42" data-duration="8.37" data-media-start="0.6" data-track-index="23" src="assets/bg/b4.mp4" muted playsinline></video>
+<div id="b4o" class="clip qov" data-start="106.42" data-duration="8.37" data-track-index="24" style=""><div class="qscrim"></div><div class="credit">引用: Chopsticks and Trains</div><div class="qcap" id="b4cap0">車内には 警告の貼り紙まで</div><div class="qcap" id="b4cap1">鉄道会社は激怒し <em>法的措置</em>を検討</div></div>
+<video id="s_k14bgx" class="clip bgv " data-start="114.79" data-duration="6.72" data-media-start="0.0" data-track-index="25" src="assets/bg/bgx_s_k14.mp4" muted playsinline></video>
+<div id="s_k14p" class="clip panel clear" data-start="114.79" data-duration="6.72" data-track-index="26" style=""><div class="ktype" id="s_k14k"><span class="kch" id="s_k14c0">隠</span><span class="kch" id="s_k14c1">さ</span><span class="kch" id="s_k14c2">れ</span><span class="kch" id="s_k14c3">た</span><span class="kch" id="s_k14c4">、</span><span class="kch" id="s_k14c5">富</span><span class="kch" id="s_k14c6">士</span><span class="kch" id="s_k14c7">山</span><span class="kcaret" id="s_k14cr"></span></div></div>
+<video id="s_k13bgx" class="clip bgv " data-start="121.51" data-duration="6.29" data-media-start="0.0" data-track-index="27" src="assets/bg/bgx_s_k13.mp4" muted playsinline></video>
+<div id="s_k13p" class="clip panel clear" data-start="121.51" data-duration="6.29" data-track-index="28" style=""><div class="kstamp" id="s_k13k">最も敏感に反応したのは</div></div>
+<div id="rec1" class="clip panel" data-start="127.8" data-duration="10.1" data-track-index="29" style=""><div class="chead" id="rh1">4人の証言者</div><div class="cgrid cgrid2"><div class="card" id="r1c0"><img src="assets/img/card15.jpg" alt=""><div class="cshade"></div><div class="cnum">01</div><div class="clab">汚名を背負う者</div></div><div class="card" id="r1c1"><img src="assets/img/card17.jpg" alt=""><div class="cshade"></div><div class="cnum">02</div><div class="clab">警告する者</div></div><div class="card" id="r1c2"><img src="assets/img/card18.jpg" alt=""><div class="cshade"></div><div class="cnum">03</div><div class="clab">差別された者</div></div><div class="card" id="r1c3"><img src="assets/img/card19.jpg" alt=""><div class="cshade"></div><div class="cnum">04</div><div class="clab">絶望する者</div></div></div></div>
+<video id="s_card2v" class="clip bgv " data-start="137.9" data-duration="11.04" data-media-start="0.0" data-track-index="30" src="assets/bg/axelb.mp4" muted playsinline></video>
+<div id="s_card2o" class="clip qov" data-start="137.9" data-duration="11.04" data-track-index="31" style=""><div class="ch1scrim"></div><div class="credit">引用: Axel in Japan</div><div class="chno" id="s_card2n">第 2 章</div><div class="chttl" id="s_card2t">"あの人たち"の正体</div><div class="chsub" id="s_card2s">— レッテルは、こうして作られる</div></div>
 <div id="scan"></div>
 <div id="vig"></div>
 <div id="tbk"></div>
@@ -244,15 +266,12 @@ tl.fromTo("#cb1", {x: 60, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "
 tl.fromTo("#cbv1", {scaleX: 0}, {scaleX: 1, duration: 0.55, ease: "power2.inOut", immediateRender: false}, 29.95);
 tl.fromTo("#cb2", {x: 60, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 30.35);
 tl.fromTo("#cbv2", {scaleX: 0}, {scaleX: 1, duration: 0.55, ease: "power2.inOut", immediateRender: false}, 30.45);
-tl.fromTo("#s_counteril0", {scale: 0.55, opacity: 0, rotation: -5}, {scale: 1, opacity: 1, rotation: 0, duration: 0.45, ease: "back.out(1.7)", immediateRender: false}, 29.05);
-tl.to("#s_counteril0", {y: -14, duration: 1.8, ease: "sine.inOut", repeat: 9, yoyo: true}, 29.6);
 tl.set("#tbk", {opacity: 1}, 26.44);
 tl.to("#tbk", {opacity: 0, duration: 0.55, ease: "power1.out"}, 26.47);
 tl.fromTo("#s_counterbgx", {scale: 1.1}, {scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 26.45);
 tl.fromTo("#cntp", {scale: 1.1}, {scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 26.45);
-tl.fromTo("#s_counterilw", {scale: 1.1}, {scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 26.45);
-tl.fromTo("#s_k11k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 49.16);
-tl.fromTo("#s_k11kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 49.21);
+tl.fromTo("#s_k11b", {scaleX: 0}, {scaleX: 1, duration: 0.4, ease: "power3.inOut", immediateRender: false}, 49.16);
+tl.fromTo("#s_k11k", {opacity: 0}, {opacity: 1, duration: 0.25, ease: "power2.out", immediateRender: false}, 49.46);
 tl.set("#flash", {opacity: 0.8}, 48.91);
 tl.to("#flash", {opacity: 0, duration: 0.32, ease: "power2.out"}, 48.95);
 tl.fromTo("#s_casesh", {y: -26, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 54.8);
@@ -264,8 +283,8 @@ tl.set("#twipe", {opacity: 1}, 54.27);
 tl.fromTo("#twipe", {x: -1990}, {x: 0, duration: 0.23, ease: "power1.in", immediateRender: false}, 54.27);
 tl.fromTo("#twipe", {x: 0}, {x: 1990, duration: 0.3, ease: "power2.in", immediateRender: false}, 54.52);
 tl.set("#twipe", {opacity: 0, x: -1990}, 54.85);
-tl.fromTo("#s_k12k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 65.86);
-tl.fromTo("#s_k12kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 65.91);
+tl.fromTo("#s_k12g", {scale: 1.6, opacity: 0}, {scale: 1, opacity: 0.13, duration: 1.0, ease: "power2.out", immediateRender: false}, 65.81);
+tl.fromTo("#s_k12k", {opacity: 0, letterSpacing: "0.5em", filter: "blur(14px)"}, {opacity: 1, letterSpacing: "0.1em", filter: "blur(0px)", duration: 0.8, ease: "power2.out", immediateRender: false}, 65.91);
 tl.set("#twipe", {opacity: 1}, 65.38);
 tl.fromTo("#twipe", {x: -1990}, {x: 0, duration: 0.23, ease: "power1.in", immediateRender: false}, 65.38);
 tl.fromTo("#twipe", {x: 0}, {x: 1990, duration: 0.3, ease: "power2.in", immediateRender: false}, 65.63);
@@ -345,9 +364,7 @@ tl.set("#stage", {x: 0}, 93.633);
 tl.fromTo("#nb1", {x: -900, opacity: 1}, {x: 0, opacity: 1, duration: 0.4, ease: "power4.out", immediateRender: false}, 102.14);
 tl.fromTo("#nh1", {y: 34, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 102.54);
 tl.fromTo("#ns1", {opacity: 0}, {opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 103.19);
-tl.fromTo("#s_newsil0", {scale: 0.55, opacity: 0, rotation: -5}, {scale: 1, opacity: 1, rotation: 0, duration: 0.45, ease: "back.out(1.7)", immediateRender: false}, 103.49);
 tl.fromTo("#newsp", {x: 150}, {x: 0, duration: 0.55, ease: "power3.out", immediateRender: false}, 101.89);
-tl.fromTo("#s_newsilw", {x: 150}, {x: 0, duration: 0.55, ease: "power3.out", immediateRender: false}, 101.89);
 tl.fromTo("#b4cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 106.65);
 tl.set("#b4cap0", {opacity: 0}, 110.37);
 tl.fromTo("#b4cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 110.5);
@@ -366,12 +383,23 @@ tl.set("#flash", {opacity: 0}, 106.553);
 tl.set("#stage", {x: -9}, 106.42);
 tl.set("#stage", {x: 9}, 106.487);
 tl.set("#stage", {x: 0}, 106.553);
-tl.fromTo("#s_k14k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 115.04);
-tl.fromTo("#s_k14kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 115.09);
+tl.set("#s_k14c0", {opacity: 1}, 115.14);
+tl.set("#s_k14c1", {opacity: 1}, 115.21);
+tl.set("#s_k14c2", {opacity: 1}, 115.28);
+tl.set("#s_k14c3", {opacity: 1}, 115.35);
+tl.set("#s_k14c4", {opacity: 1}, 115.42);
+tl.set("#s_k14c5", {opacity: 1}, 115.49);
+tl.set("#s_k14c6", {opacity: 1}, 115.56);
+tl.set("#s_k14c7", {opacity: 1}, 115.63);
+tl.set("#s_k14cr", {opacity: 1}, 115.75);
+tl.set("#s_k14cr", {opacity: 0}, 116.15);
+tl.set("#s_k14cr", {opacity: 1}, 116.55);
+tl.set("#s_k14cr", {opacity: 0}, 116.95);
+tl.set("#s_k14cr", {opacity: 1}, 117.35);
+tl.set("#s_k14cr", {opacity: 0}, 117.75);
 tl.set("#tbk", {opacity: 1}, 114.78);
 tl.to("#tbk", {opacity: 0, duration: 0.7, ease: "power2.out"}, 114.81);
-tl.fromTo("#s_k13k", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 121.76);
-tl.fromTo("#s_k13kl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 121.81);
+tl.fromTo("#s_k13k", {scale: 2.0, opacity: 0, rotation: -3}, {scale: 1, opacity: 1, rotation: -3, duration: 0.26, ease: "power4.in", immediateRender: false}, 121.81);
 tl.fromTo("#s_k13p", {x: 150}, {x: 0, duration: 0.55, ease: "power3.out", immediateRender: false}, 121.51);
 tl.fromTo("#rh1", {opacity: 0}, {opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 128.0);
 tl.fromTo("#r1c0", {y: 70, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 128.3);
