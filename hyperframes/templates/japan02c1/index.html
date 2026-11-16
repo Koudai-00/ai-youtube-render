@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family:'NotoB'; src:url('assets/fonts/NotoSansJP-Black.otf') format('opentype'); }
+@font-face { font-family:'NotoBd'; src:url('assets/fonts/NotoSansJP-Bold.otf') format('opentype'); }
+@font-face { font-family:'SerifJP'; src:url('assets/fonts/NotoSerifJP.ttf') format('truetype');
+  font-weight:100 900; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#000; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden;
+  background:#0b0a07; font-family:'NotoB','NotoBd',sans-serif; color:#f2f1ec; }
+#stage { position:absolute; inset:0; }
+.clip { position:absolute; inset:0; width:100%; height:100%; }
+video.bgv { object-fit:cover; transform:translateZ(0); backface-visibility:hidden; }
+em { font-style:normal; color:#e3b55e; }
+#scan { position:absolute; inset:0; z-index:40; pointer-events:none; opacity:.14;
+  background:repeating-linear-gradient(0deg, rgba(0,0,0,.55) 0 2px, rgba(0,0,0,0) 2px 5px); }
+#vig { position:absolute; inset:0; z-index:41; pointer-events:none;
+  background:radial-gradient(ellipse 115% 105% at 50% 46%, rgba(0,0,0,0) 58%, rgba(0,0,0,.52) 100%); }
+#flash { position:absolute; inset:0; z-index:60; background:#f5ead5; opacity:0; pointer-events:none; }
+.gl { position:absolute; left:-80px; right:-80px; z-index:59; opacity:0; pointer-events:none; }
+#gl1 { background:rgba(217,164,65,.4); } #gl2 { background:rgba(245,234,213,.3); }
+#gl3 { background:rgba(242,241,236,.75); }
+.qov { z-index:10; }
+.qscrim { position:absolute; left:0; right:0; bottom:0; height:430px;
+  background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(2,3,5,.6) 42%, rgba(2,3,5,.85) 100%); }
+.ch1scrim { position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(2,3,5,.35) 0%, rgba(2,3,5,.72) 70%, rgba(2,3,5,.9) 100%); }
+.credit { position:absolute; top:34px; right:44px; font-family:'NotoBd'; font-size:26px;
+  color:rgba(242,241,236,.85); background:rgba(5,6,9,.55); padding:8px 18px; border-left:4px solid #d9a441; }
+.qcap { position:absolute; left:60px; right:60px; bottom:92px; text-align:center; font-size:66px;
+  letter-spacing:.02em; text-shadow:0 4px 26px rgba(0,0,0,.9), 0 0 2px rgba(0,0,0,.9); opacity:0; }
+.biglabel { position:absolute; left:70px; top:120px; font-size:72px; color:#f2f1ec;
+  background:rgba(5,6,9,.66); border-left:10px solid #d9a441; padding:16px 36px; opacity:0; }
+.lt { position:absolute; left:70px; bottom:96px; display:flex; opacity:0; }
+.ltbar { width:12px; background:#d9a441; }
+.ltbody { background:rgba(5,6,9,.78); padding:22px 38px 24px 30px; }
+.ltname { font-size:48px; } .ltrole { font-family:'NotoBd'; font-size:27px; color:#e8c37a; margin-top:6px; }
+.panel { z-index:10; background:#16130c; }
+.tpanel { background:radial-gradient(ellipse 90% 80% at 50% 42%, #1a160e 0%, #0b0a07 70%); }
+.panel.clear { background:linear-gradient(180deg, rgba(10,9,6,.78) 0%, rgba(10,9,6,.48) 45%, rgba(10,9,6,.78) 100%); }
+.cic { width:96px; height:96px; flex:none; color:#e8c37a; background:rgba(26,22,14,.85);
+  border:3px solid #3a3220; border-radius:16px; display:flex; align-items:center; justify-content:center; }
+.cic svg { width:56px; height:56px; }
+#tbk { position:absolute; inset:0; z-index:56; background:#000; opacity:0; pointer-events:none; }
+#twipe { position:absolute; left:0; top:-2px; width:1930px; height:1084px; z-index:57; opacity:0;
+  background:linear-gradient(90deg, #0a0d12 0%, #131a24 85%, #d9a441 99%, #d9a441 100%);
+  transform:translateX(-1990px); pointer-events:none; }
+.glow { position:absolute; left:50%; top:50%; width:1500px; height:700px; margin:-350px 0 0 -750px;
+  background:radial-gradient(ellipse, rgba(217,164,65,.14), rgba(217,164,65,0) 65%); opacity:0; }
+.kstack { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center;
+  justify-content:center; gap:36px; padding:0 120px; }
+.kick { text-align:center; font-size:84px; line-height:1.35; letter-spacing:.04em; opacity:0;
+  text-shadow:0 6px 40px rgba(0,0,0,.8); }
+.kline { width:460px; height:10px; background:#d9a441; transform:scaleX(0); }
+.kch2 { display:inline-block; opacity:0; }
+/* kick 輪番スタイル (long02 soft) */
+.kband em { color:#a06f1f; }
+.kband { position:absolute; left:0; bottom:38%; background:#ece4d0; padding:26px 96px 30px 74px;
+  transform-origin:left; transform:scaleX(0); box-shadow:0 10px 50px rgba(0,0,0,.55); }
+.kband span { font-size:74px; color:#1a150e; opacity:0; letter-spacing:.06em; white-space:nowrap; }
+.kghost { position:absolute; left:50%; top:50%; transform:translate(-50%,-54%);
+  font-family:'SerifJP'; font-weight:900; font-size:560px; color:#d9a441; opacity:0; }
+.kserif { position:absolute; left:0; right:0; top:42%; text-align:center; font-family:'SerifJP';
+  font-weight:900; font-size:92px; letter-spacing:.1em; opacity:0;
+  text-shadow:0 6px 40px rgba(0,0,0,.85); }
+.ktype { position:absolute; left:0; right:0; top:44%; text-align:center; font-size:80px;
+  letter-spacing:.06em; white-space:nowrap; }
+.kch { opacity:0; }
+.kcaret { display:inline-block; width:8px; height:74px; background:#d9a441; margin-left:14px;
+  vertical-align:-6px; }
+.kstamp { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) rotate(-3deg);
+  font-size:90px; color:#d05535; border:8px solid #c0472f; padding:22px 58px; border-radius:8px;
+  background:rgba(192,71,47,.10); opacity:0; white-space:nowrap; }
+.kbar { position:absolute; left:150px; top:37%; width:14px; height:230px; background:#d9a441;
+  transform-origin:top; transform:scaleY(0); }
+.kmask { position:absolute; left:204px; right:100px; top:37%; height:240px; overflow:hidden; }
+.kleft { font-size:78px; line-height:1.32; padding-top:34px; }
+/* cases */
+.crows { position:absolute; left:320px; right:280px; top:290px; }
+.crow { display:flex; align-items:center; gap:36px; margin-bottom:46px; opacity:0; }
+.ctag { background:#d9a441; color:#1a150e; font-family:'NotoBd'; font-size:34px; padding:10px 28px;
+  border-radius:8px; white-space:nowrap; min-width:170px; text-align:center; }
+.ctx { font-size:52px; }
+/* pct */
+.pbar { position:absolute; left:240px; right:240px; top:44%; height:130px; display:flex; }
+.p99 { width:70%; background:linear-gradient(90deg, #8a6a28, #d9a441); display:flex; align-items:center;
+  justify-content:center; gap:22px; font-size:42px; color:#241c0c; transform-origin:left; border-radius:8px 0 0 8px; }
+.p99 span { font-size:64px; color:#1a150e; }
+.p1 { width:30%; background:#262118; border:2px solid #3a3220; transform-origin:right; opacity:0; border-radius:0 8px 8px 0; }
+.p1lab { position:absolute; right:240px; top:calc(44% + 165px); text-align:right; font-size:42px;
+  line-height:1.45; opacity:0; }
+.dhead { position:absolute; left:0; right:0; top:96px; text-align:center; font-size:82px; opacity:0; }
+.dnote { position:absolute; left:0; right:0; bottom:64px; text-align:center; font-family:'NotoBd';
+  font-size:32px; color:#8a93a0; opacity:0; }
+/* mech */
+.mstep { position:absolute; top:40%; width:26%; height:270px; display:flex; align-items:center;
+  justify-content:center; text-align:center; font-size:46px; line-height:1.3;
+  background:#1c1812; border:3px solid #3a3220; border-radius:18px; opacity:0; }
+.mnum { position:absolute; left:50%; top:-34px; width:68px; height:68px; margin-left:-34px; line-height:62px;
+  background:#d9a441; color:#1a150e; border-radius:50%; font-size:38px; }
+.mtx { padding:0 24px; }
+/* 箱(高さ270px)の垂直中心 = 40%+135px に矢印(高さ36px)の中心を合わせる */
+.marrs { position:absolute; top:calc(40% + 117px); width:5%; height:36px; opacity:0; transform-origin:left; }
+.stamp { position:absolute; left:50%; top:66%; transform:translateX(-50%) rotate(-8deg);
+  font-size:110px; color:#d9a441; border:10px solid #d9a441; padding:6px 46px; border-radius:10px;
+  background:rgba(217,164,65,.08); opacity:0; }
+/* counter */
+.cntlab { position:absolute; left:0; right:0; top:120px; text-align:center; font-family:'NotoBd';
+  font-size:44px; color:#8a93a0; letter-spacing:.2em; opacity:0; }
+.cntnum { position:absolute; left:0; right:0; top:190px; text-align:center; font-size:200px;
+  font-variant-numeric:tabular-nums; letter-spacing:.02em; }
+.cntnum span { font-size:70px; color:#e8c37a; margin-left:12px; }
+.cbars { position:absolute; left:320px; right:320px; top:510px; }
+.cbar { position:relative; height:74px; margin-bottom:38px; opacity:0; }
+.cbv { position:absolute; left:120px; top:12px; height:50px; max-width:72%;
+  background:linear-gradient(90deg, #5a4420, #d9a441); transform-origin:left; border-radius:6px; }
+.cby { position:absolute; left:0; top:10px; font-size:40px; color:#8a93a0; font-family:'NotoBd'; }
+.cbn { position:absolute; right:0; top:10px; font-size:40px; }
+.cntsrc { position:absolute; right:60px; bottom:40px; font-family:'NotoBd'; font-size:24px; color:#5b6472; }
+/* news */
+.nband { position:absolute; left:0; top:200px; font-size:40px; background:#d9a441; color:#1a150e;
+  padding:14px 60px 14px 40px; font-family:'NotoBd'; }
+.ntag { background:#15120c; color:#d9a441; padding:4px 18px; margin-right:26px; letter-spacing:.3em; }
+.nhead { position:absolute; left:120px; top:330px; font-size:128px; line-height:1.22; opacity:0; }
+.nsub { position:absolute; left:124px; top:700px; font-family:'NotoBd'; font-size:34px; color:#8a93a0; opacity:0; }
+/* journey: ◯✕マーク(直径120px, 中心y=34%+60px, 中心x=27%/73%)を縁から縁まで結ぶ */
+.jarr { position:absolute; left:calc(27% + 70px); top:calc(34% + 46px); width:744px; height:28px;
+  transform-origin:left; transform:scaleX(0); }
+.jstop { position:absolute; top:34%; width:26%; text-align:center; opacity:0; }
+.jmark { width:120px; height:120px; margin:0 auto 26px; border-radius:50%; font-size:60px; line-height:112px; }
+.jx { background:#15151a; border:4px solid #8a93a0; color:#8a93a0; }
+.jo { background:#0e1f18; border:4px solid #46e0a0; color:#46e0a0; }
+.jname { font-size:56px; } .jdesc { font-family:'NotoBd'; font-size:33px; color:#8a93a0; margin-top:14px; line-height:1.4; }
+/* sign */
+.sign { position:absolute; left:50%; top:46%; transform:translate(-50%,-50%); display:flex; gap:40px;
+  align-items:center; background:#f2f1ec; color:#14161b; padding:52px 70px; border-radius:14px;
+  border:6px solid #b98a35; opacity:0; }
+.signic { width:150px; height:150px; color:#14161b; } .signic svg { width:100%; height:100%; }
+.signtx { font-size:64px; line-height:1.3; }
+.signtx span { color:#b98a35; font-size:54px; }
+/* msg (テーゼは極太明朝でドキュメンタリー調) */
+.msgt { position:absolute; left:0; right:0; top:34%; text-align:center; font-size:122px; line-height:1.34;
+  font-family:'SerifJP'; font-weight:900; opacity:0; }
+.msgby { position:absolute; left:0; right:0; top:72%; text-align:center; font-family:'NotoBd';
+  font-size:38px; color:#e8c37a; opacity:0; }
+/* chapter card */
+.chno { position:absolute; left:150px; top:330px; font-size:56px; color:#d9a441; letter-spacing:.4em; opacity:0; }
+.chttl { position:absolute; left:144px; top:404px; font-size:132px; letter-spacing:.03em;
+  font-family:'SerifJP'; font-weight:900; text-shadow:0 8px 50px rgba(0,0,0,.85); opacity:0; }
+.chsub { position:absolute; left:152px; top:608px; font-family:'NotoBd'; font-size:38px;
+  color:#e8c37a; text-shadow:0 2px 14px rgba(0,0,0,.95); opacity:0; }
+/* recap cards */
+.chead { position:absolute; left:0; right:0; top:84px; text-align:center; font-family:'NotoBd';
+  font-size:36px; letter-spacing:.5em; color:#8a93a0; opacity:0; }
+.cgrid { position:absolute; left:90px; right:90px; top:190px; bottom:120px; display:flex; gap:34px; }
+.card { position:relative; flex:1; border-radius:14px; overflow:hidden; background:#1c1812; opacity:0; }
+.card img { position:absolute; width:auto; height:100%; left:50%; transform:translateX(-50%); filter:saturate(.85); }
+.cshade { position:absolute; inset:0; background:linear-gradient(180deg, rgba(2,3,5,.08) 35%, rgba(2,3,5,.88) 88%); }
+.cnum { position:absolute; left:26px; top:18px; font-size:54px; color:#d9a441; }
+.clab { position:absolute; left:0; right:0; bottom:34px; text-align:center; font-size:42px;
+  text-shadow:0 3px 14px rgba(0,0,0,.9); }
+.ckw { position:absolute; left:6%; top:38%; width:88%; text-align:center; font-size:44px; color:#e8c37a;
+  border:5px solid #e8c37a; border-radius:8px; padding:10px 4px; transform:rotate(-6deg);
+  background:rgba(5,6,9,.55); opacity:0; }
+/* ask / end */
+.askt { position:absolute; left:0; right:0; top:30%; text-align:center; font-size:96px;
+  line-height:1.45; opacity:0; }
+.asks { position:absolute; left:0; right:0; top:68%; text-align:center; font-family:'NotoBd';
+  font-size:42px; color:#e8c37a; opacity:0; }
+.endt { position:absolute; left:0; right:0; top:42%; text-align:center; font-size:92px; opacity:0; }
+.ends { position:absolute; left:0; right:0; top:60%; text-align:center; font-family:'NotoBd';
+  font-size:38px; color:#8a93a0; opacity:0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="root" data-width="1920" data-height="1080" data-start="0" data-duration="132.55">
+<div id="stage">
+<video id="s_th1bgx" class="clip bgv " data-start="0.6" data-duration="8.95" data-media-start="0.0" data-track-index="1" src="assets/bg/bgx_s_th1.mp4" muted playsinline></video>
+<div id="s_th1m" class="clip panel tpanel clear" data-start="0.6" data-duration="8.95" data-track-index="2" style=""><div class="glow" id="s_th1g"></div><div class="msgt" id="s_th1t">なぜ 世界は<br>日本に<em>恋をする</em>のか</div></div>
+<video id="s_roadbgx" class="clip bgv " data-start="9.55" data-duration="14.94" data-media-start="0.0" data-track-index="3" src="assets/bg/bgx_s_road.mp4" muted playsinline></video>
+<div id="s_roadp" class="clip panel clear" data-start="9.55" data-duration="14.94" data-track-index="4" style=""><div class="dhead" id="s_roadh">この動画の<em>4つの問い</em></div><div class="crows"><div class="crow" id="s_roadr0"><span class="ctag">第1章</span><span class="ctx">彼らは、何に驚くのか</span></div><div class="crow" id="s_roadr1"><span class="ctag">第2章</span><span class="ctx">なぜ、それが当たり前なのか</span></div><div class="crow" id="s_roadr2"><span class="ctag">第3章</span><span class="ctx">傷ついた人に、何をするのか</span></div><div class="crow" id="s_roadr3"><span class="ctag">終 章</span><span class="ctx">なぜ、人生まで変わるのか</span></div></div></div>
+<video id="s_counterbgx" class="clip bgv " data-start="24.49" data-duration="19.51" data-media-start="0.0" data-track-index="5" src="assets/bg/bgx_s_counter.mp4" muted playsinline></video>
+<div id="cntp" class="clip panel clear" data-start="24.49" data-duration="19.51" data-track-index="6" style=""><div class="cntlab" id="cl1">2025年 訪日外国人数</div><div class="cntnum" id="cn0">0<span>万人</span></div><div class="cbars"><div class="cbar" id="cb0"><div class="cbv" id="cbv0" style="width:54%"></div><span class="cby">2019</span><span class="cbn">3188万人</span></div><div class="cbar" id="cb1"><div class="cbv" id="cbv1" style="width:62%"></div><span class="cby">2024</span><span class="cbn">3687万人</span></div><div class="cbar" id="cb2"><div class="cbv" id="cbv2" style="width:72%"></div><span class="cby">2025</span><span class="cbn">4268万人</span></div></div><div class="cntsrc">出典: 日本政府観光局(JNTO) 推計値</div></div>
+<video id="s_newsbgx" class="clip bgv " data-start="44.0" data-duration="10.5" data-media-start="0.0" data-track-index="7" src="assets/bg/bgx_s_news.mp4" muted playsinline></video>
+<div id="newsp" class="clip panel clear" data-start="44.0" data-duration="10.5" data-track-index="8" style=""><div class="nband" id="nb1"><span class="ntag">WORLD</span>世界が、日本を選んだ</div><div class="nhead" id="nh1">“世界で最も魅力的な国”<br><em>3年連続 1位</em></div><div class="nsub" id="ns1">出典: Condé Nast Traveler 読者投票(米国版) 2023-2025 / 約75万票</div></div>
+<video id="s_k11bgx" class="clip bgv " data-start="54.5" data-duration="9.63" data-media-start="0.0" data-track-index="9" src="assets/bg/bgx_s_k11.mp4" muted playsinline></video>
+<div id="s_k11p" class="clip panel clear" data-start="54.5" data-duration="9.63" data-track-index="10" style=""><div class="kband" id="s_k11b"><span id="s_k11k">数字では、語れないもの</span></div></div>
+<video id="s_thdbv" class="clip bgv " data-start="64.13" data-duration="8.5" data-media-start="0.0" data-track-index="11" src="assets/bg/thdb.mp4" muted playsinline></video>
+<div id="s_thdbsc" class="clip qov" data-start="64.13" data-duration="8.5" data-track-index="12" style=""><div class="qscrim"></div><div class="credit">引用: Those Happy Days</div><div class="biglabel" id="s_thdblab">初めての、日本</div></div>
+<video id="d1v" class="clip bgv " data-start="72.63" data-duration="8.7" data-media-start="0.6" data-track-index="13" src="assets/bg/d1.mp4" muted playsinline></video>
+<div id="d1o" class="clip qov" data-start="72.63" data-duration="8.7" data-track-index="14" style=""><div class="qscrim"></div><div class="credit">引用: Those Happy Days</div><div class="qcap" id="d1cap0">満員なのに <em>待合室より静か</em></div><div class="qcap" id="d1cap1">誰も 喋ってすらいない</div></div>
+<video id="d2v" class="clip bgv " data-start="81.33" data-duration="8.58" data-media-start="0.6" data-track-index="15" src="assets/bg/d2.mp4" muted playsinline></video>
+<div id="d2o" class="clip qov" data-start="81.33" data-duration="8.58" data-track-index="16" style=""><div class="qscrim"></div><div class="credit">引用: Those Happy Days</div><div class="qcap" id="d2cap0">見た目から もう<em>芸術品</em></div><div class="qcap" id="d2cap1">「正直 信じられない美味しさ」</div></div>
+<video id="d3v" class="clip bgv " data-start="89.91" data-duration="8.63" data-media-start="0.6" data-track-index="17" src="assets/bg/d3.mp4" muted playsinline></video>
+<div id="d3o" class="clip qov" data-start="89.91" data-duration="8.63" data-track-index="18" style=""><div class="qscrim"></div><div class="credit">引用: Those Happy Days</div><div class="qcap" id="d3cap0">こんな場所 <em>見たことがない</em></div><div class="qcap" id="d3cap1">「ここが大好きだ」</div></div>
+<video id="s_casesbgx" class="clip bgv " data-start="98.54" data-duration="15.89" data-media-start="0.0" data-track-index="19" src="assets/bg/bgx_s_cases.mp4" muted playsinline></video>
+<div id="s_casesp" class="clip panel clear" data-start="98.54" data-duration="15.89" data-track-index="20" style=""><div class="dhead" id="s_casesh">初めての日本 <em>4つの驚き</em></div><div class="crows"><div class="crow" id="s_casesr0"><div class="cic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><circle cx="24" cy="24" r="17"/><polyline points="24,13 24,24 32,29"/></svg></div><span class="ctag">電車</span><span class="ctx">1分の狂いもなく 時間通りに来る</span></div><div class="crow" id="s_casesr1"><div class="cic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M24 6 L27 20 L41 24 L27 28 L24 42 L21 28 L7 24 L21 20 Z"/><path d="M37 8 L38 12 L42 13 L38 14 L37 18 L36 14 L32 13 L36 12 Z"/></svg></div><span class="ctag">街</span><span class="ctx">ゴミ箱がないのに ゴミひとつない</span></div><div class="crow" id="s_casesr2"><div class="cic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><rect x="8" y="18" width="32" height="24" rx="2"/><line x1="8" y1="28" x2="40" y2="28"/><line x1="24" y1="18" x2="24" y2="42"/><path d="M24 18 C18 18 13 15 15 10 C17 6 23 9 24 18 C25 9 31 6 33 10 C35 15 30 18 24 18 Z"/></svg></div><span class="ctag">店</span><span class="ctx">どこへ行っても 丁寧に迎えられる</span></div><div class="crow" id="s_casesr3"><div class="cic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M38 30 A17 17 0 1 1 20 8 A14 14 0 0 0 38 30 Z"/><path d="M33 10 L34 13 L37 14 L34 15 L33 18 L32 15 L29 14 L32 13 Z"/></svg></div><span class="ctag">夜</span><span class="ctx">深夜でも 安心して歩ける</span></div></div></div>
+<video id="s_k12bgx" class="clip bgv " data-start="114.43" data-duration="7.57" data-media-start="0.0" data-track-index="21" src="assets/bg/bgx_s_k12.mp4" muted playsinline></video>
+<div id="s_k12p" class="clip panel clear" data-start="114.43" data-duration="7.57" data-track-index="22" style=""><div class="kghost" id="s_k12g">驚</div><div class="kserif" id="s_k12k">驚かれているのは、日常</div></div>
+<video id="s_card2v" class="clip bgv " data-start="122.0" data-duration="9.25" data-media-start="0.0" data-track-index="23" src="assets/bg/takb.mp4" muted playsinline></video>
+<div id="s_card2o" class="clip qov" data-start="122.0" data-duration="9.25" data-track-index="24" style=""><div class="ch1scrim"></div><div class="credit">引用: TAKASHii</div><div class="chno" id="s_card2n">第 2 章</div><div class="chttl" id="s_card2t">"当たり前"の正体</div><div class="chsub" id="s_card2s">— 安心は、どうやって生まれるのか</div></div>
+<div id="vig"></div>
+<div id="tbk"></div>
+<div id="twipe"></div>
+<div id="flash"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#s_th1t", {scale: 1.07, opacity: 0, filter: "blur(10px)"}, {scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.9, ease: "power2.out", immediateRender: false}, 0.9);
+tl.fromTo("#s_th1g", {opacity: 0}, {opacity: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 1.1);
+tl.set("#tbk", {opacity: 1}, 0.59);
+tl.to("#tbk", {opacity: 0, duration: 0.55, ease: "power1.out"}, 0.62);
+tl.fromTo("#s_th1bgx", {scale: 1.1}, {scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 0.6);
+tl.fromTo("#s_th1m", {scale: 1.1}, {scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 0.6);
+tl.fromTo("#s_roadh", {y: -26, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 9.85);
+tl.fromTo("#s_roadr0", {x: -70, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 10.15);
+tl.fromTo("#s_roadr1", {x: -70, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 13.635);
+tl.fromTo("#s_roadr2", {x: -70, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 17.12);
+tl.fromTo("#s_roadr3", {x: -70, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 20.605);
+tl.set("#twipe", {opacity: 1}, 9.32);
+tl.fromTo("#twipe", {x: -1990}, {x: 0, duration: 0.23, ease: "power1.in", immediateRender: false}, 9.32);
+tl.fromTo("#twipe", {x: 0}, {x: 1990, duration: 0.3, ease: "power2.in", immediateRender: false}, 9.57);
+tl.set("#twipe", {opacity: 0, x: -1990}, 9.9);
+tl.fromTo("#cl1", {y: -20, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 24.79);
+tl.set("#cn0", { innerHTML: "0<span>万人</span>" }, 25.19);
+tl.set("#cn0", { innerHTML: "8<span>万人</span>" }, 25.267);
+tl.set("#cn0", { innerHTML: "35<span>万人</span>" }, 25.345);
+tl.set("#cn0", { innerHTML: "79<span>万人</span>" }, 25.422);
+tl.set("#cn0", { innerHTML: "141<span>万人</span>" }, 25.499);
+tl.set("#cn0", { innerHTML: "220<span>万人</span>" }, 25.576);
+tl.set("#cn0", { innerHTML: "317<span>万人</span>" }, 25.654);
+tl.set("#cn0", { innerHTML: "432<span>万人</span>" }, 25.731);
+tl.set("#cn0", { innerHTML: "564<span>万人</span>" }, 25.808);
+tl.set("#cn0", { innerHTML: "714<span>万人</span>" }, 25.885);
+tl.set("#cn0", { innerHTML: "881<span>万人</span>" }, 25.963);
+tl.set("#cn0", { innerHTML: "1067<span>万人</span>" }, 26.04);
+tl.set("#cn0", { innerHTML: "1269<span>万人</span>" }, 26.117);
+tl.set("#cn0", { innerHTML: "1490<span>万人</span>" }, 26.195);
+tl.set("#cn0", { innerHTML: "1728<span>万人</span>" }, 26.272);
+tl.set("#cn0", { innerHTML: "1984<span>万人</span>" }, 26.349);
+tl.set("#cn0", { innerHTML: "2257<span>万人</span>" }, 26.426);
+tl.set("#cn0", { innerHTML: "2548<span>万人</span>" }, 26.504);
+tl.set("#cn0", { innerHTML: "2857<span>万人</span>" }, 26.581);
+tl.set("#cn0", { innerHTML: "3183<span>万人</span>" }, 26.658);
+tl.set("#cn0", { innerHTML: "3527<span>万人</span>" }, 26.735);
+tl.set("#cn0", { innerHTML: "3888<span>万人</span>" }, 26.813);
+tl.set("#cn0", { innerHTML: "4268<span>万人</span>" }, 26.89);
+tl.set("#cn0", {color: "#e3b55e"}, 26.89);
+tl.fromTo("#cb0", {x: 60, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 27.39);
+tl.fromTo("#cbv0", {scaleX: 0}, {scaleX: 1, duration: 0.55, ease: "power2.inOut", immediateRender: false}, 27.49);
+tl.fromTo("#cb1", {x: 60, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 27.89);
+tl.fromTo("#cbv1", {scaleX: 0}, {scaleX: 1, duration: 0.55, ease: "power2.inOut", immediateRender: false}, 27.99);
+tl.fromTo("#cb2", {x: 60, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 28.39);
+tl.fromTo("#cbv2", {scaleX: 0}, {scaleX: 1, duration: 0.55, ease: "power2.inOut", immediateRender: false}, 28.49);
+tl.set("#tbk", {opacity: 1}, 24.48);
+tl.to("#tbk", {opacity: 0, duration: 0.55, ease: "power1.out"}, 24.51);
+tl.fromTo("#s_counterbgx", {scale: 1.1}, {scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 24.49);
+tl.fromTo("#cntp", {scale: 1.1}, {scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 24.49);
+tl.fromTo("#nb1", {x: -900, opacity: 1}, {x: 0, opacity: 1, duration: 0.5, ease: "power3.out", immediateRender: false}, 44.25);
+tl.fromTo("#nh1", {y: 34, opacity: 0}, {y: 0, opacity: 1, duration: 0.55, ease: "power3.out", immediateRender: false}, 44.65);
+tl.fromTo("#ns1", {opacity: 0}, {opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 45.3);
+tl.fromTo("#newsp", {x: 150}, {x: 0, duration: 0.55, ease: "power3.out", immediateRender: false}, 44.0);
+tl.fromTo("#s_k11b", {scaleX: 0}, {scaleX: 1, duration: 0.55, ease: "power2.inOut", immediateRender: false}, 54.75);
+tl.fromTo("#s_k11k", {opacity: 0}, {opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 55.1);
+tl.set("#flash", {opacity: 0.5}, 54.5);
+tl.to("#flash", {opacity: 0, duration: 0.6, ease: "power2.out"}, 54.54);
+tl.fromTo("#s_thdblab", {scale: 1.12, opacity: 0}, {scale: 1, opacity: 1, duration: 0.5, ease: "power2.out", immediateRender: false}, 64.48);
+tl.set("#flash", {opacity: 0.34}, 64.13);
+tl.to("#flash", {opacity: 0, duration: 0.67, ease: "power2.out"}, 64.17);
+tl.fromTo("#d1cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 72.86);
+tl.set("#d1cap0", {opacity: 0}, 76.61);
+tl.fromTo("#d1cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 76.74);
+tl.fromTo("#d1v", {scale: 1.05}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 72.65);
+tl.set("#flash", {opacity: 0.29}, 72.63);
+tl.to("#flash", {opacity: 0, duration: 0.66, ease: "power2.out"}, 72.67);
+tl.fromTo("#d2cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 81.56);
+tl.set("#d2cap0", {opacity: 0}, 84.52);
+tl.fromTo("#d2cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 84.65);
+tl.fromTo("#d2v", {scale: 1.05}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 81.35);
+tl.set("#flash", {opacity: 0.29}, 81.33);
+tl.to("#flash", {opacity: 0, duration: 0.66, ease: "power2.out"}, 81.37);
+tl.fromTo("#d3cap0", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 90.14);
+tl.set("#d3cap0", {opacity: 0}, 94.35);
+tl.fromTo("#d3cap1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 94.48);
+tl.fromTo("#d3v", {filter: "saturate(1) sepia(0) contrast(1) brightness(1)"}, {filter: "saturate(1.22) sepia(0.24) contrast(0.98) brightness(1.07)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 90.31);
+tl.fromTo("#d3v", {scale: 1.05}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 89.93);
+tl.set("#flash", {opacity: 0.29}, 89.91);
+tl.to("#flash", {opacity: 0, duration: 0.66, ease: "power2.out"}, 89.95);
+tl.fromTo("#s_casesh", {y: -26, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 98.84);
+tl.fromTo("#s_casesr0", {x: -70, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 99.24);
+tl.fromTo("#s_casesr1", {x: -70, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 102.912);
+tl.fromTo("#s_casesr2", {x: -70, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 106.585);
+tl.fromTo("#s_casesr3", {x: -70, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 110.257);
+tl.set("#twipe", {opacity: 1}, 98.31);
+tl.fromTo("#twipe", {x: -1990}, {x: 0, duration: 0.23, ease: "power1.in", immediateRender: false}, 98.31);
+tl.fromTo("#twipe", {x: 0}, {x: 1990, duration: 0.3, ease: "power2.in", immediateRender: false}, 98.56);
+tl.set("#twipe", {opacity: 0, x: -1990}, 98.89);
+tl.fromTo("#s_k12g", {scale: 1.6, opacity: 0}, {scale: 1, opacity: 0.13, duration: 1.0, ease: "power2.out", immediateRender: false}, 114.63);
+tl.fromTo("#s_k12k", {opacity: 0, letterSpacing: "0.5em", filter: "blur(14px)"}, {opacity: 1, letterSpacing: "0.1em", filter: "blur(0px)", duration: 0.8, ease: "power2.out", immediateRender: false}, 114.73);
+tl.set("#tbk", {opacity: 1}, 114.42);
+tl.to("#tbk", {opacity: 0, duration: 0.7, ease: "power2.out"}, 114.45);
+tl.set("#flash", {opacity: 0.42}, 122.0);
+tl.to("#flash", {opacity: 0, duration: 0.70, ease: "power2.out"}, 122.04);
+tl.fromTo("#s_card2n", {x: -40, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 122.25);
+tl.fromTo("#s_card2t", {scale: 1.1, opacity: 0, filter: "blur(8px)"}, {scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.8, ease: "power2.out", immediateRender: false}, 122.5);
+tl.fromTo("#s_card2s", {opacity: 0}, {opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 123.2);
+tl.fromTo("#stage", {opacity: 0}, {opacity: 1, duration: 0.8, ease: "power2.out", immediateRender: false}, 0.05);
+tl.to("#stage", {opacity: 0, duration: 0.95, ease: "power1.in"}, 131.4);
+const root = gsap.timeline({ paused: true });
+tl.time(0.0);
+root.fromTo(tl, { time: 0.0 }, { time: 132.55, duration: 132.55, ease: "none" }, 0);
+window.__timelines["root"] = root;
+</script>
+</div>
+</body>
+</html>

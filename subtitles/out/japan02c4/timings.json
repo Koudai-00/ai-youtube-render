@@ -1,0 +1,455 @@
+{
+ "total": 170.77,
+ "beats": [
+  {
+   "id": "s_th4",
+   "start": 0.6,
+   "end": 7.36
+  },
+  {
+   "id": "s_k41",
+   "start": 7.36,
+   "end": 12.49
+  },
+  {
+   "id": "s_kwhim",
+   "start": 12.49,
+   "end": 21.39
+  },
+  {
+   "id": "s_kshib",
+   "start": 21.39,
+   "end": 32.36
+  },
+  {
+   "id": "s_kfood",
+   "start": 32.36,
+   "end": 42.4
+  },
+  {
+   "id": "s_klocal",
+   "start": 42.4,
+   "end": 57.94
+  },
+  {
+   "id": "s_k42",
+   "start": 57.94,
+   "end": 62.79
+  },
+  {
+   "id": "s_ktears",
+   "start": 62.79,
+   "end": 78.99
+  },
+  {
+   "id": "s_k43",
+   "start": 78.99,
+   "end": 84.6
+  },
+  {
+   "id": "s_kchange",
+   "start": 84.6,
+   "end": 95.12
+  },
+  {
+   "id": "s_msg99",
+   "start": 95.12,
+   "end": 108.56
+  },
+  {
+   "id": "s_cardE",
+   "start": 108.56,
+   "end": 116.99
+  },
+  {
+   "id": "s_f3",
+   "start": 116.99,
+   "end": 121.64
+  },
+  {
+   "id": "s_f6",
+   "start": 121.64,
+   "end": 125.91
+  },
+  {
+   "id": "s_f4",
+   "start": 125.91,
+   "end": 132.23
+  },
+  {
+   "id": "s_f5",
+   "start": 132.23,
+   "end": 138.03
+  },
+  {
+   "id": "s_wit",
+   "start": 138.03,
+   "end": 153.23
+  },
+  {
+   "id": "s_ask",
+   "start": 153.23,
+   "end": 161.25
+  },
+  {
+   "id": "s_end",
+   "start": 161.25,
+   "end": 169.77
+  }
+ ],
+ "narr": {
+  "g401": {
+   "start": 1.1,
+   "dur": 5.76
+  },
+  "g402": {
+   "start": 7.76,
+   "dur": 4.48
+  },
+  "g403": {
+   "start": 12.84,
+   "dur": 3.52
+  },
+  "g404": {
+   "start": 16.66,
+   "dur": 4.28
+  },
+  "g405": {
+   "start": 21.74,
+   "dur": 6.44
+  },
+  "g406": {
+   "start": 28.48,
+   "dur": 3.43
+  },
+  "g407": {
+   "start": 32.71,
+   "dur": 4.26
+  },
+  "g408": {
+   "start": 37.27,
+   "dur": 4.68
+  },
+  "g409": {
+   "start": 42.75,
+   "dur": 5.87
+  },
+  "g410": {
+   "start": 48.92,
+   "dur": 4.63
+  },
+  "g411": {
+   "start": 53.85,
+   "dur": 3.64
+  },
+  "g412": {
+   "start": 58.34,
+   "dur": 4.15
+  },
+  "g413": {
+   "start": 79.39,
+   "dur": 4.96
+  },
+  "g414": {
+   "start": 84.95,
+   "dur": 1.9
+  },
+  "g415": {
+   "start": 87.14,
+   "dur": 3.16
+  },
+  "g416": {
+   "start": 90.6,
+   "dur": 4.02
+  },
+  "g417": {
+   "start": 95.62,
+   "dur": 12.44
+  },
+  "g418": {
+   "start": 109.06,
+   "dur": 5.53
+  },
+  "g419": {
+   "start": 117.39,
+   "dur": 4.0
+  },
+  "g420": {
+   "start": 122.04,
+   "dur": 3.63
+  },
+  "g421": {
+   "start": 126.31,
+   "dur": 5.66
+  },
+  "g422": {
+   "start": 132.63,
+   "dur": 5.1
+  },
+  "g423": {
+   "start": 138.53,
+   "dur": 2.69
+  },
+  "g424": {
+   "start": 141.51,
+   "dur": 2.76
+  },
+  "g425": {
+   "start": 144.58,
+   "dur": 2.77
+  },
+  "g426": {
+   "start": 147.65,
+   "dur": 1.99
+  },
+  "g427": {
+   "start": 149.94,
+   "dur": 2.69
+  },
+  "g428": {
+   "start": 153.73,
+   "dur": 6.92
+  },
+  "g429": {
+   "start": 161.75,
+   "dur": 6.41
+  }
+ },
+ "quotes": {
+  "k_tears": {
+   "beat_start": 62.89,
+   "lead": 0.4,
+   "adur": 14.9,
+   "media_start": 0.6,
+   "dur": 15.8,
+   "clip": "k_tears.mp4",
+   "sample": "kalani",
+   "grade": "warm",
+   "credit": "引用: Kalani James Lenehan",
+   "caps": [
+    [
+     0.0,
+     "人生で<em>最高</em>の旅だった"
+    ],
+    [
+     6.4,
+     "美しすぎて 何度も<em>泣いた</em>"
+    ]
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "s_th4",
+   "kind": "msg",
+   "start": 0.6,
+   "end": 7.36,
+   "nids": [
+    "g401"
+   ],
+   "text": "そして 人生が<br><em>変わる</em>",
+   "bgx": "ink0"
+  },
+  {
+   "id": "s_k41",
+   "kind": "kick",
+   "start": 7.36,
+   "end": 12.49,
+   "nids": [
+    "g402"
+   ],
+   "kicker": "20代、初めてのひとり旅",
+   "bgx": "train2"
+  },
+  {
+   "id": "s_kwhim",
+   "kind": "nv",
+   "start": 12.49,
+   "end": 21.39,
+   "nids": [
+    "g403",
+    "g404"
+   ],
+   "q": "k_whim"
+  },
+  {
+   "id": "s_kshib",
+   "kind": "nv",
+   "start": 21.39,
+   "end": 32.36,
+   "nids": [
+    "g405",
+    "g406"
+   ],
+   "q": "k_shibuya"
+  },
+  {
+   "id": "s_kfood",
+   "kind": "nv",
+   "start": 32.36,
+   "end": 42.4,
+   "nids": [
+    "g407",
+    "g408"
+   ],
+   "q": "k_food"
+  },
+  {
+   "id": "s_klocal",
+   "kind": "nv",
+   "start": 42.4,
+   "end": 57.94,
+   "nids": [
+    "g409",
+    "g410",
+    "g411"
+   ],
+   "q": "k_local"
+  },
+  {
+   "id": "s_k42",
+   "kind": "kick",
+   "start": 57.94,
+   "end": 62.79,
+   "nids": [
+    "g412"
+   ],
+   "kicker": "旅の最後の、言葉",
+   "bgx": "ink1"
+  },
+  {
+   "id": "s_ktears",
+   "kind": "q",
+   "start": 62.79,
+   "end": 78.99,
+   "nids": []
+  },
+  {
+   "id": "s_k43",
+   "kind": "kick",
+   "start": 78.99,
+   "end": 84.6,
+   "nids": [
+    "g413"
+   ],
+   "kicker": "涙の、理由",
+   "bgx": "ink0"
+  },
+  {
+   "id": "s_kchange",
+   "kind": "nv",
+   "start": 84.6,
+   "end": 95.12,
+   "nids": [
+    "g414",
+    "g415",
+    "g416"
+   ],
+   "q": "k_change"
+  },
+  {
+   "id": "s_msg99",
+   "kind": "msg",
+   "start": 95.12,
+   "end": 108.56,
+   "nids": [
+    "g417"
+   ],
+   "text": "安心が 人を<br><em>ひらく</em>",
+   "bgx": "walk0"
+  },
+  {
+   "id": "s_cardE",
+   "kind": "card",
+   "start": 108.56,
+   "end": 116.99,
+   "nids": [
+    "g418"
+   ],
+   "no": "終 章",
+   "title": "守ってきたのは、あなた",
+   "sub": "— この日常は、世界の奇跡",
+   "bg": "thdb",
+   "bgx": "fuji0"
+  },
+  {
+   "id": "s_f3",
+   "kind": "kick",
+   "start": 116.99,
+   "end": 121.64,
+   "nids": [
+    "g419"
+   ],
+   "kicker": "当たり前は、世界の非日常",
+   "bgx": "walk2"
+  },
+  {
+   "id": "s_f6",
+   "kind": "kick",
+   "start": 121.64,
+   "end": 125.91,
+   "nids": [
+    "g420"
+   ],
+   "kicker": "作ったのは、特別な誰かじゃない",
+   "bgx": "crowd1"
+  },
+  {
+   "id": "s_f4",
+   "kind": "kick",
+   "start": 125.91,
+   "end": 132.23,
+   "nids": [
+    "g421"
+   ],
+   "kicker": "毎日の、小さな積み重ね",
+   "bgx": "train2"
+  },
+  {
+   "id": "s_f5",
+   "kind": "kick",
+   "start": 132.23,
+   "end": 138.03,
+   "nids": [
+    "g422"
+   ],
+   "kicker": "あなたの日常が、誰かを変える",
+   "bgx": "walk0",
+   "kstyle": "serif"
+  },
+  {
+   "id": "s_wit",
+   "kind": "recap4b",
+   "start": 138.03,
+   "end": 153.23,
+   "nids": [
+    "g423",
+    "g424",
+    "g425",
+    "g426",
+    "g427"
+   ],
+   "head": "4人の物語"
+  },
+  {
+   "id": "s_ask",
+   "kind": "ask",
+   "start": 153.23,
+   "end": 161.25,
+   "nids": [
+    "g428"
+   ],
+   "bgx": "tnight1"
+  },
+  {
+   "id": "s_end",
+   "kind": "end",
+   "start": 161.25,
+   "end": 169.77,
+   "nids": [
+    "g429"
+   ],
+   "bgx": "fuji0"
+  }
+ ]
+}

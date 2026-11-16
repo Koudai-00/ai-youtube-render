@@ -1,0 +1,128 @@
+{
+ "total": 83.22,
+ "beats": [
+  {
+   "id": "qthd",
+   "start": 0.5,
+   "end": 7.3
+  },
+  {
+   "id": "qtak",
+   "start": 7.3,
+   "end": 13.7
+  },
+  {
+   "id": "qchani",
+   "start": 13.7,
+   "end": 20.4
+  },
+  {
+   "id": "n01",
+   "start": 20.4,
+   "end": 26.09
+  },
+  {
+   "id": "qkalani",
+   "start": 26.09,
+   "end": 33.49
+  },
+  {
+   "id": "n02",
+   "start": 33.49,
+   "end": 39.49
+  },
+  {
+   "id": "info",
+   "start": 39.49,
+   "end": 51.62
+  },
+  {
+   "id": "diagram",
+   "start": 51.62,
+   "end": 58.93
+  },
+  {
+   "id": "title",
+   "start": 58.93,
+   "end": 67.03
+  },
+  {
+   "id": "cards",
+   "start": 67.03,
+   "end": 75.59
+  },
+  {
+   "id": "ch1",
+   "start": 75.59,
+   "end": 83.22
+  }
+ ],
+ "narr": {
+  "n01": {
+   "start": 20.75,
+   "dur": 4.94
+  },
+  "n02": {
+   "start": 33.74,
+   "dur": 5.4
+  },
+  "n03": {
+   "start": 39.64,
+   "dur": 2.26
+  },
+  "n04": {
+   "start": 42.25,
+   "dur": 8.87
+  },
+  "n05": {
+   "start": 51.92,
+   "dur": 6.56
+  },
+  "n06": {
+   "start": 59.73,
+   "dur": 6.9
+  },
+  "n07": {
+   "start": 67.43,
+   "dur": 7.75
+  },
+  "n08": {
+   "start": 75.89,
+   "dur": 5.73
+  }
+ },
+ "quotes": {
+  "qthd": {
+   "beat_start": 0.5,
+   "lead": 0.4,
+   "adur": 5.9,
+   "media_start": 0.7,
+   "dur": 6.8,
+   "clip": "qthd.mp4"
+  },
+  "qtak": {
+   "beat_start": 7.3,
+   "lead": 0.4,
+   "adur": 5.5,
+   "media_start": 0.7,
+   "dur": 6.4,
+   "clip": "qtak.mp4"
+  },
+  "qchani": {
+   "beat_start": 13.7,
+   "lead": 0.4,
+   "adur": 5.8,
+   "media_start": 0.7,
+   "dur": 6.7,
+   "clip": "qchani.mp4"
+  },
+  "qkalani": {
+   "beat_start": 26.09,
+   "lead": 0.4,
+   "adur": 6.4,
+   "media_start": 0.7,
+   "dur": 7.4,
+   "clip": "qkalani.mp4"
+  }
+ }
+}

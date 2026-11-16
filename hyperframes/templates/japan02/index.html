@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family:'NotoB'; src:url('assets/fonts/NotoSansJP-Black.otf') format('opentype'); }
+@font-face { font-family:'NotoBd'; src:url('assets/fonts/NotoSansJP-Bold.otf') format('opentype'); }
+@font-face { font-family:'SerifJP'; src:url('assets/fonts/NotoSerifJP.ttf') format('truetype');
+  font-weight:100 900; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#000; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden;
+  background:#0b0a07; font-family:'NotoB','NotoBd',sans-serif; color:#f2f1ec; }
+#stage { position:absolute; inset:0; }
+.clip { position:absolute; inset:0; width:100%; height:100%; }
+video.bgv { object-fit:cover; transform:translateZ(0); backface-visibility:hidden; }
+em { font-style:normal; color:#e3b55e; }
+/* overlays */
+#scan { position:absolute; inset:0; z-index:40; pointer-events:none; opacity:.14;
+  background:repeating-linear-gradient(0deg, rgba(0,0,0,.55) 0 2px, rgba(0,0,0,0) 2px 5px); }
+#vig { position:absolute; inset:0; z-index:41; pointer-events:none;
+  background:radial-gradient(ellipse 115% 105% at 50% 46%, rgba(0,0,0,0) 58%, rgba(0,0,0,.52) 100%); }
+#flash { position:absolute; inset:0; z-index:60; background:#f5ead5; opacity:0; pointer-events:none; }
+.gl { position:absolute; left:-80px; right:-80px; z-index:59; opacity:0; pointer-events:none; }
+#gl1 { background:rgba(217,164,65,.4); }
+#gl2 { background:rgba(245,234,213,.3); }
+#gl3 { background:rgba(242,241,236,.75); }
+/* quote overlays */
+.qov { z-index:10; }
+.qscrim { position:absolute; left:0; right:0; bottom:0; height:460px;
+  background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(2,3,5,.62) 42%, rgba(2,3,5,.86) 100%); }
+.ch1scrim { position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(2,3,5,.35) 0%, rgba(2,3,5,.72) 70%, rgba(2,3,5,.9) 100%); }
+.credit { position:absolute; top:34px; right:44px; font-family:'NotoBd'; font-size:26px;
+  color:rgba(242,241,236,.85); background:rgba(5,6,9,.55); padding:8px 18px; border-left:4px solid #d9a441; }
+.qcap { position:absolute; left:0; right:0; bottom:150px; text-align:center; font-size:84px;
+  letter-spacing:.02em; text-shadow:0 4px 26px rgba(0,0,0,.9), 0 0 2px rgba(0,0,0,.9); opacity:0; }
+.qcap2 { bottom:56px; }
+.qsub { position:absolute; left:0; right:0; bottom:66px; text-align:center; font-family:'NotoBd';
+  font-size:34px; color:rgba(242,241,236,.8); text-shadow:0 2px 12px rgba(0,0,0,.9); opacity:0; }
+.stm { position:absolute; left:0; right:0; bottom:236px; text-align:center; font-size:72px;
+  text-shadow:0 4px 26px rgba(0,0,0,.92); opacity:0; }
+.stm2 { bottom:118px; font-size:92px; }
+.uline { position:absolute; left:50%; margin-left:-330px; bottom:-14px; width:660px; height:10px;
+  background:#d9a441; transform:scaleX(0); transform-origin:left; }
+/* lower third */
+.lt { position:absolute; left:70px; bottom:96px; display:flex; opacity:0; }
+.ltbar { width:12px; background:#d9a441; }
+.ltbody { background:rgba(5,6,9,.78); padding:22px 38px 24px 30px; }
+.ltname { font-size:52px; }
+.ltrole { font-family:'NotoBd'; font-size:28px; color:#e8c37a; margin-top:6px; }
+.chips { position:absolute; right:70px; bottom:110px; display:flex; gap:22px; }
+.chip { font-size:36px; background:rgba(5,6,9,.72); border:2px solid #d9a441;
+  padding:12px 26px; border-radius:999px; opacity:0; }
+/* panels */
+.panel { z-index:10; background:#16130c; }
+.panel.clear { background:linear-gradient(180deg, rgba(10,9,6,.78) 0%, rgba(10,9,6,.48) 45%, rgba(10,9,6,.78) 100%); }
+#tbk { position:absolute; inset:0; z-index:56; background:#000; opacity:0; pointer-events:none; }
+#twipe { position:absolute; left:0; top:-2px; width:1930px; height:1084px; z-index:57; opacity:0;
+  background:linear-gradient(90deg, #0a0d12 0%, #131a24 85%, #d9a441 99%, #d9a441 100%);
+  transform:translateX(-1990px); pointer-events:none; }
+.phead { position:absolute; left:110px; top:50%; transform:translateY(-50%); width:720px;
+  font-size:80px; line-height:1.26; opacity:0; }
+.phline { width:230px; height:12px; background:#d9a441; margin-top:30px; transform-origin:left; transform:scaleX(0); }
+.irows { position:absolute; right:100px; top:50%; transform:translateY(-50%); width:880px; }
+.tline { position:absolute; left:-56px; top:14px; bottom:10px; width:6px; background:#3a3220;
+  transform-origin:top; transform:scaleY(0); }
+.irow { display:flex; align-items:center; gap:36px; margin-bottom:74px; opacity:0; }
+.irow:last-child { margin-bottom:0; }
+.iic { width:110px; height:110px; flex:none; color:#e8c37a; background:#1c1812;
+  border:3px solid #3a3220; border-radius:18px; display:flex; align-items:center; justify-content:center; }
+.iic svg { width:64px; height:64px; }
+.iplace { font-size:30px; color:#d9a441; font-family:'NotoBd'; letter-spacing:.14em; }
+.idesc { font-size:44px; line-height:1.3; margin-top:4px; }
+/* diagram */
+.dhead { position:absolute; left:0; right:0; top:96px; text-align:center; font-size:66px; opacity:0; }
+.cnode { position:absolute; left:50%; top:54%; width:340px; height:340px; margin:-170px 0 0 -170px;
+  background:radial-gradient(circle at 50% 42%, #3a2c13, #1c1507 70%); border:6px solid #d9a441; border-radius:50%;
+  display:flex; align-items:center; justify-content:center; text-align:center; font-size:64px; line-height:1.2;
+  box-shadow:0 0 90px rgba(217,164,65,.35); opacity:0; }
+.onode { position:absolute; width:150px; height:150px; margin:-75px 0 0 -75px; color:#8a93a0;
+  background:#1c1812; border:3px solid #3a3220; border-radius:50%; padding:26px; opacity:0; }
+.onode svg { width:100%; height:100%; }
+.arrow { position:absolute; width:250px; height:8px; background:linear-gradient(90deg, rgba(138,147,160,0), #d9a441);
+  opacity:0; }
+.arrow::after { content:''; position:absolute; right:-4px; top:-10px; border:14px solid transparent;
+  border-left:18px solid #d9a441; }
+.dnote { position:absolute; left:0; right:0; bottom:64px; text-align:center; font-family:'NotoBd';
+  font-size:34px; color:#8a93a0; opacity:0; }
+/* title */
+.tpanel { background:radial-gradient(ellipse 90% 80% at 50% 42%, #1a160e 0%, #0b0a07 70%); }
+.glow { position:absolute; left:50%; top:50%; width:1500px; height:700px; margin:-350px 0 0 -750px;
+  background:radial-gradient(ellipse, rgba(217,164,65,.14), rgba(217,164,65,0) 65%); opacity:0; }
+.ttl-wrap { position:absolute; inset:0; }
+.ttl-top { position:absolute; left:0; right:0; top:286px; text-align:center; font-size:58px;
+  color:rgba(242,241,236,.92); letter-spacing:.06em; opacity:0; }
+.ttl-main, .ttl-ghost { position:absolute; left:0; right:0; top:380px; text-align:center;
+  font-size:160px; letter-spacing:.02em; font-family:'SerifJP'; font-weight:900; }
+.ttl-main { opacity:0; text-shadow:0 10px 60px rgba(0,0,0,.8); }
+.ttl-ghost { opacity:0; }
+.ttl-r { color:#d9a441; transform:translateX(-9px); } .ttl-r em { color:#d9a441; }
+.ttl-b { color:#46e0d4; transform:translateX(9px); } .ttl-b em { color:#46e0d4; }
+.ttl-sub { position:absolute; left:0; right:0; top:648px; text-align:center; font-family:'NotoBd';
+  font-size:40px; color:#e8c37a; letter-spacing:.1em; opacity:0; }
+/* cards */
+.chead { position:absolute; left:0; right:0; top:84px; text-align:center; font-family:'NotoBd';
+  font-size:36px; letter-spacing:.5em; color:#8a93a0; opacity:0; }
+.cgrid { position:absolute; left:90px; right:90px; top:190px; bottom:120px; display:flex; gap:34px; }
+.card { position:relative; flex:1; border-radius:14px; overflow:hidden; background:#1c1812; opacity:0; }
+.card img { position:absolute; width:auto; height:100%; left:50%; transform:translateX(-50%); filter:saturate(.85); }
+.cshade { position:absolute; inset:0; background:linear-gradient(180deg, rgba(2,3,5,.08) 35%, rgba(2,3,5,.88) 88%); }
+.cnum { position:absolute; left:26px; top:18px; font-size:54px; color:#d9a441; }
+.clab { position:absolute; left:0; right:0; bottom:34px; text-align:center; font-size:46px;
+  text-shadow:0 3px 14px rgba(0,0,0,.9); }
+/* chapter */
+.chno { position:absolute; left:150px; top:330px; font-size:56px; color:#d9a441; letter-spacing:.4em; opacity:0; }
+.chttl { position:absolute; left:144px; top:404px; font-size:132px; letter-spacing:.03em;
+  font-family:'SerifJP'; font-weight:900;
+  text-shadow:0 8px 50px rgba(0,0,0,.85); opacity:0; }
+.chsub { position:absolute; left:152px; top:624px; font-family:'NotoBd'; font-size:40px;
+  color:#e8c37a; text-shadow:0 2px 14px rgba(0,0,0,.95); opacity:0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="root" data-width="1920" data-height="1080" data-start="0" data-duration="83.52">
+<div id="stage">
+<video id="qthdv" class="clip bgv " data-start="0.5" data-duration="6.8" data-media-start="0.7" data-track-index="1" src="assets/bg/qthd.mp4" muted playsinline></video>
+<div id="qthdo" class="clip qov" data-start="0.5" data-duration="6.8" data-track-index="2" style=""><div class="qscrim"></div><div class="credit">引用: Those Happy Days</div><div class="qcap" id="qthd-c">「衝撃を受けるぞ」と<em>警告</em>されていた</div><div class="qsub" id="qthd-s">— でもそれは、想像とは真逆の衝撃だった</div></div>
+<video id="qtakv" class="clip bgv " data-start="7.3" data-duration="6.4" data-media-start="0.7" data-track-index="3" src="assets/bg/qtak.mp4" muted playsinline></video>
+<div id="qtako" class="clip qov" data-start="7.3" data-duration="6.4" data-track-index="4" style=""><div class="qscrim"></div><div class="credit">引用: TAKASHii</div><div class="qcap" id="qtak-c">朝4時の東京を <em>ひとりで</em>歩ける</div></div>
+<video id="qchaniv" class="clip bgv " data-start="13.7" data-duration="6.7" data-media-start="0.7" data-track-index="5" src="assets/bg/qchani.mp4" muted playsinline></video>
+<div id="qchanio" class="clip qov" data-start="13.7" data-duration="6.7" data-track-index="6" style=""><div class="qscrim"></div><div class="credit">引用: Chani Japan</div><div class="qcap" id="qchani-c">喪失を抱えた私に 日本は<em>平穏</em>をくれた</div></div>
+<video id="qkalaniv" class="clip bgv " data-start="26.09" data-duration="7.4" data-media-start="0.7" data-track-index="7" src="assets/bg/qkalani.mp4" muted playsinline></video>
+<div id="qkalanio" class="clip qov" data-start="26.09" data-duration="7.4" data-track-index="8" style=""><div class="qscrim"></div><div class="credit">引用: Kalani James Lenehan</div><div class="qcap" id="qkalani-c1">美しすぎて 何度も<em>泣いた</em></div><div class="qcap qcap2" id="qkalani-c2">人生で<em>最高</em>の旅だった</div></div>
+<video id="n01v" class="clip bgv " data-start="20.4" data-duration="5.69" data-media-start="0.0" data-track-index="9" src="assets/bg/stmt.mp4" muted playsinline></video>
+<div id="n01o" class="clip qov" data-start="20.4" data-duration="5.69" data-track-index="10" style=""><div class="qscrim"></div><div class="credit">引用: Kalani James Lenehan</div><div class="stm" id="stm1">いま 世界中の外国人が</div><div class="stm stm2" id="stm2">日本に<em>人生を変えられて</em>いる<div class="uline" id="ul1"></div></div></div>
+<video id="n02v" class="clip bgv " data-start="33.49" data-duration="6.0" data-media-start="0.0" data-track-index="11" src="assets/bg/profile.mp4" muted playsinline></video>
+<div id="n02o" class="clip qov" data-start="33.49" data-duration="6.0" data-track-index="12" style=""><div class="qscrim"></div><div class="credit">引用: Kalani James Lenehan</div><div class="lt" id="lt1"><div class="ltbar"></div><div class="ltbody"><div class="ltname">初めて日本を訪れた 20代の男性</div><div class="ltrole">Kalani James Lenehan — 人生が変わった旅</div></div></div><div class="chips"><div class="chip" id="chip1">初めてのひとり旅</div><div class="chip" id="chip2">ほぼ無計画</div><div class="chip" id="chip3">そして、涙</div></div></div>
+<video id="infobgx" class="clip bgv " data-start="39.49" data-duration="12.13" data-media-start="0.0" data-track-index="13" src="assets/bg/bgx_info.mp4" muted playsinline></video>
+<div id="infop" class="clip panel clear" data-start="39.49" data-duration="12.13" data-track-index="14" style=""><div class="phead" id="ph1">世界中が、<br>日本へ向かっている<div class="phline" id="phl"></div></div><div class="irows"><div class="irow" id="i1"><div class="iic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 30 L42 16 M42 16 L30 20 L18 10 L14 12 L23 22 M42 16 L34 26 L36 38 L33 39 L27 28"/><line x1="6" y1="40" x2="26" y2="40"/></svg></div><div class="itx"><div class="iplace">訪日客</div><div class="idesc">4268万人 — 過去最多を更新</div></div></div><div class="irow" id="i2"><div class="iic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><circle cx="24" cy="24" r="17"/><path d="M17 14 L24 24 L31 14"/><line x1="24" y1="24" x2="24" y2="35"/><line x1="18" y1="27" x2="30" y2="27"/><line x1="18" y1="32" x2="30" y2="32"/></svg></div><div class="itx"><div class="iplace">消費額</div><div class="idesc">9兆円超 — 経済の柱の1つに</div></div></div><div class="irow" id="i3"><div class="iic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M14 8h20v10a10 10 0 0 1-20 0z"/><path d="M14 10h-6a6 6 0 0 0 6 9M34 10h6a6 6 0 0 1-6 9"/><line x1="24" y1="28" x2="24" y2="35"/><path d="M16 40h16M19 35h10"/></svg></div><div class="itx"><div class="iplace">世界の評価</div><div class="idesc">“最も魅力的な国” 3年連続1位</div></div></div><div class="tline" id="tl1"></div></div></div>
+<video id="diagbgx" class="clip bgv " data-start="51.62" data-duration="7.31" data-media-start="0.0" data-track-index="15" src="assets/bg/bgx_diagram.mp4" muted playsinline></video>
+<div id="diag" class="clip panel clear" data-start="51.62" data-duration="7.31" data-track-index="16" style=""><div class="dhead" id="dh1">彼らが語るのは <em>安心</em>と<em>優しさ</em></div><div class="onode" id="on1" style="left:13%;top:22%"><svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="6.5" fill="currentColor"/><path d="M5 33 a13 11 0 0 1 26 0z" fill="currentColor"/></svg></div><div class="onode" id="on2" style="left:78%;top:16%"><svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="6.5" fill="currentColor"/><path d="M5 33 a13 11 0 0 1 26 0z" fill="currentColor"/></svg></div><div class="onode" id="on3" style="left:12%;top:68%"><svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="6.5" fill="currentColor"/><path d="M5 33 a13 11 0 0 1 26 0z" fill="currentColor"/></svg></div><div class="onode" id="on4" style="left:76%;top:72%"><svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="6.5" fill="currentColor"/><path d="M5 33 a13 11 0 0 1 26 0z" fill="currentColor"/></svg></div><div class="arrow" id="ar1" style="left:27%;top:33%;transform:rotate(35deg)"></div><div class="arrow" id="ar2" style="left:63%;top:29%;transform:rotate(145deg)"></div><div class="arrow" id="ar3" style="left:27%;top:63%;transform:rotate(-35deg)"></div><div class="arrow" id="ar4" style="left:62%;top:66%;transform:rotate(-145deg)"></div><div class="cnode" id="cn1"><span>日本</span></div><div class="dnote" id="dn1">国籍も、年齢も、旅の理由も、ばらばらなのに</div></div>
+<video id="titlebgx" class="clip bgv " data-start="58.93" data-duration="8.1" data-media-start="0.0" data-track-index="17" src="assets/bg/bgx_title.mp4" muted playsinline></video>
+<div id="titlebeat" class="clip panel tpanel clear" data-start="58.93" data-duration="8.1" data-track-index="18" style=""><div class="glow" id="tglow"></div><div class="ttl-wrap"><div class="ttl-top" id="tt1">なぜ、世界は</div><div class="ttl-main" id="ttm">日本に<em>恋をする</em>のか</div><div class="ttl-sub" id="tts">4人の外国人の体験から 徹底深掘り</div></div></div>
+<div id="cardbeat" class="clip panel" data-start="67.03" data-duration="8.56" data-track-index="19" style=""><div class="chead" id="chd">4人の体験</div><div class="cgrid"><div class="card" id="c1"><img src="assets/img/card_thd.jpg" alt=""><div class="cshade"></div><div class="cnum">01</div><div class="clab">初来日の夫婦</div></div><div class="card" id="c2"><img src="assets/img/card_tak.jpg" alt=""><div class="cshade"></div><div class="cnum">02</div><div class="clab">在住アメリカ人</div></div><div class="card" id="c3"><img src="assets/img/card_chani.jpg" alt=""><div class="cshade"></div><div class="cnum">03</div><div class="clab">喪失を抱えた女性</div></div><div class="card" id="c4"><img src="assets/img/card_kalani.jpg" alt=""><div class="cshade"></div><div class="cnum">04</div><div class="clab">20代のひとり旅</div></div></div></div>
+<video id="ch1v" class="clip bgv " data-start="75.59" data-duration="7.63" data-media-start="0.0" data-track-index="20" src="assets/bg/ch1.mp4" muted playsinline></video>
+<div id="ch1o" class="clip qov" data-start="75.59" data-duration="7.63" data-track-index="21" style=""><div class="ch1scrim"></div><div class="credit">引用: Those Happy Days</div><div class="chno" id="chno">第 1 章</div><div class="chttl" id="chttl">世界が、日本に驚く</div><div class="chsub" id="chsub">— 初めての48時間に、何が起きるのか</div></div>
+<div id="vig"></div>
+<div id="tbk"></div>
+<div id="twipe"></div>
+<div id="flash"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#qthdv", {scale: 1.05}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 0.55);
+tl.fromTo("#qtakv", {scale: 1.05}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 7.35);
+tl.fromTo("#qchaniv", {scale: 1.05}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 13.75);
+tl.fromTo("#qkalaniv", {scale: 1.05}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 26.14);
+tl.fromTo("#qthd-c", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power3.out", immediateRender: false}, 0.95);
+tl.fromTo("#qthd-s", {opacity: 0}, {opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 1.9);
+tl.fromTo("#qtak-c", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power3.out", immediateRender: false}, 7.75);
+tl.fromTo("#qchani-c", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power3.out", immediateRender: false}, 14.15);
+tl.fromTo("#qkalani-c1", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power3.out", immediateRender: false}, 26.59);
+tl.fromTo("#qkalani-c2", {y: 26, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power3.out", immediateRender: false}, 29.39);
+tl.set("#flash", {opacity: 0.38}, 0.5);
+tl.to("#flash", {opacity: 0, duration: 0.69, ease: "power2.out"}, 0.54);
+tl.set("#flash", {opacity: 0.42}, 7.3);
+tl.to("#flash", {opacity: 0, duration: 0.70, ease: "power2.out"}, 7.34);
+tl.set("#flash", {opacity: 0.42}, 13.7);
+tl.to("#flash", {opacity: 0, duration: 0.70, ease: "power2.out"}, 13.74);
+tl.set("#flash", {opacity: 0.34}, 20.4);
+tl.to("#flash", {opacity: 0, duration: 0.67, ease: "power2.out"}, 20.44);
+tl.set("#flash", {opacity: 0.42}, 26.09);
+tl.to("#flash", {opacity: 0, duration: 0.70, ease: "power2.out"}, 26.13);
+tl.fromTo("#stm1", {y: 24, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power3.out", immediateRender: false}, 20.85);
+tl.fromTo("#stm2", {y: 24, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power3.out", immediateRender: false}, 22.35);
+tl.fromTo("#ul1", {scaleX: 0}, {scaleX: 1, duration: 0.45, ease: "power2.inOut", immediateRender: false}, 24.05);
+tl.set("#flash", {opacity: 0.29}, 33.49);
+tl.to("#flash", {opacity: 0, duration: 0.66, ease: "power2.out"}, 33.53);
+tl.fromTo("#n02v", {scale: 1.04}, {scale: 1, duration: 2.0, ease: "power2.out", immediateRender: false}, 33.54);
+tl.fromTo("#lt1", {x: -70, opacity: 0}, {x: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 33.89);
+tl.fromTo("#chip1", {y: 18, opacity: 0, scale: 0.95}, {y: 0, opacity: 1, scale: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 35.39);
+tl.fromTo("#chip2", {y: 18, opacity: 0, scale: 0.95}, {y: 0, opacity: 1, scale: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 36.19);
+tl.fromTo("#chip3", {y: 18, opacity: 0, scale: 0.95}, {y: 0, opacity: 1, scale: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 36.99);
+tl.fromTo("#ph1", {x: -50, opacity: 0}, {x: 0, opacity: 1, duration: 0.5, ease: "power3.out", immediateRender: false}, 39.84);
+tl.fromTo("#phl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 40.29);
+tl.fromTo("#tl1", {scaleY: 0}, {scaleY: 1, duration: 8.0, ease: "none", immediateRender: false}, 40.09);
+tl.fromTo("#i1", {x: 70, opacity: 0}, {x: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 42.4);
+tl.fromTo("#i2", {x: 70, opacity: 0}, {x: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 44.0);
+tl.fromTo("#i3", {x: 70, opacity: 0}, {x: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 45.75);
+tl.set("#twipe", {opacity: 1}, 39.26);
+tl.fromTo("#twipe", {x: -1990}, {x: 0, duration: 0.23, ease: "power1.in", immediateRender: false}, 39.26);
+tl.fromTo("#twipe", {x: 0}, {x: 1990, duration: 0.3, ease: "power2.in", immediateRender: false}, 39.51);
+tl.set("#twipe", {opacity: 0, x: -1990}, 39.84);
+tl.set("#tbk", {opacity: 1}, 51.61);
+tl.to("#tbk", {opacity: 0, duration: 0.7, ease: "power2.out"}, 51.64);
+tl.fromTo("#dh1", {y: -30, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 51.87);
+tl.fromTo("#cn1", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.6)", immediateRender: false}, 52.17);
+tl.fromTo("#on1", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)", immediateRender: false}, 52.57);
+tl.fromTo("#on2", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)", immediateRender: false}, 52.72);
+tl.fromTo("#on3", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)", immediateRender: false}, 52.87);
+tl.fromTo("#on4", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)", immediateRender: false}, 53.02);
+tl.fromTo("#ar1", {opacity: 0}, {opacity: 1, duration: 0.25, ease: "power2.out", immediateRender: false}, 53.17);
+tl.fromTo("#ar2", {opacity: 0}, {opacity: 1, duration: 0.25, ease: "power2.out", immediateRender: false}, 53.27);
+tl.fromTo("#ar3", {opacity: 0}, {opacity: 1, duration: 0.25, ease: "power2.out", immediateRender: false}, 53.37);
+tl.fromTo("#ar4", {opacity: 0}, {opacity: 1, duration: 0.25, ease: "power2.out", immediateRender: false}, 53.47);
+tl.fromTo("#dn1", {opacity: 0}, {opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 52.62);
+tl.to("#cn1", {scale: 1.07, duration: 0.38, ease: "sine.inOut", repeat: 5, yoyo: true}, 53.72);
+tl.set("#flash", {opacity: 0.42}, 58.93);
+tl.to("#flash", {opacity: 0, duration: 0.70, ease: "power2.out"}, 58.97);
+tl.fromTo("#tt1", {y: -26, opacity: 0}, {y: 0, opacity: 1, duration: 0.5, ease: "power3.out", immediateRender: false}, 59.13);
+tl.fromTo("#ttm", {scale: 1.1, opacity: 0, filter: "blur(12px)"}, {scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.9, ease: "power2.out", immediateRender: false}, 59.35);
+tl.fromTo("#tglow", {opacity: 0}, {opacity: 1, duration: 1.2, ease: "power2.out", immediateRender: false}, 59.48);
+tl.fromTo("#tts", {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 60.43);
+tl.set("#twipe", {opacity: 1}, 66.8);
+tl.fromTo("#twipe", {x: -1990}, {x: 0, duration: 0.23, ease: "power1.in", immediateRender: false}, 66.8);
+tl.fromTo("#twipe", {x: 0}, {x: 1990, duration: 0.3, ease: "power2.in", immediateRender: false}, 67.05);
+tl.set("#twipe", {opacity: 0, x: -1990}, 67.38);
+tl.fromTo("#chd", {opacity: 0}, {opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 67.23);
+tl.fromTo("#c1", {y: 90, opacity: 0, rotation: 1.5}, {y: 0, opacity: 1, rotation: 0, duration: 0.5, ease: "power3.out", immediateRender: false}, 67.48);
+tl.fromTo("#c2", {y: 90, opacity: 0, rotation: 1.5}, {y: 0, opacity: 1, rotation: 0, duration: 0.5, ease: "power3.out", immediateRender: false}, 68.93);
+tl.fromTo("#c3", {y: 90, opacity: 0, rotation: 1.5}, {y: 0, opacity: 1, rotation: 0, duration: 0.5, ease: "power3.out", immediateRender: false}, 70.33);
+tl.fromTo("#c4", {y: 90, opacity: 0, rotation: 1.5}, {y: 0, opacity: 1, rotation: 0, duration: 0.5, ease: "power3.out", immediateRender: false}, 71.78);
+tl.set("#flash", {opacity: 0.42}, 75.59);
+tl.to("#flash", {opacity: 0, duration: 0.70, ease: "power2.out"}, 75.63);
+tl.fromTo("#chno", {x: -40, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 75.84);
+tl.fromTo("#chttl", {scale: 1.1, opacity: 0, filter: "blur(8px)"}, {scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.8, ease: "power2.out", immediateRender: false}, 76.09);
+tl.fromTo("#chsub", {opacity: 0}, {opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 76.69);
+tl.to("#stage", {opacity: 0, duration: 0.9, ease: "power1.in"}, 82.47);
+const root = gsap.timeline({ paused: true });
+tl.time(0.0);
+root.fromTo(tl, { time: 0.0 }, { time: 83.52, duration: 83.52, ease: "none" }, 0);
+window.__timelines["root"] = root;
+</script>
+</div>
+</body>
+</html>

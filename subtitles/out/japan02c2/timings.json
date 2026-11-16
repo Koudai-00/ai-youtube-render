@@ -1,0 +1,337 @@
+{
+ "total": 138.7,
+ "beats": [
+  {
+   "id": "s_th2",
+   "start": 0.6,
+   "end": 6.78
+  },
+  {
+   "id": "s_k21",
+   "start": 6.78,
+   "end": 11.41
+  },
+  {
+   "id": "s_takb",
+   "start": 11.41,
+   "end": 19.96
+  },
+  {
+   "id": "s_tphone",
+   "start": 19.96,
+   "end": 34.97
+  },
+  {
+   "id": "s_tnight",
+   "start": 34.97,
+   "end": 44.95
+  },
+  {
+   "id": "s_pct",
+   "start": 44.95,
+   "end": 58.1
+  },
+  {
+   "id": "s_mech",
+   "start": 58.1,
+   "end": 72.76
+  },
+  {
+   "id": "s_k22",
+   "start": 72.76,
+   "end": 77.51
+  },
+  {
+   "id": "s_twrap",
+   "start": 77.51,
+   "end": 85.75
+  },
+  {
+   "id": "s_k23",
+   "start": 85.75,
+   "end": 92.98
+  },
+  {
+   "id": "s_tpolice",
+   "start": 92.98,
+   "end": 108.48
+  },
+  {
+   "id": "s_k24",
+   "start": 108.48,
+   "end": 115.59
+  },
+  {
+   "id": "s_t4am",
+   "start": 115.59,
+   "end": 127.0
+  },
+  {
+   "id": "s_card3",
+   "start": 127.0,
+   "end": 137.7
+  }
+ ],
+ "narr": {
+  "g200": {
+   "start": 1.1,
+   "dur": 5.18
+  },
+  "g201": {
+   "start": 7.18,
+   "dur": 3.98
+  },
+  "g202": {
+   "start": 11.81,
+   "dur": 7.74
+  },
+  "g203": {
+   "start": 20.31,
+   "dur": 5.18
+  },
+  "g204": {
+   "start": 25.79,
+   "dur": 4.03
+  },
+  "g205": {
+   "start": 30.12,
+   "dur": 4.39
+  },
+  "g206": {
+   "start": 35.32,
+   "dur": 2.18
+  },
+  "g207": {
+   "start": 37.79,
+   "dur": 6.71
+  },
+  "g208": {
+   "start": 45.45,
+   "dur": 8.06
+  },
+  "g209": {
+   "start": 53.92,
+   "dur": 3.58
+  },
+  "g210": {
+   "start": 58.6,
+   "dur": 4.16
+  },
+  "g211": {
+   "start": 63.26,
+   "dur": 9.0
+  },
+  "g212": {
+   "start": 73.16,
+   "dur": 4.1
+  },
+  "g213": {
+   "start": 77.86,
+   "dur": 2.61
+  },
+  "g214": {
+   "start": 80.77,
+   "dur": 4.52
+  },
+  "g215": {
+   "start": 86.15,
+   "dur": 6.54
+  },
+  "g216": {
+   "start": 108.88,
+   "dur": 6.45
+  },
+  "g217": {
+   "start": 115.94,
+   "dur": 5.48
+  },
+  "g218": {
+   "start": 121.72,
+   "dur": 4.83
+  },
+  "g219": {
+   "start": 127.5,
+   "dur": 7.59
+  }
+ },
+ "quotes": {
+  "t_police": {
+   "beat_start": 93.08,
+   "lead": 0.4,
+   "adur": 14.2,
+   "media_start": 0.6,
+   "dur": 15.1,
+   "clip": "t_police.mp4",
+   "sample": "tak",
+   "grade": null,
+   "credit": "引用: TAKASHii",
+   "caps": [
+    [
+     0.0,
+     "母国で警察に止められれば <em>恐怖</em>がある"
+    ],
+    [
+     7.6,
+     "ここには それが<em>存在しない</em>"
+    ]
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "s_th2",
+   "kind": "msg",
+   "start": 0.6,
+   "end": 6.78,
+   "nids": [
+    "g200"
+   ],
+   "text": "その“当たり前”は<br><em>当たり前</em>じゃない",
+   "bgx": "ink0"
+  },
+  {
+   "id": "s_k21",
+   "kind": "kick",
+   "start": 6.78,
+   "end": 11.41,
+   "nids": [
+    "g201"
+   ],
+   "kicker": "在住者たちの、証言",
+   "bgx": "tnight2"
+  },
+  {
+   "id": "s_takb",
+   "kind": "broll",
+   "start": 11.41,
+   "end": 19.96,
+   "nids": [
+    "g202"
+   ],
+   "bg": "takb",
+   "label": "在住アメリカ人に聞く"
+  },
+  {
+   "id": "s_tphone",
+   "kind": "nv",
+   "start": 19.96,
+   "end": 34.97,
+   "nids": [
+    "g203",
+    "g204",
+    "g205"
+   ],
+   "q": "t_phone"
+  },
+  {
+   "id": "s_tnight",
+   "kind": "nv",
+   "start": 34.97,
+   "end": 44.95,
+   "nids": [
+    "g206",
+    "g207"
+   ],
+   "q": "t_night"
+  },
+  {
+   "id": "s_pct",
+   "kind": "pct",
+   "start": 44.95,
+   "end": 58.1,
+   "nids": [
+    "g208",
+    "g209"
+   ],
+   "bgx": "phone1",
+   "tr": "wipe"
+  },
+  {
+   "id": "s_mech",
+   "kind": "diagram",
+   "start": 58.1,
+   "end": 72.76,
+   "nids": [
+    "g210",
+    "g211"
+   ],
+   "bgx": "ink1"
+  },
+  {
+   "id": "s_k22",
+   "kind": "kick",
+   "start": 72.76,
+   "end": 77.51,
+   "nids": [
+    "g212"
+   ],
+   "kicker": "贈り物を、包むように",
+   "bgx": "ink0"
+  },
+  {
+   "id": "s_twrap",
+   "kind": "nv",
+   "start": 77.51,
+   "end": 85.75,
+   "nids": [
+    "g213",
+    "g214"
+   ],
+   "q": "t_wrap"
+  },
+  {
+   "id": "s_k23",
+   "kind": "kick",
+   "start": 85.75,
+   "end": 92.98,
+   "nids": [
+    "g215"
+   ],
+   "kicker": "14年目の、実感",
+   "bgx": "alley0"
+  },
+  {
+   "id": "s_tpolice",
+   "kind": "q",
+   "start": 92.98,
+   "end": 108.48,
+   "nids": []
+  },
+  {
+   "id": "s_k24",
+   "kind": "kick",
+   "start": 108.48,
+   "end": 115.59,
+   "nids": [
+    "g216"
+   ],
+   "kicker": "恐怖が、存在しない",
+   "bgx": "ink1",
+   "kstyle": "serif"
+  },
+  {
+   "id": "s_t4am",
+   "kind": "nv",
+   "start": 115.59,
+   "end": 127.0,
+   "nids": [
+    "g217",
+    "g218"
+   ],
+   "q": "t_4am"
+  },
+  {
+   "id": "s_card3",
+   "kind": "card",
+   "start": 127.0,
+   "end": 137.7,
+   "nids": [
+    "g219"
+   ],
+   "no": "第 3 章",
+   "title": "傷ついた人を、癒す国",
+   "sub": "— 喪失と、1200kmの巡礼",
+   "bg": "chanib"
+  }
+ ]
+}

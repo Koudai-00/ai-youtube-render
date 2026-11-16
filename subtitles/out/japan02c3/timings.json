@@ -1,0 +1,308 @@
+{
+ "total": 139.33,
+ "beats": [
+  {
+   "id": "s_th3",
+   "start": 0.6,
+   "end": 7.51
+  },
+  {
+   "id": "s_chb",
+   "start": 7.51,
+   "end": 14.92
+  },
+  {
+   "id": "s_chloss",
+   "start": 14.92,
+   "end": 29.83
+  },
+  {
+   "id": "s_chman",
+   "start": 29.83,
+   "end": 46.95
+  },
+  {
+   "id": "s_journey",
+   "start": 46.95,
+   "end": 59.16
+  },
+  {
+   "id": "s_chlight",
+   "start": 59.16,
+   "end": 73.41
+  },
+  {
+   "id": "s_gion",
+   "start": 73.41,
+   "end": 90.93
+  },
+  {
+   "id": "s_chgift",
+   "start": 90.93,
+   "end": 99.85
+  },
+  {
+   "id": "s_k31",
+   "start": 99.85,
+   "end": 105.23
+  },
+  {
+   "id": "s_chheal",
+   "start": 105.23,
+   "end": 119.53
+  },
+  {
+   "id": "s_k32",
+   "start": 119.53,
+   "end": 128.07
+  },
+  {
+   "id": "s_card4",
+   "start": 128.07,
+   "end": 138.33
+  }
+ ],
+ "narr": {
+  "g301": {
+   "start": 1.1,
+   "dur": 5.91
+  },
+  "g302": {
+   "start": 7.91,
+   "dur": 6.61
+  },
+  "g303": {
+   "start": 15.27,
+   "dur": 4.17
+  },
+  "g304": {
+   "start": 19.74,
+   "dur": 5.63
+  },
+  "g305": {
+   "start": 25.68,
+   "dur": 3.66
+  },
+  "g306": {
+   "start": 30.18,
+   "dur": 4.06
+  },
+  "g307": {
+   "start": 34.55,
+   "dur": 5.65
+  },
+  "g308": {
+   "start": 40.5,
+   "dur": 5.99
+  },
+  "g309": {
+   "start": 47.45,
+   "dur": 5.66
+  },
+  "g310": {
+   "start": 53.51,
+   "dur": 5.15
+  },
+  "g311": {
+   "start": 59.51,
+   "dur": 3.52
+  },
+  "g312": {
+   "start": 63.33,
+   "dur": 5.22
+  },
+  "g313": {
+   "start": 68.85,
+   "dur": 4.06
+  },
+  "g314": {
+   "start": 73.91,
+   "dur": 8.75
+  },
+  "g315": {
+   "start": 83.06,
+   "dur": 7.37
+  },
+  "g316": {
+   "start": 91.28,
+   "dur": 3.34
+  },
+  "g317": {
+   "start": 94.92,
+   "dur": 4.48
+  },
+  "g318": {
+   "start": 100.25,
+   "dur": 4.68
+  },
+  "g319": {
+   "start": 119.93,
+   "dur": 7.84
+  },
+  "g320": {
+   "start": 128.57,
+   "dur": 7.16
+  }
+ },
+ "quotes": {
+  "ch_heal": {
+   "beat_start": 105.33,
+   "lead": 0.4,
+   "adur": 12.9,
+   "media_start": 0.6,
+   "dur": 13.8,
+   "clip": "ch_heal.mp4",
+   "sample": "chani",
+   "grade": "warm",
+   "credit": "引用: Chani Japan",
+   "caps": [
+    [
+     0.0,
+     "おへんろが 教えてくれた"
+    ],
+    [
+     5.6,
+     "癒しとは <em>思い出を抱きしめる</em>こと"
+    ]
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "s_th3",
+   "kind": "msg",
+   "start": 0.6,
+   "end": 7.51,
+   "nids": [
+    "g301"
+   ],
+   "text": "日本は 傷ついた人に<br><em>何をするのか</em>",
+   "bgx": "ink0"
+  },
+  {
+   "id": "s_chb",
+   "kind": "broll",
+   "start": 7.51,
+   "end": 14.92,
+   "nids": [
+    "g302"
+   ],
+   "bg": "chanib",
+   "label": "ある女性の、物語"
+  },
+  {
+   "id": "s_chloss",
+   "kind": "nv",
+   "start": 14.92,
+   "end": 29.83,
+   "nids": [
+    "g303",
+    "g304",
+    "g305"
+   ],
+   "q": "ch_loss"
+  },
+  {
+   "id": "s_chman",
+   "kind": "nv",
+   "start": 29.83,
+   "end": 46.95,
+   "nids": [
+    "g306",
+    "g307",
+    "g308"
+   ],
+   "q": "ch_man"
+  },
+  {
+   "id": "s_journey",
+   "kind": "journey",
+   "start": 46.95,
+   "end": 59.16,
+   "nids": [
+    "g309",
+    "g310"
+   ],
+   "bgx": "temple1",
+   "tr": "fade"
+  },
+  {
+   "id": "s_chlight",
+   "kind": "nv",
+   "start": 59.16,
+   "end": 73.41,
+   "nids": [
+    "g311",
+    "g312",
+    "g313"
+   ],
+   "q": "ch_light"
+  },
+  {
+   "id": "s_gion",
+   "kind": "gion",
+   "start": 73.41,
+   "end": 90.93,
+   "nids": [
+    "g314",
+    "g315"
+   ],
+   "bgx": "torii2"
+  },
+  {
+   "id": "s_chgift",
+   "kind": "nv",
+   "start": 90.93,
+   "end": 99.85,
+   "nids": [
+    "g316",
+    "g317"
+   ],
+   "q": "ch_gift"
+  },
+  {
+   "id": "s_k31",
+   "kind": "kick",
+   "start": 99.85,
+   "end": 105.23,
+   "nids": [
+    "g318"
+   ],
+   "kicker": "旅の、終わりに",
+   "bgx": "ink1"
+  },
+  {
+   "id": "s_chheal",
+   "kind": "q",
+   "start": 105.23,
+   "end": 119.53,
+   "nids": []
+  },
+  {
+   "id": "s_k32",
+   "kind": "kick",
+   "start": 119.53,
+   "end": 128.07,
+   "nids": [
+    "g319"
+   ],
+   "kicker": "思い出を、抱きしめる",
+   "bgx": "temple1",
+   "kstyle": "serif",
+   "tr": "fade"
+  },
+  {
+   "id": "s_card4",
+   "kind": "card",
+   "start": 128.07,
+   "end": 138.33,
+   "nids": [
+    "g320"
+   ],
+   "no": "最 終 章",
+   "title": "人生が、変わる理由",
+   "sub": "— 安心が、心をひらく",
+   "bg": "kalanib"
+  }
+ ]
+}
