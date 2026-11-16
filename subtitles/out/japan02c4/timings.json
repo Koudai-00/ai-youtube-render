@@ -1,223 +1,196 @@
 {
- "total": 170.77,
+ "total": 160.52,
  "beats": [
   {
-   "id": "s_th4",
+   "id": "s4_tate",
    "start": 0.6,
-   "end": 7.36
+   "end": 8.69
   },
   {
-   "id": "s_k41",
-   "start": 7.36,
-   "end": 12.49
+   "id": "s4_k0",
+   "start": 8.69,
+   "end": 13.84
   },
   {
-   "id": "s_kwhim",
-   "start": 12.49,
-   "end": 21.39
+   "id": "s4_whim",
+   "start": 13.84,
+   "end": 22.79
   },
   {
-   "id": "s_kshib",
-   "start": 21.39,
-   "end": 32.36
+   "id": "s4_shib",
+   "start": 22.79,
+   "end": 33.82
   },
   {
-   "id": "s_kfood",
-   "start": 32.36,
-   "end": 42.4
+   "id": "s4_food",
+   "start": 33.82,
+   "end": 43.91
   },
   {
-   "id": "s_klocal",
-   "start": 42.4,
-   "end": 57.94
+   "id": "s4_local",
+   "start": 43.91,
+   "end": 59.95
   },
   {
-   "id": "s_k42",
-   "start": 57.94,
-   "end": 62.79
+   "id": "s4_k1",
+   "start": 59.95,
+   "end": 65.76
   },
   {
-   "id": "s_ktears",
-   "start": 62.79,
-   "end": 78.99
+   "id": "s4_tears",
+   "start": 65.76,
+   "end": 82.01
   },
   {
-   "id": "s_k43",
-   "start": 78.99,
-   "end": 84.6
+   "id": "s4_change",
+   "start": 82.01,
+   "end": 92.54
   },
   {
-   "id": "s_kchange",
-   "start": 84.6,
-   "end": 95.12
+   "id": "s4_msg",
+   "start": 92.54,
+   "end": 107.9
   },
   {
-   "id": "s_msg99",
-   "start": 95.12,
-   "end": 108.56
+   "id": "s4_cardE",
+   "start": 107.9,
+   "end": 115.91
   },
   {
-   "id": "s_cardE",
-   "start": 108.56,
-   "end": 116.99
+   "id": "s4_k2",
+   "start": 115.91,
+   "end": 119.94
   },
   {
-   "id": "s_f3",
-   "start": 116.99,
-   "end": 121.64
+   "id": "s4_k3",
+   "start": 119.94,
+   "end": 128.18
   },
   {
-   "id": "s_f6",
-   "start": 121.64,
-   "end": 125.91
+   "id": "s4_techo",
+   "start": 128.18,
+   "end": 142.98
   },
   {
-   "id": "s_f4",
-   "start": 125.91,
-   "end": 132.23
+   "id": "s4_ask",
+   "start": 142.98,
+   "end": 151.01
   },
   {
-   "id": "s_f5",
-   "start": 132.23,
-   "end": 138.03
-  },
-  {
-   "id": "s_wit",
-   "start": 138.03,
-   "end": 153.23
-  },
-  {
-   "id": "s_ask",
-   "start": 153.23,
-   "end": 161.25
-  },
-  {
-   "id": "s_end",
-   "start": 161.25,
-   "end": 169.77
+   "id": "s4_end",
+   "start": 151.01,
+   "end": 159.52
   }
  ],
  "narr": {
   "g401": {
-   "start": 1.1,
-   "dur": 5.76
+   "start": 1.2,
+   "dur": 6.99
   },
   "g402": {
-   "start": 7.76,
-   "dur": 4.48
+   "start": 9.14,
+   "dur": 4.41
   },
   "g403": {
-   "start": 12.84,
+   "start": 14.19,
    "dur": 3.52
   },
   "g404": {
-   "start": 16.66,
+   "start": 18.01,
    "dur": 4.28
   },
   "g405": {
-   "start": 21.74,
+   "start": 23.14,
    "dur": 6.44
   },
   "g406": {
-   "start": 28.48,
+   "start": 29.88,
    "dur": 3.43
   },
   "g407": {
-   "start": 32.71,
+   "start": 34.17,
    "dur": 4.26
   },
   "g408": {
-   "start": 37.27,
+   "start": 38.72,
    "dur": 4.68
   },
   "g409": {
-   "start": 42.75,
+   "start": 44.26,
    "dur": 5.87
   },
   "g410": {
-   "start": 48.92,
+   "start": 50.42,
    "dur": 4.63
   },
   "g411": {
-   "start": 53.85,
-   "dur": 3.64
+   "start": 55.35,
+   "dur": 4.1
   },
   "g412": {
-   "start": 58.34,
-   "dur": 4.15
+   "start": 60.4,
+   "dur": 5.07
   },
   "g413": {
-   "start": 79.39,
-   "dur": 4.96
-  },
-  "g414": {
-   "start": 84.95,
+   "start": 82.36,
    "dur": 1.9
   },
-  "g415": {
-   "start": 87.14,
+  "g414": {
+   "start": 84.56,
    "dur": 3.16
   },
-  "g416": {
-   "start": 90.6,
+  "g415": {
+   "start": 88.02,
    "dur": 4.02
   },
+  "g416": {
+   "start": 93.14,
+   "dur": 14.15
+  },
   "g417": {
-   "start": 95.62,
-   "dur": 12.44
+   "start": 108.4,
+   "dur": 5.11
   },
   "g418": {
-   "start": 109.06,
-   "dur": 5.53
+   "start": 116.36,
+   "dur": 3.34
   },
   "g419": {
-   "start": 117.39,
-   "dur": 4.0
+   "start": 120.39,
+   "dur": 7.49
   },
   "g420": {
-   "start": 122.04,
-   "dur": 3.63
+   "start": 128.68,
+   "dur": 3.27
   },
   "g421": {
-   "start": 126.31,
-   "dur": 5.66
+   "start": 132.26,
+   "dur": 2.26
   },
   "g422": {
-   "start": 132.63,
-   "dur": 5.1
+   "start": 134.82,
+   "dur": 1.93
   },
   "g423": {
-   "start": 138.53,
-   "dur": 2.69
+   "start": 137.05,
+   "dur": 2.35
   },
   "g424": {
-   "start": 141.51,
-   "dur": 2.76
-  },
-  "g425": {
-   "start": 144.58,
-   "dur": 2.77
-  },
-  "g426": {
-   "start": 147.65,
-   "dur": 1.99
-  },
-  "g427": {
-   "start": 149.94,
+   "start": 139.7,
    "dur": 2.69
   },
-  "g428": {
-   "start": 153.73,
+  "g425": {
+   "start": 143.48,
    "dur": 6.92
   },
-  "g429": {
-   "start": 161.75,
+  "g426": {
+   "start": 151.51,
    "dur": 6.41
   }
  },
  "quotes": {
   "k_tears": {
-   "beat_start": 62.89,
+   "beat_start": 65.86,
    "lead": 0.4,
    "adur": 14.9,
    "media_start": 0.6,
@@ -240,32 +213,31 @@
  },
  "scenes": [
   {
-   "id": "s_th4",
-   "kind": "msg",
+   "id": "s4_tate",
+   "kind": "tate",
    "start": 0.6,
-   "end": 7.36,
+   "end": 8.69,
    "nids": [
     "g401"
    ],
-   "text": "そして 人生が<br><em>変わる</em>",
-   "bgx": "ink0"
+   "text": "なぜ 人生まで<br><em>変わる</em>のか"
   },
   {
-   "id": "s_k41",
+   "id": "s4_k0",
    "kind": "kick",
-   "start": 7.36,
-   "end": 12.49,
+   "start": 8.69,
+   "end": 13.84,
    "nids": [
     "g402"
    ],
    "kicker": "20代、初めてのひとり旅",
-   "bgx": "train2"
+   "kstyle": "tatek"
   },
   {
-   "id": "s_kwhim",
+   "id": "s4_whim",
    "kind": "nv",
-   "start": 12.49,
-   "end": 21.39,
+   "start": 13.84,
+   "end": 22.79,
    "nids": [
     "g403",
     "g404"
@@ -273,10 +245,10 @@
    "q": "k_whim"
   },
   {
-   "id": "s_kshib",
+   "id": "s4_shib",
    "kind": "nv",
-   "start": 21.39,
-   "end": 32.36,
+   "start": 22.79,
+   "end": 33.82,
    "nids": [
     "g405",
     "g406"
@@ -284,10 +256,10 @@
    "q": "k_shibuya"
   },
   {
-   "id": "s_kfood",
+   "id": "s4_food",
    "kind": "nv",
-   "start": 32.36,
-   "end": 42.4,
+   "start": 33.82,
+   "end": 43.91,
    "nids": [
     "g407",
     "g408"
@@ -295,10 +267,10 @@
    "q": "k_food"
   },
   {
-   "id": "s_klocal",
+   "id": "s4_local",
    "kind": "nv",
-   "start": 42.4,
-   "end": 57.94,
+   "start": 43.91,
+   "end": 59.95,
    "nids": [
     "g409",
     "g410",
@@ -307,149 +279,111 @@
    "q": "k_local"
   },
   {
-   "id": "s_k42",
+   "id": "s4_k1",
    "kind": "kick",
-   "start": 57.94,
-   "end": 62.79,
+   "start": 59.95,
+   "end": 65.76,
    "nids": [
     "g412"
    ],
    "kicker": "旅の最後の、言葉",
-   "bgx": "ink1"
+   "kstyle": "fude"
   },
   {
-   "id": "s_ktears",
+   "id": "s4_tears",
    "kind": "q",
-   "start": 62.79,
-   "end": 78.99,
+   "start": 65.76,
+   "end": 82.01,
    "nids": []
   },
   {
-   "id": "s_k43",
-   "kind": "kick",
-   "start": 78.99,
-   "end": 84.6,
-   "nids": [
-    "g413"
-   ],
-   "kicker": "涙の、理由",
-   "bgx": "ink0"
-  },
-  {
-   "id": "s_kchange",
+   "id": "s4_change",
    "kind": "nv",
-   "start": 84.6,
-   "end": 95.12,
+   "start": 82.01,
+   "end": 92.54,
    "nids": [
+    "g413",
     "g414",
-    "g415",
-    "g416"
+    "g415"
    ],
    "q": "k_change"
   },
   {
-   "id": "s_msg99",
-   "kind": "msg",
-   "start": 95.12,
-   "end": 108.56,
+   "id": "s4_msg",
+   "kind": "tate",
+   "start": 92.54,
+   "end": 107.9,
+   "nids": [
+    "g416"
+   ],
+   "text": "安心が 人を<br><em>ひらく</em>"
+  },
+  {
+   "id": "s4_cardE",
+   "kind": "card",
+   "start": 107.9,
+   "end": 115.91,
    "nids": [
     "g417"
    ],
-   "text": "安心が 人を<br><em>ひらく</em>",
-   "bgx": "walk0"
+   "no": "終",
+   "title": "この国を、つくってきたのは",
+   "sub": "— あなたの日常という、奇跡",
+   "bg": "abbE"
   },
   {
-   "id": "s_cardE",
-   "kind": "card",
-   "start": 108.56,
-   "end": 116.99,
+   "id": "s4_k2",
+   "kind": "kick",
+   "start": 115.91,
+   "end": 119.94,
    "nids": [
     "g418"
    ],
-   "no": "終 章",
-   "title": "守ってきたのは、あなた",
-   "sub": "— この日常は、世界の奇跡",
-   "bg": "thdb",
-   "bgx": "fuji0"
+   "kicker": "当たり前は、世界の奇跡",
+   "kstyle": "tatek"
   },
   {
-   "id": "s_f3",
+   "id": "s4_k3",
    "kind": "kick",
-   "start": 116.99,
-   "end": 121.64,
+   "start": 119.94,
+   "end": 128.18,
    "nids": [
     "g419"
    ],
-   "kicker": "当たり前は、世界の非日常",
-   "bgx": "walk2"
+   "kicker": "つくったのは、あなた",
+   "kstyle": "fude"
   },
   {
-   "id": "s_f6",
-   "kind": "kick",
-   "start": 121.64,
-   "end": 125.91,
+   "id": "s4_techo",
+   "kind": "techo",
+   "start": 128.18,
+   "end": 142.98,
    "nids": [
-    "g420"
-   ],
-   "kicker": "作ったのは、特別な誰かじゃない",
-   "bgx": "crowd1"
-  },
-  {
-   "id": "s_f4",
-   "kind": "kick",
-   "start": 125.91,
-   "end": 132.23,
-   "nids": [
-    "g421"
-   ],
-   "kicker": "毎日の、小さな積み重ね",
-   "bgx": "train2"
-  },
-  {
-   "id": "s_f5",
-   "kind": "kick",
-   "start": 132.23,
-   "end": 138.03,
-   "nids": [
-    "g422"
-   ],
-   "kicker": "あなたの日常が、誰かを変える",
-   "bgx": "walk0",
-   "kstyle": "serif"
-  },
-  {
-   "id": "s_wit",
-   "kind": "recap4b",
-   "start": 138.03,
-   "end": 153.23,
-   "nids": [
+    "g420",
+    "g421",
+    "g422",
     "g423",
-    "g424",
-    "g425",
-    "g426",
-    "g427"
+    "g424"
    ],
-   "head": "4人の物語"
+   "head": "4つの旅の記録"
   },
   {
-   "id": "s_ask",
+   "id": "s4_ask",
    "kind": "ask",
-   "start": 153.23,
-   "end": 161.25,
+   "start": 142.98,
+   "end": 151.01,
    "nids": [
-    "g428"
-   ],
-   "bgx": "tnight1"
+    "g425"
+   ]
   },
   {
-   "id": "s_end",
+   "id": "s4_end",
    "kind": "end",
-   "start": 161.25,
-   "end": 169.77,
+   "start": 151.01,
+   "end": 159.52,
    "nids": [
-    "g429"
-   ],
-   "bgx": "fuji0"
+    "g426"
+   ]
   }
  ]
 }

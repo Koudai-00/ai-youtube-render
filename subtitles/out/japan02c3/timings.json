@@ -1,308 +1,313 @@
 {
- "total": 139.33,
+ "total": 135.53,
  "beats": [
   {
-   "id": "s_th3",
+   "id": "s3_tate",
    "start": 0.6,
-   "end": 7.51
+   "end": 9.93
   },
   {
-   "id": "s_chb",
-   "start": 7.51,
-   "end": 14.92
+   "id": "s3_for",
+   "start": 9.93,
+   "end": 17.05
   },
   {
-   "id": "s_chloss",
-   "start": 14.92,
-   "end": 29.83
+   "id": "s3_sq",
+   "start": 17.05,
+   "end": 22.28
   },
   {
-   "id": "s_chman",
-   "start": 29.83,
-   "end": 46.95
+   "id": "s3_fall",
+   "start": 22.28,
+   "end": 34.18
   },
   {
-   "id": "s_journey",
-   "start": 46.95,
-   "end": 59.16
+   "id": "s3_help",
+   "start": 34.18,
+   "end": 45.16
   },
   {
-   "id": "s_chlight",
-   "start": 59.16,
-   "end": 73.41
+   "id": "s3_michi",
+   "start": 45.16,
+   "end": 55.31
   },
   {
-   "id": "s_gion",
-   "start": 73.41,
-   "end": 90.93
+   "id": "s3_hosp",
+   "start": 55.31,
+   "end": 71.79
   },
   {
-   "id": "s_chgift",
-   "start": 90.93,
-   "end": 99.85
+   "id": "s3_nur",
+   "start": 71.79,
+   "end": 86.2
   },
   {
-   "id": "s_k31",
-   "start": 99.85,
-   "end": 105.23
+   "id": "s3_k1",
+   "start": 86.2,
+   "end": 91.73
   },
   {
-   "id": "s_chheal",
-   "start": 105.23,
-   "end": 119.53
+   "id": "s3_heart",
+   "start": 91.73,
+   "end": 114.83
   },
   {
-   "id": "s_k32",
-   "start": 119.53,
-   "end": 128.07
+   "id": "s3_walk",
+   "start": 114.83,
+   "end": 128.28
   },
   {
-   "id": "s_card4",
-   "start": 128.07,
-   "end": 138.33
+   "id": "s3_card",
+   "start": 128.28,
+   "end": 134.53
   }
  ],
  "narr": {
   "g301": {
-   "start": 1.1,
-   "dur": 5.91
+   "start": 1.2,
+   "dur": 8.23
   },
   "g302": {
-   "start": 7.91,
-   "dur": 6.61
+   "start": 10.43,
+   "dur": 6.11
   },
   "g303": {
-   "start": 15.27,
-   "dur": 4.17
+   "start": 17.45,
+   "dur": 4.38
   },
   "g304": {
-   "start": 19.74,
-   "dur": 5.63
+   "start": 22.63,
+   "dur": 7.82
   },
   "g305": {
-   "start": 25.68,
-   "dur": 3.66
+   "start": 30.75,
+   "dur": 2.93
   },
   "g306": {
-   "start": 30.18,
-   "dur": 4.06
+   "start": 34.53,
+   "dur": 3.29
   },
   "g307": {
-   "start": 34.55,
-   "dur": 5.65
+   "start": 38.12,
+   "dur": 6.54
   },
   "g308": {
-   "start": 40.5,
-   "dur": 5.99
+   "start": 45.66,
+   "dur": 4.81
   },
   "g309": {
-   "start": 47.45,
-   "dur": 5.66
+   "start": 50.87,
+   "dur": 3.89
   },
   "g310": {
-   "start": 53.51,
-   "dur": 5.15
+   "start": 55.71,
+   "dur": 10.67
   },
   "g311": {
-   "start": 59.51,
-   "dur": 3.52
+   "start": 66.68,
+   "dur": 4.61
   },
   "g312": {
-   "start": 63.33,
-   "dur": 5.22
+   "start": 72.19,
+   "dur": 5.48
   },
   "g313": {
-   "start": 68.85,
-   "dur": 4.06
+   "start": 77.97,
+   "dur": 7.73
   },
   "g314": {
-   "start": 73.91,
-   "dur": 8.75
+   "start": 86.65,
+   "dur": 4.78
   },
   "g315": {
-   "start": 83.06,
-   "dur": 7.37
+   "start": 115.23,
+   "dur": 7.15
   },
   "g316": {
-   "start": 91.28,
-   "dur": 3.34
+   "start": 122.68,
+   "dur": 5.1
   },
   "g317": {
-   "start": 94.92,
-   "dur": 4.48
-  },
-  "g318": {
-   "start": 100.25,
-   "dur": 4.68
-  },
-  "g319": {
-   "start": 119.93,
-   "dur": 7.84
-  },
-  "g320": {
-   "start": 128.57,
-   "dur": 7.16
+   "start": 128.78,
+   "dur": 3.16
   }
  },
  "quotes": {
-  "ch_heal": {
-   "beat_start": 105.33,
+  "jen_heart": {
+   "beat_start": 91.83,
    "lead": 0.4,
-   "adur": 12.9,
+   "adur": 21.7,
    "media_start": 0.6,
-   "dur": 13.8,
-   "clip": "ch_heal.mp4",
-   "sample": "chani",
+   "dur": 22.6,
+   "clip": "jen_heart.mp4",
+   "sample": "jen",
    "grade": "warm",
-   "credit": "引用: Chani Japan",
+   "credit": "引用: Jennifer Sternenlied",
    "caps": [
     [
      0.0,
-     "おへんろが 教えてくれた"
+     "優しさは <em>強さ</em>のかたちのひとつ"
     ],
     [
-     5.6,
-     "癒しとは <em>思い出を抱きしめる</em>こと"
+     6.5,
+     "思いやりは 言葉がなくても伝わる"
+    ],
+    [
+     12.5,
+     "旅の一番深い記憶は 景色ではなく——"
+    ],
+    [
+     17.0,
+     "<em>予期せぬ時に支えてくれた 人の心</em>"
     ]
    ]
   }
  },
  "scenes": [
   {
-   "id": "s_th3",
-   "kind": "msg",
+   "id": "s3_tate",
+   "kind": "tate",
    "start": 0.6,
-   "end": 7.51,
+   "end": 9.93,
    "nids": [
     "g301"
    ],
-   "text": "日本は 傷ついた人に<br><em>何をするのか</em>",
-   "bgx": "ink0"
+   "text": "異国で突然<br><em>動けなくなったら</em>"
   },
   {
-   "id": "s_chb",
+   "id": "s3_for",
    "kind": "broll",
-   "start": 7.51,
-   "end": 14.92,
+   "start": 9.93,
+   "end": 17.05,
    "nids": [
     "g302"
    ],
-   "bg": "chanib",
-   "label": "ある女性の、物語"
+   "bg": "jenb",
+   "label": "ドイツから来た母娘"
   },
   {
-   "id": "s_chloss",
+   "id": "s3_sq",
    "kind": "nv",
-   "start": 14.92,
-   "end": 29.83,
+   "start": 17.05,
+   "end": 22.28,
    "nids": [
-    "g303",
+    "g303"
+   ],
+   "q": "jen_square"
+  },
+  {
+   "id": "s3_fall",
+   "kind": "nv",
+   "start": 22.28,
+   "end": 34.18,
+   "nids": [
     "g304",
     "g305"
    ],
-   "q": "ch_loss"
+   "q": "jen_fall"
   },
   {
-   "id": "s_chman",
+   "id": "s3_help",
    "kind": "nv",
-   "start": 29.83,
-   "end": 46.95,
+   "start": 34.18,
+   "end": 45.16,
    "nids": [
     "g306",
-    "g307",
-    "g308"
+    "g307"
    ],
-   "q": "ch_man"
+   "q": "jen_help"
   },
   {
-   "id": "s_journey",
-   "kind": "journey",
-   "start": 46.95,
-   "end": 59.16,
+   "id": "s3_michi",
+   "kind": "michi",
+   "start": 45.16,
+   "end": 55.31,
    "nids": [
-    "g309",
-    "g310"
+    "g308",
+    "g309"
    ],
-   "bgx": "temple1",
-   "tr": "fade"
+   "stops": [
+    [
+     "三日目の朝",
+     "皇居前の広場へ"
+    ],
+    [
+     "転倒",
+     "両脚を骨折"
+    ],
+    [
+     "救急搬送",
+     "東京大学の病院"
+    ],
+    [
+     "病室の日々",
+     "旅は 病室に変わった"
+    ]
+   ]
   },
   {
-   "id": "s_chlight",
+   "id": "s3_hosp",
    "kind": "nv",
-   "start": 59.16,
-   "end": 73.41,
+   "start": 55.31,
+   "end": 71.79,
    "nids": [
-    "g311",
+    "g310",
+    "g311"
+   ],
+   "q": "jen_hosp"
+  },
+  {
+   "id": "s3_nur",
+   "kind": "nv",
+   "start": 71.79,
+   "end": 86.2,
+   "nids": [
     "g312",
     "g313"
    ],
-   "q": "ch_light"
+   "q": "jen_nurse"
   },
   {
-   "id": "s_gion",
-   "kind": "gion",
-   "start": 73.41,
-   "end": 90.93,
-   "nids": [
-    "g314",
-    "g315"
-   ],
-   "bgx": "torii2"
-  },
-  {
-   "id": "s_chgift",
-   "kind": "nv",
-   "start": 90.93,
-   "end": 99.85,
-   "nids": [
-    "g316",
-    "g317"
-   ],
-   "q": "ch_gift"
-  },
-  {
-   "id": "s_k31",
+   "id": "s3_k1",
    "kind": "kick",
-   "start": 99.85,
-   "end": 105.23,
+   "start": 86.2,
+   "end": 91.73,
    "nids": [
-    "g318"
+    "g314"
    ],
-   "kicker": "旅の、終わりに",
-   "bgx": "ink1"
+   "kicker": "帰国の日の、言葉",
+   "kstyle": "fude"
   },
   {
-   "id": "s_chheal",
+   "id": "s3_heart",
    "kind": "q",
-   "start": 105.23,
-   "end": 119.53,
+   "start": 91.73,
+   "end": 114.83,
    "nids": []
   },
   {
-   "id": "s_k32",
-   "kind": "kick",
-   "start": 119.53,
-   "end": 128.07,
+   "id": "s3_walk",
+   "kind": "nv",
+   "start": 114.83,
+   "end": 128.28,
    "nids": [
-    "g319"
+    "g315",
+    "g316"
    ],
-   "kicker": "思い出を、抱きしめる",
-   "bgx": "temple1",
-   "kstyle": "serif",
-   "tr": "fade"
+   "q": "jen_walk"
   },
   {
-   "id": "s_card4",
+   "id": "s3_card",
    "kind": "card",
-   "start": 128.07,
-   "end": 138.33,
+   "start": 128.28,
+   "end": 134.53,
    "nids": [
-    "g320"
+    "g317"
    ],
-   "no": "最 終 章",
-   "title": "人生が、変わる理由",
-   "sub": "— 安心が、心をひらく",
-   "bg": "kalanib"
+   "no": "結",
+   "title": "そして、人生が変わる",
+   "sub": "— 冒頭の涙の、答え合わせ",
+   "bg": "kalb"
   }
  ]
 }

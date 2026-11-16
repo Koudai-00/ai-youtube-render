@@ -1,337 +1,303 @@
 {
- "total": 138.7,
+ "total": 120.85,
  "beats": [
   {
-   "id": "s_th2",
+   "id": "s2_tate",
    "start": 0.6,
-   "end": 6.78
+   "end": 5.71
   },
   {
-   "id": "s_k21",
-   "start": 6.78,
-   "end": 11.41
+   "id": "s2_ride",
+   "start": 5.71,
+   "end": 14.11
   },
   {
-   "id": "s_takb",
-   "start": 11.41,
-   "end": 19.96
+   "id": "s2_lost",
+   "start": 14.11,
+   "end": 24.74
   },
   {
-   "id": "s_tphone",
-   "start": 19.96,
-   "end": 34.97
+   "id": "s2_desk",
+   "start": 24.74,
+   "end": 38.49
   },
   {
-   "id": "s_tnight",
-   "start": 34.97,
-   "end": 44.95
+   "id": "s2_fuda",
+   "start": 38.49,
+   "end": 49.04
   },
   {
-   "id": "s_pct",
-   "start": 44.95,
-   "end": 58.1
+   "id": "s2_found",
+   "start": 49.04,
+   "end": 61.08
   },
   {
-   "id": "s_mech",
-   "start": 58.1,
-   "end": 72.76
+   "id": "s2_k1",
+   "start": 61.08,
+   "end": 68.02
   },
   {
-   "id": "s_k22",
-   "start": 72.76,
-   "end": 77.51
+   "id": "s2_w",
+   "start": 68.02,
+   "end": 79.72
   },
   {
-   "id": "s_twrap",
-   "start": 77.51,
-   "end": 85.75
+   "id": "s2_taxi",
+   "start": 79.72,
+   "end": 86.75
   },
   {
-   "id": "s_k23",
-   "start": 85.75,
-   "end": 92.98
+   "id": "s2_k2",
+   "start": 86.75,
+   "end": 92.96
   },
   {
-   "id": "s_tpolice",
-   "start": 92.98,
-   "end": 108.48
+   "id": "s2_got",
+   "start": 92.96,
+   "end": 101.81
   },
   {
-   "id": "s_k24",
-   "start": 108.48,
-   "end": 115.59
+   "id": "s2_emaki",
+   "start": 101.81,
+   "end": 111.94
   },
   {
-   "id": "s_t4am",
-   "start": 115.59,
-   "end": 127.0
-  },
-  {
-   "id": "s_card3",
-   "start": 127.0,
-   "end": 137.7
+   "id": "s2_card",
+   "start": 111.94,
+   "end": 119.85
   }
  ],
  "narr": {
-  "g200": {
-   "start": 1.1,
-   "dur": 5.18
-  },
   "g201": {
-   "start": 7.18,
-   "dur": 3.98
+   "start": 1.15,
+   "dur": 4.06
   },
   "g202": {
-   "start": 11.81,
-   "dur": 7.74
+   "start": 6.21,
+   "dur": 7.39
   },
   "g203": {
-   "start": 20.31,
-   "dur": 5.18
+   "start": 14.51,
+   "dur": 4.49
   },
   "g204": {
-   "start": 25.79,
-   "dur": 4.03
+   "start": 19.3,
+   "dur": 4.94
   },
   "g205": {
-   "start": 30.12,
-   "dur": 4.39
+   "start": 25.09,
+   "dur": 4.69
   },
   "g206": {
-   "start": 35.32,
-   "dur": 2.18
+   "start": 30.08,
+   "dur": 7.91
   },
   "g207": {
-   "start": 37.79,
-   "dur": 6.71
+   "start": 38.99,
+   "dur": 9.49
   },
   "g208": {
-   "start": 45.45,
-   "dur": 8.06
+   "start": 49.44,
+   "dur": 5.33
   },
   "g209": {
-   "start": 53.92,
-   "dur": 3.58
+   "start": 55.07,
+   "dur": 5.51
   },
   "g210": {
-   "start": 58.6,
-   "dur": 4.16
+   "start": 61.53,
+   "dur": 6.19
   },
   "g211": {
-   "start": 63.26,
-   "dur": 9.0
+   "start": 68.52,
+   "dur": 5.66
   },
   "g212": {
-   "start": 73.16,
-   "dur": 4.1
+   "start": 74.59,
+   "dur": 4.53
   },
   "g213": {
-   "start": 77.86,
-   "dur": 2.61
+   "start": 80.12,
+   "dur": 6.13
   },
   "g214": {
-   "start": 80.77,
-   "dur": 4.52
+   "start": 87.2,
+   "dur": 5.46
   },
   "g215": {
-   "start": 86.15,
-   "dur": 6.54
+   "start": 102.31,
+   "dur": 3.62
   },
   "g216": {
-   "start": 108.88,
-   "dur": 6.45
+   "start": 106.33,
+   "dur": 5.01
   },
   "g217": {
-   "start": 115.94,
-   "dur": 5.48
-  },
-  "g218": {
-   "start": 121.72,
-   "dur": 4.83
-  },
-  "g219": {
-   "start": 127.5,
-   "dur": 7.59
+   "start": 112.44,
+   "dur": 4.81
   }
  },
  "quotes": {
-  "t_police": {
-   "beat_start": 93.08,
+  "ce_got": {
+   "beat_start": 93.06,
    "lead": 0.4,
-   "adur": 14.2,
+   "adur": 7.5,
    "media_start": 0.6,
-   "dur": 15.1,
-   "clip": "t_police.mp4",
-   "sample": "tak",
-   "grade": null,
-   "credit": "引用: TAKASHii",
+   "dur": 8.4,
+   "clip": "ce_got.mp4",
+   "sample": "cecil",
+   "grade": "warm",
+   "credit": "引用: Cecil",
    "caps": [
     [
      0.0,
-     "母国で警察に止められれば <em>恐怖</em>がある"
+     "戻ってきた——"
     ],
     [
-     7.6,
-     "ここには それが<em>存在しない</em>"
+     2.4,
+     "「京都に帰ろう <em>旅は続く</em>」"
     ]
    ]
   }
  },
  "scenes": [
   {
-   "id": "s_th2",
-   "kind": "msg",
+   "id": "s2_tate",
+   "kind": "tate",
    "start": 0.6,
-   "end": 6.78,
-   "nids": [
-    "g200"
-   ],
-   "text": "その“当たり前”は<br><em>当たり前</em>じゃない",
-   "bgx": "ink0"
-  },
-  {
-   "id": "s_k21",
-   "kind": "kick",
-   "start": 6.78,
-   "end": 11.41,
+   "end": 5.71,
    "nids": [
     "g201"
    ],
-   "kicker": "在住者たちの、証言",
-   "bgx": "tnight2"
+   "text": "時速300キロの<br><em>忘れ物</em>"
   },
   {
-   "id": "s_takb",
+   "id": "s2_ride",
    "kind": "broll",
-   "start": 11.41,
-   "end": 19.96,
+   "start": 5.71,
+   "end": 14.11,
    "nids": [
     "g202"
    ],
-   "bg": "takb",
-   "label": "在住アメリカ人に聞く"
+   "bg": "cecb",
+   "label": "東京 → 京都 初めての新幹線"
   },
   {
-   "id": "s_tphone",
+   "id": "s2_lost",
    "kind": "nv",
-   "start": 19.96,
-   "end": 34.97,
+   "start": 14.11,
+   "end": 24.74,
    "nids": [
     "g203",
-    "g204",
-    "g205"
+    "g204"
    ],
-   "q": "t_phone"
+   "q": "ce_lost"
   },
   {
-   "id": "s_tnight",
+   "id": "s2_desk",
    "kind": "nv",
-   "start": 34.97,
-   "end": 44.95,
+   "start": 24.74,
+   "end": 38.49,
    "nids": [
-    "g206",
+    "g205",
+    "g206"
+   ],
+   "q": "ce_desk"
+  },
+  {
+   "id": "s2_fuda",
+   "kind": "fuda",
+   "start": 38.49,
+   "end": 49.04,
+   "nids": [
     "g207"
    ],
-   "q": "t_night"
+   "title": "お忘れ物承り所",
+   "body": "駅に届いた落とし物を<br>記録し、追跡する専用窓口",
+   "note": "日本の主要駅に必ずある"
   },
   {
-   "id": "s_pct",
-   "kind": "pct",
-   "start": 44.95,
-   "end": 58.1,
+   "id": "s2_found",
+   "kind": "nv",
+   "start": 49.04,
+   "end": 61.08,
    "nids": [
     "g208",
     "g209"
    ],
-   "bgx": "phone1",
-   "tr": "wipe"
+   "q": "ce_found"
   },
   {
-   "id": "s_mech",
-   "kind": "diagram",
-   "start": 58.1,
-   "end": 72.76,
-   "nids": [
-    "g210",
-    "g211"
-   ],
-   "bgx": "ink1"
-  },
-  {
-   "id": "s_k22",
+   "id": "s2_k1",
    "kind": "kick",
-   "start": 72.76,
-   "end": 77.51,
+   "start": 61.08,
+   "end": 68.02,
    "nids": [
-    "g212"
+    "g210"
    ],
-   "kicker": "贈り物を、包むように",
-   "bgx": "ink0"
+   "kicker": "幸運では、ない",
+   "kstyle": "fude"
   },
   {
-   "id": "s_twrap",
-   "kind": "nv",
-   "start": 77.51,
-   "end": 85.75,
+   "id": "s2_w",
+   "kind": "wallets",
+   "start": 68.02,
+   "end": 79.72,
    "nids": [
-    "g213",
+    "g211",
+    "g212"
+   ]
+  },
+  {
+   "id": "s2_taxi",
+   "kind": "nv",
+   "start": 79.72,
+   "end": 86.75,
+   "nids": [
+    "g213"
+   ],
+   "q": "ce_taxi"
+  },
+  {
+   "id": "s2_k2",
+   "kind": "kick",
+   "start": 86.75,
+   "end": 92.96,
+   "nids": [
     "g214"
    ],
-   "q": "t_wrap"
+   "kicker": "スマホは、待っていた",
+   "kstyle": "tatek"
   },
   {
-   "id": "s_k23",
-   "kind": "kick",
-   "start": 85.75,
-   "end": 92.98,
-   "nids": [
-    "g215"
-   ],
-   "kicker": "14年目の、実感",
-   "bgx": "alley0"
-  },
-  {
-   "id": "s_tpolice",
+   "id": "s2_got",
    "kind": "q",
-   "start": 92.98,
-   "end": 108.48,
+   "start": 92.96,
+   "end": 101.81,
    "nids": []
   },
   {
-   "id": "s_k24",
-   "kind": "kick",
-   "start": 108.48,
-   "end": 115.59,
+   "id": "s2_emaki",
+   "kind": "emaki",
+   "start": 101.81,
+   "end": 111.94,
    "nids": [
+    "g215",
     "g216"
-   ],
-   "kicker": "恐怖が、存在しない",
-   "bgx": "ink1",
-   "kstyle": "serif"
+   ]
   },
   {
-   "id": "s_t4am",
-   "kind": "nv",
-   "start": 115.59,
-   "end": 127.0,
-   "nids": [
-    "g217",
-    "g218"
-   ],
-   "q": "t_4am"
-  },
-  {
-   "id": "s_card3",
+   "id": "s2_card",
    "kind": "card",
-   "start": 127.0,
-   "end": 137.7,
+   "start": 111.94,
+   "end": 119.85,
    "nids": [
-    "g219"
+    "g217"
    ],
-   "no": "第 3 章",
-   "title": "傷ついた人を、癒す国",
-   "sub": "— 喪失と、1200kmの巡礼",
-   "bg": "chanib"
+   "no": "参",
+   "title": "転んだ旅人を、抱きとめる国",
+   "sub": "— 東京、旅の3日目の出来事",
+   "bg": "jenb"
   }
  ]
 }

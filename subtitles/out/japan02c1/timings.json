@@ -1,316 +1,302 @@
 {
- "total": 132.25,
+ "total": 108.83,
  "beats": [
   {
-   "id": "s_th1",
+   "id": "s1_tate",
    "start": 0.6,
-   "end": 9.55
+   "end": 7.01
   },
   {
-   "id": "s_road",
-   "start": 9.55,
-   "end": 24.49
+   "id": "s1_ab",
+   "start": 7.01,
+   "end": 16.26
   },
   {
-   "id": "s_counter",
-   "start": 24.49,
-   "end": 44.0
+   "id": "s1_fes",
+   "start": 16.26,
+   "end": 28.93
   },
   {
-   "id": "s_news",
-   "start": 44.0,
-   "end": 54.5
+   "id": "s1_tem",
+   "start": 28.93,
+   "end": 38.08
   },
   {
-   "id": "s_k11",
-   "start": 54.5,
-   "end": 64.13
+   "id": "s1_food",
+   "start": 38.08,
+   "end": 45.63
   },
   {
-   "id": "s_thdb",
-   "start": 64.13,
-   "end": 72.63
+   "id": "s1_cross",
+   "start": 45.63,
+   "end": 57.78
   },
   {
-   "id": "s_d1",
-   "start": 72.63,
-   "end": 81.33
+   "id": "s1_k1",
+   "start": 57.78,
+   "end": 64.31
   },
   {
-   "id": "s_d2",
-   "start": 81.33,
-   "end": 89.91
+   "id": "s1_goose",
+   "start": 64.31,
+   "end": 69.86
   },
   {
-   "id": "s_d3",
-   "start": 89.91,
-   "end": 98.54
+   "id": "s1_ver",
+   "start": 69.86,
+   "end": 79.57
   },
   {
-   "id": "s_cases",
-   "start": 98.54,
-   "end": 114.43
+   "id": "s1_tz",
+   "start": 79.57,
+   "end": 94.47
   },
   {
-   "id": "s_k12",
-   "start": 114.43,
-   "end": 122.0
+   "id": "s1_k2",
+   "start": 94.47,
+   "end": 102.1
   },
   {
-   "id": "s_card2",
-   "start": 122.0,
-   "end": 131.25
+   "id": "s1_card",
+   "start": 102.1,
+   "end": 107.83
   }
  ],
  "narr": {
   "g101": {
-   "start": 1.1,
-   "dur": 7.85
-  },
-  "g123": {
-   "start": 10.05,
-   "dur": 13.94
+   "start": 1.2,
+   "dur": 5.31
   },
   "g102": {
-   "start": 24.99,
-   "dur": 9.21
+   "start": 7.51,
+   "dur": 8.25
   },
   "g103": {
-   "start": 34.6,
-   "dur": 5.77
+   "start": 16.66,
+   "dur": 4.58
   },
   "g104": {
-   "start": 40.72,
-   "dur": 2.68
-  },
-  "g106": {
-   "start": 44.5,
-   "dur": 9.5
+   "start": 21.58,
+   "dur": 6.85
   },
   "g105": {
-   "start": 54.9,
-   "dur": 8.93
+   "start": 29.28,
+   "dur": 4.64
+  },
+  "g106": {
+   "start": 34.22,
+   "dur": 3.36
   },
   "g107": {
-   "start": 64.53,
-   "dur": 7.7
+   "start": 38.43,
+   "dur": 4.98
   },
   "g108": {
-   "start": 72.98,
-   "dur": 3.58
+   "start": 43.71,
+   "dur": 1.42
   },
   "g109": {
-   "start": 76.86,
-   "dur": 4.02
+   "start": 45.98,
+   "dur": 5.11
   },
   "g110": {
-   "start": 81.68,
-   "dur": 2.78
+   "start": 51.39,
+   "dur": 5.89
   },
   "g111": {
-   "start": 84.77,
-   "dur": 4.69
+   "start": 58.23,
+   "dur": 5.78
   },
   "g112": {
-   "start": 90.26,
-   "dur": 4.04
+   "start": 70.26,
+   "dur": 3.7
   },
   "g113": {
-   "start": 94.6,
-   "dur": 3.49
+   "start": 74.26,
+   "dur": 4.81
   },
-  "g118": {
-   "start": 99.14,
-   "dur": 14.69
+  "g114": {
+   "start": 80.12,
+   "dur": 13.75
   },
-  "g119": {
-   "start": 114.83,
-   "dur": 6.87
+  "g115": {
+   "start": 94.92,
+   "dur": 6.83
   },
-  "g122": {
-   "start": 122.5,
-   "dur": 6.15
+  "g116": {
+   "start": 102.6,
+   "dur": 2.63
   }
  },
- "quotes": {},
+ "quotes": {
+  "ab_goose": {
+   "beat_start": 64.41,
+   "lead": 0.4,
+   "adur": 4.2,
+   "media_start": 0.6,
+   "dur": 5.1,
+   "clip": "ab_goose.mp4",
+   "sample": "abby",
+   "grade": "warm",
+   "credit": "引用: Abby and Gaz",
+   "caps": [
+    [
+     0.0,
+     "鳥肌が立ってる——"
+    ],
+    [
+     1.8,
+     "「<em>すごすぎる</em>」"
+    ]
+   ]
+  }
+ },
  "scenes": [
   {
-   "id": "s_th1",
-   "kind": "msg",
+   "id": "s1_tate",
+   "kind": "tate",
    "start": 0.6,
-   "end": 9.55,
+   "end": 7.01,
    "nids": [
     "g101"
    ],
-   "text": "なぜ 世界は<br>日本に<em>恋をする</em>のか",
-   "bgx": "fuji0"
+   "text": "世界は まず<br><em>驚く</em>"
   },
   {
-   "id": "s_road",
-   "kind": "cases",
-   "start": 9.55,
-   "end": 24.49,
+   "id": "s1_ab",
+   "kind": "broll",
+   "start": 7.01,
+   "end": 16.26,
    "nids": [
-    "g123"
+    "g102"
    ],
-   "head": "この動画の<em>4つの問い</em>",
-   "rows": [
-    [
-     "第1章",
-     "彼らは、何に驚くのか"
-    ],
-    [
-     "第2章",
-     "なぜ、それが当たり前なのか"
-    ],
-    [
-     "第3章",
-     "傷ついた人に、何をするのか"
-    ],
-    [
-     "終 章",
-     "なぜ、人生まで変わるのか"
-    ]
-   ],
-   "bgx": "ink1",
-   "tr": "wipe"
+   "bg": "abb",
+   "label": "3年間 世界を旅した2人"
   },
   {
-   "id": "s_counter",
-   "kind": "counter",
-   "start": 24.49,
-   "end": 44.0,
+   "id": "s1_fes",
+   "kind": "nv",
+   "start": 16.26,
+   "end": 28.93,
    "nids": [
-    "g102",
     "g103",
     "g104"
    ],
-   "bgx": "crowd0"
+   "q": "ab_fes"
   },
   {
-   "id": "s_news",
-   "kind": "news",
-   "start": 44.0,
-   "end": 54.5,
+   "id": "s1_tem",
+   "kind": "nv",
+   "start": 28.93,
+   "end": 38.08,
    "nids": [
+    "g105",
     "g106"
    ],
-   "bgx": "tnight1"
+   "q": "ab_temple"
   },
   {
-   "id": "s_k11",
+   "id": "s1_food",
+   "kind": "nv",
+   "start": 38.08,
+   "end": 45.63,
+   "nids": [
+    "g107",
+    "g108"
+   ],
+   "q": "ab_food"
+  },
+  {
+   "id": "s1_cross",
+   "kind": "nv",
+   "start": 45.63,
+   "end": 57.78,
+   "nids": [
+    "g109",
+    "g110"
+   ],
+   "q": "ab_cross"
+  },
+  {
+   "id": "s1_k1",
    "kind": "kick",
-   "start": 54.5,
-   "end": 64.13,
+   "start": 57.78,
+   "end": 64.31,
    "nids": [
-    "g105"
-   ],
-   "kicker": "数字では、語れないもの",
-   "bgx": "ink0"
-  },
-  {
-   "id": "s_thdb",
-   "kind": "broll",
-   "start": 64.13,
-   "end": 72.63,
-   "nids": [
-    "g107"
-   ],
-   "bg": "thdb",
-   "label": "初めての、日本"
-  },
-  {
-   "id": "s_d1",
-   "kind": "nv",
-   "start": 72.63,
-   "end": 81.33,
-   "nids": [
-    "g108",
-    "g109"
-   ],
-   "q": "d1"
-  },
-  {
-   "id": "s_d2",
-   "kind": "nv",
-   "start": 81.33,
-   "end": 89.91,
-   "nids": [
-    "g110",
     "g111"
    ],
-   "q": "d2"
+   "kicker": "彼女がこぼした、一言",
+   "kstyle": "fude"
   },
   {
-   "id": "s_d3",
+   "id": "s1_goose",
+   "kind": "q",
+   "start": 64.31,
+   "end": 69.86,
+   "nids": []
+  },
+  {
+   "id": "s1_ver",
    "kind": "nv",
-   "start": 89.91,
-   "end": 98.54,
+   "start": 69.86,
+   "end": 79.57,
    "nids": [
     "g112",
     "g113"
    ],
-   "q": "d3"
+   "q": "ab_verdict"
   },
   {
-   "id": "s_cases",
-   "kind": "cases",
-   "start": 98.54,
-   "end": 114.43,
+   "id": "s1_tz",
+   "kind": "tanzaku",
+   "start": 79.57,
+   "end": 94.47,
    "nids": [
-    "g118"
+    "g114"
    ],
    "head": "初めての日本 <em>4つの驚き</em>",
    "rows": [
     [
      "電車",
-     "1分の狂いもなく 時間通りに来る"
+     "1分の狂いもなく 来る"
     ],
     [
      "街",
-     "ゴミ箱がないのに ゴミひとつない"
+     "ゴミ箱がないのに 清潔"
     ],
     [
-     "店",
-     "どこへ行っても 丁寧に迎えられる"
+     "接客",
+     "どこへ行っても 丁寧"
     ],
     [
-     "夜",
-     "深夜でも 安心して歩ける"
+     "夜道",
+     "深夜でも 歩ける安心"
     ]
-   ],
-   "icon_rows": [
-    "clock",
-    "spark",
-    "gift",
-    "moon"
-   ],
-   "bgx": "walk2"
+   ]
   },
   {
-   "id": "s_k12",
+   "id": "s1_k2",
    "kind": "kick",
-   "start": 114.43,
-   "end": 122.0,
+   "start": 94.47,
+   "end": 102.1,
    "nids": [
-    "g119"
+    "g115"
    ],
-   "kicker": "驚かれているのは、日常",
-   "bgx": "walk0",
-   "tr": "fade"
+   "kicker": "当たり前すぎる、あの感覚",
+   "kstyle": "tatek"
   },
   {
-   "id": "s_card2",
+   "id": "s1_card",
    "kind": "card",
-   "start": 122.0,
-   "end": 131.25,
+   "start": 102.1,
+   "end": 107.83,
    "nids": [
-    "g122"
+    "g116"
    ],
-   "no": "第 2 章",
-   "title": "\"当たり前\"の正体",
-   "sub": "— 安心は、どうやって生まれるのか",
-   "bg": "takb"
+   "no": "弐",
+   "title": "落とし物が、戻ってくる国",
+   "sub": "— 時速300キロの、忘れ物",
+   "bg": "cec2"
   }
  ]
 }
