@@ -1,0 +1,57 @@
+{
+ "total": 41.21,
+ "beats": [
+  {
+   "id": "qdennis",
+   "start": 0.5,
+   "end": 8.8
+  },
+  {
+   "id": "profile",
+   "start": 8.8,
+   "end": 15.84
+  },
+  {
+   "id": "file",
+   "start": 15.84,
+   "end": 35.86
+  },
+  {
+   "id": "ch1",
+   "start": 35.86,
+   "end": 41.21
+  }
+ ],
+ "narr": {
+  "n01": {
+   "start": 9.1,
+   "dur": 6.39
+  },
+  "n02": {
+   "start": 16.44,
+   "dur": 7.43
+  },
+  "n03": {
+   "start": 24.22,
+   "dur": 6.46
+  },
+  "n04": {
+   "start": 31.04,
+   "dur": 4.32
+  },
+  "n05": {
+   "start": 36.16,
+   "dur": 3.46
+  }
+ },
+ "quotes": {
+  "qdennis": {
+   "beat_start": 0.5,
+   "lead": 0.4,
+   "adur": 7.3,
+   "media_start": 0.7,
+   "dur": 8.3,
+   "clip": "qdennis.mp4"
+  }
+ }
+}

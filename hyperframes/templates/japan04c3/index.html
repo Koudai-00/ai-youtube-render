@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family:'NotoB'; src:url('assets/fonts/NotoSansJP-Black.otf') format('opentype'); }
+@font-face { font-family:'NotoBd'; src:url('assets/fonts/NotoSansJP-Bold.otf') format('opentype'); }
+@font-face { font-family:'SerifJP'; src:url('assets/fonts/NotoSerifJP.ttf') format('truetype');
+  font-weight:100 900; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#000; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden;
+  background:#e9e5d8; font-family:'NotoBd',sans-serif; color:#1d2b50; }
+#stage { position:absolute; inset:0; }
+.clip { position:absolute; inset:0; width:100%; height:100%; }
+video.bgv { object-fit:cover; transform:translateZ(0); backface-visibility:hidden; }
+video.framed { top:80px; height:810px; }
+em { font-style:normal; color:#c03b2d; }
+#vig { position:absolute; inset:0; z-index:41; pointer-events:none;
+  background:radial-gradient(ellipse 125% 112% at 50% 44%, rgba(0,0,0,0) 64%, rgba(70,60,36,.22) 100%); }
+#pflash { position:absolute; inset:0; z-index:60; background:#fbf9f2; opacity:0; pointer-events:none; }
+#tbk { position:absolute; inset:0; z-index:56; background:#0a0c12; opacity:0; pointer-events:none; }
+/* ---------- 紙パネル ---------- */
+.panel.paper { z-index:10; background:
+  repeating-linear-gradient(0deg, rgba(90,110,150,0) 0 66px, rgba(90,110,150,.14) 66px 68px),
+  radial-gradient(ellipse 140% 110% at 50% 30%, #f7f4ea 0%, #f2eee0 60%, #e8e2cf 100%); }
+.panel.paper::after { content:''; position:absolute; inset:0; pointer-events:none;
+  box-shadow:inset 0 0 160px rgba(120,104,60,.16); }
+.panel.grid { background:
+  repeating-linear-gradient(0deg, rgba(90,110,150,.1) 0 1px, transparent 1px 48px),
+  repeating-linear-gradient(90deg, rgba(90,110,150,.1) 0 1px, transparent 1px 48px),
+  radial-gradient(ellipse 140% 110% at 50% 30%, #f7f4ea 0%, #f0ecdd 100%); }
+.panel.dark { z-index:10;
+  background:radial-gradient(ellipse 130% 100% at 50% 40%, #0a0d16 0%, #04060c 70%); }
+.tab { position:absolute; right:60px; top:0; z-index:4; font-family:'NotoBd'; font-size:24px;
+  letter-spacing:.1em; color:#f4f2ec; background:#1d2b50; padding:12px 26px 10px;
+  border-radius:0 0 10px 10px; }
+.tab em { color:#f0b9ae; }
+.pgno { position:absolute; left:50%; bottom:28px; transform:translateX(-50%);
+  font-family:'NotoBd'; font-size:24px; color:#8d8468; }
+/* ---------- 引用フレーム (資料映像) ---------- */
+.qov { z-index:10; }
+.lbT { position:absolute; left:0; right:0; top:0; height:80px; background:#f2eee0;
+  border-bottom:3px solid #1d2b50; box-shadow:0 4px 18px rgba(40,30,8,.25); }
+.lbB { position:absolute; left:0; right:0; bottom:0; height:190px; background:#f2eee0;
+  border-top:3px solid #1d2b50; box-shadow:0 -4px 18px rgba(40,30,8,.25); }
+.clipmark { position:absolute; left:46px; top:50%; width:30px; height:44px; margin-top:-22px;
+  border:5px solid #8d8468; border-radius:14px 14px 4px 4px; border-bottom:none; }
+.tape { position:absolute; left:100px; top:50%; transform:translateY(-50%);
+  font-family:'NotoB'; font-size:24px; letter-spacing:.2em; color:#f4f2ec; background:#c03b2d;
+  padding:8px 18px; border-radius:4px; }
+.qtag { position:absolute; left:300px; top:50%; transform:translateY(-50%);
+  font-family:'NotoB'; font-size:29px; color:#1d2b50; letter-spacing:.06em; }
+.credit { position:absolute; right:46px; top:50%; transform:translateY(-50%);
+  font-family:'NotoBd'; font-size:24px; color:#8d8468; }
+.qcap { position:absolute; left:60px; right:60px; bottom:52px; text-align:center; font-size:56px;
+  font-family:'NotoB'; color:#1d2b50; letter-spacing:.02em; opacity:0; z-index:11; }
+.biglabel { position:absolute; left:64px; top:128px; font-family:'NotoB'; font-size:52px;
+  color:#1d2b50; background:rgba(242,238,224,.95); border-left:10px solid #c03b2d;
+  padding:16px 38px; box-shadow:0 6px 24px rgba(40,30,8,.3); opacity:0; }
+.creditD { position:absolute; top:26px; right:56px; font-family:'NotoBd'; font-size:24px;
+  color:rgba(242,244,248,.92); background:rgba(10,12,18,.55); padding:7px 16px; z-index:5; }
+/* ---------- karte ---------- */
+.khead { position:absolute; left:0; right:0; top:110px; text-align:center; font-family:'NotoB';
+  font-size:62px; color:#1d2b50; opacity:0; letter-spacing:.06em; }
+.kwrap { position:absolute; left:250px; right:250px; top:290px; }
+.krow { position:relative; margin-top:58px; opacity:0; }
+.klab { display:inline-block; font-family:'NotoB'; font-size:40px; color:#f4f2ec; background:#2b5c8a;
+  padding:8px 24px; border-radius:6px; margin-right:36px; vertical-align:middle; }
+.kval { display:inline-block; font-family:'NotoB'; font-size:48px; color:#1d2b50;
+  vertical-align:middle; line-height:1.4; }
+.kline { position:absolute; left:0; right:0; bottom:-14px; height:2px; background:rgba(29,43,80,.25); }
+/* ---------- case ---------- */
+.cno { position:absolute; left:150px; top:120px; font-family:'NotoB'; font-size:56px;
+  letter-spacing:.3em; color:#f4f2ec; background:#c03b2d; padding:12px 34px; border-radius:8px;
+  opacity:0; }
+.ctit { position:absolute; left:150px; top:244px; font-family:'NotoB'; font-size:74px;
+  color:#1d2b50; opacity:0; }
+.cwrap { position:absolute; left:160px; right:160px; top:400px; }
+.crow { display:flex; margin-top:38px; opacity:0; border-bottom:2px solid rgba(29,43,80,.2);
+  padding-bottom:16px; }
+.clab { width:360px; font-family:'NotoB'; font-size:40px; color:#2b5c8a; }
+.cval { flex:1; font-family:'NotoB'; font-size:42px; color:#1d2b50; line-height:1.4; }
+.cstamp { position:absolute; right:170px; top:150px; font-family:'SerifJP'; font-weight:900;
+  font-size:72px; color:#c03b2d; border:7px solid #c03b2d; border-radius:10px; padding:10px 34px;
+  transform:rotate(-7deg); background:rgba(192,59,45,.05); opacity:0; }
+/* ---------- graph ---------- */
+.gwrap { position:absolute; left:180px; right:180px; top:280px; bottom:160px; }
+.gmask { position:absolute; inset:0; transform-origin:left; }
+.gmask svg { width:100%; height:100%; }
+.glab { position:absolute; font-family:'NotoB'; font-size:36px; color:#1d2b50; opacity:0;
+  text-align:center; transform:translateX(-50%); line-height:1.35; }
+.glab:nth-child(5) { color:#c03b2d; }
+.gsrc { position:absolute; left:60px; bottom:36px; font-family:'NotoBd'; font-size:23px;
+  color:#8d8468; }
+/* ---------- stamp ---------- */
+.dhead { position:absolute; left:0; right:0; top:170px; text-align:center; font-family:'NotoB';
+  font-size:58px; color:#1d2b50; opacity:0; }
+.bigstamp { position:absolute; left:50%; top:40%; transform:translateX(-50%);
+  font-family:'SerifJP'; font-weight:900; font-size:110px; color:#c03b2d; white-space:nowrap;
+  border:12px solid #c03b2d; border-radius:16px; padding:26px 70px; background:rgba(192,59,45,.05);
+  opacity:0; }
+.dnote { position:absolute; left:0; right:0; top:72%; text-align:center; font-family:'NotoBd';
+  font-size:38px; color:#5a5340; opacity:0; }
+/* ---------- kick ---------- */
+.tkwrap { position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  padding:0 130px; }
+.tkt { font-family:'NotoB'; font-size:82px; color:#1d2b50; letter-spacing:.04em; line-height:1.5;
+  text-align:center; }
+.tc { opacity:0; }
+.caret { display:inline-block; width:8px; height:0.95em; background:#c03b2d; margin-left:10px;
+  vertical-align:-0.12em; }
+.skwrap { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+.skt { font-family:'SerifJP'; font-weight:900; font-size:96px; color:#c03b2d;
+  border:10px solid #c03b2d; border-radius:14px; padding:20px 60px; transform:rotate(-5deg);
+  background:rgba(192,59,45,.05); opacity:0; }
+/* ---------- senga ---------- */
+.sgwrap { position:absolute; left:110px; right:110px; top:120px; bottom:240px; opacity:0; }
+.sgwrap svg { width:100%; height:100%; filter:drop-shadow(0 0 7px rgba(238,243,248,.35)); }
+.sgcap { position:absolute; left:0; right:0; bottom:104px; text-align:center; font-family:'NotoB';
+  font-size:56px; color:#f2f4f8; opacity:0; letter-spacing:.04em;
+  text-shadow:0 2px 16px rgba(0,0,0,.8); }
+/* ---------- rx ---------- */
+.rxmark { position:absolute; left:150px; top:104px; font-family:'SerifJP'; font-weight:900;
+  font-size:120px; color:#2b5c8a; opacity:0; }
+.rxwrap { position:absolute; left:250px; right:200px; top:320px; }
+.rxrow { font-family:'NotoB'; font-size:52px; color:#1d2b50; margin-top:52px; opacity:0;
+  line-height:1.45; }
+.rxn { display:inline-block; width:64px; height:64px; line-height:64px; text-align:center;
+  background:#2b5c8a; color:#f4f2ec; border-radius:50%; font-size:38px; margin-right:28px;
+  vertical-align:4px; }
+/* ---------- card (章扉) ---------- */
+.cdscrim { position:absolute; inset:0;
+  background:linear-gradient(0deg, rgba(10,12,18,.8) 0%, rgba(10,12,18,.42) 45%, rgba(10,12,18,.22) 100%); }
+.ixghost { position:absolute; right:90px; top:44%; transform:translateY(-50%);
+  font-family:'NotoB'; font-size:560px; color:#c03b2d; opacity:0; }
+.qov .ixghost { color:#f2eee0; }
+.ixtab { position:absolute; left:150px; top:330px; font-family:'NotoB'; font-size:46px;
+  letter-spacing:.3em; color:#f4f2ec; background:#c03b2d; padding:14px 36px; border-radius:8px;
+  opacity:0; }
+.ixtitle { position:absolute; left:146px; top:452px; font-family:'NotoB'; font-size:94px;
+  opacity:0; letter-spacing:.03em; }
+.panel .ixtitle { color:#1d2b50; }
+.qov .ixtitle { color:#f2f4f8; text-shadow:0 4px 30px rgba(0,0,0,.7); }
+.ixsub { position:absolute; left:152px; top:600px; font-family:'NotoBd'; font-size:38px;
+  opacity:0; }
+.panel .ixsub { color:#5a5340; }
+.qov .ixsub { color:#cfd6e4; }
+/* ---------- ask / end ---------- */
+.askt { position:absolute; left:0; right:0; top:26%; text-align:center; font-family:'NotoB';
+  font-size:82px; line-height:1.6; color:#1d2b50; opacity:0; }
+.asks { position:absolute; left:0; right:0; top:70%; text-align:center; font-family:'NotoBd';
+  font-size:38px; color:#8a5a28; opacity:0; }
+.endt { position:absolute; left:0; right:0; top:38%; text-align:center; font-family:'NotoB';
+  font-size:84px; color:#1d2b50; opacity:0; }
+.ends { position:absolute; left:0; right:0; top:56%; text-align:center; font-family:'NotoBd';
+  font-size:36px; color:#8d8468; opacity:0; }
+.fcover { position:absolute; inset:0; z-index:30; background:#8d6e4e;
+  background:linear-gradient(135deg, #96785a 0%, #85643f 100%); transform:translateX(-104%);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:60px; }
+.fcttl { font-family:'NotoB'; font-size:92px; color:#f4ecd9; text-align:center; line-height:1.4;
+  letter-spacing:.14em; }
+.fcttl span { font-size:48px; color:#e3d2ae; }
+.fcstamp { font-family:'SerifJP'; font-weight:900; font-size:76px; color:#c03b2d;
+  border:9px solid #c03b2d; border-radius:12px; padding:10px 44px; transform:rotate(-8deg); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="root" data-width="1920" data-height="1080" data-start="0" data-duration="165.66">
+<div id="stage">
+<div id="s3_k0p" class="clip panel paper" data-start="0.6" data-duration="4.31" data-track-index="1" style=""><div class="tab">CASE FILE <em>No.004</em> — 症例記録「日本ロス」</div><div class="pgno">- 7 -</div><div class="tkwrap"><div class="tkt" id="s3_k0k"><span class="tc" id="s3_k00">こ</span><span class="tc" id="s3_k01">の</span><span class="tc" id="s3_k02">現</span><span class="tc" id="s3_k03">象</span><span class="tc" id="s3_k04">に</span><span class="tc" id="s3_k05">は</span><span class="tc" id="s3_k06">、</span><span class="tc" id="s3_k07">学</span><span class="tc" id="s3_k08">術</span><span class="tc" id="s3_k09">的</span><span class="tc" id="s3_k010">な</span><span class="tc" id="s3_k011">裏</span><span class="tc" id="s3_k012">付</span><span class="tc" id="s3_k013">け</span><span class="tc" id="s3_k014">が</span><span class="tc" id="s3_k015">あ</span><span class="tc" id="s3_k016">る</span><span class="caret" id="s3_k0c"></span></div></div></div>
+<div id="s3_graphp" class="clip panel paper grid" data-start="4.91" data-duration="20.04" data-track-index="2" style=""><div class="tab">CASE FILE <em>No.004</em> — 症例記録「日本ロス」</div><div class="pgno">- 8 -</div><div class="khead" id="s3_graphh">帰国後にもう一度、谷が来る — W字曲線</div><div class="gwrap"><div class="gmask" id="s3_graphm"><svg viewBox="0 0 1500 560" fill="none"><path id="wpath" d="M60 140 C 220 60, 330 70, 430 150 C 540 240, 600 400, 740 430 C 850 452, 930 330, 1010 250 C 1100 170, 1240 120, 1440 100" stroke="#1d2b50" stroke-width="9" stroke-linecap="round"/></svg></div><div class="glab" id="s3_graphl0" style="left:3%;top:8%">出発前</div><div class="glab" id="s3_graphl1" style="left:20%;top:2%">旅行中<br>ハネムーン期</div><div class="glab" id="s3_graphl2" style="left:40%;top:52%">帰国<br>直後</div><div class="glab" id="s3_graphl3" style="left:58%;top:80%">日本ロスの谷</div><div class="glab" id="s3_graphl4" style="left:82%;top:30%">回復期</div></div><div class="gsrc">参考: Gullahorn & Gullahorn (1963) のW字曲線理論を基に作図</div></div>
+<div id="s3_sengap" class="clip panel dark" data-start="24.95" data-duration="3.98" data-track-index="3" style=""><div class="sgwrap" id="s3_sengaa"><svg viewBox="0 0 1700 760" fill="none" stroke="#eef3f8" stroke-width="6" stroke-linecap="round"><path d="M120 720 H 1580" stroke-width="4" opacity="0.5"/><g transform="translate(640,720) scale(1.7)"><circle cx="0" cy="-168" r="26"/><path d="M0 -140 C -4 -96, -4 -60, -8 0"/><path d="M0 -140 C 8 -96, 10 -60, 12 0"/><path d="M-2 -126 C -24 -112, -34 -96, -38 -78"/><path d="M2 -126 C 28 -114, 40 -96, 46 -66"/><rect x="34" y="-66" width="56" height="78" rx="8"/><path d="M50 -66 v-14 h24 v14"/></g><g transform="translate(1150,240) rotate(-14)" opacity="0.9"><path d="M-120 0 L 90 0 L 150 -26 L 96 6 L -34 24 Z"/><path d="M-10 2 L -52 44 L -24 46 Z"/><path d="M-6 -2 L -40 -40 L -12 -40 Z"/></g><path d="M900 160 q 60 -36 120 0" opacity="0.35"/><path d="M1340 420 q 50 -30 100 0" opacity="0.35"/></svg></div><div class="sgcap" id="s3_sengac">谷の入り口は、帰りの空港から始まる</div></div>
+<video id="wc_hotelv" class="clip bgv framed" data-start="28.93" data-duration="11.02" data-media-start="0.6" data-track-index="4" src="assets/bg/wc_hotel.mp4" muted playsinline></video>
+<div id="wc_hotelo" class="clip qov" data-start="28.93" data-duration="11.02" data-track-index="5" style=""><div class="lbT"><div class="clipmark"></div><div class="tape">証言 01</div><div class="qtag">米ポッドキャストの証言</div><div class="credit">引用: The Wild Chaos Podcast</div></div><div class="lbB"></div><div class="qcap" id="wc_hotelcap0">「国全体が <em>5つ星ホテル</em>みたいだ」</div><div class="qcap" id="wc_hotelcap1">「ホスピタリティも食事も 別次元」</div></div>
+<div id="s3_shokenp" class="clip panel paper" data-start="39.95" data-duration="18.6" data-track-index="6" style=""><div class="tab">CASE FILE <em>No.004</em> — 症例記録「日本ロス」</div><div class="pgno">- 9 -</div><div class="khead" id="s3_shokenh">所見 — 日本で「心がオフになる」理由</div><div class="kwrap"><div class="krow" id="s3_shokenr0"><div class="klab">所見 1</div><div class="kval">治安 — 警戒を解いて歩ける</div><div class="kline"></div></div><div class="krow" id="s3_shokenr1"><div class="klab">所見 2</div><div class="kval">静けさ — 神経が休まる</div><div class="kline"></div></div><div class="krow" id="s3_shokenr2"><div class="klab">所見 3</div><div class="kval">敬意 — 初対面でも丁寧に扱われる</div><div class="kline"></div></div><div class="krow" id="s3_shokenr3"><div class="klab">所見 4</div><div class="kval">その状態を<em>脳が覚えてしまう</em></div><div class="kline"></div></div></div></div>
+<div id="s3_stampp" class="clip panel paper" data-start="58.55" data-duration="3.72" data-track-index="7" style=""><div class="tab">CASE FILE <em>No.004</em> — 症例記録「日本ロス」</div><div class="pgno">- 10 -</div><div class="dhead" id="s3_stamph">診断</div><div class="bigstamp" id="s3_stamps">日本ロス(逆カルチャーショック)</div><div class="dnote" id="s3_stampn">※医学的な診断名ではなく、旅行者の間で使われる通称です</div></div>
+<video id="s4_cardv" class="clip bgv " data-start="62.27" data-duration="4.48" data-media-start="0.0" data-track-index="8" src="assets/bg/b_jarr.mp4" muted playsinline></video>
+<div id="s4_cardo" class="clip qov" data-start="62.27" data-duration="4.48" data-track-index="9" style=""><div class="cdscrim"></div><div class="creditD">引用: AskJasmineChan</div><div class="ixghost" id="s4_cardg">4</div><div class="ixtab" id="s4_cardb">第4章 処方箋</div><div class="ixtitle" id="s4_cardt">治療法は、見つかっている</div><div class="ixsub" id="s4_cards">— 体験者たちが自分で見つけた3つの処方</div></div>
+<div id="s4_rxp" class="clip panel paper" data-start="66.75" data-duration="22.05" data-track-index="10" style=""><div class="tab">CASE FILE <em>No.004</em> — 症例記録「日本ロス」</div><div class="pgno">- 11 -</div><div class="rxmark" id="s4_rxm">Rx</div><div class="khead" id="s4_rxh">処方箋 — 体験者たちの答え</div><div class="rxwrap"><div class="rxrow" id="s4_rxr0"><span class="rxn">1</span>また日本へ行く(訪日客の約<em>6割</em>はリピーター ※観光庁調査)</div><div class="rxrow" id="s4_rxr1"><span class="rxn">2</span>日本で出会った「穏やかな自分」を日常へ持ち帰る</div><div class="rxrow" id="s4_rxr2"><span class="rxn">3</span>自分の「基準」が上がったことを喜ぶ</div></div></div>
+<video id="jas_changev" class="clip bgv framed" data-start="88.8" data-duration="11.81" data-media-start="0.6" data-track-index="11" src="assets/bg/jas_change.mp4" muted playsinline></video>
+<div id="jas_changeo" class="clip qov" data-start="88.8" data-duration="11.81" data-track-index="12" style=""><div class="lbT"><div class="clipmark"></div><div class="tape">CASE 03</div><div class="qtag">日本在住10年 → 帰国</div><div class="credit">引用: AskJasmineChan</div></div><div class="lbB"></div><div class="qcap" id="jas_changecap0">「日本の10年は 私を変えた」</div><div class="qcap" id="jas_changecap1">「どれだけ変わったか 帰国して気づいた」</div></div>
+<div id="s4_k1p" class="clip panel paper" data-start="100.61" data-duration="1.26" data-track-index="13" style=""><div class="tab">CASE FILE <em>No.004</em> — 症例記録「日本ロス」</div><div class="pgno">- 12 -</div><div class="tkwrap"><div class="tkt" id="s4_k1k"><span class="tc" id="s4_k10">—</span><span class="tc" id="s4_k11">—</span><span class="tc" id="s4_k12">と</span><span class="tc" id="s4_k13">こ</span><span class="tc" id="s4_k14">ろ</span><span class="tc" id="s4_k15">が</span><span class="caret" id="s4_k1c"></span></div></div></div>
+<video id="jas_kindv" class="clip bgv framed" data-start="101.97" data-duration="11.1" data-media-start="0.6" data-track-index="14" src="assets/bg/jas_kind.mp4" muted playsinline></video>
+<div id="jas_kindo" class="clip qov" data-start="101.97" data-duration="11.1" data-track-index="15" style=""><div class="lbT"><div class="clipmark"></div><div class="tape">記録映像</div><div class="qtag">日本在住10年 → 帰国</div><div class="credit">引用: AskJasmineChan</div></div><div class="lbB"></div><div class="qcap" id="jas_kindcap0">「私の逆カルチャーショックは 恐怖ではなく——」</div><div class="qcap" id="jas_kindcap1">「<em>優しさ</em>だった」</div></div>
+<video id="jas_homev" class="clip bgv framed" data-start="113.47" data-duration="13.37" data-media-start="0.6" data-track-index="16" src="assets/bg/jas_home.mp4" muted playsinline></video>
+<div id="jas_homeo" class="clip qov" data-start="113.47" data-duration="13.37" data-track-index="17" style=""><div class="lbT"><div class="clipmark"></div><div class="tape">CASE 03</div><div class="qtag">日本在住10年 → 帰国</div><div class="credit">引用: AskJasmineChan</div></div><div class="lbB"></div><div class="qcap" id="jas_homecap0">「帰国はつらいと 警告されていたけど」</div><div class="qcap" id="jas_homecap1">「どちらが<em>我が家</em>か——答えは1つじゃない」</div></div>
+<div id="s4_finp" class="clip panel paper" data-start="126.84" data-duration="19.18" data-track-index="18" style=""><div class="tab">CASE FILE <em>No.004</em> — 症例記録「日本ロス」</div><div class="pgno">- 13 -</div><div class="khead" id="s4_finh">薬の正体</div><div class="kwrap"><div class="krow" id="s4_finr0"><div class="klab">成分 1</div><div class="kval">定時に来る電車</div><div class="kline"></div></div><div class="krow" id="s4_finr1"><div class="klab">成分 2</div><div class="kval">静かな車内</div><div class="kline"></div></div><div class="krow" id="s4_finr2"><div class="klab">成分 3</div><div class="kval">丁寧な「いらっしゃいませ」</div><div class="kline"></div></div><div class="krow" id="s4_finr3"><div class="klab">製造元</div><div class="kval">この動画を見ている<em>あなた</em></div><div class="kline"></div></div></div></div>
+<div id="askp" class="clip panel paper" data-start="146.02" data-duration="7.5" data-track-index="19" style=""><div class="tab">CASE FILE <em>No.004</em> — 症例記録「日本ロス」</div><div class="askt" id="ask1">あなたの日常が<br>誰かの「<em>特効薬</em>」かもしれない</div><div class="asks" id="ask2">▼ 日本を離れて「恋しくなったもの」、コメントで教えてください</div></div>
+<div id="endp" class="clip panel paper" data-start="153.52" data-duration="10.84" data-track-index="20" style=""><div class="tab">CASE FILE <em>No.004</em> — 症例記録「日本ロス」</div><div class="endt" id="end1">ご視聴 ありがとうございました</div><div class="ends" id="end2">チャンネル登録で、次の症例ファイルをお見逃しなく</div><div class="fcover" id="fcov"><div class="fcttl">CASE FILE<br><span>No.004 — 日本ロス</span></div><div class="fcstamp">CLOSED</div></div></div>
+<div id="vig"></div>
+<div id="tbk"></div>
+<div id="pflash"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.set("#s3_k00", {opacity: 1}, 0.95);
+tl.set("#s3_k01", {opacity: 1}, 1.015);
+tl.set("#s3_k02", {opacity: 1}, 1.08);
+tl.set("#s3_k03", {opacity: 1}, 1.145);
+tl.set("#s3_k04", {opacity: 1}, 1.21);
+tl.set("#s3_k05", {opacity: 1}, 1.275);
+tl.set("#s3_k06", {opacity: 1}, 1.34);
+tl.set("#s3_k07", {opacity: 1}, 1.405);
+tl.set("#s3_k08", {opacity: 1}, 1.47);
+tl.set("#s3_k09", {opacity: 1}, 1.535);
+tl.set("#s3_k010", {opacity: 1}, 1.6);
+tl.set("#s3_k011", {opacity: 1}, 1.665);
+tl.set("#s3_k012", {opacity: 1}, 1.73);
+tl.set("#s3_k013", {opacity: 1}, 1.795);
+tl.set("#s3_k014", {opacity: 1}, 1.86);
+tl.set("#s3_k015", {opacity: 1}, 1.925);
+tl.set("#s3_k016", {opacity: 1}, 1.99);
+tl.to("#s3_k0c", {opacity: 0, duration: 0.01, repeat: 8, yoyo: true, repeatDelay: 0.5}, 0.9);
+tl.set("#pflash", {opacity: 0.49}, 0.58);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 0.62);
+tl.fromTo("#s3_graphh", {y: -18, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 5.21);
+tl.fromTo("#s3_graphm", {scaleX: 0}, {scaleX: 1, duration: 3.2, ease: "power1.inOut", immediateRender: false}, 5.71);
+tl.fromTo("#s3_graphl0", {y: 14, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 5.91);
+tl.fromTo("#s3_graphl1", {y: 14, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 8.594);
+tl.fromTo("#s3_graphl2", {y: 14, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 11.278);
+tl.fromTo("#s3_graphl3", {y: 14, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 13.962);
+tl.fromTo("#s3_graphl4", {y: 14, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 16.647);
+tl.set("#tbk", {opacity: 0}, 4.69);
+tl.to("#tbk", {opacity: 1, duration: 0.2, ease: "power2.in"}, 4.69);
+tl.to("#tbk", {opacity: 0, duration: 0.45, ease: "power2.out"}, 4.93);
+tl.fromTo("#s3_sengaa", {opacity: 0, scale: 1.05, filter: "blur(6px)"}, {opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.7, ease: "power2.out", immediateRender: false}, 25.2);
+tl.fromTo("#s3_sengac", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 25.85);
+tl.fromTo("#s3_sengaa", {scale: 1}, {scale: 1.045, duration: 2.9800000000000004, ease: "none", immediateRender: false}, 25.85);
+tl.set("#tbk", {opacity: 0}, 24.73);
+tl.to("#tbk", {opacity: 1, duration: 0.2, ease: "power2.in"}, 24.73);
+tl.to("#tbk", {opacity: 0, duration: 0.45, ease: "power2.out"}, 24.97);
+tl.fromTo("#wc_hotelcap0", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 29.21);
+tl.set("#wc_hotelcap0", {opacity: 0}, 35.36);
+tl.fromTo("#wc_hotelcap1", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 35.49);
+tl.fromTo("#wc_hotelv", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 28.95);
+tl.set("#pflash", {opacity: 0.49}, 28.91);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 28.95);
+tl.fromTo("#s3_shokenh", {y: -18, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 40.25);
+tl.fromTo("#s3_shokenr0", {x: -24, opacity: 0}, {x: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 40.75);
+tl.fromTo("#s3_shokenr1", {x: -24, opacity: 0}, {x: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 45.54);
+tl.fromTo("#s3_shokenr2", {x: -24, opacity: 0}, {x: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 50.97);
+tl.fromTo("#s3_shokenr3", {x: -24, opacity: 0}, {x: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 51.87);
+tl.set("#pflash", {opacity: 0.49}, 39.93);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 39.97);
+tl.fromTo("#s3_stamph", {opacity: 0}, {opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 58.85);
+tl.fromTo("#s3_stamps", {scale: 2.1, opacity: 0, rotation: -6}, {scale: 1, opacity: 1, rotation: -6, duration: 0.3, ease: "power4.in", immediateRender: false}, 60.224);
+tl.fromTo("#s3_stampn", {y: 14, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 61.224);
+tl.set("#pflash", {opacity: 0.49}, 58.53);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 58.57);
+tl.set("#pflash", {opacity: 0.70}, 62.25);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 62.29);
+tl.fromTo("#s4_cardb", {x: -70, opacity: 0}, {x: 0, opacity: 1, duration: 0.5, ease: "power3.out", immediateRender: false}, 62.47);
+tl.fromTo("#s4_cardg", {scale: 1.3, opacity: 0}, {scale: 1, opacity: 0.16, duration: 0.9, ease: "power2.out", immediateRender: false}, 62.62);
+tl.fromTo("#s4_cardt", {opacity: 0, y: 24, filter: "blur(8px)"}, {opacity: 1, y: 0, filter: "blur(0px)", duration: 0.6, ease: "power2.out", immediateRender: false}, 62.77);
+tl.fromTo("#s4_cards", {opacity: 0}, {opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 63.47);
+tl.fromTo("#s4_rxm", {scale: 1.5, opacity: 0}, {scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.8)", immediateRender: false}, 67.0);
+tl.fromTo("#s4_rxh", {y: -18, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 67.15);
+tl.fromTo("#s4_rxr0", {x: -24, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 71.62);
+tl.fromTo("#s4_rxr1", {x: -24, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 79.31);
+tl.fromTo("#s4_rxr2", {x: -24, opacity: 0}, {x: 0, opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 84.337);
+tl.set("#pflash", {opacity: 0.49}, 66.73);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 66.77);
+tl.fromTo("#jas_changecap0", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 89.13);
+tl.set("#jas_changecap0", {opacity: 0}, 95.47);
+tl.fromTo("#jas_changecap1", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 95.6);
+tl.fromTo("#jas_changev", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 88.82);
+tl.set("#pflash", {opacity: 0.49}, 88.78);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 88.82);
+tl.set("#s4_k10", {opacity: 1}, 100.96);
+tl.set("#s4_k11", {opacity: 1}, 101.025);
+tl.set("#s4_k12", {opacity: 1}, 101.09);
+tl.set("#s4_k13", {opacity: 1}, 101.155);
+tl.set("#s4_k14", {opacity: 1}, 101.22);
+tl.set("#s4_k15", {opacity: 1}, 101.285);
+tl.to("#s4_k1c", {opacity: 0, duration: 0.01, repeat: 2, yoyo: true, repeatDelay: 0.5}, 100.91);
+tl.set("#pflash", {opacity: 0.49}, 100.59);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 100.63);
+tl.fromTo("#jas_kindcap0", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 102.37);
+tl.set("#jas_kindcap0", {opacity: 0}, 107.25);
+tl.fromTo("#jas_kindcap1", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 107.37);
+tl.fromTo("#jas_kindv", {filter: "saturate(1) sepia(0) brightness(1)"}, {filter: "saturate(1.14) sepia(.16) brightness(1.03)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 102.67);
+tl.fromTo("#jas_kindv", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 101.99);
+tl.set("#pflash", {opacity: 0.63}, 101.95);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 101.99);
+tl.fromTo("#jas_homecap0", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 113.75);
+tl.set("#jas_homecap0", {opacity: 0}, 120.29);
+tl.fromTo("#jas_homecap1", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 120.42);
+tl.fromTo("#jas_homev", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 113.49);
+tl.set("#pflash", {opacity: 0.49}, 113.45);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 113.49);
+tl.fromTo("#s4_finh", {y: -18, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 127.14);
+tl.fromTo("#s4_finr0", {x: -24, opacity: 0}, {x: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 127.64);
+tl.fromTo("#s4_finr1", {x: -24, opacity: 0}, {x: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 133.07);
+tl.fromTo("#s4_finr2", {x: -24, opacity: 0}, {x: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 137.69);
+tl.fromTo("#s4_finr3", {x: -24, opacity: 0}, {x: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 138.59);
+tl.set("#pflash", {opacity: 0.49}, 126.82);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 126.86);
+tl.fromTo("#ask1", {opacity: 0, y: 24, filter: "blur(8px)"}, {opacity: 1, y: 0, filter: "blur(0px)", duration: 0.7, ease: "power2.out", immediateRender: false}, 146.32);
+tl.fromTo("#ask2", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 147.52);
+tl.to("#ask2", {y: 8, duration: 0.5, ease: "sine.inOut", repeat: 5, yoyo: true}, 148.12);
+tl.set("#pflash", {opacity: 0.49}, 146.0);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 146.04);
+tl.fromTo("#end1", {opacity: 0}, {opacity: 1, duration: 0.7, ease: "power2.out", immediateRender: false}, 153.82);
+tl.fromTo("#end2", {opacity: 0}, {opacity: 1, duration: 0.5, ease: "power2.out", immediateRender: false}, 154.72);
+tl.fromTo("#fcov", {xPercent: -104}, {xPercent: 0, duration: 0.55, ease: "power3.inOut", immediateRender: false}, 163.06);
+tl.set("#pflash", {opacity: 0.49}, 153.5);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 153.54);
+tl.fromTo("#stage", {opacity: 0}, {opacity: 1, duration: 0.8, ease: "power2.out", immediateRender: false}, 0.05);
+tl.to("#stage", {opacity: 0, duration: 0.95, ease: "power1.in"}, 164.51);
+const root = gsap.timeline({ paused: true });
+tl.time(0.0);
+root.fromTo(tl, { time: 0.0 }, { time: 165.66, duration: 165.66, ease: "none" }, 0);
+window.__timelines["root"] = root;
+</script>
+</div>
+</body>
+</html>

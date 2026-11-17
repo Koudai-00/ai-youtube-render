@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family:'NotoB'; src:url('assets/fonts/NotoSansJP-Black.otf') format('opentype'); }
+@font-face { font-family:'NotoBd'; src:url('assets/fonts/NotoSansJP-Bold.otf') format('opentype'); }
+@font-face { font-family:'SerifJP'; src:url('assets/fonts/NotoSerifJP.ttf') format('truetype');
+  font-weight:100 900; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#000; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden;
+  background:#e9e5d8; font-family:'NotoBd',sans-serif; color:#1d2b50; }
+#stage { position:absolute; inset:0; }
+.clip { position:absolute; inset:0; width:100%; height:100%; }
+video.bgv { object-fit:cover; transform:translateZ(0); backface-visibility:hidden; }
+video.framed { top:80px; height:810px; }
+em { font-style:normal; color:#c03b2d; }
+#vig { position:absolute; inset:0; z-index:41; pointer-events:none;
+  background:radial-gradient(ellipse 125% 112% at 50% 44%, rgba(0,0,0,0) 64%, rgba(70,60,36,.22) 100%); }
+#pflash { position:absolute; inset:0; z-index:60; background:#fbf9f2; opacity:0; pointer-events:none; }
+#tbk { position:absolute; inset:0; z-index:56; background:#0a0c12; opacity:0; pointer-events:none; }
+/* ---------- 紙パネル ---------- */
+.panel.paper { z-index:10; background:
+  repeating-linear-gradient(0deg, rgba(90,110,150,0) 0 66px, rgba(90,110,150,.14) 66px 68px),
+  radial-gradient(ellipse 140% 110% at 50% 30%, #f7f4ea 0%, #f2eee0 60%, #e8e2cf 100%); }
+.panel.paper::after { content:''; position:absolute; inset:0; pointer-events:none;
+  box-shadow:inset 0 0 160px rgba(120,104,60,.16); }
+.panel.grid { background:
+  repeating-linear-gradient(0deg, rgba(90,110,150,.1) 0 1px, transparent 1px 48px),
+  repeating-linear-gradient(90deg, rgba(90,110,150,.1) 0 1px, transparent 1px 48px),
+  radial-gradient(ellipse 140% 110% at 50% 30%, #f7f4ea 0%, #f0ecdd 100%); }
+.panel.dark { z-index:10;
+  background:radial-gradient(ellipse 130% 100% at 50% 40%, #0a0d16 0%, #04060c 70%); }
+.tab { position:absolute; right:60px; top:0; z-index:4; font-family:'NotoBd'; font-size:24px;
+  letter-spacing:.1em; color:#f4f2ec; background:#1d2b50; padding:12px 26px 10px;
+  border-radius:0 0 10px 10px; }
+.tab em { color:#f0b9ae; }
+.pgno { position:absolute; left:50%; bottom:28px; transform:translateX(-50%);
+  font-family:'NotoBd'; font-size:24px; color:#8d8468; }
+/* ---------- 引用フレーム (資料映像) ---------- */
+.qov { z-index:10; }
+.lbT { position:absolute; left:0; right:0; top:0; height:80px; background:#f2eee0;
+  border-bottom:3px solid #1d2b50; box-shadow:0 4px 18px rgba(40,30,8,.25); }
+.lbB { position:absolute; left:0; right:0; bottom:0; height:190px; background:#f2eee0;
+  border-top:3px solid #1d2b50; box-shadow:0 -4px 18px rgba(40,30,8,.25); }
+.clipmark { position:absolute; left:46px; top:50%; width:30px; height:44px; margin-top:-22px;
+  border:5px solid #8d8468; border-radius:14px 14px 4px 4px; border-bottom:none; }
+.tape { position:absolute; left:100px; top:50%; transform:translateY(-50%);
+  font-family:'NotoB'; font-size:24px; letter-spacing:.2em; color:#f4f2ec; background:#c03b2d;
+  padding:8px 18px; border-radius:4px; }
+.qtag { position:absolute; left:300px; top:50%; transform:translateY(-50%);
+  font-family:'NotoB'; font-size:29px; color:#1d2b50; letter-spacing:.06em; }
+.credit { position:absolute; right:46px; top:50%; transform:translateY(-50%);
+  font-family:'NotoBd'; font-size:24px; color:#8d8468; }
+.qcap { position:absolute; left:60px; right:60px; bottom:52px; text-align:center; font-size:56px;
+  font-family:'NotoB'; color:#1d2b50; letter-spacing:.02em; opacity:0; z-index:11; }
+.biglabel { position:absolute; left:64px; top:128px; font-family:'NotoB'; font-size:52px;
+  color:#1d2b50; background:rgba(242,238,224,.95); border-left:10px solid #c03b2d;
+  padding:16px 38px; box-shadow:0 6px 24px rgba(40,30,8,.3); opacity:0; }
+.creditD { position:absolute; top:26px; right:56px; font-family:'NotoBd'; font-size:24px;
+  color:rgba(242,244,248,.92); background:rgba(10,12,18,.55); padding:7px 16px; z-index:5; }
+/* ---------- karte ---------- */
+.khead { position:absolute; left:0; right:0; top:110px; text-align:center; font-family:'NotoB';
+  font-size:62px; color:#1d2b50; opacity:0; letter-spacing:.06em; }
+.kwrap { position:absolute; left:250px; right:250px; top:290px; }
+.krow { position:relative; margin-top:58px; opacity:0; }
+.klab { display:inline-block; font-family:'NotoB'; font-size:40px; color:#f4f2ec; background:#2b5c8a;
+  padding:8px 24px; border-radius:6px; margin-right:36px; vertical-align:middle; }
+.kval { display:inline-block; font-family:'NotoB'; font-size:48px; color:#1d2b50;
+  vertical-align:middle; line-height:1.4; }
+.kline { position:absolute; left:0; right:0; bottom:-14px; height:2px; background:rgba(29,43,80,.25); }
+/* ---------- case ---------- */
+.cno { position:absolute; left:150px; top:120px; font-family:'NotoB'; font-size:56px;
+  letter-spacing:.3em; color:#f4f2ec; background:#c03b2d; padding:12px 34px; border-radius:8px;
+  opacity:0; }
+.ctit { position:absolute; left:150px; top:244px; font-family:'NotoB'; font-size:74px;
+  color:#1d2b50; opacity:0; }
+.cwrap { position:absolute; left:160px; right:160px; top:400px; }
+.crow { display:flex; margin-top:38px; opacity:0; border-bottom:2px solid rgba(29,43,80,.2);
+  padding-bottom:16px; }
+.clab { width:360px; font-family:'NotoB'; font-size:40px; color:#2b5c8a; }
+.cval { flex:1; font-family:'NotoB'; font-size:42px; color:#1d2b50; line-height:1.4; }
+.cstamp { position:absolute; right:170px; top:150px; font-family:'SerifJP'; font-weight:900;
+  font-size:72px; color:#c03b2d; border:7px solid #c03b2d; border-radius:10px; padding:10px 34px;
+  transform:rotate(-7deg); background:rgba(192,59,45,.05); opacity:0; }
+/* ---------- graph ---------- */
+.gwrap { position:absolute; left:180px; right:180px; top:280px; bottom:160px; }
+.gmask { position:absolute; inset:0; transform-origin:left; }
+.gmask svg { width:100%; height:100%; }
+.glab { position:absolute; font-family:'NotoB'; font-size:36px; color:#1d2b50; opacity:0;
+  text-align:center; transform:translateX(-50%); line-height:1.35; }
+.glab:nth-child(5) { color:#c03b2d; }
+.gsrc { position:absolute; left:60px; bottom:36px; font-family:'NotoBd'; font-size:23px;
+  color:#8d8468; }
+/* ---------- stamp ---------- */
+.dhead { position:absolute; left:0; right:0; top:170px; text-align:center; font-family:'NotoB';
+  font-size:58px; color:#1d2b50; opacity:0; }
+.bigstamp { position:absolute; left:50%; top:40%; transform:translateX(-50%);
+  font-family:'SerifJP'; font-weight:900; font-size:110px; color:#c03b2d; white-space:nowrap;
+  border:12px solid #c03b2d; border-radius:16px; padding:26px 70px; background:rgba(192,59,45,.05);
+  opacity:0; }
+.dnote { position:absolute; left:0; right:0; top:72%; text-align:center; font-family:'NotoBd';
+  font-size:38px; color:#5a5340; opacity:0; }
+/* ---------- kick ---------- */
+.tkwrap { position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  padding:0 130px; }
+.tkt { font-family:'NotoB'; font-size:82px; color:#1d2b50; letter-spacing:.04em; line-height:1.5;
+  text-align:center; }
+.tc { opacity:0; }
+.caret { display:inline-block; width:8px; height:0.95em; background:#c03b2d; margin-left:10px;
+  vertical-align:-0.12em; }
+.skwrap { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+.skt { font-family:'SerifJP'; font-weight:900; font-size:96px; color:#c03b2d;
+  border:10px solid #c03b2d; border-radius:14px; padding:20px 60px; transform:rotate(-5deg);
+  background:rgba(192,59,45,.05); opacity:0; }
+/* ---------- senga ---------- */
+.sgwrap { position:absolute; left:110px; right:110px; top:120px; bottom:240px; opacity:0; }
+.sgwrap svg { width:100%; height:100%; filter:drop-shadow(0 0 7px rgba(238,243,248,.35)); }
+.sgcap { position:absolute; left:0; right:0; bottom:104px; text-align:center; font-family:'NotoB';
+  font-size:56px; color:#f2f4f8; opacity:0; letter-spacing:.04em;
+  text-shadow:0 2px 16px rgba(0,0,0,.8); }
+/* ---------- rx ---------- */
+.rxmark { position:absolute; left:150px; top:104px; font-family:'SerifJP'; font-weight:900;
+  font-size:120px; color:#2b5c8a; opacity:0; }
+.rxwrap { position:absolute; left:250px; right:200px; top:320px; }
+.rxrow { font-family:'NotoB'; font-size:52px; color:#1d2b50; margin-top:52px; opacity:0;
+  line-height:1.45; }
+.rxn { display:inline-block; width:64px; height:64px; line-height:64px; text-align:center;
+  background:#2b5c8a; color:#f4f2ec; border-radius:50%; font-size:38px; margin-right:28px;
+  vertical-align:4px; }
+/* ---------- card (章扉) ---------- */
+.cdscrim { position:absolute; inset:0;
+  background:linear-gradient(0deg, rgba(10,12,18,.8) 0%, rgba(10,12,18,.42) 45%, rgba(10,12,18,.22) 100%); }
+.ixghost { position:absolute; right:90px; top:44%; transform:translateY(-50%);
+  font-family:'NotoB'; font-size:560px; color:#c03b2d; opacity:0; }
+.qov .ixghost { color:#f2eee0; }
+.ixtab { position:absolute; left:150px; top:330px; font-family:'NotoB'; font-size:46px;
+  letter-spacing:.3em; color:#f4f2ec; background:#c03b2d; padding:14px 36px; border-radius:8px;
+  opacity:0; }
+.ixtitle { position:absolute; left:146px; top:452px; font-family:'NotoB'; font-size:94px;
+  opacity:0; letter-spacing:.03em; }
+.panel .ixtitle { color:#1d2b50; }
+.qov .ixtitle { color:#f2f4f8; text-shadow:0 4px 30px rgba(0,0,0,.7); }
+.ixsub { position:absolute; left:152px; top:600px; font-family:'NotoBd'; font-size:38px;
+  opacity:0; }
+.panel .ixsub { color:#5a5340; }
+.qov .ixsub { color:#cfd6e4; }
+/* ---------- ask / end ---------- */
+.askt { position:absolute; left:0; right:0; top:26%; text-align:center; font-family:'NotoB';
+  font-size:82px; line-height:1.6; color:#1d2b50; opacity:0; }
+.asks { position:absolute; left:0; right:0; top:70%; text-align:center; font-family:'NotoBd';
+  font-size:38px; color:#8a5a28; opacity:0; }
+.endt { position:absolute; left:0; right:0; top:38%; text-align:center; font-family:'NotoB';
+  font-size:84px; color:#1d2b50; opacity:0; }
+.ends { position:absolute; left:0; right:0; top:56%; text-align:center; font-family:'NotoBd';
+  font-size:36px; color:#8d8468; opacity:0; }
+.fcover { position:absolute; inset:0; z-index:30; background:#8d6e4e;
+  background:linear-gradient(135deg, #96785a 0%, #85643f 100%); transform:translateX(-104%);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:60px; }
+.fcttl { font-family:'NotoB'; font-size:92px; color:#f4ecd9; text-align:center; line-height:1.4;
+  letter-spacing:.14em; }
+.fcttl span { font-size:48px; color:#e3d2ae; }
+.fcstamp { font-family:'SerifJP'; font-weight:900; font-size:76px; color:#c03b2d;
+  border:9px solid #c03b2d; border-radius:12px; padding:10px 44px; transform:rotate(-8deg); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="root" data-width="1920" data-height="1080" data-start="0" data-duration="117.8">
+<div id="stage">
+<div id="s2_case1p" class="clip panel paper" data-start="0.6" data-duration="11.85" data-track-index="1" style=""><div class="tab">CASE FILE <em>No.004</em> — 症例記録「日本ロス」</div><div class="pgno">- 4 -</div><div class="cno" id="s2_case1n">CASE 01</div><div class="ctit" id="s2_case1t">動画クリエイター(アメリカ)</div><div class="cwrap" id="s2_case1w"><div class="crow" id="s2_case1r0"><div class="clab">渡航歴</div><div class="cval">2025年 初めての日本へ</div></div><div class="crow" id="s2_case1r1"><div class="clab">帰国</div><div class="cval">アリゾナ州 — 2週間経過</div></div><div class="crow" id="s2_case1r2"><div class="clab">自覚症状</div><div class="cval">「日本ロスが直撃してる」</div></div><div class="crow" id="s2_case1r3"><div class="clab">特記事項</div><div class="cval">帰国直後に<em>2027年の再訪</em>を予約</div></div></div><div class="cstamp" id="s2_case1s">再訪予約済</div></div>
+<video id="d_zenv" class="clip bgv framed" data-start="12.45" data-duration="9.73" data-media-start="0.6" data-track-index="2" src="assets/bg/d_zen.mp4" muted playsinline></video>
+<div id="d_zeno" class="clip qov" data-start="12.45" data-duration="9.73" data-track-index="3" style=""><div class="lbT"><div class="clipmark"></div><div class="tape">CASE 01</div><div class="qtag">帰国2週間 — アメリカの旅行者</div><div class="credit">引用: Dennis Garcia</div></div><div class="lbB"></div><div class="qcap" id="d_zencap0">「日本は<em>夢の環境</em>そのものだった」</div><div class="qcap" id="d_zencap1">「人生でいちばん リラックスできた」</div></div>
+<video id="d_zerov" class="clip bgv framed" data-start="22.18" data-duration="6.63" data-media-start="0.6" data-track-index="4" src="assets/bg/d_zero.mp4" muted playsinline></video>
+<div id="d_zeroo" class="clip qov" data-start="22.18" data-duration="6.63" data-track-index="5" style=""><div class="lbT"><div class="clipmark"></div><div class="tape">CASE 01</div><div class="qtag">帰国2週間 — アメリカの旅行者</div><div class="credit">引用: Dennis Garcia</div></div><div class="lbB"></div><div class="qcap" id="d_zerocap0">「怒りも落ち込みも 全部<em>ゼロ</em>になった」</div><div class="qcap" id="d_zerocap1">「<em>別人</em>になって帰ってきた」</div></div>
+<video id="d_laxv" class="clip bgv framed" data-start="28.81" data-duration="13.07" data-media-start="0.6" data-track-index="6" src="assets/bg/d_lax.mp4" muted playsinline></video>
+<div id="d_laxo" class="clip qov" data-start="28.81" data-duration="13.07" data-track-index="7" style=""><div class="lbT"><div class="clipmark"></div><div class="tape">CASE 01</div><div class="qtag">帰国2週間 — アメリカの旅行者</div><div class="credit">引用: Dennis Garcia</div></div><div class="lbB"></div><div class="qcap" id="d_laxcap0">ロサンゼルスの空港で——現実に<em>逆戻り</em></div><div class="qcap" id="d_laxcap1">「みんな なんて無礼なんだ」</div></div>
+<div id="s2_sengap" class="clip panel dark" data-start="41.88" data-duration="9.95" data-track-index="8" style=""><div class="sgwrap" id="s2_sengaa"><svg viewBox="0 0 1700 760" fill="none" stroke="#eef3f8" stroke-width="6" stroke-linecap="round"><path d="M120 720 H 1580" stroke-width="4" opacity="0.5"/><rect x="980" y="420" width="420" height="300" rx="6" opacity="0.8"/><path d="M1040 520 h300 M1040 600 h300" opacity="0.4"/><g transform="translate(1180,720) scale(1.5) scale(-1,1)"><circle cx="0" cy="-150" r="26"/><path d="M0 -122 C -2 -92, -2 -70, 0 -52 L 42 -52 L 42 0"/><path d="M0 -52 L -6 0"/><path d="M-2 -110 C -22 -98, -30 -84, -32 -68"/><path d="M2 -110 C 20 -100, 28 -88, 30 -72"/></g><rect x="330" y="150" width="360" height="130" rx="18" stroke="#7ce4f5" stroke-width="7"/><text x="510" y="238" text-anchor="middle" fill="#7ce4f5" stroke="none" font-family="Arial Black" font-size="74" letter-spacing="8">TOKYO</text><g transform="translate(1050,210)" stroke="#ff8e73" stroke-width="7"><path d="M-90 0 a90 90 0 0 1 180 0 Z"/><path d="M-50 -34 q 8 -40 24 -58 M0 -40 q 4 -44 16 -64 M48 -32 q 10 -36 28 -52"/></g></svg></div><div class="sgcap" id="s2_sengac">再現行動 — 部屋が「ミニ東京」になっていく</div></div>
+<video id="d_neonv" class="clip bgv framed" data-start="51.83" data-duration="8.57" data-media-start="0.6" data-track-index="9" src="assets/bg/d_neon.mp4" muted playsinline></video>
+<div id="d_neono" class="clip qov" data-start="51.83" data-duration="8.57" data-track-index="10" style=""><div class="lbT"><div class="clipmark"></div><div class="tape">CASE 01</div><div class="qtag">帰国2週間 — アメリカの旅行者</div><div class="credit">引用: Dennis Garcia</div></div><div class="lbB"></div><div class="qcap" id="d_neoncap0">「<em>東京の夜</em>が忘れられない」</div><div class="qcap" id="d_neoncap1">ネオンサインを買い集め 部屋に飾った</div></div>
+<video id="d_takev" class="clip bgv framed" data-start="60.5" data-duration="12.5" data-media-start="0.6" data-track-index="11" src="assets/bg/d_take.mp4" muted playsinline></video>
+<div id="d_takeo" class="clip qov" data-start="60.5" data-duration="12.5" data-track-index="12" style=""><div class="lbT"><div class="clipmark"></div><div class="tape">記録映像</div><div class="qtag">帰国2週間 — アメリカの旅行者</div><div class="credit">引用: Dennis Garcia</div></div><div class="lbB"></div><div class="qcap" id="d_takecap0">「4ドルのビッグマックが恋しい」</div><div class="qcap" id="d_takecap1">「<em>連れ戻してくれ</em>——」</div></div>
+<div id="s2_case2p" class="clip panel paper" data-start="73.4" data-duration="6.52" data-track-index="13" style=""><div class="tab">CASE FILE <em>No.004</em> — 症例記録「日本ロス」</div><div class="pgno">- 5 -</div><div class="cno" id="s2_case2n">CASE 02</div><div class="ctit" id="s2_case2t">無名アカウントの、6分間</div><div class="cwrap" id="s2_case2w"><div class="crow" id="s2_case2r0"><div class="clab">投稿者</div><div class="cval">登録者<em>6人</em>の 無名アカウント</div></div><div class="crow" id="s2_case2r1"><div class="clab">内容</div><div class="cval">日本旅行の記憶を編集した 6分間</div></div><div class="crow" id="s2_case2r2"><div class="clab">題名</div><div class="cval">『Post Japan trip depression』</div></div></div><div class="cstamp" id="s2_case2s"></div></div>
+<video id="lul_m1v" class="clip bgv framed" data-start="79.92" data-duration="15.47" data-media-start="0.6" data-track-index="14" src="assets/bg/lul_m1.mp4" muted playsinline></video>
+<div id="lul_m1o" class="clip qov" data-start="79.92" data-duration="15.47" data-track-index="15" style=""><div class="lbT"><div class="clipmark"></div><div class="tape">CASE 02</div><div class="qtag">帰国後に編集された 旅の記憶</div><div class="credit">引用: lululae</div></div><div class="lbB"></div><div class="qcap" id="lul_m1cap0">動画の題名 —『<em>Post Japan trip depression</em>』</div><div class="qcap" id="lul_m1cap1">なんでもない 移動の風景ばかり</div></div>
+<video id="lul_m2v" class="clip bgv framed" data-start="95.39" data-duration="8.09" data-media-start="0.6" data-track-index="16" src="assets/bg/lul_m2.mp4" muted playsinline></video>
+<div id="lul_m2o" class="clip qov" data-start="95.39" data-duration="8.09" data-track-index="17" style=""><div class="lbT"><div class="clipmark"></div><div class="tape">CASE 02</div><div class="qtag">帰国後に編集された 旅の記憶</div><div class="credit">引用: lululae</div></div><div class="lbB"></div><div class="qcap" id="lul_m2cap0">一杯のそばも 「宝物」になる</div></div>
+<div id="s2_k1p" class="clip panel paper" data-start="103.48" data-duration="6.01" data-track-index="18" style=""><div class="tab">CASE FILE <em>No.004</em> — 症例記録「日本ロス」</div><div class="pgno">- 6 -</div><div class="tkwrap"><div class="tkt" id="s2_k1k"><span class="tc" id="s2_k10">思</span><span class="tc" id="s2_k11">い</span><span class="tc" id="s2_k12">出</span><span class="tc" id="s2_k13">を</span><span class="tc" id="s2_k14">、</span><span class="tc" id="s2_k15">編</span><span class="tc" id="s2_k16">集</span><span class="tc" id="s2_k17">せ</span><span class="tc" id="s2_k18">ず</span><span class="tc" id="s2_k19">に</span><span class="tc" id="s2_k110">い</span><span class="tc" id="s2_k111">ら</span><span class="tc" id="s2_k112">れ</span><span class="tc" id="s2_k113">な</span><span class="tc" id="s2_k114">い</span><span class="caret" id="s2_k1c"></span></div></div></div>
+<video id="s2_cardv" class="clip bgv " data-start="109.49" data-duration="7.01" data-media-start="0.0" data-track-index="19" src="assets/bg/b_jarr.mp4" muted playsinline></video>
+<div id="s2_cardo" class="clip qov" data-start="109.49" data-duration="7.01" data-track-index="20" style=""><div class="cdscrim"></div><div class="creditD">引用: AskJasmineChan</div><div class="ixghost" id="s2_cardg">3</div><div class="ixtab" id="s2_cardb">第3章 原因</div><div class="ixtitle" id="s2_cardt">なぜ、日本だけで起きるのか</div><div class="ixsub" id="s2_cards">— 1963年から知られていた「W字の谷」</div></div>
+<div id="vig"></div>
+<div id="tbk"></div>
+<div id="pflash"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#s2_case1n", {x: -30, opacity: 0}, {x: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 0.85);
+tl.fromTo("#s2_case1t", {opacity: 0}, {opacity: 1, duration: 0.5, ease: "power2.out", immediateRender: false}, 1.05);
+tl.fromTo("#s2_case1r0", {x: -20, opacity: 0}, {x: 0, opacity: 1, duration: 0.3, ease: "power2.out", immediateRender: false}, 1.7);
+tl.fromTo("#s2_case1r1", {x: -20, opacity: 0}, {x: 0, opacity: 1, duration: 0.3, ease: "power2.out", immediateRender: false}, 2.25);
+tl.fromTo("#s2_case1r2", {x: -20, opacity: 0}, {x: 0, opacity: 1, duration: 0.3, ease: "power2.out", immediateRender: false}, 2.8);
+tl.fromTo("#s2_case1r3", {x: -20, opacity: 0}, {x: 0, opacity: 1, duration: 0.3, ease: "power2.out", immediateRender: false}, 3.35);
+tl.fromTo("#s2_case1s", {scale: 1.9, opacity: 0, rotation: -7}, {scale: 1, opacity: 1, rotation: -7, duration: 0.28, ease: "power4.in", immediateRender: false}, 9.574);
+tl.set("#pflash", {opacity: 0.49}, 0.58);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 0.62);
+tl.fromTo("#d_zencap0", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 12.73);
+tl.set("#d_zencap0", {opacity: 0}, 16.94);
+tl.fromTo("#d_zencap1", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 17.07);
+tl.fromTo("#d_zenv", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 12.47);
+tl.set("#pflash", {opacity: 0.49}, 12.43);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 12.47);
+tl.fromTo("#d_zerocap0", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 22.46);
+tl.set("#d_zerocap0", {opacity: 0}, 25.23);
+tl.fromTo("#d_zerocap1", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 25.36);
+tl.fromTo("#d_zerov", {filter: "saturate(1) sepia(0) brightness(1)"}, {filter: "saturate(1.14) sepia(.16) brightness(1.03)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 22.58);
+tl.fromTo("#d_zerov", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 22.2);
+tl.set("#pflash", {opacity: 0.49}, 22.16);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 22.2);
+tl.fromTo("#d_laxcap0", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 29.09);
+tl.set("#d_laxcap0", {opacity: 0}, 33.66);
+tl.fromTo("#d_laxcap1", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 33.79);
+tl.fromTo("#d_laxv", {filter: "grayscale(0) brightness(1)"}, {filter: "grayscale(1) saturate(.4) brightness(.92)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 29.21);
+tl.fromTo("#d_laxv", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 28.83);
+tl.set("#pflash", {opacity: 0.49}, 28.79);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 28.83);
+tl.fromTo("#s2_sengaa", {opacity: 0, scale: 1.05, filter: "blur(6px)"}, {opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.7, ease: "power2.out", immediateRender: false}, 42.13);
+tl.fromTo("#s2_sengac", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 42.78);
+tl.fromTo("#s2_sengaa", {scale: 1}, {scale: 1.045, duration: 8.949999999999996, ease: "none", immediateRender: false}, 42.78);
+tl.set("#tbk", {opacity: 0}, 41.66);
+tl.to("#tbk", {opacity: 1, duration: 0.2, ease: "power2.in"}, 41.66);
+tl.to("#tbk", {opacity: 0, duration: 0.45, ease: "power2.out"}, 41.9);
+tl.fromTo("#d_neoncap0", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 52.11);
+tl.set("#d_neoncap0", {opacity: 0}, 55.02);
+tl.fromTo("#d_neoncap1", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 55.15);
+tl.fromTo("#d_neonv", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 51.85);
+tl.set("#pflash", {opacity: 0.49}, 51.81);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 51.85);
+tl.fromTo("#d_takecap0", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 60.9);
+tl.set("#d_takecap0", {opacity: 0}, 66.78);
+tl.fromTo("#d_takecap1", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 66.9);
+tl.fromTo("#d_takev", {filter: "saturate(1) sepia(0) brightness(1)"}, {filter: "saturate(1.14) sepia(.16) brightness(1.03)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 61.2);
+tl.fromTo("#d_takev", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 60.52);
+tl.set("#pflash", {opacity: 0.63}, 60.48);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 60.52);
+tl.fromTo("#s2_case2n", {x: -30, opacity: 0}, {x: 0, opacity: 1, duration: 0.45, ease: "power3.out", immediateRender: false}, 73.65);
+tl.fromTo("#s2_case2t", {opacity: 0}, {opacity: 1, duration: 0.5, ease: "power2.out", immediateRender: false}, 73.85);
+tl.fromTo("#s2_case2r0", {x: -20, opacity: 0}, {x: 0, opacity: 1, duration: 0.3, ease: "power2.out", immediateRender: false}, 74.45);
+tl.fromTo("#s2_case2r1", {x: -20, opacity: 0}, {x: 0, opacity: 1, duration: 0.3, ease: "power2.out", immediateRender: false}, 75.0);
+tl.fromTo("#s2_case2r2", {x: -20, opacity: 0}, {x: 0, opacity: 1, duration: 0.3, ease: "power2.out", immediateRender: false}, 75.55);
+tl.set("#pflash", {opacity: 0.49}, 73.38);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 73.42);
+tl.fromTo("#lul_m1cap0", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 80.2);
+tl.set("#lul_m1cap0", {opacity: 0}, 88.32);
+tl.fromTo("#lul_m1cap1", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 88.45);
+tl.fromTo("#lul_m1v", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 79.94);
+tl.set("#pflash", {opacity: 0.49}, 79.9);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 79.94);
+tl.fromTo("#lul_m2cap0", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 95.67);
+tl.fromTo("#lul_m2v", {filter: "saturate(1) sepia(0) brightness(1)"}, {filter: "saturate(1.14) sepia(.16) brightness(1.03)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 95.79);
+tl.fromTo("#lul_m2v", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 95.41);
+tl.set("#pflash", {opacity: 0.49}, 95.37);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 95.41);
+tl.set("#s2_k10", {opacity: 1}, 103.83);
+tl.set("#s2_k11", {opacity: 1}, 103.895);
+tl.set("#s2_k12", {opacity: 1}, 103.96);
+tl.set("#s2_k13", {opacity: 1}, 104.025);
+tl.set("#s2_k14", {opacity: 1}, 104.09);
+tl.set("#s2_k15", {opacity: 1}, 104.155);
+tl.set("#s2_k16", {opacity: 1}, 104.22);
+tl.set("#s2_k17", {opacity: 1}, 104.285);
+tl.set("#s2_k18", {opacity: 1}, 104.35);
+tl.set("#s2_k19", {opacity: 1}, 104.415);
+tl.set("#s2_k110", {opacity: 1}, 104.48);
+tl.set("#s2_k111", {opacity: 1}, 104.545);
+tl.set("#s2_k112", {opacity: 1}, 104.61);
+tl.set("#s2_k113", {opacity: 1}, 104.675);
+tl.set("#s2_k114", {opacity: 1}, 104.74);
+tl.to("#s2_k1c", {opacity: 0, duration: 0.01, repeat: 12, yoyo: true, repeatDelay: 0.5}, 103.78);
+tl.set("#pflash", {opacity: 0.49}, 103.46);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 103.5);
+tl.set("#pflash", {opacity: 0.70}, 109.47);
+tl.to("#pflash", {opacity: 0, duration: 0.5, ease: "power2.out"}, 109.51);
+tl.fromTo("#s2_cardb", {x: -70, opacity: 0}, {x: 0, opacity: 1, duration: 0.5, ease: "power3.out", immediateRender: false}, 109.69);
+tl.fromTo("#s2_cardg", {scale: 1.3, opacity: 0}, {scale: 1, opacity: 0.16, duration: 0.9, ease: "power2.out", immediateRender: false}, 109.84);
+tl.fromTo("#s2_cardt", {opacity: 0, y: 24, filter: "blur(8px)"}, {opacity: 1, y: 0, filter: "blur(0px)", duration: 0.6, ease: "power2.out", immediateRender: false}, 109.99);
+tl.fromTo("#s2_cards", {opacity: 0}, {opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 110.69);
+tl.fromTo("#stage", {opacity: 0}, {opacity: 1, duration: 0.8, ease: "power2.out", immediateRender: false}, 0.05);
+tl.to("#stage", {opacity: 0, duration: 0.95, ease: "power1.in"}, 116.65);
+const root = gsap.timeline({ paused: true });
+tl.time(0.0);
+root.fromTo(tl, { time: 0.0 }, { time: 117.8, duration: 117.8, ease: "none" }, 0);
+window.__timelines["root"] = root;
+</script>
+</div>
+</body>
+</html>
