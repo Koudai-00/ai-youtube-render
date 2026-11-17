@@ -1,0 +1,396 @@
+{
+ "total": 150.03,
+ "beats": [
+  {
+   "id": "s1_tune",
+   "start": 0.6,
+   "end": 6.31
+  },
+  {
+   "id": "s1_data",
+   "start": 6.31,
+   "end": 19.84
+  },
+  {
+   "id": "s1_famb",
+   "start": 19.84,
+   "end": 29.29
+  },
+  {
+   "id": "s1_noodle",
+   "start": 29.29,
+   "end": 38.13
+  },
+  {
+   "id": "s1_fuji",
+   "start": 38.13,
+   "end": 46.41
+  },
+  {
+   "id": "s1_k1",
+   "start": 46.41,
+   "end": 52.23
+  },
+  {
+   "id": "s1_cold",
+   "start": 52.23,
+   "end": 61.38
+  },
+  {
+   "id": "s1_k2",
+   "start": 61.38,
+   "end": 70.2
+  },
+  {
+   "id": "s1_card",
+   "start": 70.2,
+   "end": 75.58
+  },
+  {
+   "id": "s2_senga",
+   "start": 75.58,
+   "end": 94.85
+  },
+  {
+   "id": "s2_story",
+   "start": 94.85,
+   "end": 108.25
+  },
+  {
+   "id": "s2_polite",
+   "start": 108.25,
+   "end": 114.5
+  },
+  {
+   "id": "s2_split",
+   "start": 114.5,
+   "end": 130.11
+  },
+  {
+   "id": "s2_dep",
+   "start": 130.11,
+   "end": 143.19
+  },
+  {
+   "id": "s2_card",
+   "start": 143.19,
+   "end": 149.03
+  }
+ ],
+ "narr": {
+  "g101": {
+   "start": 1.2,
+   "dur": 4.61
+  },
+  "g102": {
+   "start": 6.81,
+   "dur": 6.76
+  },
+  "g103": {
+   "start": 13.97,
+   "dur": 5.27
+  },
+  "g104": {
+   "start": 20.34,
+   "dur": 8.45
+  },
+  "g105": {
+   "start": 29.69,
+   "dur": 3.63
+  },
+  "g106": {
+   "start": 33.66,
+   "dur": 3.97
+  },
+  "g107": {
+   "start": 38.53,
+   "dur": 2.87
+  },
+  "g108": {
+   "start": 41.75,
+   "dur": 4.16
+  },
+  "g109": {
+   "start": 46.86,
+   "dur": 5.07
+  },
+  "g110": {
+   "start": 61.88,
+   "dur": 7.97
+  },
+  "g111": {
+   "start": 70.7,
+   "dur": 2.38
+  },
+  "g112": {
+   "start": 76.13,
+   "dur": 8.63
+  },
+  "g113": {
+   "start": 85.15,
+   "dur": 9.14
+  },
+  "g114": {
+   "start": 95.25,
+   "dur": 6.37
+  },
+  "g115": {
+   "start": 101.91,
+   "dur": 5.83
+  },
+  "g116": {
+   "start": 115.0,
+   "dur": 5.07
+  },
+  "g117": {
+   "start": 120.47,
+   "dur": 4.13
+  },
+  "g118": {
+   "start": 124.99,
+   "dur": 4.51
+  },
+  "g119": {
+   "start": 130.51,
+   "dur": 6.46
+  },
+  "g120": {
+   "start": 137.27,
+   "dur": 5.42
+  },
+  "g121": {
+   "start": 143.69,
+   "dur": 2.84
+  }
+ },
+ "quotes": {
+  "n_cold": {
+   "beat_start": 52.33,
+   "lead": 0.4,
+   "adur": 7.8,
+   "media_start": 0.6,
+   "dur": 8.7,
+   "clip": "n_cold.mp4",
+   "sample": "nica",
+   "grade": "warm",
+   "credit": "引用: Nicaboo",
+   "caps": [
+    [
+     0.0,
+     "「こんなに寒いと 思わなかった…」"
+    ],
+    [
+     4.0,
+     "「いま ちょっと<em>後悔</em>してます(笑)」"
+    ]
+   ]
+  },
+  "z_polite": {
+   "beat_start": 108.35,
+   "lead": 0.4,
+   "adur": 4.9,
+   "media_start": 0.6,
+   "dur": 5.8,
+   "clip": "z_polite.mp4",
+   "sample": "zhen",
+   "grade": null,
+   "credit": "引用: Zhen Into Chinese",
+   "caps": [
+    [
+     0.0,
+     "「丁寧は 友好と<em>イコール</em>ではない」"
+    ]
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "s1_tune",
+   "kind": "tune",
+   "start": 0.6,
+   "end": 6.31,
+   "nids": [
+    "g101"
+   ],
+   "text": "909万人は なぜ<br><em>隣の国</em>へ行くのか",
+   "trk": "TRACK 01"
+  },
+  {
+   "id": "s1_data",
+   "kind": "datac",
+   "start": 6.31,
+   "end": 19.84,
+   "nids": [
+    "g102",
+    "g103"
+   ],
+   "head": "2025年に日本を訪れた中国人",
+   "num": "909万",
+   "unit": "人",
+   "sub": "前年比 +30% — 国・地域別で最多",
+   "src": "出典: JNTO 訪日外客統計(2025年)",
+   "trk": "TRACK 01"
+  },
+  {
+   "id": "s1_famb",
+   "kind": "broll",
+   "start": 19.84,
+   "end": 29.29,
+   "nids": [
+    "g104"
+   ],
+   "bg": "b_got",
+   "label": "6人家族の日本旅行"
+  },
+  {
+   "id": "s1_noodle",
+   "kind": "nv",
+   "start": 29.29,
+   "end": 38.13,
+   "nids": [
+    "g105",
+    "g106"
+   ],
+   "q": "n_noodle"
+  },
+  {
+   "id": "s1_fuji",
+   "kind": "nv",
+   "start": 38.13,
+   "end": 46.41,
+   "nids": [
+    "g107",
+    "g108"
+   ],
+   "q": "n_fuji"
+  },
+  {
+   "id": "s1_k1",
+   "kind": "kick",
+   "start": 46.41,
+   "end": 52.23,
+   "nids": [
+    "g109"
+   ],
+   "kicker": "日本の冬を、なめてはいけない",
+   "kstyle": "line",
+   "trk": "TRACK 01"
+  },
+  {
+   "id": "s1_cold",
+   "kind": "q",
+   "start": 52.23,
+   "end": 61.38,
+   "nids": []
+  },
+  {
+   "id": "s1_k2",
+   "kind": "kick",
+   "start": 61.38,
+   "end": 70.2,
+   "nids": [
+    "g110"
+   ],
+   "kicker": "本当の驚きは <em>気配り</em>だった",
+   "kstyle": "fuseji",
+   "trk": "TRACK 01"
+  },
+  {
+   "id": "s1_card",
+   "kind": "card",
+   "start": 70.2,
+   "end": 75.58,
+   "nids": [
+    "g111"
+   ],
+   "no": "TRACK 02",
+   "title": "丁寧さの、正体",
+   "sub": "— ある中国人が、日本で通報された話",
+   "bg": "b_zoff"
+  },
+  {
+   "id": "s2_senga",
+   "kind": "senga",
+   "start": 75.58,
+   "end": 94.85,
+   "nids": [
+    "g112",
+    "g113"
+   ],
+   "art": "report",
+   "cap": "日本で働く 中国人男性の実話",
+   "trk": "TRACK 02"
+  },
+  {
+   "id": "s2_story",
+   "kind": "nv",
+   "start": 94.85,
+   "end": 108.25,
+   "nids": [
+    "g114",
+    "g115"
+   ],
+   "q": "z_story"
+  },
+  {
+   "id": "s2_polite",
+   "kind": "q",
+   "start": 108.25,
+   "end": 114.5,
+   "nids": []
+  },
+  {
+   "id": "s2_split",
+   "kind": "split",
+   "start": 114.5,
+   "end": 130.11,
+   "nids": [
+    "g116",
+    "g117",
+    "g118"
+   ],
+   "head": "2つの国の「優しさ」",
+   "trk": "TRACK 02",
+   "left": [
+    "中国",
+    [
+     "距離を<em>壊す</em>のが友情",
+     "給料も恋愛も聞く",
+     "皿から直接 分け合う"
+    ]
+   ],
+   "right": [
+    "日本",
+    [
+     "距離を<em>守る</em>のが礼儀",
+     "迷惑をかけない",
+     "3年同僚でも 私生活は知らない"
+    ]
+   ]
+  },
+  {
+   "id": "s2_dep",
+   "kind": "nv",
+   "start": 130.11,
+   "end": 143.19,
+   "nids": [
+    "g119",
+    "g120"
+   ],
+   "q": "z_friend"
+  },
+  {
+   "id": "s2_card",
+   "kind": "card",
+   "start": 143.19,
+   "end": 149.03,
+   "nids": [
+    "g121"
+   ],
+   "no": "TRACK 03",
+   "title": "ルールの国、柔軟の国",
+   "sub": "— レストランに入れば、その国がわかる",
+   "bg": "b_china"
+  }
+ ]
+}

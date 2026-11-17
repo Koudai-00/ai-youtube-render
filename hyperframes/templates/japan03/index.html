@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family:'NotoB'; src:url('assets/fonts/NotoSansJP-Black.otf') format('opentype'); }
+@font-face { font-family:'NotoBd'; src:url('assets/fonts/NotoSansJP-Bold.otf') format('opentype'); }
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#000; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden;
+  background:#070b16; font-family:'NotoB',sans-serif; color:#f2f4f8; }
+#stage { position:absolute; inset:0; }
+.clip { position:absolute; inset:0; width:100%; height:100%; }
+video.bgv { object-fit:cover; transform:translateZ(0); backface-visibility:hidden; }
+video.framed { top:80px; height:810px; }
+em { font-style:normal; color:#4fd8eb; }
+#vig { position:absolute; inset:0; z-index:41; pointer-events:none;
+  background:radial-gradient(ellipse 120% 110% at 50% 46%, rgba(0,0,0,0) 58%, rgba(2,4,10,.5) 100%); }
+#tline { position:absolute; left:0; right:0; top:-4px; height:4px; z-index:60; opacity:0;
+  background:linear-gradient(90deg, rgba(79,216,235,0), #eafcff 30%, #eafcff 70%, rgba(79,216,235,0));
+  box-shadow:0 0 26px 6px rgba(79,216,235,.8); pointer-events:none; }
+.panel { z-index:10;
+  background:radial-gradient(ellipse 130% 100% at 50% 34%, #15213f 0%, #0d1529 56%, #070b16 100%); }
+.logo { position:absolute; left:52px; top:42px; z-index:4; font-family:'NotoB'; font-size:30px;
+  letter-spacing:.14em; color:#dfe7f2; display:flex; align-items:center; gap:16px; }
+.logo .dot { width:16px; height:16px; border-radius:50%; background:#ff4a3c;
+  box-shadow:0 0 14px 3px rgba(255,74,60,.75); }
+.logo .oa { font-size:19px; letter-spacing:.3em; color:#8e9cb8; border:2px solid #8e9cb8;
+  padding:4px 10px 4px 13px; border-radius:4px; margin-left:6px; }
+.qov { z-index:10; }
+.lbT { position:absolute; left:0; right:0; top:0; height:80px; background:#0a101f;
+  border-bottom:2px solid rgba(79,216,235,.35); box-shadow:0 4px 22px rgba(0,0,0,.6); }
+.lbB { position:absolute; left:0; right:0; bottom:0; height:190px; background:#0a101f;
+  border-top:2px solid rgba(79,216,235,.35); box-shadow:0 -4px 22px rgba(0,0,0,.6); }
+.rec { position:absolute; left:46px; top:50%; width:16px; height:16px; margin-top:-8px;
+  border-radius:50%; background:#ff4a3c; box-shadow:0 0 12px 3px rgba(255,74,60,.7); }
+.qtag { position:absolute; left:84px; top:50%; transform:translateY(-50%);
+  font-family:'NotoB'; font-size:29px; color:#f2f4f8; letter-spacing:.08em; }
+.credit { position:absolute; right:46px; top:50%; transform:translateY(-50%);
+  font-family:'NotoBd'; font-size:24px; color:#8e9cb8; }
+.qcap { position:absolute; left:60px; right:60px; bottom:52px; text-align:center; font-size:56px;
+  font-family:'NotoB'; color:#f2f4f8; letter-spacing:.02em; opacity:0; z-index:11;
+  text-shadow:0 2px 14px rgba(0,0,0,.6); }
+.creditD { position:absolute; top:26px; right:56px; font-family:'NotoBd'; font-size:24px;
+  color:rgba(242,244,248,.92); background:rgba(5,8,16,.55); padding:7px 16px; z-index:5; }
+/* theme */
+.oawrap { position:absolute; left:50%; top:150px; transform:translateX(-50%);
+  font-family:'NotoB'; font-size:44px; letter-spacing:.46em; color:#ff8a7d; opacity:0;
+  display:flex; align-items:center; gap:22px; text-shadow:0 0 24px rgba(255,74,60,.5); }
+.oadot { width:26px; height:26px; border-radius:50%; background:#ff4a3c;
+  box-shadow:0 0 22px 6px rgba(255,74,60,.8); }
+.pgname { position:absolute; left:0; right:0; top:236px; text-align:center; font-family:'NotoB';
+  font-size:54px; letter-spacing:.24em; color:#8e9cb8; opacity:0; }
+.thlabel { position:absolute; left:0; right:0; top:396px; text-align:center; font-family:'NotoB';
+  font-size:38px; letter-spacing:.34em; color:#d9b96a; opacity:0; }
+.thtitle { position:absolute; left:0; right:0; top:470px; text-align:center; font-family:'NotoB';
+  font-size:118px; color:#f2f4f8; opacity:0; letter-spacing:.02em;
+  text-shadow:0 0 50px rgba(79,216,235,.45), 0 0 110px rgba(79,216,235,.25); }
+.thsub { position:absolute; left:0; right:0; top:680px; text-align:center; font-family:'NotoBd';
+  font-size:38px; color:#aeb9cf; opacity:0; }
+/* ch1 card */
+.cdscrim { position:absolute; inset:0;
+  background:linear-gradient(0deg, rgba(5,8,16,.82) 0%, rgba(5,8,16,.45) 45%, rgba(5,8,16,.25) 100%); }
+.cno { position:absolute; left:150px; top:340px; font-family:'NotoB'; font-size:54px;
+  letter-spacing:.42em; color:#4fd8eb; opacity:0; text-shadow:0 0 24px rgba(79,216,235,.5); }
+.cline { position:absolute; left:154px; top:428px; width:560px; height:4px; transform-origin:left;
+  transform:scaleX(0); background:linear-gradient(90deg, #4fd8eb, rgba(79,216,235,0)); }
+.ctitle { position:absolute; left:146px; top:470px; font-family:'NotoB'; font-size:96px;
+  color:#f2f4f8; opacity:0; letter-spacing:.03em; text-shadow:0 4px 30px rgba(0,0,0,.7); }
+.csub { position:absolute; left:152px; top:620px; font-family:'NotoBd'; font-size:38px;
+  color:#aeb9cf; opacity:0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="root" data-width="1920" data-height="1080" data-start="0" data-duration="51.01">
+<div id="stage">
+<video id="qzv" class="clip bgv framed" data-start="0.5" data-duration="10.72" data-media-start="0.7" data-track-index="1" src="assets/bg/qzhen.mp4" muted playsinline></video>
+<div id="qzo" class="clip qov" data-start="0.5" data-duration="10.72" data-track-index="2" style=""><div class="lbT"><span class="rec"></span><div class="qtag">日本を愛する中国人クリエイター</div><div class="credit">引用: Zhen Into Chinese</div></div><div class="lbB"></div><div class="qcap" id="qzc1">「日本が大好きな <em>中国人</em>として」</div><div class="qcap" id="qzc2">「2つの国の<em>違い</em>を 話したい」</div></div>
+<video id="prv" class="clip bgv framed" data-start="11.22" data-duration="7.94" data-media-start="0.0" data-track-index="3" src="assets/bg/profile.mp4" muted playsinline></video>
+<div id="pro" class="clip qov" data-start="11.22" data-duration="7.94" data-track-index="4" style=""><div class="lbT"><span class="rec"></span><div class="qtag">日本在住歴あり — 現在は欧州在住</div><div class="credit">引用: Zhen Into Chinese</div></div><div class="lbB"></div><div class="qcap" id="prc">彼女が語る 日中の「<em>決定的な差</em>」</div></div>
+<div id="thp" class="clip panel" data-start="19.16" data-duration="26.68" data-track-index="5" style=""><div class="oawrap" id="oaw"><span class="oadot" id="oad"></span>ON AIR</div><div class="pgname" id="pgn">深夜の日本論</div><div class="thlabel" id="thl">本日のトークテーマ</div><div class="thtitle" id="tht">「中国とは、<em>違いすぎた</em>」</div><div class="thsub" id="ths">— 909万人が気づいた、日中の決定的な差</div></div>
+<video id="ch1v" class="clip bgv " data-start="45.84" data-duration="4.87" data-media-start="0.0" data-track-index="6" src="assets/bg/ch1.mp4" muted playsinline></video>
+<div id="ch1o" class="clip qov" data-start="45.84" data-duration="4.87" data-track-index="7" style=""><div class="cdscrim"></div><div class="creditD">引用: Nicaboo</div><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="cno" id="cn1">TRACK 01</div><div class="cline" id="cl1"></div><div class="ctitle" id="ct1">909万人の、謎</div><div class="csub" id="cs1">— なぜ彼らは、隣の国へ行くのか</div></div>
+<div id="vig"></div>
+<div id="tline"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#qzv", {scale: 1.05}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 0.55);
+tl.fromTo("#qzc1", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 1.3);
+tl.set("#qzc1", {opacity: 0}, 5.8);
+tl.fromTo("#qzc2", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 5.9);
+tl.set("#tline", {opacity: 1, y: 0}, 11.2);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 11.2);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 11.48);
+tl.fromTo("#prv", {scale: 1.04}, {scale: 1, duration: 2.0, ease: "power2.out", immediateRender: false}, 11.27);
+tl.fromTo("#prc", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, ease: "power3.out", immediateRender: false}, 11.72);
+tl.set("#tline", {opacity: 1, y: 0}, 19.14);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 19.14);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 19.42);
+tl.fromTo("#oaw", {opacity: 0}, {opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 19.36);
+tl.fromTo("#oad", {scale: 0}, {scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false}, 19.41);
+tl.fromTo("#pgn", {y: -20, opacity: 0}, {y: 0, opacity: 1, duration: 0.5, ease: "power3.out", immediateRender: false}, 19.71);
+tl.fromTo("#thl", {opacity: 0, letterSpacing: '0.7em'}, {opacity: 1, letterSpacing: '0.34em', duration: 0.6, ease: "power2.out", immediateRender: false}, 35.93);
+tl.set("#tht", {opacity: 0}, 38.11);
+tl.set("#tht", {opacity: 1}, 38.13);
+tl.set("#tht", {opacity: 0.25}, 38.2);
+tl.set("#tht", {opacity: 1}, 38.28);
+tl.set("#tht", {opacity: 0.4}, 38.37);
+tl.to("#tht", {opacity: 1, duration: 0.2}, 38.46);
+tl.fromTo("#tht", {scale: 1.02}, {scale: 1, duration: 0.8, ease: "power2.out", immediateRender: false}, 38.46);
+tl.fromTo("#ths", {opacity: 0}, {opacity: 1, duration: 0.5, ease: "power2.out", immediateRender: false}, 39.43);
+tl.set("#tline", {opacity: 1, y: 0}, 45.82);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 45.82);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 46.1);
+tl.fromTo("#cn1", {x: -60, opacity: 0}, {x: 0, opacity: 1, duration: 0.55, ease: "power3.out", immediateRender: false}, 46.04);
+tl.fromTo("#cl1", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 46.24);
+tl.fromTo("#ct1", {opacity: 0, y: 26, filter: "blur(8px)"}, {opacity: 1, y: 0, filter: "blur(0px)", duration: 0.65, ease: "power2.out", immediateRender: false}, 46.39);
+tl.fromTo("#cs1", {opacity: 0}, {opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 47.09);
+tl.to("#stage", {opacity: 0, duration: 0.9, ease: "power1.in"}, 49.96);
+const root = gsap.timeline({ paused: true });
+tl.time(0.0);
+root.fromTo(tl, { time: 0.0 }, { time: 51.01, duration: 51.01, ease: "none" }, 0);
+window.__timelines["root"] = root;
+</script>
+</div>
+</body>
+</html>

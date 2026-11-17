@@ -1,0 +1,326 @@
+{
+ "total": 129.11,
+ "beats": [
+  {
+   "id": "s4_tune",
+   "start": 0.6,
+   "end": 8.69
+  },
+  {
+   "id": "s4_osaka",
+   "start": 8.69,
+   "end": 21.08
+  },
+  {
+   "id": "s4_wait",
+   "start": 21.08,
+   "end": 30.93
+  },
+  {
+   "id": "s4_k1",
+   "start": 30.93,
+   "end": 38.98
+  },
+  {
+   "id": "s4_k2",
+   "start": 38.98,
+   "end": 41.95
+  },
+  {
+   "id": "s4_fair",
+   "start": 41.95,
+   "end": 47.3
+  },
+  {
+   "id": "s4_k3",
+   "start": 47.3,
+   "end": 55.42
+  },
+  {
+   "id": "s5_card",
+   "start": 55.42,
+   "end": 63.36
+  },
+  {
+   "id": "s5_concl",
+   "start": 63.36,
+   "end": 81.33
+  },
+  {
+   "id": "s5_choose",
+   "start": 81.33,
+   "end": 86.63
+  },
+  {
+   "id": "s5_tune",
+   "start": 86.63,
+   "end": 108.81
+  },
+  {
+   "id": "s5_ask",
+   "start": 108.81,
+   "end": 117.61
+  },
+  {
+   "id": "s5_end",
+   "start": 117.61,
+   "end": 128.11
+  }
+ ],
+ "narr": {
+  "g301": {
+   "start": 1.2,
+   "dur": 6.99
+  },
+  "g302": {
+   "start": 9.14,
+   "dur": 4.73
+  },
+  "g303": {
+   "start": 14.21,
+   "dur": 6.37
+  },
+  "g304": {
+   "start": 31.43,
+   "dur": 7.25
+  },
+  "g305": {
+   "start": 39.38,
+   "dur": 2.31
+  },
+  "g306": {
+   "start": 47.75,
+   "dur": 7.37
+  },
+  "g307": {
+   "start": 55.92,
+   "dur": 4.94
+  },
+  "g308": {
+   "start": 63.81,
+   "dur": 6.98
+  },
+  "g309": {
+   "start": 71.13,
+   "dur": 5.43
+  },
+  "g310": {
+   "start": 76.91,
+   "dur": 3.91
+  },
+  "g311": {
+   "start": 87.18,
+   "dur": 6.74
+  },
+  "g312": {
+   "start": 94.32,
+   "dur": 7.5
+  },
+  "g313": {
+   "start": 102.22,
+   "dur": 5.99
+  },
+  "g314": {
+   "start": 109.31,
+   "dur": 7.7
+  },
+  "g315": {
+   "start": 118.11,
+   "dur": 8.19
+  }
+ },
+ "quotes": {
+  "c_wait": {
+   "beat_start": 21.18,
+   "lead": 0.4,
+   "adur": 8.5,
+   "media_start": 0.6,
+   "dur": 9.4,
+   "clip": "c_wait.mp4",
+   "sample": "caleb",
+   "grade": "gray",
+   "credit": "引用: caleb revs",
+   "caps": [
+    [
+     0.0,
+     "「そして 大声で怒鳴られた——」"
+    ],
+    [
+     4.4,
+     "「<em>ここで待ってろ!</em> と」"
+    ]
+   ]
+  },
+  "c_fair": {
+   "beat_start": 42.05,
+   "lead": 0.4,
+   "adur": 4.0,
+   "media_start": 0.6,
+   "dur": 4.9,
+   "clip": "c_fair.mp4",
+   "sample": "caleb",
+   "grade": "warm",
+   "credit": "引用: caleb revs",
+   "caps": [
+    [
+     0.0,
+     "「日本は完璧じゃない。<em>中国も</em>完璧じゃない」"
+    ]
+   ]
+  },
+  "z_choose": {
+   "beat_start": 81.43,
+   "lead": 0.4,
+   "adur": 3.9,
+   "media_start": 0.6,
+   "dur": 4.8,
+   "clip": "z_choose.mp4",
+   "sample": "zhen",
+   "grade": "warm",
+   "credit": "引用: Zhen Into Chinese",
+   "caps": [
+    [
+     0.0,
+     "「あなたなら どちらを<em>選ぶ</em>?」"
+    ]
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "s4_tune",
+   "kind": "tune",
+   "start": 0.6,
+   "end": 8.69,
+   "nids": [
+    "g301"
+   ],
+   "text": "日本は<br><em>完璧</em>ではない",
+   "trk": "TRACK 04"
+  },
+  {
+   "id": "s4_osaka",
+   "kind": "nv",
+   "start": 8.69,
+   "end": 21.08,
+   "nids": [
+    "g302",
+    "g303"
+   ],
+   "q": "c_osaka"
+  },
+  {
+   "id": "s4_wait",
+   "kind": "q",
+   "start": 21.08,
+   "end": 30.93,
+   "nids": []
+  },
+  {
+   "id": "s4_k1",
+   "kind": "kick",
+   "start": 30.93,
+   "end": 38.98,
+   "nids": [
+    "g304"
+   ],
+   "kicker": "人生最悪の<em>接客</em>だった",
+   "kstyle": "fuseji",
+   "trk": "TRACK 04"
+  },
+  {
+   "id": "s4_k2",
+   "kind": "kick",
+   "start": 38.98,
+   "end": 41.95,
+   "nids": [
+    "g305"
+   ],
+   "kicker": "——でも、彼はこう続けた",
+   "kstyle": "line",
+   "trk": "TRACK 04"
+  },
+  {
+   "id": "s4_fair",
+   "kind": "q",
+   "start": 41.95,
+   "end": 47.3,
+   "nids": []
+  },
+  {
+   "id": "s4_k3",
+   "kind": "kick",
+   "start": 47.3,
+   "end": 55.42,
+   "nids": [
+    "g306"
+   ],
+   "kicker": "どちらの国も <em>パッケージ</em>だ",
+   "kstyle": "fuseji",
+   "trk": "TRACK 04"
+  },
+  {
+   "id": "s5_card",
+   "kind": "card",
+   "start": 55.42,
+   "end": 63.36,
+   "nids": [
+    "g307"
+   ],
+   "no": "TRACK 05",
+   "title": "で、結局どっちが、いいの?",
+   "sub": "— 中国人クリエイターの答え",
+   "bg": "b_fujiv"
+  },
+  {
+   "id": "s5_concl",
+   "kind": "nv",
+   "start": 63.36,
+   "end": 81.33,
+   "nids": [
+    "g308",
+    "g309",
+    "g310"
+   ],
+   "q": "z_concl"
+  },
+  {
+   "id": "s5_choose",
+   "kind": "q",
+   "start": 81.33,
+   "end": 86.63,
+   "nids": []
+  },
+  {
+   "id": "s5_tune",
+   "kind": "tune",
+   "start": 86.63,
+   "end": 108.81,
+   "nids": [
+    "g311",
+    "g312",
+    "g313"
+   ],
+   "text": "丁寧さは<br><em>設計</em>である",
+   "trk": "TRACK 05"
+  },
+  {
+   "id": "s5_ask",
+   "kind": "ask",
+   "start": 108.81,
+   "end": 117.61,
+   "nids": [
+    "g314"
+   ]
+  },
+  {
+   "id": "s5_end",
+   "kind": "end",
+   "start": 117.61,
+   "end": 128.11,
+   "nids": [
+    "g315"
+   ]
+  }
+ ]
+}

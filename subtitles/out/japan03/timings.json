@@ -1,0 +1,57 @@
+{
+ "total": 50.71,
+ "beats": [
+  {
+   "id": "qzhen",
+   "start": 0.5,
+   "end": 11.22
+  },
+  {
+   "id": "profile",
+   "start": 11.22,
+   "end": 19.16
+  },
+  {
+   "id": "theme",
+   "start": 19.16,
+   "end": 45.84
+  },
+  {
+   "id": "ch1",
+   "start": 45.84,
+   "end": 50.71
+  }
+ ],
+ "narr": {
+  "n01": {
+   "start": 11.52,
+   "dur": 7.29
+  },
+  "n02": {
+   "start": 20.06,
+   "dur": 7.82
+  },
+  "n03": {
+   "start": 28.22,
+   "dur": 7.51
+  },
+  "n04": {
+   "start": 36.23,
+   "dur": 9.11
+  },
+  "n05": {
+   "start": 46.14,
+   "dur": 2.97
+  }
+ },
+ "quotes": {
+  "qzhen": {
+   "beat_start": 0.5,
+   "lead": 0.4,
+   "adur": 9.72,
+   "media_start": 0.7,
+   "dur": 10.72,
+   "clip": "qzhen.mp4"
+  }
+ }
+}

@@ -1,0 +1,302 @@
+{
+ "total": 126.95,
+ "beats": [
+  {
+   "id": "s3_tune",
+   "start": 0.6,
+   "end": 7.84
+  },
+  {
+   "id": "s3_rest",
+   "start": 7.84,
+   "end": 18.9
+  },
+  {
+   "id": "s3_split",
+   "start": 18.9,
+   "end": 29.77
+  },
+  {
+   "id": "s3_cash",
+   "start": 29.77,
+   "end": 43.23
+  },
+  {
+   "id": "s3_alipay",
+   "start": 43.23,
+   "end": 53.4
+  },
+  {
+   "id": "s3_data",
+   "start": 53.4,
+   "end": 71.21
+  },
+  {
+   "id": "s3_train",
+   "start": 71.21,
+   "end": 80.41
+  },
+  {
+   "id": "s3_sengaF",
+   "start": 80.41,
+   "end": 94.36
+  },
+  {
+   "id": "s3_fruit",
+   "start": 94.36,
+   "end": 109.35
+  },
+  {
+   "id": "s3_careful",
+   "start": 109.35,
+   "end": 119.65
+  },
+  {
+   "id": "s3_card",
+   "start": 119.65,
+   "end": 125.95
+  }
+ ],
+ "narr": {
+  "g201": {
+   "start": 1.2,
+   "dur": 6.14
+  },
+  "g202": {
+   "start": 8.24,
+   "dur": 5.06
+  },
+  "g203": {
+   "start": 13.65,
+   "dur": 4.75
+  },
+  "g204": {
+   "start": 19.4,
+   "dur": 2.35
+  },
+  "g205": {
+   "start": 22.19,
+   "dur": 6.98
+  },
+  "g206": {
+   "start": 30.22,
+   "dur": 6.28
+  },
+  "g207": {
+   "start": 36.8,
+   "dur": 5.93
+  },
+  "g208": {
+   "start": 43.63,
+   "dur": 4.87
+  },
+  "g209": {
+   "start": 48.81,
+   "dur": 4.1
+  },
+  "g210": {
+   "start": 53.9,
+   "dur": 6.49
+  },
+  "g211": {
+   "start": 60.79,
+   "dur": 9.82
+  },
+  "g212": {
+   "start": 71.61,
+   "dur": 3.59
+  },
+  "g213": {
+   "start": 75.51,
+   "dur": 4.41
+  },
+  "g214": {
+   "start": 80.96,
+   "dur": 6.12
+  },
+  "g215": {
+   "start": 87.49,
+   "dur": 6.38
+  },
+  "g216": {
+   "start": 94.76,
+   "dur": 6.92
+  },
+  "g217": {
+   "start": 101.99,
+   "dur": 6.86
+  },
+  "g218": {
+   "start": 120.15,
+   "dur": 3.31
+  }
+ },
+ "quotes": {
+  "z_careful": {
+   "beat_start": 109.45,
+   "lead": 0.4,
+   "adur": 8.9,
+   "media_start": 0.6,
+   "dur": 9.8,
+   "clip": "z_careful.mp4",
+   "sample": "zhen",
+   "grade": "cold",
+   "credit": "引用: Zhen Into Chinese",
+   "caps": [
+    [
+     0.0,
+     "「ずっと気をつけて いないといけない」"
+    ],
+    [
+     4.2,
+     "「<em>知らないルール</em>が あるから」"
+    ]
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "s3_tune",
+   "kind": "tune",
+   "start": 0.6,
+   "end": 7.84,
+   "nids": [
+    "g201"
+   ],
+   "text": "レストランに入れば<br>その国が<em>わかる</em>",
+   "trk": "TRACK 03"
+  },
+  {
+   "id": "s3_rest",
+   "kind": "nv",
+   "start": 7.84,
+   "end": 18.9,
+   "nids": [
+    "g202",
+    "g203"
+   ],
+   "q": "z_rest"
+  },
+  {
+   "id": "s3_split",
+   "kind": "split",
+   "start": 18.9,
+   "end": 29.77,
+   "nids": [
+    "g204",
+    "g205"
+   ],
+   "head": "店内の空気",
+   "trk": "TRACK 03",
+   "left": [
+    "中国",
+    [
+     "会話は<em>にぎやか</em>に",
+     "子どもが走り回る",
+     "動画は音出しでOK"
+    ]
+   ],
+   "right": [
+    "日本",
+    [
+     "店内は<em>静か</em>に",
+     "自分の食事に集中",
+     "大声は振り向かれる"
+    ]
+   ]
+  },
+  {
+   "id": "s3_cash",
+   "kind": "nv",
+   "start": 29.77,
+   "end": 43.23,
+   "nids": [
+    "g206",
+    "g207"
+   ],
+   "q": "c_cash"
+  },
+  {
+   "id": "s3_alipay",
+   "kind": "nv",
+   "start": 43.23,
+   "end": 53.4,
+   "nids": [
+    "g208",
+    "g209"
+   ],
+   "q": "c_alipay"
+  },
+  {
+   "id": "s3_data",
+   "kind": "datac",
+   "start": 53.4,
+   "end": 71.21,
+   "nids": [
+    "g210",
+    "g211"
+   ],
+   "head": "それでも、日本の列車が愛される理由",
+   "num": "約1",
+   "unit": "分",
+   "sub": "東海道新幹線 1列車あたりの平均遅延(自然災害含む)",
+   "src": "出典: JR東海 アニュアルレポート ※高速鉄道の最高時速は中国350km/日本320km",
+   "trk": "TRACK 03"
+  },
+  {
+   "id": "s3_train",
+   "kind": "nv",
+   "start": 71.21,
+   "end": 80.41,
+   "nids": [
+    "g212",
+    "g213"
+   ],
+   "q": "c_train"
+  },
+  {
+   "id": "s3_sengaF",
+   "kind": "senga",
+   "start": 80.41,
+   "end": 94.36,
+   "nids": [
+    "g214",
+    "g215"
+   ],
+   "art": "fruit",
+   "cap": "果物を1つ 手に取った その瞬間——",
+   "trk": "TRACK 03"
+  },
+  {
+   "id": "s3_fruit",
+   "kind": "nv",
+   "start": 94.36,
+   "end": 109.35,
+   "nids": [
+    "g216",
+    "g217"
+   ],
+   "q": "z_fruit"
+  },
+  {
+   "id": "s3_careful",
+   "kind": "q",
+   "start": 109.35,
+   "end": 119.65,
+   "nids": []
+  },
+  {
+   "id": "s3_card",
+   "kind": "card",
+   "start": 119.65,
+   "end": 125.95,
+   "nids": [
+    "g218"
+   ],
+   "no": "TRACK 04",
+   "title": "公平に、いこう",
+   "sub": "— 日本は、完璧ではない",
+   "bg": "b_jpst"
+  }
+ ]
+}

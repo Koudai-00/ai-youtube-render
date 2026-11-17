@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family:'NotoB'; src:url('assets/fonts/NotoSansJP-Black.otf') format('opentype'); }
+@font-face { font-family:'NotoBd'; src:url('assets/fonts/NotoSansJP-Bold.otf') format('opentype'); }
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#000; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden;
+  background:#070b16; font-family:'NotoB',sans-serif; color:#f2f4f8; }
+#stage { position:absolute; inset:0; }
+.clip { position:absolute; inset:0; width:100%; height:100%; }
+video.bgv { object-fit:cover; transform:translateZ(0); backface-visibility:hidden; }
+video.framed { top:80px; height:810px; }
+em { font-style:normal; color:#4fd8eb; }
+#vig { position:absolute; inset:0; z-index:41; pointer-events:none;
+  background:radial-gradient(ellipse 120% 110% at 50% 46%, rgba(0,0,0,0) 58%, rgba(2,4,10,.5) 100%); }
+#tline { position:absolute; left:0; right:0; top:-4px; height:4px; z-index:60; opacity:0;
+  background:linear-gradient(90deg, rgba(79,216,235,0), #eafcff 30%, #eafcff 70%, rgba(79,216,235,0));
+  box-shadow:0 0 26px 6px rgba(79,216,235,.8); pointer-events:none; }
+#tbk { position:absolute; inset:0; z-index:56; background:#05070e; opacity:0; pointer-events:none; }
+/* ---------- パネル (放送室) ---------- */
+.panel { z-index:10;
+  background:radial-gradient(ellipse 130% 100% at 50% 34%, #15213f 0%, #0d1529 56%, #070b16 100%); }
+.panel.dark { background:radial-gradient(ellipse 130% 100% at 50% 40%, #0a0d16 0%, #04060c 70%); }
+.logo { position:absolute; left:52px; top:42px; z-index:4; font-family:'NotoB'; font-size:30px;
+  letter-spacing:.14em; color:#dfe7f2; display:flex; align-items:center; gap:16px; }
+.logo .dot { width:16px; height:16px; border-radius:50%; background:#ff4a3c;
+  box-shadow:0 0 14px 3px rgba(255,74,60,.75); }
+.logo .oa { font-size:19px; letter-spacing:.3em; color:#8e9cb8; border:2px solid #8e9cb8;
+  padding:4px 10px 4px 13px; border-radius:4px; margin-left:6px; }
+.trk { position:absolute; right:56px; bottom:44px; z-index:4; font-family:'NotoB'; font-size:26px;
+  letter-spacing:.3em; color:#8e9cb8; }
+/* ---------- 引用モニター ---------- */
+.qov { z-index:10; }
+.lbT { position:absolute; left:0; right:0; top:0; height:80px; background:#0a101f;
+  border-bottom:2px solid rgba(79,216,235,.35); box-shadow:0 4px 22px rgba(0,0,0,.6); }
+.lbB { position:absolute; left:0; right:0; bottom:0; height:190px; background:#0a101f;
+  border-top:2px solid rgba(79,216,235,.35); box-shadow:0 -4px 22px rgba(0,0,0,.6); }
+.rec { position:absolute; left:46px; top:50%; width:16px; height:16px; margin-top:-8px;
+  border-radius:50%; background:#ff4a3c; box-shadow:0 0 12px 3px rgba(255,74,60,.7); }
+.qtag { position:absolute; left:84px; top:50%; transform:translateY(-50%);
+  font-family:'NotoB'; font-size:29px; color:#f2f4f8; letter-spacing:.08em; }
+.credit { position:absolute; right:46px; top:50%; transform:translateY(-50%);
+  font-family:'NotoBd'; font-size:24px; color:#8e9cb8; }
+.qcap { position:absolute; left:60px; right:60px; bottom:52px; text-align:center; font-size:56px;
+  font-family:'NotoB'; color:#f2f4f8; letter-spacing:.02em; opacity:0; z-index:11;
+  text-shadow:0 2px 14px rgba(0,0,0,.6); }
+.biglabel { position:absolute; left:64px; top:128px; font-family:'NotoB'; font-size:52px;
+  color:#f2f4f8; background:rgba(10,16,31,.92); border-left:10px solid #4fd8eb;
+  padding:16px 38px; box-shadow:0 6px 24px rgba(0,0,0,.5); opacity:0; }
+.creditD { position:absolute; top:26px; right:56px; font-family:'NotoBd'; font-size:24px;
+  color:rgba(242,244,248,.92); background:rgba(5,8,16,.55); padding:7px 16px; z-index:5; }
+/* ---------- tune ---------- */
+.tnwrap { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center;
+  justify-content:center; gap:40px; padding:0 150px; }
+.tnt { text-align:center; font-family:'NotoB'; font-size:88px; line-height:1.5; color:#f2f4f8;
+  letter-spacing:.04em; opacity:0; text-shadow:0 0 34px rgba(79,216,235,.3); }
+.tnline { width:420px; height:6px; border-radius:3px; transform:scaleX(0);
+  background:linear-gradient(90deg, #ff6b4a, #4fd8eb);
+  box-shadow:0 0 18px rgba(79,216,235,.6); }
+/* ---------- kick ---------- */
+.klwrap { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; gap:44px;
+  padding:0 140px; }
+.klbar { width:10px; height:300px; border-radius:5px; background:#4fd8eb; transform-origin:top;
+  transform:scaleY(0); box-shadow:0 0 22px rgba(79,216,235,.7); }
+.klt { font-family:'NotoB'; font-size:80px; line-height:1.45; color:#f2f4f8; opacity:0;
+  letter-spacing:.04em; }
+.fswrap { position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  padding:0 120px; perspective:900px; }
+.fst { text-align:center; font-family:'NotoB'; font-size:86px; line-height:1.5; color:#f2f4f8;
+  opacity:0; letter-spacing:.04em; }
+.fsslot { display:inline-block; position:relative; }
+.fsmask { display:inline-block; color:#8e9cb8; background:rgba(142,156,184,.14);
+  border-radius:10px; padding:0 14px; }
+.fsopen { display:inline-block; color:#ff6b4a; opacity:0; white-space:nowrap;
+  text-shadow:0 0 30px rgba(255,107,74,.55); position:absolute; left:50%; top:0;
+  transform-origin:center; }
+/* ---------- split ---------- */
+.dhead { position:absolute; left:0; right:0; top:104px; text-align:center; font-family:'NotoB';
+  font-size:66px; color:#f2f4f8; opacity:0; letter-spacing:.05em; }
+.spwrap { position:absolute; left:130px; right:130px; top:270px; bottom:150px; display:flex;
+  align-items:stretch; gap:0; }
+.spcol { flex:1; padding:44px 56px; opacity:0; border-radius:18px; }
+.spcol.cn { border:2px solid rgba(255,107,74,.5); background:rgba(255,107,74,.06); margin-right:44px; }
+.spcol.jp { border:2px solid rgba(79,216,235,.5); background:rgba(79,216,235,.06); margin-left:44px; }
+.sptitle { font-family:'NotoB'; font-size:52px; letter-spacing:.1em; margin-bottom:34px; }
+.spcol.cn .sptitle { color:#ff8e73; }
+.spcol.jp .sptitle { color:#7ce4f5; }
+.sprow { font-family:'NotoBd'; font-size:38px; line-height:1.55; color:#dfe7f2; margin-top:22px;
+  opacity:0; padding-left:28px; position:relative; }
+.sprow::before { content:''; position:absolute; left:0; top:0.62em; width:12px; height:12px;
+  border-radius:50%; background:currentColor; opacity:.55; }
+.spmid { position:absolute; left:50%; top:0; bottom:0; width:0; display:flex; align-items:center;
+  justify-content:center; }
+.spline { position:absolute; top:0; bottom:0; width:3px; margin-left:-1px;
+  background:linear-gradient(180deg, rgba(142,156,184,0), #8e9cb8 25%, #8e9cb8 75%, rgba(142,156,184,0));
+  transform-origin:top; }
+.spvs { position:relative; font-family:'NotoB'; font-size:46px; color:#070b16; background:#f2f4f8;
+  width:104px; height:104px; line-height:104px; text-align:center; border-radius:50%;
+  box-shadow:0 0 30px rgba(242,244,248,.4); opacity:0; }
+/* ---------- senga ---------- */
+.sgwrap { position:absolute; left:110px; right:110px; top:120px; bottom:240px; opacity:0; }
+.sgwrap svg { width:100%; height:100%; filter:drop-shadow(0 0 7px rgba(238,243,248,.35)); }
+.sgcap { position:absolute; left:0; right:0; bottom:104px; text-align:center; font-family:'NotoB';
+  font-size:56px; color:#f2f4f8; opacity:0; letter-spacing:.04em;
+  text-shadow:0 2px 16px rgba(0,0,0,.8); }
+/* ---------- datac ---------- */
+.dcnum { position:absolute; left:0; right:0; top:328px; text-align:center; font-family:'NotoB';
+  font-size:230px; color:#d9b96a; opacity:0; font-variant-numeric:tabular-nums;
+  text-shadow:0 0 44px rgba(217,185,106,.4); }
+.dcnum span { font-size:92px; color:#f2f4f8; margin-left:14px; }
+.dcsub { position:absolute; left:0; right:0; top:648px; text-align:center; font-family:'NotoB';
+  font-size:54px; color:#dfe7f2; opacity:0; }
+.cntsrc { position:absolute; left:60px; bottom:40px; font-family:'NotoBd'; font-size:23px;
+  color:#8e9cb8; }
+/* ---------- card (TRACK扉) ---------- */
+.cardov { }
+.cdscrim { position:absolute; inset:0;
+  background:linear-gradient(0deg, rgba(5,8,16,.82) 0%, rgba(5,8,16,.45) 45%, rgba(5,8,16,.25) 100%); }
+.cno { position:absolute; left:150px; top:340px; font-family:'NotoB'; font-size:54px;
+  letter-spacing:.42em; color:#4fd8eb; opacity:0; text-shadow:0 0 24px rgba(79,216,235,.5); }
+.cline { position:absolute; left:154px; top:428px; width:560px; height:4px; transform-origin:left;
+  transform:scaleX(0); background:linear-gradient(90deg, #4fd8eb, rgba(79,216,235,0)); }
+.ctitle { position:absolute; left:146px; top:470px; font-family:'NotoB'; font-size:96px;
+  color:#f2f4f8; opacity:0; letter-spacing:.03em; text-shadow:0 4px 30px rgba(0,0,0,.7); }
+.csub { position:absolute; left:152px; top:620px; font-family:'NotoBd'; font-size:38px;
+  color:#aeb9cf; opacity:0; }
+/* ---------- ask / end ---------- */
+.askt { position:absolute; left:0; right:0; top:26%; text-align:center; font-family:'NotoB';
+  font-size:82px; line-height:1.6; color:#f2f4f8; opacity:0; }
+.asks { position:absolute; left:0; right:0; top:70%; text-align:center; font-family:'NotoBd';
+  font-size:38px; color:#d9b96a; opacity:0; }
+.endt { position:absolute; left:0; right:0; top:38%; text-align:center; font-family:'NotoB';
+  font-size:84px; color:#f2f4f8; opacity:0; }
+.ends { position:absolute; left:0; right:0; top:56%; text-align:center; font-family:'NotoBd';
+  font-size:36px; color:#8e9cb8; opacity:0; }
+.crt { position:absolute; inset:0; background:#eafcff; opacity:0; transform-origin:center;
+  z-index:30; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="root" data-width="1920" data-height="1080" data-start="0" data-duration="150.33">
+<div id="stage">
+<div id="s1_tunep" class="clip panel" data-start="0.6" data-duration="5.71" data-track-index="1" style=""><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="trk">TRACK 01</div><div class="tnwrap"><div class="tnt" id="s1_tunet">909万人は なぜ<br><em>隣の国</em>へ行くのか</div><div class="tnline" id="s1_tunel"></div></div></div>
+<div id="s1_datap" class="clip panel" data-start="6.31" data-duration="13.53" data-track-index="2" style=""><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="trk">TRACK 01</div><div class="dhead" id="s1_datah">2025年に日本を訪れた中国人</div><div class="dcnum" id="s1_datan">909万<span>人</span></div><div class="dcsub" id="s1_datas">前年比 +30% — 国・地域別で最多</div><div class="cntsrc">出典: JNTO 訪日外客統計(2025年)</div></div>
+<video id="s1_fambv" class="clip bgv framed" data-start="19.84" data-duration="9.45" data-media-start="0.0" data-track-index="3" src="assets/bg/b_got.mp4" muted playsinline></video>
+<div id="s1_fambsc" class="clip qov" data-start="19.84" data-duration="9.45" data-track-index="4" style=""><div class="lbT"><span class="rec"></span><div class="qtag">中華系マレーシア人の家族旅行</div><div class="credit">引用: Nicaboo</div></div><div class="lbB"></div><div class="biglabel" id="s1_famblab">6人家族の日本旅行</div></div>
+<video id="n_noodlev" class="clip bgv framed" data-start="29.29" data-duration="8.84" data-media-start="0.6" data-track-index="5" src="assets/bg/n_noodle.mp4" muted playsinline></video>
+<div id="n_noodleo" class="clip qov" data-start="29.29" data-duration="8.84" data-track-index="6" style=""><div class="lbT"><span class="rec"></span><div class="qtag">中華系マレーシア人の家族旅行</div><div class="credit">引用: Nicaboo</div></div><div class="lbB"></div><div class="qcap" id="n_noodlecap0">着いて最初の 一杯</div><div class="qcap" id="n_noodlecap1">「コシがあって柔らかい——この味 好き」</div></div>
+<video id="n_fujiv" class="clip bgv framed" data-start="38.13" data-duration="8.28" data-media-start="0.6" data-track-index="7" src="assets/bg/n_fuji.mp4" muted playsinline></video>
+<div id="n_fujio" class="clip qov" data-start="38.13" data-duration="8.28" data-track-index="8" style=""><div class="lbT"><span class="rec"></span><div class="qtag">中華系マレーシア人の家族旅行</div><div class="credit">引用: Nicaboo</div></div><div class="lbB"></div><div class="qcap" id="n_fujicap0">早朝 <em>氷点下5度</em>の河口湖</div><div class="qcap" id="n_fujicap1">「朝いちばんの この眺め」</div></div>
+<div id="s1_k1p" class="clip panel" data-start="46.41" data-duration="5.82" data-track-index="9" style=""><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="trk">TRACK 01</div><div class="klwrap"><div class="klbar" id="s1_k1b"></div><div class="klt" id="s1_k1k">日本の冬を、なめてはいけない</div></div></div>
+<video id="n_coldv" class="clip bgv framed" data-start="52.33" data-duration="8.7" data-media-start="0.6" data-track-index="10" src="assets/bg/n_cold.mp4" muted playsinline></video>
+<div id="n_coldo" class="clip qov" data-start="52.33" data-duration="8.7" data-track-index="11" style=""><div class="lbT"><span class="rec"></span><div class="qtag">中華系マレーシア人の家族旅行</div><div class="credit">引用: Nicaboo</div></div><div class="lbB"></div><div class="qcap" id="n_coldcap0">「こんなに寒いと 思わなかった…」</div><div class="qcap" id="n_coldcap1">「いま ちょっと<em>後悔</em>してます(笑)」</div></div>
+<div id="s1_k2p" class="clip panel" data-start="61.38" data-duration="8.82" data-track-index="12" style=""><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="trk">TRACK 01</div><div class="fswrap"><div class="fst" id="s1_k2k">本当の驚きは <span class="fsslot"><span class="fsmask" id="s1_k2m">〇〇〇</span><span class="fsopen" id="s1_k2w">気配り</span></span>だった</div></div></div>
+<video id="s1_cardv" class="clip bgv " data-start="70.2" data-duration="5.38" data-media-start="0.0" data-track-index="13" src="assets/bg/b_zoff.mp4" muted playsinline></video>
+<div id="s1_cardo" class="clip qov cardov" data-start="70.2" data-duration="5.38" data-track-index="14" style=""><div class="cdscrim"></div><div class="creditD">引用: Zhen Into Chinese</div><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="cno" id="s1_cardn">TRACK 02</div><div class="cline" id="s1_cardl"></div><div class="ctitle" id="s1_cardt">丁寧さの、正体</div><div class="csub" id="s1_cards">— ある中国人が、日本で通報された話</div></div>
+<div id="s2_sengap" class="clip panel dark" data-start="75.58" data-duration="19.27" data-track-index="15" style=""><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="trk">TRACK 02</div><div class="sgwrap" id="s2_sengaa"><svg viewBox="0 0 1700 760" fill="none" stroke="#eef3f8" stroke-width="6" stroke-linecap="round"><path d="M120 720 H 1580" stroke-width="4" opacity="0.5"/><g transform="translate(540,720) scale(1.7)"><circle cx="18" cy="-118" r="24"/><path d="M36 -100 C 64 -78, 72 -40, 72 0"/><path d="M40 -96 C 20 -60, 16 -30, 20 0"/><path d="M34 -92 C 52 -78, 58 -58, 56 -40"/></g><g transform="translate(1150,720) scale(1.7) scale(-1,1)"><circle cx="0" cy="-168" r="26"/><path d="M0 -140 C -4 -96, -4 -60, -6 0"/><path d="M0 -140 C 10 -96, 12 -60, 14 0"/><path d="M-2 -128 C -34 -112, -48 -92, -54 -74"/><path d="M2 -128 C 34 -112, 48 -92, 54 -74"/></g><rect x="1218" y="452" width="64" height="104" rx="12"/><path d="M1230 478 h40 M1230 500 h40 M1230 522 h26"/><g transform="translate(850,170)"><circle r="88"/><path d="M0 -42 V 20 M0 48 V 50" stroke-width="13"/></g></svg></div><div class="sgcap" id="s2_sengac">日本で働く 中国人男性の実話</div></div>
+<video id="z_storyv" class="clip bgv framed" data-start="94.85" data-duration="13.4" data-media-start="0.6" data-track-index="16" src="assets/bg/z_story.mp4" muted playsinline></video>
+<div id="z_storyo" class="clip qov" data-start="94.85" data-duration="13.4" data-track-index="17" style=""><div class="lbT"><span class="rec"></span><div class="qtag">日本を愛する中国人クリエイター</div><div class="credit">引用: Zhen Into Chinese</div></div><div class="lbB"></div><div class="qcap" id="z_storycap0">誘い続けた結果 —— <em>通報</em></div><div class="qcap" id="z_storycap1">丁寧さは 友情の招待状ではない</div></div>
+<video id="z_politev" class="clip bgv framed" data-start="108.35" data-duration="5.8" data-media-start="0.6" data-track-index="18" src="assets/bg/z_polite.mp4" muted playsinline></video>
+<div id="z_politeo" class="clip qov" data-start="108.35" data-duration="5.8" data-track-index="19" style=""><div class="lbT"><span class="rec"></span><div class="qtag">日本を愛する中国人クリエイター</div><div class="credit">引用: Zhen Into Chinese</div></div><div class="lbB"></div><div class="qcap" id="z_politecap0">「丁寧は 友好と<em>イコール</em>ではない」</div></div>
+<div id="s2_splitp" class="clip panel" data-start="114.5" data-duration="15.61" data-track-index="20" style=""><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="trk">TRACK 02</div><div class="dhead" id="s2_splith">2つの国の「優しさ」</div><div class="spwrap"><div class="spcol cn" id="s2_splitL"><div class="sptitle">中国</div><div class="sprow" id="s2_splitl0">距離を<em>壊す</em>のが友情</div><div class="sprow" id="s2_splitl1">給料も恋愛も聞く</div><div class="sprow" id="s2_splitl2">皿から直接 分け合う</div></div><div class="spmid"><div class="spline" id="s2_splitln"></div><div class="spvs" id="s2_splitvs">VS</div></div><div class="spcol jp" id="s2_splitR"><div class="sptitle">日本</div><div class="sprow" id="s2_splitr0">距離を<em>守る</em>のが礼儀</div><div class="sprow" id="s2_splitr1">迷惑をかけない</div><div class="sprow" id="s2_splitr2">3年同僚でも 私生活は知らない</div></div></div></div>
+<video id="z_friendv" class="clip bgv framed" data-start="130.11" data-duration="13.08" data-media-start="0.6" data-track-index="21" src="assets/bg/z_friend.mp4" muted playsinline></video>
+<div id="z_friendo" class="clip qov" data-start="130.11" data-duration="13.08" data-track-index="22" style=""><div class="lbT"><span class="rec"></span><div class="qtag">日本を愛する中国人クリエイター</div><div class="credit">引用: Zhen Into Chinese</div></div><div class="lbB"></div><div class="qcap" id="z_friendcap0">頼ることが 信頼の証 ——中国</div><div class="qcap" id="z_friendcap1">頼らないことが 尊重の証 ——日本</div></div>
+<video id="s2_cardv" class="clip bgv " data-start="143.19" data-duration="5.84" data-media-start="0.0" data-track-index="23" src="assets/bg/b_china.mp4" muted playsinline></video>
+<div id="s2_cardo" class="clip qov cardov" data-start="143.19" data-duration="5.84" data-track-index="24" style=""><div class="cdscrim"></div><div class="creditD">引用: caleb revs</div><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="cno" id="s2_cardn">TRACK 03</div><div class="cline" id="s2_cardl"></div><div class="ctitle" id="s2_cardt">ルールの国、柔軟の国</div><div class="csub" id="s2_cards">— レストランに入れば、その国がわかる</div></div>
+<div id="vig"></div>
+<div id="tbk"></div>
+<div id="tline"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#s1_tunet", {opacity: 0, y: 26, filter: "blur(10px)"}, {opacity: 1, y: 0, filter: "blur(0px)", duration: 0.7, ease: "power2.out", immediateRender: false}, 0.9);
+tl.fromTo("#s1_tunel", {scaleX: 0}, {scaleX: 1, duration: 0.55, ease: "power2.inOut", immediateRender: false}, 1.35);
+tl.set("#tline", {opacity: 1, y: 0}, 0.58);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 0.58);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 0.86);
+tl.fromTo("#s1_datah", {y: -22, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 6.61);
+tl.fromTo("#s1_datan", {scale: 1.14, opacity: 0, filter: "blur(10px)"}, {scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.7, ease: "power2.out", immediateRender: false}, 8.41);
+tl.fromTo("#s1_datas", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 9.51);
+tl.set("#tline", {opacity: 1, y: 0}, 6.29);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 6.29);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 6.57);
+tl.fromTo("#s1_famblab", {x: -30, opacity: 0}, {x: 0, opacity: 1, duration: 0.5, ease: "power2.out", immediateRender: false}, 20.19);
+tl.set("#tline", {opacity: 1, y: 0}, 19.82);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 19.82);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 20.1);
+tl.fromTo("#n_noodlecap0", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 29.57);
+tl.set("#n_noodlecap0", {opacity: 0}, 33.41);
+tl.fromTo("#n_noodlecap1", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 33.54);
+tl.fromTo("#n_noodlev", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 29.31);
+tl.set("#tline", {opacity: 1, y: 0}, 29.27);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 29.27);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 29.55);
+tl.fromTo("#n_fujicap0", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 38.41);
+tl.set("#n_fujicap0", {opacity: 0}, 41.5);
+tl.fromTo("#n_fujicap1", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 41.63);
+tl.fromTo("#n_fujiv", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 38.15);
+tl.set("#tline", {opacity: 1, y: 0}, 38.11);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 38.11);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 38.39);
+tl.fromTo("#s1_k1b", {scaleY: 0}, {scaleY: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 46.63);
+tl.fromTo("#s1_k1k", {x: -36, opacity: 0}, {x: 0, opacity: 1, duration: 0.5, ease: "power3.out", immediateRender: false}, 46.81);
+tl.set("#tline", {opacity: 1, y: 0}, 46.39);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 46.39);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 46.67);
+tl.fromTo("#n_coldcap0", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 52.73);
+tl.set("#n_coldcap0", {opacity: 0}, 56.61);
+tl.fromTo("#n_coldcap1", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 56.73);
+tl.fromTo("#n_coldv", {filter: "saturate(1) sepia(0) contrast(1) brightness(1)"}, {filter: "saturate(1.15) sepia(0.14) contrast(1.02) brightness(1.04)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 53.03);
+tl.fromTo("#n_coldv", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 52.35);
+tl.set("#tline", {opacity: 1, y: 0}, 52.31);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 52.31);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 52.59);
+tl.fromTo("#s1_k2k", {opacity: 0, y: 22, filter: "blur(8px)"}, {opacity: 1, y: 0, filter: "blur(0px)", duration: 0.55, ease: "power2.out", immediateRender: false}, 61.63);
+tl.fromTo("#s1_k2m", {rotationX: 0, opacity: 1}, {rotationX: 90, opacity: 0, duration: 0.22, ease: "power2.in", immediateRender: false}, 67.618);
+tl.fromTo("#s1_k2w", {rotationX: -90, opacity: 0, xPercent: -50}, {rotationX: 0, opacity: 1, xPercent: -50, duration: 0.26, ease: "power2.out", immediateRender: false}, 67.818);
+tl.set("#tline", {opacity: 1, y: 0}, 61.36);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 61.36);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 61.64);
+tl.set("#tline", {opacity: 1, y: 0}, 70.18);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 70.18);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 70.46);
+tl.fromTo("#s1_cardn", {x: -60, opacity: 0}, {x: 0, opacity: 1, duration: 0.55, ease: "power3.out", immediateRender: false}, 70.4);
+tl.fromTo("#s1_cardl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 70.6);
+tl.fromTo("#s1_cardt", {opacity: 0, y: 26, filter: "blur(8px)"}, {opacity: 1, y: 0, filter: "blur(0px)", duration: 0.65, ease: "power2.out", immediateRender: false}, 70.75);
+tl.fromTo("#s1_cards", {opacity: 0}, {opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 71.45);
+tl.fromTo("#s2_sengaa", {opacity: 0, scale: 1.05, filter: "blur(6px)"}, {opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.7, ease: "power2.out", immediateRender: false}, 75.83);
+tl.fromTo("#s2_sengac", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 76.48);
+tl.fromTo("#s2_sengaa", {scale: 1}, {scale: 1.045, duration: 18.269999999999996, ease: "none", immediateRender: false}, 76.48);
+tl.set("#tbk", {opacity: 0}, 75.36);
+tl.to("#tbk", {opacity: 1, duration: 0.2, ease: "power2.in"}, 75.36);
+tl.to("#tbk", {opacity: 0, duration: 0.45, ease: "power2.out"}, 75.6);
+tl.fromTo("#z_storycap0", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 95.13);
+tl.set("#z_storycap0", {opacity: 0}, 101.66);
+tl.fromTo("#z_storycap1", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 101.79);
+tl.fromTo("#z_storyv", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 94.87);
+tl.set("#tline", {opacity: 1, y: 0}, 94.83);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 94.83);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 95.11);
+tl.fromTo("#z_politecap0", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 108.75);
+tl.fromTo("#z_politev", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 108.37);
+tl.set("#tline", {opacity: 1, y: 0}, 108.33);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 108.33);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 108.61);
+tl.fromTo("#s2_splith", {y: -22, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 114.8);
+tl.fromTo("#s2_splitL", {x: -60, opacity: 0}, {x: 0, opacity: 1, duration: 0.5, ease: "power2.out", immediateRender: false}, 115.05);
+tl.fromTo("#s2_splitR", {x: 60, opacity: 0}, {x: 0, opacity: 1, duration: 0.5, ease: "power2.out", immediateRender: false}, 115.2);
+tl.fromTo("#s2_splitln", {scaleY: 0}, {scaleY: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 115.1);
+tl.fromTo("#s2_splitvs", {scale: 1.8, opacity: 0}, {scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)", immediateRender: false}, 115.5);
+tl.fromTo("#s2_splitl0", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 115.85);
+tl.fromTo("#s2_splitr0", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 116.01);
+tl.fromTo("#s2_splitl1", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 119.533);
+tl.fromTo("#s2_splitr1", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 119.693);
+tl.fromTo("#s2_splitl2", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 123.215);
+tl.fromTo("#s2_splitr2", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false}, 123.375);
+tl.set("#tbk", {opacity: 0}, 114.28);
+tl.to("#tbk", {opacity: 1, duration: 0.2, ease: "power2.in"}, 114.28);
+tl.to("#tbk", {opacity: 0, duration: 0.45, ease: "power2.out"}, 114.52);
+tl.fromTo("#z_friendcap0", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 130.39);
+tl.set("#z_friendcap0", {opacity: 0}, 137.02);
+tl.fromTo("#z_friendcap1", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 137.15);
+tl.fromTo("#z_friendv", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 130.13);
+tl.set("#tline", {opacity: 1, y: 0}, 130.09);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 130.09);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 130.37);
+tl.set("#tline", {opacity: 1, y: 0}, 143.17);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 143.17);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 143.45);
+tl.fromTo("#s2_cardn", {x: -60, opacity: 0}, {x: 0, opacity: 1, duration: 0.55, ease: "power3.out", immediateRender: false}, 143.39);
+tl.fromTo("#s2_cardl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 143.59);
+tl.fromTo("#s2_cardt", {opacity: 0, y: 26, filter: "blur(8px)"}, {opacity: 1, y: 0, filter: "blur(0px)", duration: 0.65, ease: "power2.out", immediateRender: false}, 143.74);
+tl.fromTo("#s2_cards", {opacity: 0}, {opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 144.44);
+tl.fromTo("#stage", {opacity: 0}, {opacity: 1, duration: 0.8, ease: "power2.out", immediateRender: false}, 0.05);
+tl.to("#stage", {opacity: 0, duration: 0.95, ease: "power1.in"}, 149.18);
+const root = gsap.timeline({ paused: true });
+tl.time(0.0);
+root.fromTo(tl, { time: 0.0 }, { time: 150.33, duration: 150.33, ease: "none" }, 0);
+window.__timelines["root"] = root;
+</script>
+</div>
+</body>
+</html>

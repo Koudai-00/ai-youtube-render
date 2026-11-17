@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family:'NotoB'; src:url('assets/fonts/NotoSansJP-Black.otf') format('opentype'); }
+@font-face { font-family:'NotoBd'; src:url('assets/fonts/NotoSansJP-Bold.otf') format('opentype'); }
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#000; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden;
+  background:#070b16; font-family:'NotoB',sans-serif; color:#f2f4f8; }
+#stage { position:absolute; inset:0; }
+.clip { position:absolute; inset:0; width:100%; height:100%; }
+video.bgv { object-fit:cover; transform:translateZ(0); backface-visibility:hidden; }
+video.framed { top:80px; height:810px; }
+em { font-style:normal; color:#4fd8eb; }
+#vig { position:absolute; inset:0; z-index:41; pointer-events:none;
+  background:radial-gradient(ellipse 120% 110% at 50% 46%, rgba(0,0,0,0) 58%, rgba(2,4,10,.5) 100%); }
+#tline { position:absolute; left:0; right:0; top:-4px; height:4px; z-index:60; opacity:0;
+  background:linear-gradient(90deg, rgba(79,216,235,0), #eafcff 30%, #eafcff 70%, rgba(79,216,235,0));
+  box-shadow:0 0 26px 6px rgba(79,216,235,.8); pointer-events:none; }
+#tbk { position:absolute; inset:0; z-index:56; background:#05070e; opacity:0; pointer-events:none; }
+/* ---------- パネル (放送室) ---------- */
+.panel { z-index:10;
+  background:radial-gradient(ellipse 130% 100% at 50% 34%, #15213f 0%, #0d1529 56%, #070b16 100%); }
+.panel.dark { background:radial-gradient(ellipse 130% 100% at 50% 40%, #0a0d16 0%, #04060c 70%); }
+.logo { position:absolute; left:52px; top:42px; z-index:4; font-family:'NotoB'; font-size:30px;
+  letter-spacing:.14em; color:#dfe7f2; display:flex; align-items:center; gap:16px; }
+.logo .dot { width:16px; height:16px; border-radius:50%; background:#ff4a3c;
+  box-shadow:0 0 14px 3px rgba(255,74,60,.75); }
+.logo .oa { font-size:19px; letter-spacing:.3em; color:#8e9cb8; border:2px solid #8e9cb8;
+  padding:4px 10px 4px 13px; border-radius:4px; margin-left:6px; }
+.trk { position:absolute; right:56px; bottom:44px; z-index:4; font-family:'NotoB'; font-size:26px;
+  letter-spacing:.3em; color:#8e9cb8; }
+/* ---------- 引用モニター ---------- */
+.qov { z-index:10; }
+.lbT { position:absolute; left:0; right:0; top:0; height:80px; background:#0a101f;
+  border-bottom:2px solid rgba(79,216,235,.35); box-shadow:0 4px 22px rgba(0,0,0,.6); }
+.lbB { position:absolute; left:0; right:0; bottom:0; height:190px; background:#0a101f;
+  border-top:2px solid rgba(79,216,235,.35); box-shadow:0 -4px 22px rgba(0,0,0,.6); }
+.rec { position:absolute; left:46px; top:50%; width:16px; height:16px; margin-top:-8px;
+  border-radius:50%; background:#ff4a3c; box-shadow:0 0 12px 3px rgba(255,74,60,.7); }
+.qtag { position:absolute; left:84px; top:50%; transform:translateY(-50%);
+  font-family:'NotoB'; font-size:29px; color:#f2f4f8; letter-spacing:.08em; }
+.credit { position:absolute; right:46px; top:50%; transform:translateY(-50%);
+  font-family:'NotoBd'; font-size:24px; color:#8e9cb8; }
+.qcap { position:absolute; left:60px; right:60px; bottom:52px; text-align:center; font-size:56px;
+  font-family:'NotoB'; color:#f2f4f8; letter-spacing:.02em; opacity:0; z-index:11;
+  text-shadow:0 2px 14px rgba(0,0,0,.6); }
+.biglabel { position:absolute; left:64px; top:128px; font-family:'NotoB'; font-size:52px;
+  color:#f2f4f8; background:rgba(10,16,31,.92); border-left:10px solid #4fd8eb;
+  padding:16px 38px; box-shadow:0 6px 24px rgba(0,0,0,.5); opacity:0; }
+.creditD { position:absolute; top:26px; right:56px; font-family:'NotoBd'; font-size:24px;
+  color:rgba(242,244,248,.92); background:rgba(5,8,16,.55); padding:7px 16px; z-index:5; }
+/* ---------- tune ---------- */
+.tnwrap { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center;
+  justify-content:center; gap:40px; padding:0 150px; }
+.tnt { text-align:center; font-family:'NotoB'; font-size:88px; line-height:1.5; color:#f2f4f8;
+  letter-spacing:.04em; opacity:0; text-shadow:0 0 34px rgba(79,216,235,.3); }
+.tnline { width:420px; height:6px; border-radius:3px; transform:scaleX(0);
+  background:linear-gradient(90deg, #ff6b4a, #4fd8eb);
+  box-shadow:0 0 18px rgba(79,216,235,.6); }
+/* ---------- kick ---------- */
+.klwrap { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; gap:44px;
+  padding:0 140px; }
+.klbar { width:10px; height:300px; border-radius:5px; background:#4fd8eb; transform-origin:top;
+  transform:scaleY(0); box-shadow:0 0 22px rgba(79,216,235,.7); }
+.klt { font-family:'NotoB'; font-size:80px; line-height:1.45; color:#f2f4f8; opacity:0;
+  letter-spacing:.04em; }
+.fswrap { position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  padding:0 120px; perspective:900px; }
+.fst { text-align:center; font-family:'NotoB'; font-size:86px; line-height:1.5; color:#f2f4f8;
+  opacity:0; letter-spacing:.04em; }
+.fsslot { display:inline-block; position:relative; }
+.fsmask { display:inline-block; color:#8e9cb8; background:rgba(142,156,184,.14);
+  border-radius:10px; padding:0 14px; }
+.fsopen { display:inline-block; color:#ff6b4a; opacity:0; white-space:nowrap;
+  text-shadow:0 0 30px rgba(255,107,74,.55); position:absolute; left:50%; top:0;
+  transform-origin:center; }
+/* ---------- split ---------- */
+.dhead { position:absolute; left:0; right:0; top:104px; text-align:center; font-family:'NotoB';
+  font-size:66px; color:#f2f4f8; opacity:0; letter-spacing:.05em; }
+.spwrap { position:absolute; left:130px; right:130px; top:270px; bottom:150px; display:flex;
+  align-items:stretch; gap:0; }
+.spcol { flex:1; padding:44px 56px; opacity:0; border-radius:18px; }
+.spcol.cn { border:2px solid rgba(255,107,74,.5); background:rgba(255,107,74,.06); margin-right:44px; }
+.spcol.jp { border:2px solid rgba(79,216,235,.5); background:rgba(79,216,235,.06); margin-left:44px; }
+.sptitle { font-family:'NotoB'; font-size:52px; letter-spacing:.1em; margin-bottom:34px; }
+.spcol.cn .sptitle { color:#ff8e73; }
+.spcol.jp .sptitle { color:#7ce4f5; }
+.sprow { font-family:'NotoBd'; font-size:38px; line-height:1.55; color:#dfe7f2; margin-top:22px;
+  opacity:0; padding-left:28px; position:relative; }
+.sprow::before { content:''; position:absolute; left:0; top:0.62em; width:12px; height:12px;
+  border-radius:50%; background:currentColor; opacity:.55; }
+.spmid { position:absolute; left:50%; top:0; bottom:0; width:0; display:flex; align-items:center;
+  justify-content:center; }
+.spline { position:absolute; top:0; bottom:0; width:3px; margin-left:-1px;
+  background:linear-gradient(180deg, rgba(142,156,184,0), #8e9cb8 25%, #8e9cb8 75%, rgba(142,156,184,0));
+  transform-origin:top; }
+.spvs { position:relative; font-family:'NotoB'; font-size:46px; color:#070b16; background:#f2f4f8;
+  width:104px; height:104px; line-height:104px; text-align:center; border-radius:50%;
+  box-shadow:0 0 30px rgba(242,244,248,.4); opacity:0; }
+/* ---------- senga ---------- */
+.sgwrap { position:absolute; left:110px; right:110px; top:120px; bottom:240px; opacity:0; }
+.sgwrap svg { width:100%; height:100%; filter:drop-shadow(0 0 7px rgba(238,243,248,.35)); }
+.sgcap { position:absolute; left:0; right:0; bottom:104px; text-align:center; font-family:'NotoB';
+  font-size:56px; color:#f2f4f8; opacity:0; letter-spacing:.04em;
+  text-shadow:0 2px 16px rgba(0,0,0,.8); }
+/* ---------- datac ---------- */
+.dcnum { position:absolute; left:0; right:0; top:328px; text-align:center; font-family:'NotoB';
+  font-size:230px; color:#d9b96a; opacity:0; font-variant-numeric:tabular-nums;
+  text-shadow:0 0 44px rgba(217,185,106,.4); }
+.dcnum span { font-size:92px; color:#f2f4f8; margin-left:14px; }
+.dcsub { position:absolute; left:0; right:0; top:648px; text-align:center; font-family:'NotoB';
+  font-size:54px; color:#dfe7f2; opacity:0; }
+.cntsrc { position:absolute; left:60px; bottom:40px; font-family:'NotoBd'; font-size:23px;
+  color:#8e9cb8; }
+/* ---------- card (TRACK扉) ---------- */
+.cardov { }
+.cdscrim { position:absolute; inset:0;
+  background:linear-gradient(0deg, rgba(5,8,16,.82) 0%, rgba(5,8,16,.45) 45%, rgba(5,8,16,.25) 100%); }
+.cno { position:absolute; left:150px; top:340px; font-family:'NotoB'; font-size:54px;
+  letter-spacing:.42em; color:#4fd8eb; opacity:0; text-shadow:0 0 24px rgba(79,216,235,.5); }
+.cline { position:absolute; left:154px; top:428px; width:560px; height:4px; transform-origin:left;
+  transform:scaleX(0); background:linear-gradient(90deg, #4fd8eb, rgba(79,216,235,0)); }
+.ctitle { position:absolute; left:146px; top:470px; font-family:'NotoB'; font-size:96px;
+  color:#f2f4f8; opacity:0; letter-spacing:.03em; text-shadow:0 4px 30px rgba(0,0,0,.7); }
+.csub { position:absolute; left:152px; top:620px; font-family:'NotoBd'; font-size:38px;
+  color:#aeb9cf; opacity:0; }
+/* ---------- ask / end ---------- */
+.askt { position:absolute; left:0; right:0; top:26%; text-align:center; font-family:'NotoB';
+  font-size:82px; line-height:1.6; color:#f2f4f8; opacity:0; }
+.asks { position:absolute; left:0; right:0; top:70%; text-align:center; font-family:'NotoBd';
+  font-size:38px; color:#d9b96a; opacity:0; }
+.endt { position:absolute; left:0; right:0; top:38%; text-align:center; font-family:'NotoB';
+  font-size:84px; color:#f2f4f8; opacity:0; }
+.ends { position:absolute; left:0; right:0; top:56%; text-align:center; font-family:'NotoBd';
+  font-size:36px; color:#8e9cb8; opacity:0; }
+.crt { position:absolute; inset:0; background:#eafcff; opacity:0; transform-origin:center;
+  z-index:30; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="root" data-width="1920" data-height="1080" data-start="0" data-duration="129.41">
+<div id="stage">
+<div id="s4_tunep" class="clip panel" data-start="0.6" data-duration="8.09" data-track-index="1" style=""><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="trk">TRACK 04</div><div class="tnwrap"><div class="tnt" id="s4_tunet">日本は<br><em>完璧</em>ではない</div><div class="tnline" id="s4_tunel"></div></div></div>
+<video id="c_osakav" class="clip bgv framed" data-start="8.69" data-duration="12.39" data-media-start="0.6" data-track-index="2" src="assets/bg/c_osaka.mp4" muted playsinline></video>
+<div id="c_osakao" class="clip qov" data-start="8.69" data-duration="12.39" data-track-index="3" style=""><div class="lbT"><span class="rec"></span><div class="qtag">中国と日本を旅した旅行者</div><div class="credit">引用: caleb revs</div></div><div class="lbB"></div><div class="qcap" id="c_osakacap0">大阪の量販店で 起きたこと</div><div class="qcap" id="c_osakacap1">質問したいのに——<em>無言</em>でレジへ</div></div>
+<video id="c_waitv" class="clip bgv framed" data-start="21.18" data-duration="9.4" data-media-start="0.6" data-track-index="4" src="assets/bg/c_wait.mp4" muted playsinline></video>
+<div id="c_waito" class="clip qov" data-start="21.18" data-duration="9.4" data-track-index="5" style=""><div class="lbT"><span class="rec"></span><div class="qtag">中国と日本を旅した旅行者</div><div class="credit">引用: caleb revs</div></div><div class="lbB"></div><div class="qcap" id="c_waitcap0">「そして 大声で怒鳴られた——」</div><div class="qcap" id="c_waitcap1">「<em>ここで待ってろ!</em> と」</div></div>
+<div id="s4_k1p" class="clip panel" data-start="30.93" data-duration="8.05" data-track-index="6" style=""><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="trk">TRACK 04</div><div class="fswrap"><div class="fst" id="s4_k1k">人生最悪の<span class="fsslot"><span class="fsmask" id="s4_k1m">〇〇</span><span class="fsopen" id="s4_k1w">接客</span></span>だった</div></div></div>
+<div id="s4_k2p" class="clip panel" data-start="38.98" data-duration="2.97" data-track-index="7" style=""><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="trk">TRACK 04</div><div class="klwrap"><div class="klbar" id="s4_k2b"></div><div class="klt" id="s4_k2k">——でも、彼はこう続けた</div></div></div>
+<video id="c_fairv" class="clip bgv framed" data-start="42.05" data-duration="4.9" data-media-start="0.6" data-track-index="8" src="assets/bg/c_fair.mp4" muted playsinline></video>
+<div id="c_fairo" class="clip qov" data-start="42.05" data-duration="4.9" data-track-index="9" style=""><div class="lbT"><span class="rec"></span><div class="qtag">中国と日本を旅した旅行者</div><div class="credit">引用: caleb revs</div></div><div class="lbB"></div><div class="qcap" id="c_faircap0">「日本は完璧じゃない。<em>中国も</em>完璧じゃない」</div></div>
+<div id="s4_k3p" class="clip panel" data-start="47.3" data-duration="8.12" data-track-index="10" style=""><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="trk">TRACK 04</div><div class="fswrap"><div class="fst" id="s4_k3k">どちらの国も <span class="fsslot"><span class="fsmask" id="s4_k3m">〇〇〇〇〇</span><span class="fsopen" id="s4_k3w">パッケージ</span></span>だ</div></div></div>
+<video id="s5_cardv" class="clip bgv " data-start="55.42" data-duration="7.94" data-media-start="0.0" data-track-index="11" src="assets/bg/b_fujiv.mp4" muted playsinline></video>
+<div id="s5_cardo" class="clip qov cardov" data-start="55.42" data-duration="7.94" data-track-index="12" style=""><div class="cdscrim"></div><div class="creditD">引用: Nicaboo</div><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="cno" id="s5_cardn">TRACK 05</div><div class="cline" id="s5_cardl"></div><div class="ctitle" id="s5_cardt">で、結局どっちが、いいの?</div><div class="csub" id="s5_cards">— 中国人クリエイターの答え</div></div>
+<video id="z_conclv" class="clip bgv framed" data-start="63.36" data-duration="17.97" data-media-start="0.6" data-track-index="13" src="assets/bg/z_concl.mp4" muted playsinline></video>
+<div id="z_conclo" class="clip qov" data-start="63.36" data-duration="17.97" data-track-index="14" style=""><div class="lbT"><span class="rec"></span><div class="qtag">日本を愛する中国人クリエイター</div><div class="credit">引用: Zhen Into Chinese</div></div><div class="lbB"></div><div class="qcap" id="z_conclcap0">日本の丁寧さ = <em>境界のシステム</em></div><div class="qcap" id="z_conclcap1">中国の温かさ = <em>参加型の文化</em></div><div class="qcap" id="z_conclcap2">優劣ではなく ただの「違い」</div></div>
+<video id="z_choosev" class="clip bgv framed" data-start="81.43" data-duration="4.8" data-media-start="0.6" data-track-index="15" src="assets/bg/z_choose.mp4" muted playsinline></video>
+<div id="z_chooseo" class="clip qov" data-start="81.43" data-duration="4.8" data-track-index="16" style=""><div class="lbT"><span class="rec"></span><div class="qtag">日本を愛する中国人クリエイター</div><div class="credit">引用: Zhen Into Chinese</div></div><div class="lbB"></div><div class="qcap" id="z_choosecap0">「あなたなら どちらを<em>選ぶ</em>?」</div></div>
+<div id="s5_tunep" class="clip panel" data-start="86.63" data-duration="22.18" data-track-index="17" style=""><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="trk">TRACK 05</div><div class="tnwrap"><div class="tnt" id="s5_tunet">丁寧さは<br><em>設計</em>である</div><div class="tnline" id="s5_tunel"></div></div></div>
+<div id="askp" class="clip panel" data-start="108.81" data-duration="8.8" data-track-index="18" style=""><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="askt" id="ask1">あなたは どちらの国の<br>「<em>優しさ</em>」が心地いいですか</div><div class="asks" id="ask2">▼ 海外の方と接して感じた「違い」、コメントで聞かせてください</div></div>
+<div id="endp" class="clip panel" data-start="117.61" data-duration="10.5" data-track-index="19" style=""><div class="logo"><span class="dot"></span>深夜の日本論<span class="oa">ON AIR</span></div><div class="endt" id="end1">ご視聴 ありがとうございました</div><div class="ends" id="end2">チャンネル登録で、次の放送をお聞き逃しなく</div><div class="crt" id="crt"></div></div>
+<div id="vig"></div>
+<div id="tbk"></div>
+<div id="tline"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#s4_tunet", {opacity: 0, y: 26, filter: "blur(10px)"}, {opacity: 1, y: 0, filter: "blur(0px)", duration: 0.7, ease: "power2.out", immediateRender: false}, 0.9);
+tl.fromTo("#s4_tunel", {scaleX: 0}, {scaleX: 1, duration: 0.55, ease: "power2.inOut", immediateRender: false}, 1.35);
+tl.set("#tline", {opacity: 1, y: 0}, 0.58);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 0.58);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 0.86);
+tl.fromTo("#c_osakacap0", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 9.02);
+tl.set("#c_osakacap0", {opacity: 0}, 13.96);
+tl.fromTo("#c_osakacap1", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 14.09);
+tl.fromTo("#c_osakav", {filter: "grayscale(0) saturate(1) contrast(1) brightness(1)"}, {filter: "grayscale(1) saturate(0.35) contrast(1.08) brightness(0.9)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 9.09);
+tl.fromTo("#c_osakav", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 8.71);
+tl.set("#tline", {opacity: 1, y: 0}, 8.67);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 8.67);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 8.95);
+tl.fromTo("#c_waitcap0", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 21.58);
+tl.set("#c_waitcap0", {opacity: 0}, 25.86);
+tl.fromTo("#c_waitcap1", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 25.98);
+tl.fromTo("#c_waitv", {filter: "grayscale(0) saturate(1) contrast(1) brightness(1)"}, {filter: "grayscale(1) saturate(0.35) contrast(1.08) brightness(0.9)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 21.88);
+tl.fromTo("#c_waitv", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 21.2);
+tl.set("#tline", {opacity: 1, y: 0}, 21.16);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 21.16);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 21.44);
+tl.fromTo("#s4_k1k", {opacity: 0, y: 22, filter: "blur(8px)"}, {opacity: 1, y: 0, filter: "blur(0px)", duration: 0.55, ease: "power2.out", immediateRender: false}, 31.18);
+tl.fromTo("#s4_k1m", {rotationX: 0, opacity: 1}, {rotationX: 90, opacity: 0, duration: 0.22, ease: "power2.in", immediateRender: false}, 36.65);
+tl.fromTo("#s4_k1w", {rotationX: -90, opacity: 0, xPercent: -50}, {rotationX: 0, opacity: 1, xPercent: -50, duration: 0.26, ease: "power2.out", immediateRender: false}, 36.85);
+tl.set("#tline", {opacity: 1, y: 0}, 30.91);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 30.91);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 31.19);
+tl.fromTo("#s4_k2b", {scaleY: 0}, {scaleY: 1, duration: 0.4, ease: "power3.out", immediateRender: false}, 39.2);
+tl.fromTo("#s4_k2k", {x: -36, opacity: 0}, {x: 0, opacity: 1, duration: 0.5, ease: "power3.out", immediateRender: false}, 39.38);
+tl.set("#tline", {opacity: 1, y: 0}, 38.96);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 38.96);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 39.24);
+tl.fromTo("#c_faircap0", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 42.45);
+tl.fromTo("#c_fairv", {filter: "saturate(1) sepia(0) contrast(1) brightness(1)"}, {filter: "saturate(1.15) sepia(0.14) contrast(1.02) brightness(1.04)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 42.75);
+tl.fromTo("#c_fairv", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 42.07);
+tl.set("#tline", {opacity: 1, y: 0}, 42.03);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 42.03);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 42.31);
+tl.fromTo("#s4_k3k", {opacity: 0, y: 22, filter: "blur(8px)"}, {opacity: 1, y: 0, filter: "blur(0px)", duration: 0.55, ease: "power2.out", immediateRender: false}, 47.55);
+tl.fromTo("#s4_k3m", {rotationX: 0, opacity: 1}, {rotationX: 90, opacity: 0, duration: 0.22, ease: "power2.in", immediateRender: false}, 53.056);
+tl.fromTo("#s4_k3w", {rotationX: -90, opacity: 0, xPercent: -50}, {rotationX: 0, opacity: 1, xPercent: -50, duration: 0.26, ease: "power2.out", immediateRender: false}, 53.256);
+tl.set("#tline", {opacity: 1, y: 0}, 47.28);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 47.28);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 47.56);
+tl.set("#tline", {opacity: 1, y: 0}, 55.4);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 55.4);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 55.68);
+tl.fromTo("#s5_cardn", {x: -60, opacity: 0}, {x: 0, opacity: 1, duration: 0.55, ease: "power3.out", immediateRender: false}, 55.62);
+tl.fromTo("#s5_cardl", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false}, 55.82);
+tl.fromTo("#s5_cardt", {opacity: 0, y: 26, filter: "blur(8px)"}, {opacity: 1, y: 0, filter: "blur(0px)", duration: 0.65, ease: "power2.out", immediateRender: false}, 55.97);
+tl.fromTo("#s5_cards", {opacity: 0}, {opacity: 1, duration: 0.45, ease: "power2.out", immediateRender: false}, 56.67);
+tl.fromTo("#z_conclcap0", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 63.69);
+tl.set("#z_conclcap0", {opacity: 0}, 70.88);
+tl.fromTo("#z_conclcap1", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 71.01);
+tl.set("#z_conclcap1", {opacity: 0}, 76.66);
+tl.fromTo("#z_conclcap2", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 76.79);
+tl.fromTo("#z_conclv", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 63.38);
+tl.set("#tline", {opacity: 1, y: 0}, 63.34);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 63.34);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 63.62);
+tl.fromTo("#z_choosecap0", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false}, 81.83);
+tl.fromTo("#z_choosev", {filter: "saturate(1) sepia(0) contrast(1) brightness(1)"}, {filter: "saturate(1.15) sepia(0.14) contrast(1.02) brightness(1.04)", duration: 0.9, ease: "power2.inOut", immediateRender: false}, 82.13);
+tl.fromTo("#z_choosev", {scale: 1.04}, {scale: 1, duration: 2.2, ease: "power2.out", immediateRender: false}, 81.45);
+tl.set("#tline", {opacity: 1, y: 0}, 81.41);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 81.41);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 81.69);
+tl.fromTo("#s5_tunet", {opacity: 0, y: 26, filter: "blur(10px)"}, {opacity: 1, y: 0, filter: "blur(0px)", duration: 0.7, ease: "power2.out", immediateRender: false}, 86.93);
+tl.fromTo("#s5_tunel", {scaleX: 0}, {scaleX: 1, duration: 0.55, ease: "power2.inOut", immediateRender: false}, 87.38);
+tl.set("#tline", {opacity: 1, y: 0}, 86.61);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 86.61);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 86.89);
+tl.fromTo("#ask1", {opacity: 0, y: 24, filter: "blur(8px)"}, {opacity: 1, y: 0, filter: "blur(0px)", duration: 0.7, ease: "power2.out", immediateRender: false}, 109.11);
+tl.fromTo("#ask2", {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false}, 110.31);
+tl.to("#ask2", {y: 8, duration: 0.5, ease: "sine.inOut", repeat: 5, yoyo: true}, 110.91);
+tl.set("#tline", {opacity: 1, y: 0}, 108.79);
+tl.to("#tline", {y: 1088, duration: 0.3, ease: "power2.inOut"}, 108.79);
+tl.to("#tline", {opacity: 0, duration: 0.15}, 109.07);
+tl.fromTo("#end1", {opacity: 0}, {opacity: 1, duration: 0.7, ease: "power2.out", immediateRender: false}, 117.91);
+tl.fromTo("#end2", {opacity: 0}, {opacity: 1, duration: 0.5, ease: "power2.out", immediateRender: false}, 118.81);
+tl.set("#crt", {opacity: 1}, 127.09);
+tl.fromTo("#crt", {scaleY: 1, scaleX: 1}, {scaleY: 0.004, scaleX: 1, duration: 0.3, ease: "power3.in", immediateRender: false}, 127.11);
+tl.to("#crt", {scaleX: 0.002, duration: 0.3, ease: "power2.in"}, 127.41);
+tl.set("#tbk", {opacity: 0}, 117.39);
+tl.to("#tbk", {opacity: 1, duration: 0.2, ease: "power2.in"}, 117.39);
+tl.to("#tbk", {opacity: 0, duration: 0.45, ease: "power2.out"}, 117.63);
+tl.fromTo("#stage", {opacity: 0}, {opacity: 1, duration: 0.8, ease: "power2.out", immediateRender: false}, 0.05);
+tl.to("#stage", {opacity: 0, duration: 0.95, ease: "power1.in"}, 128.26);
+const root = gsap.timeline({ paused: true });
+tl.time(0.0);
+root.fromTo(tl, { time: 0.0 }, { time: 129.41, duration: 129.41, ease: "none" }, 0);
+window.__timelines["root"] = root;
+</script>
+</div>
+</body>
+</html>
