@@ -1,0 +1,155 @@
+{
+ "total": 116.98,
+ "beats": [
+  {
+   "id": "q_ms1",
+   "start": 0.5,
+   "end": 13.7
+  },
+  {
+   "id": "n_cold",
+   "start": 86.58,
+   "end": 95.28
+  }
+ ],
+ "narr": {
+  "n01": {
+   "start": 14.1,
+   "dur": 8.16
+  },
+  "n02": {
+   "start": 27.51,
+   "dur": 10.4
+  },
+  "n03": {
+   "start": 39.01,
+   "dur": 5.14
+  },
+  "n04": {
+   "start": 45.3,
+   "dur": 11.79
+  },
+  "n05": {
+   "start": 58.09,
+   "dur": 4.99
+  },
+  "n06": {
+   "start": 64.73,
+   "dur": 8.12
+  },
+  "n07": {
+   "start": 73.9,
+   "dur": 3.03
+  },
+  "n08": {
+   "start": 80.78,
+   "dur": 5.41
+  },
+  "n09": {
+   "start": 95.78,
+   "dur": 7.02
+  },
+  "n10": {
+   "start": 108.1,
+   "dur": 6.27
+  }
+ },
+ "quotes": {
+  "q_ms1": {
+   "beat_start": 0.5,
+   "lead": 0.4,
+   "adur": 12.2,
+   "media_start": 13.4,
+   "dur": 13.2,
+   "clip": "q_ms1.mp4"
+  },
+  "n_cold": {
+   "beat_start": 86.58,
+   "lead": 0.4,
+   "adur": 7.8,
+   "media_start": 0.6,
+   "dur": 8.7,
+   "clip": "n_cold.mp4"
+  }
+ },
+ "scenes": [
+  {
+   "id": "s_cold",
+   "kind": "q",
+   "start": 0.5,
+   "end": 13.7
+  },
+  {
+   "id": "s_think",
+   "kind": "think",
+   "start": 13.7,
+   "end": 22.86
+  },
+  {
+   "id": "s_title",
+   "kind": "title",
+   "start": 22.86,
+   "end": 27.06
+  },
+  {
+   "id": "s_data1",
+   "kind": "data",
+   "start": 27.06,
+   "end": 38.61
+  },
+  {
+   "id": "s_data2",
+   "kind": "data",
+   "start": 38.61,
+   "end": 44.85
+  },
+  {
+   "id": "s_cn",
+   "kind": "cuts",
+   "start": 44.85,
+   "end": 57.69
+  },
+  {
+   "id": "s_why",
+   "kind": "qcard",
+   "start": 57.69,
+   "end": 64.28
+  },
+  {
+   "id": "s_fam",
+   "kind": "figs",
+   "start": 64.28,
+   "end": 73.45
+  },
+  {
+   "id": "s_noodle",
+   "kind": "tquote",
+   "start": 73.45,
+   "end": 80.33
+  },
+  {
+   "id": "s_coldlead",
+   "kind": "plain",
+   "start": 80.33,
+   "end": 86.58
+  },
+  {
+   "id": "s_coldq",
+   "kind": "q",
+   "start": 86.58,
+   "end": 95.28
+  },
+  {
+   "id": "s_pivot",
+   "kind": "kick",
+   "start": 95.28,
+   "end": 107.4
+  },
+  {
+   "id": "s_ch1",
+   "kind": "card",
+   "start": 107.4,
+   "end": 116.98
+  }
+ ]
+}
