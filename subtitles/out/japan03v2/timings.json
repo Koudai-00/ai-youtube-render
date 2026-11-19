@@ -1,0 +1,149 @@
+{
+ "total": 108.96,
+ "beats": [
+  {
+   "id": "qzhen",
+   "start": 0.5,
+   "end": 11.22
+  },
+  {
+   "id": "n_cold",
+   "start": 80.24,
+   "end": 88.94
+  }
+ ],
+ "narr": {
+  "n01": {
+   "start": 11.72,
+   "dur": 10.63
+  },
+  "n02": {
+   "start": 26.2,
+   "dur": 7.07
+  },
+  "n03": {
+   "start": 34.38,
+   "dur": 5.14
+  },
+  "n04": {
+   "start": 40.67,
+   "dur": 8.02
+  },
+  "n04b": {
+   "start": 49.74,
+   "dur": 6.02
+  },
+  "n05": {
+   "start": 56.81,
+   "dur": 5.25
+  },
+  "n06": {
+   "start": 65.95,
+   "dur": 7.33
+  },
+  "n07": {
+   "start": 74.43,
+   "dur": 5.41
+  },
+  "n08": {
+   "start": 89.44,
+   "dur": 5.34
+  },
+  "n09": {
+   "start": 100.08,
+   "dur": 6.27
+  }
+ },
+ "quotes": {
+  "qzhen": {
+   "beat_start": 0.5,
+   "lead": 0.4,
+   "adur": 9.72,
+   "media_start": 0.7,
+   "dur": 10.72,
+   "clip": "qzhen.mp4"
+  },
+  "n_cold": {
+   "beat_start": 80.24,
+   "lead": 0.4,
+   "adur": 7.8,
+   "media_start": 0.6,
+   "dur": 8.7,
+   "clip": "n_cold.mp4"
+  }
+ },
+ "scenes": [
+  {
+   "id": "s_cold",
+   "kind": "q",
+   "start": 0.5,
+   "end": 11.22
+  },
+  {
+   "id": "s_title",
+   "kind": "title",
+   "start": 11.22,
+   "end": 25.75
+  },
+  {
+   "id": "s_data1",
+   "kind": "data",
+   "start": 25.75,
+   "end": 33.98
+  },
+  {
+   "id": "s_data2",
+   "kind": "data",
+   "start": 33.98,
+   "end": 40.22
+  },
+  {
+   "id": "s_fam",
+   "kind": "plain",
+   "start": 40.22,
+   "end": 49.29
+  },
+  {
+   "id": "s_go",
+   "kind": "plain",
+   "start": 49.29,
+   "end": 56.36
+  },
+  {
+   "id": "s_noodle",
+   "kind": "tquote",
+   "start": 56.36,
+   "end": 65.45
+  },
+  {
+   "id": "s_fuji",
+   "kind": "plain",
+   "start": 65.45,
+   "end": 73.98
+  },
+  {
+   "id": "s_coldlead",
+   "kind": "plain",
+   "start": 73.98,
+   "end": 80.24
+  },
+  {
+   "id": "s_coldq",
+   "kind": "q",
+   "start": 80.24,
+   "end": 88.94
+  },
+  {
+   "id": "s_pivot",
+   "kind": "kick",
+   "start": 88.94,
+   "end": 99.38
+  },
+  {
+   "id": "s_ch1",
+   "kind": "card",
+   "start": 99.38,
+   "end": 108.96
+  }
+ ]
+}
