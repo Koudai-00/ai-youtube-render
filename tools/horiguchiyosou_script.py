@@ -136,16 +136,16 @@ BG = {
  "ul_fin": ("bg/finish_qatar25_ulanbekov", 24, "UFC"),
  "brave_a": ("bg/brave_hl", 0, "BRAVE CF"),
  "brave_b": ("bg/brave_hl", 30, "BRAVE CF"),
- "brave_c": ("bg/brave_maningat", 0, "BRAVE CF"),
- "iv_debut": ("bg/iv_alma_debut", 0, "UFC"),
+ "brave_c": ("bg/brave_hl", 128, "BRAVE CF"),
+ "iv_debut": ("bg/iv_alma_debut", 2.5, "UFC"),
  "iv_debut2": ("bg/iv_alma_debut", 30, "UFC"),
- "kape2_weigh": ("bg/hori_kape2_weigh", 0, "UFC"),
+ "kape2_weigh": ("bg/hori_kape2_weigh", 4, "UFC"),
  "perez_fin": ("bg/finish_qatar25_perez", 22, "UFC"),
  "perez_ff": ("bg/ff_perez", 120, "UFC Eurasia"),
- "iv_baku": ("bg/iv_alma_johnson", 0, "UFC"),
+ "iv_baku": ("bg/iv_alma_johnson", 4, "UFC"),
  "iv_baku2": ("bg/iv_alma_johnson", 40, "UFC"),
  "iv_baku3": ("bg/iv_alma_johnson", 80, "UFC"),
- "unext_alma": ("bg/unext_alma_iv", 182, "U-NEXT格闘技", "crop=iw*0.76:ih*0.76:iw*0.12:ih*0.04"),
+ "unext_alma": ("bg/unext_alma_iv", 182, "U-NEXT格闘技", "crop=iw*0.6:ih*0.6:iw*0.2:ih*0.145"),
 }
 
 # 字幕の表示置換(読み→表記)。長いキー優先で適用する
