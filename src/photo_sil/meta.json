@@ -1,0 +1,80 @@
+{
+ "f_cowork": {
+  "src": "cowork_3.jpg",
+  "w": 773,
+  "h": 1529,
+  "ar": 0.5056
+ },
+ "f_phone": {
+  "src": "phone_4.jpg",
+  "w": 662,
+  "h": 1407,
+  "ar": 0.4705
+ },
+ "f_phonest": {
+  "src": "phone_3.jpg",
+  "w": 667,
+  "h": 1623,
+  "ar": 0.411
+ },
+ "f_call": {
+  "src": "callman_3.jpg",
+  "w": 799,
+  "h": 854,
+  "ar": 0.9356
+ },
+ "f_police": {
+  "src": "police_1.jpg",
+  "w": 224,
+  "h": 598,
+  "ar": 0.3746
+ },
+ "f_present": {
+  "src": "present_1.jpg",
+  "w": 604,
+  "h": 1487,
+  "ar": 0.4062
+ },
+ "f_shock": {
+  "src": "shock_4.jpg",
+  "w": 756,
+  "h": 715,
+  "ar": 1.0573
+ },
+ "f_shock2": {
+  "src": "shock_3.jpg",
+  "w": 599,
+  "h": 733,
+  "ar": 0.8172
+ },
+ "f_walk1": {
+  "src": "walker_2.jpg",
+  "w": 267,
+  "h": 454,
+  "ar": 0.5881
+ },
+ "f_walk2": {
+  "src": "walker_3.jpg",
+  "w": 809,
+  "h": 1307,
+  "ar": 0.619
+ },
+ "f_walk3": {
+  "src": "callman_2.jpg",
+  "w": 758,
+  "h": 1584,
+  "ar": 0.4785
+ },
+ "f_call2": {
+  "src": "call2_3.jpg",
+  "w": 1018,
+  "h": 1485,
+  "ar": 0.6855
+ },
+ "f_police2": {
+  "src": "pol2_1.jpg",
+  "w": 515,
+  "h": 1604,
+  "ar": 0.3211
+ }
+}
