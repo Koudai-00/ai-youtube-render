@@ -1,0 +1,584 @@
+{
+"beats": [
+{
+"id": "o1",
+"kind": "r",
+"start": 0.25,
+"end": 3.05,
+"dur": 2.8
+},
+{
+"id": "o2",
+"kind": "n",
+"start": 3.23,
+"end": 6.992,
+"dur": 3.762,
+"wav": "subtitles/out/horiguchi_yosou/wavs/o2_88b29a25bc.wav",
+"read": "かつてほりぐちきょうじと戦った男は、そういいきった。"
+},
+{
+"id": "o3",
+"kind": "n",
+"start": 7.192,
+"end": 11.557,
+"dur": 4.365,
+"wav": "subtitles/out/horiguchi_yosou/wavs/o3_b0552b4f3f.wav",
+"read": "だがほりぐちは、ろくがつのさいせんでまねるけいぷにやぶれている。"
+},
+{
+"id": "o4",
+"kind": "n",
+"start": 11.777,
+"end": 15.724,
+"dur": 3.947,
+"wav": "subtitles/out/horiguchi_yosou/wavs/o4_148c688f9c.wav",
+"read": "そして相手のアルマバエフもまた、ケイプにやぶれた男だ。"
+},
+{
+"id": "o5",
+"kind": "n",
+"start": 15.944,
+"end": 22.446,
+"dur": 6.502,
+"wav": "subtitles/out/horiguchi_yosou/wavs/o5_3d6514aa0c.wav",
+"read": "日本の格闘家がくちをそろえてほりぐちと言う中、うみのむこうにはアルマバエフを選ぶ声もある。"
+},
+{
+"id": "o6",
+"kind": "n",
+"start": 22.666,
+"end": 29.532,
+"dur": 5.666,
+"wav": "subtitles/out/horiguchi_yosou/wavs/o6_abd7161377.wav",
+"read": "ユーエフシーカタール。日本と海外の格闘家たちは、このいっせんをどうよんだのか。"
+},
+{
+"id": "f1i1",
+"kind": "n",
+"start": 29.752,
+"end": 39.69,
+"dur": 9.938,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1i1_2f88726a3a.wav",
+"read": "ほりぐちきょうじ、さんじゅうろくさい。ユーエフシーに戻ってにれんしょうしたが、ろくがつのケイプとのさいせんでティーケーオー負け。今回はさいきせんになる。"
+},
+{
+"id": "f1i2",
+"kind": "n",
+"start": 39.91,
+"end": 49.291,
+"dur": 9.381,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1i2_b88f02e7d9.wav",
+"read": "相手はカザフスタンのアスーアルマバエフ。ランキングはほりぐちがごい、アルマバエフはなない。勝った方がタイトル戦線にふみとどまる。"
+},
+{
+"id": "p0",
+"kind": "n",
+"start": 49.511,
+"end": 52.576,
+"dur": 3.065,
+"wav": "subtitles/out/horiguchi_yosou/wavs/p0_4f9bc7f30d.wav",
+"read": "では、アルマバエフとはどんな選手なのか。"
+},
+{
+"id": "p1",
+"kind": "n",
+"start": 52.796,
+"end": 60.272,
+"dur": 7.477,
+"wav": "subtitles/out/horiguchi_yosou/wavs/p1_164f9e4956.wav",
+"read": "生まれは、せんきゅうひゃくきゅうじゅうよねん。カザフスタンの小さな村で、じゅっさいまでそふぼに育てられた。"
+},
+{
+"id": "p2",
+"kind": "n",
+"start": 60.492,
+"end": 68.248,
+"dur": 7.755,
+"wav": "subtitles/out/horiguchi_yosou/wavs/p2_d42c854eeb.wav",
+"read": "ごさいでカザフのみんぞくかくとうぎクレスを始め、アルマトイに移ってからはからてやボクシング、じゅうじゅつも学んだ。"
+},
+{
+"id": "p3",
+"kind": "n",
+"start": 68.468,
+"end": 74.459,
+"dur": 5.991,
+"wav": "subtitles/out/horiguchi_yosou/wavs/p3_ddaf0e2c22.wav",
+"read": "それでもにじゅうさんさいの頃までは、アルマトイのバザールでりょうしんの店を手伝っていたという。"
+},
+{
+"id": "p4",
+"kind": "n",
+"start": 74.679,
+"end": 79.694,
+"dur": 5.016,
+"wav": "subtitles/out/horiguchi_yosou/wavs/p4_e46cc38db1.wav",
+"read": "そしてにせんじゅうななねん、アルマバエフはタギルウランベコフにやぶれている。"
+},
+{
+"id": "p5",
+"kind": "n",
+"start": 79.914,
+"end": 84.14,
+"dur": 4.226,
+"wav": "subtitles/out/horiguchi_yosou/wavs/p5_456c2f7144.wav",
+"read": "去年のカタールで、ほりぐちがいっぽんがちしたあのウランベコフだ。"
+},
+{
+"id": "p6",
+"kind": "n",
+"start": 84.36,
+"end": 94.391,
+"dur": 10.031,
+"wav": "subtitles/out/horiguchi_yosou/wavs/p6_088c428158.wav",
+"read": "そこからかいしんげきが始まった。エムワンでざんていおうじゃになり、カザフの団体でもおうざをかくとく。バーレーンのブレイブでは、よんせんぜんしょう。"
+},
+{
+"id": "p7",
+"kind": "n",
+"start": 94.611,
+"end": 102.274,
+"dur": 7.663,
+"wav": "subtitles/out/horiguchi_yosou/wavs/p7_7a2bc05181.wav",
+"read": "にせんにじゅうさんねんにユーエフシーとけいやくすると、デビューせんをいっぽんがちでかざり、そこからよんれんしょうをかさねた。"
+},
+{
+"id": "p8",
+"kind": "n",
+"start": 102.494,
+"end": 107.463,
+"dur": 4.969,
+"wav": "subtitles/out/horiguchi_yosou/wavs/p8_17141a53fc.wav",
+"read": "初めてむかえたメインイベントで、まねるけいぷにさんラウンドティーケーオーでやぶれる。"
+},
+{
+"id": "p9",
+"kind": "n",
+"start": 107.683,
+"end": 111.073,
+"dur": 3.39,
+"wav": "subtitles/out/horiguchi_yosou/wavs/p9_db965bd7da.wav",
+"read": "ほりぐちがろくがつにやぶれたのも、同じケイプだった。"
+},
+{
+"id": "p10",
+"kind": "n",
+"start": 111.293,
+"end": 122.531,
+"dur": 11.238,
+"wav": "subtitles/out/horiguchi_yosou/wavs/p10_84a83012fd.wav",
+"read": "それでもアルマバエフはすぐにたてなおした。去年のカタールでは、アレックスペレスにダウンをうばわれながら、さんラウンド開始にじゅうにびょうでギロチンをきわめてぎゃくてん。"
+},
+{
+"id": "p11",
+"kind": "n",
+"start": 122.751,
+"end": 130.043,
+"dur": 7.291,
+"wav": "subtitles/out/horiguchi_yosou/wavs/p11_dfd79f4412.wav",
+"read": "ぜんせんのバクーでは、ユーエフシーしじょうよんれいめとされるめずらしいきめわざ、スロエフストレッチでいっぽんがちした。"
+},
+{
+"id": "p12",
+"kind": "n",
+"start": 130.263,
+"end": 136.486,
+"dur": 6.223,
+"wav": "subtitles/out/horiguchi_yosou/wavs/p12_f64f55e80a.wav",
+"read": "プロ戦績はにじゅうよんしょうさんぱい。ユーエフシーではななしょういっぱいで、今はさんれんしょう中だ。"
+},
+{
+"id": "p13",
+"kind": "n",
+"start": 136.706,
+"end": 146.783,
+"dur": 10.077,
+"wav": "subtitles/out/horiguchi_yosou/wavs/p13_4942d327c3.wav",
+"read": "一番のぶきとなるのがくみの強さ。ていくだうんを、じゅうごふんあたりよんてんななかいも奪っている。ユーエフシーのふらいきゅうでもくっしの数字だ。"
+},
+{
+"id": "p14",
+"kind": "n",
+"start": 147.003,
+"end": 154.526,
+"dur": 7.523,
+"wav": "subtitles/out/horiguchi_yosou/wavs/p14_e658c769d5.wav",
+"read": "一方で、ユーエフシーではだげきでのケーオー勝ちがない。ケイプにはていくだうんをろっかい仕掛けて、いちども取れなかった。"
+},
+{
+"id": "p15",
+"kind": "n",
+"start": 154.746,
+"end": 160.412,
+"dur": 5.666,
+"wav": "subtitles/out/horiguchi_yosou/wavs/p15_4faaa3fc30.wav",
+"read": "そのアルマバエフはほりぐちをレジェンドと呼んだ上で、しはいして早くしとめると話している。"
+},
+{
+"id": "f1a",
+"kind": "n",
+"start": 160.632,
+"end": 164.758,
+"dur": 3.576,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1a_05782f4d24.wav",
+"read": "いしわたりしんたろうはほりぐちのにラウンドティーケーオー。"
+},
+{
+"id": "f1a2",
+"kind": "n",
+"start": 164.978,
+"end": 173.848,
+"dur": 8.87,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1a2_47f5dc65f2.wav",
+"read": "カーフで削り、相手が振った左に右ストレートを打ち込む絵が見えるという。ただ組んでからのスクランブルだけは危ないと話す。"
+},
+{
+"id": "f1b",
+"kind": "n",
+"start": 174.068,
+"end": 180.609,
+"dur": 5.991,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1b_1506233dc4.wav",
+"read": "元ストライクフォースおうじゃのジョシュトムソンもほりぐち。全部をほりぐちにかけるといいきった。"
+},
+{
+"id": "f1b2",
+"kind": "n",
+"start": 180.829,
+"end": 189.884,
+"dur": 9.056,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1b2_cd881fad4a.wav",
+"read": "ベラトール時代にほりぐちの試合をじっきょうしてきた男だ。あしさばきとパワーでたちわざをしはいし、しゅうばんのケーオーもあると見る。"
+},
+{
+"id": "f1c",
+"kind": "n",
+"start": 190.104,
+"end": 194.323,
+"dur": 3.669,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1c_6d04c6aed3.wav",
+"read": "おうぎくぼひろまさはにラウンドか、さんラウンドのケーオー。"
+},
+{
+"id": "f1c2",
+"kind": "n",
+"start": 194.543,
+"end": 203.227,
+"dur": 8.684,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1c2_7f4bf84f07.wav",
+"read": "ほりぐちのように、遠い距離からいっしゅんで入ってくる練習相手はいない。初めてむきあうアルマバエフは、驚くはずだという。"
+},
+{
+"id": "f1d",
+"kind": "n",
+"start": 203.447,
+"end": 211.567,
+"dur": 7.57,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1d_6a600064aa.wav",
+"read": "元ユーエフシーにかいきゅうおうじゃのヘンリーセフードもほりぐち。アスーは好きだが、ほりぐちはべつかくだと話す。"
+},
+{
+"id": "f1d2",
+"kind": "n",
+"start": 211.787,
+"end": 217.128,
+"dur": 5.341,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1d2_33122ce0c2.wav",
+"read": "ただ隣のカマルウスマンには、ケイプ戦の前も同じことを言っていたとつっこまれた。"
+},
+{
+"id": "f1e",
+"kind": "n",
+"start": 217.348,
+"end": 221.334,
+"dur": 3.437,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1e_080e892bc8.wav",
+"read": "あおきしんやは、ほりぐちのあっとうてきゆういと見る。"
+},
+{
+"id": "f1e2",
+"kind": "n",
+"start": 221.554,
+"end": 231.028,
+"dur": 9.474,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1e2_44107a5eba.wav",
+"read": "ベテランになったほりぐちには、だげきとプレスで攻めるというくずしかたが見えてきた。だがグラップラーのアルマバエフには、そのぶきがないという。"
+},
+{
+"id": "f1e3",
+"kind": "n",
+"start": 231.248,
+"end": 237.378,
+"dur": 6.13,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1e3_71fc19d117.wav",
+"read": "ゆいいつの不安はコンディション。さんじゅうろくさいで、一年によんしあいのかみつにっていだからだ。"
+},
+{
+"id": "f1f",
+"kind": "n",
+"start": 237.598,
+"end": 244.696,
+"dur": 6.548,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1f_b33888ec7a.wav",
+"read": "ほりぐちと同じジムのダスティンポイエーは、大会でいちばんあばれる選手にほりぐちをしめいした。"
+},
+{
+"id": "f1g",
+"kind": "n",
+"start": 244.916,
+"end": 248.02,
+"dur": 2.554,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1g_9bc0e70c19.wav",
+"read": "ストラッサーきいちはにラウンドのケーオー。"
+},
+{
+"id": "f1g2",
+"kind": "n",
+"start": 248.24,
+"end": 257.853,
+"dur": 9.613,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1g2_b1dd3638a9.wav",
+"read": "ケイプはフェイントにはんのうしない選手だった。だがアルマバエフははんのうする。カーフとカウンターが入り、ていくだうんはほりぐちが切るとよむ。"
+},
+{
+"id": "f1h",
+"kind": "n",
+"start": 258.073,
+"end": 261.735,
+"dur": 3.111,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1h_b4f386e623.wav",
+"read": "シャードッグのショーンシーハンはほりぐちのはんていがち。"
+},
+{
+"id": "f1h2",
+"kind": "n",
+"start": 261.955,
+"end": 268.085,
+"dur": 6.13,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1h2_fb32ede3e1.wav",
+"read": "たちわざでつかまえるのが難しいスピード。それがこの試合でいちばんのぶきになると話す。"
+},
+{
+"id": "f1j",
+"kind": "n",
+"start": 268.305,
+"end": 271.27,
+"dur": 2.415,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1j_5248396719.wav",
+"read": "かねはらまさのりのこたえもほりぐち。"
+},
+{
+"id": "f1j2",
+"kind": "n",
+"start": 271.49,
+"end": 280.871,
+"dur": 9.381,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1j2_0f055fe838.wav",
+"read": "ていくだうんを取られることはあっても、ねわざでせいあつされるイメージはない。ただうちおわりに当てられるくせは、研究されているはずだという。"
+},
+{
+"id": "f1k",
+"kind": "n",
+"start": 281.091,
+"end": 284.845,
+"dur": 3.204,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1k_bf97bd123f.wav",
+"read": "おおて解説チャンネルのザエムエムエーグルもほりぐち。"
+},
+{
+"id": "f1k2",
+"kind": "n",
+"start": 285.065,
+"end": 293.285,
+"dur": 8.22,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1k2_2c0d787e25.wav",
+"read": "相手がやりたいことを、させないいちどりがうまい。ギロチンには注意しつつ、スクランブルでほりぐちがうえをとると見る。"
+},
+{
+"id": "f1m",
+"kind": "n",
+"start": 293.505,
+"end": 295.773,
+"dur": 1.718,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1m_2c0dd3d42d.wav",
+"read": "おかみゆうしんもほりぐち。"
+},
+{
+"id": "f1m2",
+"kind": "n",
+"start": 295.993,
+"end": 304.956,
+"dur": 8.963,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1m2_9f8536dee6.wav",
+"read": "怖いのは、たまに持ってくるスペシャルなかんせつわざ。ていくだうんに合わせるギロチンをけいかいしながら戦えば、ほりぐちが勝つという。"
+},
+{
+"id": "f1n",
+"kind": "n",
+"start": 305.176,
+"end": 311.252,
+"dur": 5.526,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1n_c731a99c8e.wav",
+"read": "元ユーエフシーふらいきゅうのホセトーレスもほりぐち。とにかく速すぎると話した。"
+},
+{
+"id": "f1p",
+"kind": "n",
+"start": 311.472,
+"end": 314.391,
+"dur": 2.368,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1p_5c97d2973c.wav",
+"read": "おおさわけんじはほりぐちのフィニッシュ。"
+},
+{
+"id": "f1p2",
+"kind": "n",
+"start": 314.611,
+"end": 323.341,
+"dur": 8.731,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1p2_b6ae69c93c.wav",
+"read": "アルマバエフは、ほりぐちのステップの距離にふみこんでこないと見る。くみもほりぐちが上で、ウランベコフ戦に近い展開になるという。"
+},
+{
+"id": "f1p3",
+"kind": "n",
+"start": 323.561,
+"end": 330.527,
+"dur": 6.966,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1p3_1550fdd802.wav",
+"read": "負けるとしたら近い距離。ほりぐちは顔が出るので、いっぱつをもらう可能性はあると話す。"
+},
+{
+"id": "f1q",
+"kind": "n",
+"start": 330.747,
+"end": 335.477,
+"dur": 4.18,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1q_0e86cf1c31.wav",
+"read": "ほりぐちのヘッドコーチ、マイクブラウンは予想ではなくだんげんする。"
+},
+{
+"id": "f1q2",
+"kind": "n",
+"start": 335.697,
+"end": 341.734,
+"dur": 6.037,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1q2_fbf613384f.wav",
+"read": "レスラーはほりぐちにとってこうつごうな相手。ほりぐちはこの相手とはべつじげんだという。"
+},
+{
+"id": "f1r",
+"kind": "n",
+"start": 341.954,
+"end": 345.112,
+"dur": 3.158,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1r_f02e09fcd1.wav",
+"read": "じゅうさんたいゼロ。ほりぐちでてっぱんか。"
+},
+{
+"id": "f1s",
+"kind": "n",
+"start": 345.332,
+"end": 347.043,
+"dur": 0.511,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1s_905931e69c.wav",
+"read": "だが。"
+},
+{
+"id": "f1t",
+"kind": "n",
+"start": 347.263,
+"end": 354.361,
+"dur": 6.548,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1t_9fc9e44468.wav",
+"read": "ロシア語圏のにんきかいせつしゃカルーギンは、いちばん難しい選択だとまえおきしてアルマバエフ。"
+},
+{
+"id": "f1t2",
+"kind": "n",
+"start": 354.581,
+"end": 361.036,
+"dur": 6.455,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1t2_3146624fb8.wav",
+"read": "ほりぐちにはゆるがないけいけんがある。それでもアスーには、勝ちたい気持ちの強さがあると話す。"
+},
+{
+"id": "f1u",
+"kind": "n",
+"start": 361.256,
+"end": 364.732,
+"dur": 2.926,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1u_6658707805.wav",
+"read": "エムエムエーマニアのティムエドワーズもアルマバエフ。"
+},
+{
+"id": "f1u2",
+"kind": "n",
+"start": 364.952,
+"end": 369.085,
+"dur": 4.133,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1u2_2492b3ccf1.wav",
+"read": "チャールズジョンソン戦のないようを見て、こたえを変えたという。"
+},
+{
+"id": "f1v",
+"kind": "n",
+"start": 369.305,
+"end": 372.881,
+"dur": 3.576,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1v_d8557a33bd.wav",
+"read": "ファン投票でも、およそはちわりがほりぐちを選んでいる。"
+},
+{
+"id": "f1w",
+"kind": "n",
+"start": 373.101,
+"end": 376.259,
+"dur": 3.158,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1w_0aa135352d.wav",
+"read": "ではほりぐち本人は、どう話しているのか。"
+},
+{
+"id": "f1x",
+"kind": "r",
+"start": 376.479,
+"end": 380.279,
+"dur": 3.8
+},
+{
+"id": "f1y",
+"kind": "r",
+"start": 380.459,
+"end": 384.059,
+"dur": 3.6
+},
+{
+"id": "f1z",
+"kind": "n",
+"start": 384.239,
+"end": 386.06,
+"dur": 1.022,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1z_69e1d63e27.wav",
+"read": "じゅうさんたいに。"
+},
+{
+"id": "f1zz",
+"kind": "n",
+"start": 386.28,
+"end": 389.903,
+"dur": 3.622,
+"wav": "subtitles/out/horiguchi_yosou/wavs/f1zz_e30cb95d59.wav",
+"read": "ほりぐちの再起か。アルマバエフのたいとうか。"
+},
+{
+"id": "e2",
+"kind": "n",
+"start": 390.123,
+"end": 397.739,
+"dur": 7.616,
+"wav": "subtitles/out/horiguchi_yosou/wavs/e2_bb1286b8f1.wav",
+"read": "試合は日本時間、じゅういちがつにじゅうににちのそうちょう。最後にこたえを出すのは、オクタゴンの中のふたりだ。"
+}
+],
+"total": 398.959
+}
