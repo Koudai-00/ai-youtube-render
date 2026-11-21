@@ -51,7 +51,7 @@ N("f5", "公式記録では、アルマバエフのテイクダウンがなな�
 # -------- 本人の言葉 --------
 N("h0", "試合後のオクタゴンで、堀口はまず観客に謝りました。", sec="hori", clip="oi_jp", who="hori", zz=1.3)
 R("h1", "oi_jp", 37.0, 13.0, "", who="堀口恭司", noq=True)
-T("h2", "bisping", "oi_jp", "インタビュアーのマイケルビスピンは、謝る必要はない、ダメージを与えようとしていたのは君だけだと返しています。", kw="謝る必要はない", zz=1.3)
+N("h2", "インタビュアーのマイケルビスピンは、謝る必要はない、ダメージを与えようとしていたのは君だけだと返しています。", sec="hori", bg="bisping_img", kw="謝る必要はない")
 R("h3", "oi_jp", 64.8, 11.4, "", who="堀口恭司", noq=True)
 N("h4", "フライ級王者のジョシュアヴァンは、いちがつにマネルケイプとの防衛戦を控えています。堀口は、その勝者への挑戦を宣言しました。", sec="hori", bg="soback", kw="ヴァン vs ケイプの勝者へ")
 N("h5", "バックステージでは、アルマバエフのことをこう話しています。", sec="hori", clip="pfi_jp", who="hori", zz=1.3)
@@ -141,6 +141,7 @@ BG = {
  "oi_wide": ("raw/oi_en", 2, "UFC"),
  "jp_comment": ("xr/2124224557502656951_0", 0, "UFC Japan"),
  "shout": ("img/xf_octagon_interview_shout.jpg", 0, "UFC"),
+ "bisping_img": ("img/xf_octagon_interview_bisping.jpg", 0, "UFC"),
 }
 
 # 本人映像(pred/): 名前 → (素材, 出典)

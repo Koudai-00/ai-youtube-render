@@ -275,7 +275,7 @@ for i, b in enumerate(SS):
                 J(s, e, f'tl.from("#sc{i}",{{scale:3,opacity:0,duration:.2,ease:"power4.in"}},{s + .3:.3f});'); flash(s, "#fff", .9, .3); shake(f"#lua{i}", s + .5, 22, .3); hit(s + .5, "boom")
             if b.get("title_at"):
                 ti = round(s + dur * b["title_at"], 3)
-                timed("title", ti, vis_e, '<div class="tt1" id="tt1">HORIGUCHI WINS</div><div class="tt2" id="tt2">判定3-0で再起　格闘家と海外の反応</div><div class="tt3" id="tt3">UFC QATAR　堀口恭司 vs アスー・アルマバエフ</div>', z=26)
+                timed("title", ti, vis_e, '<div class="tt1" id="tt1" style="font-size:168px">HORIGUCHI WINS</div><div class="tt2" id="tt2">判定3-0で再起　格闘家と海外の反応</div><div class="tt3" id="tt3">UFC QATAR　堀口恭司 vs アスー・アルマバエフ</div>', z=26)
                 J(s, e, f'tl.from("#tt1",{{scale:2.4,opacity:0,duration:.28,ease:"power4.in"}},{ti:.3f});tl.from("#tt2",{{y:50,opacity:0,duration:.25,ease:"expo.out"}},{ti + .3:.3f});tl.from("#tt3",{{opacity:0,y:-20,duration:.25,ease:"power2.out"}},{ti + .5:.3f});')
                 flash(ti + .28, "#fff", .9, .3); hit(ti + .28, "boom")
         if F and sec not in first_seen:
