@@ -298,41 +298,59 @@
 "id": "j7",
 "kind": "n",
 "start": 243.575,
-"end": 246.865,
-"dur": 2.74,
-"wav": "subtitles/out/horiguchi_win/wavs/j7_7abab30424.wav",
-"read": "あおきしんやのみかたは、少し違います。"
+"end": 248.676,
+"dur": 4.551,
+"wav": "subtitles/out/horiguchi_win/wavs/j7_dfe919a6b2.wav",
+"read": "あおきしんやもかんしょうと見た上で、試合をラウンドごとにぶんせきしています。"
+},
+{
+"id": "j7b",
+"kind": "n",
+"start": 248.896,
+"end": 257.952,
+"dur": 9.056,
+"wav": "subtitles/out/horiguchi_win/wavs/j7b_5d0e1cee54.wav",
+"read": "まずめをひいたのが、アルマバエフのかまえ。右手を高く立てて、ほりぐちが得意とするふみこみのひだりフックを防いでいたといいます。"
+},
+{
+"id": "j7c",
+"kind": "n",
+"start": 258.172,
+"end": 267.414,
+"dur": 9.242,
+"wav": "subtitles/out/horiguchi_win/wavs/j7c_65a433279f.wav",
+"read": "だいにラウンドは、ほとんどがねわざのこうぼう。それでもアルマバエフはうえからいっさい殴っておらず、そこがひょうかを分けたと話します。"
+},
+{
+"id": "j7d",
+"kind": "n",
+"start": 267.634,
+"end": 277.108,
+"dur": 9.474,
+"wav": "subtitles/out/horiguchi_win/wavs/j7d_49296e58bc.wav",
+"read": "そしてだいさんラウンドのほりぐちには、明らかによゆうがあった。だいにラウンドに、あえて相手のたいりょくを使わせていたのではないかと見ています。"
 },
 {
 "id": "j8",
 "kind": "n",
-"start": 247.085,
-"end": 256.466,
-"dur": 9.381,
-"wav": "subtitles/out/horiguchi_win/wavs/j8_2fc72416c0.wav",
-"read": "ないようで見ればかんしょう。それでも、大きなインパクトを残してタイトルちょうせんをつかむという、ほりぐちがもとめた勝ち方はできなかったといいます。"
-},
-{
-"id": "j9",
-"kind": "n",
-"start": 256.686,
-"end": 264.581,
-"dur": 7.895,
-"wav": "subtitles/out/horiguchi_win/wavs/j9_0da71cf68c.wav",
-"read": "あれだけコントロールしても、ラウンドが取れない。今のはんていのけいこうは、くみわざの選手には厳しいとも話しています。"
+"start": 277.328,
+"end": 284.711,
+"dur": 7.384,
+"wav": "subtitles/out/horiguchi_win/wavs/j8_ccf0d8da61.wav",
+"read": "ただ、大きなインパクトを残してタイトルちょうせんをつかむという、ほりぐちがもとめた勝ち方はできなかったとも話しています。"
 },
 {
 "id": "j10",
 "kind": "r",
-"start": 264.801,
-"end": 269.601,
+"start": 284.931,
+"end": 289.731,
 "dur": 4.8
 },
 {
 "id": "j11",
 "kind": "n",
-"start": 269.781,
-"end": 275.029,
+"start": 289.911,
+"end": 295.159,
 "dur": 5.248,
 "wav": "subtitles/out/horiguchi_win/wavs/j11_14204c83e3.wav",
 "read": "おおさわけんじとかわじりたつやのふたりも、なまはいしんで試合を見守っていました。"
@@ -340,8 +358,8 @@
 {
 "id": "j12",
 "kind": "n",
-"start": 275.249,
-"end": 281.564,
+"start": 295.379,
+"end": 301.695,
 "dur": 6.316,
 "wav": "subtitles/out/horiguchi_win/wavs/j12_811d78cbcd.wav",
 "read": "はんていを待つ間、配信にはしおじあいだというコメントも。それに川尻がはんろんします。"
@@ -349,24 +367,42 @@
 {
 "id": "j13",
 "kind": "r",
-"start": 281.784,
-"end": 300.584,
+"start": 301.915,
+"end": 320.715,
 "dur": 18.8
 },
 {
 "id": "j14",
 "kind": "n",
-"start": 300.764,
-"end": 308.381,
+"start": 320.895,
+"end": 328.511,
 "dur": 7.616,
 "wav": "subtitles/out/horiguchi_win/wavs/j14_6569964bff.wav",
 "read": "ふたりは、もしユーエフシーのにほんたいかいが開かれるなら、ほりぐちとたいらたつろうの対戦を見たいと盛り上がりました。"
 },
 {
+"id": "j15",
+"kind": "n",
+"start": 328.731,
+"end": 342.152,
+"dur": 13.421,
+"wav": "subtitles/out/horiguchi_win/wavs/j15_68c9dbedce.wav",
+"read": "配信のあと、川尻のじりラジオでもふたりはこの試合を振り返っています。アルマバエフはおさえこむだけで、ほとんど殴らなかった。今のはんていきじゅんを理解していないのではないかと指摘しました。"
+},
+{
+"id": "j16",
+"kind": "n",
+"start": 342.372,
+"end": 351.382,
+"dur": 9.009,
+"wav": "subtitles/out/horiguchi_win/wavs/j16_9cc9355fdd.wav",
+"read": "レスラーがしがみついて相手をふうじる戦い方は、もうつうようしなくなった。そんな時代のかわりめを感じた試合だったとも話しています。"
+},
+{
 "id": "i0",
 "kind": "n",
-"start": 308.601,
-"end": 311.155,
+"start": 351.602,
+"end": 354.156,
 "dur": 2.554,
 "wav": "subtitles/out/horiguchi_win/wavs/i0_baf827bbe8.wav",
 "read": "海外ではどううけとめられたのでしょうか。"
@@ -374,8 +410,8 @@
 {
 "id": "i1",
 "kind": "n",
-"start": 311.375,
-"end": 317.226,
+"start": 354.376,
+"end": 360.227,
 "dur": 5.851,
 "wav": "subtitles/out/horiguchi_win/wavs/i1_f871fa4a83.wav",
 "read": "元ユーエフシーにかいきゅうおうじゃのヘンリーセフードは、試合中にこう投稿していました。"
@@ -383,8 +419,8 @@
 {
 "id": "i2",
 "kind": "n",
-"start": 317.446,
-"end": 328.127,
+"start": 360.447,
+"end": 371.128,
 "dur": 10.681,
 "wav": "subtitles/out/horiguchi_win/wavs/i2_7cf8d6e90d.wav",
 "read": "おおてかいせつチャンネルのザエムエムエーグルは、もんくなしのほりぐちとだんげん。アルマバエフがじかんをかせぐコントロール以外に、何もしていなかったと書いています。"
@@ -392,8 +428,8 @@
 {
 "id": "i3",
 "kind": "n",
-"start": 328.347,
-"end": 335.639,
+"start": 371.348,
+"end": 378.64,
 "dur": 7.291,
 "wav": "subtitles/out/horiguchi_win/wavs/i3_36e3b13ce3.wav",
 "read": "アメリカのおおてメディア、エムエムエージャンキーは、ジャッジの目にはくみよりもほりぐちのダメージがうわまわったとつたえました。"
@@ -401,8 +437,8 @@
 {
 "id": "i4",
 "kind": "n",
-"start": 335.859,
-"end": 344.078,
+"start": 378.86,
+"end": 387.079,
 "dur": 8.22,
 "wav": "subtitles/out/horiguchi_win/wavs/i4_82f7016bd4.wav",
 "read": "ほりぐちのヘッドコーチ、マイクブラウンは、ユーエフシーおうじゃになるしかくがある者がいるとすれば、それはきょうじだと投稿しています。"
@@ -410,8 +446,8 @@
 {
 "id": "i5",
 "kind": "n",
-"start": 344.298,
-"end": 348.292,
+"start": 387.299,
+"end": 391.293,
 "dur": 3.994,
 "wav": "subtitles/out/horiguchi_win/wavs/i5_6142683f99.wav",
 "read": "ユーエフシーこうしきの動画には、こんなコメントがよせられました。"
@@ -419,8 +455,8 @@
 {
 "id": "i6",
 "kind": "n",
-"start": 348.512,
-"end": 355.014,
+"start": 391.513,
+"end": 398.015,
 "dur": 6.502,
 "wav": "subtitles/out/horiguchi_win/wavs/i6_cc90335524.wav",
 "read": "おさえこみを続けたアルマバエフや、試合を止めずにねわざを続けさせたレフェリーへのひはんもめだちます。"
@@ -428,8 +464,8 @@
 {
 "id": "n1",
 "kind": "n",
-"start": 355.234,
-"end": 358.345,
+"start": 398.235,
+"end": 401.346,
 "dur": 3.111,
 "wav": "subtitles/out/horiguchi_win/wavs/n1_d9ef0a9080.wav",
 "read": "日本のファンからも、さまざまな声が上がっています。"
@@ -437,8 +473,8 @@
 {
 "id": "n2",
 "kind": "n",
-"start": 358.565,
-"end": 364.37,
+"start": 401.566,
+"end": 407.371,
 "dur": 5.805,
 "wav": "subtitles/out/horiguchi_win/wavs/n2_74356f2b46.wav",
 "read": "下からのだっしゅつのうまさに驚く声や、アルマバエフの強さをみとめる声もありました。"
@@ -446,8 +482,8 @@
 {
 "id": "e1",
 "kind": "n",
-"start": 364.59,
-"end": 371.696,
+"start": 407.591,
+"end": 414.697,
 "dur": 7.105,
 "wav": "subtitles/out/horiguchi_win/wavs/e1_8d8857ab83.wav",
 "read": "次にねらうのは、いちがつさんじゅうにちのユーエフシーさんびゃくさんじゅうろく、ジョシュアヴァンとまねるけいぷのしょうしゃです。"
@@ -455,8 +491,8 @@
 {
 "id": "e2",
 "kind": "n",
-"start": 371.916,
-"end": 379.207,
+"start": 414.917,
+"end": 422.208,
 "dur": 7.291,
 "wav": "subtitles/out/horiguchi_win/wavs/e2_398d2854e9.wav",
 "read": "ケイプには、ろくがつにやぶれたばかり。リベンジの機会が来るのか、それともおうじゃヴァンにいどむのか。"
@@ -464,12 +500,12 @@
 {
 "id": "e3",
 "kind": "n",
-"start": 379.427,
-"end": 385.278,
+"start": 422.428,
+"end": 428.279,
 "dur": 5.851,
 "wav": "subtitles/out/horiguchi_win/wavs/e3_8d4439d393.wav",
 "read": "さんじゅうろくさいのほりぐちきょうじ。ユーエフシーのベルトへのちょうせんは、まだ続きます。"
 }
 ],
-"total": 386.498
+"total": 429.499
 }
