@@ -1,0 +1,475 @@
+{
+"beats": [
+{
+"id": "o1",
+"kind": "r",
+"start": 0.25,
+"end": 3.15,
+"dur": 2.9
+},
+{
+"id": "o2",
+"kind": "n",
+"start": 3.33,
+"end": 8.624,
+"dur": 5.294,
+"wav": "subtitles/out/horiguchi_win/wavs/o2_954c61b1fa.wav",
+"read": "ユーエフシーカタールで、ほりぐちきょうじがアスーアルマバエフにはんていがちしました。"
+},
+{
+"id": "o3",
+"kind": "n",
+"start": 8.824,
+"end": 14.165,
+"dur": 5.341,
+"wav": "subtitles/out/horiguchi_win/wavs/o3_5af5fcb60a.wav",
+"read": "ただ、ていくだうんをななかいうばわれ、おさえこまれた時間はきゅうふんを超えています。"
+},
+{
+"id": "o4",
+"kind": "n",
+"start": 14.385,
+"end": 22.179,
+"dur": 6.594,
+"wav": "subtitles/out/horiguchi_win/wavs/o4_85fa1ddbba.wav",
+"read": "それでもジャッジはさんにんともほりぐち。格闘家や海外のファンは、この試合をどう見たのでしょうか。"
+},
+{
+"id": "r1",
+"kind": "n",
+"start": 22.399,
+"end": 28.761,
+"dur": 6.362,
+"wav": "subtitles/out/horiguchi_win/wavs/r1_46f82636a8.wav",
+"read": "はんていはさんたいゼロ。さんじゅうたいにじゅうなながふたり、にじゅうきゅうたいにじゅうはちがひとりでした。"
+},
+{
+"id": "r2",
+"kind": "n",
+"start": 28.981,
+"end": 34.322,
+"dur": 5.341,
+"wav": "subtitles/out/horiguchi_win/wavs/r2_ba99a2588e.wav",
+"read": "にじゅうきゅうたいにじゅうはちをつけたジャッジは、にラウンドだけをアルマバエフにつけています。"
+},
+{
+"id": "r3",
+"kind": "n",
+"start": 34.542,
+"end": 39.418,
+"dur": 4.876,
+"wav": "subtitles/out/horiguchi_win/wavs/r3_98c2a77b01.wav",
+"read": "ろくがつにまねるけいぷにやぶれたほりぐちにとっては、さいきせんでの勝利です。"
+},
+{
+"id": "r4",
+"kind": "n",
+"start": 39.638,
+"end": 47.905,
+"dur": 8.266,
+"wav": "subtitles/out/horiguchi_win/wavs/r4_e0353eef4e.wav",
+"read": "ユーエフシーでの勝利はこれでじゅっしょうめ。おかみゆうしんに続いて、日本人でふたりめのふたけたしょうりになりました。"
+},
+{
+"id": "r5",
+"kind": "n",
+"start": 48.125,
+"end": 52.351,
+"dur": 4.226,
+"wav": "subtitles/out/horiguchi_win/wavs/r5_2461d33870.wav",
+"read": "一方のアルマバエフは、ユーエフシーでのさんれんしょうが止まりました。"
+},
+{
+"id": "f0",
+"kind": "n",
+"start": 52.571,
+"end": 53.917,
+"dur": 1.347,
+"wav": "subtitles/out/horiguchi_win/wavs/f0_416357a203.wav",
+"read": "試合をふりかえります。"
+},
+{
+"id": "f1",
+"kind": "n",
+"start": 54.137,
+"end": 58.688,
+"dur": 4.551,
+"wav": "subtitles/out/horiguchi_win/wavs/f1_0f1b4dcf41.wav",
+"read": "いちラウンド、ほりぐちはカーフキックと右のハイキックでせんてを取ります。"
+},
+{
+"id": "f2",
+"kind": "n",
+"start": 58.908,
+"end": 67.686,
+"dur": 8.777,
+"wav": "subtitles/out/horiguchi_win/wavs/f2_7780f50cdb.wav",
+"read": "しゅうばんにけりあしをつかまれて倒されますが、下からギロチン。アルマバエフは苦しい表情をみせながら、ブザーまでたえました。"
+},
+{
+"id": "f3",
+"kind": "n",
+"start": 67.906,
+"end": 77.565,
+"dur": 9.66,
+"wav": "subtitles/out/horiguchi_win/wavs/f3_e686018435.wav",
+"read": "だいにラウンドに入ると、アルマバエフがくみついて離れない展開に。ほりぐちはかなあみを背に座った姿勢で押さえ込まれる時間が続きます。"
+},
+{
+"id": "f4",
+"kind": "n",
+"start": 77.785,
+"end": 82.476,
+"dur": 4.69,
+"wav": "subtitles/out/horiguchi_win/wavs/f4_94816216b6.wav",
+"read": "それでも下からなぐりつづけ、ギロチンをねらいつづけたのはほりぐちでした。"
+},
+{
+"id": "f5",
+"kind": "n",
+"start": 82.696,
+"end": 93.145,
+"dur": 10.449,
+"wav": "subtitles/out/horiguchi_win/wavs/f5_8fcd644551.wav",
+"read": "こうしききろくでは、アルマバエフのていくだうんがななかい。一方でそうだげきすうは、ほりぐちのひゃくごじゅうはちに対して、アルマバエフはにじゅうにでした。"
+},
+{
+"id": "h0",
+"kind": "n",
+"start": 93.365,
+"end": 97.405,
+"dur": 4.04,
+"wav": "subtitles/out/horiguchi_win/wavs/h0_467025ae90.wav",
+"read": "試合後のオクタゴンで、ほりぐちはまずかんきゃくに謝りました。"
+},
+{
+"id": "h1",
+"kind": "r",
+"start": 97.625,
+"end": 110.625,
+"dur": 13.0
+},
+{
+"id": "h2",
+"kind": "n",
+"start": 110.805,
+"end": 117.631,
+"dur": 6.827,
+"wav": "subtitles/out/horiguchi_win/wavs/h2_a5b9b82212.wav",
+"read": "インタビュアーのマイケルビスピンは、謝る必要はない、ダメージを与えようとしていたのは君だけだと返しています。"
+},
+{
+"id": "h3",
+"kind": "r",
+"start": 117.851,
+"end": 129.251,
+"dur": 11.4
+},
+{
+"id": "h4",
+"kind": "n",
+"start": 129.431,
+"end": 138.627,
+"dur": 9.195,
+"wav": "subtitles/out/horiguchi_win/wavs/h4_982af78ee3.wav",
+"read": "ふらいきゅうおうじゃのジョシュアヴァンは、いちがつにまねるけいぷとのぼうえいせんを控えています。ほりぐちは、そのしょうしゃへのちょうせんをせんげんしました。"
+},
+{
+"id": "h5",
+"kind": "n",
+"start": 138.847,
+"end": 142.562,
+"dur": 3.715,
+"wav": "subtitles/out/horiguchi_win/wavs/h5_a46674c1a1.wav",
+"read": "バックステージでは、アルマバエフのことをこう話しています。"
+},
+{
+"id": "h6",
+"kind": "r",
+"start": 142.782,
+"end": 159.282,
+"dur": 16.5
+},
+{
+"id": "h7",
+"kind": "n",
+"start": 159.462,
+"end": 167.542,
+"dur": 8.081,
+"wav": "subtitles/out/horiguchi_win/wavs/h7_9bb5b0c827.wav",
+"read": "実はふたりは、以前に一緒にれんしゅうしたことがあります。その頃よりもくみが大きくしんかしていたと認めました。"
+},
+{
+"id": "h8",
+"kind": "n",
+"start": 167.762,
+"end": 172.499,
+"dur": 4.737,
+"wav": "subtitles/out/horiguchi_win/wavs/h8_d601d89c48.wav",
+"read": "ユーネクストのインタビューでは、おくさんにある言葉をかけられていたこともあかしています。"
+},
+{
+"id": "h9",
+"kind": "r",
+"start": 172.719,
+"end": 184.519,
+"dur": 11.8
+},
+{
+"id": "a1",
+"kind": "n",
+"start": 184.699,
+"end": 188.368,
+"dur": 3.669,
+"wav": "subtitles/out/horiguchi_win/wavs/a1_418a5bf31d.wav",
+"read": "やぶれたアルマバエフ本人のコメントは、まだ出ていません。"
+},
+{
+"id": "a2",
+"kind": "n",
+"start": 188.588,
+"end": 195.74,
+"dur": 7.152,
+"wav": "subtitles/out/horiguchi_win/wavs/a2_87bcefd8f1.wav",
+"read": "しょぞくするダーチームは、いちどのまけでお前の強さは消えない、俺たちはお前を信じていると投稿しました。"
+},
+{
+"id": "j0",
+"kind": "n",
+"start": 195.96,
+"end": 199.21,
+"dur": 3.251,
+"wav": "subtitles/out/horiguchi_win/wavs/j0_908d1ae390.wav",
+"read": "では、日本の格闘家たちはどう見たのでしょうか。"
+},
+{
+"id": "j1",
+"kind": "n",
+"start": 199.43,
+"end": 204.903,
+"dur": 4.923,
+"wav": "subtitles/out/horiguchi_win/wavs/j1_225ed9b012.wav",
+"read": "ちゅうけいでかいせつを務めたかねはらまさのりは、かんしょうと言っていいと話します。"
+},
+{
+"id": "j2",
+"kind": "n",
+"start": 205.123,
+"end": 213.575,
+"dur": 8.452,
+"wav": "subtitles/out/horiguchi_win/wavs/j2_78212bdffb.wav",
+"read": "ただ、思った以上にアルマバエフが強かった。立つのがうまく体も強いほりぐちを、ねかせつづけたのはみごとだったといいます。"
+},
+{
+"id": "j3",
+"kind": "r",
+"start": 213.795,
+"end": 223.795,
+"dur": 10.0
+},
+{
+"id": "j4",
+"kind": "n",
+"start": 223.975,
+"end": 227.033,
+"dur": 2.508,
+"wav": "subtitles/out/horiguchi_win/wavs/j4_77fd68e42f.wav",
+"read": "おうぎくぼひろまさもかんしょうと見ています。"
+},
+{
+"id": "j5",
+"kind": "n",
+"start": 227.253,
+"end": 235.101,
+"dur": 7.848,
+"wav": "subtitles/out/horiguchi_win/wavs/j5_2497b834b1.wav",
+"read": "とてもしんちょうに、ていねいに戦っていた。カーフキックからくみたて、相手にほとんど攻撃を出させなかったと話します。"
+},
+{
+"id": "j6",
+"kind": "n",
+"start": 235.321,
+"end": 243.355,
+"dur": 8.034,
+"wav": "subtitles/out/horiguchi_win/wavs/j6_b718bfd9bf.wav",
+"read": "アルマバエフについても、かいてんけいのうしろげりやけりあしをつかんでのていくだうんを挙げて、強いいい選手だったとひょうかしました。"
+},
+{
+"id": "j7",
+"kind": "n",
+"start": 243.575,
+"end": 246.865,
+"dur": 2.74,
+"wav": "subtitles/out/horiguchi_win/wavs/j7_7abab30424.wav",
+"read": "あおきしんやのみかたは、少し違います。"
+},
+{
+"id": "j8",
+"kind": "n",
+"start": 247.085,
+"end": 256.466,
+"dur": 9.381,
+"wav": "subtitles/out/horiguchi_win/wavs/j8_2fc72416c0.wav",
+"read": "ないようで見ればかんしょう。それでも、大きなインパクトを残してタイトルちょうせんをつかむという、ほりぐちがもとめた勝ち方はできなかったといいます。"
+},
+{
+"id": "j9",
+"kind": "n",
+"start": 256.686,
+"end": 264.581,
+"dur": 7.895,
+"wav": "subtitles/out/horiguchi_win/wavs/j9_0da71cf68c.wav",
+"read": "あれだけコントロールしても、ラウンドが取れない。今のはんていのけいこうは、くみわざの選手には厳しいとも話しています。"
+},
+{
+"id": "j10",
+"kind": "r",
+"start": 264.801,
+"end": 269.601,
+"dur": 4.8
+},
+{
+"id": "j11",
+"kind": "n",
+"start": 269.781,
+"end": 275.029,
+"dur": 5.248,
+"wav": "subtitles/out/horiguchi_win/wavs/j11_14204c83e3.wav",
+"read": "おおさわけんじとかわじりたつやのふたりも、なまはいしんで試合を見守っていました。"
+},
+{
+"id": "j12",
+"kind": "n",
+"start": 275.249,
+"end": 281.564,
+"dur": 6.316,
+"wav": "subtitles/out/horiguchi_win/wavs/j12_811d78cbcd.wav",
+"read": "はんていを待つ間、配信にはしおじあいだというコメントも。それに川尻がはんろんします。"
+},
+{
+"id": "j13",
+"kind": "r",
+"start": 281.784,
+"end": 300.584,
+"dur": 18.8
+},
+{
+"id": "j14",
+"kind": "n",
+"start": 300.764,
+"end": 308.381,
+"dur": 7.616,
+"wav": "subtitles/out/horiguchi_win/wavs/j14_6569964bff.wav",
+"read": "ふたりは、もしユーエフシーのにほんたいかいが開かれるなら、ほりぐちとたいらたつろうの対戦を見たいと盛り上がりました。"
+},
+{
+"id": "i0",
+"kind": "n",
+"start": 308.601,
+"end": 311.155,
+"dur": 2.554,
+"wav": "subtitles/out/horiguchi_win/wavs/i0_baf827bbe8.wav",
+"read": "海外ではどううけとめられたのでしょうか。"
+},
+{
+"id": "i1",
+"kind": "n",
+"start": 311.375,
+"end": 317.226,
+"dur": 5.851,
+"wav": "subtitles/out/horiguchi_win/wavs/i1_f871fa4a83.wav",
+"read": "元ユーエフシーにかいきゅうおうじゃのヘンリーセフードは、試合中にこう投稿していました。"
+},
+{
+"id": "i2",
+"kind": "n",
+"start": 317.446,
+"end": 328.127,
+"dur": 10.681,
+"wav": "subtitles/out/horiguchi_win/wavs/i2_7cf8d6e90d.wav",
+"read": "おおてかいせつチャンネルのザエムエムエーグルは、もんくなしのほりぐちとだんげん。アルマバエフがじかんをかせぐコントロール以外に、何もしていなかったと書いています。"
+},
+{
+"id": "i3",
+"kind": "n",
+"start": 328.347,
+"end": 335.639,
+"dur": 7.291,
+"wav": "subtitles/out/horiguchi_win/wavs/i3_36e3b13ce3.wav",
+"read": "アメリカのおおてメディア、エムエムエージャンキーは、ジャッジの目にはくみよりもほりぐちのダメージがうわまわったとつたえました。"
+},
+{
+"id": "i4",
+"kind": "n",
+"start": 335.859,
+"end": 344.078,
+"dur": 8.22,
+"wav": "subtitles/out/horiguchi_win/wavs/i4_82f7016bd4.wav",
+"read": "ほりぐちのヘッドコーチ、マイクブラウンは、ユーエフシーおうじゃになるしかくがある者がいるとすれば、それはきょうじだと投稿しています。"
+},
+{
+"id": "i5",
+"kind": "n",
+"start": 344.298,
+"end": 348.292,
+"dur": 3.994,
+"wav": "subtitles/out/horiguchi_win/wavs/i5_6142683f99.wav",
+"read": "ユーエフシーこうしきの動画には、こんなコメントがよせられました。"
+},
+{
+"id": "i6",
+"kind": "n",
+"start": 348.512,
+"end": 355.014,
+"dur": 6.502,
+"wav": "subtitles/out/horiguchi_win/wavs/i6_cc90335524.wav",
+"read": "おさえこみを続けたアルマバエフや、試合を止めずにねわざを続けさせたレフェリーへのひはんもめだちます。"
+},
+{
+"id": "n1",
+"kind": "n",
+"start": 355.234,
+"end": 358.345,
+"dur": 3.111,
+"wav": "subtitles/out/horiguchi_win/wavs/n1_d9ef0a9080.wav",
+"read": "日本のファンからも、さまざまな声が上がっています。"
+},
+{
+"id": "n2",
+"kind": "n",
+"start": 358.565,
+"end": 364.37,
+"dur": 5.805,
+"wav": "subtitles/out/horiguchi_win/wavs/n2_74356f2b46.wav",
+"read": "下からのだっしゅつのうまさに驚く声や、アルマバエフの強さをみとめる声もありました。"
+},
+{
+"id": "e1",
+"kind": "n",
+"start": 364.59,
+"end": 371.696,
+"dur": 7.105,
+"wav": "subtitles/out/horiguchi_win/wavs/e1_8d8857ab83.wav",
+"read": "次にねらうのは、いちがつさんじゅうにちのユーエフシーさんびゃくさんじゅうろく、ジョシュアヴァンとまねるけいぷのしょうしゃです。"
+},
+{
+"id": "e2",
+"kind": "n",
+"start": 371.916,
+"end": 379.207,
+"dur": 7.291,
+"wav": "subtitles/out/horiguchi_win/wavs/e2_398d2854e9.wav",
+"read": "ケイプには、ろくがつにやぶれたばかり。リベンジの機会が来るのか、それともおうじゃヴァンにいどむのか。"
+},
+{
+"id": "e3",
+"kind": "n",
+"start": 379.427,
+"end": 385.278,
+"dur": 5.851,
+"wav": "subtitles/out/horiguchi_win/wavs/e3_8d4439d393.wav",
+"read": "さんじゅうろくさいのほりぐちきょうじ。ユーエフシーのベルトへのちょうせんは、まだ続きます。"
+}
+],
+"total": 386.498
+}
