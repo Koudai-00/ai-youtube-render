@@ -139,7 +139,7 @@ BG = {
  "handraised": ("img/xf_hand_raised_169.jpg", 0, "UFC on Paramount+"),
  "handraised_sq": ("img/xf_hand_raised_sq.jpg", 0, "UFC Japan"),
  "oi_wide": ("raw/oi_en", 2, "UFC"),
- "jp_comment": ("xr/2124224557502656951_0", 0, "UFC Japan"),
+ "jp_comment": ("xr/2124224557502656951_0", 1.2, "UFC Japan"),
  "shout": ("img/xf_octagon_interview_shout.jpg", 0, "UFC"),
  "bisping_img": ("img/xf_octagon_interview_bisping.jpg", 0, "UFC"),
 }
