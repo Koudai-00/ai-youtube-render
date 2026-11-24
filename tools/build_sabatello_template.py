@@ -61,7 +61,7 @@ CARDS_SPEC = [
     ("c14_5", "media", "榊原信行 RIZIN CEO", "サバテロの戦い方は日本のファンは是としないんで、プロモーターである私も是としない。勝ちさえすればいいだったら他の団体行ってくれ。", "RIZIN LANDMARK 13 大会後総括（2026年4月12日）"),
     ("c15_8", "media", "ダニー・サバテロ", "他の選手は勝ちを拾いに行く。俺は勝った上でフィニッシュもする。今は俺の時代で、この時代は20年続く。", "RIZIN LANDMARK 15 試合後インタビュー（2026年7月18日）"),
     ("c16_6", "table", "サバテロが誇る記録", [("試合拒否・欠場", "0", "一度もない"), ("計量失敗", "0", ""), ("薬物陽性", "0", "")], "RIZIN公式インタビュー（2026年3月）"),
-    ("c18_2", "table", "RIZIN.55 バンタム級 結果（2026.11.8）", [("○ ティレノフ", "× 井上直樹", "判定 3-0"), ("○ 鹿志村仁之介", "× 太田忍", "3R 一本"), ("○ 福田龍彌", "× キム・スーチョル", "判定 3-0")], "RIZIN公式サイト（試合結果）"),
+    ("c18_2", "table", "RIZIN.55 バンタム級 結果（2026.11.8）", [("○ ティレノフ", "井上直樹", "判定 3-0"), ("○ 鹿志村仁之介", "太田忍", "3R 一本"), ("○ 福田龍彌", "キム・スーチョル", "判定 3-0")], "RIZIN公式サイト（試合結果）"),
 ]
 
 def card_html(cid, kind, title, body, meta, cont=False):
@@ -317,7 +317,7 @@ HTML = f"""<!doctype html>
   .ccard.table .tbl{{display:flex;flex-direction:column;gap:8px;}}
   .ccard.table .trow{{display:grid;grid-template-columns:200px 250px 1fr;align-items:center;gap:14px;padding:8px 10px;background:#f4f6f8;border-radius:8px;}}
   .ccard.table .tk{{font-family:"JPHeavy";font-size:27px;color:#0f1419;}}
-  .ccard.table .tv{{font-family:"JPHeavy";font-size:30px;color:#d62828;}}
+  .ccard.table .tv{{font-family:"JPHeavy";font-size:30px;color:#d62828;white-space:nowrap;}}
   .ccard.table .tn{{font-family:"JPMed";font-size:22px;color:#333;line-height:1.3;}}
   .subt{{position:absolute;z-index:350;left:0;right:0;bottom:96px;text-align:center;opacity:0;
         font-family:"JPHeavy";font-size:45px;line-height:1.34;color:#fff;filter:var(--edge);letter-spacing:.01em;white-space:pre-line;padding:0 90px;}}
