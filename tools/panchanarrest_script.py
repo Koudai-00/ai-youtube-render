@@ -59,7 +59,7 @@ N("f4", "翌年のにがつには謝罪会見を開いています。", sec="fra
 R("f5", "apology", 17.5, 19.5, "本当に大変|申し訳ございませんでした", who="ぱんちゃん璃奈", src="KNOCK OUT（2023年2月 謝罪会見）")
 N("f6", "ベルトは返上。処分は不起訴で、検察は諸情状を考慮した起訴猶予としました。", sec="fraud", bg="apology_belt", kw="不起訴（起訴猶予）", src="KNOCK OUT（2023年2月 謝罪会見）")
 N("f7", "当時、青木真也は、ほとばしる小物感と厳しく批判しました。一方で朝倉未来は、やり直しはきくと話しています。", sec="fraud", bg="apology_face2",
-  coms=[("青木真也「13勝1逮捕」「ほとばしる小物感」", "東京スポーツ 2022年12月7日"), ("朝倉未来「やり直しはきくんじゃないかなとは思っている」", "東京スポーツ 2022年12月17日")], plat="quote", src="KNOCK OUT（2023年2月 謝罪会見）")
+  coms=[("青木真也「13勝1逮捕」「ほとばしる小物感」", "東京スポーツ 2022年12月7日"), ("朝倉未来「やり直しはきくんじゃないかな」", "東京スポーツ 2022年12月17日")], plat="quote", src="KNOCK OUT（2023年2月 謝罪会見）")
 
 # -------- 炎上 --------
 N("g1", "リングに戻ってからも、話題は試合の外にもありました。", sec="flame", bg="ganryu", src="巌流島")
@@ -109,7 +109,7 @@ BG = {
  "weigh69": ("raw/faceoff69", 228, "KNOCK OUT（KNOCK OUT.69 会見）"),
  "faceoff69": ("raw/faceoff69", 24, "KNOCK OUT（KNOCK OUT.69 会見）"),
  "weigh69b": ("raw/faceoff69", 150, "KNOCK OUT（KNOCK OUT.69 会見）"),
- "kaiken_card": ("raw/kaiken1110a", 80, "KNOCK OUT（11月10日 会見）"),
+ "kaiken_card": ("raw/kaiken1110a", 0, "KNOCK OUT（11月10日 会見）"),
  "kaiken_wide": ("raw/kaiken1110a", 40, "KNOCK OUT（11月10日 会見）"),
  "practice": ("img/gonkaku_head_p.png", 0, "ゴング格闘技（Yahoo!ニュース）"),
  "practice2": ("raw/kaiken1110c", 9, "KNOCK OUT（11月10日 会見）"),
@@ -117,8 +117,8 @@ BG = {
  "practice4": ("raw/kaiken69", 60, "KNOCK OUT（KNOCK OUT.69 会見）"),
  "practice5": ("img/yt_private_c_p.png", 0, "YouTube（KNOCK OUT公式チャンネル）"),
  "weigh69c": ("raw/faceoff69", 234, "KNOCK OUT（KNOCK OUT.69 会見）"),
- "rizin_entry": ("raw/rizin30", 78, "RIZIN FIGHTING FEDERATION"), "rizin_entry2": ("raw/rizin30", 100, "RIZIN FIGHTING FEDERATION"),
- "rizin_fight": ("raw/rizin30", 300, "RIZIN FIGHTING FEDERATION"), "rizin_fight2": ("raw/rizin30", 520, "RIZIN FIGHTING FEDERATION"), "rizin_win": ("raw/rizin30", 925, "RIZIN FIGHTING FEDERATION"),
+ "rizin_entry": ("raw/rizin30", 78, "RIZIN FIGHTING FEDERATION"), "rizin_entry2": ("raw/rizin30", 600, "RIZIN FIGHTING FEDERATION"),
+ "rizin_fight": ("raw/rizin30", 420, "RIZIN FIGHTING FEDERATION"), "rizin_fight2": ("raw/rizin30", 520, "RIZIN FIGHTING FEDERATION"), "rizin_win": ("raw/rizin30", 925, "RIZIN FIGHTING FEDERATION"),
  "channel": ("raw/konyaku", 0, "ぱんチャンネル_ぱんちゃん璃奈", "zoomtop"), "channel2": ("raw/konyaku", 300, "ぱんチャンネル_ぱんちゃん璃奈", "zoomtop"), "channel3": ("raw/konyaku", 420, "ぱんチャンネル_ぱんちゃん璃奈", "zoomtop"),
  "apology_wide": ("raw/apology", 60, "KNOCK OUT（2023年2月 謝罪会見）"), "apology_wide2": ("raw/apology", 85, "KNOCK OUT（2023年2月 謝罪会見）"),
  "apology_face": ("raw/apology", 150, "KNOCK OUT（2023年2月 謝罪会見）"), "apology_belt": ("raw/apology", 105, "KNOCK OUT（2023年2月 謝罪会見）"),
@@ -135,9 +135,9 @@ BG = {
  "kaiken_wide3": ("raw/kaiken1110c", 24, "KNOCK OUT（11月10日 会見）"),
  "practice5b": ("raw/faceoff69", 56, "KNOCK OUT（KNOCK OUT.69 会見）"),
  "weigh69f": ("raw/kaiken69", 66, "KNOCK OUT（KNOCK OUT.69 会見）"),
- "kaiken_card2": ("raw/kaiken1110a", 0, "KNOCK OUT（11月10日 会見）"),
+ "kaiken_card2": ("raw/kaiken1110a", 50, "KNOCK OUT（11月10日 会見）"),
  "practice6": ("raw/faceoff69", 160, "KNOCK OUT（KNOCK OUT.69 会見）"),
- "weigh69g": ("raw/konyaku", 500, "ぱんチャンネル_ぱんちゃん璃奈", "zoomtop"),
+ "weigh69g": ("raw/apology", 178, "KNOCK OUT（2023年2月 謝罪会見）"),
 }
 
 CLIPS = {

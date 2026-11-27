@@ -59,8 +59,9 @@ def wrap(t, maxw=27):
         if not okcut(t, c): continue
         a, b = t[:c], t[c:]
         if zw(a) > maxw or zw(b) > maxw: continue
-        pri = 0 if a[-1] in "、。" else (6 if a[-1] in "はがをにへでもやねよの" else 14)
+        pri = 0 if a[-1] in "、。" else (6 if a[-1] in "はがをにへでもやねよの" and not ("ぁ" <= b[0] <= "ゟ") else 14)
         if b[:2] in ("いう", "して", "した", "する", "いる") or a[-2:] in ("する", "いう"): pri += 30
+        if b[0] in "はがをにへでもやねよのとたてっ" or b[0] in "ゃゅょァィゥェォャュョー": pri += 25
         sc = pri + abs(zw(a) - zw(b))
         if best is None or sc < best[0]: best = (sc, a, b)
     return [best[1], best[2]] if best else None
