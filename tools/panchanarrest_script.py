@@ -117,7 +117,7 @@ BG = {
  "practice4": ("raw/kaiken69", 60, "KNOCK OUT（KNOCK OUT.69 会見）"),
  "practice5": ("img/yt_private_c_p.png", 0, "YouTube（KNOCK OUT公式チャンネル）"),
  "weigh69c": ("raw/faceoff69", 234, "KNOCK OUT（KNOCK OUT.69 会見）"),
- "rizin_entry": ("raw/rizin30", 78, "RIZIN FIGHTING FEDERATION"), "rizin_entry2": ("raw/rizin30", 600, "RIZIN FIGHTING FEDERATION"),
+ "rizin_entry": ("raw/rizin30", 941, "RIZIN FIGHTING FEDERATION"), "rizin_entry2": ("raw/rizin30", 70, "RIZIN FIGHTING FEDERATION"),
  "rizin_fight": ("raw/rizin30", 420, "RIZIN FIGHTING FEDERATION"), "rizin_fight2": ("raw/rizin30", 520, "RIZIN FIGHTING FEDERATION"), "rizin_win": ("raw/rizin30", 925, "RIZIN FIGHTING FEDERATION"),
  "channel": ("raw/konyaku", 0, "ぱんチャンネル_ぱんちゃん璃奈", "zoomtop"), "channel2": ("raw/konyaku", 300, "ぱんチャンネル_ぱんちゃん璃奈", "zoomtop"), "channel3": ("raw/konyaku", 420, "ぱんチャンネル_ぱんちゃん璃奈", "zoomtop"),
  "apology_wide": ("raw/apology", 60, "KNOCK OUT（2023年2月 謝罪会見）"), "apology_wide2": ("raw/apology", 85, "KNOCK OUT（2023年2月 謝罪会見）"),

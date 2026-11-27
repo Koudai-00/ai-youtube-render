@@ -39,7 +39,7 @@ b.r{color:var(--lr)}b.b{color:var(--lb)}
 .bigq span{display:block;transform-origin:left center}
 .sp{position:absolute;left:84px;bottom:206px;display:flex;gap:14px;align-items:center}
 .title{inset:0;background:rgba(0,0,0,.62);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding-bottom:110px}
-.tt1{font-family:AntonL;font-size:230px;letter-spacing:.05em;line-height:1;background:linear-gradient(90deg,var(--red) 0 50%,var(--blue) 50% 100%);padding:4px 54px;white-space:nowrap}
+.tt1{font-family:Dela,AntonL;font-size:230px;letter-spacing:.05em;line-height:1;background:linear-gradient(90deg,var(--red) 0 50%,var(--blue) 50% 100%);padding:4px 54px;white-space:nowrap}
 .tt2{font-family:Dela;font-size:104px;line-height:1.2;white-space:nowrap}
 .tt3{font-size:44px;white-space:nowrap}
 .tint{inset:0}.tint.r{background:rgba(190,16,30,.55)}.tint.b{background:rgba(12,70,190,.55)}
