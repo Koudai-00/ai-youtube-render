@@ -1,0 +1,492 @@
+{
+"beats": [
+{
+"id": "o1",
+"kind": "r",
+"start": 0.25,
+"end": 4.85,
+"dur": 4.6
+},
+{
+"id": "o2",
+"kind": "n",
+"start": 5.03,
+"end": 8.513,
+"dur": 3.483,
+"wav": "subtitles/out/panchan_arrest/wavs/o2_dfacf8e717.wav",
+"read": "そう語ってから、わずかじゅうななにちごのことでした。"
+},
+{
+"id": "o3",
+"kind": "n",
+"start": 8.713,
+"end": 14.611,
+"dur": 5.898,
+"wav": "subtitles/out/panchan_arrest/wavs/o3_b4408abdf8.wav",
+"read": "格闘家のぱんちゃんりなが、こうさいあいての男性にけがをさせた疑いで逮捕されました。"
+},
+{
+"id": "o4",
+"kind": "n",
+"start": 14.831,
+"end": 23.786,
+"dur": 7.755,
+"wav": "subtitles/out/panchan_arrest/wavs/o4_698367fb3e.wav",
+"read": "逮捕は、二千二十二年のさぎ容疑に続いてにどめです。事件のないようと、これまでのあゆみをふりかえります。"
+},
+{
+"id": "c1",
+"kind": "n",
+"start": 24.006,
+"end": 32.273,
+"dur": 8.266,
+"wav": "subtitles/out/panchan_arrest/wavs/c1_090eb2914c.wav",
+"read": "ティービーエスの報道によりますと、逮捕されたのは、ぱんちゃんりなの名前で活動するおかもとりなようぎしゃ、さんじゅうにさいです。"
+},
+{
+"id": "c2",
+"kind": "n",
+"start": 32.493,
+"end": 43.685,
+"dur": 11.192,
+"wav": "subtitles/out/panchan_arrest/wavs/c2_b5a8ffecba.wav",
+"read": "岡本ようぎしゃは十一月二十六日の夜、みたかしの自宅でこうさいあいての男性にうまのりになり、かおをなぐったりはらをけったりした疑いが持たれています。"
+},
+{
+"id": "c3",
+"kind": "n",
+"start": 43.905,
+"end": 47.806,
+"dur": 3.901,
+"wav": "subtitles/out/panchan_arrest/wavs/c3_295d9ce02d.wav",
+"read": "男性はにじゅうだいで、ぜんち にしゅうかんのけがをしました。"
+},
+{
+"id": "c4",
+"kind": "n",
+"start": 48.026,
+"end": 54.992,
+"dur": 6.966,
+"wav": "subtitles/out/panchan_arrest/wavs/c4_2945b51e32.wav",
+"read": "とりしらべに対し、容疑を認めているということです。けいしちょうが詳しいいきさつを調べています。"
+},
+{
+"id": "c5",
+"kind": "n",
+"start": 55.212,
+"end": 62.781,
+"dur": 7.57,
+"wav": "subtitles/out/panchan_arrest/wavs/c5_c1d9140770.wav",
+"read": "ぱんちゃんりなは、じゅうにがつさんじゅうにちのノックアウトななじゅういちで、タイのロムフォンソーシララックとの対戦が決まっていました。"
+},
+{
+"id": "c6",
+"kind": "n",
+"start": 63.001,
+"end": 70.571,
+"dur": 7.57,
+"wav": "subtitles/out/panchan_arrest/wavs/c6_c0ab5a0bee.wav",
+"read": "主催するノックアウトは、じじつかんけいが明らかになるまで、ぱんちゃんりなの出場をむきげんで停止すると発表しました。"
+},
+{
+"id": "c7",
+"kind": "n",
+"start": 70.791,
+"end": 77.571,
+"dur": 6.78,
+"wav": "subtitles/out/panchan_arrest/wavs/c7_d028d57541.wav",
+"read": "そのうえで、いかなる暴力行為も決してようにんしないとして、被害に遭った人へのおわびも表明しています。"
+},
+{
+"id": "d1",
+"kind": "n",
+"start": 77.791,
+"end": 83.828,
+"dur": 6.037,
+"wav": "subtitles/out/panchan_arrest/wavs/d1_40ce3dcd91.wav",
+"read": "事件があったとされる前の日。ぱんちゃんりなは、大会のこうかいれんしゅうに参加していました。"
+},
+{
+"id": "d2",
+"kind": "n",
+"start": 84.048,
+"end": 88.832,
+"dur": 4.783,
+"wav": "subtitles/out/panchan_arrest/wavs/d2_8333669476.wav",
+"read": "司会からは、彼氏ができておだやかモードにとつにゅうちゅうと紹介されています。"
+},
+{
+"id": "d3",
+"kind": "n",
+"start": 89.052,
+"end": 96.018,
+"dur": 6.966,
+"wav": "subtitles/out/panchan_arrest/wavs/d3_c09ac18455.wav",
+"read": "この日のれんしゅうには、ユーチューブの企画で交際を始めたとししたの男性も登場し、ミットを持ちました。"
+},
+{
+"id": "d4",
+"kind": "n",
+"start": 96.238,
+"end": 104.876,
+"dur": 8.638,
+"wav": "subtitles/out/panchan_arrest/wavs/d4_32a99e37fb.wav",
+"read": "報道ではひがいしゃはこうさいあいてのにじゅうだいの男性とされていますが、この男性とおなじじんぶつかどうかは明らかになっていません。"
+},
+{
+"id": "d4b",
+"kind": "n",
+"start": 105.096,
+"end": 111.922,
+"dur": 6.827,
+"wav": "subtitles/out/panchan_arrest/wavs/d4b_439400d4a9.wav",
+"read": "なお、ノックアウトのこうしきユーチューブでは、このこうかいれんしゅうの配信動画が、すでに非公開になっています。"
+},
+{
+"id": "d5",
+"kind": "n",
+"start": 112.142,
+"end": 118.412,
+"dur": 6.269,
+"wav": "subtitles/out/panchan_arrest/wavs/d5_983db5f2d3.wav",
+"read": "そして、逮捕が報じられるすうじかんまえ。本人のエックスには、こんな投稿がありました。"
+},
+{
+"id": "k0",
+"kind": "n",
+"start": 118.632,
+"end": 121.743,
+"dur": 3.111,
+"wav": "subtitles/out/panchan_arrest/wavs/k0_934e068245.wav",
+"read": "ここからは、ぱんちゃんりなのあゆみをふりかえります。"
+},
+{
+"id": "k1",
+"kind": "n",
+"start": 121.963,
+"end": 131.437,
+"dur": 9.474,
+"wav": "subtitles/out/panchan_arrest/wavs/k1_e2b8108d61.wav",
+"read": "大阪府とよなかしの出身。水泳と陸上にうちこみましたが、ひろうこっせつで高校をちゅうたいし、アルバイトをてんてんとする日々が続きました。"
+},
+{
+"id": "k2",
+"kind": "n",
+"start": 131.657,
+"end": 139.505,
+"dur": 7.848,
+"wav": "subtitles/out/panchan_arrest/wavs/k2_b170376bf8.wav",
+"read": "にじゅういっさいでじょうきょうし、フィットネス会員としてキックボクシングジムに入会。そこから格闘家の道が開けます。"
+},
+{
+"id": "k3",
+"kind": "n",
+"start": 139.725,
+"end": 144.183,
+"dur": 4.458,
+"wav": "subtitles/out/panchan_arrest/wavs/k3_2d85fb71a2.wav",
+"read": "二千十九年にプロデビューすると、負けなしで勝ち続けました。"
+},
+{
+"id": "k4",
+"kind": "n",
+"start": 144.403,
+"end": 155.131,
+"dur": 10.728,
+"wav": "subtitles/out/panchan_arrest/wavs/k4_bfe1c10222.wav",
+"read": "二千二十一年にはライジンに出場し、ももかにはんていがち。翌年にはノックアウトでにほんめのベルトを巻き、二つの階級でおうじゃになりました。"
+},
+{
+"id": "k5",
+"kind": "n",
+"start": 155.351,
+"end": 161.017,
+"dur": 5.666,
+"wav": "subtitles/out/panchan_arrest/wavs/k5_6f5eb12a9f.wav",
+"read": "しゃしんしゅうやユーチューブでも人気を集め、女子キックボクシングのかんばんせんしゅになっていきます。"
+},
+{
+"id": "f1",
+"kind": "n",
+"start": 161.237,
+"end": 164.348,
+"dur": 3.111,
+"wav": "subtitles/out/panchan_arrest/wavs/f1_b947fc9e63.wav",
+"read": "ところが、二千二十二年の十二月。"
+},
+{
+"id": "f2",
+"kind": "n",
+"start": 164.568,
+"end": 172.509,
+"dur": 7.941,
+"wav": "subtitles/out/panchan_arrest/wavs/f2_15ad2d9879.wav",
+"read": "なすかわてんしんとたけるのサイン入りポスターをぎぞうし、ネットオークションで売ったとして、さぎの疑いでひょうごけんけいに逮捕されます。"
+},
+{
+"id": "f3",
+"kind": "n",
+"start": 172.729,
+"end": 179.974,
+"dur": 7.245,
+"wav": "subtitles/out/panchan_arrest/wavs/f3_eaf0c03c61.wav",
+"read": "本人は、投資さぎの被害でせんごひゃくまんえん以上を失い、けがで試合にも出られなかったと説明しました。"
+},
+{
+"id": "f4",
+"kind": "n",
+"start": 180.194,
+"end": 183.213,
+"dur": 3.019,
+"wav": "subtitles/out/panchan_arrest/wavs/f4_0207cb7b13.wav",
+"read": "翌年のにがつにはしゃざいかいけんを開いています。"
+},
+{
+"id": "f5",
+"kind": "r",
+"start": 183.433,
+"end": 202.933,
+"dur": 19.5
+},
+{
+"id": "f6",
+"kind": "n",
+"start": 203.113,
+"end": 209.382,
+"dur": 6.269,
+"wav": "subtitles/out/panchan_arrest/wavs/f6_b8002af44a.wav",
+"read": "ベルトはへんじょう。処分はふきそで、検察はしょじょうじょうをこうりょしたきそゆうよとしました。"
+},
+{
+"id": "f7",
+"kind": "n",
+"start": 209.602,
+"end": 218.472,
+"dur": 8.87,
+"wav": "subtitles/out/panchan_arrest/wavs/f7_2466c9b24c.wav",
+"read": "当時、あおきしんやは、ほとばしるこものかんと厳しくひはんしました。一方であさくらみくるは、やり直しはきくと話しています。"
+},
+{
+"id": "g1",
+"kind": "n",
+"start": 218.692,
+"end": 222.361,
+"dur": 3.669,
+"wav": "subtitles/out/panchan_arrest/wavs/g1_9636bfe38f.wav",
+"read": "リングに戻ってからも、話題は試合の外にもありました。"
+},
+{
+"id": "g2",
+"kind": "n",
+"start": 222.581,
+"end": 231.544,
+"dur": 8.963,
+"wav": "subtitles/out/panchan_arrest/wavs/g2_abd683fd25.wav",
+"read": "二千二十四年のとちじせんでは、選挙ポスターのけいじばんに本人のポスターが並んで炎上。かいけんではノーコメントをつらぬきました。"
+},
+{
+"id": "g3",
+"kind": "n",
+"start": 231.764,
+"end": 235.386,
+"dur": 3.622,
+"wav": "subtitles/out/panchan_arrest/wavs/g3_156ab7edac.wav",
+"read": "対戦相手とのぜっせんも、毎回のように話題になります。"
+},
+{
+"id": "g4",
+"kind": "n",
+"start": 235.606,
+"end": 244.801,
+"dur": 9.195,
+"wav": "subtitles/out/panchan_arrest/wavs/g4_ce492aa2c3.wav",
+"read": "二千二十五年には、対戦相手のようしをからかう投稿がひはんを浴びました。はまさきあやかは、普通にはらたつんだけどと投稿しています。"
+},
+{
+"id": "g5",
+"kind": "n",
+"start": 245.021,
+"end": 250.455,
+"dur": 5.433,
+"wav": "subtitles/out/panchan_arrest/wavs/g5_087fbaff88.wav",
+"read": "本人もかいけんで、よんしあいれんぞくでだいえんじょうしていると話していました。"
+},
+{
+"id": "y1",
+"kind": "n",
+"start": 250.675,
+"end": 253.368,
+"dur": 2.694,
+"wav": "subtitles/out/panchan_arrest/wavs/y1_320c805d0b.wav",
+"read": "そして、この一年はてんきが続きます。"
+},
+{
+"id": "y2",
+"kind": "n",
+"start": 253.588,
+"end": 261.669,
+"dur": 8.081,
+"wav": "subtitles/out/panchan_arrest/wavs/y2_8fbf7cf61e.wav",
+"read": "去年のしちがつにラスト一年でのいんたいをせんげん。年末には、トレーナーとのけいやくをかいじょしたことも明かしました。"
+},
+{
+"id": "y3",
+"kind": "n",
+"start": 261.889,
+"end": 268.297,
+"dur": 6.409,
+"wav": "subtitles/out/panchan_arrest/wavs/y3_ab81b5ac94.wav",
+"read": "ひじありのムエタイルールに挑みますが、タイの選手ににれんぱい。キャリアで初めてのれんぱいでした。"
+},
+{
+"id": "y4",
+"kind": "n",
+"start": 268.517,
+"end": 275.019,
+"dur": 6.502,
+"wav": "subtitles/out/panchan_arrest/wavs/y4_6c6d7f681e.wav",
+"read": "私生活では婚約がはだんに。ろくがつの動画では、理由は相手のうわきだったと説明しています。"
+},
+{
+"id": "y5",
+"kind": "n",
+"start": 275.239,
+"end": 283.134,
+"dur": 7.895,
+"wav": "subtitles/out/panchan_arrest/wavs/y5_842e35e420.wav",
+"read": "いんたいはてっかい。格闘家ではない一般の人と付き合いたいと、ユーチューブで彼氏を募集するオーディションを始めました。"
+},
+{
+"id": "y6",
+"kind": "n",
+"start": 283.354,
+"end": 290.459,
+"dur": 7.105,
+"wav": "subtitles/out/panchan_arrest/wavs/y6_c83e8323e5.wav",
+"read": "じゅうがつのノックアウトでは、香港のウォンフーカをにラウンドでたおしました。ムエタイルールで初めての勝利です。"
+},
+{
+"id": "y7",
+"kind": "n",
+"start": 290.679,
+"end": 295.369,
+"dur": 4.69,
+"wav": "subtitles/out/panchan_arrest/wavs/y7_f9fa5fa0c1.wav",
+"read": "そして、オーディションで選んだろくさいとししたの男性との交際をこうひょうします。"
+},
+{
+"id": "y8",
+"kind": "n",
+"start": 295.589,
+"end": 299.769,
+"dur": 4.18,
+"wav": "subtitles/out/panchan_arrest/wavs/y8_a38a096b7b.wav",
+"read": "くがつのかいけんでは、彼氏オーディションについてこう話していました。"
+},
+{
+"id": "y9",
+"kind": "r",
+"start": 299.989,
+"end": 315.289,
+"dur": 15.3
+},
+{
+"id": "y10",
+"kind": "n",
+"start": 315.469,
+"end": 321.135,
+"dur": 5.666,
+"wav": "subtitles/out/panchan_arrest/wavs/y10_ccf50a3dcb.wav",
+"read": "じゅういちがつとおかのかいけんでは、婚約破棄への怒りを試合にぶつけるとかたっています。"
+},
+{
+"id": "y11",
+"kind": "r",
+"start": 321.355,
+"end": 333.855,
+"dur": 12.5
+},
+{
+"id": "r1",
+"kind": "n",
+"start": 334.035,
+"end": 342.208,
+"dur": 8.173,
+"wav": "subtitles/out/panchan_arrest/wavs/r1_ebee3eb1dd.wav",
+"read": "今回の逮捕に、格闘家からもはんのうが出ています。あおきしんやは、逮捕を伝える記事をいんようして、こう投稿しました。"
+},
+{
+"id": "r2",
+"kind": "n",
+"start": 342.428,
+"end": 344.797,
+"dur": 2.368,
+"wav": "subtitles/out/panchan_arrest/wavs/r2_a762d8ea39.wav",
+"read": "さらに、こんな投稿も続けています。"
+},
+{
+"id": "r3",
+"kind": "n",
+"start": 345.017,
+"end": 350.45,
+"dur": 5.433,
+"wav": "subtitles/out/panchan_arrest/wavs/r3_ef42ec3a0a.wav",
+"read": "エックスでは、直前まで交際をアピールしていたこととのらくさに驚く声がめだちます。"
+},
+{
+"id": "r4",
+"kind": "n",
+"start": 350.67,
+"end": 355.221,
+"dur": 4.551,
+"wav": "subtitles/out/panchan_arrest/wavs/r4_0ab0f0133b.wav",
+"read": "いちどめの逮捕からたちなおってきたのにと、残念がる声もありました。"
+},
+{
+"id": "r5",
+"kind": "n",
+"start": 355.441,
+"end": 359.714,
+"dur": 4.272,
+"wav": "subtitles/out/panchan_arrest/wavs/r5_89511c2858.wav",
+"read": "本人のユーチューブにも、逮捕を知った人のコメントがあいついでいます。"
+},
+{
+"id": "r6",
+"kind": "n",
+"start": 359.934,
+"end": 364.438,
+"dur": 4.505,
+"wav": "subtitles/out/panchan_arrest/wavs/r6_993e396724.wav",
+"read": "同じ動画には、さんしゅうかんまえまでしゅくふくのコメントが並んでいました。"
+},
+{
+"id": "e1",
+"kind": "n",
+"start": 364.658,
+"end": 374.968,
+"dur": 10.31,
+"wav": "subtitles/out/panchan_arrest/wavs/e1_80a26edab9.wav",
+"read": "じゅうにがつさんじゅうにちのロムフォン戦は、本人が人生のリベンジといちづけた試合でした。しゅつじょうていしが続く限り、このリングに上がることはできません。"
+},
+{
+"id": "e2",
+"kind": "n",
+"start": 375.188,
+"end": 379.693,
+"dur": 4.505,
+"wav": "subtitles/out/panchan_arrest/wavs/e2_6ed9e1efe3.wav",
+"read": "こうかいれんしゅうでは、ここをおとしたら次はないと話していたぱんちゃんりな。"
+},
+{
+"id": "e3",
+"kind": "n",
+"start": 379.913,
+"end": 391.826,
+"dur": 10.913,
+"wav": "subtitles/out/panchan_arrest/wavs/e3_d47683e0dc.wav",
+"read": "ノックアウトは、じじつかんけいを確認したうえで、けいやくに基づいてげんせいに判断するとしています。けいしちょうのそうさとあわせて、今後の発表が注目されます。"
+}
+],
+"total": 393.046
+}
